@@ -1,0 +1,13 @@
+- name: Update and upgrade the machine
+  apt:
+    upgrade: dist
+    update_cache: true
+
+- name: firewall setup
+  import_tasks: firewall.yml
+
+- name: install node_exporter
+  import_tasks: node_exporter.yml
+
+- name: install promtail
+  import_tasks: promtail.yml

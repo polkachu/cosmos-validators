@@ -1,0 +1,62 @@
+---
+- name: download node_exporter
+  get_url:
+    url: 'https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz'
+    checksum: 'sha256:{{ node_exporter_checksum }}'
+    dest: '/tmp/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz'
+    mode: '0700'
+
+- name: unarchive node_exporter
+  unarchive:
+    src: '/tmp/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz'
+    remote_src: yes
+    dest: '/tmp'
+
+- name: copy node_exporter binary
+  copy:
+    src: '/tmp/node_exporter-{{ node_exporter_version }}.linux-amd64/node_exporter'
+    dest: '/usr/local/bin/'
+    remote_src: true
+    owner: root
+    group: root
+    mode: 755
+
+- name: create node_exporter systemd unit
+  copy:
+    src: node_exporter.service
+    dest: /etc/systemd/system/node_exporter.service
+    owner: root
+    group: root
+    mode: '600'
+
+- name: start node_exporter service
+  systemd:
+    name: node_exporter
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
+
+- name: install nginx package
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: remove nginx default site
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: create polkadot_metrics proxy conf
+  copy:
+    src: polkadot_metrics.nginx.conf
+    dest: /etc/nginx/sites-enabled/polkadot_metrics.conf
+
+- name: restart nginx service
+  systemd:
+    name: nginx
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
