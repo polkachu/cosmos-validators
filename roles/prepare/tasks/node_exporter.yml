@@ -36,27 +36,3 @@
     daemon_reload: yes
     enabled: yes
   changed_when: false
-
-- name: install nginx package
-  apt:
-    name: nginx
-    state: present
-    update_cache: yes
-
-- name: remove nginx default site
-  file:
-    path: /etc/nginx/sites-enabled/default
-    state: absent
-
-- name: create polkadot_metrics proxy conf
-  copy:
-    src: polkadot_metrics.nginx.conf
-    dest: /etc/nginx/sites-enabled/polkadot_metrics.conf
-
-- name: restart nginx service
-  systemd:
-    name: nginx
-    state: restarted
-    daemon_reload: yes
-    enabled: yes
-  changed_when: false
