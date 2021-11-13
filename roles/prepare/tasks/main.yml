@@ -1,3 +1,4 @@
+---
 - name: Update and upgrade the machine
   apt:
     upgrade: dist
@@ -11,3 +12,6 @@
 
 - name: install promtail
   import_tasks: promtail.yml
+
+- name: install cosmos software
+  import_tasks: cosmos_software.yml
