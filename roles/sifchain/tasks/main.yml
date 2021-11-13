@@ -1,0 +1,181 @@
+---
+# - name: Update and upgrade the machine
+#   become: true
+#   apt:
+#     upgrade: dist
+#     update_cache: true
+
+# - name: install apt packages
+#   become: true
+#   apt:
+#     name: '{{item}}'
+#     state: present
+#     update_cache: yes
+#   loop:
+#     - make
+#     - build-essential
+#     - gcc
+#     - git
+#     - jq
+#     - chrony
+
+# - name: Download go
+#   get_url:
+#     url: 'https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz'
+#     dest: '/tmp/go{{ go_version }}.linux-amd64.tar.gz'
+#     mode: '0700'
+
+# - name: unarchive go
+#   become: true
+#   unarchive:
+#     src: '/tmp/go{{ go_version }}.linux-amd64.tar.gz'
+#     remote_src: yes
+#     dest: '/usr/local/'
+#     owner: ubuntu
+#     group: ubuntu
+#     mode: 755
+
+# - name: copy bash_profile
+#   copy:
+#     src: profile
+#     dest: '/home/ubuntu/.profile'
+#     owner: ubuntu
+#     group: ubuntu
+#     mode: '600'
+
+# - name: Source bash_profile
+#   shell: |
+#     set -o pipefail
+#     source /home/ubuntu/.profile
+#   args:
+#     executable: /bin/bash
+
+# - name: Make sure sifchain folder does not exist
+#   file:
+#     state: absent
+#     path: '/home/ubuntu/sifnode'
+
+# - name: Clone sifchain node
+#   git:
+#     repo: https://github.com/Sifchain/sifnode.git
+#     dest: '/home/ubuntu/sifnode'
+
+# - name: Install sifnode
+#   command: '{{ item }}'
+#   become: true
+#   args:
+#     chdir: '/home/ubuntu/sifnode'
+#   with_items:
+#     - 'git fetch'
+#     - 'git checkout {{ node_version }}'
+#     - 'make clean install'
+#   environment:
+#     PATH: '{{ path }}'
+#     GOPATH: '/home/ubuntu/go'
+
+# - name: Go get cosmovisor
+#   become: true
+#   command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest'
+#   environment:
+#     PATH: '{{ path }}'
+#     GOPATH: '/home/ubuntu/go'
+
+# - name: make folders
+#   file:
+#     path: '{{ item }}'
+#     state: directory
+#     mode: '0755'
+#   with_items:
+#     - '/home/ubuntu/.sifnoded/cosmovisor/genesis/bin'
+#     - '/home/ubuntu/.sifnoded/cosmovisor/upgrades'
+-
+- name: copy sifnoded
+  become: true
+  copy:
+    remote_src: true
+    src: /home/ubuntu/go/bin/sifnoded
+    dest: /home/ubuntu/.sifnoded/cosmovisor/genesis/bin
+    mode: '0755'
+# - name: Initialize Sifnode
+#   command: 'sifnoded init {{ validator_name }} --chain-id {{ chain_id }}'
+#   environment:
+#     PATH: '{{ path }}'
+#     DAEMON_HOME: /home/ubuntu/.sifnoded
+##################
+
+# - name: Update config files
+#   lineinfile:
+#     path: '/root/.juno/config/app.toml'
+#     regexp: 'minimum-gas-prices '
+#     line: 'minimum-gas-prices = "0.025ujunox"'
+#     state: present
+
+# - name: get peers
+#   uri:
+#     url: 'https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni/persistent_peers.txt'
+#     return_content: true
+#   register: peers
+
+# - name: Set persistent peers
+#   lineinfile:
+#     path: '/root/.juno/config/config.toml'
+#     regexp: 'persistent_peers = ""'
+#     line: 'persistent_peers = "{{ peers.content }}"'
+#     state: present
+
+# - name: Download genesis file
+#   get_url:
+#     url: 'https://raw.githubusercontent.com/CosmosContracts/testnets/main/{{ chain_id }}/genesis.json'
+#     dest: '/root/.juno/config/genesis.json'
+#     mode: '0644'
+
+# export GOROOT=/usr/local/go
+# export GOPATH=$HOME/go
+# export GO111MODULE=on
+# export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+# export DAEMON_NAME=junod
+# export DAEMON_HOME=$HOME/.juno
+
+# - name: Make sure cosmos-sdk folder does not exist
+#   file:
+#     state: absent
+#     path: '/root/cosmos-sdk'
+
+# - name: Clone repo
+#   git:
+#     repo: https://github.com/cosmos/cosmos-sdk
+#     dest: '/root/cosmos-sdk'
+
+# - name: Install cosmos sdk software
+#   command: '{{ item }}'
+#   args:
+#     chdir: '/root/cosmos-sdk'
+#   with_items:
+#     - 'git checkout v0.42.7'
+#     - 'make cosmovisor'
+#   environment:
+#     PATH: '{{ path }}'
+
+# - name: copy cosmovisor
+#   copy:
+#     remote_src: true
+#     src: /root/cosmos-sdk/cosmovisor/cosmovisor
+#     dest: /root/go/bin/cosmovisor
+#     owner: root
+#     group: root
+
+# - name: copy cosmovisor service file
+#   copy:
+#     src: cosmovisor.service
+#     dest: /etc/systemd/system/cosmovisor.service
+#     owner: root
+#     group: root
+#     mode: '600'
+
+# - name: start cosmovisor service
+#   systemd:
+#     name: cosmovisor
+#     state: restarted
+#     daemon_reload: yes
+#     enabled: yes
+#   changed_when: false

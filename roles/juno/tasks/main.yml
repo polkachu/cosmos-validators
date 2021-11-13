@@ -1,0 +1,165 @@
+---
+# - name: Update and upgrade the machine
+#   apt:
+#     upgrade: dist
+#     update_cache: true
+
+# - name: install apt packages
+#   apt:
+#     name: '{{item}}'
+#     state: present
+#     update_cache: yes
+#   loop:
+#     - make
+#     - build-essential
+#     - gcc
+#     - git
+#     - jq
+#     - chrony
+
+# - name: Download go
+#   get_url:
+#     url: 'https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz'
+#     dest: '/tmp/go{{ go_version }}.linux-amd64.tar.gz'
+#     mode: '0700'
+
+# - name: unarchive go
+#   unarchive:
+#     src: '/tmp/go{{ go_version }}.linux-amd64.tar.gz'
+#     remote_src: yes
+#     dest: '/usr/local/'
+#     owner: root
+#     group: root
+#     mode: 755
+
+# - name: copy bash_profile
+#   copy:
+#     src: profile
+#     dest: '/root/.profile'
+#     owner: root
+#     group: root
+#     mode: '600'
+
+# - name: Source bash_profile
+#   shell: 'source /root/.profile'
+#   args:
+#     executable: /bin/bash
+
+# - name: Make sure juno folder does not exist
+#   file:
+#     state: absent
+#     path: '/root/juno'
+
+# - name: Clone repo
+#   git:
+#     repo: https://github.com/CosmosContracts/juno
+#     dest: '/root/juno'
+
+# - name: Install node software
+#   command: '{{ item }}'
+#   args:
+#     chdir: '/root/juno'
+#   with_items:
+#     - 'git fetch'
+#     - 'git checkout v2.0.0-alpha.3'
+#     - 'make install'
+#   environment:
+#     PATH: '{{ path }}'
+
+# - name: Initialize Juno
+#   command: 'junod init {{ validator_name }} --chain-id {{ chain_id }}'
+#   environment:
+#     PATH: '{{ path }}'
+
+# - name: Update config files
+#   lineinfile:
+#     path: '/root/.juno/config/app.toml'
+#     regexp: 'minimum-gas-prices '
+#     line: 'minimum-gas-prices = "0.025ujunox"'
+#     state: present
+
+# - name: get peers
+#   uri:
+#     url: 'https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni/persistent_peers.txt'
+#     return_content: true
+#   register: peers
+
+# - name: Set persistent peers
+#   lineinfile:
+#     path: '/root/.juno/config/config.toml'
+#     regexp: 'persistent_peers = ""'
+#     line: 'persistent_peers = "{{ peers.content }}"'
+#     state: present
+
+# - name: Download genesis file
+#   get_url:
+#     url: 'https://raw.githubusercontent.com/CosmosContracts/testnets/main/{{ chain_id }}/genesis.json'
+#     dest: '/root/.juno/config/genesis.json'
+#     mode: '0644'
+
+# - name: Go get cosmovisor
+#   command: 'go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor'
+#   environment:
+#     PATH: '{{ path }}'
+
+# - name: Make sure cosmos-sdk folder does not exist
+#   file:
+#     state: absent
+#     path: '/root/cosmos-sdk'
+
+# - name: Clone repo
+#   git:
+#     repo: https://github.com/cosmos/cosmos-sdk
+#     dest: '/root/cosmos-sdk'
+
+# - name: Install cosmos sdk software
+#   command: '{{ item }}'
+#   args:
+#     chdir: '/root/cosmos-sdk'
+#   with_items:
+#     - 'git checkout v0.42.7'
+#     - 'make cosmovisor'
+#   environment:
+#     PATH: '{{ path }}'
+
+# - name: copy cosmovisor
+#   copy:
+#     remote_src: true
+#     src: /root/cosmos-sdk/cosmovisor/cosmovisor
+#     dest: /root/go/bin/cosmovisor
+#     owner: root
+#     group: root
+
+# - name: make folders
+#   file:
+#     path: '{{ item }}'
+#     state: directory
+#     mode: '0755'
+#   with_items:
+#     - '/root/.juno/cosmovisor/genesis/bin'
+#     - '/root/.juno/cosmovisor/upgrades'
+
+- name: copy junod
+  copy:
+    remote_src: true
+    src: /root/go/bin/junod
+    dest: /root/.juno/cosmovisor/genesis/bin
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: copy cosmovisor service file
+  copy:
+    src: cosmovisor.service
+    dest: /etc/systemd/system/cosmovisor.service
+    owner: root
+    group: root
+    mode: '600'
+
+- name: start cosmovisor service
+  systemd:
+    name: cosmovisor
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false

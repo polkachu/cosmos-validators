@@ -2,14 +2,14 @@
 - name: Wait for system ready
   hosts: '{{ target }}'
   gather_facts: false
-  become: true
   tasks:
     - name: Wait for nodes to become reachable
       wait_for_connection:
 
-- name: Validator Full Setup
+- name: Prepare
   hosts: '{{ target }}'
   become: true
   gather_facts: false
   roles:
     - prepare
+    - juno
