@@ -20,5 +20,5 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-export DAEMON_NAME=junod
-export DAEMON_HOME=$HOME/.juno
+export DAEMON_NAME={{ daemon }}
+export DAEMON_HOME=$HOME/.{{ network }}

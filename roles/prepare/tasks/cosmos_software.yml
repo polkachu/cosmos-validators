@@ -32,3 +32,18 @@
   environment:
     PATH: '{{ path }}'
     GOPATH: '/home/ubuntu/go'
+
+- name: copy bash_profile
+  template:
+    src: 'profile.j2'
+    dest: '/home/ubuntu/.profile'
+    owner: ubuntu
+    group: ubuntu
+    mode: '600'
+
+- name: Source bash_profile
+  shell: |
+    set -o pipefail
+    source /home/ubuntu/.profile
+  args:
+    executable: /bin/bash

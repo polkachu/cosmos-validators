@@ -1,15 +1,13 @@
 ---
-- name: Wait for system ready
-  hosts: '{{ target }}'
-  gather_facts: false
-  tasks:
-    - name: Wait for nodes to become reachable
-      wait_for_connection:
-
 - name: Prepare
   hosts: '{{ target }}'
   become: true
   gather_facts: false
   roles:
     - prepare
+
+- name: Install Juno
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
     - juno
