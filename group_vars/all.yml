@@ -1,10 +1,5 @@
-# Node Exporter (1.1.2 is good. 1.2 causes crazy amount of log errors)
 node_exporter_version: '1.2.2'
 node_exporter_checksum: '344bd4c0bbd66ff78f14486ec48b89c248139cdd485e992583ea30e89e0e5390'
-
-# Promtail
 promtail_version: '2.4.1'
 promtail_checksum: 978391a174e71cfef444ab9dc012f95d5d7eae0d682eaf1da2ea18f793452031
-
-# GO
 go_version: '1.17.1'

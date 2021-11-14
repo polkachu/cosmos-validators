@@ -15,6 +15,16 @@
   when:
     - not ufw_status_result.stdout is search("9100/tcp.*ALLOW IN.*Anywhere")
 
+- name: open p2p port
+  command: ufw allow 26656/tcp
+  when:
+    - not ufw_status_result.stdout is search("26656/tcp.*ALLOW IN.*Anywhere")
+
+- name: open p2p port
+  command: ufw allow 26657/tcp
+  when:
+    - not ufw_status_result.stdout is search("26657/tcp.*ALLOW IN.*Anywhere")
+
 - name: enable firewall
   shell: |
     set -o pipefail
