@@ -27,7 +27,6 @@
   command: '{{ daemon }} init {{ validator_name }} --chain-id {{ chain_id }} -o'
   environment:
     PATH: '{{ path }}'
-    DAEMON_HOME: '/home/ubuntu/.{{ daemon }}'
 
 - name: Update config files
   lineinfile:

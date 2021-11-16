@@ -25,13 +25,21 @@
     dest: '/usr/local/'
     owner: root
     group: root
-    mode: 755
+    mode: '0755'
 
 - name: Go get cosmovisor
   command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest'
   environment:
     PATH: '{{ path }}'
     GOPATH: '/home/ubuntu/go'
+
+- name: Change go folder permission
+  file:
+    path: /home/ubuntu/go
+    owner: ubuntu
+    group: ubuntu
+    recurse: true
+    mode: '0755'
 
 - name: copy bash_profile
   template:
