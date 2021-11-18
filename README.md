@@ -105,6 +105,8 @@ sifnoded tx staking delegate sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90 4
  --fees 100000000000000000rowan
 ```
 
+Juno: create validator
+
 ```bash
 junod tx staking create-validator \
  --amount 6000000ujunox \
