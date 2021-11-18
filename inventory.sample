@@ -1,8 +1,32 @@
-[juno-test]
-10.0.0.1 validator_name=polkadot-juno-test log_name=juno-test
+[sifchain_betanet]
+10.0.0.1
+
+[sifchain_testnet]
+10.0.0.2
+
+[juno_testnet]
+10.0.0.2
+
+[juno_mainnet]
+10.0.0.3
+
+[evmos_testnet]
+10.0.0.4
+
+[sifchain:children]
+sifchain_betanet
+sifchain_testnet
+
+[juno:children]
+juno_mainnet
+juno_testnet
+
+[evmos:children]
+evmos_testnet
 
 [all:vars]
-ansible_user=ansible
+ansible_user=ubuntu
 ansible_port=22
 ansible_ssh_private_key_file="~/.ssh/id_rsa"
-log_monitor=10.0.0.2
+log_monitor=10.0.0.100
+path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:/home/ubuntu/go/bin"

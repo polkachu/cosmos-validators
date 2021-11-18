@@ -1,4 +1,5 @@
 validator_name: polkachu-sifchain-betanet
+log_name: sifchain_betanet
 network: sifnoded
 daemon: sifnoded
 chain_id: sifchain-1

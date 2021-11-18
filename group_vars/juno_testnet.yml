@@ -1,5 +1,7 @@
 validator_name: polkachu-juno-testnet
+log_name: juno_testnet
 network: juno
+folder: '.juno'
 daemon: junod
 chain_id: uni
 node_version: v1.0.0
