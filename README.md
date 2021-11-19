@@ -132,3 +132,13 @@ junod tx staking delegate junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3 330
  --from=polkachu \
  --gas-prices 0.025ujuno
 ```
+
+Juno: Edit validator
+
+```bash
+junod tx staking edit-validator \
+  --moniker "polkachu.com" \
+  --chain-id juno-1 \
+  --from polkachu \
+  --gas-prices 0.025ujuno
+```
