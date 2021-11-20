@@ -1,0 +1,44 @@
+---
+- name: register public ip
+  uri:
+    url: 'https://api.ipify.org?format=json'
+  register: public_ip
+
+- name: Set up external address
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = ""'
+    line: 'external_address = "{{ public_ip.json.ip }}:26656"'
+    state: present
+
+- name: Enable prometheus on the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'prometheus = false'
+    line: 'prometheus = true'
+    state: present
+
+- name: Create cosmovisor directories
+  file:
+    path: '{{ item }}'
+    state: directory
+    mode: '0755'
+  with_items:
+    - '/home/{{ ansible_user }}/{{ folder }}/cosmovisor/genesis/bin'
+    - '/home/{{ ansible_user }}/{{ folder }}/cosmovisor/upgrades'
+
+- name: copy daemon file to cosmovisor
+  copy:
+    src: '/home/{{ ansible_user }}/go/bin/{{ daemon }}'
+    dest: '/home/{{ ansible_user }}/{{ folder }}/cosmovisor/genesis/bin'
+    remote_src: true
+    mode: '0755'
+
+- name: start cosmovisor service
+  become: true
+  systemd:
+    name: cosmovisor
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false

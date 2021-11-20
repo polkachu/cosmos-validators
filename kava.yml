@@ -6,8 +6,10 @@
   roles:
     - prepare
 
-- name: Install Juno
+- name: Install node
   hosts: '{{ target }}'
   gather_facts: false
   roles:
-    - juno
+    - standard_node_installation
+    - initialize_kava
+    - launch_node

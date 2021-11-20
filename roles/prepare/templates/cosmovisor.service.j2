@@ -3,16 +3,15 @@ Description=cosmovisor
 After=network-online.target
 
 [Service]
-User=ubuntu
-ExecStart=/home/ubuntu/go/bin/cosmovisor start
+User={{ ansible_user }}
+ExecStart=/home/{{ ansible_user }}/go/bin/cosmovisor start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
-Environment="DAEMON_NAME=sifnoded"
-Environment="DAEMON_HOME=/home/ubuntu/.sifnoded"
+Environment="DAEMON_NAME={{ daemon }}"
+Environment="DAEMON_HOME=/home/{{ ansible_user }}/{{ folder }}"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-Environment="DAEMON_LOG_BUFFER_SIZE=512"
 
 [Install]
 WantedBy=multi-user.target

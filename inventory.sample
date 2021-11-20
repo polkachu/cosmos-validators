@@ -1,17 +1,20 @@
 [sifchain_betanet]
-10.0.0.1
+10.0.0.1 validator_name=polkachu-sifchain-betanet log_name=sifchain_betanet
 
 [sifchain_testnet]
-10.0.0.2
+10.0.0.2 validator_name=polkachu-sifchain-testnet log_name=sifchain_testnet
 
 [juno_testnet]
-10.0.0.2
+10.0.0.2 validator_name=polkachu-juno-testnet log_name=juno_testnet
 
 [juno_mainnet]
-10.0.0.3
+10.0.0.3 validator_name=polkachu-juno-mainnet log_name=juno_mainnet
 
 [evmos_testnet]
-10.0.0.4
+10.0.0.4 validator_name=polkachu-evmos-testnet log_name=evmos_testnet
+
+[kava_mainnet]
+10.0.0.5 validator_name=polkachu-kava-mainnet log_name=kava_mainnet
 
 [sifchain:children]
 sifchain_betanet
@@ -24,9 +27,14 @@ juno_testnet
 [evmos:children]
 evmos_testnet
 
+[kava:children]
+kava_mainnet
+
 [all:vars]
 ansible_user=ubuntu
 ansible_port=22
 ansible_ssh_private_key_file="~/.ssh/id_rsa"
-log_monitor=10.0.0.100
 path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:/home/ubuntu/go/bin"
+node_exporter=true
+promtail=true
+log_monitor=10.0.0.100

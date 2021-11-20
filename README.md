@@ -4,6 +4,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 
 - Juno (mainnet and testnet)
 - Sifchain (betanet and testnet)
+- Kava (mainnet)
 - Evmos (testnet)
 
 ## Summary
@@ -11,7 +12,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 You run one playbook and set up a node. For example:
 
 ```bash
-ansible-playbook -i inventory juno_full_setup.yml -e "target=juno_testnet"
+ansible-playbook -i inventory juno.yml -e "target=juno_testnet"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -24,12 +25,15 @@ First, make sure that you have a production inventory file with your confidentia
 cp inventory.sample inventory
 ```
 
-Needless to say, you need to update the dummy values in the inventory file. For each node, you need to update the server IP. While you are free to keep the default, you might also want to update:
+Needless to say, you need to update the dummy values in the inventory file. For each node, you need to update the server IP, validator_name and log_name (log_name is optional if you do not install Promtail). While you are free to keep the default, you might also want to update:
 
-1. ansible_user: The sample file assumes `ubuntu`.
+1. ansible_user: The sample file assumes `ubuntu`, but feel free to use other user name. This user need sudo privilege.
 2. ansible_port: The sample file assumes `22`. But if you are like me, you will have a different ssh port other than `22` to avoid port sniffing.
 3. ansible_ssh_private_key_file: The sample file assumes `~/.ssh/id_rsa`, but you might have a different key location.
-4. log_monitor: Enter your monitor server IP. It is most likely a private IP address if you use a firewall around your private virtual cloud (VPC).
+4. path: This is to make sure that the ansible_user can access the `go` executable. If your ansible_user is not `ubuntu`, you need to update it.
+5. node_exporter: Default is `true`. Change it to `false` if you do not want to install node_exporter
+6. promtail: Default is `true`. Change it to `false` if you do not want to install promtail
+7. log_monitor: Enter your monitor server IP. It is most likely a private IP address if you use a firewall around your private virtual cloud (VPC). You do not need this if you do not install promtail
 
 It is beyond the scope of this guide to help you create a sudo user, alternate ssh port, create a private key, install Ansible on your machine, etc. You can do a quick online search and find the answers. In my experience, Digital Ocean have some quality guides on these topics. Stack Overflow can help you trouble-shoot if you are stuck.
 
@@ -43,13 +47,29 @@ The basic cluster structure is:
 
 The structure allows you to target `vars` to each node, or a group cluster, or the whole cluster. Make sure that you are familiar with the files in the `group_vars` folder. They follow this clustered structure closely.
 
-## Main Playbook
+## Playbooks
 
-The key Ansible playbook is `xxxxx_full_setup.yml` files. It will set up a fresh node from scratch. For example:
+The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node from scratch. For example:
 
 ```bash
-ansible-playbook -i inventory sifchain_full_setup.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
 ```
+
+Playbooks are:
+
+| Playbook       | Description                                                                          |
+| -------------- | ------------------------------------------------------------------------------------ |
+| `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules  |
+| `juno.yml`     | Set up Juno node. It include the general `prepare` task and `juno` specific task     |
+| `sifchain.yml` | Set up Juno node. It include the general `prepare` task and `sifchain` specific task |
+| `kava.yml`     | Set up Juno node. It include the general `prepare` task and `kava` specific task     |
+
+## Additional Info
+
+When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time travel. We strongly recommend snapshots, which will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers
+
+- Various chains: https://www.chainlayer.io/quicksync/
+- Sifchain: see https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md
 
 ## Some Useful Commands
 

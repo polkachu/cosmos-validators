@@ -1,0 +1,24 @@
+---
+- name: Make sure the folder does not exist
+  become: true
+  file:
+    state: absent
+    path: '/home/{{ ansible_user }}/{{ network }}'
+
+- name: Clone node repo
+  git:
+    repo: '{{ repo }}'
+    dest: '/home/{{ ansible_user }}/{{ network }}'
+
+- name: Install node
+  command: '{{ item }}'
+  become: true
+  args:
+    chdir: '/home/{{ ansible_user }}/{{ network }}'
+  with_items:
+    - 'git fetch'
+    - 'git checkout {{ node_version }}'
+    - 'make install'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '/home/{{ ansible_user }}/go'

@@ -31,27 +31,28 @@
   command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest'
   environment:
     PATH: '{{ path }}'
-    GOPATH: '/home/ubuntu/go'
+    GOPATH: '/home/{{ ansible_user }}/go'
 
 - name: Change go folder permission
   file:
-    path: /home/ubuntu/go
-    owner: ubuntu
-    group: ubuntu
+    path: /home/{{ ansible_user }}/go
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
     recurse: true
     mode: '0755'
 
-- name: copy bash_profile
+- name: copy .profile
   template:
     src: 'profile.j2'
-    dest: '/home/ubuntu/.profile'
-    owner: ubuntu
-    group: ubuntu
-    mode: '600'
+    dest: '/home/{{ ansible_user }}/.profile'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0600'
 
-- name: Source bash_profile
-  shell: |
-    set -o pipefail
-    source /home/ubuntu/.profile
-  args:
-    executable: /bin/bash
+- name: copy cosmovisor service file
+  template:
+    src: 'cosmovisor.service.j2'
+    dest: '/etc/systemd/system/cosmovisor.service'
+    owner: root
+    group: root
+    mode: '0600'

@@ -1,0 +1,27 @@
+---
+- name: Initialize Node
+  command: '{{ daemon }} init {{ validator_name }} --chain-id {{ chain_id }} -o'
+  environment:
+    PATH: '{{ path }}'
+
+- name: Update the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/.{{ network }}/config/config.toml'
+    regexp: 'persistent_peers = ""'
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
+
+- name: Download genesis file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '/tmp/genesis.json.gz'
+    mode: '0700'
+
+- name: unarchive genesis file
+  shell: 'gunzip /tmp/genesis.json.gz -f'
+
+- name: copy the genesis file
+  copy:
+    remote_src: true
+    src: /tmp/genesis.json
+    dest: /home/{{ ansible_user }}/.sifnoded/config
