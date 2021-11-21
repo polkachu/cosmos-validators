@@ -5,6 +5,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 - Juno (mainnet and testnet)
 - Sifchain (betanet and testnet)
 - Kava (mainnet)
+- BitCanna (mainnet)
 - Evmos (testnet)
 
 ## Summary
@@ -12,7 +13,10 @@ This repo is to set up the Cosmos-based node. It currently support:
 You run one playbook and set up a node. For example:
 
 ```bash
-ansible-playbook -i inventory juno.yml -e "target=juno_testnet"
+ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
+ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
+ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -52,113 +56,35 @@ The structure allows you to target `vars` to each node, or a group cluster, or t
 The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node from scratch. For example:
 
 ```bash
+ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
 ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
+ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
 ```
+
+If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmo-based chain without installing the node itself.
 
 Playbooks are:
 
-| Playbook       | Description                                                                          |
-| -------------- | ------------------------------------------------------------------------------------ |
-| `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules  |
-| `juno.yml`     | Set up Juno node. It include the general `prepare` task and `juno` specific task     |
-| `sifchain.yml` | Set up Juno node. It include the general `prepare` task and `sifchain` specific task |
-| `kava.yml`     | Set up Juno node. It include the general `prepare` task and `kava` specific task     |
+| Playbook       | Description                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules       |
+| `juno.yml`     | Set up Juno node. It includes the general `prepare` task and `juno` specific task         |
+| `sifchain.yml` | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task |
+| `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
+| `bitcanna.yml` | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task |
 
 ## Additional Info
 
-When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time travel. We strongly recommend snapshots, which will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers
+When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time-travel to the present quickly. We strongly recommend using snapshots. It will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers:
 
 - Various chains: https://www.chainlayer.io/quicksync/
 - Sifchain: see https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md
 
 ## Some Useful Commands
 
-block height
+[General](docs/general.md)
 
-```bash
-watch -n 60 -d "curl -s http://localhost:26657/status | jq -r .result.sync_info.latest_block_height"
-```
+[Juno](docs/juno.md)
 
-Connected Peers
-
-```bash
-curl -s localhost:26657/net_info | jq -r '.result.peers[] | .node_info.moniker, .node_info.id, .node_info.listen_addr, .remote_ip'
-```
-
-Check logs and cosmovisor status
-
-```bash
-journalctl -u cosmovisor.service -f
-journalctl -u cosmovisor.service -f | grep "committed"
-systemctl status cosmovisor
-```
-
-Sifchain: create validator
-
-```bash
-sifnoded tx staking create-validator \
- --amount 1000000000000000000000rowan \
- --commission-max-change-rate "0.01" \
- --commission-rate "0.02" \
- --commission-max-rate "0.1" \
- --min-self-delegation "1" \
- --website "https://polkachu.com" \
- --identity "0A6AF02D1557E5B4" \
- --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
- --pubkey=$(sifnoded tendermint show-validator) \
- --moniker 'Polkachu' \
- --chain-id sifchain-1 \
- --gas-adjustment="1.5" \
- --gas="200000" \
- --fees 100000000000000000rowan \
- --from polkachu
-```
-
-Sifchain: Delegate
-
-```bash
-sifnoded tx staking delegate sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90 420000000000000000000rowan \
- --chain-id sifchain-1 \
- --from=polkachu \
- --gas-adjustment="1.5" \
- --gas="200000" \
- --fees 100000000000000000rowan
-```
-
-Juno: create validator
-
-```bash
-junod tx staking create-validator \
- --amount 9000000ujuno \
- --commission-max-change-rate "0.01" \
- --commission-max-rate "0.10" \
- --commission-rate "0.0069" \
- --min-self-delegation "1" \
- --website "https://polkachu.com" \
- --identity "0A6AF02D1557E5B4" \
- --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
- --pubkey=$(junod tendermint show-validator) \
- --moniker 'Polkachu' \
- --chain-id juno-1 \
- --gas-prices 0.025ujuno \
- --from polkachu
-```
-
-Juno: Delegate
-
-```bash
-junod tx staking delegate junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3 33000000ujuno \
- --chain-id juno-1 \
- --from=polkachu \
- --gas-prices 0.025ujuno
-```
-
-Juno: Edit validator
-
-```bash
-junod tx staking edit-validator \
-  --moniker "polkachu.com" \
-  --chain-id juno-1 \
-  --from polkachu \
-  --gas-prices 0.025ujuno
-```
+[Sifchain](docs/sifchain.md)
