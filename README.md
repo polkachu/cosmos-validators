@@ -6,6 +6,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 - Sifchain (betanet and testnet)
 - Kava (mainnet)
 - BitCanna (mainnet)
+- KiChain (mainnet)
 - Evmos (testnet)
 
 ## Summary
@@ -17,6 +18,7 @@ ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
 ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
+ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -60,6 +62,7 @@ ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
 ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
+ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
 ```
 
 If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmo-based chain without installing the node itself.
@@ -73,13 +76,17 @@ Playbooks are:
 | `sifchain.yml` | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task |
 | `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
 | `bitcanna.yml` | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task |
+| `kichain.yml`  | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task   |
 
 ## Additional Info
 
 When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time-travel to the present quickly. We strongly recommend using snapshots. It will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers:
 
-- Various chains: https://www.chainlayer.io/quicksync/
-- Sifchain: see https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md
+Kava: Snapshot is [here](https://www.chainlayer.io/quicksync/)
+
+Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md)
+
+KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet-Clean-Install-b20ce6400131499f854abc7567ce3b3f). In fact, we cannot make it work with the peers listed when we tried to sync from Block 1. The only way we made it work is by syncing with the snapshot from the included link.
 
 ## Some Useful Commands
 
@@ -93,6 +100,8 @@ When you install a node that has upgrades in the past, you can either sync from 
 
 [Sifchain](docs/sifchain.md)
 
+[KiChain](docs/kichain.md)
+
 ## Please stake with our validators
 
 | Network  | Validator                                            |
@@ -101,3 +110,4 @@ When you install a node that has upgrades in the past, you can either sync from 
 | Juno     | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3` |
 | Kava     | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj` |
 | Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`  |
+| KiChain  | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`   |
