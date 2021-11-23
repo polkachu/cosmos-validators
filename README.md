@@ -88,3 +88,7 @@ When you install a node that has upgrades in the past, you can either sync from 
 [Juno](docs/juno.md)
 
 [Sifchain](docs/sifchain.md)
+
+[BitCanna](docs/bitcanna.md)
+
+[Kava](docs/kava.md)
