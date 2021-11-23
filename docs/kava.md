@@ -21,3 +21,14 @@ kvcli tx staking create-validator \
     --gas=auto \
     --gas-adjustment=1.4
 ```
+
+Delegate
+
+```bash
+kvcli tx staking delegate kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj 483000000ukava \
+    --from=polkachu \
+    --chain-id=kava-8 \
+    --fees=2000ukava \
+    --gas=auto \
+    --gas-adjustment=1.4
+```
