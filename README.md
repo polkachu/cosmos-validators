@@ -85,10 +85,19 @@ When you install a node that has upgrades in the past, you can either sync from 
 
 [General](docs/general.md)
 
+[BitCanna](docs/bitcanna.md)
+
 [Juno](docs/juno.md)
+
+[Kava](docs/kava.md)
 
 [Sifchain](docs/sifchain.md)
 
-[BitCanna](docs/bitcanna.md)
+## Please stake with our validators
 
-[Kava](docs/kava.md)
+| Network  | Validator                                            |
+| -------- | ---------------------------------------------------- |
+| Bitcanna | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj` |
+| Juno     | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3` |
+| Kava     | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj` |
+| Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`  |
