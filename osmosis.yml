@@ -11,5 +11,5 @@
   gather_facts: false
   roles:
     - standard_node_installation
-    - initialize_kichain
+    - initialize_osmosis
     - launch_node

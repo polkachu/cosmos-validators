@@ -11,5 +11,4 @@
   gather_facts: false
   roles:
     - standard_node_installation
-    - initialize_kichain
-    - launch_node
+    - initialize_terra

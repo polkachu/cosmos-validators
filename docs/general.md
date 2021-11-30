@@ -6,6 +6,12 @@ block height
 watch -n 60 -d "curl -s http://localhost:26657/status | jq -r .result.sync_info.latest_block_height"
 ```
 
+Check if the chain has synced
+
+```bash
+curl http://localhost:26657/status | jq .result.sync_info.catching_up
+```
+
 Connected Peers
 
 ```bash
@@ -18,4 +24,10 @@ Check logs and cosmovisor status
 journalctl -u cosmovisor.service -f
 journalctl -u cosmovisor.service -f | grep "committed"
 systemctl status cosmovisor
+```
+
+Check if the node is performing fine:
+
+```bash
+bcnad query slashing signing-infos --output json | jq | grep bcnavalcons1gp957czryfgyvxwn3tfnyy2f0t9g2p4pjnln5n
 ```

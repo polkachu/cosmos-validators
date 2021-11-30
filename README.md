@@ -4,9 +4,11 @@ This repo is to set up the Cosmos-based node. It currently support:
 
 - Juno (mainnet and testnet)
 - Sifchain (betanet and testnet)
+- Terra (mainnet and testnet)
 - Kava (mainnet)
 - BitCanna (mainnet)
 - KiChain (mainnet)
+- Osmosis (mainnet)
 - Evmos (testnet)
 
 ## Summary
@@ -16,9 +18,11 @@ You run one playbook and set up a node. For example:
 ```bash
 ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
 ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
 ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
+ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -60,9 +64,11 @@ The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node fro
 ```bash
 ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
 ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
 ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
+ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet"
 ```
 
 If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmo-based chain without installing the node itself.
@@ -74,9 +80,11 @@ Playbooks are:
 | `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules       |
 | `juno.yml`     | Set up Juno node. It includes the general `prepare` task and `juno` specific task         |
 | `sifchain.yml` | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task |
+| `terra.yml`    | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task    |
 | `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
 | `bitcanna.yml` | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task |
 | `kichain.yml`  | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task   |
+| `osmosis.yml`  | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task   |
 
 ## Additional Info
 
@@ -101,6 +109,10 @@ KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet
 [Sifchain](docs/sifchain.md)
 
 [KiChain](docs/kichain.md)
+
+[Terra](docs/terra.md)
+
+[Osmosis](docs/osmosis.md)
 
 ## Please stake with our validators
 

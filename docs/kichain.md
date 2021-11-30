@@ -19,8 +19,19 @@ kid tx staking create-validator \
     --from=polkachu
 ```
 
+Delegate
+
 ```bash
 kid tx staking delegate kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7 70000000uxki \
+    --chain-id=kichain-2 \
+    --gas-prices=0.025uxki \
+    --from=polkachu
+```
+
+Claim rewards
+
+```bash
+kid tx distribution withdraw-all-rewards \
     --chain-id=kichain-2 \
     --gas-prices=0.025uxki \
     --from=polkachu

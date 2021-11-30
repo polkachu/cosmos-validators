@@ -1,0 +1,3 @@
+## Osmosis
+
+create validator

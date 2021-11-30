@@ -1,0 +1,92 @@
+---
+- name: Increase the maximum files terrad can open I
+  become: yes
+  lineinfile:
+    path: /etc/security/limits.conf
+    regexp: '\*                soft    nofile          65535'
+    line: '*                soft    nofile          65535'
+
+- name: Increase the maximum files terrad can open II
+  become: yes
+  lineinfile:
+    path: /etc/security/limits.conf
+    regexp: '\*                hard    nofile          65535'
+    line: '*                hard    nofile          65535'
+
+- name: Initialize Node
+  command: '{{ daemon }} init {{ validator_name }} -o'
+  environment:
+    PATH: '{{ path }}'
+
+- name: Download genesis file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '/home/{{ ansible_user }}/{{ folder }}/config/genesis.json'
+    force: yes
+    mode: '0644'
+
+- name: Download address book
+  get_url:
+    url: '{{ address_book }}'
+    dest: '/home/{{ ansible_user }}/{{ folder }}/config/addrbook.json'
+    force: yes
+    mode: '0644'
+
+- name: Update minimum gas price on config file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
+    regexp: 'minimum-gas-prices '
+    line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
+    state: present
+
+- name: Update pruning to everything to save storage
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
+    regexp: 'pruning = "default"'
+    line: 'pruning = "everything"'
+    state: present
+
+# Launch Node
+- name: register public ip
+  uri:
+    url: 'https://api.ipify.org?format=json'
+  register: public_ip
+
+- name: Set up external address
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = ""'
+    line: 'external_address = "{{ public_ip.json.ip }}:26656"'
+    state: present
+
+- name: Enable prometheus on the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'prometheus = false'
+    line: 'prometheus = true'
+    state: present
+
+- name: Change namespace in the prometheus variable. This is so that it can work with Polkachu's grafana board
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'namespace = "tendermint"'
+    line: 'namespace = ""'
+    state: present
+
+- name: copy terrad service file
+  become: yes
+  template:
+    src: 'terrad.service.j2'
+    dest: '/etc/systemd/system/terrad.service'
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: start terrad service
+  become: true
+  systemd:
+    name: terrad
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false

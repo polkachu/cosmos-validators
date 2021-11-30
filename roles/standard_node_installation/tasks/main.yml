@@ -12,7 +12,6 @@
 
 - name: Install node
   command: '{{ item }}'
-  become: true
   args:
     chdir: '/home/{{ ansible_user }}/{{ network }}'
   with_items:
