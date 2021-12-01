@@ -2,27 +2,26 @@
 
 This repo is to set up the Cosmos-based node. It currently support:
 
-- Juno (mainnet and testnet)
-- Sifchain (betanet and testnet)
-- Terra (mainnet and testnet)
-- Kava (mainnet)
 - BitCanna (mainnet)
+- Juno (mainnet and testnet)
+- Kava (mainnet)
 - KiChain (mainnet)
 - Osmosis (mainnet)
-- Evmos (testnet)
+- Sifchain (betanet and testnet)
+- Terra (mainnet and testnet)
 
 ## Summary
 
 You run one playbook and set up a node. For example:
 
 ```bash
-ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
-ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
-ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
-ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
+ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
+ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
 ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet"
+ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -62,13 +61,13 @@ The structure allows you to target `vars` to each node, or a group cluster, or t
 The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node from scratch. For example:
 
 ```bash
-ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
-ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
-ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
-ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
+ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
+ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
 ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet"
+ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
+ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
 ```
 
 If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmo-based chain without installing the node itself.
@@ -78,13 +77,13 @@ Playbooks are:
 | Playbook       | Description                                                                               |
 | -------------- | ----------------------------------------------------------------------------------------- |
 | `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules       |
-| `juno.yml`     | Set up Juno node. It includes the general `prepare` task and `juno` specific task         |
-| `sifchain.yml` | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task |
-| `terra.yml`    | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task    |
-| `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
 | `bitcanna.yml` | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task |
+| `juno.yml`     | Set up Juno node. It includes the general `prepare` task and `juno` specific task         |
+| `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
 | `kichain.yml`  | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task   |
 | `osmosis.yml`  | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task   |
+| `sifchain.yml` | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task |
+| `terra.yml`    | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task    |
 
 ## Additional Info
 
@@ -92,9 +91,11 @@ When you install a node that has upgrades in the past, you can either sync from 
 
 Kava: Snapshot is [here](https://www.chainlayer.io/quicksync/)
 
-Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md)
-
 KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet-Clean-Install-b20ce6400131499f854abc7567ce3b3f). In fact, we cannot make it work with the peers listed when we tried to sync from Block 1. The only way we made it work is by syncing with the snapshot from the included link.
+
+Osmosis: Snapshot is [here](https://www.chainlayer.io/quicksync/)
+
+Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md)
 
 ## Some Useful Commands
 
@@ -106,13 +107,13 @@ KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet
 
 [Kava](docs/kava.md)
 
-[Sifchain](docs/sifchain.md)
-
 [KiChain](docs/kichain.md)
 
-[Terra](docs/terra.md)
-
 [Osmosis](docs/osmosis.md)
+
+[Sifchain](docs/sifchain.md)
+
+[Terra](docs/terra.md)
 
 ## Please stake with our validators
 
@@ -121,5 +122,6 @@ KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet
 | Bitcanna | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj` |
 | Juno     | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3` |
 | Kava     | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj` |
-| Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`  |
 | KiChain  | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`   |
+| Osmosis  | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp` |
+| Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`  |
