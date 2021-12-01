@@ -25,7 +25,7 @@ Edit validator
 
 ```bash
 osmosisd tx staking edit-validator \
-    --moniker "polkachu.com | 5% fee" \
+    --moniker "polkachu.com" \
     --website "https://polkachu.com" \
     --chain-id=osmosis-1 \
     --gas="auto" \
