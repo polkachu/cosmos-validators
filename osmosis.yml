@@ -12,4 +12,3 @@
   roles:
     - standard_node_installation
     - initialize_osmosis
-    - launch_node

@@ -23,3 +23,48 @@
     regexp: 'pruning = "default"'
     line: 'pruning = "everything"'
     state: present
+
+# launch node
+- name: register public ip
+  uri:
+    url: 'https://api.ipify.org?format=json'
+  register: public_ip
+
+- name: Set up external address
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = ""'
+    line: 'external_address = "{{ public_ip.json.ip }}:26656"'
+    state: present
+
+- name: Enable prometheus on the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'prometheus = false'
+    line: 'prometheus = true'
+    state: present
+
+- name: Change namespace in the prometheus variable. This is so that it can work with Polkachu's grafana board
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'namespace = "tendermint"'
+    line: 'namespace = ""'
+    state: present
+
+- name: copy osmosisd service file
+  become: yes
+  template:
+    src: 'osmosisd.service.j2'
+    dest: '/etc/systemd/system/osmosisd.service'
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: start osmosisd service
+  become: true
+  systemd:
+    name: osmosisd
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
