@@ -94,33 +94,20 @@ Osmosis: Snapshot is [here](https://www.chainlayer.io/quicksync/)
 
 Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md)
 
-## Some Useful Commands
+## P.S.
 
 [General](docs/general.md)
-
-[BitCanna](docs/bitcanna.md)
-
-[Comdex](docs/comdex.md)
-
-[Juno](docs/juno.md)
-
-[Kava](docs/kava.md)
-
-[KiChain](docs/kichain.md)
-
-[Osmosis](docs/osmosis.md)
-
-[Sifchain](docs/sifchain.md)
 
 [Terra](docs/terra.md)
 
 ## Please stake with our validators
 
-| Network  | Validator                                            |
-| -------- | ---------------------------------------------------- |
-| Bitcanna | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj` |
-| Juno     | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3` |
-| Kava     | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj` |
-| KiChain  | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`   |
-| Osmosis  | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp` |
-| Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`  |
+| Network  | Validator                                              | Useful Commands              |
+| -------- | ------------------------------------------------------ | ---------------------------- |
+| Bitcanna | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`   | [BitCanna](docs/bitcanna.md) |
+| Comdex   | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz` | [Comdex](docs/comdex.md)     |
+| Juno     | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`   | [Juno](docs/juno.md)         |
+| Kava     | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`   | [Kava](docs/kava.md)         |
+| KiChain  | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`     | [KiChain](docs/kichain.md)   |
+| Osmosis  | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`   | [Osmosis](docs/osmosis.md)   |
+| Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`    | [Sifchain](docs/sifchain.md) |

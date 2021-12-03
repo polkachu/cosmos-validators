@@ -1,0 +1,9 @@
+network: juno
+folder: '.juno'
+daemon: junod
+chain_id: astarte
+node_version: v1.0.0
+repo: https://github.com/CosmosContracts/juno
+genesis: ''
+peers: ''
+minimum_has_price: ''
