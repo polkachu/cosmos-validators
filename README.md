@@ -3,6 +3,7 @@
 This repo is to set up the Cosmos-based node. It currently support:
 
 - BitCanna (mainnet)
+- Comdex (mainnet)
 - Juno (mainnet and testnet)
 - Kava (mainnet)
 - KiChain (mainnet)
@@ -16,12 +17,6 @@ You run one playbook and set up a node. For example:
 
 ```bash
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
-ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
-ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
-ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
-ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet"
-ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
-ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -62,6 +57,7 @@ The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node fro
 
 ```bash
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
+ansible-playbook -i inventory bitcanna.yml -e "target=comdex_mainnet"
 ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
 ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
@@ -78,6 +74,7 @@ Playbooks are:
 | -------------- | ----------------------------------------------------------------------------------------- |
 | `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules       |
 | `bitcanna.yml` | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task |
+| `comdex.yml`   | Set up Comdex node. It includes the general `prepare` task and `comdex` specific task     |
 | `juno.yml`     | Set up Juno node. It includes the general `prepare` task and `juno` specific task         |
 | `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
 | `kichain.yml`  | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task   |
@@ -102,6 +99,8 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 [General](docs/general.md)
 
 [BitCanna](docs/bitcanna.md)
+
+[Comdex](docs/comdex.md)
 
 [Juno](docs/juno.md)
 

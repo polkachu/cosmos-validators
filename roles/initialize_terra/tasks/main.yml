@@ -39,13 +39,6 @@
     line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
     state: present
 
-- name: Update pruning to everything to save storage
-  lineinfile:
-    path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
-    regexp: 'pruning = "default"'
-    line: 'pruning = "everything"'
-    state: present
-
 # Launch Node
 - name: register public ip
   uri:
