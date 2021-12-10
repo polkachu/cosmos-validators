@@ -1,34 +1,13 @@
-[sifchain_betanet]
-10.0.0.1 validator_name=polkachu-sifchain-betanet log_name=sifchain_betanet
+# Here we use Juno as an example setup. You can copy the structure for other networks
+[juno_mainnet_main]
+10.0.0.1 validator_name=YOUR_NODE_MONIKER log_name=YOUR_LOG_NAME
 
-[sifchain_testnet]
-10.0.0.2 validator_name=polkachu-sifchain-testnet log_name=sifchain_testnet
+[juno_mainnet_backup]
+10.0.0.2 validator_name=YOUR_BACKUP_NODE_MONIKER log_name=YOUR_BACKUP_LOG_NAME
 
-[juno_testnet]
-10.0.0.2 validator_name=polkachu-juno-testnet log_name=juno_testnet
-
-[juno_mainnet]
-10.0.0.3 validator_name=polkachu-juno-mainnet log_name=juno_mainnet
-
-[evmos_testnet]
-10.0.0.4 validator_name=polkachu-evmos-testnet log_name=evmos_testnet
-
-[kava_mainnet]
-10.0.0.5 validator_name=polkachu-kava-mainnet log_name=kava_mainnet
-
-[sifchain:children]
-sifchain_betanet
-sifchain_testnet
-
-[juno:children]
-juno_mainnet
-juno_testnet
-
-[evmos:children]
-evmos_testnet
-
-[kava:children]
-kava_mainnet
+[juno_mainnet:children]
+juno_mainnet_main
+juno_mainnet_backup
 
 [all:vars]
 ansible_user=ubuntu

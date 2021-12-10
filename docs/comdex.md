@@ -22,7 +22,17 @@ comdex tx staking create-validator \
 Delegate
 
 ```bash
-comdex tx staking delegate comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz 29000000ucmdx \
+comdex tx staking delegate comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz 190000000ucmdx \
+    --chain-id=comdex-1 \
+    --fees=5000ucmdx \
+    --from=polkachu
+```
+
+Edit validator
+
+```bash
+comdex tx staking edit-validator \
+    --moniker '   polkachu.com | 2% fee' \
     --chain-id=comdex-1 \
     --fees=5000ucmdx \
     --from=polkachu

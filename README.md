@@ -2,21 +2,21 @@
 
 This repo is to set up the Cosmos-based node. It currently support:
 
-- BitCanna (mainnet)
-- Comdex (mainnet)
-- Juno (mainnet and testnet)
-- Kava (mainnet)
-- KiChain (mainnet)
-- Osmosis (mainnet)
-- Sifchain (betanet and testnet)
-- Terra (mainnet and testnet)
+- BitCanna
+- Comdex
+- Juno
+- Kava
+- KiChain
+- Osmosis
+- Sifchain
+- Terra
 
 ## Summary
 
 You run one playbook and set up a node. For example:
 
 ```bash
-ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
+ansible-playbook -i inventory juno.yml -e "target=juno_mainnet_main"
 ```
 
 But before you rush with this easy setup, you probably want to read on so you understand the structure of this Ansible program and all the features it offers.
@@ -45,8 +45,8 @@ It is beyond the scope of this guide to help you create a sudo user, alternate s
 
 The basic cluster structure is:
 
-1. Name each juno node as `juno_testnet`, `juno_mainnet`, etc. Group all Juno nodes into `juno` group.
-2. Name each juno node as `sifchain_testnet`, `sifchain_mainnet`, etc. Group all Sifchain nodes into `sifchain` group.
+1. Name each juno node as `juno_mainnet_main`, `juno_mainnet_backup`, etc. Group all Juno nodes into `juno_mainnet` group.
+2. Name each juno node as `comdex_mainnet_main`, `Comdex_mainnet_test`, etc. Group all comdex nodes into `comdex_mainnet` group.
 3. ...
 
 The structure allows you to target `vars` to each node, or a group cluster, or the whole cluster. Make sure that you are familiar with the files in the `group_vars` folder. They follow this clustered structure closely.
@@ -56,17 +56,17 @@ The structure allows you to target `vars` to each node, or a group cluster, or t
 The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node from scratch. For example:
 
 ```bash
-ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet"
-ansible-playbook -i inventory bitcanna.yml -e "target=comdex_mainnet"
-ansible-playbook -i inventory juno.yml -e "target=juno_mainnet"
-ansible-playbook -i inventory kava.yml -e "target=kava_mainnet"
-ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet"
-ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet"
-ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet"
-ansible-playbook -i inventory terra.yml -e "target=terra_mainnet"
+ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet_main"
+ansible-playbook -i inventory bitcanna.yml -e "target=comdex_mainnet_main"
+ansible-playbook -i inventory juno.yml -e "target=juno_mainnet_main"
+ansible-playbook -i inventory kava.yml -e "target=kava_mainnet_main"
+ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet_main"
+ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet_main"
+ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet_main"
+ansible-playbook -i inventory terra.yml -e "target=terra_mainnet_main"
 ```
 
-If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmo-based chain without installing the node itself.
+If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmos-based chain without installing the node itself.
 
 Playbooks are:
 
@@ -94,11 +94,17 @@ Osmosis: Snapshot is [here](https://www.chainlayer.io/quicksync/)
 
 Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md)
 
-## P.S.
+## Our Validator setup
 
-[General](docs/general.md)
-
-[Terra](docs/terra.md)
+| Network  | Main Validator | Fully synced Spare | Testnet Participation |
+| -------- | -------------- | ------------------ | --------------------- |
+| Bitcanna | Yes            | Yes                | Yes                   |
+| Comdex   | Yes            | Yes                | In Progress           |
+| Juno     | Yes            | In Progress        | Yes                   |
+| Kava     | Yes            | Yes                | No                    |
+| KiChain  | Yes            | No                 | No                    |
+| Osmosis  | Yes            | No                 | No                    |
+| Sifchain | Yes            | Yes                | In Progress           |
 
 ## Please stake with our validators
 
@@ -111,3 +117,9 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 | KiChain  | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`     | [KiChain](docs/kichain.md)   |
 | Osmosis  | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`   | [Osmosis](docs/osmosis.md)   |
 | Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`    | [Sifchain](docs/sifchain.md) |
+
+## P.S.
+
+[General](docs/general.md)
+
+[Terra](docs/terra.md)

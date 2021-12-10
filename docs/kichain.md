@@ -30,8 +30,8 @@ kid tx staking delegate kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7 7000000
 
 ```bash
 kid tx staking edit-validator \
-    --commission-rate="0.02" \
-    --moniker="polkachu.com | 2% fee" \
+    --commission-rate="0.04" \
+    --moniker="polkachu.com | 4% fee" \
     --chain-id=kichain-2 \
     --gas-prices=0.025uxki \
     --from=polkachu
