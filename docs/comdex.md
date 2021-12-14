@@ -32,7 +32,7 @@ Edit validator
 
 ```bash
 comdex tx staking edit-validator \
-    --moniker '   polkachu.com | 2% fee' \
+    --moniker 'polkachu.com | 2% fee' \
     --chain-id=comdex-1 \
     --fees=5000ucmdx \
     --from=polkachu

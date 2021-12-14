@@ -25,7 +25,7 @@ Edit validator
 
 ```bash
 agd tx staking edit-validator \
-  --moniker=" polkachu.com" \
+  --moniker="polkachu.com" \
   --from=polkachu \
   --chain-id=agoricdev-6 \
   --gas=auto \

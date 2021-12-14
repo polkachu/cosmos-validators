@@ -81,7 +81,7 @@ Edit validator
 
 ```bash
 junod tx staking edit-validator \
-  --moniker "  polkachu.com | test" \
+  --moniker "polkachu.com | test" \
   --chain-id uni \
   --from juno_test \
   --gas-prices 0.025ujunox
