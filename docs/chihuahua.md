@@ -13,8 +13,18 @@ chihuahuad tx staking create-validator \
     --identity "0A6AF02D1557E5B4" \
     --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
     --pubkey `chihuahuad tendermint show-validator` \
-    --moniker="  polkachu.com | 1% fee" \
+    --moniker="polkachu.com | 1% fee" \
     --chain-id=chihuahua-1 \
     --security-contact="hello@polkachu.com" \
+    --from=polkachu
+```
+
+Edit validator
+
+```bash
+chihuahuad tx staking edit-validator \
+    --identity "0A6AF02D1557E5B4" \
+    --moniker="polkachu.com | 1% fee" \
+    --chain-id=chihuahua-1 \
     --from=polkachu
 ```
