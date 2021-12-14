@@ -17,3 +17,4 @@
 
 - name: install cosmos software
   import_tasks: cosmos_software.yml
+  when: cosmos_software|default(true)|bool == true

@@ -3,6 +3,7 @@
 This repo is to set up the Cosmos-based node. It currently support:
 
 - BitCanna
+- Chihuahua
 - Comdex
 - Juno
 - Kava
@@ -57,7 +58,8 @@ The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node fro
 
 ```bash
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet_main"
-ansible-playbook -i inventory bitcanna.yml -e "target=comdex_mainnet_main"
+ansible-playbook -i inventory chihuahua.yml -e "target=chihuahua_mainnet_main"
+ansible-playbook -i inventory comdex.yml -e "target=comdex_mainnet_main"
 ansible-playbook -i inventory juno.yml -e "target=juno_mainnet_main"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet_main"
 ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet_main"
@@ -70,17 +72,18 @@ If you prefer to install the node manually, you can run a 'prepare' playbook to 
 
 Playbooks are:
 
-| Playbook       | Description                                                                               |
-| -------------- | ----------------------------------------------------------------------------------------- |
-| `prepare.yml ` | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules       |
-| `bitcanna.yml` | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task |
-| `comdex.yml`   | Set up Comdex node. It includes the general `prepare` task and `comdex` specific task     |
-| `juno.yml`     | Set up Juno node. It includes the general `prepare` task and `juno` specific task         |
-| `kava.yml`     | Set up Kava node. It includes the general `prepare` task and `kava` specific task         |
-| `kichain.yml`  | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task   |
-| `osmosis.yml`  | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task   |
-| `sifchain.yml` | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task |
-| `terra.yml`    | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task    |
+| Playbook        | Description                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------- |
+| `prepare.yml `  | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules         |
+| `bitcanna.yml`  | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task   |
+| `chihuahua.yml` | Set up Chihuahua node. It includes the general `prepare` task and `chihuahua` specific task |
+| `comdex.yml`    | Set up Comdex node. It includes the general `prepare` task and `comdex` specific task       |
+| `juno.yml`      | Set up Juno node. It includes the general `prepare` task and `juno` specific task           |
+| `kava.yml`      | Set up Kava node. It includes the general `prepare` task and `kava` specific task           |
+| `kichain.yml`   | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task     |
+| `osmosis.yml`   | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task     |
+| `sifchain.yml`  | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task   |
+| `terra.yml`     | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task      |
 
 ## Additional Info
 
@@ -96,27 +99,29 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 ## Our Validator setup
 
-| Network  | Main Validator | Fully synced Spare | Testnet Participation |
-| -------- | -------------- | ------------------ | --------------------- |
-| Bitcanna | Yes            | Yes                | Yes                   |
-| Comdex   | Yes            | Yes                | In Progress           |
-| Juno     | Yes            | In Progress        | Yes                   |
-| Kava     | Yes            | Yes                | No                    |
-| KiChain  | Yes            | No                 | No                    |
-| Osmosis  | Yes            | No                 | No                    |
-| Sifchain | Yes            | Yes                | In Progress           |
+| Network   | Main Validator | Fully synced Spare | Testnet Participation |
+| --------- | -------------- | ------------------ | --------------------- |
+| Bitcanna  | Yes            | Yes                | In Progress           |
+| Chihuahua | Yes            | No                 | No                    |
+| Comdex    | Yes            | Yes                | In Progress           |
+| Juno      | Yes            | In Progress        | In Progress           |
+| Kava      | Yes            | Yes                | No                    |
+| KiChain   | Yes            | No                 | No                    |
+| Osmosis   | Yes            | No                 | No                    |
+| Sifchain  | Yes            | Yes                | In Progress           |
 
 ## Please stake with our validators
 
-| Network  | Validator                                              | Useful Commands              |
-| -------- | ------------------------------------------------------ | ---------------------------- |
-| Bitcanna | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`   | [BitCanna](docs/bitcanna.md) |
-| Comdex   | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz` | [Comdex](docs/comdex.md)     |
-| Juno     | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`   | [Juno](docs/juno.md)         |
-| Kava     | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`   | [Kava](docs/kava.md)         |
-| KiChain  | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`     | [KiChain](docs/kichain.md)   |
-| Osmosis  | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`   | [Osmosis](docs/osmosis.md)   |
-| Sifchain | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`    | [Sifchain](docs/sifchain.md) |
+| Network   | Validator                                                 | Useful Commands                |
+| --------- | --------------------------------------------------------- | ------------------------------ |
+| Bitcanna  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
+| Chihuahua | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
+| Comdex    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
+| Juno      | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`      | [Juno](docs/juno.md)           |
+| Kava      | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`      | [Kava](docs/kava.md)           |
+| KiChain   | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`        | [KiChain](docs/kichain.md)     |
+| Osmosis   | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`      | [Osmosis](docs/osmosis.md)     |
+| Sifchain  | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`       | [Sifchain](docs/sifchain.md)   |
 
 ## P.S.
 
