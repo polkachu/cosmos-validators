@@ -23,8 +23,8 @@ Edit validator
 
 ```bash
 chihuahuad tx staking edit-validator \
-    --identity "0A6AF02D1557E5B4" \
-    --moniker="polkachu.com | 1% fee" \
+    --moniker="polkachu.com | 1% forever" \
+    --details "Polkachu will forever keep 1% commission rate on Chihuahua chain. Please consider delegeting to our validators on Juno, SifChain, Kava, Comdex, BitCanna, and KiChain. Contact: hello@polkachu.com" \
     --chain-id=chihuahua-1 \
     --from=polkachu
 ```
