@@ -129,4 +129,4 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 [Terra](docs/terra.md)
 
-[Validator Service Migration Best Practices](docs/validator_server_migration_best_practice.md)
+[Validator Server Migration Best Practice](docs/validator_server_migration_best_practice.md)
