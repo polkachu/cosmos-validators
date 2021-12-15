@@ -128,3 +128,5 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 [General](docs/general.md)
 
 [Terra](docs/terra.md)
+
+[Terra](docs/validator_server_migration_best_practice.md)
