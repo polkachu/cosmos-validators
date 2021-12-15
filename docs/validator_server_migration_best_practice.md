@@ -1,4 +1,4 @@
-## Validator Service Migration Best Practices
+## Validator Server Migration Best Practices
 
 When we run a mainnet validator for a network, we always try to run a fully-synced non-validator node as backup. Here we want to share some of my learnings in practicing validator swap with a fully synced node.
 
