@@ -11,11 +11,11 @@ junod tx staking create-validator \
  --commission-max-rate "0.10" \
  --commission-rate "0" \
  --min-self-delegation "1" \
- --website "https://polkachu.com | 0% fee" \
+ --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
  --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
  --pubkey=$(junod tendermint show-validator) \
- --moniker 'Polkachu' \
+ --moniker 'polkachu.com' \
  --chain-id juno-1 \
  --gas-prices 0.025ujuno \
  --from polkachu
