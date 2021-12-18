@@ -13,3 +13,10 @@ We have two nodes: validator Node A and fully-synced non-validator Node B. Both 
 2. **Change Validator Role to Node B**: Stop Node B's `cosmovisor` service. Replace Node B's `priv_validator_key.json` with the backup copy from A. Restart B's `cosmovisor` service. Make sure it is making blocks on block explorer.
 
 3. **Make Node A the New Non-Validator Node**: Delete `priv_validator_key.json.backup` (created from Step 1) in the `config` folder on Node A. Change `cosmovisor.service.backup` back to `cosmovisor.service` in the `systemd` folder on Node A. Restart Node A's `cosmovisor` service. Because there is no `priv_validator_key.json` on Node A at this moment, the service will create a new copy of priv_validator_key.json. Check logs to make sure that Node A is making blocks.
+
+4. **House Clean**: The specifics only apply to how we set up the cluster. You should adapt according to your setup.
+   - Swap the server name with "sudo hostname xxx" on each server (for example, between "juno_mainnet" and "juno_mainnet_backup")
+   - Swap the server shortcut in ~/.ssh/config file for each ssh login
+   - Swap the log name in the promtail.yml file on each server and restart promtail.
+   - Swap the server hosts in the monitoring server deployment script so Prometheus and Grafana get the servers right. Redeploy the monitoring script
+   - Update the server names on the server provider (Hetzner, Contabo, AWS, GCP) to avoid confusion
