@@ -20,3 +20,4 @@ We have two nodes: validator Node A and fully-synced non-validator Node B. Both 
    - Swap the log name in the promtail.yml file on each server and restart promtail.
    - Swap the server hosts in the monitoring server deployment script so Prometheus and Grafana get the servers right. Redeploy the monitoring script
    - Update the server names on the server provider (Hetzner, Contabo, AWS, GCP) to avoid confusion
+   - Update the inventory file in the cosmos server deployment script. This is not very important since the deployment of both servers are completed. However, it is so to avoid future confusions because both servers will still be running, although in the opposite role of validator vs. non-validator.
