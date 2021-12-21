@@ -102,9 +102,9 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 | Network   | Main Validator | Fully synced Spare | Testnet Participation |
 | --------- | -------------- | ------------------ | --------------------- |
 | Bitcanna  | Yes            | Yes                | In Progress           |
-| Chihuahua | Yes            | No                 | No                    |
+| Chihuahua | Yes 🐶         | Yes                | No                    |
 | Comdex    | Yes            | Yes                | In Progress           |
-| Juno      | Yes            | In Progress        | In Progress           |
+| Juno      | Yes            | Yes                | In Progress           |
 | Kava      | Yes            | Yes                | No                    |
 | KiChain   | Yes            | No                 | No                    |
 | Osmosis   | Yes            | No                 | No                    |
