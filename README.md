@@ -101,14 +101,14 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 | Network   | Main Validator | Fully synced Spare | Testnet Participation |
 | --------- | -------------- | ------------------ | --------------------- |
-| Bitcanna  | Yes            | Yes                | In Progress           |
+| Bitcanna  | Yes 🌿         | Yes                | In Progress           |
 | Chihuahua | Yes 🐶         | Yes                | No                    |
-| Comdex    | Yes            | Yes                | In Progress           |
-| Juno      | Yes            | Yes                | In Progress           |
-| Kava      | Yes            | Yes                | No                    |
-| KiChain   | Yes            | No                 | No                    |
-| Osmosis   | Yes            | No                 | No                    |
-| Sifchain  | Yes            | Yes                | In Progress           |
+| Comdex    | Yes 🛢️         | Yes                | In Progress           |
+| Juno      | Yes ♃          | Yes                | In Progress           |
+| Kava      | Yes 🌋         | Yes                | No                    |
+| KiChain   | Yes 🆗         | No                 | No                    |
+| Osmosis   | Yes 🧪         | No                 | No                    |
+| Sifchain  | Yes ⛓️         | Yes                | In Progress           |
 
 ## Please stake with our validators
 
