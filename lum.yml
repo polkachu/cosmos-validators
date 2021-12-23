@@ -1,0 +1,14 @@
+---
+- name: Prepare
+  hosts: '{{ target }}'
+  become: true
+  gather_facts: false
+  roles:
+    - prepare
+
+- name: Install node
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - initialize_lum
+    - launch_node

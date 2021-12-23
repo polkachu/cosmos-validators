@@ -1,0 +1,53 @@
+---
+- name: Make sure the folder does not exist
+  become: true
+  file:
+    state: absent
+    path: '/home/{{ ansible_user }}/{{ network }}'
+
+- name: Clone node repo
+  git:
+    repo: '{{ repo }}'
+    dest: '/home/{{ ansible_user }}/{{ network }}'
+
+- name: Install node
+  command: '{{ item }}'
+  args:
+    chdir: '/home/{{ ansible_user }}/{{ network }}'
+  with_items:
+    - 'git fetch'
+    - 'git checkout {{ node_version }}'
+    - 'go mod tidy'
+    - 'make install'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '/home/{{ ansible_user }}/go'
+
+- name: Initialize Node
+  command: '{{ daemon }} init {{ validator_name }} --chain-id {{ chain_id }} -o'
+  environment:
+    PATH: '{{ path }}'
+- name: Download genesis file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '/home/{{ ansible_user }}/{{ folder }}/config/genesis.json'
+    mode: '0644'
+- name: Update minimum gas price on config file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
+    regexp: 'minimum-gas-prices '
+    line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
+    state: present
+- name: Update seeds on the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'seeds = ""'
+    line: 'seeds = "{{ seeds }}"'
+    state: present
+
+- name: Update the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'persistent_peers = ""'
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
