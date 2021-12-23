@@ -18,3 +18,12 @@ celestia-appd tx staking create-validator \
     --from=chani \
     --keyring-backend=test
 ```
+
+Delegate
+
+```bash
+celestia-appd tx staking delegate celesvaloper1pcmran05kpxjw8g9fja2aqk2q8e49hgzmgznxd 800000celes \
+    --chain-id=devnet-2 \
+    --from=chani \
+    --keyring-backend=test
+```
