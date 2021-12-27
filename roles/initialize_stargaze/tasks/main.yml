@@ -1,0 +1,24 @@
+---
+- name: Initialize Node
+  command: '{{ daemon }} init {{ validator_name }} --chain-id {{ chain_id }} -o'
+  environment:
+    PATH: '{{ path }}'
+
+- name: Download genesis file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '/tmp/genesis.tar.gz'
+    mode: '0700'
+
+- name: unarchive genesis file
+  unarchive:
+    src: '/tmp/genesis.tar.gz'
+    dest: '/home/{{ ansible_user }}/{{ folder }}/config'
+    remote_src: true
+
+- name: Update the config.toml file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: 'persistent_peers = ""'
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
