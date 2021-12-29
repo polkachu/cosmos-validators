@@ -16,4 +16,4 @@ ansible_ssh_private_key_file="~/.ssh/id_rsa"
 path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:/home/ubuntu/go/bin"
 node_exporter=true
 promtail=true
-log_monitor=10.0.0.100
+log_monitor=http://10.0.0.100:3100
