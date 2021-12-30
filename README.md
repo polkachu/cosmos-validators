@@ -72,18 +72,39 @@ If you prefer to install the node manually, you can run a 'prepare' playbook to 
 
 Playbooks are:
 
-| Playbook        | Description                                                                                 |
-| --------------- | ------------------------------------------------------------------------------------------- |
-| `prepare.yml `  | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules         |
-| `bitcanna.yml`  | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task   |
-| `chihuahua.yml` | Set up Chihuahua node. It includes the general `prepare` task and `chihuahua` specific task |
-| `comdex.yml`    | Set up Comdex node. It includes the general `prepare` task and `comdex` specific task       |
-| `juno.yml`      | Set up Juno node. It includes the general `prepare` task and `juno` specific task           |
-| `kava.yml`      | Set up Kava node. It includes the general `prepare` task and `kava` specific task           |
-| `kichain.yml`   | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task     |
-| `osmosis.yml`   | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task     |
-| `sifchain.yml`  | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task   |
-| `terra.yml`     | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task      |
+| Playbook             | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| `prepare.yml `       | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules         |
+| `auto_compound.yml ` | Copy an auto-compound shell script (more details below)                                     |
+| `bitcanna.yml`       | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task   |
+| `chihuahua.yml`      | Set up Chihuahua node. It includes the general `prepare` task and `chihuahua` specific task |
+| `comdex.yml`         | Set up Comdex node. It includes the general `prepare` task and `comdex` specific task       |
+| `juno.yml`           | Set up Juno node. It includes the general `prepare` task and `juno` specific task           |
+| `kava.yml`           | Set up Kava node. It includes the general `prepare` task and `kava` specific task           |
+| `kichain.yml`        | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task     |
+| `osmosis.yml`        | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task     |
+| `sifchain.yml`       | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task   |
+| `terra.yml`          | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task      |
+
+## Auto Compound
+
+The playbook will copy an auto-compound script to the user home directory.
+
+```bash
+ansible-playbook -i inventory auto_compound.yml -e "target=chihuahua_main"
+```
+
+You can run the script on the node with the following:
+
+```bash
+./auto_compound.sh <KEY> <PASSWORD>
+```
+
+Alternatively, you can add a cronjob. For example, this following cronjob will run the auto-compound script daily at midnight. In this case, make sure that your server is super secure, as you will expose your key password in the crontab. Adopt this strategy at your own risk.
+
+```bash
+0 0 * * * /bin/bash /home/<USER>/auto_compound.sh <KEY> <PASSWORD>
+```
 
 ## Additional Info
 
