@@ -37,3 +37,12 @@ comdex tx staking edit-validator \
     --fees=5000ucmdx \
     --from=polkachu
 ```
+
+```bash
+comdex tx staking redelegate <old> <new> 1000000000000000ucmdx \
+    --chain-id=comdex-1 \
+    --fees=10000ucmdx \
+    --gas=auto \
+    --gas-adjustment="1.5" \
+    --from=polkachu
+```
