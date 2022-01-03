@@ -2,6 +2,7 @@
 
 This repo is to set up the Cosmos-based node. It currently support:
 
+- Akash
 - BitCanna
 - Chihuahua
 - Comdex
@@ -57,6 +58,7 @@ The structure allows you to target `vars` to each node, or a group cluster, or t
 The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node from scratch. For example:
 
 ```bash
+ansible-playbook -i inventory akash.yml -e "target=akash"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet_main"
 ansible-playbook -i inventory chihuahua.yml -e "target=chihuahua_mainnet_main"
 ansible-playbook -i inventory comdex.yml -e "target=comdex_mainnet_main"
@@ -110,6 +112,8 @@ Alternatively, you can add a cronjob. For example, this following cronjob will r
 
 When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time-travel to the present quickly. We strongly recommend using snapshots. It will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers:
 
+Akash: Snapshot here [here](https://docs.akash.network/operations/node#step9-blockchain-snapshot-use)
+
 Kava: Snapshot is [here](https://www.chainlayer.io/quicksync/)
 
 KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet-Clean-Install-b20ce6400131499f854abc7567ce3b3f). In fact, we cannot make it work with the peers listed when we tried to sync from Block 1. The only way we made it work is by syncing with the snapshot from the included link.
@@ -122,6 +126,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 | Network      | Validator                                                 | Useful Commands                |
 | ------------ | --------------------------------------------------------- | ------------------------------ |
+| Akash 🌿     | `akashvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pz5w0ry`     | [Akash](docs/akash.md)         |
 | Bitcanna 🌿  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
 | Chihuahua 🐶 | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
 | Comdex 🛢️    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
