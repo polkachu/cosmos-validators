@@ -38,6 +38,8 @@ comdex tx staking edit-validator \
     --from=polkachu
 ```
 
+Redelegate
+
 ```bash
 comdex tx staking redelegate <old> <new> 1000000000000000ucmdx \
     --chain-id=comdex-1 \
