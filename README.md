@@ -126,7 +126,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 | Network      | Validator                                                 | Useful Commands                |
 | ------------ | --------------------------------------------------------- | ------------------------------ |
-| Akash 🌿     | `akashvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pz5w0ry`     | [Akash](docs/akash.md)         |
+| Akash ☁️     | `akashvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pz5w0ry`     | [Akash](docs/akash.md)         |
 | Bitcanna 🌿  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
 | Chihuahua 🐶 | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
 | Comdex 🛢️    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
