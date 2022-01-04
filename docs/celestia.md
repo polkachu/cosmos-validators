@@ -27,3 +27,13 @@ celestia-appd tx staking delegate celesvaloper1pcmran05kpxjw8g9fja2aqk2q8e49hgzm
     --from=chani \
     --keyring-backend=test
 ```
+
+Unjail
+
+```bash
+celestia-appd tx slashing unjail --from celes1pcmran05kpxjw8g9fja2aqk2q8e49hgz79d339 \
+    --chain-id=devnet-2 \
+    --from=chani \
+    --keyring-backend=test
+
+```
