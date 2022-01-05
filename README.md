@@ -143,3 +143,5 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 [Terra](docs/terra.md), [Injective](docs/injective.md), [Celestia](docs/celestia.md)
 
 [Validator Server Migration Best Practice](docs/validator_server_migration_best_practice.md)
+
+[Polkachu's Testnet Setup](docs/testnets.md)
