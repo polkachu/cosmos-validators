@@ -124,17 +124,18 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 ## Please stake with our validators
 
-| Network      | Validator                                                 | Useful Commands                |
-| ------------ | --------------------------------------------------------- | ------------------------------ |
-| Akash ☁️     | `akashvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pz5w0ry`     | [Akash](docs/akash.md)         |
-| Bitcanna 🌿  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
-| Chihuahua 🐶 | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
-| Comdex 🛢️    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
-| Juno ♃       | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`      | [Juno](docs/juno.md)           |
-| Kava 🌋      | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`      | [Kava](docs/kava.md)           |
-| KiChain 🆗   | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`        | [KiChain](docs/kichain.md)     |
-| Osmosis 🧪   | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`      | [Osmosis](docs/osmosis.md)     |
-| Sifchain ⛓️  | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`       | [Sifchain](docs/sifchain.md)   |
+| Network      | Validator                                                 | Useful Commands                | Notes to self         |
+| ------------ | --------------------------------------------------------- | ------------------------------ | --------------------- |
+| Akash ☁️     | `akashvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pz5w0ry`     | [Akash](docs/akash.md)         | Yes                   |
+| Bitcanna 🌿  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |                       |
+| Chihuahua 🐶 | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |                       |
+| Comdex 🛢️    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       | Currently Inactive    |
+| Juno ♃       | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`      | [Juno](docs/juno.md)           | Yes                   |
+| Kava 🌋      | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`      | [Kava](docs/kava.md)           |                       |
+| KiChain 🆗   | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`        | [KiChain](docs/kichain.md)     |                       |
+| Osmosis 🧪   | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`      | [Osmosis](docs/osmosis.md)     | Yes (commission)      |
+| Sifchain ⛓️  | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`       | [Sifchain](docs/sifchain.md)   | File ready; need work |
+| Stargaze ⛓️  | `starsvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p60w86a`     | [Sifchain](docs/stargaze.md)   | Currently inactive    |
 
 ## P.S.
 
