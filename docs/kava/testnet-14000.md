@@ -78,7 +78,7 @@ Below are the instructions to generate & submit your genesis transaction
 4. Create the gentx, use only `900000000000ukava`:
 
    ```bash
-   kava gentx kava_test 900000000000ukava --chain-id=kava-testnet-14000
+   kava gentx <YOUR_KEY_NAME> 900000000000ukava --chain-id=kava-testnet-14000
    ```
 
 5. If all goes well, you will see a message similar to the following:
