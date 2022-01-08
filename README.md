@@ -92,20 +92,28 @@ Playbooks are:
 
 The playbook will copy an auto-compound script to the user home directory.
 
+| Playbook                            | Description                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| `auto_compound.yml`                 | Use this playbook when auto-compounding with own validator   |
+| `auto_compound_for_delegation.yml ` | Use this playbook when auto-compounding with other validator |
+
 ```bash
 ansible-playbook -i inventory auto_compound.yml -e "target=chihuahua_main"
+ansible-playbook -i inventory auto_compound_for_delegation.yml -e "target=chihuahua_main"
 ```
 
 You can run the script on the node with the following:
 
 ```bash
 ./auto_compound.sh <KEY> <PASSWORD>
+./auto_compound_for_delegation.sh <KEY> <PASSWORD>
 ```
 
 Alternatively, you can add a cronjob. For example, this following cronjob will run the auto-compound script daily at midnight. In this case, make sure that your server is super secure, as you will expose your key password in the crontab. Adopt this strategy at your own risk.
 
 ```bash
 0 0 * * * /bin/bash /home/<USER>/auto_compound.sh <KEY> <PASSWORD>
+0 0 * * * /bin/bash /home/<USER>/auto_compound_for_delegation.sh <KEY> <PASSWORD>
 ```
 
 ## Additional Info

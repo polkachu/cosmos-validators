@@ -12,3 +12,4 @@ minimum_gas_price: '0.025uakt'
 denomination: 'uakt'
 threshold: 1000000
 transaction_extra_flag: '--gas=auto --gas-adjustment=1.15 --gas-prices=0.025uakt'
+delegated_validator: 'akashvaloper12fnzqmnja37mf2y9m6r3dleq5n3jkz7pfkpzmy'
