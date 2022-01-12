@@ -8,3 +8,7 @@ promtail_checksum: 978391a174e71cfef444ab9dc012f95d5d7eae0d682eaf1da2ea18f793452
 
 # go
 go_version: '1.17.1'
+
+# Snapshot
+snapshot_endpoint: 'https://fra1.digitaloceanspaces.com'
+snapshot_space: 'polkachu'

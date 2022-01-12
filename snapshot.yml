@@ -1,0 +1,6 @@
+---
+- name: Install snapshot script
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - snapshot

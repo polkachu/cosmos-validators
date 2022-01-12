@@ -33,3 +33,14 @@ osmosisd tx staking edit-validator \
     --gas-prices="0.025uosmo" \
     --from=polkachu
 ```
+
+Redelegate
+
+```bash
+osmosisd tx staking redelegate osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp osmovaloper1z0sh4s80u99l6y9d3vfy582p8jejeeu6tcucs2 3939000000uosmo \
+    --chain-id=osmosis-1 \
+    --from=polkachu \
+    --gas="auto" \
+    --gas-adjustment="1.2" \
+    --gas-prices="0.025uosmo"
+```

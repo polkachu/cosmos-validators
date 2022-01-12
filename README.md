@@ -116,6 +116,30 @@ Alternatively, you can add a cronjob. For example, this following cronjob will r
 0 0 * * * /bin/bash /home/<USER>/auto_compound_for_delegation.sh <KEY> <PASSWORD>
 ```
 
+## Node Snapshot
+
+We also offer node snapshot service for the validator community. We run snapshot script on any networks where we run a backup node. You need to have awscli installed and configured.
+
+| Playbook       | Description                                  |
+| -------------- | -------------------------------------------- |
+| `snapshot.yml` | Copy the snapshot shell script to the server |
+
+```bash
+ansible-playbook -i inventory snapshot.yml -e "target=chihuahua_main_backup"
+```
+
+You can run the script on the node with the following:
+
+```bash
+./snapshot.sh
+```
+
+Alternatively, you can add a cronjob. For example, this following cronjob will run the snapshot script at the midnight
+
+```bash
+0 0 * * * /bin/bash /home/<USER>/auto_compound.sh
+```
+
 ## Additional Info
 
 When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time-travel to the present quickly. We strongly recommend using snapshots. It will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers:
