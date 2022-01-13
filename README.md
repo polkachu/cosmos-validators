@@ -58,7 +58,7 @@ The structure allows you to target `vars` to each node, or a group cluster, or t
 The key Ansible playbook is `<chain>.yml` files. It will set up a fresh node from scratch. For example:
 
 ```bash
-ansible-playbook -i inventory akash.yml -e "target=akash"
+ansible-playbook -i inventory akash.yml -e "target=akash_mainnet_main"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet_main"
 ansible-playbook -i inventory chihuahua.yml -e "target=chihuahua_mainnet_main"
 ansible-playbook -i inventory comdex.yml -e "target=comdex_mainnet_main"
