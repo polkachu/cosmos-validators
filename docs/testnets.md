@@ -23,6 +23,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Osmosis  | 36656   | 36657   | 36658   | 36060   | 36660      | 31317      | 38080       | 39090       | 39091           |
 | Kava     | 46656   | 46657   | 46658   | 46060   | 46660      | 41317      | 48080       | 49090       | 49091           |
 | BitCanna | 56656   | 56657   | 56658   | 56060   | 56660      | 51317      | 58080       | 59090       | 59091           |
+| Deweb    | 31656   | 31657   | 31658   | 31060   | 31660      | 31317      | 31080       | 31090       | 31091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
