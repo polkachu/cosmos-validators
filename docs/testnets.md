@@ -17,13 +17,14 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 - gRPC server: 9090 (default)
 - gRPC-web server: 9091 (default)
 
-| Network  | P2P     | RPC     | ABCI    | Pprof   | Prometheus | API server | Rosetta API | gRPC server | gRPC-web server |
-| -------- | ------- | ------- | ------- | ------- | ---------- | ---------- | ----------- | ----------- | --------------- |
-| Juno     | default | default | default | default | default    | default    | default     | default     | default         |
-| Osmosis  | 36656   | 36657   | 36658   | 36060   | 36660      | 31317      | 38080       | 39090       | 39091           |
-| Kava     | 46656   | 46657   | 46658   | 46060   | 46660      | 41317      | 48080       | 49090       | 49091           |
-| BitCanna | 56656   | 56657   | 56658   | 56060   | 56660      | 51317      | 58080       | 59090       | 59091           |
-| Deweb    | 31656   | 31657   | 31658   | 31060   | 31660      | 31317      | 31080       | 31090       | 31091           |
+| Network       | P2P     | RPC     | ABCI    | Pprof   | Prometheus | API server | Rosetta API | gRPC server | gRPC-web server |
+| ------------- | ------- | ------- | ------- | ------- | ---------- | ---------- | ----------- | ----------- | --------------- |
+| Juno          | default | default | default | default | default    | default    | default     | default     | default         |
+| Osmosis       | 36656   | 36657   | 36658   | 36060   | 36660      | 31317      | 38080       | 39090       | 39091           |
+| Kava          | 46656   | 46657   | 46658   | 46060   | 46660      | 41317      | 48080       | 49090       | 49091           |
+| BitCanna      | 56656   | 56657   | 56658   | 56060   | 56660      | 51317      | 58080       | 59090       | 59091           |
+| Deweb         | 31656   | 31657   | 31658   | 31060   | 31660      | 31317      | 31080       | 31090       | 31091           |
+| Constellation | 32656   | 32657   | 32658   | 32060   | 32660      | 32327      | 32080       | 32090       | 32091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
