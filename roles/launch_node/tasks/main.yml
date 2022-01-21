@@ -1,4 +1,26 @@
 ---
+- name: adjust
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.old }}'
+    line: '{{ item.new }}'
+    state: present
+  loop:
+    - { old: 'pruning = "', new: 'pruning = "custom"' }
+    - { old: 'pruning-keep-recent = "', new: 'pruning-keep-recent = "100"' }
+    - { old: 'pruning-interval = "', new: 'pruning-interval = "10"' }
+  when: (pruning is defined) and (pruning|bool is true)
+
+- name: debug
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
+    regexp: '{{ item.old }}'
+    line: '{{ item.new }}'
+    state: present
+  loop:
+    - { old: 'indexer = "', new: 'indexer = "null"' }
+  when: (no_indexer is defined) and (no_indexer|bool is true)
+
 - name: register public ip
   uri:
     url: 'https://api.ipify.org?format=json'
@@ -7,14 +29,14 @@
 - name: Set up external address
   lineinfile:
     path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
-    regexp: 'external_address = ""'
+    regexp: 'external_address = "'
     line: 'external_address = "{{ public_ip.json.ip }}:26656"'
     state: present
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
     path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
-    regexp: 'prometheus = false'
+    regexp: 'prometheus ='
     line: 'prometheus = true'
     state: present
 

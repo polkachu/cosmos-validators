@@ -14,14 +14,14 @@
 - name: Update persistent peers on the config.toml file
   lineinfile:
     path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
-    regexp: 'persistent_peers = ""'
+    regexp: 'persistent_peers = '
     line: 'persistent_peers = "{{ peers }}"'
     state: present
 
 - name: Update seeds on the config.toml file
   lineinfile:
     path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
-    regexp: 'seeds = ""'
+    regexp: 'seeds = '
     line: 'seeds = "{{ seeds }}"'
     state: present
 

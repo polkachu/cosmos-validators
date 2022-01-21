@@ -1,4 +1,13 @@
 ---
+- name: Install jq and awscli
+  become: true
+  apt:
+    name:
+      - awscli
+      - jq
+    state: present
+    update_cache: yes
+
 - name: Copy snapshot script
   template:
     src: 'snapshot.sh.j2'
