@@ -1,14 +1,16 @@
 ## Polkachu's Mainnet Setup
 
-| Network   | Active? | Rewards Compounding                                | State Sync |
-| --------- | ------- | -------------------------------------------------- | ---------- |
-| Juno      | Yes     | Automated daily and delegate to self               |            |
-| Bitcanna  | Yes     | Automated daily and delegate to self               |            |
-| Kava      | Yes     | Automated daily and delegate to self               |            |
-| Sifchain  | Yes     | Automated daily and delegate to self               |            |
-| KiChain   | Yes     | Automated daily and delegate to self               |            |
-| Chihuahua | Yes     | Automated daily and contribute to Osmosis Pool 605 | Yes        |
-| Akash     | No      | Automated daily and delegate to other validators   |            |
-| Comdex    | No      | Automated daily and delegate to other validators   |            |
-| Osmosis   | No      | Automated daily and delegate to other validators   |            |
-| Stargaze  | No      | Automated daily and delegate to other validators   |            |
+| Network   | Active? | Rewards Compounding                    | Snapshot Service | Backup / Snapshot Server | PRC Server    |
+| --------- | ------- | -------------------------------------- | ---------------- | ------------------------ | ------------- |
+| Juno      | Yes     | Automated and delegate to self daily   | Yes              | Yes                      |               |
+| Chihuahua | Yes     | Automated and enter Pool 605 daily     | Yes              | Yes                      |               |
+| Kava      | Yes     | Automated and delegate to self daily   | Yes              | Yes                      |               |
+| Bitcanna  | Yes     | Automated and delegate to self daily   |                  |                          |               |
+| Sifchain  | Yes     | Automated and delegate to self daily   |                  |                          |               |
+| KiChain   | Yes     | Automated and delegate to self daily   |                  |                          |               |
+| Akash     | No      | Automated and delegate to others daily |                  |                          |               |
+| Comdex    | No      | Automated and delegate to others daily |                  |                          |               |
+| Osmosis   | No      | Automated and delegate to others daily |                  |                          | Yes (Private) |
+| Stargaze  | No      | Automated and delegate to others daily |                  |                          |               |
+
+Snapshot service is available at https://polkachu.com/tendermint_snapshots
