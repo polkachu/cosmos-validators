@@ -8,6 +8,19 @@
     state: present
     update_cache: yes
 
+- name: Install snapd
+  become: true
+  apt:
+    name: snapd
+    state: present
+    update_cache: yes
+
+- name: Install lz4
+  become: true
+  snap:
+    name: lz4
+    state: present
+
 - name: Copy snapshot script
   template:
     src: 'snapshot.sh.j2'
