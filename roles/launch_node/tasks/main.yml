@@ -1,5 +1,5 @@
 ---
-- name: adjust
+- name: Adjust pruning setting
   lineinfile:
     path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
     regexp: '{{ item.old }}'
@@ -11,7 +11,7 @@
     - { old: 'pruning-interval = "', new: 'pruning-interval = "10"' }
   when: (pruning is defined) and (pruning|bool is true)
 
-- name: debug
+- name: Adjust indexer setting
   lineinfile:
     path: '/home/{{ ansible_user }}/{{ folder }}/config/config.toml'
     regexp: '{{ item.old }}'

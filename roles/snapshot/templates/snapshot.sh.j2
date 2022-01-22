@@ -2,6 +2,7 @@
 
 # Make sure the service is running
 sudo service cosmovisor start
+sleep 5
 
 # Get block height
 BLOCK_HEIGHT=$(curl -s http://localhost:26657/status | jq -r .result.sync_info.latest_block_height)
@@ -9,11 +10,15 @@ BLOCK_HEIGHT=$(curl -s http://localhost:26657/status | jq -r .result.sync_info.l
 # Stop service
 sudo service cosmovisor stop
 
-# Compress the copy and clean up
+# Compress the folder
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
-tar cvf - "/home/ubuntu/{{ folder }}/data" | lz4 > $FILENAME
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://{{ snapshot_space }}/{{ network }}/"
-rm $FILENAME
+cd /home/ubuntu/{{ folder }}
+tar cvf - data | lz4 > "/home/ubuntu/$FILENAME"
 
 # Restart the service
 sudo service cosmovisor start
+
+# Transfer the file and then remove the file
+cd /home/ubuntu/
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://{{ snapshot_space }}/{{ network }}/"
+rm $FILENAME
