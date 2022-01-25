@@ -20,5 +20,5 @@ cargo run --quiet --release --bin pcli tx send 1pizza --to penumbrav0t12juxkch4v
 ```bash
 cargo run --quiet --release --bin pcli stake list-validators
 cargo run --quiet --release --bin pcli stake delegate 999penumbra --to penumbravalid16c984tygaz2lur3lrxshrypj8yt68a0mqrfz076wzrc4jweqwyxsz2vp0s
-cargo run --quiet --release --bin pcli stake undelegate 10penumbra
+cargo run --quiet --release --bin pcli stake undelegate 10delegation_penumbravalid16c984tygaz2lur3lrxshrypj8yt68a0mqrfz076wzrc4jweqwyxsz2vp0s
 ```
