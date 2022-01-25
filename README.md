@@ -173,7 +173,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 [General](docs/general.md)
 
-[Terra](docs/terra.md), [Injective](docs/injective.md), [Celestia](docs/celestia.md)
+[Terra](docs/terra.md), [Injective](docs/injective.md), [Celestia](docs/celestia.md), [Penumbra](penumbra.md)
 
 [Validator Server Migration Best Practice](docs/validator_server_migration_best_practice.md)
 
