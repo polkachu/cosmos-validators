@@ -11,6 +11,10 @@ cargo run --release --bin pcli wallet reset
 ```
 
 ```bash
+cargo run --quiet --release --bin pcli wallet export
+```
+
+```bash
 cargo run --quiet --release --bin pcli addr list
 cargo run --quiet --release --bin pcli sync
 cargo run --quiet --release --bin pcli balance
