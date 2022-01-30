@@ -7,9 +7,3 @@ repo: 'https://github.com/ovrclk/akash'
 genesis: 'https://raw.githubusercontent.com/ovrclk/net/master/mainnet/genesis.json'
 seeds: '27eb432ccd5e895c5c659659120d68b393dd8c60@35.247.65.183:26656,8e2f56098f182ffe2f6fb09280bafe13c63eb42f@46.101.176.149:26656,fff99a2e8f3c9473e4e5ee9a99611a2e599529fd@46.166.138.218:26656'
 minimum_gas_price: '0.025uakt'
-
-# For auto compound script
-denomination: 'uakt'
-threshold: 1000000
-transaction_extra_flag: '--gas=auto --gas-adjustment=1.15 --gas-prices=0.025uakt'
-delegated_validator: 'akashvaloper12fnzqmnja37mf2y9m6r3dleq5n3jkz7pfkpzmy'
