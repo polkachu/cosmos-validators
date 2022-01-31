@@ -22,7 +22,7 @@ Edit validator
 
 ```bash
 starsd tx staking edit-validator \
-    --moniker " polkachu.com" \
+    --moniker "polkachu.com" \
     --chain-id=stargaze-1 \
     --from=polkachu
 ```

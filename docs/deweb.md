@@ -6,7 +6,7 @@ create validator
 dewebd tx staking create-validator \
     --amount 1000000udws \
     --pubkey $(dewebd tendermint show-validator) \
-    --moniker=" polkachu.com" \
+    --moniker="polkachu.com" \
     --commission-max-change-rate 0.10 \
     --commission-max-rate 0.2 \
     --commission-rate 0.1 \
