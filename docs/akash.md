@@ -3,7 +3,6 @@
 create validator
 
 ```bash
-
 akash tx staking create-validator \
     --amount=1000000uakt \
     --website "https://polkachu.com" \
@@ -19,5 +18,19 @@ akash tx staking create-validator \
     --gas="auto" \
     --gas-adjustment 1.15 \
     --gas-prices="0.025uakt" \
+    --from=polkachu
+```
+
+Edit validator
+
+```bash
+akash tx staking edit-validator \
+    --website "https://polkachu.com" \
+    --moniker 'polkachu.com | 0% fee' \
+    --security-contact "hello@polkachu.com" \
+    --chain-id="akashnet-2" \
+    --gas="auto" \
+    --gas-adjustment 1.3 \
+    --gas-prices="0.03uakt" \
     --from=polkachu
 ```
