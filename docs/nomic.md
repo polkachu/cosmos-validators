@@ -4,9 +4,9 @@ create validator
 
 ```bash
 nomic declare \
-  UaWQQhKCpcCr5Gcq7GsZ30CTXSIQKJTR0GbTAr3puUg= \
-  10000000 \
-  0.1 \
+  JG5hH1AyaKKWJ54btzl96OftXEnjGhFKp1BxOfwyIl4= \
+  100000 \
+  0 \
   "polkachu.com" \
   "https://polkachu.com" \
   0A6AF02D1557E5B4 \
