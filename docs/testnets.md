@@ -26,6 +26,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Deweb         | 31656   | 31657   | 31658   | 31060   | 31660      | 31317      | 31080       | 31090       | 31091           |
 | Konstellation | 32656   | 32657   | 32658   | 32060   | 32660      | 32317      | NA          | 32090       | 32091           |
 | Celestia      | 33656   | 33657   | 33658   | 33060   | 33660      | 33317      | 33080       | 33090       | 33091           |
+| Omniflix      | 34656   | 34657   | 34658   | 34060   | 34660      | 34317      | 34080       | 34090       | 34091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
