@@ -28,7 +28,7 @@
     mode: '0755'
 
 - name: Go get cosmovisor
-  command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest'
+  command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
   environment:
     PATH: '{{ path }}'
     GOPATH: '/home/{{ ansible_user }}/go'

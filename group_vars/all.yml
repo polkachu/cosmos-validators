@@ -12,3 +12,6 @@ go_version: '1.17.1'
 # Snapshot
 snapshot_endpoint: 'https://fra1.digitaloceanspaces.com'
 snapshot_space: 'polkachu-tendermint'
+
+# cosmovisor
+cosmovisor_version: 'v1.0.0'
