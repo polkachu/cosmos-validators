@@ -179,4 +179,6 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 [Polkachu's Testnet Setup](docs/testnets.md)
 
+[Polkachu's Relayer Setup](docs/relayers.md)
+
 [Polkachu's Mainnet Setup](docs/mainnet.md)
