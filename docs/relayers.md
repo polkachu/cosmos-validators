@@ -23,6 +23,7 @@ We run all relayers on one machine with high CPU, memory and storage. The defaul
 | Osmosis        | 27660      | 27656 | 27657 | 27658 | 27060 | 27317      | 27080       | 27090       | 27091           |
 | Akash          | 28660      | 28656 | 28657 | 28658 | 28060 | 28317      | 28080       | 28090       | 28091           |
 | Chihuahua      | 29660      | 29656 | 29657 | 29658 | 29060 | 29317      | 29080       | 29090       | 29091           |
+| Bitcanna       | 30660      | 30656 | 30657 | 30658 | 30060 | 30317      | 30080       | 30090       | 30091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
