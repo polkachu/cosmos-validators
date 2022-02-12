@@ -22,6 +22,7 @@ We run all relayers on one machine with high CPU, memory and storage. The defaul
 | Juno (default) | 26660      | 26656 | 26657 | 26658 | 6060  | 1317       | 8080        | 9090        | 9091            |
 | Osmosis        | 27660      | 27656 | 27657 | 27658 | 27060 | 27317      | 27080       | 27090       | 27091           |
 | Akash          | 28660      | 28656 | 28657 | 28658 | 28060 | 28317      | 28080       | 28090       | 28091           |
+| Chihuahua      | 29660      | 29656 | 29657 | 29658 | 29060 | 29317      | 29080       | 29090       | 29091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
