@@ -125,7 +125,7 @@ grpc_addr = 'http://127.0.0.1:31090'
 websocket_addr = 'ws://127.0.0.1:31657/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'cmdx'
+account_prefix = 'comdex'
 key_name = 'comdex-relayer'
 store_prefix = 'ibc'
 max_gas =  1000000
