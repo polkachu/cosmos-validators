@@ -25,8 +25,10 @@ trust_threshold = { numerator = '1', denominator = '3'}
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-29'],
-  ['transfer', 'channel-28'],
+  ['transfer', 'channel-29'], # Akash
+  ['transfer', 'channel-28'], # Chihuahua
+  ['transfer', 'channel-50'], # Bitcanna
+  ['transfer', 'channel-36'], # Comdex
 ]
 
 #
@@ -53,8 +55,12 @@ trust_threshold = { numerator = '1', denominator = '3' }
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-35'],
+  ['transfer', 'channel-35'], # Juno
 ]
+
+#
+# Chain configuration Chihuahua
+#
 
 [[chains]]
 id = 'chihuahua-1'
@@ -76,5 +82,60 @@ trust_threshold = { numerator = '1', denominator = '3' }
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-11'],
+  ['transfer', 'channel-11'], # Juno
+]
+
+#
+# Chain configuration Bitcanna
+#
+
+[[chains]]
+id = 'bitcanna-1'
+# API access to Bitcanna node with indexing
+rpc_addr = 'http://127.0.0.1:30657'
+grpc_addr = 'http://127.0.0.1:30090'
+websocket_addr = 'ws://127.0.0.1:30657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'bcna'
+key_name = 'bitcanna-relayer'
+store_prefix = 'ibc'
+max_gas =  1000000
+gas_price = { price = 0.001, denom = 'ubcna' }
+clock_drift = '5s'
+trusting_period = '7days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-10'], # Juno
+]
+
+#
+# Chain configuration Comdex
+#
+
+
+[[chains]]
+id = 'comdex-1'
+# API access to Comdex node with indexing
+rpc_addr = 'http://127.0.0.1:31657'
+grpc_addr = 'http://127.0.0.1:31090'
+websocket_addr = 'ws://127.0.0.1:31657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'cmdx'
+key_name = 'comdex-relayer'
+store_prefix = 'ibc'
+max_gas =  1000000
+gas_price = { price = 0.025, denom = 'ucmdx' }
+clock_drift = '5s'
+trusting_period = '7days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-18'], # Juno
 ]
