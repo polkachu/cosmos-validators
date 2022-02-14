@@ -29,6 +29,7 @@ list = [
   ['transfer', 'channel-28'], # Chihuahua
   ['transfer', 'channel-50'], # Bitcanna
   ['transfer', 'channel-36'], # Comdex
+  ['transfer', 'channel-5'], # Sifchain
 ]
 
 #
@@ -138,4 +139,33 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-18'], # Juno
+]
+
+
+#
+# Chain configuration Sifchain
+#
+
+
+[[chains]]
+id = 'sifchain-1'
+# API access to Sifchain node with indexing
+rpc_addr = 'http://127.0.0.1:32657'
+grpc_addr = 'http://127.0.0.1:32090'
+websocket_addr = 'ws://127.0.0.1:32657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'sif'
+key_name = 'sifchain-relayer'
+store_prefix = 'ibc'
+max_gas =  10000000
+gas_price = { price = 0.001, denom = 'rowan' }
+clock_drift = '5s'
+trusting_period = '7days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-14'], # Juno
 ]

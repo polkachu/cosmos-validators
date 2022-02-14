@@ -1,0 +1,16 @@
+---
+- name: Copy hermes config script
+  copy:
+    src: 'hermes.toml'
+    dest: '/home/{{ ansible_user }}/.hermes/config.toml'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
+# - name: Restart Hermes
+#   become: true
+#   systemd:
+#     name: hermes
+#     state: restarted
+#     daemon_reload: yes
+#     enabled: yes
+#   changed_when: false
