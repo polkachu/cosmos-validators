@@ -167,7 +167,7 @@ max_msg_num = 30
 max_tx_size = 1800000
 clock_drift = '15s'
 max_block_time = '10s'
-trusting_period = '14days'
+trusting_period = '7days'
 memo_prefix = 'Relayed by Polkachu'
 trust_threshold = { numerator = '1', denominator = '3' }
 
