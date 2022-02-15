@@ -21,3 +21,25 @@ dewebd tx staking create-validator \
     --gas-prices 0.001udws \
     --from deweb_test
 ```
+
+Withdraw rewards
+
+```bash
+dewebd tx distribution withdraw-rewards dewebvaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslwkjylp --commission \
+ --chain-id deweb-testnet-0 \
+ --gas auto \
+ --gas-adjustment 1.5 \
+ --gas-prices 0.001udws \
+ --from deweb_test
+```
+
+Delegate
+
+```bash
+dewebd tx staking delegate dewebvaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslwkjylp 113000000udws \
+ --chain-id deweb-testnet-0 \
+ --gas auto \
+ --gas-adjustment 1.5 \
+ --gas-prices 0.001udws \
+ --from deweb_test
+```
