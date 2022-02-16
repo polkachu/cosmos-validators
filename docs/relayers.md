@@ -17,6 +17,10 @@ We run all relayers on one machine with high CPU, memory and storage. The defaul
 - gRPC server: 9090 (default)
 - gRPC-web server: 9091 (default)
 
+Make sure the firewalls are open for prometheus port and p2p port. Make sure prometheus is true.
+
+### Juno Relayer
+
 | Network        | Prometheus | P2P   | RPC   | ABCI  | Pprof | API server | Rosetta API | gRPC server | gRPC-web server |
 | -------------- | ---------- | ----- | ----- | ----- | ----- | ---------- | ----------- | ----------- | --------------- |
 | Juno (default) | 26660      | 26656 | 26657 | 26658 | 6060  | 1317       | 8080        | 9090        | 9091            |
@@ -27,6 +31,10 @@ We run all relayers on one machine with high CPU, memory and storage. The defaul
 | Comdex         | 31660      | 31656 | 31657 | 31658 | 31060 | 31317      | 31080       | 31090       | 31091           |
 | Sifchain       | 32660      | 32656 | 32657 | 32658 | 32060 | 32327      | 32080       | 32090       | 32091           |
 
-Make sure the firewalls are open for prometheus port and p2p port
+### Osmosis Relayer
 
-Make sure prometheus is true.
+| Network           | Prometheus | P2P   | RPC   | ABCI  | Pprof | API server | Rosetta API | gRPC server | gRPC-web server |
+| ----------------- | ---------- | ----- | ----- | ----- | ----- | ---------- | ----------- | ----------- | --------------- |
+| Osmosis (default) | 26660      | 26656 | 26657 | 26658 | 6060  | 1317       | 8080        | 9090        | 9091            |
+| Chihuahua         | 29660      | 29656 | 29657 | 29658 | 29060 | 29317      | 29080       | 29090       | 29091           |
+| Konstellation     | 33660      | 33656 | 33657 | 33658 | 33060 | 33317      | 33080       | 33090       | 33091           |
