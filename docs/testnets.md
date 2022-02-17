@@ -30,7 +30,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Craft          | 35656   | 35657   | 35658   | 35060   | 35660      | 35317      | 35080       | 35090       | 35091           |
 | Evmos          | 37656   | 37657   | 37658   | 37060   | 37660      | 37317      | 37080       | 37090       | 37091           |
 | Cosmos Horizon | 38656   | 38657   | 38658   | 38060   | 38660      | 38317      | 38080       | 38090       | 38091           |
-| Comdex         | 39656   | 39657   | 39658   | 39060   | 39660      | 39317      | 39080       | 39090       | 39091           |
+| Comdex         | 39656   | 39657   | 39658   | 39060   | 39660      | 39317      | 39080       | 39099       | 39091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
