@@ -12,6 +12,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 - Osmosis
 - Sifchain
 - Terra
+- Umee
 
 ## Summary
 
@@ -68,6 +69,7 @@ ansible-playbook -i inventory kichain.yml -e "target=kichain_mainnet_main"
 ansible-playbook -i inventory osmosis.yml -e "target=osmosis_mainnet_main"
 ansible-playbook -i inventory sifchain.yml -e "target=sifchain_betanet_main"
 ansible-playbook -i inventory terra.yml -e "target=terra_mainnet_main"
+ansible-playbook -i inventory umee.yml -e "target=umee_mainnet_main"
 ```
 
 If you prefer to install the node manually, you can run a 'prepare' playbook to set up a server for a cosmos-based chain without installing the node itself.
@@ -86,7 +88,8 @@ Playbooks are:
 | `kichain.yml`        | Set up KiChain node. It includes the general `prepare` task and `kichain` specific task     |
 | `osmosis.yml`        | Set up Osmosis node. It includes the general `prepare` task and `osmosis` specific task     |
 | `sifchain.yml`       | Set up Sifchain node. It includes the general `prepare` task and `sifchain` specific task   |
-| `terra.yml`          | Set up Sifchain node. It includes the general `prepare` task and `terra` specific task      |
+| `terra.yml`          | Set up Terra node. It includes the general `prepare` task and `terra` specific task         |
+| `umee.yml`           | Set up Umee node. It includes the general `prepare` task and `umee` specific task           |
 
 ## Auto Compound
 
@@ -168,6 +171,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 | Osmosis   | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`      | [Osmosis](docs/osmosis.md)     |
 | Sifchain  | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`       | [Sifchain](docs/sifchain.md)   |
 | Stargaze  | `starsvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p60w86a`     | [Stargaze](docs/stargaze.md)   |
+| Umee      | ``                                                        | [Umee](docs/umee.md)           |
 
 ## P.S.
 
