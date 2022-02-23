@@ -41,5 +41,5 @@ systemctl status cosmovisor
 Check if the node is performing fine:
 
 ```bash
-bcnad query slashing signing-infos --output json | jq | grep bcnavalcons1gp957czryfgyvxwn3tfnyy2f0t9g2p4pjnln5n
+BINARY query slashing signing-infos --output json | jq | grep <valcons_address>
 ```
