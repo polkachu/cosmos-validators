@@ -1,16 +1,17 @@
 ---
 - name: Copy hermes config script
   template:
-    src: 'hermes.toml.j2'
+    src: 'hermes_without_juno.toml.j2'
     dest: '/home/{{ ansible_user }}/.hermes/config.toml'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0644'
-# - name: Restart Hermes
-#   become: true
-#   systemd:
-#     name: hermes
-#     state: restarted
-#     daemon_reload: yes
-#     enabled: yes
-#   changed_when: false
+
+- name: Restart Hermes
+  become: true
+  systemd:
+    name: hermes
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
