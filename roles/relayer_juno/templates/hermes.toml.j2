@@ -72,6 +72,7 @@ list = [
   ['transfer', 'channel-28'], # Chihuahua
   ['transfer', 'channel-50'], # Bitcanna
   ['transfer', 'channel-5'], # Sifchain
+  ['transfer', 'channel-1'], # Osmosis
 ]
 
 #
@@ -208,4 +209,34 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-14'], # Juno
+]
+
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://{{ osmosis_relayer_ip }}:26657'
+grpc_addr = 'http://{{ osmosis_relayer_ip }}:9090'
+websocket_addr = 'ws://{{ osmosis_relayer_ip }}:26657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'osmo'
+key_name = 'osmosis-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.000, denom = 'uosmo' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-42'], # Juno
 ]
