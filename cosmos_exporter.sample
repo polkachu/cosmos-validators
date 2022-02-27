@@ -1,0 +1,30 @@
+[Unit]
+Description=Juno Exporter
+After=network-online.target
+
+[Service]
+User=ubuntu
+TimeoutStartSec=0
+CPUWeight=95
+IOWeight=95
+ExecStart=cosmos-exporter \
+  --denom=ujuno \
+  --denom-coefficient=0.000001 \
+  --bech-account-prefix=juno \
+  --bech-account-pubkey-prefix=junopub \
+  --bech-consensus-node-prefix=junovalcons \
+  --bech-consensus-node-pubkey-prefix=junovalconspub \
+  --bech-validator-prefix=junovaloper \
+  --bech-validator-pubkey-prefix=junovaloperpub \
+  --listen-address=:9300 \
+  --log-level=info \
+  --node=localhost:9090 \
+  --tendermint-rpc=http://localhost:26657
+
+Restart=always
+RestartSec=2
+LimitNOFILE=800000
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
