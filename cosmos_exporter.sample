@@ -1,5 +1,5 @@
 [Unit]
-Description=Juno Exporter
+Description=Comdex Exporter
 After=network-online.target
 
 [Service]
@@ -8,18 +8,18 @@ TimeoutStartSec=0
 CPUWeight=95
 IOWeight=95
 ExecStart=cosmos-exporter \
-  --denom=ujuno \
-  --denom-coefficient=0.000001 \
-  --bech-account-prefix=juno \
-  --bech-account-pubkey-prefix=junopub \
-  --bech-consensus-node-prefix=junovalcons \
-  --bech-consensus-node-pubkey-prefix=junovalconspub \
-  --bech-validator-prefix=junovaloper \
-  --bech-validator-pubkey-prefix=junovaloperpub \
-  --listen-address=:9300 \
+  --denom=ucmdx \
+  --denom-coefficient=1000000 \
+  --bech-account-prefix=comdex \
+  --bech-account-pubkey-prefix=comdexpub \
+  --bech-consensus-node-prefix=comdexvalcons \
+  --bech-consensus-node-pubkey-prefix=comdexvalconspub \
+  --bech-validator-prefix=comdexvaloper \
+  --bech-validator-pubkey-prefix=comdexvaloperpub \
+  --listen-address=:31300 \
   --log-level=info \
-  --node=localhost:9090 \
-  --tendermint-rpc=http://localhost:26657
+  --node=localhost:31090 \
+  --tendermint-rpc=http://localhost:31657
 
 Restart=always
 RestartSec=2
