@@ -1,0 +1,10 @@
+network: evmos
+folder: '.evmosd'
+daemon: evmosd
+chain_id: evmos_9001-1
+node_version: v1.0.0
+repo: https://github.com/tharsis/evmos
+genesis: 'TBD'
+peers: 'TBD'
+seeds: 'TBD'
+minimum_gas_price: 'TBD'
