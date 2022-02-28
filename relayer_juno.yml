@@ -1,6 +1,6 @@
 ---
 - name: Move juno relayer config
   hosts: '{{ target }}'
-  gather_facts: true
+  gather_facts: false
   roles:
     - relayer_juno

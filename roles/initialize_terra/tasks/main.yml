@@ -21,20 +21,20 @@
 - name: Download genesis file
   get_url:
     url: '{{ genesis }}'
-    dest: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config/genesis.json'
+    dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
     force: yes
     mode: '0644'
 
 - name: Download address book
   get_url:
     url: '{{ address_book }}'
-    dest: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config/addrbook.json'
+    dest: '{{ user_dir }}/{{ folder }}/config/addrbook.json'
     force: yes
     mode: '0644'
 
 - name: Update minimum gas price on config file
   lineinfile:
-    path: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config/app.toml'
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
     regexp: 'minimum-gas-prices '
     line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
     state: present
@@ -47,14 +47,14 @@
 
 - name: Set up external address
   lineinfile:
-    path: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config/config.toml'
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'external_address = ""'
     line: 'external_address = "{{ public_ip.json.ip }}:26656"'
     state: present
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
-    path: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config/config.toml'
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'prometheus = false'
     line: 'prometheus = true'
     state: present

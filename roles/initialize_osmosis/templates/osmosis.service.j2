@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User={{ ansible_user }}
-ExecStart={{ ansible_facts["user_dir"] }}/go/bin/osmosisd start
+ExecStart={{ user_dir }}/go/bin/osmosisd start
 Restart=on-abort
 
 [Install]

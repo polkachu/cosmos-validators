@@ -2,7 +2,7 @@
 - name: Copy auto_compound file
   template:
     src: 'auto_compound_for_delegation.sh.j2'
-    dest: '{{ ansible_facts["user_dir"] }}/auto_compound_for_delegation.sh'
+    dest: '{{ user_dir }}/auto_compound_for_delegation.sh'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0700'

@@ -13,12 +13,12 @@
 - name: unarchive genesis file
   unarchive:
     src: '/tmp/genesis.tar.gz'
-    dest: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config'
+    dest: '{{ user_dir }}/{{ folder }}/config'
     remote_src: true
 
 - name: Update the config.toml file
   lineinfile:
-    path: '{{ ansible_facts["user_dir"] }}/{{ folder }}/config/config.toml'
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'persistent_peers = ""'
     line: 'persistent_peers = "{{ peers }}"'
     state: present

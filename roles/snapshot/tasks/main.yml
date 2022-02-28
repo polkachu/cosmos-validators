@@ -24,7 +24,7 @@
 - name: Copy snapshot script
   template:
     src: 'snapshot.sh.j2'
-    dest: '{{ ansible_facts["user_dir"] }}/snapshot.sh'
+    dest: '{{ user_dir }}/snapshot.sh'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0700'

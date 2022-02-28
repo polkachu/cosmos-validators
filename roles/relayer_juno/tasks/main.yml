@@ -2,7 +2,7 @@
 - name: Copy hermes config script
   template:
     src: 'hermes_without_osmosis.toml.j2'
-    dest: '{{ ansible_facts["user_dir"] }}/.hermes/config.toml'
+    dest: '{{ user_dir }}/.hermes/config.toml'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0644'

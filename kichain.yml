@@ -2,13 +2,13 @@
 - name: Prepare
   hosts: '{{ target }}'
   become: true
-  gather_facts: true
+  gather_facts: false
   roles:
     - prepare
 
 - name: Install node
   hosts: '{{ target }}'
-  gather_facts: true
+  gather_facts: false
   roles:
     - standard_node_installation
     - initialize_kichain

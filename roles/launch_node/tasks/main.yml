@@ -1,7 +1,7 @@
 ---
 - name: Adjust pruning setting
   lineinfile:
-    path: "{{ ansible_facts['user_dir'] }}/{{ folder }}/config/app.toml"
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
     regexp: '{{ item.old }}'
     line: '{{ item.new }}'
     state: present
@@ -13,7 +13,7 @@
 
 - name: Adjust indexer setting
   lineinfile:
-    path: "{{ ansible_facts['user_dir'] }}/{{ folder }}/config/config.toml"
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: '{{ item.old }}'
     line: '{{ item.new }}'
     state: present
@@ -28,14 +28,14 @@
 
 - name: Set up external address
   lineinfile:
-    path: "{{ ansible_facts['user_dir'] }}/{{ folder }}/config/config.toml"
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'external_address = "'
     line: 'external_address = "{{ public_ip.json.ip }}:26656"'
     state: present
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
-    path: "{{ ansible_facts['user_dir'] }}/{{ folder }}/config/config.toml"
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'prometheus ='
     line: 'prometheus = true'
     state: present
@@ -46,13 +46,13 @@
     state: directory
     mode: '0755'
   with_items:
-    - "{{ ansible_facts['user_dir'] }}/{{ folder }}/cosmovisor/genesis/bin"
-    - "{{ ansible_facts['user_dir'] }}/{{ folder }}/cosmovisor/upgrades"
+    - '{{ user_dir }}/{{ folder }}/cosmovisor/genesis/bin'
+    - '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades'
 
 - name: copy daemon file to cosmovisor
   copy:
-    src: "{{ ansible_facts['user_dir'] }}/go/bin/{{ daemon }}"
-    dest: "{{ ansible_facts['user_dir'] }}/{{ folder }}/cosmovisor/genesis/bin"
+    src: '{{ user_dir }}/go/bin/{{ daemon }}'
+    dest: '{{ user_dir }}/{{ folder }}/cosmovisor/genesis/bin'
     remote_src: true
     mode: '0755'
 
