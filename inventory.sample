@@ -13,7 +13,7 @@ juno_mainnet_backup
 ansible_user=ubuntu
 ansible_port=22
 ansible_ssh_private_key_file="~/.ssh/id_rsa"
-path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:{{ ansible_facts['user_dir'] }}/go/bin"
+path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:/home/ubuntu/go/bin"
 node_exporter=true
 promtail=true
 log_monitor=http://10.0.0.100:3100
