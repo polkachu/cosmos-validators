@@ -15,3 +15,7 @@ snapshot_space: 'polkachu-tendermint'
 
 # cosmovisor
 cosmovisor_version: 'v1.0.0'
+
+# horcrux
+horcrux_repo: 'https://github.com/strangelove-ventures/horcrux'
+horcrux_version: 'v2.0.0-beta3'

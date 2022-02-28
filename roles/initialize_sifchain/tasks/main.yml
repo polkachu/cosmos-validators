@@ -6,7 +6,7 @@
 
 - name: Update the config.toml file
   lineinfile:
-    path: '/home/{{ ansible_user }}/.{{ network }}/config/config.toml'
+    path: '{{ ansible_facts["user_dir"] }}/.{{ network }}/config/config.toml'
     regexp: 'persistent_peers = ""'
     line: 'persistent_peers = "{{ peers }}"'
     state: present
@@ -24,4 +24,4 @@
   copy:
     remote_src: true
     src: /tmp/genesis.json
-    dest: /home/{{ ansible_user }}/.sifnoded/config
+    dest: {{ ansible_facts["user_dir"] }}/.sifnoded/config

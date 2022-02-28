@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This is for crontab
-# 0 0 * * 0 /bin/bash /home/ubuntu/snapshot.sh
+# 0 0 * * 0 /bin/bash {{ ansible_facts["user_dir"] }}/snapshot.sh
 
 # Make sure the service is running
 sudo service cosmovisor start
@@ -15,13 +15,13 @@ sudo service cosmovisor stop
 
 # Compress the folder
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
-cd /home/ubuntu/{{ folder }}
-tar cvf - data | lz4 > "/home/ubuntu/$FILENAME"
+cd {{ ansible_facts["user_dir"] }}/{{ folder }}
+tar cvf - data | lz4 > "{{ ansible_facts["user_dir"] }}/$FILENAME"
 
 # Restart the service
 sudo service cosmovisor start
 
 # Transfer the file and then remove the file
-cd /home/ubuntu/
+cd {{ ansible_facts["user_dir"] }}/
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://{{ snapshot_space }}/{{ network }}/"
 rm $FILENAME

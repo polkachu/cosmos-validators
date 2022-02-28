@@ -3,21 +3,21 @@
   become: true
   file:
     state: absent
-    path: '/home/{{ ansible_user }}/{{ network }}'
+    path: "{{ ansible_facts['user_dir'] }}/{{ network }}"
 
 - name: Clone node repo
   git:
     repo: '{{ repo }}'
-    dest: '/home/{{ ansible_user }}/{{ network }}'
+    dest: "{{ ansible_facts['user_dir'] }}/{{ network }}"
 
 - name: Install node
   command: '{{ item }}'
   args:
-    chdir: '/home/{{ ansible_user }}/{{ network }}'
+    chdir: "{{ ansible_facts['user_dir'] }}/{{ network }}"
   with_items:
     - 'git fetch'
     - 'git checkout {{ node_version }}'
     - 'make install'
   environment:
     PATH: '{{ path }}'
-    GOPATH: '/home/{{ ansible_user }}/go'
+    GOPATH: "{{ ansible_facts['user_dir'] }}/go"
