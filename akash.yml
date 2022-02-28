@@ -2,13 +2,13 @@
 - name: Prepare
   hosts: '{{ target }}'
   become: true
-  gather_facts: false
+  gather_facts: true
   roles:
     - prepare
 
 - name: Install node
   hosts: '{{ target }}'
-  gather_facts: false
+  gather_facts: true
   roles:
     - standard_node_installation
     - initialize_akash

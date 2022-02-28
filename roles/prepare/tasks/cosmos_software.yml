@@ -31,11 +31,11 @@
   command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
   environment:
     PATH: '{{ path }}'
-    GOPATH: '/home/{{ ansible_user }}/go'
+    GOPATH: "{{ ansible_facts['user_dir'] }}/go"
 
 - name: Change go folder permission
   file:
-    path: /home/{{ ansible_user }}/go
+    path: "{{ ansible_facts['user_dir'] }}/go"
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     recurse: true
@@ -44,7 +44,7 @@
 - name: copy .profile
   template:
     src: 'profile.j2'
-    dest: '/home/{{ ansible_user }}/.profile'
+    dest: "{{ ansible_facts['user_dir'] }}/.profile"
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0600'
