@@ -143,6 +143,23 @@ Alternatively, you can add a cronjob. For example, this following cronjob will r
 0 0 * * * /bin/bash /home/<USER>/auto_compound.sh
 ```
 
+## Relayers
+
+We offer some simple scripts to upload hermes config files to our Juno and Osmosis relayers hubs. It is designed for our internal consumptions only. We installed our relayer software (Hermes) manually. However, because we update our config files rather frequently, we have decided to automate this specific task. The Ansible script is probably not helpful to you, but you might like to adapt our Hermes config file itself. For this reason, we have decided to include the playbooks here.
+
+```bash
+ansible-playbook -i inventory relayer_juno.yml -e "target=relayer_juno"
+ansible-playbook -i inventory relayer_osmosis.yml -e "target=relayer_osmosis"
+```
+
+## Horcrux
+
+Our friend [coffeecoaster](https://github.com/coffeeroaster) has contributed this Horcrux playbook. Horcrux is a multi-party-computation (MPC) signing service for Tendermint nodes. Its github repo is [here](https://github.com/strangelove-ventures/horcrux).
+
+```bash
+ansible-playbook -i inventory horcrux.yml -e "target=juno_mainnet_main"
+```
+
 ## Additional Info
 
 When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time-travel to the present quickly. We strongly recommend using snapshots. It will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers:
