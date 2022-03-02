@@ -9,6 +9,7 @@
 | Sifchain  | Yes     | Default | Automated and delegate to self daily   | Yes              | Yes (Minio1: 2:00)       |            |
 | Osmosis   | No      | Default | Automated and delegate to others daily | Yes              | Yes (Minio2: 2:00)       |            |
 | Bitcanna  | Yes     | Default | Automated and delegate to self daily   | Yes              | Yes (Minio1: 3:00)       |            |
+| Evmos     | Yes     | Default | Not yet                                | Yes              | Yes (Minio2: 3:00)       |            |
 | Comdex    | No      | Default | Automated and delegate to others daily | Yes              | Yes (Minio1: 4:00)       |            |
 | KiChain   | Yes     | Default | Automated and delegate to self daily   |                  |                          |            |
 | Stargaze  | No      | Default | Automated and delegate to others daily |                  |                          |            |
