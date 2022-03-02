@@ -6,7 +6,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 - BitCanna
 - Chihuahua
 - Comdex
-- Evmos (pending)
+- Evmos
 - Juno
 - Kava
 - KiChain
@@ -186,7 +186,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 | Bitcanna  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
 | Chihuahua | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
 | Comdex    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
-| Evmos     | ``                                                        | [Comdex](docs/evmos.md)        |
+| Evmos     | `evmosvaloper125fkz3mq6qxxpkmphdl3ep92t0d3y969xmt8hz`     | [Evmos](docs/evmos.md)         |
 | Juno      | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`      | [Juno](docs/juno.md)           |
 | Kava      | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`      | [Kava](docs/kava.md)           |
 | KiChain   | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`        | [KiChain](docs/kichain.md)     |
