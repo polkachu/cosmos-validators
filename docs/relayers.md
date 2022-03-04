@@ -36,6 +36,7 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Network           | Prometheus | P2P   | RPC   | ABCI  | Pprof | API server | Rosetta API | gRPC server | gRPC-web server |
 | ----------------- | ---------- | ----- | ----- | ----- | ----- | ---------- | ----------- | ----------- | --------------- |
 | Osmosis (default) | 26660      | 26656 | 26657 | 26658 | 6060  | 1317       | 8080        | 9090        | 9091            |
+| Akash             | 28660      | 28656 | 28657 | 28658 | 28060 | 28317      | 28080       | 28090       | 28091           |
 | Chihuahua         | 29660      | 29656 | 29657 | 29658 | 29060 | 29317      | 29080       | 29090       | 29091           |
 | Bitcanna          | 30660      | 30656 | 30657 | 30658 | 30060 | 30317      | 30080       | 30090       | 30091           |
 | Comdex            | 31660      | 31656 | 31657 | 31658 | 31060 | 31317      | 31080       | 31090       | 31091           |

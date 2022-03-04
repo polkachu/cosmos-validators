@@ -23,19 +23,8 @@
     name: unzip
     state: present
 
-- name: download genesis zip file
+- name: Download genesis file
   get_url:
     url: '{{ genesis }}'
-    dest: '{{ user_dir }}/genesis.json.zip'
+    dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
     mode: '0644'
-
-- name: unarchive genesis file
-  unarchive:
-    src: '{{ user_dir }}/genesis.json.zip'
-    dest: '{{ user_dir }}/{{ folder}}/config'
-    remote_src: yes
-
-- name: remove zip file
-  file:
-    path: '{{ user_dir }}/genesis.json.zip'
-    state: absent
