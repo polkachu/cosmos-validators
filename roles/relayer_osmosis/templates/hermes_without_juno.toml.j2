@@ -4,6 +4,7 @@
 ## bitcanna-1
 ## comdex-1
 ## akashnet-2
+## darchub
 
 # The global section has parameters that apply globally to the relayer operation.
 [global]
@@ -78,6 +79,7 @@ list = [
   ['transfer', 'channel-1'], # Akash
   ['transfer', 'channel-113'], # Chihuahua
   ['transfer', 'channel-51'], # Bitcanna
+  ['transfer', 'channel-171'], # Konstellation
   ['transfer', 'channel-87'], # Comdex
 ]
 
@@ -211,4 +213,38 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-1'], # Osmosis
+]
+
+#
+# Chain configuration Konstellation
+#
+
+[[chains]]
+id = 'darchub'
+# API access to Konstellation node with indexing
+rpc_addr = 'http://127.0.0.1:33657'
+grpc_addr = 'http://127.0.0.1:33090'
+websocket_addr = 'ws://127.0.0.1:33657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'darc'
+key_name = 'konstellation-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 3500000
+gas_price = { price = 0.0001, denom = 'udarc' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '10s'
+max_block_time = '10s'
+trusting_period = '14days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
 ]
