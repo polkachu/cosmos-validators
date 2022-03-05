@@ -24,8 +24,8 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Network        | Prometheus | P2P   | RPC   | ABCI  | Pprof | API server | Rosetta API | gRPC server | gRPC-web server | Cosmos Exporter |
 | -------------- | ---------- | ----- | ----- | ----- | ----- | ---------- | ----------- | ----------- | --------------- | --------------- |
 | Juno (default) | 26660      | 26656 | 26657 | 26658 | 6060  | 1317       | 8080        | 9090        | 9091            | 9300            |
-| Sifchain       | 32660      | 32656 | 32657 | 32658 | 32060 | 32317      | 32080       | 32090       | 32091           |                 |
-| Evmos          | 34660      | 34656 | 34657 | 34658 | 34060 | 34317      | 34080       | 34090       | 34091           |                 |
+| Sifchain       | 32660      | 32656 | 32657 | 32658 | 32060 | 32317      | 32080       | 32090       | 32091           | 32300           |
+| Evmos          | 34660      | 34656 | 34657 | 34658 | 34060 | 34317      | 34080       | 34090       | 34091           | 34300           |
 
 ### Osmosis Relayer
 
