@@ -193,7 +193,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 | Osmosis   | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`      | [Osmosis](docs/osmosis.md)     |
 | Sifchain  | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`       | [Sifchain](docs/sifchain.md)   |
 | Stargaze  | `starsvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p60w86a`     | [Stargaze](docs/stargaze.md)   |
-| Umee      | ``                                                        | [Umee](docs/umee.md)           |
+| Umee      | `umeevaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phlh7lv`      | [Umee](docs/umee.md)           |
 
 ## P.S.
 
