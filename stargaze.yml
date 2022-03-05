@@ -1,10 +1,10 @@
 ---
-# - name: Prepare
-#   hosts: '{{ target }}'
-#   become: true
-#   gather_facts: false
-#   roles:
-#     - prepare
+- name: Prepare
+  hosts: '{{ target }}'
+  become: true
+  gather_facts: false
+  roles:
+    - prepare
 
 - name: Install node
   hosts: '{{ target }}'
