@@ -5,6 +5,7 @@
 ## 3. Chihuahua: chihuahua-1
 ## 4. Comdex: comdex-1
 ## 5. Konstellation: darchub
+## 6. Sifchain: sifchain-1
 
 # The global section has parameters that apply globally to the relayer operation.
 [global]
@@ -81,6 +82,7 @@ list = [
   ['transfer', 'channel-87'], # Comdex
   ['transfer', 'channel-113'], # Chihuahua
   ['transfer', 'channel-171'], # Konstellation
+  ['transfer', 'channel-47'], # Sifchain
 ]
 
 [[chains]]
@@ -113,9 +115,35 @@ list = [
   ['transfer', 'channel-9'], # Osmosis
 ]
 
-#
-# Chain configuration Chihuahua
-#
+[[chains]]
+id = 'bitcanna-1'
+# API access to Bitcanna node with indexing
+rpc_addr = 'http://127.0.0.1:30657'
+grpc_addr = 'http://127.0.0.1:30090'
+websocket_addr = 'ws://127.0.0.1:30657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'bcna'
+key_name = 'bitcanna-relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'cosmos' }
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.001, denom = 'ubcna' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-1'], # Osmosis
+]
 
 [[chains]]
 id = 'chihuahua-1'
@@ -147,44 +175,6 @@ list = [
   ['transfer', 'channel-7'], # Osmosis
 ]
 
-#
-# Chain configuration Bitcanna
-#
-
-[[chains]]
-id = 'bitcanna-1'
-# API access to Bitcanna node with indexing
-rpc_addr = 'http://127.0.0.1:30657'
-grpc_addr = 'http://127.0.0.1:30090'
-websocket_addr = 'ws://127.0.0.1:30657/websocket'
-
-rpc_timeout = '20s'
-account_prefix = 'bcna'
-key_name = 'bitcanna-relayer'
-store_prefix = 'ibc'
-address_type = { derivation = 'cosmos' }
-default_gas = 100000
-max_gas = 1000000
-gas_price = { price = 0.001, denom = 'ubcna' }
-gas_adjustment = 0.2
-max_msg_num = 30
-max_tx_size = 1800000
-clock_drift = '15s'
-max_block_time = '10s'
-trusting_period = '7days'
-memo_prefix = 'Relayed by Polkachu'
-trust_threshold = { numerator = '1', denominator = '3' }
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-1'], # Osmosis
-]
-
-#
-# Chain configuration Bitcanna
-#
-
 [[chains]]
 id = 'comdex-1'
 # API access to Bitcanna node with indexing
@@ -215,10 +205,6 @@ list = [
   ['transfer', 'channel-1'], # Osmosis
 ]
 
-#
-# Chain configuration Konstellation
-#
-
 [[chains]]
 id = 'darchub'
 # API access to Konstellation node with indexing
@@ -247,4 +233,35 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-0'], # Osmosis
+]
+
+
+[[chains]]
+id = 'sifchain-1'
+# API access to Sifchain node with indexing
+rpc_addr = 'http://{{ juno_relayer_ip }}:32657'
+grpc_addr = 'http://{{ juno_relayer_ip }}:32090'
+websocket_addr = 'ws://{{ juno_relayer_ip }}:32657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'sif'
+key_name = 'sifchain-relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'cosmos' }
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.001, denom = 'rowan' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '14days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-17'], # Osmosis
 ]
