@@ -4,10 +4,12 @@
 ## 2. Bitcanna: bitcanna-1
 ## 3. Chihuahua: chihuahua-1
 ## 4. Comdex: comdex-1
-## 5. Konstellation: darchub
-## 6. Sifchain: sifchain-1
-## 7. Stargaze: stargaze-1
-## 8. Umee: umee-1
+## 5. Evmos: evmos_9001-1
+## 6. Kichain: kichain-2
+## 7. Konstellation: darchub
+## 8. Sifchain: sifchain-1
+## 9. Stargaze: stargaze-1
+## 10. Umee: umee-1
 
 # The global section has parameters that apply globally to the relayer operation.
 [global]
@@ -81,8 +83,10 @@ policy = 'allow'
 list = [
   ['transfer', 'channel-1'], # Akash
   ['transfer', 'channel-51'], # Bitcanna
-  ['transfer', 'channel-87'], # Comdex
   ['transfer', 'channel-113'], # Chihuahua
+  ['transfer', 'channel-87'], # Comdex
+  ['transfer', 'channel-204'], # Evmos
+  ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-171'], # Konstellation
   ['transfer', 'channel-47'], # Sifchain
   ['transfer', 'channel-75'], # Stargaze
@@ -91,7 +95,6 @@ list = [
 
 [[chains]]
 id = 'akashnet-2'
-# API access to Akash node with indexing
 rpc_addr = 'http://127.0.0.1:28657'
 grpc_addr = 'http://127.0.0.1:28090'
 websocket_addr = 'ws://127.0.0.1:28657/websocket'
@@ -121,7 +124,6 @@ list = [
 
 [[chains]]
 id = 'bitcanna-1'
-# API access to Bitcanna node with indexing
 rpc_addr = 'http://127.0.0.1:30657'
 grpc_addr = 'http://127.0.0.1:30090'
 websocket_addr = 'ws://127.0.0.1:30657/websocket'
@@ -151,7 +153,6 @@ list = [
 
 [[chains]]
 id = 'chihuahua-1'
-# API access to Chihuahua node with indexing
 rpc_addr = 'http://127.0.0.1:29657'
 grpc_addr = 'http://127.0.0.1:29090'
 websocket_addr = 'ws://127.0.0.1:29657/websocket'
@@ -181,7 +182,6 @@ list = [
 
 [[chains]]
 id = 'comdex-1'
-# API access to Bitcanna node with indexing
 rpc_addr = 'http://127.0.0.1:31657'
 grpc_addr = 'http://127.0.0.1:31090'
 websocket_addr = 'ws://127.0.0.1:31657/websocket'
@@ -210,8 +210,65 @@ list = [
 ]
 
 [[chains]]
+id = 'evmos_9001-1'
+rpc_addr = 'http://{{ juno_relayer_ip }}:34657'
+grpc_addr = 'http://{{ juno_relayer_ip }}:34090'
+websocket_addr = 'ws://{{ juno_relayer_ip }}:34657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'evmos'
+key_name = 'evmos-relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/ethermint.crypto.v1.ethsecp256k1.PubKey' } }
+default_gas = 1000000
+max_gas = 4000000
+gas_price = { price = 0, denom = 'aevmos' }
+gas_adjustment = 0.2
+max_msg_num=15
+max_tx_size = 180000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3'}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-0'], # Osmosis
+]
+
+[[chains]]
+id = 'kichain-2'
+rpc_addr = 'http://{{ juno_relayer_ip }}:35657'
+grpc_addr = 'http://{{ juno_relayer_ip }}:35090'
+websocket_addr = 'ws://{{ juno_relayer_ip }}:35657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'ki'
+key_name = 'kichain-relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'cosmos' }
+default_gas = 200000
+max_gas = 3500000
+gas_price = { price = 0.025, denom = 'uxki' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+]
+
+[[chains]]
 id = 'darchub'
-# API access to Konstellation node with indexing
 rpc_addr = 'http://127.0.0.1:33657'
 grpc_addr = 'http://127.0.0.1:33090'
 websocket_addr = 'ws://127.0.0.1:33657/websocket'
@@ -241,7 +298,6 @@ list = [
 
 [[chains]]
 id = 'sifchain-1'
-# API access to Sifchain node with indexing
 rpc_addr = 'http://{{ juno_relayer_ip }}:32657'
 grpc_addr = 'http://{{ juno_relayer_ip }}:32090'
 websocket_addr = 'ws://{{ juno_relayer_ip }}:32657/websocket'

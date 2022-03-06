@@ -1,0 +1,9 @@
+network: sommelier
+folder: ''
+daemon: ''
+chain_id: sommelier-3
+node_version: ''
+repo: ''
+genesis: ''
+peers: ''
+minimum_gas_price: ''
