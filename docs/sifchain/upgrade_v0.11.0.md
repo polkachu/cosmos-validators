@@ -5,6 +5,7 @@ The Upgrade is scheduled for block `5870400`. This guide assumes that you use co
 ```bash
 # get the new version
 cd sifnoded
+git pull
 git checkout v0.11.0
 make install
 
