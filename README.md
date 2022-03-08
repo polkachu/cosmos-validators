@@ -203,6 +203,8 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 
 [Validator Server Migration Best Practice](docs/validator_server_migration_best_practice.md)
 
+[State Sync](docs/state_sync.md)
+
 [Polkachu's Testnet Setup](docs/testnets.md)
 
 [Polkachu's Relayer Setup](docs/relayers.md)
