@@ -3,6 +3,50 @@
   file:
     state: absent
     path: '{{ user_dir }}/horcrux'
+    
+- name: install apt packages
+  become: true
+  apt:
+    name: '{{item}}'
+    state: present
+    update_cache: yes
+  loop:
+    - make
+    - build-essential
+    - gcc
+    - git
+
+- name: Download go
+  get_url:
+    url: 'https://golang.org/dl/go{{ go_version }}.linux-amd64.tar.gz'
+    dest: '/tmp/go{{ go_version }}.linux-amd64.tar.gz'
+    mode: '0700'
+
+- name: unarchive go
+  become: true
+  unarchive:
+    src: '/tmp/go{{ go_version }}.linux-amd64.tar.gz'
+    remote_src: yes
+    dest: '/usr/local/'
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Change go folder permission
+  file:
+    path: '{{ user_dir }}/go'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    recurse: true
+    mode: '0755'
+
+- name: copy .profile
+  template:
+    src: 'profile.j2'
+    dest: '{{ user_dir }}/.profile'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0600'
 
 - name: Clone horcrux repo
   git:
