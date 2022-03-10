@@ -158,9 +158,16 @@ ansible-playbook -i inventory relayer_osmosis.yml -e "target=relayer_osmosis"
 
 ## Horcrux
 
-Our friend [coffeecoaster](https://github.com/coffeeroaster) has contributed this Horcrux playbook. Horcrux is a multi-party-computation (MPC) signing service for Tendermint nodes. Its github repo is [here](https://github.com/strangelove-ventures/horcrux).
+Our friend [coffeecoaster](https://github.com/coffeeroaster) has contributed this Horcrux playbook. Horcrux is a multi-party-computation (MPC) signing service for Tendermint nodes. Its github repo is [here](https://github.com/strangelove-ventures/horcrux). It is assumed that you already have a node with all the necessary toolings (Go, Comsovisor, jq, .profile setup, etc). If you install a tendermint node with one of our Ansible playbook, you have these toolings already.
 
 ```bash
+ansible-playbook -i inventory horcrux.yml -e "target=juno_mainnet_main"
+```
+
+In case you do not have all the necessary toolings, then we recommend you run `prepare` playbook first.
+
+```bash
+ansible-playbook -i inventory prepare.yml -e "target=juno_mainnet_main"
 ansible-playbook -i inventory horcrux.yml -e "target=juno_mainnet_main"
 ```
 
