@@ -32,6 +32,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Cosmos Horizon | 38656   | 38657   | 38658   | 38060   | 38660      | 38317      | 38080       | 38090       | 38091           |
 | Comdex         | 39656   | 39657   | 39658   | 39060   | 39660      | 39317      | 39080       | 39099       | 39098           |
 | Cerberus       | 40656   | 40657   | 40658   | 40060   | 40660      | 40317      | 40080       | 40099       | 40098           |
+| Kichain        | 41656   | 41657   | 41658   | 41060   | 41660      | 41317      | 41080       | 41099       | 41098           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
