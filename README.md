@@ -6,6 +6,7 @@ This repo is to set up the Cosmos-based node. It currently support:
 - BitCanna
 - Chihuahua
 - Comdex
+- Cerberus
 - Evmos
 - Juno
 - Kava
@@ -65,6 +66,7 @@ ansible-playbook -i inventory akash.yml -e "target=akash_mainnet_main"
 ansible-playbook -i inventory bitcanna.yml -e "target=bitcanna_mainnet_main"
 ansible-playbook -i inventory chihuahua.yml -e "target=chihuahua_mainnet_main"
 ansible-playbook -i inventory comdex.yml -e "target=comdex_mainnet_main"
+ansible-playbook -i inventory cerberus.yml -e "target=cerberus_mainnet_main"
 ansible-playbook -i inventory evmos.yml -e "target=evmos_mainnet_main"
 ansible-playbook -i inventory juno.yml -e "target=juno_mainnet_main"
 ansible-playbook -i inventory kava.yml -e "target=kava_mainnet_main"
@@ -86,6 +88,7 @@ Playbooks are:
 | `bitcanna.yml`       | Set up Bitcanna node. It includes the general `prepare` task and `bitcanna` specific task   |
 | `chihuahua.yml`      | Set up Chihuahua node. It includes the general `prepare` task and `chihuahua` specific task |
 | `comdex.yml`         | Set up Comdex node. It includes the general `prepare` task and `comdex` specific task       |
+| `Cerberus.yml`       | Set up Cerberus node. It includes the general `prepare` task and `cerberus` specific task   |
 | `evmos.yml`          | Set up Comdex node. It includes the general `prepare` task and `evmos` specific task        |
 | `juno.yml`           | Set up Juno node. It includes the general `prepare` task and `juno` specific task           |
 | `kava.yml`           | Set up Kava node. It includes the general `prepare` task and `kava` specific task           |
@@ -193,6 +196,7 @@ Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validat
 | Bitcanna  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
 | Chihuahua | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
 | Comdex    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
+| Cerberus  | `cerberusvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvm8q9p`  | [Cerberus](docs/cerberus.md)   |
 | Evmos     | `evmosvaloper125fkz3mq6qxxpkmphdl3ep92t0d3y969xmt8hz`     | [Evmos](docs/evmos.md)         |
 | Juno      | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`      | [Juno](docs/juno.md)           |
 | Kava      | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`      | [Kava](docs/kava.md)           |
