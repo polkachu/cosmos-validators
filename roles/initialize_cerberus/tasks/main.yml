@@ -23,3 +23,10 @@
     regexp: 'persistent_peers = ""'
     line: 'persistent_peers = "{{ peers }}"'
     state: present
+
+- name: Update minimum gas price on config file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: 'minimum-gas-prices '
+    line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
+    state: present
