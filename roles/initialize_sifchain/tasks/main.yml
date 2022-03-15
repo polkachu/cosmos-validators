@@ -4,6 +4,13 @@
   environment:
     PATH: '{{ path }}'
 
+- name: Update minimum gas price on config file
+  lineinfile:
+    path: '/home/{{ ansible_user }}/{{ folder }}/config/app.toml'
+    regexp: 'minimum-gas-prices '
+    line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
+    state: present
+
 - name: Update the config.toml file
   lineinfile:
     path: '{{ user_dir }}/.{{ network }}/config/config.toml'
