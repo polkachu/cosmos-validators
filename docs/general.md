@@ -42,6 +42,12 @@ Get all delegations to a validator
 BINARY q staking delegations-to VALIDATOR_ADDRESS -o json | jq '.delegation_responses[].delegation | { addr: .delegator_address, shares: (.shares | tonumber| floor / 1000000)}' | jq -c -s 'sort_by(.shares) | .[]'
 ```
 
+Get a list of all validators sorted by their voting powers
+
+```bash
+BINARY query staking validators --limit 1000 -o json | jq -r '.validators[] | select(.status=="BOND_STATUS_BONDED") | [ (.tokens|tonumber / pow(10; 6)), .description.moniker ] | @csv' | column -t -s"," | sort -k1 -n -r | nl
+```
+
 Check logs and cosmovisor status
 
 ```bash

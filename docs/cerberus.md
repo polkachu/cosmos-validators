@@ -4,7 +4,7 @@ GenTx
 
 ```bash
 cerberusd gentx polkachu 4000000000000ucrbrus \
- --chain-id cerberus-1 \
+--chain-id cerberus-chain-1 \
  --moniker 'polkachu.com' \
  --commission-max-change-rate=0.05 \
  --commission-max-rate=0.20 \
