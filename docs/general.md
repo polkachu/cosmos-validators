@@ -61,3 +61,9 @@ Check if the node is performing fine:
 ```bash
 BINARY query slashing signing-infos --output json | jq | grep <valcons_address>
 ```
+
+Send token through IBC
+
+```bash
+BINARY tx ibc-transfer transfer transfer channel-x <destination_address> 1denom --from xxx --gas xxx
+```
