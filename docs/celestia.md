@@ -31,9 +31,20 @@ celestia-appd tx staking delegate celesvaloper1pcmran05kpxjw8g9fja2aqk2q8e49hgzm
 Unjail
 
 ```bash
-celestia-appd tx slashing unjail --from celes1pcmran05kpxjw8g9fja2aqk2q8e49hgz79d339 \
+ tx slashing unjail --from celes1pcmran05kpxjw8g9fja2aqk2q8e49hgz79d339 \
     --chain-id=devnet-2 \
     --from=chani \
     --keyring-backend=test
+```
 
+Claim rewards
+
+```bash
+celestia-appd tx distribution withdraw-rewards celesvaloper1pcmran05kpxjw8g9fja2aqk2q8e49hgzmgznxd --commission --yes --from celestia_test --chain-id devnet-2
+```
+
+Send
+
+```bash
+celestia-appd tx bank send celestia_test celes1wgf65895h036lzvz6a925jqgc3ay4rn9c4fs5v 10000000celes  --chain-id devnet-2
 ```
