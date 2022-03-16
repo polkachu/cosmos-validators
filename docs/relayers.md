@@ -41,3 +41,13 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Bitcanna          | 30660      | 30656 | 30657 | 30658 | 30060 | 30317      | 30080       | 30090       | 30091           | 30300           |
 | Comdex            | 31660      | 31656 | 31657 | 31658 | 31060 | 31317      | 31080       | 31090       | 31091           | 31300           |
 | Konstellation     | 33660      | 33656 | 33657 | 33658 | 33060 | 33317      | 33080       | 33090       | 33091           | 33300           |
+
+Tips for setting up a new chain on relayers:
+
+1. Make sure that ports from different relayer hubs are open to each other.
+1. When manually installing binary, make sure to refer to some group_vars doc for github repo, genesis file, seeds, peers and minimum-gas-price
+1. For relayers, make sure that pruning is 40000/0/prime number, and the indexer is kv.
+1. Make sure that RPC port is open to the other relayers. We manage it by opening to all (0.0.0.0) in the config file and let firewall to manage the whitelist IPs (e.g., other relayers)
+1. Make sure to open P2P port and Prometheus port to all
+1. Add the new service as dependency for hermes service
+1. Make sure to set up cosmos exporter for the new service and open the cosmos exporter port
