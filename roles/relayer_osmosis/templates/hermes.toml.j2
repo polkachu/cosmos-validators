@@ -12,6 +12,8 @@
 ## 10. Umee: umee-1
 ## 11. Cerberus: cerberus-chain-1
 
+## add Chihuahua and Cerberus
+
 # The global section has parameters that apply globally to the relayer operation.
 [global]
 log_level = 'info'
@@ -179,6 +181,7 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-7'], # Osmosis
+  ['transfer', 'channel-18'], # Cerberus
 ]
 
 [[chains]]
@@ -383,4 +386,5 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-1'], # Osmosis
+  ['transfer', 'channel-0'], # Chihuahua
 ]
