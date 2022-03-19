@@ -1,4 +1,4 @@
-network: bcna
+network: bitcanna
 folder: '.bcna'
 daemon: bcnad
 chain_id: bitcanna-1
