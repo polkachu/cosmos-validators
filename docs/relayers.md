@@ -61,6 +61,15 @@ snapshot-interval = 1000
 snapshot-keep-recent = 5
 ```
 
+Our app.toml settings related to api server is as follows:
+
+```bash
+[api]
+enabled = false
+swagger = true
+```
+
 | Network   | State Sync                                | RPC                                | API                                |
 | --------- | ----------------------------------------- | ---------------------------------- | ---------------------------------- |
+| Bitcanna  | https://polkachu.com/state_sync/bitcanna  | https://bitcanna-rpc.polkachu.com  | https://bitcanna-api.polkachu.com  |
 | Chihuahua | https://polkachu.com/state_sync/chihuahua | https://chihuahua-rpc.polkachu.com | https://chihuahua-api.polkachu.com |
