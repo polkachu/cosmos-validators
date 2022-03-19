@@ -65,7 +65,7 @@ Our app.toml settings related to api server is as follows:
 
 ```bash
 [api]
-enabled = false
+enabled = true
 swagger = true
 ```
 
@@ -73,3 +73,5 @@ swagger = true
 | --------- | ----------------------------------------- | ---------------------------------- | ---------------------------------- |
 | Bitcanna  | https://polkachu.com/state_sync/bitcanna  | https://bitcanna-rpc.polkachu.com  | https://bitcanna-api.polkachu.com  |
 | Chihuahua | https://polkachu.com/state_sync/chihuahua | https://chihuahua-rpc.polkachu.com | https://chihuahua-api.polkachu.com |
+| Osmosis   | https://polkachu.com/state_sync/osmosis   | https://osmosis-rpc.polkachu.com   | https://osmosis-api.polkachu.com   |
+| Comdex    | https://polkachu.com/state_sync/comdex    | https://comdex-rpc.polkachu.com    | https://comdex-api.polkachu.com    |
