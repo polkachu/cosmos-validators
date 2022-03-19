@@ -51,3 +51,16 @@ Tips for setting up a new chain on relayers:
 1. Make sure to open P2P port and Prometheus port to all
 1. Add the new service as dependency for hermes service
 1. Make sure to set up cosmos exporter for the new service and open the cosmos exporter port
+1. Sometimes the relayer node also serves as state_sync node, PRC and API. This is not the best practice. However, this allows us to utilize underused server resources and make us manage fewer servers
+
+Our app.toml settings related to state-sync is as follows:
+
+```bash
+pruning-keep-every = 1000
+snapshot-interval = 1000
+snapshot-keep-recent = 5
+```
+
+| Network   | State Sync                                | RPC                                | API                                |
+| --------- | ----------------------------------------- | ---------------------------------- | ---------------------------------- |
+| Chihuahua | https://polkachu.com/state_sync/chihuahua | https://chihuahua-rpc.polkachu.com | https://chihuahua-api.polkachu.com |

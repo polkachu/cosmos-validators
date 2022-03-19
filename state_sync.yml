@@ -1,0 +1,6 @@
+---
+- name: Install state sync script
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - state_sync
