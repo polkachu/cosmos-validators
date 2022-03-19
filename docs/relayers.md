@@ -69,11 +69,11 @@ enabled = true
 swagger = true
 ```
 
-| Network       | State Sync                                    | RPC                                    | API                                           |
-| ------------- | --------------------------------------------- | -------------------------------------- | --------------------------------------------- |
-| Akash         | https://polkachu.com/state_sync/akash (?)     | https://akash-rpc.polkachu.com         | https://akash (questionable)-api.polkachu.com |
-| Bitcanna      | https://polkachu.com/state_sync/bitcanna      | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com             |
-| Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com            |
-| Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com               |
-| Osmosis       | https://polkachu.com/state_sync/osmosis       | https://osmosis-rpc.polkachu.com       | https://osmosis-api.polkachu.com              |
-| Konstellation | https://polkachu.com/state_sync/konstellation | https://konstellation-rpc.polkachu.com | https://konstellation-api.polkachu.com        |
+| Network       | State Sync                                    | RPC                                    | API                                    |
+| ------------- | --------------------------------------------- | -------------------------------------- | -------------------------------------- |
+| Akash         | https://polkachu.com/state_sync/akash (?)     | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
+| Bitcanna      | https://polkachu.com/state_sync/bitcanna      | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com      |
+| Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
+| Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
+| Osmosis       | https://polkachu.com/state_sync/osmosis       | https://osmosis-rpc.polkachu.com       | https://osmosis-api.polkachu.com       |
+| Konstellation | https://polkachu.com/state_sync/konstellation | https://konstellation-rpc.polkachu.com | https://konstellation-api.polkachu.com |
