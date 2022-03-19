@@ -56,8 +56,8 @@ Tips for setting up a new chain on relayers:
 Our app.toml settings related to state-sync is as follows:
 
 ```bash
-pruning-keep-every = 1000
-snapshot-interval = 1000
+pruning-keep-every = 2000
+snapshot-interval = 2000
 snapshot-keep-recent = 5
 ```
 
