@@ -3,7 +3,6 @@
 create validator
 
 ```bash
-
 knstld tx staking create-validator \
     --amount 1000000udarc \
     --pubkey $(knstld tendermint show-validator) \
@@ -19,4 +18,15 @@ knstld tx staking create-validator \
     --chain-id darchub \
     --from=konstellation_test \
     --fees=2udarc
+```
+
+Edit validator
+
+```bash
+knstld tx staking edit-validator \
+    --moniker=" polkachu.com" \
+    --commission-rate 0.01 \
+    --chain-id darchub \
+    --fees=20udarc \
+    --from=polkachu_test
 ```

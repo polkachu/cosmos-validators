@@ -11,7 +11,7 @@
 | Bitcanna  | Yes     | Default | Self                     | Yes              | Minio1: 3:00    |
 | Evmos     | Yes     | Default | Self (11am after epoch)  | Yes              | Minio2: 3:00    |
 | Comdex    | Yes     | Default | Self                     | Yes              | Minio1: 4:00    |
-| Umee      | No      | Default | Other                    | Yes (main node)  | Minio2: 4:00    |
+| Umee      | No      | Default | Other                    | Yes              | Minio2: 4:00    |
 | KiChain   | Yes     | Default | Self                     | Yes              | Minio1: 5:00    |
 | Stargaze  | No      | Default | Other                    | Yes (main node)  | Minio2: 5:00    |
 | Cerberus  | Yes     | Default | Self                     | Yes              | Minio1: 6:00    |

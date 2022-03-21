@@ -1,4 +1,4 @@
-network: sifnoded
+network: sifchain
 folder: '.sifnoded'
 daemon: sifnoded
 chain_id: sifchain-1

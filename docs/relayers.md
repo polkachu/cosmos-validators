@@ -69,17 +69,17 @@ enabled = true
 swagger = true
 ```
 
-| Network       | State Sync                                | RPC                                    | API                                    |
-| ------------- | ----------------------------------------- | -------------------------------------- | -------------------------------------- |
-| Akash         | Not tested                                | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
-| Bitcanna      | https://polkachu.com/state_sync/bitcanna  | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com      |
-| Chihuahua     | https://polkachu.com/state_sync/chihuahua | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
-| Comdex        | https://polkachu.com/state_sync/comdex    | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
-| Osmosis       | https://polkachu.com/state_sync/osmosis   | https://osmosis-rpc.polkachu.com       | https://osmosis-api.polkachu.com       |
-| Konstellation | ?                                         | https://konstellation-rpc.polkachu.com | https://konstellation-api.polkachu.com |
-| Juno          | Will not work due to wasm folder          | https://juno-rpc.polkachu.com          | https://juno-api.polkachu.com          |
-| Sifchain      | ?                                         | https://sifchain-rpc.polkachu.com      | https://sifchain-api.polkachu.com      |
-| Kichain       | ?                                         | https://kichain-rpc.polkachu.com       | https://kichain-api.polkachu.com       |
-| Umee          | ?                                         | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
-| Stargaze      | ?                                         | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
-| Cerberus      | ?                                         | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
+| Network       | State Sync                                    | RPC                                    | API                                    |
+| ------------- | --------------------------------------------- | -------------------------------------- | -------------------------------------- |
+| Akash         | Does not work,. Known bug.                    | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
+| Bitcanna      | https://polkachu.com/state_sync/bitcanna      | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com      |
+| Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
+| Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
+| Osmosis       | https://polkachu.com/state_sync/osmosis       | https://osmosis-rpc.polkachu.com       | https://osmosis-api.polkachu.com       |
+| Konstellation | https://polkachu.com/state_sync/konstellation | https://konstellation-rpc.polkachu.com | https://konstellation-api.polkachu.com |
+| Juno          | Does not work due to wasm folder              | https://juno-rpc.polkachu.com          | https://juno-api.polkachu.com          |
+| Sifchain      | https://polkachu.com/state_sync/sifchain      | https://sifchain-rpc.polkachu.com      | https://sifchain-api.polkachu.com      |
+| Kichain       | https://polkachu.com/state_sync/kichain       | https://kichain-rpc.polkachu.com       | https://kichain-api.polkachu.com       |
+| Umee          | https://polkachu.com/state_sync/umee          | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
+| Stargaze      | Does not work due to wasm folder              | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
+| Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
