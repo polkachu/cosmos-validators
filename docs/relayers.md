@@ -62,7 +62,7 @@ snapshot-interval = 2000
 snapshot-keep-recent = 5
 ```
 
-Our app.toml settings related to api server is as follows:
+Our app.toml settings related to api server is as follows (does not work on Kava):
 
 ```bash
 [api]
@@ -84,3 +84,4 @@ swagger = true
 | Umee          | https://polkachu.com/state_sync/umee          | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
 | Stargaze      | Does not work due to wasm folder              | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
+| Kava          | https://polkachu.com/state_sync/kava (?)      | https://kava-rpc.polkachu.com          | Not working                            |
