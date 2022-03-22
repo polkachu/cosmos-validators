@@ -31,6 +31,7 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Stargaze       | 37660      | 37656 | 37657 | 37658 | 37060 | 37317      | 37080       | 37090       | 37091           | 37300           |
 | Cerberus       | 38660      | 38656 | 38657 | 38658 | 38060 | 38317      | 38080       | 38090       | 38091           | 38300           |
 | Kava           | 39660      | 39656 | 39657 | 39658 | 39060 | 39317      | 39080       | 39090       | 39091           | 39300           |
+| Certik         | 40660      | 40656 | 40657 | 40658 | 40060 | 40317      | 40080       | 40090       | 40091           | 40300           |
 
 ### Osmosis Relayer
 
@@ -72,7 +73,7 @@ swagger = true
 
 | Network       | State Sync                                    | RPC                                    | API                                    |
 | ------------- | --------------------------------------------- | -------------------------------------- | -------------------------------------- |
-| Akash         | Does not work,. Known bug.                    | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
+| Akash         | Does not work. Known bug.                     | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
 | Bitcanna      | https://polkachu.com/state_sync/bitcanna      | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com      |
 | Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
 | Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
@@ -84,4 +85,5 @@ swagger = true
 | Umee          | https://polkachu.com/state_sync/umee          | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
 | Stargaze      | Does not work due to wasm folder              | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
-| Kava          | https://polkachu.com/state_sync/kava (?)      | https://kava-rpc.polkachu.com          | Not working                            |
+| Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |
+| Certik        | https://polkachu.com/state_sync/certik (?)    | https://certik-rpc.polkachu.com (?)    | https://certik-api.polkachu.com        |
