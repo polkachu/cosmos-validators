@@ -87,5 +87,5 @@ swagger = true
 | Stargaze      | Does not work due to wasm folder              | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
 | Certik        | https://polkachu.com/state_sync/certik        | https://certik-rpc.polkachu.com        | https://certik-api.polkachu.com        |
-| Sommelier     | https://polkachu.com/state_sync/sommelier ?   | https://sommelier-rpc.polkachu.com     | https://sommelier-api.polkachu.com     |
+| Sommelier     | https://polkachu.com/state_sync/sommelier     | https://sommelier-rpc.polkachu.com     | https://sommelier-api.polkachu.com     |
 | Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |

@@ -17,7 +17,7 @@
 | Cerberus      | Yes     | Self                | Yes              | Minio1: 6:00         | Yes        | Yes | Yes        | Yes           |
 | Certik        | No      | Self                | Yes              | Minio2: 6:00         | Yes        | Yes | Yes        | Yes           |
 | Konstellation | Yes     | Manual              | Yes              | Minio1: 7:00         | Yes        | Yes | Yes        | Yes           |
-| Sommelier     | Yes     | No inflation        |                  |                      |            |     |            |               |
+| Sommelier     | Yes     | No inflation        |                  | Minio2: 7:00         |            |     |            |               |
 | Nomic         | Yes     | Manual              |                  |                      |            |     |            |               |
 
 Snapshot service is available at https://polkachu.com/tendermint_snapshots
