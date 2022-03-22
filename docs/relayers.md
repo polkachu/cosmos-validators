@@ -85,5 +85,5 @@ swagger = true
 | Umee          | https://polkachu.com/state_sync/umee          | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
 | Stargaze      | Does not work due to wasm folder              | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
+| Certik        | https://polkachu.com/state_sync/certik        | https://certik-rpc.polkachu.com        | https://certik-api.polkachu.com        |
 | Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |
-| Certik        | https://polkachu.com/state_sync/certik (?)    | https://certik-rpc.polkachu.com (?)    | https://certik-api.polkachu.com        |
