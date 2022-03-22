@@ -19,3 +19,15 @@ sommelier tx staking create-validator \
   --fees="0usomm" \
   --from=polkachu
 ```
+
+Edit validator
+
+```bash
+sommelier tx staking edit-validator \
+  --commission-rate="0.07" \
+  --moniker="polkachu.com" \
+  --gas=300000 \
+  --fees="0usomm" \
+  --chain-id="sommelier-3" \
+  --from=polkachu
+```

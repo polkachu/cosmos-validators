@@ -32,6 +32,7 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Cerberus       | 38660      | 38656 | 38657 | 38658 | 38060 | 38317      | 38080       | 38090       | 38091           | 38300           |
 | Kava           | 39660      | 39656 | 39657 | 39658 | 39060 | 39317      | 39080       | 39090       | 39091           | 39300           |
 | Certik         | 40660      | 40656 | 40657 | 40658 | 40060 | 40317      | 40080       | 40090       | 40091           | 40300           |
+| Sommelier      | 41660      | 41656 | 41657 | 41658 | 41060 | 41317      | 41080       | 41090       | 41091           | 41300           |
 
 ### Osmosis Relayer
 
@@ -86,4 +87,5 @@ swagger = true
 | Stargaze      | Does not work due to wasm folder              | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
 | Certik        | https://polkachu.com/state_sync/certik        | https://certik-rpc.polkachu.com        | https://certik-api.polkachu.com        |
+| Sommelier     | https://polkachu.com/state_sync/sommelier ?   | https://sommelier-rpc.polkachu.com     | https://sommelier-api.polkachu.com     |
 | Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |
