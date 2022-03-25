@@ -147,7 +147,7 @@ You can run the script on the node with the following:
 Alternatively, you can add a cronjob. For example, this following cronjob will run the snapshot script at the midnight
 
 ```bash
-0 0 * * * /bin/bash /home/<USER>/auto_compound.sh
+0 0 * * * /bin/bash /home/<USER>/snapshot.sh
 ```
 
 ## Relayers
