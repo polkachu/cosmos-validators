@@ -32,3 +32,9 @@ State-Sync service is available at https://polkachu.com/state_sync
 | Gravity   | Default       | Sommelier Orchestrator  | Default                   |
 | Sommelier | Default       | Sommelier Orchestrator  | Default                   |
 | Umee      | Default       | Umee Orchestrator / Bot | Default                   |
+
+## Other exception
+
+| Network       | Validator key | Reason                            |
+| ------------- | ------------- | --------------------------------- |
+| Konstellation | Test key      | Mistake when setting up validator |
