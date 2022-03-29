@@ -21,6 +21,14 @@ gravity tx staking create-validator \
  --gas-adjustment=1.4
 ```
 
+Delegate gravity
+
+```bash
+gravity tx staking delegate gravityvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pskxg9g 1000000ugraviton \
+ --chain-id=gravity-bridge-3 \
+ --from polkachu
+```
+
 Configure gravity
 
 ```bash

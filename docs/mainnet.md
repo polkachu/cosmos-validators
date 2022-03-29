@@ -24,3 +24,11 @@
 Snapshot service is available at https://polkachu.com/tendermint_snapshots
 
 State-Sync service is available at https://polkachu.com/state_sync
+
+## Eth bridging
+
+| Network   | Validator key | Cosmos Orchestrator Key | Ethereum Orchestrator Key |
+| --------- | ------------- | ----------------------- | ------------------------- |
+| Gravity   | Default       | Sommelier Orchestrator  | Default                   |
+| Sommelier | Default       | Sommelier Orchestrator  | Default                   |
+| Umee      | Default       | Umee Orchestrator / Bot | Default                   |
