@@ -1,0 +1,4 @@
+network: injective
+folder: '.injectived'
+daemon: injectived
+chain_id: injective-1
