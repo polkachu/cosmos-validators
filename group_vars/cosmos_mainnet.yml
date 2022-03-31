@@ -1,0 +1,9 @@
+network: cosmos
+folder: '.gaia'
+daemon: gaiad
+chain_id: cosmoshub-4
+node_version: v6.0.4
+repo: 'https://github.com/cosmos/gaia'
+genesis: 'https://github.com/cosmos/mainnet/raw/master/genesis.cosmoshub-4.json.gz'
+minimum_gas_price: '0.0025uatom'
+addrbook: 'https://quicksync.io/addrbook.cosmos.json'

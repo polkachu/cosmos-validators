@@ -19,7 +19,8 @@
 | Konstellation | Yes     | Manual              | Yes              | Minio1: 7:00         | Yes        | Yes | Yes        | Yes           |
 | Sommelier     | Yes     | No inflation        | Yes              | Minio2: 7:00         | Yes        | Yes | Yes        | Yes           |
 | Gravity       |         |                     | Yes              | Minio1: 8:00         |            | Yes | Yes        | Yes           |
-| Injective     | TBD     |                     | Yes              | Minio2: 8:00         |            | Yes | Yes        | Yes           |
+| Injective     |         |                     | Yes              | Minio2: 8:00         |            | Yes | Yes        | Yes           |
+| Cosmos        |         |                     | Yes              | Minio1: 9:00         |            | Yes | Yes        | Yes           |
 | Nomic         | Yes     | Manual              |                  |                      |            |     |            |               |
 
 Snapshot service is available at https://polkachu.com/tendermint_snapshots
