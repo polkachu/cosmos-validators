@@ -31,8 +31,9 @@ State-Sync service is available at https://polkachu.com/state_sync
 
 | Network   | Validator key | Cosmos Orchestrator Key | Ethereum Orchestrator Key |
 | --------- | ------------- | ----------------------- | ------------------------- |
-| Gravity   | Default       | Sommelier Orchestrator  | Default                   |
-| Sommelier | Default       | Sommelier Orchestrator  | Default                   |
+| Gravity   | Default       | Default Orchestrator    | Default                   |
+| Sommelier | Default       | Default Orchestrator    | Default                   |
+| Injective | Default       | Default Orchestrator    | Default                   |
 | Umee      | Default       | Umee Orchestrator / Bot | Default                   |
 
 ## Other exception
