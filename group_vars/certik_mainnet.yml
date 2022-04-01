@@ -2,7 +2,7 @@ network: certik
 folder: '.certik'
 daemon: certik
 chain_id: shentu-2.2
-node_version: v2.2.0
+node_version: v2.3.1
 repo: https://github.com/ShentuChain/shentu.git
 genesis: 'https://raw.githubusercontent.com/certikfoundation/mainnet/main/shentu-2.2/genesis.json'
 seeds: 'b3192e1ab0cbb9f439b15c82605379018d96b4f2@3.209.12.186:26656,23419a3d9deedabce1a3cbfa0d1a3e55ef2364a7@34.229.203.57:26656'
