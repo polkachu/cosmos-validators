@@ -13,13 +13,13 @@
 | Comdex        | Yes     | Self                | Yes              | Minio1: 4:00         | Yes        | Yes | Yes        | Yes           | Yes     |
 | Umee          | No      | Other               | Yes              | Minio2: 4:00         | No need    | Yes | Yes        | Yes           |         |
 | KiChain       | Yes     | Self                | Yes              | Minio1: 5:00         | Yes        | Yes | Yes        | Yes           | Yes     |
-| Stargaze      | No      | Other               | Yes              | Minio2: 5:00         | No need    | Yes | Yes        | Yes           |         |
+| Stargaze      | Yes     | Self                | Yes              | Minio2: 5:00         | Yes        | Yes | Yes        | Yes           |         |
 | Cerberus      | Yes     | Self                | Yes              | Minio1: 6:00         | Yes        | Yes | Yes        | Yes           | Yes (x) |
 | Certik        | Yes     | Self                | Yes              | Minio2: 6:00         | Yes        | Yes | Yes        | Yes           |         |
-| Konstellation | Yes     | Manual              | Yes              | Minio1: 7:00         | Yes        | Yes | Yes        | Yes           | Yes     |
+| Konstellation | Yes     | Self                | Yes              | Minio1: 7:00         | Yes        | Yes | Yes        | Yes           | Yes     |
 | Sommelier     | Yes     | No inflation        | Yes              | Minio2: 7:00         | Yes        | Yes | Yes        | Yes           |         |
-| Gravity       | Yes     | Not Yet             | Yes              | Minio1: 8:00         | Yes        | Yes | Yes        | Yes           | Yes (x) |
-| Injective     |         |                     | Yes              | Minio2: 8:00         |            | Yes | Yes        | Yes           |         |
+| Gravity       | Yes     | Self                | Yes              | Minio1: 8:00         | Yes        | Yes | Yes        | Yes           | Yes (x) |
+| Injective     | Yes     |                     | Yes              | Minio2: 8:00         | Yes        | Yes | Yes        | Yes           |         |
 | Cosmos        |         |                     | Yes              | Minio1: 9:00         |            | Yes | Yes        | Yes           |         |
 | Nomic         | Yes     | Manual              |                  |                      |            |     |            |               |         |
 
