@@ -11,7 +11,7 @@
 | Bitcanna      | Yes     | Self                | Yes              | Minio1: 1:30         | Yes        | Yes | Yes        | Yes           | Yes     |
 | Evmos         | Yes     |                     |                  |                      |            |     |            |               | Yes     |
 | Comdex        | Yes     | Self                | Yes              | Minio1: 2:00         | Yes        | Yes | Yes        | Yes           | Yes     |
-| Umee          | No      | Other               | Yes              | Minio2: 2:00         | Yes        | Yes | Yes        | Yes           |         |
+| Umee          | No      | Self                | Yes              | Minio2: 2:00         | Yes        | Yes | Yes        | Yes           | Yes (x) |
 | KiChain       | Yes     | Self                | Yes              | Minio1: 2:30         | Yes        | Yes | Yes        | Yes           | Yes     |
 | Stargaze      | Yes     | Self                | Yes              | Minio2: 2:30         | Yes        | Yes | Yes        | Yes           | Yes (x) |
 | Cerberus      | Yes     | Self                | Yes              | Minio1: 3:00         | Yes        | Yes | Yes        | Yes           | Yes (x) |
