@@ -95,3 +95,4 @@ swagger = true
 | Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |
 | Cosmos        | https://polkachu.com/state_sync/cosmos        | https://cosmos-rpc.polkachu.com        | Not working                            |
 | Injective     | https://polkachu.com/state_sync/injective     | https://injective-rpc.polkachu.com     | Not working                            |
+| Agoric        | https://polkachu.com/state_sync/agoric        | https://agoric-rpc.polkachu.com        | https://agoric-api.polkachu.com        |
