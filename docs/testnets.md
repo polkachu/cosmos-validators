@@ -34,6 +34,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Cerberus       | 40656   | 40657   | 40658   | 40060   | 40660      | 40317      | 40080       | 40099       | 40098           |
 | Kichain        | 41656   | 41657   | 41658   | 41060   | 41660      | 41317      | 41080       | 41099       | 41098           |
 | Chihuahua      | 42656   | 42657   | 42658   | 42060   | 42660      | 42317      | 42080       | 42099       | 42098           |
+| Agoric         | 43656   | 43657   | 43658   | 43060   | 43660      | 43317      | 43080       | 43099       | 43098           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
