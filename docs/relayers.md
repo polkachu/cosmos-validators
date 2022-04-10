@@ -77,22 +77,23 @@ swagger = true
 
 | Network       | State Sync                                    | RPC                                    | API                                    |
 | ------------- | --------------------------------------------- | -------------------------------------- | -------------------------------------- |
+| Agoric        | https://polkachu.com/state_sync/agoric        | https://agoric-rpc.polkachu.com        | https://agoric-api.polkachu.com        |
 | Akash         | Does not work. Known bug.                     | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
 | Bitcanna      | https://polkachu.com/state_sync/bitcanna      | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com      |
-| Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
-| Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
-| Osmosis       | https://polkachu.com/state_sync/osmosis       | https://osmosis-rpc.polkachu.com       | https://osmosis-api.polkachu.com       |
-| Konstellation | https://polkachu.com/state_sync/konstellation | https://konstellation-rpc.polkachu.com | https://konstellation-api.polkachu.com |
-| Juno          | https://polkachu.com/state_sync/juno          | https://juno-rpc.polkachu.com          | https://juno-api.polkachu.com          |
-| Sifchain      | https://polkachu.com/state_sync/sifchain      | https://sifchain-rpc.polkachu.com      | https://sifchain-api.polkachu.com      |
-| Kichain       | https://polkachu.com/state_sync/kichain       | https://kichain-rpc.polkachu.com       | https://kichain-api.polkachu.com       |
-| Umee          | https://polkachu.com/state_sync/umee          | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
-| Stargaze      | https://polkachu.com/state_sync/stargaze      | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
 | Certik        | https://polkachu.com/state_sync/certik        | https://certik-rpc.polkachu.com        | https://certik-api.polkachu.com        |
-| Sommelier     | https://polkachu.com/state_sync/sommelier     | https://sommelier-rpc.polkachu.com     | https://sommelier-api.polkachu.com     |
-| Gravity       | https://polkachu.com/state_sync/gravity       | https://gravity-rpc.polkachu.com       | https://gravity-api.polkachu.com       |
-| Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |
+| Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
+| Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
 | Cosmos        | https://polkachu.com/state_sync/cosmos        | https://cosmos-rpc.polkachu.com        | Not working                            |
+| Evmos         |                                               |                                        |                                        |
+| Gravity       | https://polkachu.com/state_sync/gravity       | https://gravity-rpc.polkachu.com       | https://gravity-api.polkachu.com       |
 | Injective     | https://polkachu.com/state_sync/injective     | https://injective-rpc.polkachu.com     | Not working                            |
-| Agoric        | https://polkachu.com/state_sync/agoric        | https://agoric-rpc.polkachu.com        | https://agoric-api.polkachu.com        |
+| Juno          | https://polkachu.com/state_sync/juno          | https://juno-rpc.polkachu.com          | https://juno-api.polkachu.com          |
+| Kava          | https://polkachu.com/state_sync/kava          | https://kava-rpc.polkachu.com          | Not working                            |
+| Kichain       | https://polkachu.com/state_sync/kichain       | https://kichain-rpc.polkachu.com       | https://kichain-api.polkachu.com       |
+| Konstellation | https://polkachu.com/state_sync/konstellation | https://konstellation-rpc.polkachu.com | https://konstellation-api.polkachu.com |
+| Osmosis       | https://polkachu.com/state_sync/osmosis       | https://osmosis-rpc.polkachu.com       | https://osmosis-api.polkachu.com       |
+| Sifchain      | https://polkachu.com/state_sync/sifchain      | https://sifchain-rpc.polkachu.com      | https://sifchain-api.polkachu.com      |
+| Stargaze      | https://polkachu.com/state_sync/stargaze      | https://stargaze-rpc.polkachu.com      | https://stargaze-api.polkachu.com      |
+| Sommelier     | https://polkachu.com/state_sync/sommelier     | https://sommelier-rpc.polkachu.com     | https://sommelier-api.polkachu.com     |
+| Umee          | https://polkachu.com/state_sync/umee          | https://umee-rpc.polkachu.com          | https://umee-api.polkachu.com          |
