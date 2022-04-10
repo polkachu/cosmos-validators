@@ -21,3 +21,14 @@ gaiad tx staking create-validator \
     --gas-adjustment 1.5 \
     --from=polkachu
 ```
+
+```bash
+gaiad tx staking edit-validator cosmosvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pqeemx8 \
+    --commission-rate=0.04 \
+    --moniker ' polkachu.com' \
+    --chain-id=cosmoshub-4 \
+    --gas="auto" \
+    --gas-prices="0.0025uatom" \
+    --gas-adjustment 1.5 \
+    --from=polkachu
+```
