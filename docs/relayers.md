@@ -86,6 +86,7 @@ swagger = true
 | Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
 | Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
 | Cosmos        | https://polkachu.com/state_sync/cosmos        | https://cosmos-rpc.polkachu.com        | Not working                            |
+| Crescent      | https://polkachu.com/state_sync/crescent      | https://crescent-rpc.polkachu.com      | https://crescent-api.polkachu.com      |
 | Evmos         |                                               |                                        |                                        |
 | Gravity       | https://polkachu.com/state_sync/gravity       | https://gravity-rpc.polkachu.com       | https://gravity-api.polkachu.com       |
 | Injective     | https://polkachu.com/state_sync/injective     | https://injective-rpc.polkachu.com     | Not working                            |
