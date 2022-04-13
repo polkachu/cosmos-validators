@@ -47,6 +47,7 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Comdex            | 31660      | 31656 | 31657 | 31658 | 31060 | 31317      | 31080       | 31090       | 31091           | 31300           |
 | Konstellation     | 33660      | 33656 | 33657 | 33658 | 33060 | 33317      | 33080       | 33090       | 33091           | 33300           |
 | Agoric            | 44660      | 44656 | 44657 | 44658 | 44060 | 44317      | 44080       | 44090       | 44091           | 44300           |
+| Crescent          | 45660      | 45656 | 45657 | 45658 | 45060 | 45317      | 45080       | 45090       | 45091           | 45300           |
 
 Tips for setting up a new chain on relayers:
 
