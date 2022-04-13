@@ -22,7 +22,7 @@
 | Injective     | Yes     |                     | Yes      | Minio2: 4:00    | Yes        | Yes | Yes        | Yes           |         | No   |
 | Cosmos        | No      |                     | Yes      | Minio1: 4:30    |            | Yes | Yes        | Yes           |         | Yes  |
 | Agoric        | No      |                     | Yes      | Minio2: 4:30    |            |     |            |               |         | N/A  |
-| Crescent      | No      |                     | Yes      | Minio1: 5:00    |            |     |            |               |         | N/A  |
+| Crescent      | No      | Not yet             | Yes      | TBD             | Yes        | Yes | Yes        | TBD           |         | Yes  |
 | Nomic         | Yes     | Manual              |          |                 |            |     |            |               |         | N/A  |
 
 Snapshot service is available at https://polkachu.com/tendermint_snapshots
