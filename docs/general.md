@@ -48,6 +48,12 @@ Get a list of all validators sorted by their voting powers
 BINARY query staking validators --limit 1000 -o json | jq -r '.validators[] | select(.status=="BOND_STATUS_BONDED") | [ (.tokens|tonumber / pow(10; 6)), .description.moniker ] | @csv' | column -t -s"," | sort -k1 -n -r | nl
 ```
 
+Get a list of all validators sorted by their voting powers (another way)
+
+```bash
+BINARY --node https://rpc.sifchain.finance:443 query staking validators --limit 1000 -o json | jq -r '.validators[] | [.operator_address, .status, (.tokens|tonumber / pow(10; 6)), .description.moniker] | @csv' | column -t -s"," | sort -k3 -n -r | nl
+```
+
 Check logs and cosmovisor status
 
 ```bash
