@@ -1,4 +1,4 @@
-# Sifchain v0.12.1 Upgrade
+# Sifchain v0.13.0 Upgrade
 
 The Upgrade is scheduled for block `6485500`. A countdown clock is [here](https://www.mintscan.io/sifchain/blocks/6485500)
 
