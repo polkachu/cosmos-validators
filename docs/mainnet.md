@@ -20,7 +20,7 @@
 | Sommelier     | Yes     | No inflation        | Yes      | Minio2: 3:30    | Yes        | Yes | Yes        | Yes           | Yes       | Yes  |
 | Gravity       | Yes     | Self                | Yes      | Minio1: 4:00    | Yes        | Yes | Yes        | Yes           | Yes (x)   | Yes  |
 | Injective     | Yes     |                     | Yes      | Minio2: 4:00    | Yes        | Yes | Yes        | Yes           |           | No   |
-| Cosmos        | No      |                     | Yes      | Minio1: 4:30    |            | Yes | Yes        | Yes           |           | Yes  |
+| Cosmos        | Yes     |                     | Yes      | Minio1: 4:30    | Yes        | Yes | Yes        | Yes           | Yes (x)   | Yes  |
 | Agoric        | No      |                     | Yes      | Minio2: 4:30    |            |     |            |               |           | N/A  |
 | Crescent      | No      | Not yet             | Yes      | TBD             | Yes        | Yes | Yes        | TBD           |           | Yes  |
 | Nomic         | Yes     | Manual              |          |                 |            |     |            |               |           | N/A  |
