@@ -85,7 +85,7 @@ swagger = true
 | Certik        | https://polkachu.com/state_sync/certik        | https://certik-rpc.polkachu.com        | https://certik-api.polkachu.com        |
 | Chihuahua     | https://polkachu.com/state_sync/chihuahua     | https://chihuahua-rpc.polkachu.com     | https://chihuahua-api.polkachu.com     |
 | Comdex        | https://polkachu.com/state_sync/comdex        | https://comdex-rpc.polkachu.com        | https://comdex-api.polkachu.com        |
-| Cosmos        | https://polkachu.com/state_sync/cosmos        | https://cosmos-rpc.polkachu.com        | Not working                            |
+| Cosmos        | https://polkachu.com/state_sync/cosmos        | https://cosmos-rpc.polkachu.com        | https://cosmos-api.polkachu.com        |
 | Crescent      | https://polkachu.com/state_sync/crescent      | https://crescent-rpc.polkachu.com      | https://crescent-api.polkachu.com      |
 | Evmos         |                                               |                                        |                                        |
 | Gravity       | https://polkachu.com/state_sync/gravity       | https://gravity-rpc.polkachu.com       | https://gravity-api.polkachu.com       |
