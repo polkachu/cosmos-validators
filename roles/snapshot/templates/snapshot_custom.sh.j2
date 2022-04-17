@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # This is for crontab
-# 0 0 * * * /bin/bash {{ user_dir }}/snapshot.sh
+# 0 0 * * * /bin/bash {{ user_dir }}/snapshot_{{ network }}.sh
 
 # Make sure the service is running
-sudo service cosmovisor start
+sudo service {{ network }} start
 sleep 5
 
 # Get block height
-BLOCK_HEIGHT=$(curl -s http://localhost:26657/status | jq -r .result.sync_info.latest_block_height)
+BLOCK_HEIGHT=$(curl -s http://localhost:{{ custom_port_prefix }}657/status | jq -r .result.sync_info.latest_block_height)
 
 # Stop service
-sudo service cosmovisor stop
+sudo service {{ network }} stop
 
 # Compress the folder
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
@@ -19,7 +19,7 @@ cd {{ user_dir }}/{{ folder }}
 tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
 
 # Restart the service
-sudo service cosmovisor start
+sudo service {{ network }} start
 
 # Transfer the file and then remove the file
 cd {{ user_dir }}/

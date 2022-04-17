@@ -1,4 +1,87 @@
 ---
+- name: register public ip
+  uri:
+    url: 'https://api.ipify.org?format=json'
+  register: public_ip
+
+- name: Set up external address
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = "'
+    line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}656"'
+    state: present
+  when: custom_port_prefix is defined
+
+- name: Set up external address
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = "'
+    line: 'external_address = "{{ public_ip.json.ip }}:26656"'
+    state: present
+  when: custom_port_prefix is not defined
+
+- name: Adjust config.toml port when needed
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '{{ item.old }}'
+    line: '{{ item.new }}'
+  loop:
+    - {
+        old: 'laddr = "tcp://0.0.0.0:26656"',
+        new: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}656"',
+      }
+    - {
+        old: 'laddr = "tcp://127.0.0.1:26657"',
+        new: 'laddr = "tcp://127.0.0.1:{{ custom_port_prefix }}657"',
+      }
+    - {
+        old: 'proxy_app = "tcp://127.0.0.1:26658"',
+        new: 'proxy_app = "tcp://127.0.0.1:{{ custom_port_prefix }}658"',
+      }
+    - {
+        old: 'prometheus_listen_addr = ":26660"',
+        new: 'prometheus_listen_addr = ":{{ custom_port_prefix }}660"',
+      }
+    - {
+        old: 'pprof_laddr = "localhost:6060"',
+        new: 'pprof_laddr = "localhost:{{ custom_port_prefix }}060"',
+      }
+  when: custom_port_prefix is defined
+
+- name: Adjust app.toml ports when needed
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.old }}'
+    line: '{{ item.new }}'
+  loop:
+    - {
+        old: 'address = "tcp://0.0.0.0:1317"',
+        new: 'address = "tcp://0.0.0.0:{{ custom_port_prefix }}317"',
+      }
+    - {
+        old: 'address = ":8080"',
+        new: 'address = ":{{ custom_port_prefix }}080"',
+      }
+    - {
+        old: 'address = "0.0.0.0:9090"',
+        new: 'address = "0.0.0.0:{{ custom_port_prefix }}090"',
+      }
+    - {
+        old: 'address = "0.0.0.0:9091"',
+        new: 'address = "0.0.0.0:{{ custom_port_prefix }}091"',
+      }
+  when: custom_port_prefix is defined
+
+- name: open prometheus port
+  become: true
+  command: 'ufw allow {{ custom_port_prefix }}660/tcp'
+  when: custom_port_prefix is defined
+
+- name: open prometheus port
+  become: true
+  command: 'ufw allow {{ custom_port_prefix }}656/tcp'
+  when: custom_port_prefix is defined
+
 - name: Adjust pruning setting
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
@@ -20,18 +103,6 @@
   loop:
     - { old: 'indexer = "', new: 'indexer = "null"' }
   when: (no_indexer is defined) and (no_indexer|bool is true)
-
-- name: register public ip
-  uri:
-    url: 'https://api.ipify.org?format=json'
-  register: public_ip
-
-- name: Set up external address
-  lineinfile:
-    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
-    regexp: 'external_address = "'
-    line: 'external_address = "{{ public_ip.json.ip }}:26656"'
-    state: present
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
@@ -56,6 +127,16 @@
     remote_src: true
     mode: '0755'
 
+- name: copy cosmovisor service file
+  become: true
+  template:
+    src: 'cosmovisor.service.j2'
+    dest: '/etc/systemd/system/{{ network }}.service'
+    owner: root
+    group: root
+    mode: '0600'
+  when: custom_port_prefix is defined
+
 - name: start cosmovisor service
   become: true
   systemd:
@@ -63,4 +144,13 @@
     state: restarted
     daemon_reload: yes
     enabled: yes
-  changed_when: false
+  when: custom_port_prefix is not defined
+
+- name: start cosmovisor service
+  become: true
+  systemd:
+    name: '{{ network }}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  when: custom_port_prefix is defined

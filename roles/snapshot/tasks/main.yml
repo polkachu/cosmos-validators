@@ -28,3 +28,13 @@
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0700'
+  when: custom_port_prefix is not defined
+
+- name: Copy snapshot script
+  template:
+    src: 'snapshot_custom.sh.j2'
+    dest: '{{ user_dir }}/snapshot_{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'
+  when: custom_port_prefix is defined

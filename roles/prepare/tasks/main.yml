@@ -1,4 +1,7 @@
 ---
+- meta: end_play
+  when: (prepare is defined) and (prepare|bool is false)
+
 - name: Update and upgrade the machine
   apt:
     upgrade: dist

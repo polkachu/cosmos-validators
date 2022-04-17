@@ -2,7 +2,7 @@
 - name: Copy state_sync file
   template:
     src: 'state_sync.sh.j2'
-    dest: '{{ user_dir }}/state_sync.sh'
+    dest: '{{ user_dir }}/state_sync_{{ network }}.sh'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0700'
