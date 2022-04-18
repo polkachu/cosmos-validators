@@ -1,0 +1,9 @@
+network: assetmantle
+folder: '.mantleNode'
+daemon: mantleNode
+chain_id: 'mantle-1'
+node_version: 'v0.3.0'
+repo: 'https://github.com/AssetMantle/node'
+genesis: 'https://raw.githubusercontent.com/AssetMantle/genesisTransactions/main/mantle-1/final_genesis.json'
+peers: '38f4504f74a9fd70f158270751c31a4d146f987c@65.21.226.249:26616,201aa01ed819a3544c77b8e12343c832a20f8136@49.12.189.127:26656,d0dc9234db7b9e5bb853afbd96055c46990aa55f@65.21.131.144:29656,7eeb595f1205c2c7230b3812badb1844185b3727@65.108.99.224:46656'
+minimum_gas_price: '0umntl'

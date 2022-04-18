@@ -1,0 +1,25 @@
+---
+- name: Initialize Node
+  command: '{{ daemon }} init {{ validator_name }} --chain-id {{ chain_id }} -o'
+  environment:
+    PATH: '{{ path }}'
+
+- name: Download genesis file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
+    mode: '0644'
+
+- name: Update minimum gas price on config file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: 'minimum-gas-prices '
+    line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
+    state: present
+
+- name: Update the config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'persistent_peers = ""'
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
