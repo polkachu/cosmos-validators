@@ -7,7 +7,7 @@ mantleNode tx staking create-validator \
     --amount=6000000000umntl \
     --pubkey=$(mantleNode tendermint show-validator) \
     --website "https://polkachu.com" \
-    --moniker='  polkachu.com' \
+    --moniker='polkachu.com' \
     --identity "0A6AF02D1557E5B4" \
     --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
     --chain-id='mantle-1' \
