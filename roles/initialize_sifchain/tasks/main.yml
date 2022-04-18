@@ -13,7 +13,7 @@
 
 - name: Update the config.toml file
   lineinfile:
-    path: '{{ user_dir }}/.{{ network }}/config/config.toml'
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'persistent_peers = ""'
     line: 'persistent_peers = "{{ peers }}"'
     state: present
