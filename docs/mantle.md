@@ -17,3 +17,10 @@ mantleNode tx staking create-validator \
     --min-self-delegation=1 \
     --from=polkachu
 ```
+
+Delegate
+
+```bash
+mantleNode tx staking delegate mantlevaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pmkjlwt 500000000umntl \
+ --from polkachu
+```
