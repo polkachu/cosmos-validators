@@ -49,6 +49,7 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Konstellation     | 33660      | 33656 | 33657 | 33658 | 33060 | 33317      | 33080       | 33090       | 33091           | 33300           |
 | Agoric            | 44660      | 44656 | 44657 | 44658 | 44060 | 44317      | 44080       | 44090       | 44091           | 44300           |
 | Crescent          | 45660      | 45656 | 45657 | 45658 | 45060 | 45317      | 45080       | 45090       | 45091           | 45300           |
+| Asset Mantle      | 46660      | 46656 | 46657 | 46658 | 46060 | 46317      | 46080       | 46090       | 46091           | 46300           |
 
 Tips for setting up a new chain on relayers:
 

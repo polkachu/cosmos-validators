@@ -23,7 +23,7 @@
 | Cosmos        | Yes     |              | Yes      | Minio1: 4:30    | Yes        | Yes | Yes        | Yes           | Yes (x)   | Yes  |      |
 | Agoric        | No      |              | Yes      | Minio2: 4:30    |            |     |            |               |           | N/A  |      |
 | Crescent      | No      | Not yet      | Yes      | Minio1: 5:00    | Yes        | Yes | Yes        | Yes           |           | Yes  |      |
-| Asset Mantle  | Yes     | Not yet      |          | Minio2: 5:00    |            |     |            |               |           | Yes  | 46   |
+| Asset Mantle  | Yes     | Not yet      | Yes      | Minio2: 5:00    |            |     |            | Yes           | Yes (x)   | Yes  | 46   |
 | Nomic         | Yes     | Manual       |          |                 |            |     |            |               |           | N/A  |      |
 
 Snapshot service is available at https://polkachu.com/tendermint_snapshots
