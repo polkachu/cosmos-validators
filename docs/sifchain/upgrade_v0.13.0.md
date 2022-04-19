@@ -12,7 +12,7 @@ git checkout v0.13.0
 make install
 ```
 
-# check the version and checksum
+# check the version
 
 ```bash
 # should be 0.13.0
