@@ -56,7 +56,7 @@ Tips for setting up a new chain on relayers:
 1. Make sure that ports from different relayer hubs are open to each other.
 1. When manually installing binary, make sure to refer to some group_vars doc for github repo, genesis file, seeds, peers and minimum-gas-price
 1. For relayers, make sure that pruning is 40000/0/prime number, and the indexer is kv.
-1. Make sure that RPC port is open to the other relayers. We manage it by opening to all (0.0.0.0) in the config file and let firewall to manage the whitelist IPs (e.g., other relayers)
+1. Make sure that RPC port (657 port) is open to the other relayers. We manage it by opening to all (0.0.0.0) in the config file and let firewall to manage the whitelist IPs (e.g., other relayers)
 1. Make sure to open P2P port and Prometheus port to all
 1. Add the new service as dependency for hermes service
 1. Make sure to set up cosmos exporter for the new service and open the cosmos exporter port
@@ -82,6 +82,7 @@ swagger = true
 | ------------- | --------------------------------------------- | -------------------------------------- | -------------------------------------- |
 | Agoric        | https://polkachu.com/state_sync/agoric        | https://agoric-rpc.polkachu.com        | https://agoric-api.polkachu.com        |
 | Akash         | Does not work. Known bug.                     | https://akash-rpc.polkachu.com         | https://akash-api.polkachu.com         |
+| asset mantle  | https://polkachu.com/state_sync/assetmantle   | https://assetmantle-rpc.polkachu.com   | https://assetmantle-api.polkachu.com   |
 | Bitcanna      | https://polkachu.com/state_sync/bitcanna      | https://bitcanna-rpc.polkachu.com      | https://bitcanna-api.polkachu.com      |
 | Cerberus      | https://polkachu.com/state_sync/cerberus      | https://cerberus-rpc.polkachu.com      | https://cerberus-api.polkachu.com      |
 | Certik        | https://polkachu.com/state_sync/certik        | https://certik-rpc.polkachu.com        | https://certik-api.polkachu.com        |

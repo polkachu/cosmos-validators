@@ -19,8 +19,6 @@ make install
 sifnoded version
 # Should be commit cff2ed4cfdd55f84d296b5e46d7b63dfa55768e3
 sifnoded version --long
-# Should be fa3320048399fc66c3ee03b4d944066b4ef2539c8cbe13425a8cdb88bfcfe105
-sha256sum $(which sifnoded)
 ```
 
 # Make new directory and copy binary
