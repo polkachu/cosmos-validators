@@ -36,6 +36,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Chihuahua      | 42656   | 42657   | 42658   | 42060   | 42660      | 42317      | 42080       | 42090       | 42091           |
 | Agoric         | 43656   | 43657   | 43658   | 43060   | 43660      | 43317      | 43080       | 43090       | 43091           |
 | Crescent       | 44656   | 44657   | 44658   | 44060   | 44660      | 44317      | 44080       | 44090       | 44091           |
+| Defund         | 45656   | 45657   | 45658   | 45060   | 45660      | 45317      | 45080       | 45090       | 45091           |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
