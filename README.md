@@ -179,6 +179,7 @@ ansible-playbook -i inventory horcrux.yml -e "target=juno_mainnet_main"
 1. Polkachu Operation Summary table: https://polkachu.com/summary_table
 1. Snapshot service: https://polkachu.com/tendermint_snapshots
 1. State-Sync service: https://polkachu.com/state_sync
+1. PRC: https://polkachu.com/public_rpc
 1. [General](docs/general.md)
 1. [Polkachu's Mainnet Setup](docs/mainnet.md)
 1. [Polkachu's Testnet Setup](docs/testnets.md)
