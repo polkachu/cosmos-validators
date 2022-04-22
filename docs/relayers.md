@@ -51,6 +51,8 @@ Make sure the firewalls are open for prometheus port and p2p port. Make sure pro
 | Crescent          | 45660      | 45656 | 45657 | 45658 | 45060 | 45317      | 45080       | 45090       | 45091           | 45300           |
 | Asset Mantle      | 46660      | 46656 | 46657 | 46658 | 46060 | 46317      | 46080       | 46090       | 46091           | 46300           |
 
+Meme is 47
+
 Tips for setting up a new chain on relayers:
 
 1. Make sure that ports from different relayer hubs are open to each other.

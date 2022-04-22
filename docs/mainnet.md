@@ -24,6 +24,7 @@
 | Agoric        | No      |             | Yes      | Minio2: 4:30    |            |     |            |               |         | N/A  |      |
 | Crescent      | No      | Self        | Yes      | Minio1: 5:00    | Yes        | Yes | Yes        | Yes           |         | Yes  |      |
 | Asset Mantle  | Yes     | Self        | Yes      | Minio2: 5:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  | 46   |
+| Meme          |         |             |          | Minio1: 6:00    |            |     |            | Yes           |         | N/A  | 47   |
 | Nomic         | Yes     | Self (Cron) |          |                 |            |     |            |               |         | N/A  |      |
 
 Snapshot service is available at https://polkachu.com/tendermint_snapshots
