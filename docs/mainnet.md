@@ -1,36 +1,3 @@
-## Polkachu's Mainnet Setup
-
-| Network       | Active? | Rewards     | Snapshot | Snapshot Detail | Tenderduty | RPC | State Sync | Backup Server | Restake | Name | Port |
-| ------------- | ------- | ----------- | -------- | --------------- | ---------- | --- | ---------- | ------------- | ------- | ---- | ---- |
-| Chihuahua     | Yes     | Self        | Yes      | Minio1: 0:00    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Juno          | Yes     | No          | Yes      | Minio2: 0:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| Akash         | Yes     | Self        | Yes      | Minio1: 0:30    | Yes        | Yes | NOOOOOO!   | Yes           | Yes     | Yes  | 28   |
-| Kava          | Yes     | Self        | Yes      | Minio2: 0:30    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Sifchain      | Yes     | Self        | Yes      | Minio1: 1:00    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Osmosis       | Yes     | No          | Yes      | Minio2: 1:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| Bitcanna      | Yes     | Self        | Yes      | Minio1: 1:30    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Evmos         | No      |             |          |                 |            |     |            |               | Yes     |      |      |
-| Comdex        | Yes     | Self        | Yes      | Minio1: 2:00    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  | 31   |
-| Umee          | Yes     | Self        | Yes      | Minio2: 2:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| KiChain       | Yes     | Self        | Yes      | Minio1: 2:30    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Stargaze      | Yes     | Self        | Yes      | Minio2: 2:30    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| Cerberus      | Yes     | Self        | Yes      | Minio1: 3:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| Certik        | Yes     | Self        | Yes      | Minio2: 3:00    | Yes        | Yes | Yes        | Yes           |         | Yes  |      |
-| Konstellation | Yes     | Self        | Yes      | Minio1: 3:30    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Sommelier     | Yes     | No          | Yes      | Minio2: 3:30    | Yes        | Yes | Yes        | Yes           | Yes     | Yes  |      |
-| Gravity       | Yes     | Self        | Yes      | Minio1: 4:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| Injective     | Yes     | No          | Yes      | Minio2: 4:00    | Yes        | Yes | Yes        | Yes           |         | No   |      |
-| Cosmos        | Yes     | Self        | Yes      | Minio1: 4:30    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  |      |
-| Agoric        | No      |             | Yes      | Minio2: 4:30    |            |     |            |               |         | N/A  |      |
-| Crescent      | No      | Self        | Yes      | Minio1: 5:00    | Yes        | Yes | Yes        | Yes           |         | Yes  |      |
-| Asset Mantle  | Yes     | Self        | Yes      | Minio2: 5:00    | Yes        | Yes | Yes        | Yes           | Yes (x) | Yes  | 46   |
-| Meme          |         |             |          | Minio1: 6:00    |            |     |            | Yes           |         | N/A  | 47   |
-| Nomic         | Yes     | Self (Cron) |          |                 |            |     |            |               |         | N/A  |      |
-
-Snapshot service is available at https://polkachu.com/tendermint_snapshots
-
-State-Sync service is available at https://polkachu.com/state_sync
-
 ## Eth bridging
 
 | Network   | Validator key | Cosmos Orchestrator Key | Ethereum Orchestrator Key                  |
@@ -45,3 +12,51 @@ State-Sync service is available at https://polkachu.com/state_sync
 | Network       | Validator key | Reason                            |
 | ------------- | ------------- | --------------------------------- |
 | Konstellation | Test key      | Mistake when setting up validator |
+
+## Polkachu's Relayer Setup
+
+We run all relayers on one machine with high CPU, memory and storage. The default ports for each testnet node will conflict. Change the following:
+
+`config.toml`
+
+- P2P: 26656 (default)
+- RPC: 26657 (default)
+- ABCI: 26658 (default)
+- Pprof: 6060 (default)
+- Prometheus: 26660 (default)
+
+`app.toml`
+
+- API server: 1317 (default)
+- Rosetta API server: 8080 (default)
+- gRPC server: 9090 (default)
+- gRPC-web server: 9091 (default)
+
+Make sure the firewalls are open for prometheus port and p2p port. Make sure prometheus is true.
+
+Tips for setting up a new chain on relayers:
+
+1. Make sure that ports from different relayer hubs are open to each other.
+1. When manually installing binary, make sure to refer to some group_vars doc for github repo, genesis file, seeds, peers and minimum-gas-price
+1. For relayers, make sure that pruning is 40000/0/prime number, and the indexer is kv.
+1. Make sure that RPC port (657 port) is open to the other relayers. We manage it by opening to all (0.0.0.0) in the config file and let firewall to manage the whitelist IPs (e.g., other relayers)
+1. Make sure to open P2P port and Prometheus port to all
+1. Add the new service as dependency for hermes service
+1. Make sure to set up cosmos exporter for the new service and open the cosmos exporter port
+1. Sometimes the relayer node also serves as state_sync node, PRC and API. This is not the best practice. However, this allows us to utilize underused server resources and make us manage fewer servers
+
+Our app.toml settings related to state-sync is as follows:
+
+```bash
+pruning-keep-every = 2000
+snapshot-interval = 2000
+snapshot-keep-recent = 5
+```
+
+Our app.toml settings related to api server is as follows (does not work on Kava):
+
+```bash
+[api]
+enabled = true
+swagger = true
+```

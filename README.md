@@ -176,48 +176,10 @@ ansible-playbook -i inventory horcrux.yml -e "target=juno_mainnet_main"
 
 ## Additional Info
 
-When you install a node that has upgrades in the past, you can either sync from Block 1, or use a snapshot to time-travel to the present quickly. We strongly recommend using snapshots. It will save you time of syncing and debugging. Here are a list of trusted snapshot providers. Do your own research and make sure that you can trust the snapshot providers:
-
-Akash: Snapshot here [here](https://docs.akash.network/operations/node#step9-blockchain-snapshot-use)
-
-Kava: Snapshot is [here](https://www.chainlayer.io/quicksync/)
-
-KiChain: Follow instruction [here](https://mzonder.notion.site/KiChain-2-Mainnet-Clean-Install-b20ce6400131499f854abc7567ce3b3f). In fact, we cannot make it work with the peers listed when we tried to sync from Block 1. The only way we made it work is by syncing with the snapshot from the included link.
-
-Osmosis: Snapshot is [here](https://www.chainlayer.io/quicksync/)
-
-Sifchain: Follow instruction [here](https://github.com/Sifchain/sifchain-validators/blob/master/docs/setup/standalone/manual.md)
-
-## Please stake with our validators
-
-| Network   | Validator                                                 | Useful Commands                |
-| --------- | --------------------------------------------------------- | ------------------------------ |
-| Akash     | `akashvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pz5w0ry`     | [Akash](docs/akash.md)         |
-| Bitcanna  | `bcnavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pxqv0cj`      | [BitCanna](docs/bitcanna.md)   |
-| Chihuahua | `chihuahuavaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p40qac2` | [Chihuahua](docs/chihuahua.md) |
-| Comdex    | `comdexvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p3447dz`    | [Comdex](docs/comdex.md)       |
-| Cerberus  | `cerberusvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvm8q9p`  | [Cerberus](docs/cerberus.md)   |
-| Evmos     | `evmosvaloper125fkz3mq6qxxpkmphdl3ep92t0d3y969xmt8hz`     | [Evmos](docs/evmos.md)         |
-| Juno      | `junovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pvzc6k3`      | [Juno](docs/juno.md)           |
-| Kava      | `kavavaloper125s8t5c6ypwee7ytun90lnhgpls2zl3vta43aj`      | [Kava](docs/kava.md)           |
-| KiChain   | `kivaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pq8jud7`        | [KiChain](docs/kichain.md)     |
-| Osmosis   | `osmovaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phpkatp`      | [Osmosis](docs/osmosis.md)     |
-| Sifchain  | `sifvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pfj2j90`       | [Sifchain](docs/sifchain.md)   |
-| Stargaze  | `starsvaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4p60w86a`     | [Stargaze](docs/stargaze.md)   |
-| Umee      | `umeevaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phlh7lv`      | [Umee](docs/umee.md)           |
-
-## P.S.
-
-[General](docs/general.md)
-
-[Terra](docs/terra.md), [Injective](docs/injective.md), [Celestia](docs/celestia.md), [Penumbra](docs/penumbra.md), [Omniflix](docs/omniflix.md)
-
-[Validator Server Migration Best Practice](docs/validator_server_migration_best_practice.md)
-
-[State Sync](docs/state_sync.md)
-
-[Polkachu's Testnet Setup](docs/testnets.md)
-
-[Polkachu's Relayer Setup](docs/relayers.md)
-
-[Polkachu's Mainnet Setup](docs/mainnet.md)
+1. Polkachu Operation Summary table: https://polkachu.com/summary_table
+1. Snapshot service: https://polkachu.com/tendermint_snapshots
+1. State-Sync service: https://polkachu.com/state_sync
+1. [General](docs/general.md)
+1. [Polkachu's Mainnet Setup](docs/mainnet.md)
+1. [Polkachu's Testnet Setup](docs/testnets.md)
+1. [Validator Server Migration Best Practice](docs/validator_server_migration_best_practice.md)
