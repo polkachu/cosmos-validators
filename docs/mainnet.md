@@ -1,3 +1,5 @@
+# Polkachu Mainnet Setup Notes
+
 ## Eth bridging
 
 | Network   | Validator key | Cosmos Orchestrator Key | Ethereum Orchestrator Key                  |
@@ -32,7 +34,7 @@ We run all relayers on one machine with high CPU, memory and storage. The defaul
 - gRPC server: 9090 (default)
 - gRPC-web server: 9091 (default)
 
-Make sure the firewalls are open for prometheus port and p2p port. Make sure prometheus is true.
+Make sure the firewalls are open for prometheus port and p2p port. Make sure prometheus is set to true.
 
 Tips for setting up a new chain on relayers:
 
