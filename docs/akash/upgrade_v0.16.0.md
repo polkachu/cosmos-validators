@@ -31,6 +31,6 @@ cp $(which akash) $HOME/.akash/cosmovisor/upgrades/akash_v0.15.0_cosmos_v0.44.x/
 # check the version again
 
 ```bash
-# should be 0.16.0
+# should be 0.16.1
 $HOME/.akash/cosmovisor/upgrades/akash_v0.15.0_cosmos_v0.44.x/bin/akash version
 ```
