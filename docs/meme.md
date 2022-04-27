@@ -11,7 +11,7 @@ memed tx staking create-validator \
  --commission-max-rate=0.10 \
  --commission-rate=0.05 \
  --min-self-delegation 1 \
-  --moniker ' polkachu.com' \
+  --moniker 'polkachu.com' \
  --pubkey=$(memed tendermint show-validator) \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
