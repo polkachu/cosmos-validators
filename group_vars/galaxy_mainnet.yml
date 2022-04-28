@@ -1,0 +1,8 @@
+network: galaxy
+folder: '.galaxy'
+daemon: galaxyd
+chain_id: 'galaxy-1'
+node_version: 'v1.0.0'
+repo: 'https://github.com/galaxies-labs/galaxy'
+genesis: 'https://media.githubusercontent.com/media/galaxies-labs/networks/main/galaxy-1/genesis.json'
+peers: 'bf446887a7a00c8babfeba2f92ba569a206a3ea7@65.108.71.140:26676,a4bd8fed416aa29d9cc061e2b9dffa7f4b679c91@65.21.131.144:30656,1e9ee1911298a15128c8485ea47b18be08939e01@136.244.29.116:38656,574e8402e255f895680db2904168724258fd6ff8@13.125.60.249:26656'
