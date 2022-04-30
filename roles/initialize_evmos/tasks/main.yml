@@ -11,20 +11,20 @@
     line: 'persistent_peers = "{{ peers }}"'
     state: present
 
-- name: Update seeds on the config.toml file
-  lineinfile:
-    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
-    regexp: 'seeds = ""'
-    line: 'seeds = "{{ seeds }}"'
-    state: present
-
 - name: install unzip
   apt:
     name: unzip
     state: present
 
-- name: Download genesis file
+- name: download genesis zip file
   get_url:
     url: '{{ genesis }}'
-    dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
+    dest: '/tmp/genesis.zip'
+    mode: '0700'
+
+- name: unarchive genesis
+  unarchive:
+    src: '/tmp/genesis.zip'
+    remote_src: yes
+    dest: '{{ user_dir }}/{{ folder }}/config'
     mode: '0644'

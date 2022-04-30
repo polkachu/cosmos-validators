@@ -17,15 +17,16 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 - gRPC server: 9090 (default)
 - gRPC-web server: 9091 (default)
 
-| Network  | Custom Port |
-| -------- | ----------- |
-| BitCanna | 56          |
-| Comdex   | 39          |
-| Defund   | 45          |
-| Celestia | 33          |
-| Evmos    | 37          |
-| Kichain  | 41          |
-| Juno     | default     |
+| Network     | Custom Port |
+| ----------- | ----------- |
+| BitCanna    | 56          |
+| Comdex      | 39          |
+| Defund      | 45          |
+| Celestia    | 33          |
+| Evmos       | 37          |
+| Kichain     | 41          |
+| Juno        | default     |
+| Quicksilver | 27          |
 
 Make sure the firewalls are open for prometheus port and p2p port
 

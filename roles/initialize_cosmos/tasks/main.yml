@@ -31,3 +31,10 @@
     url: '{{ addrbook }}'
     dest: '{{ user_dir }}/{{ folder }}/config/addrbook.json'
     mode: '0644'
+
+- name: Update the peers
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'persistent_peers = ""'
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
