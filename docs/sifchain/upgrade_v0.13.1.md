@@ -24,13 +24,13 @@ sifnoded version --long
 # Make new directory and copy binary
 
 ```bash
-mkdir -p $DAEMON_HOME/cosmovisor/upgrades/0.13.1/bin
-cp $HOME/go/bin/sifnoded $DAEMON_HOME/cosmovisor/upgrades/0.13.1/bin
+mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/0.13.1/bin
+cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/0.13.1/bin
 ```
 
 # check the version again
 
 ```bash
 # should be 0.13.1
-$DAEMON_HOME/cosmovisor/upgrades/0.13.1/bin/sifnoded version
+$HOME/.sifnoded/cosmovisor/upgrades/0.13.1/bin/sifnoded version
 ```
