@@ -27,6 +27,7 @@ We run all testnets on one machine with high CPU, memory and storage. The defaul
 | Kichain     | 41          |
 | Juno        | default     |
 | Quicksilver | 27          |
+| Deweb       | 28          |
 
 Make sure the firewalls are open for prometheus port and p2p port
 
