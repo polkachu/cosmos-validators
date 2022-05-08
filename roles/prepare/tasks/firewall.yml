@@ -10,16 +10,21 @@
   register: ufw_status_result
   changed_when: False
 
-- name: open node_exporter port
-  command: ufw allow 9100/tcp
-  when:
-    - not ufw_status_result.stdout is search("9100/tcp.*ALLOW IN.*Anywhere")
-    - node_exporter|bool == true
+#- name: open node_exporter port
+#  command: ufw allow 9100/tcp
+#  when:
+#    - not ufw_status_result.stdout is search("9100/tcp.*ALLOW IN.*Anywhere")
+#    - node_exporter|bool == true
 
-- name: open prometheus port
-  command: ufw allow 26660/tcp
+#- name: open prometheus port
+#  command: ufw allow 26660/tcp
+#  when:
+#    - not ufw_status_result.stdout is search("26660/tcp.*ALLOW IN.*Anywhere")
+
+- name: open ssh port
+  command: ufw allow 922/tcp
   when:
-    - not ufw_status_result.stdout is search("26660/tcp.*ALLOW IN.*Anywhere")
+    - not ufw_status_result.stdout is search("922/tcp.*ALLOW IN.*Anywhere")
 
 - name: open p2p port
   command: ufw allow 26656/tcp

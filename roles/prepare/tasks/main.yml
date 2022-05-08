@@ -7,6 +7,10 @@
     upgrade: dist
     update_cache: true
 
+- name: configure users and ssh
+  import_tasks: ssh_config.yml
+  when: config_ssh|default(true)|bool == true
+
 - name: install node_exporter
   import_tasks: node_exporter.yml
   when: node_exporter|bool == true
