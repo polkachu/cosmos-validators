@@ -1,55 +1,55 @@
 ---
- - name: Configure Instance
-   gather_facts: true
-   remote_user: root
-   become: false
+- name: configure users and ssh
+  gather_facts: true
+  remote_user: root
+  become: false
 
-   tasks:
+  tasks:
 
-   - name: Add a new user named $NEW_USER
-     user:
-          name: "{{ new_user }}"
-          shell: /bin/bash
-          password: "{{ new_user_password }}"
+  - name: Add a new user named $NEW_USER
+    user:
+         name: "{{ new_user }}"
+         shell: /bin/bash
+         password: "{{ new_user_password }}"
 
-   - name: Add $new_user user to the sudoers
-     copy:
-          dest: "/etc/sudoers.d/devops"
-          content: "{{new_user}}  ALL=(ALL)  NOPASSWD: ALL"
+  - name: Add $new_user user to the sudoers
+    copy:
+         dest: "/etc/sudoers.d/devops"
+         content: "{{new_user}}  ALL=(ALL)  NOPASSWD: ALL"
 
-   - name: Deploy SSH Key
-     authorized_key: user={{new_user}}
-                     key="{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
-                     state=present
+  - name: Deploy SSH Key
+    authorized_key: user={{new_user}}
+                    key="{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+                    state=present
 
-   - name: Disable Password Authentication
-     lineinfile:
-           dest=/etc/ssh/sshd_config
-           regexp='^PasswordAuthentication'
-           line="PasswordAuthentication no"
-           state=present
-           backup=yes
+  - name: Disable Password Authentication
+    lineinfile:
+          dest=/etc/ssh/sshd_config
+          regexp='^PasswordAuthentication'
+          line="PasswordAuthentication no"
+          state=present
+          backup=yes
 
-   - name: Change default port
-     lineinfile:
-           dest=/etc/ssh/sshd_config
-           regexp='^#Port\ 22'
-           line="Port 922"
-           state=present
-           backup=yes
+  - name: Change default port
+    lineinfile:
+          dest=/etc/ssh/sshd_config
+          regexp='^#Port\ 22'
+          line="Port 922"
+          state=present
+          backup=yes
 
-   - name: Disable Root Login
-     lineinfile:
-           dest=/etc/ssh/sshd_config
-           regexp='^PermitRootLogin'
-           line="PermitRootLogin no"
-           state=present
-           backup=yes
-     notify:
-       - restart ssh
+  - name: Disable Root Login
+    lineinfile:
+          dest=/etc/ssh/sshd_config
+          regexp='^PermitRootLogin'
+          line="PermitRootLogin no"
+          state=present
+          backup=yes
+    notify:
+      - restart ssh
 
-   handlers:
-   - name: restart ssh
-     service:
-       name=sshd
-       state=restarted
+  handlers:
+  - name: restart ssh
+    service:
+      name=sshd
+      state=restarted
