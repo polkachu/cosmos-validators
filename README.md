@@ -4,8 +4,8 @@
 
 1. Extendable to most Tendermint-based chains
 1. Support both mainnet and testnet
-1. Stable playbooks and roles; Customisable variables
-1. Support essential functions (snapshot, state-sync, public RPC/API endpoints and Cosmos Exporter) through seperate playbooks
+1. Stable playbooks and roles; Customizable variables
+1. Support essential functions (snapshot, state-sync, public RPC/API endpoints and Cosmos Exporter) through separate playbooks
 
 ## TL/DR
 
@@ -15,15 +15,28 @@ You run one playbook and set up a node.
 ansible-playbook main.yml -e "target=juno_main"
 ```
 
+Because we try our best to support the latest node version, it is not recommended for you to sync from Block 1. Rather, please [state-sync](https://polkachu.com/state_sync) or start from a [snapshot](https://polkachu.com/tendermint_snapshots).
+
 ## Node deployment (Validator, Backup and Relayer)
 
 For every network where we run a validator on mainnet, we run 3 nodes (Validator, Backup and Relayer). The details of our 3-node infrastructure are documented [here](https://polkachu.com/blogs/holy-trinity-a-system-approach-to-tendermint-based-chain-validation).
 
+#### Opinionated Configuration
+
+We have 2 strong opinions about the node configuration:
+
+1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server (we do so for Backup Node and Relayer Node). For example, Juno's custom port prefix is 26 and that of Osmosis is 25. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code.
+1. Each type of node will have its setting based on Polkachu's "best practice". For example, the main node (Validator) has null indexer, and 100/0/<prime number> pruning, and Relayer node has kv indexer and 40000/2000/<prime number> pruning. We will force these setting on you unless you fork the code.
+
+#### Host Variables
+
 Take a look at the `inventory.sample` file. You will see an example `juno` group with 3 different hosts: `juno_main`, `juno_backup`, and `juno_relayer`. Each host will have the following variables:
 
 1. `ansible_host`: Required. The IP address of the server.
-1. `type`: Required. It can be `main`, `backup` and `realyer` (also `test` if you are adventurous). Each is opinionated in its configuration settings.
+1. `type`: Required. It can be `main`, `backup` and `relayer` (also `test` if you are adventurous). Each is opinionated in its configuration settings.
 1. `prepare`: Optional. If unset, it is default to true. If `false`, it will skip setups of firewall, go, cosmovisor, node exporter, promtail, etc. The reason for the `false` option is because we run many backup/relayer nodes on the same server with setup done already.
+
+#### Other Variables
 
 Besides the above host variables, you will also specify the following `all` variables in the inventory file:
 
@@ -39,6 +52,8 @@ Besides the above host variables, you will also specify the following `all` vari
 1. `node_name`: This is your node name for the config.toml file.
 1. `log_name`: This is the server name for the promtail service.
 
+#### Ready? Go!
+
 One you understand the setup, please first copy it to your own inventory file so you can customize it to suit your needs:
 
 ```bash
@@ -53,12 +68,10 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 
 ## Playbooks
 
-Playbooks are:
-
 | Playbook                        | Description                                                                         |
 | ------------------------------- | ----------------------------------------------------------------------------------- |
 | `main.yml`                      | The main playbook to set up a node                                                  |
-| `prepare.yml `                  | Prepare the server with node_exporter, promtail, go, cosmovisor, and firewall rules |
+| `prepare.yml`                   | Prepare the server with node exporter, promtail, go, cosmovisor, and firewall rules |
 | `support_cosmos_exporter.yml `  | Set up Cosmos Exporter configuration (assuming Cosmos Exporter already installed)   |
 | `support_public_endpoints.yml ` | Set up Nginx reverse proxy for public PRC/ API                                      |
 | `support_snapshot.yml `         | Install snapshot script and a cron job                                              |
@@ -67,28 +80,38 @@ Playbooks are:
 | `relayer_juno.yml `             | Set up Polkachu's Hermes config for Juno Hub                                        |
 | `relayer_osmosis.yml `          | Set up Polkachu's Hermes config for Osmosis Hub                                     |
 
-# Pay attention
+## Supported Networks
 
-Some anomaly in the injective app file. Clean up the end in the app toml file
-
-Some anomaly in the axelar config or app file. Forgot which one it is
-
-Some anomaly in fetch becasue statesync is not supported
-
-Kill polkadex 4, 5
-
-This repo is to set up the Cosmos-based node. It currently support:
-
+- Agoric
 - Akash
-- BitCanna
+- Asset Mantle
+- Axelar
+- Bitcanna
+- Cerberus
+- Certik
 - Chihuahua
 - Comdex
-- Cerberus
 - Evmos
+- Fetch
+- Galaxy (galaxyd is the name for this repo because galaxy is a reserved word in Ansible)
+- Gravity Bridge
 - Juno
 - Kava
 - KiChain
+- Konstellation
+- Meme
 - Osmosis
 - Sifchain
-- Terra
+- Sommelier
+- Stargaze
 - Umee
+
+## Known Issue
+
+Because this repo tries to accommodate as many Tendermint-based chains as possible, it cannot adapt to all edge cases. Here are some known issues and how to resolve them.
+
+| Chain     | Issue                                   | Solution                                                                             |
+| --------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
+| Axelar    | Some extra lines at the end of app.toml | Delete extra lines and adjust some settings these extra lines are supposed to change |
+| Injective | Some extra lines at the end of app.toml | Delete extra lines and adjust some settings these extra lines are supposed to change |
+| Fetch     | State-sync is not supported             | Adjust the state-sync setting                                                        |

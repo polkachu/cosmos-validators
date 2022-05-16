@@ -5,7 +5,6 @@
     "vscode-extension",
     ".git/objects",
     ".vscode",
-    ".vscode-insiders",
-    "README.md"
+    ".vscode-insiders"
   ]
 }
