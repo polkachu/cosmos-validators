@@ -1,9 +1,0 @@
-network: juno
-folder: '.juno'
-daemon: junod
-chain_id: uni
-node_version: v1.0.0
-repo: https://github.com/CosmosContracts/juno
-genesis: 'https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni/genesis.json'
-peers: 'b2ef97b03c049c39a975b7845abe40fb3e48ee36@216.238.71.243:26656,34e9b3698c0a0fc7e5a8c16dc63b4d913c496c2d@206.189.151.85:26656,7ff7fd0119b104f659810ece82e9cefe2819bb33@128.199.97.8:26656,a1d3e3e6615f8eded91b012c69edb6b1bb0f5e42@161.97.187.234:26656,cdfdd1735bad77c49290e9485b8eb49fbd61ca4d@178.128.36.63:26656,4a91597dfe3ec715bbf6def225066fbb6ad86cfe@207.180.204.112:36656,15bbe91a29693284c4c13138550ea0b6a34f9c42@137.184.11.214:26656,b5377aa9885c69e154820d19be6c87c3d3c34d14@65.108.85.61:26656'
-minimum_gas_price: '0.025ujunox'

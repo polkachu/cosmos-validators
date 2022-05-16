@@ -1,0 +1,4 @@
+---
+- name: debug
+  debug:
+    var: var_file

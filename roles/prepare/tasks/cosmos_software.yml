@@ -49,10 +49,18 @@
     group: '{{ ansible_user }}'
     mode: '0600'
 
-- name: copy cosmovisor service file
-  template:
-    src: 'cosmovisor.service.j2'
-    dest: '/etc/systemd/system/cosmovisor.service'
-    owner: root
-    group: root
-    mode: '0600'
+- name: Add DAEMON_NAME line in .profile
+  lineinfile:
+    path: '{{ user_dir }}/.profile'
+    regexp: 'export DAEMON_NAME='
+    line: 'export DAEMON_NAME={{ daemon }}'
+    state: present
+  when: daemon is defined
+
+- name: Add DAEMON_HOME line in .profile
+  lineinfile:
+    path: '{{ user_dir }}/.profile'
+    regexp: 'export DAEMON_HOME='
+    line: 'export DAEMON_HOME=$HOME/{{ folder }}'
+    state: present
+  when: folder is defined

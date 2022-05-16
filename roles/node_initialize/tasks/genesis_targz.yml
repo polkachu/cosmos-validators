@@ -1,0 +1,11 @@
+- name: Download genesis file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '/tmp/genesis.tar.gz'
+    mode: '0700'
+
+- name: unarchive genesis file
+  unarchive:
+    src: '/tmp/genesis.tar.gz'
+    dest: '{{ user_dir }}/{{ folder }}/config'
+    remote_src: true

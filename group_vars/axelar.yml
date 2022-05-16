@@ -1,0 +1,19 @@
+network: axelar
+folder: '.axelar'
+daemon: axelard
+chain_id: 'axelar-dojo-1'
+binary: 'https://github.com/axelarnetwork/axelar-core/releases/download/v0.17.1/axelard-linux-amd64-v0.17.1'
+config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
+app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'
+genesis: 'https://axelar-mainnet.s3.us-east-2.amazonaws.com/genesis.json'
+seeds: '3d67d0646cddcc203b41434aceea64ade22ba6fc@k8s-mainnet-axelarco-79b464ee93-f03cb16c57cf7cb2.elb.us-east-2.amazonaws.com:26656'
+custom_port_prefix: 51
+
+# [Optional] Cosmos exporter
+denom: axl
+denom_prefix: axelar
+
+# [Optional] Snapshot
+snapshot_server: 1
+snapshot_hour: 6
+snapshot_minute: 30

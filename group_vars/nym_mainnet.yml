@@ -1,8 +1,0 @@
-network: nym
-folder: '.nyxd'
-daemon: nyxd
-chain_id: nyx
-node_version: v0.23.0
-repo: https://github.com/CosmWasm/wasmd.git
-genesis: 'https://nymtech.net/genesis/genesis.json'
-peers: 'dc0af6cde717420e9f8d35a3e0883aee0e5dbff3@15.235.14.66:26656'

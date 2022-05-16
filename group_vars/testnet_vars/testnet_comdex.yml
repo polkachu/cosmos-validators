@@ -1,0 +1,10 @@
+network: comdex
+folder: '.comdex'
+daemon: comdex
+chain_id: comets-test
+node_version: v0.1.0
+repo: https://github.com/comdex-official/comdex.git
+genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/comets-test/genesis_final.json'
+peers: '3659590cd1466671a49421089e55f1392e1cad0e@15.207.189.210:26656,8b1ccf5cf3a3ba65ee074f46ea8c6c164d867104@52.201.166.91:26656,5307ce50bd8a6f7bb5a922e3f7109b5f3241c425@13.51.118.56:26656,9c25a7ab94a315f683c3693e17aec6b2c91c851c@52.77.115.73:26656'
+minimum_gas_price: '0.2ucmdx'
+custom_port_prefix: 31

@@ -1,6 +1,0 @@
----
-- name: Install auto-compound script
-  hosts: '{{ target }}'
-  gather_facts: false
-  roles:
-    - auto_compound

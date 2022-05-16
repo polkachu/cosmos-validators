@@ -35,17 +35,28 @@ BINARY tx staking create-validator \
  --from polkachu
 ```
 
-galaxyd tx staking create-validator \
- --amount 3000000000uglx \
+```bash
+chaind tx staking create-validator --yes \
+ --amount 1000000000000tkyve \
+ --pubkey=$(chaind tendermint show-validator) \
+ --chain-id korellia \
+ --from kyve_test \
  --commission-max-change-rate "0.05" \
- --commission-max-rate "0.10" \
- --commission-rate "0.01" \
+ --commission-max-rate "0.20" \
+ --commission-rate "0.10" \
  --min-self-delegation "1" \
- --pubkey=$(galaxyd tendermint show-validator) \
- --moniker ' polkachu.com' \
+ --moniker 'polkachu.com' \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
  --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
  --security-contact="hello@polkachu.com" \
- --chain-id galaxy-1 \
- --from polkachu
+--gas auto \
+--gas-adjustment 1.5 \
+--gas-prices 0.001udws \
+--broadcast-mode block
+```
+
+```bash
+chaind tx staking delegate kyvevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslxlnsvh 1350000000000tkyve \
+--from kyve_test
+```

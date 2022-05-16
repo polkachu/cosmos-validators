@@ -1,0 +1,6 @@
+---
+- name: Make public endpoints available
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - support_public_endpoints

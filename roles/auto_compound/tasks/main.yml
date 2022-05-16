@@ -1,8 +1,0 @@
----
-- name: Copy auto_compound file
-  template:
-    src: 'auto_compound.sh.j2'
-    dest: '{{ user_dir }}/auto_compound.sh'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    mode: '0700'
