@@ -4,6 +4,13 @@
     url: 'https://api.ipify.org?format=json'
   register: public_ip
 
+- name: debug
+  debug:
+    var: hello
+
+- name: fail
+  fail:
+
 - name: Set up external address
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'

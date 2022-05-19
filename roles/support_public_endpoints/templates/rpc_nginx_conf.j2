@@ -1,6 +1,10 @@
 server {
     listen 80;
+{% if type == 'test' %}
+    server_name {{network}}-testnet-rpc.polkachu.com;
+{% else %}
     server_name {{network}}-rpc.polkachu.com;
+{% endif %}
     location / {
         proxy_redirect                      off;
         proxy_set_header Host               $host;

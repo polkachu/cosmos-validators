@@ -2,7 +2,7 @@ network: umee
 folder: '.umee'
 daemon: umeed
 chain_id: umeemania-1
-node_version: v2.0.1
+node_version: 'facu/fix-testnet-halt'
 repo: https://github.com/umee-network/umee.git
 genesis: 'https://raw.githubusercontent.com/umee-network/testnets/main/networks/umeemania-1/genesis.json'
 peers: '67cd50cac0eff503a7c9efd537d369cc7a3ebe96@34.83.162.159:26656,08f30f7119ae1317082d50fac6a08e6f2400126f@34.83.251.68:26656,08840edc6775bd7a298269f3343c554e5af0359f@35.202.178.94:26656,2e5320f284b65e388d968626825f3ffbf3f3f985@34.97.181.238:26656'
