@@ -4,13 +4,6 @@
     url: 'https://api.ipify.org?format=json'
   register: public_ip
 
-- name: debug
-  debug:
-    var: hello
-
-- name: fail
-  fail:
-
 - name: Set up external address
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
@@ -18,108 +11,51 @@
     line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}656"'
     state: present
 
-- name: Adjust config.toml port when needed
+- name: Adjust config.toml port
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
-    regexp: '{{ item.old }}'
-    line: '{{ item.new }}'
-  loop:
-    - {
-        old: 'laddr = "tcp://0.0.0.0:26656"',
-        new: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}656"',
-      }
-    - {
-        old: 'laddr = "tcp://127.0.0.1:26657"',
-        new: 'laddr = "tcp://127.0.0.1:{{ custom_port_prefix }}657"',
-      }
-    - {
-        old: 'proxy_app = "tcp://127.0.0.1:26658"',
-        new: 'proxy_app = "tcp://127.0.0.1:{{ custom_port_prefix }}658"',
-      }
-    - {
-        old: 'prometheus_listen_addr = ":26660"',
-        new: 'prometheus_listen_addr = ":{{ custom_port_prefix }}660"',
-      }
-    - {
-        old: 'pprof_laddr = "localhost:6060"',
-        new: 'pprof_laddr = "localhost:{{ custom_port_prefix }}060"',
-      }
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ config_port_changes | dict2items }}'
 
-- name: Adjust app.toml ports when needed
+- name: Adjust app.toml ports
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: '{{ item.old }}'
-    line: '{{ item.new }}'
-  loop:
-    - {
-        old: 'address = "tcp://0.0.0.0:1317"',
-        new: 'address = "tcp://0.0.0.0:{{ custom_port_prefix }}317"',
-      }
-    - {
-        old: 'address = ":8080"',
-        new: 'address = ":{{ custom_port_prefix }}080"',
-      }
-    - {
-        old: 'address = "0.0.0.0:9090"',
-        new: 'address = "0.0.0.0:{{ custom_port_prefix }}090"',
-      }
-    - {
-        old: 'address = "0.0.0.0:9091"',
-        new: 'address = "0.0.0.0:{{ custom_port_prefix }}091"',
-      }
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ app_port_changes | dict2items }}'
 
-- name: Adjust pruning setting
+- name: Adjust pruning setting for main and backup
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: '{{ item.old }}'
-    line: '{{ item.new }}'
-    state: present
-  loop:
-    - { old: 'pruning = "', new: 'pruning = "custom"' }
-    - { old: 'pruning-keep-recent = "', new: 'pruning-keep-recent = "100"' }
-    - { old: 'pruning-interval = "', new: 'pruning-interval = "19"' }
-    - { old: 'snapshot-interval = ', new: 'snapshot-interval = 0' }
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_main_backup | dict2items }}'
   when: type is defined and (type == 'backup' or type == 'main')
 
-- name: Adjust pruning setting
+- name: Adjust pruning setting for relayer
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: '{{ item.old }}'
-    line: '{{ item.new }}'
-    state: present
-  loop:
-    - { old: 'pruning = "', new: 'pruning = "custom"' }
-    - { old: 'pruning-keep-recent = "', new: 'pruning-keep-recent = "40000"' }
-    - { old: 'pruning-keep-every = "', new: 'pruning-keep-every = "2000"' }
-    - { old: 'pruning-interval = "', new: 'pruning-interval = "17"' }
-    - { old: 'snapshot-interval = ', new: 'snapshot-interval = 2000' }
-    - { old: 'snapshot-keep-recent = ', new: 'snapshot-keep-recent= 5' }
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_relayer | dict2items }}'
   when: type is defined and type == 'relayer'
 
-- name: Adjust pruning setting
+- name: Adjust pruning setting for test
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: '{{ item.old }}'
-    line: '{{ item.new }}'
-    state: present
-  loop:
-    - { old: 'pruning = "', new: 'pruning = "custom"' }
-    - { old: 'pruning-keep-recent = "', new: 'pruning-keep-recent = "8000"' }
-    - { old: 'pruning-keep-every = "', new: 'pruning-keep-every = "2000"' }
-    - { old: 'pruning-interval = "', new: 'pruning-interval = "17"' }
-    - { old: 'snapshot-interval = ', new: 'snapshot-interval = 2000' }
-    - { old: 'snapshot-keep-recent = ', new: 'snapshot-keep-recent= 2' }
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_test | dict2items }}'
   when: type is defined and type == 'test'
 
-- name: Adjust indexer setting
+- name: Adjust indexer setting for main and backup
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
-    regexp: '{{ item.old }}'
-    line: '{{ item.new }}'
+    regexp: 'indexer = "'
+    line: 'indexer = "null"'
     state: present
-  loop:
-    - { old: 'indexer = "', new: 'indexer = "null"' }
-  when: (type == 'main') or (type == 'backup')
+  when: type == 'main' or type == 'backup'
 
 - name: Open RPC port for relayer
   lineinfile:
@@ -127,7 +63,7 @@
     regexp: '{{ custom_port_prefix }}657'
     line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}657"'
     state: present
-  when: (type == 'relayer') and (custom_port_prefix is defined)
+  when: type == 'relayer'
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
