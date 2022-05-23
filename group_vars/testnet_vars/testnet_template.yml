@@ -1,0 +1,11 @@
+network:
+folder:
+daemon:
+chain_id:
+node_version:
+repo:
+genesis:
+peers:
+seeds:
+minimum_gas_price:
+custom_port_prefix:
