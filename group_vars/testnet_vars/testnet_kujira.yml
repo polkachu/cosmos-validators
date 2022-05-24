@@ -1,0 +1,11 @@
+# [NOTE] Kujira has a unique compiling process. You need to manually run the compiling, skip node_install and node_initialize playbook and run the other playbooks
+network: kujira
+folder: .kujira
+daemon: kujirad
+chain_id: harpoon-1
+node_version: NA
+repo: NA
+genesis: NA
+peers: NA
+seeds: NA
+custom_port_prefix: 18
