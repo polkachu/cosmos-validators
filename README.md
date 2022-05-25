@@ -80,7 +80,7 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `relayer_juno.yml `             | Set up Polkachu's Hermes config for Juno Hub                                        |
 | `relayer_osmosis.yml `          | Set up Polkachu's Hermes config for Osmosis Hub                                     |
 
-## Supported Networks
+## Supported Mainnet
 
 - Agoric
 - Akash
@@ -106,12 +106,32 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 - Stargaze
 - Umee
 
+# Supported Testnets
+
+- Archway
+- Axelar
+- Celestia
+- Comdex
+- Defund
+- Deweb
+- Evmos
+- Gitopia
+- Juno
+- Kichain
+- Kujira
+- Kyve
+- Quicksilver
+- Sei
+- Terra
+- Umee
+
 ## Known Issue
 
 Because this repo tries to accommodate as many Tendermint-based chains as possible, it cannot adapt to all edge cases. Here are some known issues and how to resolve them.
 
-| Chain     | Issue                                   | Solution                                                                             |
-| --------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
-| Axelar    | Some extra lines at the end of app.toml | Delete extra lines and adjust some settings these extra lines are supposed to change |
-| Injective | Some extra lines at the end of app.toml | Delete extra lines and adjust some settings these extra lines are supposed to change |
-| Fetch     | State-sync is not supported             | Adjust the state-sync setting                                                        |
+| Chain            | Issue                                                    | Solution                                                                             |
+| ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Axelar           | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
+| Injective        | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
+| Fetch            | State-sync is not supported                              | Adjust the state-sync setting                                                        |
+| Celestia testnet | inconsistent config.toml file variable naming convention | Manually adjust config.toml file                                                     |

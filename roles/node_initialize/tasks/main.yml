@@ -23,6 +23,13 @@
     mode: '0644'
   when: app_file is defined
 
+- name: Download addrbook.json file
+  get_url:
+    url: '{{ addrbook_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/addrbook.json'
+    mode: '0644'
+  when: addrbook_file is defined
+
 - name: Update minimum gas price on config file
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'

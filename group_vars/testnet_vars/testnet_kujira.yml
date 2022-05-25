@@ -2,7 +2,7 @@
 network: kujira
 folder: .kujira
 daemon: kujirad
-chain_id: harpoon-1
+chain_id: harpoon-2
 node_version: NA
 repo: NA
 genesis: NA
