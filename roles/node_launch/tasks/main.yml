@@ -1,8 +1,4 @@
 ---
-- name: Set service name
-  set_fact:
-    service: "{{ 'cosmovisor' if type is defined and type == 'main' else network }}"
-
 - name: open prometheus port
   become: true
   command: 'ufw allow {{ custom_port_prefix }}660/tcp'
@@ -31,7 +27,7 @@
   become: true
   template:
     src: 'cosmovisor.service.j2'
-    dest: '/etc/systemd/system/{{ service }}.service'
+    dest: '/etc/systemd/system/{{ network }}.service'
     owner: root
     group: root
     mode: '0644'
@@ -39,7 +35,7 @@
 - name: start cosmovisor service
   become: true
   systemd:
-    name: '{{ service }}'
+    name: '{{ network }}'
     state: restarted
     daemon_reload: yes
     enabled: yes

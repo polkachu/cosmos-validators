@@ -1,11 +1,9 @@
-# [NOTE] Kujira has a unique compiling process. You need to manually run the compiling, skip node_install and node_initialize playbook and run the other playbooks
 network: kujira
 folder: .kujira
 daemon: kujirad
-chain_id: harpoon-2
-node_version: NA
-repo: NA
-genesis: NA
-peers: NA
-seeds: NA
+chain_id: harpoon-3
+node_version: v0.3.0
+repo: 'https://github.com/Team-Kujira/core'
+genesis: 'https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/harpoon-3.json'
+peers: 'bee48b090b97ef1a8adca4adecf897e5d29c6909@3.39.245.44:26656'
 custom_port_prefix: 18
