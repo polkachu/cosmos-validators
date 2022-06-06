@@ -1,4 +1,4 @@
-network: galaxy
+network: galaxyd
 folder: '.galaxy'
 daemon: galaxyd
 chain_id: 'galaxy-1'
