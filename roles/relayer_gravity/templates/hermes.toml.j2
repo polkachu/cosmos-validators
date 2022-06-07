@@ -1,0 +1,104 @@
+### This is Polkachu Gravity Relayer Hub.
+
+# The global section has parameters that apply globally to the relayer operation.
+[global]
+log_level = 'info'
+
+# Specify the mode to be used by the relayer. [Required]
+[mode]
+
+# Specify the client mode.
+[mode.clients]
+enabled = false
+refresh = true
+misbehaviour = false
+
+# Specify the connections mode.
+[mode.connections]
+enabled = false
+
+# Specify the channels mode.
+[mode.channels]
+enabled = false
+
+# Specify the packets mode.
+[mode.packets]
+enabled = true
+clear_interval = 200
+clear_on_start = true
+tx_confirmation = true
+
+# The REST section defines parameters for Hermes' built-in RESTful API.
+# https://hermes.informal.systems/rest.html
+[rest]
+enabled = true
+host = '127.0.0.1'
+port = 3000
+
+[telemetry]
+enabled = true
+host = '0.0.0.0'
+port = 3001
+
+#
+# Chain configuration Osmosis
+#
+
+[[chains]]
+id = 'gravity-bridge-3'
+rpc_addr = 'http://127.0.0.1:42657'
+grpc_addr = 'http://127.0.0.1:42090'
+websocket_addr = 'ws://127.0.0.1:42657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'gravity'
+key_name = 'gravity-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.000, denom = 'ugraviton' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-0'], # Osmosis
+]
+
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://{{ osmosis_relayer_ip }}:26657'
+grpc_addr = 'http://{{ osmosis_relayer_ip }}:9090'
+websocket_addr = 'ws://{{ osmosis_relayer_ip }}:26657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'osmo'
+key_name = 'osmosis-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.000, denom = 'uosmo' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-144'], # gravity
+]
