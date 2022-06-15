@@ -1,4 +1,4 @@
-# Cosmos-based Node Ansible Setup Plus Several Supporting Playbooks (test)
+# Cosmos-based Node Ansible Setup Plus Several Supporting Playbooks
 
 ## Design Philosophy
 
