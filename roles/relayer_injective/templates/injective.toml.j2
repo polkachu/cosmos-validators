@@ -1,0 +1,39 @@
+# The global section has parameters that apply globally to the relayer operation.
+[global]
+log_level = 'info'
+
+# Specify the mode to be used by the relayer. [Required]
+[mode]
+
+# Specify the client mode.
+[mode.clients]
+enabled = false
+refresh = true
+misbehaviour = false
+
+# Specify the connections mode.
+[mode.connections]
+enabled = false
+
+# Specify the channels mode.
+[mode.channels]
+enabled = false
+
+# Specify the packets mode.
+[mode.packets]
+enabled = true
+clear_interval = 200
+clear_on_start = true
+tx_confirmation = true
+
+# The REST section defines parameters for Hermes' built-in RESTful API.
+# https://hermes.informal.systems/rest.html
+[rest]
+enabled = true
+host = '127.0.0.1'
+port = 4000
+
+[telemetry]
+enabled = true
+host = '0.0.0.0'
+port = 4001
