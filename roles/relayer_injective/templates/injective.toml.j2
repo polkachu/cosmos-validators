@@ -37,3 +37,156 @@ port = 4000
 enabled = true
 host = '0.0.0.0'
 port = 4001
+
+
+#
+# Chain configuration Osmosis
+#
+
+[[chains]]
+id = 'injective-1'
+rpc_addr = 'http://127.0.0.1:43657'
+grpc_addr = 'http://127.0.0.1:9900'
+websocket_addr = 'ws://127.0.0.1:43657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'inj'
+key_name = 'injective-relayer'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/injective.crypto.v1beta1.ethsecp256k1.PubKey' } }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 5000000
+gas_price = { price = 500000000, denom = 'inj' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-8'], # Osmosis
+  ['transfer', 'channel-76'], # Chihuahua
+  ['transfer', 'channel-83'], # Evmos
+  ['transfer', 'channel-1'], # Cosmos
+]
+
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = 'http://{{ osmosis_relayer_ip }}:26657'
+grpc_addr = 'http://{{ osmosis_relayer_ip }}:9090'
+websocket_addr = 'ws://{{ osmosis_relayer_ip }}:26657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'osmo'
+key_name = 'osmosis-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 300000
+max_gas = 3500000
+gas_price = { price = 0.000, denom = 'uosmo' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-122'], # Injective
+]
+
+[[chains]]
+id = 'chihuahua-1'
+rpc_addr = 'http://{{ osmosis_relayer_ip }}:29657'
+grpc_addr = 'http://{{ osmosis_relayer_ip }}:29090'
+websocket_addr = 'ws://{{ osmosis_relayer_ip }}:29657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'chihuahua'
+key_name = 'chihuahua-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 3500000
+gas_price = { price = 0.05, denom = 'uhuahua' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '10s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-12'], # Injective
+]
+
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = 'http://localhost:49657'
+grpc_addr = 'http://localhost:49090'
+websocket_addr = 'ws://localhost:49657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'cosmos'
+key_name = 'cosmos-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 150000
+max_gas = 3500000
+gas_price = { price = 0.008, denom = 'uatom' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '10s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-220'], # Injective
+]
+
+[[chains]]
+id = 'evmos_9001-2'
+rpc_addr = 'http://{{ juno_relayer_ip }}:34657'
+grpc_addr = 'http://{{ juno_relayer_ip }}:34090'
+websocket_addr = 'ws://{{ juno_relayer_ip }}:34657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'evmos'
+key_name = 'evmos-relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/ethermint.crypto.v1.ethsecp256k1.PubKey' } }
+default_gas = 1000000
+max_gas = 4000000
+gas_price = { price = 2500000, denom = 'aevmos' }
+gas_adjustment = 0.2
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3'}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-10'], # Injective
+]
