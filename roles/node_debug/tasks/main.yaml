@@ -1,4 +1,4 @@
 ---
 - name: debug
   debug:
-    var: var_file
+    var: ansible_host

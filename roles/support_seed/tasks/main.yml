@@ -1,0 +1,42 @@
+---
+- name: open p2p port
+  become: true
+  command: 'ufw allow {{ custom_port_prefix }}656/tcp'
+
+- name: Create folder
+  file:
+    state: directory
+    path: '{{ user_dir }}/{{ folder }}/config'
+
+- name: copy config.toml
+  template:
+    src: 'config.toml.j2'
+    dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
+
+- name: copy node_key.json
+  template:
+    src: 'node_key.json.j2'
+    dest: '{{ user_dir }}/{{ folder }}/config/node_key.json'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
+
+- name: copy tenderseed service file
+  become: true
+  template:
+    src: 'tenderseed.service.j2'
+    dest: '/etc/systemd/system/tenderseed_{{ network }}.service'
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: start tenderseed service
+  become: true
+  systemd:
+    name: 'tenderseed_{{ network }}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

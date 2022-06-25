@@ -68,17 +68,24 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 
 ## Playbooks
 
-| Playbook                        | Description                                                                         |
-| ------------------------------- | ----------------------------------------------------------------------------------- |
-| `main.yml`                      | The main playbook to set up a node                                                  |
-| `prepare.yml`                   | Prepare the server with node exporter, promtail, go, cosmovisor, and firewall rules |
-| `support_cosmos_exporter.yml `  | Set up Cosmos Exporter configuration (assuming Cosmos Exporter already installed)   |
-| `support_public_endpoints.yml ` | Set up Nginx reverse proxy for public PRC/ API                                      |
-| `support_snapshot.yml `         | Install snapshot script and a cron job                                              |
-| `support_state_sync.yml `       | Install state-sync script                                                           |
-| `system_update.yml `            | Update a server and restart if needed                                               |
-| `relayer_juno.yml `             | Set up Polkachu's Hermes config for Juno Hub                                        |
-| `relayer_osmosis.yml `          | Set up Polkachu's Hermes config for Osmosis Hub                                     |
+| Playbook                        | Description                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `main.yml`                      | The main playbook to set up a node                                                               |
+| `prepare.yml`                   | Prepare the server with node exporter, promtail, go, cosmovisor, and firewall rules              |
+| `support_cosmos_exporter.yml `  | Set up Cosmos Exporter configuration (assuming Cosmos Exporter already installed)                |
+| `support_public_endpoints.yml ` | Set up Nginx reverse proxy for public PRC/ API                                                   |
+| `support_snapshot.yml `         | Install snapshot script and a cron job                                                           |
+| `support_state_sync.yml `       | Install state-sync script                                                                        |
+| `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
+| `system_update.yml `            | Update a server and restart if needed                                                            |
+| `relayer_juno.yml `             | Set up Polkachu's Hermes config for Juno Hub                                                     |
+| `relayer_osmosis.yml `          | Set up Polkachu's Hermes config for Osmosis Hub                                                  |
+
+### Playbook Usage Example
+
+```bash
+ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306182fe6a507d5487eacb5@65.108.131.174:36656"
+```
 
 ## Supported Mainnet
 
