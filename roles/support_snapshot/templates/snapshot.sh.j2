@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# prune node
+sudo service {{ network }} stop
+sleep 5
+/home/ubuntu/go/bin/cosmprund prune ~/{{ folder }}/data --cosmos-sdk=false
+sleep 5
+
 # Make sure the service is running
 sudo service {{ network }} start
 sleep 5
@@ -20,5 +26,5 @@ sudo service {{ network }} start
 
 # Transfer the file and then remove the file
 cd {{ user_dir }}/
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" {{ snapshot_profile }}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" --profile={{ snapshot_profile }}
 rm $FILENAME

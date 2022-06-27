@@ -21,3 +21,5 @@ promtail=true
 log_monitor=http://10.0.0.100:3100
 node_name="BRAND-{{ network }}-{{ type }}"
 log_name="PREFIX_{{ network }}_{{ type }}"
+snapshot_endpoint='http://10.0.0.2000'
+snapshot_profile='profile'

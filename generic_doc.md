@@ -57,12 +57,12 @@ chaind tx staking create-validator --yes \
 ```
 
 ```bash
-quicksilverd tx staking create-validator \
- --amount="4999000000uqck" \
- --pubkey=$(quicksilverd tendermint show-validator) \
- --chain-id="killerqueen-1" \
- --from="quicksilver_test" \
- --node="http://localhost:11657" \
+chihuahuad tx staking create-validator \
+ --amount="100000000stake" \
+ --pubkey=$(chihuahuad tendermint show-validator) \
+ --chain-id="chitestnet-1" \
+ --from="chihuahua_test" \
+ --node="http://localhost:29657" \
 --commission-max-change-rate "0.05" \
  --commission-max-rate "0.10" \
  --commission-rate "0.05" \

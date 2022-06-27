@@ -1,14 +1,4 @@
 ---
-- set_fact:
-    snapshot_endpoint: 'https://snapshots.polkachu.com'
-    snapshot_profile: '--profile=minio1'
-  when: snapshot_server == 1
-
-- set_fact:
-    snapshot_endpoint: 'https://snapshots2.polkachu.com'
-    snapshot_profile: '--profile=minio2'
-  when: snapshot_server == 2
-
 - name: Install jq and awscli
   become: true
   apt:
