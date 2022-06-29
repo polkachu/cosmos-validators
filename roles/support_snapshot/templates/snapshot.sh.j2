@@ -19,7 +19,11 @@ sudo service {{ network }} stop
 # Compress the folder
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
 cd {{ user_dir }}/{{ folder }}
+{% if wasm is defined and wasm is sameas true %}
+tar cvf - data wasm | lz4 > "{{ user_dir }}/$FILENAME"
+{% else %}
 tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
+{% endif %}
 
 # Restart the service
 sudo service {{ network }} start
@@ -28,3 +32,7 @@ sudo service {{ network }} start
 cd {{ user_dir }}/
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" --profile={{ snapshot_profile }}
 rm $FILENAME
+
+# Transfer the addrbook
+cd {{ user_dir }}/{{ folder }}/config
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://addrbook/{{ network }}/" --profile={{ snapshot_profile }}

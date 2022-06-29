@@ -17,3 +17,4 @@ denom_prefix: unyx
 snapshot_server: 1
 snapshot_hour: 7
 snapshot_minute: 0
+wasm: true

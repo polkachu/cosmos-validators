@@ -16,3 +16,4 @@ denom_prefix: osmo
 snapshot_server: 2
 snapshot_hour: 1
 snapshot_minute: 0
+wasm: true

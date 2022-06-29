@@ -17,3 +17,4 @@ denom_prefix: fetch
 snapshot_server: 2
 snapshot_hour: 6
 snapshot_minute: 30
+wasm: true

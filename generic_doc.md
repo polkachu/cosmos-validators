@@ -9,7 +9,7 @@ BINARY gentx polkachu AMOUNT \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
  --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
- --security-contact="hello@polkachu.com"
+ --security-contact="hello@polkachu.com" \
  --commission-max-change-rate=0.05 \
  --commission-max-rate=0.10 \
  --commission-rate=0.01
@@ -78,3 +78,14 @@ chihuahuad tx staking create-validator \
 chaind tx staking delegate kyvevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslxlnsvh 1350000000000tkyve \
 --from kyve_test
 ```
+
+kujirad gentx polkachu 99000000ukuji \
+ --chain-id kaiyo-1 \
+ --moniker=" polkachu.com" \
+ --website "https://polkachu.com" \
+ --identity "0A6AF02D1557E5B4" \
+ --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
+ --security-contact="hello@polkachu.com" \
+ --commission-max-change-rate=0.05 \
+ --commission-max-rate=0.10 \
+ --commission-rate=0.05

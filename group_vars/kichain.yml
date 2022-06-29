@@ -18,3 +18,4 @@ denom_prefix: ki
 snapshot_server: 1
 snapshot_hour: 2
 snapshot_minute: 30
+wasm: true
