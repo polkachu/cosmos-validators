@@ -11,6 +11,7 @@
 - name: open cosmos exporter port
   become: true
   command: 'ufw allow {{ custom_port_prefix }}300/tcp'
+  ignore_errors: (prepare is defined) and (prepare|bool is false)
 
 - name: start cosmos exporter service
   become: true
