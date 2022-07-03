@@ -1,0 +1,20 @@
+network: fetch
+folder: '.fetchd'
+daemon: fetchd
+chain_id: fetchhub-4
+node_version: v0.10.3
+repo: https://github.com/fetchai/fetchd.git
+genesis: 'https://github.com/fetchai/genesis-fetchhub/blob/main/fetchhub-4/data/genesis_migrated_5300200.json?raw=true'
+seeds: ''
+peers: '17693da418c15c95d629994a320e2c4f51a8069b@34.142.107.127:36456,c88979531d0a9f83c2fc006a59be8cbbed27f0e3@65.21.229.209:26656,a34dfeb4b4f1d9895d2f01420c5163ecf3f96827@135.181.5.219:52656,6bd89c9fe40c91680b8de3ccf9a9a677c5d6a58c@209.145.55.142:26656,cb3f06d68067a439ec48fcf201322e3415620bf9@176.191.97.120:26656,e53afb3e5a7414ca3c4b07486640d95c22c699a1@185.163.64.156:26656,6d6b6c6f309539a80465af616637fb964f2e4709@92.205.56.98:26656,6e46e56f4387a53af97eacbe2fd070cf68ba7f22@65.108.121.153:26656,251ac8be9c4293b2b43641de43647c27e82c0fa0@168.119.240.200:56656,5cb5b4843730995151a16315d067121bfc19e1f3@13.125.253.190:26656,d7cda986c9f59ab9e05058a803c3d0300d15d8da@34.142.107.127:36458'
+custom_port_prefix: 52
+
+# [Optional] Cosmos exporter
+denom: fet
+denom_prefix: fetch
+
+# [Optional] Snapshot
+snapshot_server: 2
+snapshot_hour: 6
+snapshot_minute: 30
+wasm: true

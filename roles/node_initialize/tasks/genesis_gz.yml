@@ -1,0 +1,14 @@
+- name: Download genesis gz file
+  get_url:
+    url: '{{ genesis }}'
+    dest: '/tmp/genesis.json.gz'
+    mode: '0700'
+
+- name: unarchive genesis file
+  shell: 'gunzip /tmp/genesis.json.gz -f'
+
+- name: copy the genesis file
+  copy:
+    remote_src: true
+    src: /tmp/genesis.json
+    dest: '{{ user_dir }}/{{ folder }}/config'

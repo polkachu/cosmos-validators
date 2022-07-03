@@ -1,8 +1,0 @@
-network: sommelier
-folder: '.sommelier'
-daemon: 'sommelier'
-chain_id: sommelier-3
-node_version: 'v3.1.1'
-repo: 'https://github.com/PeggyJV/sommelier'
-genesis: 'https://raw.githubusercontent.com/PeggyJV/sommelier/main/contrib/mainnet/sommelier-3/genesis.json'
-peers: '877561c4a8f9e66548d467a4057ba4789e586c3d@185.146.148.109:26656,759a61eade50cb48e2a6f974fab679096d1de916@35.233.221.80:26656,14ac13745a563876740b72637ab9a3539542fe2b@35.247.55.203:26656,bebf759f5706137168e3a7158e4495865a04cca9@35.230.37.28:26656,80340e014f8433ce023b93e0e8644feac9ac6dd0@3.65.177.133:26656,b23c862feba8ef4179bb8b9e37523e65c432c810@sommelier.standardcryptovc.com:26656,a96d69179e4b72f728b9dd4dbe40400701515fee@80.64.208.51:26656,048d66b8b8b1b6bf5d088dd04e91cc52d38a09d8@35.215.30.79:26656,b2900b9e964c12dc2de17fd974bb452bca894f83@51.79.231.186:26656,e1d1dd22a63b1899ac51c8c96416f77c8ef98231@34.75.110.74:26656'

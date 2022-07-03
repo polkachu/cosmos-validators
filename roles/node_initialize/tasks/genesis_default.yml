@@ -1,0 +1,5 @@
+- name: regular genesis download
+  get_url:
+    url: '{{ genesis }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
+    mode: '0644'

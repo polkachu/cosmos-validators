@@ -1,6 +1,0 @@
----
-- name: Install node
-  hosts: '{{ target }}'
-  gather_facts: false
-  roles:
-    - horcrux_install

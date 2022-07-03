@@ -7,15 +7,7 @@ promtail_version: '2.4.1'
 promtail_checksum: 978391a174e71cfef444ab9dc012f95d5d7eae0d682eaf1da2ea18f793452031
 
 # go
-go_version: '1.17.8'
-
-# Snapshot
-snapshot_endpoint: 'https://snapshots.polkachu.com'
-snapshot_space: 'snapshots'
+go_version: '1.18.3'
 
 # cosmovisor
 cosmovisor_version: 'v1.0.0'
-
-# horcrux
-horcrux_repo: 'https://github.com/strangelove-ventures/horcrux'
-horcrux_version: 'v2.0.0-beta3'

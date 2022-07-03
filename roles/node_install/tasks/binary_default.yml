@@ -1,0 +1,12 @@
+---
+- name: Download binary file
+  get_url:
+    url: '{{ binary }}'
+    dest: '/tmp/{{ daemon }}'
+
+- name: Copy binary
+  copy:
+    remote_src: true
+    src: '/tmp/{{ daemon }}'
+    dest: '{{ user_dir }}/go/bin/{{ daemon }}'
+    mode: '0755'

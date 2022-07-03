@@ -1,0 +1,9 @@
+network: sei
+folder: '.sei'
+daemon: seid
+chain_id: 'sei-testnet-2'
+node_version: '1.0.3beta'
+repo: https://github.com/sei-protocol/sei-chain.git
+genesis: https://raw.githubusercontent.com/sei-protocol/testnet/master/sei-testnet-2/genesis.json
+addrbook_file: https://raw.githubusercontent.com/sei-protocol/testnet/master/sei-testnet-2/addrbook.json
+custom_port_prefix: 19

@@ -1,0 +1,20 @@
+network: gravity
+folder: '.gravity'
+daemon: gravity
+chain_id: gravity-bridge-3
+node_version: 'v1.5.2'
+repo: 'https://github.com/Gravity-Bridge/Gravity-Bridge'
+binary: 'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.5.2/gravity-linux-amd64'
+genesis: 'https://raw.githubusercontent.com/Gravity-Bridge/gravity-docs/main/genesis.json'
+peers: '81396d4703a2e3cbd136c7324e4df5686fd48218@35.180.8.214:26656,c597db55d9a609b8b77c3d37ecf1fa9a67117cc0@144.217.82.4:26656,50af457247b59aa558a26a14bd7ac4bf86eeae70@195.201.164.223:26656,81eef39d2ca9a07490857d197423da4ba5e01879@15.188.134.35:26656,5adb5ad6a6fcef624866cefdb551dafdc07f7e78@15.188.198.188:26656,41b321292cbe50c5c30017cc71c404481be0e20b@3.38.12.5:26656'
+seeds: '2b089bfb4c7366efb402b48376a7209632380c9c@65.19.136.133:26656,63e662f5e048d4902c7c7126291cf1fc17687e3c@95.211.103.175:26656'
+custom_port_prefix: 42
+
+# [Optional] Cosmos exporter
+denom: grav
+denom_prefix: gravity
+
+# [Optional] Snapshot
+snapshot_server: 1
+snapshot_hour: 4
+snapshot_minute: 0

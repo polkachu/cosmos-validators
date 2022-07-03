@@ -1,0 +1,71 @@
+---
+- name: Ensure that the folder does not exist
+  file:
+    path: '{{ user_dir }}/{{ folder }}'
+    state: absent
+
+- name: Initialize Node
+  command: '{{ daemon }} init {{ node_name }} --chain-id {{ chain_id }} -o'
+  environment:
+    PATH: '{{ path }}'
+
+- name: Download config file
+  get_url:
+    url: '{{ config_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    mode: '0644'
+  when: config_file is defined
+
+- name: Download app file
+  get_url:
+    url: '{{ app_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    mode: '0644'
+  when: app_file is defined
+
+- name: Download addrbook.json file
+  get_url:
+    url: '{{ addrbook_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/addrbook.json'
+    mode: '0644'
+  when: addrbook_file is defined
+
+- name: Update minimum gas price on config file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '^minimum-gas-prices ='
+    line: 'minimum-gas-prices = "{{ minimum_gas_price }}"'
+    state: present
+  when: minimum_gas_price is defined
+
+- name: Update peers in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^persistent_peers ='
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
+  when: peers is defined
+
+- name: Update seeds in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^seeds ='
+    line: 'seeds = "{{ seeds }}"'
+    state: present
+  when: seeds is defined
+
+- name: regular genesis download
+  include_tasks: genesis_default.yml
+  when: genesis_processing is undefined
+
+- name: zip genesis download
+  include_tasks: genesis_zip.yml
+  when: genesis_processing is defined and genesis_processing == "zip"
+
+- name: gz genesis download
+  include_tasks: genesis_gz.yml
+  when: genesis_processing is defined and genesis_processing == "gz"
+
+- name: targz genesis download
+  include_tasks: genesis_targz.yml
+  when: genesis_processing is defined and genesis_processing == "targz"

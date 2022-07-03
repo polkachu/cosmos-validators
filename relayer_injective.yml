@@ -1,0 +1,6 @@
+---
+- name: Move Injective relayer config
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - relayer_injective

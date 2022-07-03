@@ -1,0 +1,73 @@
+---
+- name: register public ip
+  uri:
+    url: 'https://api.ipify.org?format=json'
+  register: public_ip
+
+- name: Set up external address
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = "'
+    line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}656"'
+    state: present
+
+- name: Adjust config.toml port
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ config_port_changes | dict2items }}'
+
+- name: Adjust app.toml ports
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ app_port_changes | dict2items }}'
+
+- name: Adjust pruning setting for main and backup
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_main_backup | dict2items }}'
+  when: type is defined and (type == 'backup' or type == 'main')
+
+- name: Adjust pruning setting for relayer
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_relayer | dict2items }}'
+  when: type is defined and type == 'relayer'
+
+- name: Adjust pruning setting for test
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_test | dict2items }}'
+  when: type is defined and type == 'test'
+
+- name: Adjust indexer setting for main and backup
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'indexer = "'
+    line: 'indexer = "null"'
+    state: present
+  when: type == 'main' or type == 'backup'
+
+- name: Open RPC port for relayer
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '{{ custom_port_prefix }}657'
+    line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}657"'
+    state: present
+  when: type == 'relayer'
+
+- name: Enable prometheus on the config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^prometheus ='
+    line: 'prometheus = true'
+    state: present

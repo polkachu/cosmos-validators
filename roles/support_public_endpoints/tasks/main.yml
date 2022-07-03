@@ -1,0 +1,34 @@
+---
+- name: install nginx package
+  become: true
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+- name: Copy nginx config file for rpc
+  become: true
+  template:
+    src: 'rpc_nginx_conf.j2'
+    dest: '/etc/nginx/sites-enabled/{{network}}-rpc'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: Copy nginx config file for api
+  become: true
+  template:
+    src: 'api_nginx_conf.j2'
+    dest: '/etc/nginx/sites-enabled/{{network}}-api'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: restart nginx service
+  become: true
+  systemd:
+    name: nginx
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false

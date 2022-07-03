@@ -1,0 +1,38 @@
+---
+- name: Install from source
+  block:
+    - name: Make sure the folder does not exist
+      become: true
+      file:
+        state: absent
+        path: '{{ user_dir }}/{{ network }}'
+
+    - name: Clone node repo
+      git:
+        repo: '{{ repo }}'
+        dest: '{{ user_dir }}/{{ network }}'
+
+    - name: Install node
+      command: '{{ item }}'
+      args:
+        chdir: '{{ user_dir }}/{{ network }}'
+      with_items:
+        - 'git fetch'
+        - 'git checkout {{ node_version }}'
+        - 'make install'
+      environment:
+        PATH: '{{ path }}'
+        GOPATH: '{{ user_dir }}/go'
+  when: binary is undefined
+
+- name: Install from binary
+  include_tasks: binary_default.yml
+  when: binary is defined and binary_processing is not defined
+
+- name: Install from binary zipped
+  include_tasks: binary_zip.yml
+  when: binary is defined and binary_processing is defined and binary_processing == 'zip'
+
+- name: Install from binary tar gz
+  include_tasks: binary_targz.yml
+  when: binary is defined and binary_processing is defined and binary_processing == 'targz'

@@ -1,0 +1,6 @@
+---
+- name: Install seed
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - support_seed

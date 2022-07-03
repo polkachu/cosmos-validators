@@ -1,20 +1,25 @@
-# Here we use Juno as an example setup. You can copy the structure for other networks
-[juno_mainnet_main]
-10.0.0.1 validator_name=YOUR_NODE_MONIKER log_name=YOUR_LOG_NAME
+[juno]
+juno_main ansible_host=10.0.0.1 type=main
+juno_backup ansible_host=10.0.0.2 type=backup prepare=false
+juno_relayer ansible_host=10.0.0.3 type=relayer prepare=false
 
-[juno_mainnet_backup]
-10.0.0.2 validator_name=YOUR_BACKUP_NODE_MONIKER log_name=YOUR_BACKUP_LOG_NAME
+[backups]
+backup_1 ansible_host=10.0.0.2
 
-[juno_mainnet:children]
-juno_mainnet_main
-juno_mainnet_backup
+[relayers]
+relayer_1 ansible_host=10.0.0.3
 
 [all:vars]
 ansible_user=ubuntu
 ansible_port=22
 ansible_ssh_private_key_file="~/.ssh/id_rsa"
-user_dir="/home/{{ ansible_user }}"
+var_file="group_vars/{{ network }}.yml"
+user_dir="/home/{{ansible_user}}"
 path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:{{ user_dir }}/go/bin"
 node_exporter=true
 promtail=true
 log_monitor=http://10.0.0.100:3100
+node_name="BRAND-{{ network }}-{{ type }}"
+log_name="PREFIX_{{ network }}_{{ type }}"
+snapshot_endpoint='http://10.0.0.2000'
+snapshot_profile='profile'

@@ -1,0 +1,21 @@
+---
+- name: download binary
+  get_url:
+    url: '{{ binary }}'
+    dest: '/tmp/binary.tar.gz'
+    mode: '0700'
+    force: yes
+
+- name: unarchive binary file
+  unarchive:
+    src: '/tmp/binary.tar.gz'
+    dest: '/tmp/'
+    mode: '0755'
+    remote_src: true
+
+- name: Copy binary
+  copy:
+    remote_src: true
+    src: '/tmp/{{ daemon }}'
+    dest: '{{ user_dir }}/go/bin/{{ daemon }}'
+    mode: '0755'

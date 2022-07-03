@@ -1,0 +1,21 @@
+---
+- name: Copy cosmos exporter file
+  become: true
+  template:
+    src: 'cosmos_exporter.j2'
+    dest: '/etc/systemd/system/exporter_{{network}}.service'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: open cosmos exporter port
+  become: true
+  command: 'ufw allow {{ custom_port_prefix }}300/tcp'
+
+- name: start cosmos exporter service
+  become: true
+  systemd:
+    name: 'exporter_{{network}}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
