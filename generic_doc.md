@@ -79,13 +79,23 @@ chaind tx staking delegate kyvevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslxlnsvh 13
 --from kyve_test
 ```
 
-kujirad gentx polkachu 99000000ukuji \
- --chain-id kaiyo-1 \
- --moniker=" polkachu.com" \
+echelond tx staking create-validator --amount=1000000000000000000000000aechelon --pubkey=$(echelond tendermint show-validator) --moniker="" --from=<echelonaddress> --min-self-delegation="1" --commission-max-change-rate="0.01" --commission-max-rate="0.20" --commission-rate="0.05" --chain-id=echelon_3000-3
+
+echelond tx staking create-validator \
+ --amount 1000000000000000000aechelon \
+ --commission-max-change-rate "0.05" \
+ --commission-max-rate "0.10" \
+ --commission-rate "0.05" \
+ --min-self-delegation "1" \
+ --pubkey=$(echelond tendermint show-validator) \
+ --moniker ' polkachu.com' \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
  --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
  --security-contact="hello@polkachu.com" \
- --commission-max-change-rate=0.05 \
- --commission-max-rate=0.10 \
- --commission-rate=0.05
+ --chain-id echelon_3000-3 \
+ --gas auto \
+ --gas-adjustment=1.4 \
+ --gas-prices 500aechelon \
+ --keyring-backend=file \
+ --from polkachu
