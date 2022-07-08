@@ -3,8 +3,8 @@
 GenTx
 
 ```bash
-BINARY gentx polkachu AMOUNT \
- --chain-id CHAIN_ID \
+seid gentx sei_test 10000000usei \
+ --chain-id sei-devnet-1 \
  --moniker 'polkachu.com' \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
@@ -12,7 +12,7 @@ BINARY gentx polkachu AMOUNT \
  --security-contact="hello@polkachu.com" \
  --commission-max-change-rate=0.05 \
  --commission-max-rate=0.10 \
- --commission-rate=0.01
+ --commission-rate=0.05
 ```
 
 Create validator
@@ -81,21 +81,17 @@ chaind tx staking delegate kyvevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslxlnsvh 13
 
 echelond tx staking create-validator --amount=1000000000000000000000000aechelon --pubkey=$(echelond tendermint show-validator) --moniker="" --from=<echelonaddress> --min-self-delegation="1" --commission-max-change-rate="0.01" --commission-max-rate="0.20" --commission-rate="0.05" --chain-id=echelon_3000-3
 
-echelond tx staking create-validator \
- --amount 1000000000000000000aechelon \
+starsd tx staking create-validator \
+ --amount 1000000000ustars \
  --commission-max-change-rate "0.05" \
  --commission-max-rate "0.10" \
  --commission-rate "0.05" \
  --min-self-delegation "1" \
- --pubkey=$(echelond tendermint show-validator) \
- --moniker ' polkachu.com' \
+ --pubkey=$(starsd tendermint show-validator) \
+ --moniker 'polkachu.com' \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
  --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
  --security-contact="hello@polkachu.com" \
- --chain-id echelon_3000-3 \
- --gas auto \
- --gas-adjustment=1.4 \
- --gas-prices 500aechelon \
- --keyring-backend=file \
- --from polkachu
+ --chain-id elgafar-1 \
+ --from stargaze_test
