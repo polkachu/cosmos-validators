@@ -4,7 +4,7 @@
 ## 2. Bitcanna: bitcanna-1
 ## 3. Chihuahua: chihuahua-1
 ## 4. Comdex: comdex-1
-## 5. Evmos: evmos_9001-1 (paused)
+## 5. Evmos: evmos_9001-1
 ## 6. Kichain: kichain-2
 ## 8. Sifchain: sifchain-1
 ## 9. Stargaze: stargaze-1
@@ -84,6 +84,7 @@ list = [
   ['transfer', 'channel-51'], # Bitcanna
   ['transfer', 'channel-113'], # Chihuahua
   ['transfer', 'channel-87'], # Comdex
+  ['transfer', 'channel-204'], # Evmos
   ['transfer', 'channel-77'], # Kichain
   ['transfer', 'channel-47'], # Sifchain
   ['transfer', 'channel-75'], # Stargaze
@@ -204,6 +205,35 @@ trust_threshold = { numerator = '1', denominator = '3' }
 policy = 'allow'
 list = [
   ['transfer', 'channel-1'],  # Osmosis
+]
+
+[[chains]]
+id = 'evmos_9001-2'
+rpc_addr = 'http://{{ juno_relayer_ip }}:34657'
+grpc_addr = 'http://{{ juno_relayer_ip }}:34090'
+websocket_addr = 'ws://{{ juno_relayer_ip }}:34657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'evmos'
+key_name = 'evmos-relayer'
+store_prefix = 'ibc'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/ethermint.crypto.v1.ethsecp256k1.PubKey' } }
+default_gas = 1000000
+max_gas = 4000000
+gas_price = { price = 20000000000, denom = 'aevmos' }
+gas_adjustment = 0.2
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '7days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3'}
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    ['transfer', 'channel-0'], # Osmosis
 ]
 
 [[chains]]
