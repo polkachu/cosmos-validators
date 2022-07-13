@@ -1,0 +1,9 @@
+network: stride
+folder: '.stride'
+daemon: strided
+chain_id: 'STRIDE-1'
+node_version: 'bbd47cf5dc52f75e3689663dc12a406d8ef718a2'
+repo: https://github.com/Stride-Labs/stride.git
+genesis: https://raw.githubusercontent.com/Stride-Labs/testnet/main/poolparty/genesis.json
+seeds: '209c8fc143ddb7424307ea250d6a3538384eb032@seedv1.poolparty.stridenet.co:26656'
+custom_port_prefix: 22
