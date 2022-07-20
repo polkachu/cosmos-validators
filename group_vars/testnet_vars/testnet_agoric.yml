@@ -1,0 +1,9 @@
+network: agoric
+folder: '.agoric'
+daemon: ag0
+chain_id: 'agoricollinet-11'
+node_version: 'agoric-upgrade-5'
+repo: 'https://github.com/Agoric/ag0'
+genesis: 'https://ollinet.rpc.agoric.net:443/genesis'
+seeds: 'fb86a0993c694c981a28fa1ebd1fd692f345348b@35.226.232.179:26656'
+custom_port_prefix: 44
