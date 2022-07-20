@@ -1,3 +1,5 @@
+### This is Polkachu Kujira Relayer Hub.
+
 # The global section has parameters that apply globally to the relayer operation.
 [global]
 log_level = 'info'
@@ -31,48 +33,48 @@ tx_confirmation = true
 [rest]
 enabled = true
 host = '127.0.0.1'
-port = 4000
+port = 5000
 
 [telemetry]
 enabled = true
 host = '0.0.0.0'
-port = 4001
-
+port = 5001
 
 #
-# Chain configuration Osmosis
+# Chain configuration Kujira
 #
 
 [[chains]]
-id = 'injective-1'
-rpc_addr = 'http://127.0.0.1:43657'
-grpc_addr = 'http://127.0.0.1:9900'
-websocket_addr = 'ws://127.0.0.1:43657/websocket'
+id = 'kaiyo-1'
+rpc_addr = 'http://{{ osmosis_relayer_ip }}:18657'
+grpc_addr = 'http://{{ osmosis_relayer_ip }}:18090'
+websocket_addr = 'ws://{{ osmosis_relayer_ip }}:18657/websocket'
 
 rpc_timeout = '20s'
-account_prefix = 'inj'
-key_name = 'injective-relayer'
-address_type = { derivation = 'ethermint', proto_type = { pk_type = '/injective.crypto.v1beta1.ethsecp256k1.PubKey' } }
+account_prefix = 'kujira'
+key_name = 'kujira-relayer'
+address_type = { derivation = 'cosmos' }
 store_prefix = 'ibc'
 default_gas = 100000
-max_gas = 5000000
-gas_price = { price = 500000000, denom = 'inj' }
+max_gas = 3500000
+gas_price = { price = 0.00125, denom = 'ukuji' }
 gas_adjustment = 0.2
 max_msg_num = 30
-max_tx_size = 1800000
-clock_drift = '15s'
+max_tx_size = 2000000
+clock_drift = '45s'
 max_block_time = '10s'
-trusting_period = '7days'
-memo_prefix = 'Relayed by Polkachu'
+trusting_period = '10days'
+memo_prefix = ''
 trust_threshold = { numerator = '1', denominator = '3' }
 
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-8'], # Osmosis
-  ['transfer', 'channel-76'], # Chihuahua
-  ['transfer', 'channel-83'], # Evmos
-  ['transfer', 'channel-1'], # Cosmos
+  ['transfer', 'channel-3'], # Osmosis
+  ['transfer', 'channel-0'], # Cosmos
+  ['transfer', 'channel-1'], # Juno
+  ['transfer', 'channel-9'], # Axelar
+  ['transfer', 'channel-23'], # Evmos
 ]
 
 [[chains]]
@@ -101,36 +103,7 @@ trust_threshold = { numerator = '1', denominator = '3' }
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-122'], # Injective
-]
-
-[[chains]]
-id = 'chihuahua-1'
-rpc_addr = 'http://{{ osmosis_relayer_ip }}:29657'
-grpc_addr = 'http://{{ osmosis_relayer_ip }}:29090'
-websocket_addr = 'ws://{{ osmosis_relayer_ip }}:29657/websocket'
-
-rpc_timeout = '20s'
-account_prefix = 'chihuahua'
-key_name = 'chihuahua-relayer'
-address_type = { derivation = 'cosmos' }
-store_prefix = 'ibc'
-default_gas = 100000
-max_gas = 3500000
-gas_price = { price = 0.05, denom = 'uhuahua' }
-gas_adjustment = 0.2
-max_msg_num = 30
-max_tx_size = 1800000
-clock_drift = '10s'
-max_block_time = '10s'
-trusting_period = '7days'
-memo_prefix = 'Relayed by Polkachu'
-trust_threshold = { numerator = '1', denominator = '3' }
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-  ['transfer', 'channel-12'], # Injective
+  ['transfer', 'channel-259'], # kujira
 ]
 
 [[chains]]
@@ -159,7 +132,66 @@ trust_threshold = { numerator = '1', denominator = '3' }
 [chains.packet_filter]
 policy = 'allow'
 list = [
-  ['transfer', 'channel-220'], # Injective
+  ['transfer', 'channel-343'], # Kujira
+]
+
+[[chains]]
+id = 'juno-1'
+rpc_addr = 'http://{{ juno_relayer_ip }}:26657'
+grpc_addr = 'http://{{ juno_relayer_ip }}:9090'
+websocket_addr = 'ws://{{ juno_relayer_ip }}:26657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'juno'
+key_name = 'juno-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.0025, denom = 'ujuno' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '14days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-87'], # kujira
+]
+
+
+[[chains]]
+id = 'axelar-dojo-1'
+rpc_addr = 'http://localhost:51657'
+grpc_addr = 'http://localhost:51090'
+websocket_addr = 'ws://localhost:51657/websocket'
+
+rpc_timeout = '20s'
+account_prefix = 'axelar'
+key_name = 'axelar-relayer'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 1000000
+gas_price = { price = 0.0025, denom = 'uaxl' }
+gas_adjustment = 0.2
+max_msg_num = 30
+max_tx_size = 1800000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '14days'
+memo_prefix = 'Relayed by Polkachu'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-14'], # kujira
 ]
 
 [[chains]]
@@ -188,5 +220,5 @@ trust_threshold = { numerator = '1', denominator = '3'}
 [chains.packet_filter]
 policy = 'allow'
 list = [
-    ['transfer', 'channel-10'], # Injective
+    ['transfer', 'channel-18'], # Kujira
 ]

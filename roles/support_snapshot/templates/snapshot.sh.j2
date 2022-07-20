@@ -8,7 +8,7 @@ sleep 5
 
 # Make sure the service is running
 sudo service {{ network }} start
-sleep 5
+sleep 30
 
 # Get block height
 BLOCK_HEIGHT=$(curl -s http://localhost:{{ custom_port_prefix }}657/status | jq -r .result.sync_info.latest_block_height)
