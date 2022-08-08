@@ -1,9 +1,9 @@
 network: stride
 folder: '.stride'
 daemon: strided
-chain_id: 'STRIDE-1'
-node_version: 'bbd47cf5dc52f75e3689663dc12a406d8ef718a2'
+chain_id: 'STRIDE-TESTNET-2'
+node_version: 'v0.0.6'
 repo: https://github.com/Stride-Labs/stride.git
 genesis: https://raw.githubusercontent.com/Stride-Labs/testnet/main/poolparty/genesis.json
-seeds: 'baee9ccc2496c2e3bebd54d369c3b788f9473be9@seedv1.poolparty.stridenet.co:26656'
+addrbook_file: https://raw.githubusercontent.com/obajay/nodes-Guides/main/Stride/addrbook.json
 custom_port_prefix: 22

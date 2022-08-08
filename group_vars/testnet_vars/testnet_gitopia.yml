@@ -1,7 +1,7 @@
 network: gitopia
 folder: '.gitopia'
 daemon: gitopiad
-chain_id: gitopia-janus-testnet-1
+chain_id: gitopia-janus-testnet-2
 node_version: v0.13.0
 repo: gitopia://gitopia1dlpc7ps63kj5v0kn5v8eq9sn2n8v8r5z9jmwff/gitopia
 genesis: 'missing_genesis'

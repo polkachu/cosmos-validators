@@ -81,21 +81,34 @@ chaind tx staking delegate kyvevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslxlnsvh 13
 
 echelond tx staking create-validator --amount=1000000000000000000000000aechelon --pubkey=$(echelond tendermint show-validator) --moniker="" --from=<echelonaddress> --min-self-delegation="1" --commission-max-change-rate="0.01" --commission-max-rate="0.20" --commission-rate="0.05" --chain-id=echelon_3000-3
 
-comdex tx staking create-validator \
- --amount 1000000ucmdx \
+strided tx staking create-validator \
+ --amount 1900000ustrd \
  --commission-max-change-rate "0.05" \
  --commission-max-rate "0.10" \
  --commission-rate "0.05" \
  --min-self-delegation "1" \
- --pubkey=$(comdex tendermint show-validator) \
+ --pubkey=$(strided tendermint show-validator) \
  --moniker 'polkachu.com' \
  --website "https://polkachu.com" \
  --identity "0A6AF02D1557E5B4" \
  --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
  --security-contact="hello@polkachu.com" \
- --chain-id meteor-test \
- --node http://localhost:31657 \
- --gas auto \
- --gas-prices 0.2ucmdx \
- --gas-adjustment 1.5 \
- --from comdex_test2
+ --chain-id STRIDE-TESTNET-2 \
+ --node http://localhost:22657 \
+ --from stride_test
+
+seid tx staking create-validator \
+ --amount 2000000usei \
+ --commission-max-change-rate "0.05" \
+ --commission-max-rate "0.10" \
+ --commission-rate "0.05" \
+ --min-self-delegation "1" \
+ --pubkey=$(seid tendermint show-validator) \
+ --moniker 'polkachu.com' \
+ --website "https://polkachu.com" \
+ --identity "0A6AF02D1557E5B4" \
+ --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
+ --security-contact="hello@polkachu.com" \
+ --chain-id sei-devnet-1 \
+ --node http://localhost:19657 \
+ --from sei_test2
