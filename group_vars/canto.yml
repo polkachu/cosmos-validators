@@ -1,0 +1,19 @@
+network: canto
+folder: '.cantod'
+daemon: cantod
+chain_id: 'canto_7700-1'
+node_version: 'v2.0.0'
+repo: 'https://github.com/Canto-Network/Canto.git'
+genesis: 'http://164.90.154.41:26657/genesis'
+minimum_gas_price: '0.0001acanto'
+peers: 'ec770ae4fd0fb4871b9a7c09f61764a0b010b293@164.90.134.106:26656,ef45c32b232b772dd82b2f801f0e6abd3842e66c@164.90.154.41:26656'
+custom_port_prefix: 55
+
+# [Optional] Cosmos exporter
+denom: acanto
+denom_prefix: canto
+
+# [Optional] Snapshot
+snapshot_server: 1
+snapshot_hour: 8
+snapshot_minute: 0

@@ -1,7 +1,7 @@
 network: agoric
 folder: '.agoric'
 daemon: ag0
-chain_id: 'agoric-emerynet-4'
+chain_id: 'agoric-emerynet-5'
 node_version: 'agoric-upgrade-6'
 repo: 'https://github.com/Agoric/ag0'
 genesis: 'https://emerynet.rpc.agoric.net/genesis'

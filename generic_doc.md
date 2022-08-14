@@ -15,6 +15,18 @@ seid gentx sei_test 1000000usei \
  --commission-rate=0.05
 ```
 
+```
+passage gentx polkachu 9000000upasg --chain-id passage-1 \
+ --moniker ' polkachu.com' \
+ --website "https://polkachu.com" \
+ --identity "0A6AF02D1557E5B4" \
+ --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
+ --security-contact="hello@polkachu.com" \
+ --commission-max-change-rate=0.05 \
+ --commission-max-rate=0.10 \
+ --commission-rate=0.05
+```
+
 Create validator
 
 ```bash
@@ -112,3 +124,39 @@ seid tx staking create-validator \
  --chain-id sei-devnet-1 \
  --node http://localhost:19657 \
  --from sei_test2
+
+curl https://emerynet.rpc.agoric.net/genesis | jq .result.genesis > $HOME/.agoric/config/genesis.json
+
+ag0 tx staking create-validator \
+ --amount 74000000ubld \
+ --commission-max-change-rate "0.05" \
+ --commission-max-rate "0.10" \
+ --commission-rate "0.05" \
+ --min-self-delegation "1" \
+ --pubkey=$(ag0 tendermint show-validator) \
+ --moniker 'polkachu.com' \
+ --website "https://polkachu.com" \
+ --identity "0A6AF02D1557E5B4" \
+ --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
+ --security-contact="hello@polkachu.com" \
+ --chain-id agoric-emerynet-5 \
+ --node http://localhost:44657 \
+ --from agoric_test
+
+cantod tx staking create-validator \
+ --amount 2000000000000000000000acanto \
+ --commission-max-change-rate "0.05" \
+ --commission-max-rate "0.10" \
+ --commission-rate "0.05" \
+ --min-self-delegation "1" \
+ --pubkey=$(cantod tendermint show-validator) \
+ --moniker ' polkachu.com' \
+ --website "https://polkachu.com" \
+ --identity "0A6AF02D1557E5B4" \
+ --details "Polkachu is the trusted staking service provider for blockchain projects. 100% refund for downtime slash. Contact us at hello@polkachu.com" \
+ --security-contact="hello@polkachu.com" \
+ --chain-id canto_7700-1 \
+ --node http://localhost:55657 \
+ --gas 300000 \
+ --fees 100acanto \
+ --from polkachu
