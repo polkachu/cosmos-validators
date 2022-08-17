@@ -1,5 +1,4 @@
 inventory
 inventory_testnet
-test.sh
-governance.json
+playground/
 roles/support_seed/templates/node_key.json.j2
