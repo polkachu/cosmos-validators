@@ -1,0 +1,10 @@
+network: craft
+folder: '.craftd'
+daemon: craftd
+chain_id: 'craft-v4'
+node_version: 'v0.5.2'
+repo: 'https://github.com/notional-labs/craft.git'
+genesis: 'https://raw.githubusercontent.com/notional-labs/craft/master/networks/craft-v4/genesis.json'
+minimum_gas_price: '0.025ucraft'
+peers: 'e57fc7232493744712f492f1a00695d9b92329e9@65.109.38.251:26656,dff2cfd62d5feade581e2acfd661a0abf633b7d5@194.34.232.224:16656,58b51d09a9adc58b95cdf100c2da59ba9c6b52b2@65.108.75.237:5000,ad9c6f072871cb9f520dc6ac1b3fb96f4cee69db@65.21.230.104:26699,15ff7f937b5870991e60b61108e9a3f4c92fe0e9@65.108.71.140:26696,2817bb21d28ae415ef2b97385cd5c9f2f6f87468@65.108.127.50:57656,bad483fada6e60789f4b9ef783ae9f4b95ce3d89@68.183.124.157:26656,ad9c6f072871cb9f520dc6ac1b3fb96f4cee69db@65.21.230.104:26699'
+custom_port_prefix: 57
