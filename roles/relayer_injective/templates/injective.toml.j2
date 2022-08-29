@@ -45,9 +45,9 @@ port = 4001
 
 [[chains]]
 id = 'injective-1'
-rpc_addr = 'http://127.0.0.1:43657'
-grpc_addr = 'http://127.0.0.1:9900'
-websocket_addr = 'ws://127.0.0.1:43657/websocket'
+rpc_addr = 'http://{{ relayer4_ip }}:43657'
+grpc_addr = 'http://{{ relayer4_ip }}:9900'
+websocket_addr = 'ws://{{ relayer4_ip }}:43657/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'inj'
@@ -77,9 +77,9 @@ list = [
 
 [[chains]]
 id = 'osmosis-1'
-rpc_addr = 'http://{{ osmosis_relayer_ip }}:26657'
-grpc_addr = 'http://{{ osmosis_relayer_ip }}:9090'
-websocket_addr = 'ws://{{ osmosis_relayer_ip }}:26657/websocket'
+rpc_addr = 'http://{{ relayer2_ip }}:26657'
+grpc_addr = 'http://{{ relayer2_ip }}:9090'
+websocket_addr = 'ws://{{ relayer2_ip }}:26657/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'osmo'
@@ -106,9 +106,9 @@ list = [
 
 [[chains]]
 id = 'chihuahua-1'
-rpc_addr = 'http://{{ osmosis_relayer_ip }}:29657'
-grpc_addr = 'http://{{ osmosis_relayer_ip }}:29090'
-websocket_addr = 'ws://{{ osmosis_relayer_ip }}:29657/websocket'
+rpc_addr = 'http://{{ relayer2_ip }}:29657'
+grpc_addr = 'http://{{ relayer2_ip }}:29090'
+websocket_addr = 'ws://{{ relayer2_ip }}:29657/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'chihuahua'
@@ -164,9 +164,9 @@ list = [
 
 [[chains]]
 id = 'evmos_9001-2'
-rpc_addr = 'http://{{ juno_relayer_ip }}:34657'
-grpc_addr = 'http://{{ juno_relayer_ip }}:34090'
-websocket_addr = 'ws://{{ juno_relayer_ip }}:34657/websocket'
+rpc_addr = 'http://{{ relayer1_ip }}:34657'
+grpc_addr = 'http://{{ relayer1_ip }}:34090'
+websocket_addr = 'ws://{{ relayer1_ip }}:34657/websocket'
 
 rpc_timeout = '20s'
 account_prefix = 'evmos'

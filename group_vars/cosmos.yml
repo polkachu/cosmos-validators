@@ -7,7 +7,8 @@ repo: 'https://github.com/cosmos/gaia'
 genesis: 'https://github.com/cosmos/mainnet/raw/master/genesis.cosmoshub-4.json.gz'
 genesis_processing: gz
 minimum_gas_price: '0.0025uatom'
-peers: 'a6c9ca56d35970742f0261d0eaf012c22079fda5@207.180.196.108:26656,6e08b23315a9f0e1b23c7ed847934f7d6f848c8b@165.232.156.86:26656,ee27245d88c632a556cf72cc7f3587380c09b469@45.79.249.253:26656,538ebe0086f0f5e9ca922dae0462cc87e22f0a50@34.122.34.67:26656,d3209b9f88eec64f10555a11ecbf797bb0fa29f4@34.125.169.233:26656,bdc2c3d410ca7731411b7e46a252012323fbbf37@34.83.209.166:26656,5b4ed476e01c49b23851258d867cc0cfc0c10e58@206.189.4.227:26656'
+peers: '3aa86f390e71f416f66dcf68b22b1b640f1fa23d@65.108.131.174:49656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:49656'
 custom_port_prefix: 49
 
 # [Optional] Cosmos exporter

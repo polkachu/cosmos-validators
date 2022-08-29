@@ -141,5 +141,4 @@ Because this repo tries to accommodate as many Tendermint-based chains as possib
 | Axelar           | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
 | Canto            | genesis file needs to be unwrapped from .result.genesis  | Unwrap genesis with jq command                                                       |
 | Injective        | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
-| Fetch            | State-sync is not supported                              | Adjust the state-sync setting                                                        |
 | Celestia testnet | inconsistent config.toml file variable naming convention | Manually adjust config.toml file                                                     |

@@ -2,11 +2,10 @@ network: kichain
 folder: '.kid'
 daemon: kid
 chain_id: kichain-2
-node_version: '2.0.1'
+node_version: '3.0.0'
 repo: https://github.com/KiFoundation/ki-tools.git
 genesis: 'https://github.com/KiFoundation/ki-networks/raw/v0.1/Mainnet/kichain-2/genesis.json'
-peers: '81396d4703a2e3cbd136c7324e4df5686fd48218@35.180.8.214:26656,c597db55d9a609b8b77c3d37ecf1fa9a67117cc0@144.217.82.4:26656,50af457247b59aa558a26a14bd7ac4bf86eeae70@195.201.164.223:26656,81eef39d2ca9a07490857d197423da4ba5e01879@15.188.134.35:26656,5adb5ad6a6fcef624866cefdb551dafdc07f7e78@15.188.198.188:26656,41b321292cbe50c5c30017cc71c404481be0e20b@3.38.12.5:26656'
-seeds: '24cbccfa8813accd0ebdb09e7cdb54cff2e8fcd9@51.89.166.197:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:35656'
 minimum_gas_price: '0.025uxki'
 custom_port_prefix: 35
 

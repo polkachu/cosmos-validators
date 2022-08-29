@@ -25,7 +25,6 @@
 - name: download Promtail
   get_url:
     url: 'https://github.com/grafana/loki/releases/download/v{{ promtail_version }}/promtail-linux-amd64.zip'
-    checksum: 'sha256:{{ promtail_checksum }}'
     dest: '/tmp/promtail-linux-amd64.zip'
     mode: '0700'
 

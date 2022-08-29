@@ -3,9 +3,9 @@ folder: '.injectived'
 daemon: injectived
 chain_id: injective-1
 genesis: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/genesis.json
-binary: https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.5.0-1649280277/linux-amd64.zip
+binary: https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.6.0-1656650662/linux-amd64-1.zip
 binary_processing: zip
-seeds: '2ee7586d8e5a4a2020dafddf68efdfdaa3606cc3@145.40.67.249:26656,7bb20f8e9fa73e34d0d21862528d5fba839eeb56@145.40.73.39:26656,de25916e19083d44d67e0c336199b215523f1578@145.40.68.223:26656,1a2ccd9c436eae54d6c767ad566c58dce78f8be2@145.40.68.125:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:43656'
 app_file: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/app.toml
 minimum_gas_price: '500000000inj'
 custom_port_prefix: 43

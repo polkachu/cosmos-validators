@@ -2,11 +2,12 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9001-2
-node_version: v4.0.1
+node_version: v7.0.0
 repo: https://github.com/tharsis/evmos
 genesis: 'https://github.com/tharsis/mainnet/blob/main/evmos_9001-2/genesis.json.zip?raw=true'
 genesis_processing: zip
-peers: 'd8ac979da3dbe2f796e2344616096160dc5cfdc1@164.92.191.127:26656,d5d418256279900c3d1fbf2137ce7142d6f6c682@65.108.139.20:26656,1915b0217865b968646768e2761a8669d5e24bd5@65.108.44.149:26656,1a7bee67d6337d09380b824b952872bdc5dca86f@38.242.194.56:26656,b02259a11e4ee46b29668cfc957e530022a3fca1@62.171.142.145:26656,cc321917ce82b6c541c687420ad5ae0b4b5e055a@144.76.224.246:26656'
+peers: 'de5dabf3da0efc1a0c0ea9791f111d0b5d0a2aa9@65.108.138.80:34656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:34656'
 minimum_gas_price: '2500000000000aevmos'
 custom_port_prefix: 34
 

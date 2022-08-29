@@ -1,13 +1,11 @@
 # node_exporter
-node_exporter_version: '1.2.2'
-node_exporter_checksum: '344bd4c0bbd66ff78f14486ec48b89c248139cdd485e992583ea30e89e0e5390'
+node_exporter_version: '1.1.1'
 
 # promtail
-promtail_version: '2.4.1'
-promtail_checksum: 978391a174e71cfef444ab9dc012f95d5d7eae0d682eaf1da2ea18f793452031
+promtail_version: '2.6.1'
 
 # go
-go_version: '1.18.3'
+go_version: '1.18.5'
 
 # cosmovisor
 cosmovisor_version: 'v1.0.0'
