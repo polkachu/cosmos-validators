@@ -4,7 +4,7 @@ daemon: gaiad
 chain_id: cosmoshub-4
 node_version: v7.0.1
 repo: 'https://github.com/cosmos/gaia'
-genesis: 'https://github.com/cosmos/mainnet/raw/master/genesis.cosmoshub-4.json.gz'
+genesis: 'https://github.com/cosmos/mainnet/blob/master/genesis/genesis.cosmoshub-4.json.gz?raw=true'
 genesis_processing: gz
 minimum_gas_price: '0.0025uatom'
 peers: '3aa86f390e71f416f66dcf68b22b1b640f1fa23d@65.108.131.174:49656'

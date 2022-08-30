@@ -1,8 +1,9 @@
+# Note: need to install manually because there is no "make install"
 network: axelar
 folder: '.axelar'
 daemon: axelard
 chain_id: 'axelar-dojo-1'
-node_version: 'v0.20.0'
+node_version: 'v0.24.0'
 repo: 'https://github.com/axelarnetwork/axelar-core'
 config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
 app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'
