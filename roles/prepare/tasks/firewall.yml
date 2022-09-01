@@ -1,35 +1,24 @@
 ---
-- name: install packages
+- name: Install ufw
   apt:
     name: ufw
     state: present
     update_cache: yes
 
-- name: ufw already enabled
-  command: ufw status verbose
-  register: ufw_status_result
-  changed_when: False
-
-- name: open node_exporter port
-  command: ufw allow 9100/tcp
+- name: Open node_exporter port
+  ufw:
+    rule: allow
+    proto: tcp
+    port: 9100
   when:
-    - not ufw_status_result.stdout is search("9100/tcp.*ALLOW IN.*Anywhere")
     - node_exporter|bool == true
 
-- name: open prometheus port
-  command: ufw allow 26660/tcp
-  when:
-    - not ufw_status_result.stdout is search("26660/tcp.*ALLOW IN.*Anywhere")
+- name: Open ssh port
+  ufw:
+    rule: limit
+    port: "{{ ansible_port }}"
+    proto: tcp
 
-- name: open p2p port
-  command: ufw allow 26656/tcp
-  when:
-    - not ufw_status_result.stdout is search("26656/tcp.*ALLOW IN.*Anywhere")
-
-- name: enable firewall
-  shell: |
-    set -o pipefail
-    echo "y" | ufw enable
-  args:
-    executable: /bin/bash
-  when: not ufw_status_result.stdout is search("Status.* active")
+- name: Enable firewall
+  ufw: 
+    state: enabled
