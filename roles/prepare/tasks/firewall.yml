@@ -16,9 +16,9 @@
 - name: Open ssh port
   ufw:
     rule: limit
-    port: "{{ ansible_port }}"
+    port: '{{ ansible_port }}'
     proto: tcp
 
 - name: Enable firewall
-  ufw: 
+  ufw:
     state: enabled
