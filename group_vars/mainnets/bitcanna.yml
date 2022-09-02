@@ -1,0 +1,20 @@
+network: bitcanna
+folder: '.bcna'
+daemon: bcnad
+chain_id: bitcanna-1
+node_version: v.1.3.1
+repo: https://github.com/BitCannaGlobal/bcna
+genesis: 'https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/genesis.json'
+peers: '7b2d10d188926ea25eb209f037fe4e67e16e06b6@92.222.25.18:26656,5eb75c20a77ccf960df396b187b86d6324b40123@51.68.226.61:26656,6bd989f063b89be680fb3c55c4cf1720a892b12c@161.97.96.253:26656,3cdfe02efd4432280707d2949e064a9d8db412b3@178.62.98.158:26656,d806bb39349751c142627a547c23c586a787ef26@138.68.78.210:26656,ddb620e7c7a6b5a8a53352037cde927681012ab4@65.21.229.209:37656,ecf729b2fb3c1038c55bd099b35c5d5b1d158c2b@178.62.236.228:26656,dcdc83e240eb046faabef62e4daf1cfcecfa93a2@159.65.198.245:26656'
+seeds: 'd6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656,23671067d0fd40aec523290585c7d8e91034a771@seed2.bitcanna.io:26656'
+minimum_gas_price: '0.001ubcna'
+custom_port_prefix: 130
+
+# [Optional] Cosmos exporter
+denom: bcna
+denom_prefix: bcna
+
+# [Optional] Snapshot
+snapshot_server: 1
+snapshot_hour: 1
+snapshot_minute: 30

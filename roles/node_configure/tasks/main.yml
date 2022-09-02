@@ -8,7 +8,7 @@
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'external_address = "'
-    line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}656"'
+    line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}56"'
     state: present
 
 - name: Adjust config.toml port
@@ -60,8 +60,8 @@
 - name: Open RPC port for relayer
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
-    regexp: '{{ custom_port_prefix }}657'
-    line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}657"'
+    regexp: '{{ custom_port_prefix }}57'
+    line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}57"'
     state: present
   when: type == 'relayer'
 
