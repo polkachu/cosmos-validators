@@ -17,11 +17,17 @@
 
 - name: open prometheus port
   become: true
-  command: 'ufw allow {{ custom_port_prefix }}660/tcp'
+  ufw:
+    rule: allow
+    port: '{{ custom_port_prefix }}660'
+    proto: tcp
 
 - name: open p2p port
   become: true
-  command: 'ufw allow {{ custom_port_prefix }}656/tcp'
+  ufw:
+    rule: allow
+    port: '{{ custom_port_prefix }}656'
+    proto: tcp
 
 - name: Create cosmovisor directories
   file:
