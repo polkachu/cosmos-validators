@@ -8,11 +8,6 @@ genesis: 'https://raw.githubusercontent.com/envadiv/mainnet/main/passage-1/genes
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:56656'
 custom_port_prefix: 156
 
-# [Optional] Cosmos exporter
-denom: upasg
-denom_prefix: pasg
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 8
 snapshot_minute: 0

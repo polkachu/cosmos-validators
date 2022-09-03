@@ -1,0 +1,14 @@
+network: vidulum
+folder: '.vdl'
+daemon: vidulumd
+chain_id: vidulum-1
+node_version: v1.0.0
+repo: https://github.com/vidulum/mainnet
+genesis: https://raw.githubusercontent.com/vidulum/mainnet/main/genesis.json
+seeds: '883ec7d5af7222c206674c20c997ccc5c242b38b@ec2-3-82-120-39.compute-1.amazonaws.com:26656'
+minimum_gas_price: ''
+custom_port_prefix: 170
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

@@ -6,7 +6,7 @@ node_version: '1.0.6beta'
 repo: https://github.com/sei-protocol/sei-chain.git
 genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-1/genesis.json
 addrbook_file: 'https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-1/addrbook.json'
-custom_port_prefix: 19
+custom_port_prefix: 119
 # network: sei
 # folder: '.sei'
 # daemon: seid
@@ -15,4 +15,4 @@ custom_port_prefix: 19
 # repo: https://github.com/sei-protocol/sei-chain.git
 # genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json
 # peers: 'a37d65086e78865929ccb7388146fb93664223f7@18.144.13.149:26656,8ff4bd654d7b892f33af5a30ada7d8239d6f467b@91.223.3.190:51656,c4e8c9b1005fe6459a922f232dd9988f93c71222@65.108.227.133:26656'
-# custom_port_prefix: 19
+# custom_port_prefix: 119

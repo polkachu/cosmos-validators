@@ -10,11 +10,6 @@ app_file: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/
 minimum_gas_price: '500000000inj'
 custom_port_prefix: 143
 
-# [Optional] Cosmos exporter
-denom: inj
-denom_prefix: inj
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 4
 snapshot_minute: 0

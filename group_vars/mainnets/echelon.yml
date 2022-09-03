@@ -9,6 +9,5 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20656'
 custom_port_prefix: 120
 
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 7
 snapshot_minute: 30

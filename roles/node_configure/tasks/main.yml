@@ -18,6 +18,18 @@
     line: '{{ item.value }}'
   loop: '{{ config_port_changes | dict2items }}'
 
+- name: Adjust Inbound Peers
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'max_num_inbound_peers'
+    line: 'max_num_inbound_peers = 80'
+
+- name: Adjust Outbound Peers
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'max_num_outbound_peers'
+    line: 'max_num_outbound_peers = 60'
+
 - name: Adjust app.toml ports
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'

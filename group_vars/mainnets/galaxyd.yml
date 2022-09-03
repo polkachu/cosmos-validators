@@ -9,11 +9,6 @@ peers: '842898fce21e24d2a16037754279e6e64bed03e7@65.108.131.174:48656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:48656'
 custom_port_prefix: 148
 
-# [Optional] Cosmos exporter
-denom: glx
-denom_prefix: galaxy
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 6
 snapshot_minute: 0

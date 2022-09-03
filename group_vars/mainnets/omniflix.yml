@@ -1,0 +1,14 @@
+network: omniflix
+folder: '.omniflixhub'
+daemon: omniflixhubd
+chain_id: omniflixhub-1
+node_version: v0.4.1
+repo: https://github.com/OmniFlix/omniflixhub
+genesis: https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json
+seeds: '9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae28207474eb9f168fff9720fd4d418df1ed@35.240.196.102:26656'
+minimum_gas_price: ''
+custom_port_prefix: 169
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

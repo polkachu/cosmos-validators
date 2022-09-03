@@ -9,12 +9,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:35656'
 minimum_gas_price: '0.025uxki'
 custom_port_prefix: 135
 
-# [Optional] Cosmos exporter
-denom: xki
-denom_prefix: ki
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 2
 snapshot_minute: 30
 wasm: true

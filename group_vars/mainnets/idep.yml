@@ -1,0 +1,14 @@
+network: idep
+folder: '.ion'
+daemon: iond
+chain_id: Antora
+node_version: v1.0.0
+repo: https://github.com/IDEP-network/ion
+genesis: https://github.com/IDEP-network/Antora/raw/main/genesis.json
+seeds: '6e52997400aaa1b3d2155e45cf2559bf7a4c5e76@164.92.161.91:26656'
+minimum_gas_price: ''
+custom_port_prefix: 165
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

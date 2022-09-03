@@ -1,0 +1,14 @@
+network: impacthub
+folder: '.ixod'
+daemon: ixod
+chain_id: impacthub-3
+node_version: v0.16.2
+repo: https://github.com/ixofoundation/ixo-blockchain
+genesis: https://github.com/ixofoundation/genesis/raw/master/impacthub-3/genesis.json
+seeds: '36e4738c7efcf353d3048e5e6073406d045bae9d@80.64.208.43:26656'
+minimum_gas_price: '0.0025uixo'
+custom_port_prefix: 166
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

@@ -10,11 +10,6 @@ seeds: 'aef35f45db2d9f5590baa088c27883ac3d5e0b33@3.108.102.92:26656,7ca14a1d1562
 minimum_gas_price: '0.025ucmdx'
 custom_port_prefix: 131
 
-# [Optional] Cosmos exporter
-denom: cmdx
-denom_prefix: comdex
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 2
 snapshot_minute: 0
