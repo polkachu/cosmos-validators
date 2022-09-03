@@ -9,11 +9,6 @@ seeds: 'ffa27441ca78a5d41a36f6d505b67a145fd54d8a@95.217.156.228:26656,efd52c1e56
 minimum_gas_price: ''
 custom_port_prefix: 160
 
-# [Optional] Cosmos exporter
-denom: btsg
-denom_prefix: bitsong
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

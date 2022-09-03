@@ -9,11 +9,6 @@ seeds: '27eb432ccd5e895c5c659659120d68b393dd8c60@35.247.65.183:26656,8e2f56098f1
 minimum_gas_price: '0.025uakt'
 custom_port_prefix: 28
 
-# [Optional] Cosmos exporter
-denom: atk
-denom_prefix: akash
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 0
 snapshot_minute: 30

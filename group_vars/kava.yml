@@ -9,11 +9,6 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:39656'
 minimum_gas_price: '0.001ukava'
 custom_port_prefix: 39
 
-# [Optional] Cosmos exporter
-denom: kava
-denom_prefix: kava
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 0
 snapshot_minute: 30

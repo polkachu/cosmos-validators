@@ -10,11 +10,6 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:32656'
 minimum_gas_price: '0.001rowan'
 custom_port_prefix: 32
 
-# [Optional] Cosmos exporter
-denom: rowan
-denom_prefix: sif
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 00

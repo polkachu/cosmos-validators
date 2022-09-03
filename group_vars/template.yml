@@ -1,19 +1,18 @@
-network: 
+network:
 folder: '.'
-daemon: 
-chain_id: 
-node_version: 
-repo: 
-genesis: 
+daemon:
+chain_id:
+node_version:
+repo:
+genesis:
 seeds: ''
 minimum_gas_price: ''
-custom_port_prefix: 
+custom_port_prefix:
 
 # [Optional] Cosmos exporter
-denom: 
-denom_prefix: 
+denom:
+denom_prefix:
 
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

@@ -10,6 +10,5 @@ peers: 'TBD'
 custom_port_prefix: 22
 
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 8
 snapshot_minute: 30

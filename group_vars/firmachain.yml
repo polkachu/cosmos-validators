@@ -9,11 +9,6 @@ seeds: 'f89dcc15241e30323ae6f491011779d53f9a5487@mainnet-seed1.firmachain.dev:26
 minimum_gas_price: ''
 custom_port_prefix: 164
 
-# [Optional] Cosmos exporter
-denom: fct
-denom_prefix: firma
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

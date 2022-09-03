@@ -9,11 +9,6 @@ seeds: '258a9bfb822637bfca87daaab6181c10e7fd0910@seed1.eu.cheqd.net:26656,f565ff
 minimum_gas_price: '25ncheq'
 custom_port_prefix: 161
 
-# [Optional] Cosmos exporter
-denom: ncheq
-denom_prefix: cheqd
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

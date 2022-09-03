@@ -9,11 +9,6 @@ peers: '00f7f4506d84f9d1458201946e1194564b444ce0@node14.konstellation.tech:26656
 minimum_gas_price: '0.0001udarc'
 custom_port_prefix: 33
 
-# [Optional] Cosmos exporter
-denom: darc
-denom_prefix: darc
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 3
 snapshot_minute: 30

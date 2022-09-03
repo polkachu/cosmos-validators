@@ -10,11 +10,6 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:46656'
 minimum_gas_price: '0umntl'
 custom_port_prefix: 46
 
-# [Optional] Cosmos exporter
-denom: mntl
-denom_prefix: mantle
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 5
 snapshot_minute: 0

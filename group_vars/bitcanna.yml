@@ -10,11 +10,7 @@ seeds: 'd6aa4c9f3ccecb0cc52109a95962b4618d69dd3f@seed1.bitcanna.io:26656,2367106
 minimum_gas_price: '0.001ubcna'
 custom_port_prefix: 30
 
-# [Optional] Cosmos exporter
-denom: bcna
-denom_prefix: bcna
 
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

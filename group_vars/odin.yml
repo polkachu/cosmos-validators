@@ -9,11 +9,6 @@ seeds: 'c8ee9f66163f0c1220c586eab1a2a57f6381357f@odin.seed.rhinostake.com:16658'
 minimum_gas_price: ''
 custom_port_prefix: 168
 
-# [Optional] Cosmos exporter
-denom: loki
-denom_prefix: odin
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

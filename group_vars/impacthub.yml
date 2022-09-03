@@ -9,11 +9,6 @@ seeds: '36e4738c7efcf353d3048e5e6073406d045bae9d@80.64.208.43:26656'
 minimum_gas_price: '0.0025uixo'
 custom_port_prefix: 166
 
-# [Optional] Cosmos exporter
-denom: ixo
-denom_prefix: ixo
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

@@ -10,12 +10,7 @@ peers: 'bbc473d27bb0771d18bd2df77c52b310b07f4e33@65.108.131.174:53656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:53656'
 custom_port_prefix: 53
 
-# [Optional] Cosmos exporter
-denom: nyx
-denom_prefix: unyx
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 7
 snapshot_minute: 0
 wasm: true

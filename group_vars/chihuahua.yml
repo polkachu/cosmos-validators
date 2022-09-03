@@ -10,11 +10,6 @@ seeds: '4936e377b4d4f17048f8961838a5035a4d21240c@chihuahua-seed-01.mercury-nodes
 minimum_gas_price: '1uhuahua'
 custom_port_prefix: 29
 
-# [Optional] Cosmos exporter
-denom: huahua
-denom_prefix: chihuahua
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 0
 snapshot_minute: 0

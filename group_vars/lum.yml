@@ -9,11 +9,6 @@ seeds: '19ad16527c98b782ee35df56b65a3a251bd99971@peer-1.mainnet.lum.network:2665
 minimum_gas_price: ''
 custom_port_prefix: 167
 
-# [Optional] Cosmos exporter
-denom: lum
-denom_prefix: lum 
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

@@ -8,11 +8,6 @@ genesis: 'https://github.com/umee-network/mainnet/raw/main/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:36656'
 custom_port_prefix: 36
 
-# [Optional] Cosmos exporter
-denom: umee
-denom_prefix: umee
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 2
 snapshot_minute: 0

@@ -9,11 +9,6 @@ seeds: '9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae2820
 minimum_gas_price: ''
 custom_port_prefix: 169
 
-# [Optional] Cosmos exporter
-denom: flix
-denom_prefix: omniflix
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 1
 snapshot_minute: 30

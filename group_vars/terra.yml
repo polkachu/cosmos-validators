@@ -10,11 +10,6 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17656'
 minimum_gas_price: '0.15uluna'
 custom_port_prefix: 17
 
-# [Optional] Cosmos exporter
-denom: luna
-denom_prefix: terra
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 7
 snapshot_minute: 0

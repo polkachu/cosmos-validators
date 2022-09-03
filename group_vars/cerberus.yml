@@ -9,11 +9,6 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:38656'
 minimum_gas_price: '0.025ucrbrus'
 custom_port_prefix: 38
 
-# [Optional] Cosmos exporter
-denom: crbrus
-denom_prefix: cerberus
-
 # [Optional] Snapshot
-snapshot_server: 1
 snapshot_hour: 3
 snapshot_minute: 0

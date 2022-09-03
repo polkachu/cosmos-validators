@@ -9,11 +9,6 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:26656'
 minimum_gas_price: '0.0025ujuno'
 custom_port_prefix: 26
 
-# [Optional] Cosmos exporter
-denom: juno
-denom_prefix: juno
-
 # [Optional] Snapshot
-snapshot_server: 2
 snapshot_hour: 0
 snapshot_minute: 0
