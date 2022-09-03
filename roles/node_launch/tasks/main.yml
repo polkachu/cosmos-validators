@@ -11,7 +11,7 @@
   become: true
   ufw:
     rule: allow
-    port: '{{ custom_port_prefix }61'
+    port: '{{ custom_port_prefix }}61'
     proto: tcp
 
 - name: open p2p port
