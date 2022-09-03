@@ -1,0 +1,15 @@
+network: konstellation
+folder: '.knstld'
+daemon: knstld
+chain_id: darchub
+node_version: v0.5.0
+repo: https://github.com/konstellation/konstellation
+genesis: 'https://raw.githubusercontent.com/Konstellation/konstellation/master/config/genesis.json'
+peers: '00f7f4506d84f9d1458201946e1194564b444ce0@node14.konstellation.tech:26656,06fed4bbe81ead6073a7254e860331179af74f4c@node3.konstellation.tech:26656,0f4eef8db37ec7ef9f6d3324689db2847ee8f795@node10.konstellation.tech:26656,1c9aff1ea9d1cafd584aa61a70582e7c4b0c8675@node5.konstellation.tech:26656,7e8119050ecb80450ad476b50423b9230c10c8d0@node11.konstellation.tech:26656,a32dda75cf5ffe4ab0ff9a0969e525807e01f2e5@node2.konstellation.tech:26656,d4a713a657883cca49d71b1b2cab4ab5e94b0843@node4.konstellation.tech:26656,dbb7589202f6c751f2b93c6bbcd0e660676ab91c@node12.konstellation.tech:26656,f2c2ebec24507d54fea88976e9f93f0fbfa0d6d0@node13.konstellation.tech:26656'
+seeds: 'dbb7589202f6c751f2b93c6bbcd0e660676ab91c@node12.konstellation.tech:26656,0f4eef8db37ec7ef9f6d3324689db2847ee8f795@node10.konstellation.tech:26656'
+minimum_gas_price: '0.0001udarc'
+custom_port_prefix: 133
+
+# [Optional] Snapshot
+snapshot_hour: 3
+snapshot_minute: 30

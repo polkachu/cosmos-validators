@@ -1,0 +1,9 @@
+network: agoric
+folder: '.agoric'
+daemon: ag0
+chain_id: 'agoric-emerynet-5'
+node_version: 'agoric-upgrade-6'
+repo: 'https://github.com/Agoric/ag0'
+genesis: 'https://emerynet.rpc.agoric.net/genesis'
+seeds: '0f04c4610b7511a64b8644944b907416db568590@34.135.175.105:26656'
+custom_port_prefix: 144

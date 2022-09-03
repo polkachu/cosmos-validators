@@ -1,0 +1,15 @@
+network: injective
+folder: '.injectived'
+daemon: injectived
+chain_id: injective-1
+genesis: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/genesis.json
+binary: https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.6.0-1656650662/linux-amd64-1.zip
+binary_processing: zip
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:43656'
+app_file: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/app.toml
+minimum_gas_price: '500000000inj'
+custom_port_prefix: 143
+
+# [Optional] Snapshot
+snapshot_hour: 4
+snapshot_minute: 0

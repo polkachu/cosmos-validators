@@ -1,0 +1,13 @@
+network: umee
+folder: '.umee'
+daemon: umeed
+chain_id: umee-1
+node_version: v1.0.3
+repo: https://github.com/umee-network/umee.git
+genesis: 'https://github.com/umee-network/mainnet/raw/main/genesis.json'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:36656'
+custom_port_prefix: 136
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0

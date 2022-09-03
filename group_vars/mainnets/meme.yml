@@ -1,0 +1,15 @@
+network: meme
+folder: '.memed'
+daemon: memed
+chain_id: meme-1
+node_version: v1.0.0
+repo: https://github.com/memecosmos/meme
+genesis: 'https://github.com/memecosmos/mainnet/raw/main/meme-1/genesis.json'
+peers: 'c1e05690adfbc970817e0debb5d7770ee9f2f3ac@65.108.131.174:47656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:47656'
+minimum_gas_price: '0.025umeme'
+custom_port_prefix: 147
+
+# [Optional] Snapshot
+snapshot_hour: 6
+snapshot_minute: 0

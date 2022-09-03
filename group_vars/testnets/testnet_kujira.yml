@@ -1,0 +1,10 @@
+network: kujira
+folder: .kujira
+daemon: kujirad
+chain_id: harpoon-4
+node_version: v0.4.0
+repo: 'https://github.com/Team-Kujira/core'
+genesis: 'https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/harpoon-4.json'
+peers: '0be7dfe405e364f87bda949a6692c24b2fcb66af@37.143.129.221:26656,1b1ac7b7e957e9e2d5391a38b1ba3e4e5d2f3210@135.181.146.40:26656,362468ed96561770cd32fc0f7cbd45d2e5985d38@146.19.24.243:26656,87ea1a43e7eecdd54399551b767599921e170399@52.215.221.93:26656'
+minimum_gas_price: '0.00125ukuji'
+custom_port_prefix: 118

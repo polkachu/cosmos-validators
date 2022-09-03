@@ -1,0 +1,11 @@
+network: evmos
+folder: '.evmosd'
+daemon: evmosd
+chain_id: evmos_9000-4
+node_version: v4.0.1
+repo: https://github.com/tharsis/evmos
+genesis: 'https://github.com/tharsis/testnets/blob/main/evmos_9000-4/genesis.zip?raw=true'
+genesis_processing: zip
+peers: '3a6b22e1569d9f85e9e97d1d204a1c457d860926@bd-evmos-testnet-seed-node-01.bdnodes.net:26656'
+seeds: '3a6b22e1569d9f85e9e97d1d204a1c457d860926@bd-evmos-testnet-seed-node-01.bdnodes.net:26656'
+custom_port_prefix: 134

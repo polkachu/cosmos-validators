@@ -1,0 +1,10 @@
+network: umee
+folder: '.umee'
+daemon: umeed
+chain_id: umeemania-1
+node_version: 'v2.0.3-rc2'
+repo: https://github.com/umee-network/umee.git
+genesis: 'https://storage.googleapis.com/umeedropzone/genesis-hardfork-umee.json.gz'
+genesis_processing: gz
+peers: '08f30f7119ae1317082d50fac6a08e6f2400126f@34.83.251.68:26656'
+custom_port_prefix: 136

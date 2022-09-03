@@ -1,0 +1,14 @@
+network: cerberus
+folder: '.cerberus'
+daemon: cerberusd
+chain_id: cerberus-chain-1
+node_version: v1.0.1
+repo: https://github.com/cerberus-zone/cerberus.git
+genesis: 'https://raw.githubusercontent.com/cerberus-zone/cerberus_genesis/main/genesis.json'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:38656'
+minimum_gas_price: '0.025ucrbrus'
+custom_port_prefix: 138
+
+# [Optional] Snapshot
+snapshot_hour: 3
+snapshot_minute: 0

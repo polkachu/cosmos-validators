@@ -1,0 +1,12 @@
+network: kyve
+folder: '.kyve'
+daemon: chaind
+chain_id: korellia
+node_version: v0.0.1
+repo: https://github.com/KYVENetwork/chain
+binary: https://github.com/KYVENetwork/chain/releases/download/v0.0.1/chain_linux_amd64.tar.gz
+binary_processing: targz
+genesis: 'https://github.com/KYVENetwork/chain/releases/download/v0.0.1/genesis.json'
+peers: '67cd50cac0eff503a7c9efd537d369cc7a3ebe96@34.83.162.159:26656,08f30f7119ae1317082d50fac6a08e6f2400126f@34.83.251.68:26656,08840edc6775bd7a298269f3343c554e5af0359f@35.202.178.94:26656,2e5320f284b65e388d968626825f3ffbf3f3f985@34.97.181.238:26656'
+seeds: 'e56574f922ff41c68b80700266dfc9e01ecae383@3.73.27.185:26656'
+custom_port_prefix: 110

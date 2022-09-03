@@ -1,0 +1,10 @@
+network: comdex
+folder: '.comdex'
+daemon: comdex
+chain_id: meteor-test
+node_version: v2.1.0
+repo: https://github.com/comdex-official/comdex.git
+genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/meteor-test/genesis.json'
+peers: '4202b41ccc3032011969005a215e1dbe36e3ba23@3.109.138.42:26656,223d534f0fd1daeea3578346ad3e49d9cec973b6@54.204.207.38:26656,efa67d2456e8e22e9b29bd127ed3024cffc7ede1@46.166.163.37:26656,494af55997cbb1df62cff1ed4f35b58c31277f63@46.166.172.230:26656'
+minimum_gas_price: '0.2ucmdx'
+custom_port_prefix: 131

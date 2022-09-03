@@ -32,3 +32,9 @@
 - name: Install from binary tar gz
   include_tasks: binary_targz.yml
   when: binary is defined and binary_processing is defined and binary_processing == 'targz'
+
+- name: Set chain_id
+  command: "{{ user_dir }}/go/bin/{{ daemon }} config chain-id {{ chain_id }}"
+
+- name: Set local node
+  command: "{{ user_dir }}/go/bin/{{ daemon }} config node tcp://localhost:{{ custom_port_prefix }}57"

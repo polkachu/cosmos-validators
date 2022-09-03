@@ -1,0 +1,14 @@
+network: stride
+folder: '.stride'
+daemon: strided
+chain_id: stride-1
+node_version: 'TBD'
+repo: https://github.com/Stride-Labs/stride
+genesis: 'TBD'
+seeds: 'TBD'
+peers: 'TBD'
+custom_port_prefix: 122
+
+# [Optional] Snapshot
+snapshot_hour: 8
+snapshot_minute: 30

@@ -1,0 +1,9 @@
+network: cerberus
+folder: '.cerberus'
+daemon: cerberusd
+chain_id: inferno-1
+node_version: v1.0.1
+repo: https://github.com/cerberus-zone/cerberus.git
+genesis: 'https://raw.githubusercontent.com/windpowerstake/cerberus-testnet/main/genesis.json'
+peers: '7edfc753a09af97d5872bfa1407bc00c934c9ca5@49.12.176.134:26656'
+custom_port_prefix: 138

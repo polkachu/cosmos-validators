@@ -1,0 +1,10 @@
+network: axelar
+folder: '.axelar'
+daemon: axelard
+chain_id: 'axelar-testnet-casablanca-1'
+binary: 'https://github.com/axelarnetwork/axelar-core/releases/download/v0.17.3/axelard-linux-amd64-v0.17.3'
+config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
+app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'
+genesis: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/resources/testnet-2/genesis.json'
+seeds: '95c90e528c54e2ebaa0427e034c8facc75e6da3f@aa96e735f68464b09955026986b15632-1865235038.us-east-2.elb.amazonaws.com:26656'
+custom_port_prefix: 151

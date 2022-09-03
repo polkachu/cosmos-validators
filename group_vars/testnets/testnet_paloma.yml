@@ -1,0 +1,8 @@
+network: paloma
+folder: '.paloma'
+daemon: palomad
+chain_id: 'paloma-testnet-6'
+node_version: 'v0.2.5-prealpha'
+repo: https://github.com/palomachain/paloma
+genesis: https://raw.githubusercontent.com/palomachain/testnet/master/paloma-testnet-6/genesis.json
+custom_port_prefix: 121

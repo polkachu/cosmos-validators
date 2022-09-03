@@ -1,0 +1,11 @@
+network: source
+folder: '.source'
+daemon: sourced
+chain_id: 'sourcechain-testnet'
+node_version: 'v1.0.0'
+repo: https://github.com/Source-Protocol-Cosmos/source.git
+genesis: https://raw.githubusercontent.com/Source-Protocol-Cosmos/testnets/master/sourcechain-testnet/genesis.json
+addrbook_file: 'https://raw.githubusercontent.com/obajay/nodes-Guides/main/Source/addrbook.json'
+peers: '6ca675f9d949d5c9afc8849adf7b39bc7fccf74f@164.92.98.17:26656'
+minimum_gas_price: '0.0usource'
+custom_port_prefix: 158

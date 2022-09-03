@@ -1,0 +1,15 @@
+network: canto
+folder: '.cantod'
+daemon: cantod
+chain_id: 'canto_7700-1'
+node_version: 'v2.0.0'
+repo: 'https://github.com/Canto-Network/Canto.git'
+genesis: 'http://164.90.154.41:26657/genesis'
+minimum_gas_price: '0.0001acanto'
+peers: '158e1c4d2bc16a60467137fef13b4910857a69c4@65.108.131.174:55656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:55656'
+custom_port_prefix: 155
+
+# [Optional] Snapshot
+snapshot_hour: 8
+snapshot_minute: 0

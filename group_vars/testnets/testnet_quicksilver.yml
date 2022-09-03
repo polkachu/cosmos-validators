@@ -1,0 +1,9 @@
+network: quicksilver
+folder: '.quicksilverd'
+daemon: quicksilverd
+chain_id: innuendo-1
+node_version: v0.6.1
+repo: https://github.com/ingenuity-build/quicksilver.git
+genesis: 'https://raw.githubusercontent.com/ingenuity-build/testnets/main/innuendo/genesis.json'
+peers: 'a62999cdd20dff020b7c19c4c970f19b3f974941@116.203.42.51:26656,68dfe1fa8a8c1fb16393e8faa1267adf2ec4573a@54.36.109.62:26656,91da76eaaa69b3219286e2539f7208a801531f1b@135.181.6.243:26656,990c2ec5605d252a8a72b14ca9bb9f138666c812@65.108.97.92:26656,926ce3f8ce4cda6f1a5ee97a937a44f59ff28fbf@65.108.13.176:26656,b9b8bb23e61d53ff3b293485d04ea567ebcd7933@65.108.65.94:26656,a94cf3e93cec8eef6d67c2972e4af5eae1a118b2@65.108.2.27:26656,cf3bed8618298e453f242d09818d7e938f15a0a3@51.89.166.197:26656,7b21198feaf0882f09fcbb24060961f434d158a3@35.242.163.107:26656'
+custom_port_prefix: 111

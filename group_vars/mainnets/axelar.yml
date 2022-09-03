@@ -1,0 +1,16 @@
+# Note: need to install manually because there is no "make install"
+network: axelar
+folder: '.axelar'
+daemon: axelard
+chain_id: 'axelar-dojo-1'
+node_version: 'v0.24.0'
+repo: 'https://github.com/axelarnetwork/axelar-core'
+config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
+app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'
+genesis: 'https://axelar-mainnet.s3.us-east-2.amazonaws.com/genesis.json'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:51656'
+custom_port_prefix: 151
+
+# [Optional] Snapshot
+snapshot_hour: 6
+snapshot_minute: 30
