@@ -32,3 +32,10 @@
     daemon_reload: yes
     enabled: yes
   changed_when: false
+
+- name: open gPRC port
+  become: true
+  ufw:
+    rule: allow
+    port: '{{ custom_port_prefix }}090'
+    proto: tcp
