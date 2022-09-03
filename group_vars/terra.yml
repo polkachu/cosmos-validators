@@ -7,7 +7,7 @@ repo: https://github.com/terra-money/core
 genesis: 'https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json'
 peers: 'fec49eb41258bbdec5be94032f72327b5a5da27b@65.108.131.174:17656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17656'
-minimum_gas_price: '0.15uluna'
+minimum_gas_price: '0.0125uluna'
 custom_port_prefix: 117
 
 # [Optional] Cosmos exporter
