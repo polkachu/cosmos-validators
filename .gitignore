@@ -1,4 +1,4 @@
-inventory
-inventory_testnet
+inventory.ini
+inventory_testnet.ini
 playground/
 roles/support_seed/templates/node_key.json.j2
