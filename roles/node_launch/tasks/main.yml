@@ -41,7 +41,7 @@
   become: true
   template:
     src: 'cosmovisor.service.j2'
-    dest: '/etc/systemd/system/{{ network }}.service'
+    dest: '/etc/systemd/system/{{ daemon }}.service'
     owner: root
     group: root
     mode: '0644'
@@ -49,7 +49,7 @@
 - name: start cosmovisor service
   become: true
   systemd:
-    name: '{{ network }}'
+    name: '{{ daemon }}'
     state: restarted
     daemon_reload: yes
     enabled: yes
