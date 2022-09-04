@@ -1,7 +1,7 @@
 ---
 - name: open p2p port
   become: true
-  command: 'ufw allow {{ custom_port_prefix }}656/tcp'
+  command: 'ufw allow {{ custom_port_prefix }}56/tcp'
 
 - name: Create folder
   file:

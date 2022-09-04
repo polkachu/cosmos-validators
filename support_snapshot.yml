@@ -2,5 +2,7 @@
 - name: Install snapshot script
   hosts: '{{ target }}'
   gather_facts: false
+  vars_files:
+    - '{{ var_file }}'
   roles:
     - support_snapshot
