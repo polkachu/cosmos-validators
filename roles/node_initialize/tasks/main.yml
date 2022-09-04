@@ -53,3 +53,9 @@
 - name: targz genesis download
   include_tasks: genesis_targz.yml
   when: genesis_processing is defined and genesis_processing == "targz"
+
+- name: Set chain_id
+  command: "{{ user_dir }}/go/bin/{{ daemon }} config chain-id {{ chain_id }}"
+
+- name: Set local node
+  command: "{{ user_dir }}/go/bin/{{ daemon }} config node tcp://localhost:{{ custom_port_prefix }}57"
