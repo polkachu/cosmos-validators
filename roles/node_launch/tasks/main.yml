@@ -7,7 +7,7 @@
     state: present
   when: seeds is defined
 
-- name: open prometheus port
+- name: Open prometheus port
   become: true
   ufw:
     rule: allow
@@ -16,18 +16,17 @@
   when:
     - node_exporter|bool == true
 
-- name: open p2p port
+- name: Open p2p port
   become: true
   ufw:
     rule: allow
     proto: tcp
     port: "{{ custom_port_prefix }}56"
 
-- name: open rpc port
+- name: Open rpc port
   become: true
   ufw:
     rule: allow
-    proto: tcp
     port: "{{ custom_port_prefix }}57"
   when: type is defined and type != 'main'
 

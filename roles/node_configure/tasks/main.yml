@@ -69,13 +69,13 @@
     state: present
   when: type == 'main' or type == 'backup'
 
-- name: Open RPC port for relayer
+- name: Open RPC port for non-main
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: '{{ custom_port_prefix }}57'
     line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}57"'
     state: present
-  when: type == 'relayer'
+  when: type != 'main'
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
