@@ -56,6 +56,8 @@
 
 - name: Set chain_id
   command: "{{ user_dir }}/go/bin/{{ daemon }} config chain-id {{ chain_id }}"
+  ignore_errors: yes
 
 - name: Set local node
   command: "{{ user_dir }}/go/bin/{{ daemon }} config node tcp://localhost:{{ custom_port_prefix }}57"
+  ignore_errors: yes
