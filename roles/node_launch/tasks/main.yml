@@ -9,11 +9,27 @@
 
 - name: open prometheus port
   become: true
-  command: 'ufw allow {{ custom_port_prefix }}60/tcp'
+  ufw:
+    rule: allow
+    proto: tcp
+    port: "{{ custom_port_prefix }}60"
+  when:
+    - node_exporter|bool == true
 
 - name: open p2p port
   become: true
-  command: 'ufw allow {{ custom_port_prefix }}56/tcp'
+  ufw:
+    rule: allow
+    proto: tcp
+    port: "{{ custom_port_prefix }}56"
+
+- name: open rpc port
+  become: true
+  ufw:
+    rule: allow
+    proto: tcp
+    port: "{{ custom_port_prefix }}57"
+  when: type is defined and type != 'main'
 
 - name: Create cosmovisor directories
   file:
