@@ -13,19 +13,19 @@ app_port_changes:
 pruning_main_backup:
   'pruning = "': 'pruning = "custom"'
   'pruning-keep-recent = "': 'pruning-keep-recent = "100"'
-  'pruning-interval = "': 'pruning-interval = "19"'
+  'pruning-interval = "': 'pruning-interval = "73"'
   'snapshot-interval = ': 'snapshot-interval = 0'
 pruning_relayer:
   'pruning = "': 'pruning = "custom"'
-  'pruning-keep-recent = "': 'pruning-keep-recent = "40000"'
+  'pruning-keep-recent = "': 'pruning-keep-recent = "10000"'
   'pruning-keep-every = "': 'pruning-keep-every = "2000"'
-  'pruning-interval = "': 'pruning-interval = "17"'
+  'pruning-interval = "': 'pruning-interval = 79"'
   'snapshot-interval = ': 'snapshot-interval = 2000'
   'snapshot-keep-recent = ': 'snapshot-keep-recent= 5'
 pruning_test:
   'pruning = "': 'pruning = "custom"'
-  'pruning-keep-recent = "': 'pruning-keep-recent = "8000"'
-  'pruning-keep-every = "': 'pruning-keep-every = "2000"'
-  'pruning-interval = "': 'pruning-interval = "17"'
-  'snapshot-interval = ': 'snapshot-interval = 2000'
-  'snapshot-keep-recent = ': 'snapshot-keep-recent= 2'
+  'pruning-keep-recent = "': 'pruning-keep-recent = "100"'
+  'pruning-keep-every = "': 'pruning-keep-every = "0"'
+  'pruning-interval = "': 'pruning-interval = "29"'
+  'snapshot-interval = ': 'snapshot-interval = 0'
+
