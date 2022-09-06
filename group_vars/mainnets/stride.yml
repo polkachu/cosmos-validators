@@ -5,8 +5,7 @@ chain_id: stride-1
 node_version: 'v1.0.0'
 repo: https://github.com/Stride-Labs/stride
 genesis: 'https://raw.githubusercontent.com/Stride-Labs/testnet/infra-test/poolparty/infra/genesis.json'
-seeds: 'cb91a11588d66cfd9c01f99541df4978a08e0e39@seedv1.main.stridenet.co:26656'
-peers: ''
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12256'
 custom_port_prefix: 122
 
 # [Optional] Snapshot

@@ -6,7 +6,7 @@ node_version: 'v0.3.0'
 repo: 'https://github.com/AssetMantle/node'
 genesis: 'https://raw.githubusercontent.com/AssetMantle/genesisTransactions/main/mantle-1/final_genesis.json'
 peers: '7bdf1a10bea595c9d71566d3eec54a1c04ef09a4@65.108.131.174:46656'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:46656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14656'
 minimum_gas_price: '0umntl'
 custom_port_prefix: 146
 
