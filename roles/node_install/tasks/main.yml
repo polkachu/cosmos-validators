@@ -8,8 +8,6 @@
         version: '{{ node_version }}'
         update: yes
         force: yes
-        depth: 1
-        accept_hostkey: yes
         recursive: no
 
     - name: Install node
