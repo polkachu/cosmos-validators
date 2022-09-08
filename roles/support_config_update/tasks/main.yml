@@ -1,4 +1,16 @@
 ---
+- name: register public ip
+  uri:
+    url: 'https://api.ipify.org?format=json'
+  register: public_ip
+
+- name: Set up external address
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = "'
+    line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}56"'
+    state: present
+
 - name: Adjust config.toml port
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
@@ -27,6 +39,10 @@
 - name: open p2p port
   become: true
   command: 'ufw allow {{ custom_port_prefix }}56/tcp'
+
+- name: Set local node
+  command: '{{ user_dir }}/go/bin/{{ daemon }} config node tcp://localhost:{{ custom_port_prefix }}57'
+  ignore_errors: true
 
 - name: start cosmovisor service
   become: true
