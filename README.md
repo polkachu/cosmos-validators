@@ -25,7 +25,7 @@ For every network where we run a validator on mainnet, we run 3 nodes (Validator
 
 We have 2 strong opinions about the node configuration:
 
-1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server (we do so for Backup Node and Relayer Node). For example, Juno's custom port prefix is 26 and that of Osmosis is 25. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code.
+1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server (we do so for Backup Node and Relayer Node). For example, Juno's custom port prefix is 126 and that of Osmosis is 125. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code.
 1. Each type of node will have its setting based on Polkachu's "best practice". For example, the main node (Validator) has null indexer, and 100/0/<prime number> pruning, and Relayer node has kv indexer and 40000/2000/<prime number> pruning. We will force these setting on you unless you fork the code.
 
 #### Host Variables
@@ -78,8 +78,6 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_state_sync.yml `       | Install state-sync script                                                                        |
 | `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
 | `system_update.yml `            | Update a server and restart if needed                                                            |
-| `relayer_juno.yml `             | Set up Polkachu's Hermes config for Juno Hub                                                     |
-| `relayer_osmosis.yml `          | Set up Polkachu's Hermes config for Osmosis Hub                                                  |
 
 ### Playbook Usage Example
 
