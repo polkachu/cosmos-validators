@@ -87,50 +87,78 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306182fe6a507d5487eacb5@65.108.131.174:36656"
 ```
 
-## Supported Mainnet
+## Supported Networks
 
-- Agoric
-- Akash
-- Asset Mantle
-- Axelar
-- Bitcanna
-- Cerberus
-- Certik
-- Chihuahua
-- Comdex
-- Evmos
-- Fetch
-- Galaxy (galaxyd is the name for this repo because galaxy is a reserved word in Ansible)
-- Gravity Bridge
-- Juno
-- Kava
-- KiChain
-- Konstellation
-- Meme
-- Osmosis
-- Sifchain
-- Sommelier
-- Stargaze
-- Umee
+| Network       | Mainnet | Testnet |
+| ------------- | ------- | ------- |
+| Agoric        | Yes     | Yes     |
+| Akash         | Yes     |         |
+| Althea        |         | Yes     |
+| Archaway      |         | Yes     |
+| Assetmantle   | Yes     |         |
+| Axelar        | Yes     | Yes     |
+| Bitcanna      | Yes     |         |
+| Bitsong       | Yes     |         |
+| Canto         | Yes     |         |
+| Celestia      |         | Yes     |
+| Cerberus      | Yes     | Yes     |
+| Certik        | Yes     |         |
+| Cheqd         | Yes     |         |
+| Chihuahua     | Yes     | Yes     |
+| Comdex        | Yes     | Yes     |
+| Cosmos        | Yes     |         |
+| Craft         |         | Yes     |
+| Crescent      | Yes     |         |
+| Cudos         | Yes     |         |
+| Defund        |         | Yes     |
+| Desmos        | Yes     |         |
+| Deweb         |         | Yes     |
+| DIG           | Yes     |         |
+| Echelon       | Yes     |         |
+| Evmos         | Yes     | Yes     |
+| Fetch         | Yes     |         |
+| Firmachain    | Yes     |         |
+| Galaxy        | Yes     |         |
+| Gitopia       |         | Yes     |
+| Gravity       | Yes     |         |
+| IDEP          | Yes     |         |
+| Impacthub     | Yes     |         |
+| Injective     | Yes     |         |
+| Juno          | Yes     | Yes     |
+| Kava          | Yes     |         |
+| Kichain       | Yes     | Yes     |
+| Konstellation | Yes     |         |
+| Kujira        | Yes     | Yes     |
+| Kyve          |         | Yes     |
+| Lum           | Yes     |         |
+| Meme          | Yes     | Yes     |
+| Nym           | Yes     |         |
+| Odin          | Yes     |         |
+| Omniflix      | Yes     |         |
+| Osmosis       | Yes     |         |
+| Paloma        |         | Yes     |
+| Passage       | Yes     |         |
+| Quicksilver   |         | Yes     |
+| Sifchain      | Yes     |         |
+| Sommelier     | Yes     |         |
+| Sei           |         | Yes     |
+| Source        |         | Yes     |
+| Stargaze      | Yes     | Yes     |
+| Stride        | Yes     | Yes     |
+| Teritori      |         | Yes     |
+| Terra2        | Yes     | Yes     |
+| Umee          | Yes     | Yes     |
+| Vidulum       | Yes     |         |
 
-# Supported Testnets
+## V1 to V2 migration [OPTIONAL]
 
-- Archway
-- Axelar
-- Celestia
-- Comdex
-- Defund
-- Deweb
-- Evmos
-- Gitopia
-- Juno
-- Kichain
-- Kujira
-- Kyve
-- Quicksilver
-- Sei
-- Terra
-- Umee
+In V1, the custom port prefix is 2 digits. However, this hobby project has evolved into a more ambitious one and we have run out of the prefixes. Therefore, V2 introduces a breaking change of the 3-digit custom port prefixes.
+
+If you have a node running based on V1 port prefix system, you do not need to do anything. However, if you are as OCD as Polkachu, you might want to migrate all the previous nodes to comply with the new system. Here is a playbook to manage the migration. You still need to close the old ports that are not longer in use, but this playbook should take care of the rest.
+
+```bash
+ansible-playbook support_config_update.yml -e "target=juno_main"
+```
 
 ## Known Issue
 

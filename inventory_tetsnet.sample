@@ -1,19 +1,16 @@
-[juno]
-juno_main ansible_host=10.0.0.1 type=main
-juno_backup ansible_host=10.0.0.2 type=backup prepare=false
-juno_relayer ansible_host=10.0.0.3 type=relayer prepare=false
+[testnet_host_1]
+testnet_axelar ansible_host=10.0.0.1 type=test prepare=false
+testnet_comdex ansible_host=10.0.0.1 type=test prepare=false
 
-[backups]
-backup_1 ansible_host=10.0.0.2
-
-[relayers]
-relayer_1 ansible_host=10.0.0.3
+[testnet_host_1]
+testnet_chihuahua ansible_host=10.0.0.2 type=test prepare=false
+testnet_cerberus ansible_host=10.0.0.2 type=test prepare=false
 
 [all:vars]
 ansible_user=ubuntu
 ansible_port=22
 ansible_ssh_private_key_file="~/.ssh/id_rsa"
-var_file="group_vars/mainnets/{{ group_names[0] }}.yml"
+var_file="group_vars/testnets/{{ target }}.yml"
 user_dir="/home/{{ansible_user}}"
 path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:{{ user_dir }}/go/bin"
 node_exporter=true
@@ -21,4 +18,3 @@ promtail=true
 log_monitor=http://10.0.0.100:3100
 node_name="BRAND-{{ network }}-{{ type }}"
 log_name="PREFIX_{{ network }}_{{ type }}"
-snapshot_endpoint='http://10.0.0.2000'
