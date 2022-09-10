@@ -119,6 +119,7 @@ ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306
 | Galaxy        | Yes     |         | 148         |
 | Gitopia       |         | Yes     | 113         |
 | Gravity       | Yes     |         | 142         |
+| Hypersign     |         | Yes     | 109         |
 | IDEP          | Yes     |         | 165         |
 | Impacthub     | Yes     |         | 166         |
 | Injective     | Yes     |         | 143         |
