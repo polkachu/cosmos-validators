@@ -87,66 +87,66 @@ ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306
 
 ## Supported Networks
 
-| Network       | Mainnet | Testnet |
-| ------------- | ------- | ------- |
-| Agoric        | Yes     | Yes     |
-| Akash         | Yes     |         |
-| Althea        |         | Yes     |
-| Archaway      |         | Yes     |
-| Assetmantle   | Yes     |         |
-| Axelar        | Yes     | Yes     |
-| Bitcanna      | Yes     |         |
-| Bitsong       | Yes     |         |
-| Canto         | Yes     |         |
-| Celestia      |         | Yes     |
-| Cerberus      | Yes     | Yes     |
-| Certik        | Yes     |         |
-| Cheqd         | Yes     |         |
-| Chihuahua     | Yes     | Yes     |
-| Comdex        | Yes     | Yes     |
-| Cosmos        | Yes     |         |
-| Craft         |         | Yes     |
-| Crescent      | Yes     |         |
-| Cudos         | Yes     |         |
-| Defund        |         | Yes     |
-| Desmos        | Yes     |         |
-| Deweb         |         | Yes     |
-| DIG           | Yes     |         |
-| Echelon       | Yes     |         |
-| Evmos         | Yes     | Yes     |
-| Fetch         | Yes     |         |
-| Firmachain    | Yes     |         |
-| Galaxy        | Yes     |         |
-| Gitopia       |         | Yes     |
-| Gravity       | Yes     |         |
-| IDEP          | Yes     |         |
-| Impacthub     | Yes     |         |
-| Injective     | Yes     |         |
-| Juno          | Yes     | Yes     |
-| Kava          | Yes     |         |
-| Kichain       | Yes     | Yes     |
-| Konstellation | Yes     |         |
-| Kujira        | Yes     | Yes     |
-| Kyve          |         | Yes     |
-| Lum           | Yes     |         |
-| Meme          | Yes     | Yes     |
-| Nym           | Yes     |         |
-| Odin          | Yes     |         |
-| Omniflix      | Yes     |         |
-| Osmosis       | Yes     |         |
-| Paloma        |         | Yes     |
-| Passage       | Yes     |         |
-| Quicksilver   |         | Yes     |
-| Sifchain      | Yes     |         |
-| Sommelier     | Yes     |         |
-| Sei           |         | Yes     |
-| Source        |         | Yes     |
-| Stargaze      | Yes     | Yes     |
-| Stride        | Yes     | Yes     |
-| Teritori      |         | Yes     |
-| Terra2        | Yes     | Yes     |
-| Umee          | Yes     | Yes     |
-| Vidulum       | Yes     |         |
+| Network       | Mainnet | Testnet | Port Prefix |
+| ------------- | ------- | ------- | ----------- |
+| Agoric        | Yes     | Yes     | 144         |
+| Akash         | Yes     |         | 128         |
+| Althea        |         | Yes     | 124         |
+| Archaway      |         | Yes     | 115         |
+| Assetmantle   | Yes     |         | 146         |
+| Axelar        | Yes     | Yes     | 151         |
+| Bitcanna      | Yes     |         | 130         |
+| Bitsong       | Yes     |         | 160         |
+| Canto         | Yes     |         | 155         |
+| Celestia      |         | Yes     | 116         |
+| Cerberus      | Yes     | Yes     | 138         |
+| Certik        | Yes     |         | 140         |
+| Cheqd         | Yes     |         | 161         |
+| Chihuahua     | Yes     | Yes     | 129         |
+| Comdex        | Yes     | Yes     | 131         |
+| Cosmos        | Yes     |         | 149         |
+| Craft         |         | Yes     | 157         |
+| Crescent      | Yes     |         | 145         |
+| Cudos         | Yes     |         | 123         |
+| Defund        |         | Yes     | 112         |
+| Desmos        | Yes     |         | 162         |
+| Deweb         |         | Yes     | 114         |
+| DIG           | Yes     |         | 163         |
+| Echelon       | Yes     |         | 120         |
+| Evmos         | Yes     | Yes     | 134         |
+| Fetch         | Yes     |         | 152         |
+| Firmachain    | Yes     |         | 164         |
+| Galaxy        | Yes     |         | 148         |
+| Gitopia       |         | Yes     | 113         |
+| Gravity       | Yes     |         | 142         |
+| IDEP          | Yes     |         | 165         |
+| Impacthub     | Yes     |         | 166         |
+| Injective     | Yes     |         | 143         |
+| Juno          | Yes     | Yes     | 126         |
+| Kava          | Yes     |         | 139         |
+| Kichain       | Yes     | Yes     | 135         |
+| Konstellation | Yes     |         | 133         |
+| Kujira        | Yes     | Yes     | 118         |
+| Kyve          |         | Yes     | 110         |
+| Lum           | Yes     |         | 167         |
+| Meme          | Yes     | Yes     | 147         |
+| Nym           | Yes     |         | 153         |
+| Odin          | Yes     |         | 168         |
+| Omniflix      | Yes     |         | 169         |
+| Osmosis       | Yes     |         | 125         |
+| Paloma        |         | Yes     | 121         |
+| Passage       | Yes     |         | 156         |
+| Quicksilver   |         | Yes     | 111         |
+| Sifchain      | Yes     |         | 132         |
+| Sommelier     | Yes     |         | 141         |
+| Sei           |         | Yes     | 119         |
+| Source        |         | Yes     | 158         |
+| Stargaze      | Yes     | Yes     | 137         |
+| Stride        | Yes     | Yes     | 122         |
+| Teritori      |         | Yes     | 159         |
+| Terra2        | Yes     | Yes     | 117         |
+| Umee          | Yes     | Yes     | 136         |
+| Vidulum       | Yes     |         | 170         |
 
 ## V1 to V2 migration [OPTIONAL]
 
