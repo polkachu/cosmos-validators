@@ -138,6 +138,7 @@ ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306
 | Paloma        |         | Yes     | 121         |
 | Passage       | Yes     |         | 156         |
 | Quicksilver   |         | Yes     | 111         |
+| Secret        |         |         | 171         |
 | Sifchain      | Yes     |         | 132         |
 | Sommelier     | Yes     |         | 141         |
 | Sei           |         | Yes     | 119         |
