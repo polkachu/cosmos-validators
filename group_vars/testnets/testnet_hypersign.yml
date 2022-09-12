@@ -1,0 +1,11 @@
+network: hypersign
+folder: '.hid-node'
+daemon: hid-noded
+chain_id: jagrat
+node_version: v0.1.0
+repo: https://github.com/hypersign-protocol/hid-node
+genesis: TBD
+seeds: 'TBD'
+peers: 'TBD'
+minimum_gas_price: ''
+custom_port_prefix: 109

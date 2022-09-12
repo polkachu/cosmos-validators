@@ -19,8 +19,8 @@
   become: true
   ufw:
     rule: allow
+    port: '{{ custom_port_prefix }}61'
     proto: tcp
-    port: "{{ custom_port_prefix }}60"
   when:
     - node_exporter|bool == true
 

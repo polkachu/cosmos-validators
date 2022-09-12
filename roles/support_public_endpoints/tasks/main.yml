@@ -37,5 +37,5 @@
   become: true
   ufw:
     rule: allow
-    port: '{{ custom_port_prefix }}090'
+    port: '{{ custom_port_prefix }}90'
     proto: tcp

@@ -22,6 +22,7 @@ pruning_relayer:
   'pruning-interval = "': 'pruning-interval = "79"'
   'snapshot-interval = ': 'snapshot-interval = 2000'
   'snapshot-keep-recent = ': 'snapshot-keep-recent= 5'
+  'enabled-unsafe-cors = ': 'enabled-unsafe-cors = false'
 pruning_test:
   'pruning = "': 'pruning = "custom"'
   'pruning-keep-recent = "': 'pruning-keep-recent = "100"'
