@@ -78,7 +78,7 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_snapshot.yml `         | Install snapshot script and a cron job                                                           |
 | `support_state_sync.yml `       | Install state-sync script                                                                        |
 | `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
-| `support_tenderduty.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
+| `support_tenderduty.yml `       | Install Tenderduty                                                                               |
 | `system_update.yml `            | Update a server and restart if needed                                                            |
 
 ### Selected playbook Usage Example
