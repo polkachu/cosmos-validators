@@ -12,7 +12,7 @@
   vars_files:
     - '{{ var_file }}'
   roles:
-    - node_install
-    - node_initialize
+    # - node_install
+    # - node_initialize
     - node_configure
     - node_launch

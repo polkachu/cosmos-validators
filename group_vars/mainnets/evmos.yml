@@ -1,3 +1,4 @@
+# Genesis file cannot be downloaded. Might need to find an alternative hosting location
 network: evmos
 folder: '.evmosd'
 daemon: evmosd
