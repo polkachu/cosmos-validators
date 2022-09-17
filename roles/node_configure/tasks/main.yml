@@ -83,3 +83,8 @@
     regexp: '^prometheus ='
     line: 'prometheus = true'
     state: present
+
+- name: Create Caddyfile in /etc/Caddy/
+  copy:
+    src: Caddyfile
+    dest: {{ network }}.caddy
