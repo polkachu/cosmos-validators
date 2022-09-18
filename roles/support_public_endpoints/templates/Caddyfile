@@ -1,0 +1,31 @@
+{{ network }}-rpc.lavenderfive.com {
+  log
+  reverse_proxy {
+    to http://localhost:{{ custom_port_prefix }}57
+  }
+  header {
+    Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Access-Control-Allow-Headers "*"
+    Acesss-Control-Allow-Origin "*"
+    Access-Control-Max-Age 86400
+    Cache-Control no-cache
+    Pragma no-cache
+    -Server
+  }
+}
+
+{{ network }}-api.lavenderfive.com {
+  log
+  reverse_proxy {
+    to http://localhost:{{ custom_port_prefix }}17
+  }
+  header {
+    Access-Control-Allow-Methods "POST, GET, OPTIONS"
+    Access-Control-Allow-Headers "*"
+    Acesss-Control-Allow-Origin "*"
+    Access-Control-Max-Age 86400
+    Cache-Control no-cache
+    Pragma no-cache
+    -Server
+  }
+}
