@@ -38,6 +38,12 @@
     port: "{{ custom_port_prefix }}57"
   when: type is defined and type != 'main'
 
+- name: Install cosmovisor
+  command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '{{ user_dir }}/go'
+
 - name: Create cosmovisor directories
   command: "$BINARY_PATH/cosmovisor init $BINARY_PATH/{{ daemon }}"
   environment:

@@ -1,0 +1,15 @@
+network: rebus
+folder: '.rebusd'
+daemon: rebusd
+chain_id: reb_1111-1
+node_version: v0.1.0
+repo: https://github.com/rebuschain/rebus.core
+genesis: https://raw.githubusercontent.com/rebuschain/rebus.mainnet/master/reb_1111-1/genesis.zip
+seeds: 'e056318da91e77585f496333040e00e12f6941d1@51.83.97.166:26656'
+minimum_gas_price: '25000000arebus'
+custom_port_prefix: 172
+genesis_processing: 'zip'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

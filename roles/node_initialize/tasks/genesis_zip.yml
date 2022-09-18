@@ -1,5 +1,6 @@
 - name: Install unzip
   apt:
+    become: true
     name: unzip
     state: latest
 
