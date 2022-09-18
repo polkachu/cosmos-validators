@@ -91,4 +91,3 @@
     line: 'contract-memory-enclave-cache-size = "15"'
     state: present 
   when: network == 'secret'
-  
