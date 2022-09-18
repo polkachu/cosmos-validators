@@ -1,10 +1,10 @@
 network: deweb
 folder: '.deweb'
 daemon: dewebd
-chain_id: deweb-testnet-1
-node_version: v0.2
-repo: https://github.com/deweb-services/deweb
+chain_id: deweb-testnet-sirius
+node_version: v0.3.1
+repo: https://github.com/deweb-services/deweb.git
 genesis: 'https://raw.githubusercontent.com/deweb-services/deweb/main/genesis.json'
-minimum_gas_price: '0.001udws'
-seeds: '74d8f92c37ffe4c6393b3718ca531da8f0bf0594@seed1.deweb.services:26656'
+minimum_gas_price: '0.0udws'
+peers: '422c1e98964d04e92c1e847d7214ad01695c42a6@209.126.80.91:26656,4a07e3296fee5bdc2a45f7c5e6348168a1c9b286@144.91.125.55:26656'
 custom_port_prefix: 114
