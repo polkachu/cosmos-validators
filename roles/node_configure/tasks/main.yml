@@ -83,3 +83,11 @@
     regexp: '^prometheus ='
     line: 'prometheus = true'
     state: present
+
+- name: 
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '^contract-memory-enclave-cache-size ='
+    line: 'contract-memory-enclave-cache-size = "15"'
+    state: present 
+  when: network == 'secret'
