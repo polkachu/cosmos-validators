@@ -51,6 +51,7 @@ Besides the above host variables, you will also specify the following `all` vari
 1. `log_monitor`: Enter your monitor server IP if you install promtail.
 1. `node_name`: This is your node name for the config.toml file.
 1. `log_name`: This is the server name for the promtail service.
+1. `pagerduty_key`: This is the PagerDuty key if you use TenderDuty
 
 #### Ready? Go!
 
@@ -77,12 +78,21 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_snapshot.yml `         | Install snapshot script and a cron job                                                           |
 | `support_state_sync.yml `       | Install state-sync script                                                                        |
 | `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
+| `support_tenderduty.yml `       | Install Tenderduty                                                                               |
 | `system_update.yml `            | Update a server and restart if needed                                                            |
 
-### Playbook Usage Example
+### Selected playbook Usage Example
+
+##### support_seed
 
 ```bash
 ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306182fe6a507d5487eacb5@65.108.131.174:36656"
+```
+
+##### support_tenderduty
+
+```bash
+ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalcons1qyw2x2sjp40cqasdfyuiahsdfknasdkneafs"
 ```
 
 ## Supported Networks

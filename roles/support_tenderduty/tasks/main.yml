@@ -1,0 +1,17 @@
+---
+- name: copy tenderduty service file
+  become: true
+  template:
+    src: 'tenderduty.service.j2'
+    dest: '/etc/systemd/system/tenderduty_{{ network }}.service'
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: start tenderduty service
+  become: true
+  systemd:
+    name: 'tenderduty_{{ network }}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

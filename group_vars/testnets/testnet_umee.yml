@@ -1,10 +1,9 @@
 network: umee
 folder: '.umee'
 daemon: umeed
-chain_id: umeemania-1
-node_version: 'v2.0.3-rc2'
+chain_id: canon-1
+node_version: 'v1.0.3'
 repo: https://github.com/umee-network/umee.git
-genesis: 'https://storage.googleapis.com/umeedropzone/genesis-hardfork-umee.json.gz'
-genesis_processing: gz
-peers: '08f30f7119ae1317082d50fac6a08e6f2400126f@34.83.251.68:26656'
+genesis: 'https://raw.githubusercontent.com/umee-network/testnets/main/networks/canon-1/genesis.json'
+peers: 'dc1b1b89a83873f20b613cdb1361f932afb84a97@35.215.72.45:26656,5e01b69ead6e0781af0361d3ec4e436d96dba932@35.215.98.106:26656,94ac8328b4b9f45b6f7b8e9569ae0253dc53c7eb@35.212.143.125:26656'
 custom_port_prefix: 136
