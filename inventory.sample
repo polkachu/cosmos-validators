@@ -1,13 +1,18 @@
+[mainnets]
+mainnet1 ansible_host=10.0.0.1
+
+[backups]
+backup1 ansible_host=10.0.0.1
+
+[relayers]
+relayer1 ansible_host=10.0.0.3
+
 [juno]
 juno_main ansible_host=10.0.0.1 type=main
 juno_backup ansible_host=10.0.0.2 type=backup prepare=false
 juno_relayer ansible_host=10.0.0.3 type=relayer prepare=false
-
-[backups]
-backup_1 ansible_host=10.0.0.2
-
-[relayers]
-relayer_1 ansible_host=10.0.0.3
+juno_seed ansible_host=10.0.0.4
+juno_tenderduty ansible_host=10.0.0.5 target_ip=10.0.0.3
 
 [all:vars]
 ansible_user=ubuntu
@@ -22,3 +27,5 @@ log_monitor=http://10.0.0.100:3100
 node_name="BRAND-{{ network }}-{{ type }}"
 log_name="PREFIX_{{ network }}_{{ type }}"
 snapshot_endpoint='http://10.0.0.2000'
+
+pagerduty_key="SECRET_KEY"
