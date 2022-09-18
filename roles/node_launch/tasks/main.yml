@@ -1,4 +1,12 @@
 ---
+- name: Update peers in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^persistent_peers ='
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
+  when: peers is defined
+
 - name: Update seeds in config.toml file
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
@@ -11,8 +19,8 @@
   become: true
   ufw:
     rule: allow
+    port: '{{ custom_port_prefix }}61'
     proto: tcp
-    port: "{{ custom_port_prefix }}60"
   when:
     - node_exporter|bool == true
 
@@ -31,20 +39,11 @@
   when: type is defined and type != 'main'
 
 - name: Create cosmovisor directories
-  file:
-    path: '{{ item }}'
-    state: directory
-    mode: '0755'
-  with_items:
-    - '{{ user_dir }}/{{ folder }}/cosmovisor/genesis/bin'
-    - '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades'
-
-- name: copy daemon file to cosmovisor
-  copy:
-    src: '{{ user_dir }}/go/bin/{{ daemon }}'
-    dest: '{{ user_dir }}/{{ folder }}/cosmovisor/genesis/bin'
-    remote_src: true
-    mode: '0755'
+  command: "$BINARY_PATH/cosmovisor init $BINARY_PATH/{{ daemon }}"
+  environment:
+    - BINARY_PATH: '{{ user_dir }}/go/bin'
+    - DAEMON_HOME: '{{ user_dir }}/{{ folder }}'
+    - DAEMON_NAME: '{{ daemon }}'
 
 - name: copy service file
   become: true

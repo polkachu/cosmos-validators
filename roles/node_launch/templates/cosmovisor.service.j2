@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User={{ ansible_user }}
-ExecStart={{ user_dir }}/go/bin/cosmovisor start
+ExecStart={{ user_dir }}/go/bin/cosmovisor run start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096

@@ -8,8 +8,6 @@
         version: '{{ node_version }}'
         update: yes
         force: yes
-        depth: 1
-        accept_hostkey: yes
         recursive: no
 
     - name: Install node
@@ -34,3 +32,7 @@
 - name: Install from binary tar gz
   include_tasks: binary_targz.yml
   when: binary is defined and binary_processing is defined and binary_processing == 'targz'
+
+- name: Install from binary .deb
+  include_tasks: binary_deb.yml
+  when: binary is defined and binary_processing is defined and binary_processing == 'deb'

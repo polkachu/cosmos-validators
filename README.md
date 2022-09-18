@@ -25,7 +25,7 @@ For every network where we run a validator on mainnet, we run 3 nodes (Validator
 
 We have 2 strong opinions about the node configuration:
 
-1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server (we do so for Backup Node and Relayer Node). For example, Juno's custom port prefix is 26 and that of Osmosis is 25. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code.
+1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server (we do so for Backup Node and Relayer Node). For example, Juno's custom port prefix is 126 and that of Osmosis is 125. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code.
 1. Each type of node will have its setting based on Polkachu's "best practice". For example, the main node (Validator) has null indexer, and 100/0/<prime number> pruning, and Relayer node has kv indexer and 40000/2000/<prime number> pruning. We will force these setting on you unless you fork the code.
 
 #### Host Variables
@@ -78,8 +78,6 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_state_sync.yml `       | Install state-sync script                                                                        |
 | `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
 | `system_update.yml `            | Update a server and restart if needed                                                            |
-| `relayer_juno.yml `             | Set up Polkachu's Hermes config for Juno Hub                                                     |
-| `relayer_osmosis.yml `          | Set up Polkachu's Hermes config for Osmosis Hub                                                  |
 
 ### Playbook Usage Example
 
@@ -87,50 +85,80 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306182fe6a507d5487eacb5@65.108.131.174:36656"
 ```
 
-## Supported Mainnet
+## Supported Networks
 
-- Agoric
-- Akash
-- Asset Mantle
-- Axelar
-- Bitcanna
-- Cerberus
-- Certik
-- Chihuahua
-- Comdex
-- Evmos
-- Fetch
-- Galaxy (galaxyd is the name for this repo because galaxy is a reserved word in Ansible)
-- Gravity Bridge
-- Juno
-- Kava
-- KiChain
-- Konstellation
-- Meme
-- Osmosis
-- Sifchain
-- Sommelier
-- Stargaze
-- Umee
+| Network       | Mainnet | Testnet | Port Prefix |
+| ------------- | ------- | ------- | ----------- |
+| Agoric        | Yes     | Yes     | 144         |
+| Akash         | Yes     |         | 128         |
+| Althea        |         | Yes     | 124         |
+| Archaway      |         | Yes     | 115         |
+| Assetmantle   | Yes     |         | 146         |
+| Axelar        | Yes     | Yes     | 151         |
+| Bitcanna      | Yes     |         | 130         |
+| Bitsong       | Yes     |         | 160         |
+| Canto         | Yes     |         | 155         |
+| Celestia      |         | Yes     | 116         |
+| Cerberus      | Yes     | Yes     | 138         |
+| Certik        | Yes     |         | 140         |
+| Cheqd         | Yes     |         | 161         |
+| Chihuahua     | Yes     | Yes     | 129         |
+| Comdex        | Yes     | Yes     | 131         |
+| Cosmos        | Yes     |         | 149         |
+| Craft         |         | Yes     | 157         |
+| Crescent      | Yes     |         | 145         |
+| Cudos         | Yes     |         | 123         |
+| Defund        |         | Yes     | 112         |
+| Desmos        | Yes     |         | 162         |
+| Deweb         |         | Yes     | 114         |
+| DIG           | Yes     |         | 163         |
+| Echelon       | Yes     |         | 120         |
+| Evmos         | Yes     | Yes     | 134         |
+| Fetch         | Yes     |         | 152         |
+| Firmachain    | Yes     |         | 164         |
+| Galaxy        | Yes     |         | 148         |
+| Gitopia       |         | Yes     | 113         |
+| Gravity       | Yes     |         | 142         |
+| Hypersign     |         | Yes     | 109         |
+| IDEP          | Yes     |         | 165         |
+| Impacthub     | Yes     |         | 166         |
+| Injective     | Yes     |         | 143         |
+| Juno          | Yes     | Yes     | 126         |
+| Kava          | Yes     |         | 139         |
+| Kichain       | Yes     | Yes     | 135         |
+| Konstellation | Yes     |         | 133         |
+| Kujira        | Yes     | Yes     | 118         |
+| Kyve          |         | Yes     | 110         |
+| Lum           | Yes     |         | 167         |
+| Meme          | Yes     | Yes     | 147         |
+| Nym           | Yes     |         | 153         |
+| Odin          | Yes     |         | 168         |
+| Omniflix      | Yes     |         | 169         |
+| Osmosis       | Yes     |         | 125         |
+| Paloma        |         | Yes     | 121         |
+| Passage       | Yes     |         | 156         |
+| Quicksilver   |         | Yes     | 111         |
+| Secret        |         |         | 171         |
+| Sifchain      | Yes     |         | 132         |
+| Sommelier     | Yes     |         | 141         |
+| Sei           |         | Yes     | 119         |
+| Source        |         | Yes     | 158         |
+| Stargaze      | Yes     | Yes     | 137         |
+| Stride        | Yes     | Yes     | 122         |
+| Teritori      |         | Yes     | 159         |
+| Terra2        | Yes     | Yes     | 117         |
+| Umee          | Yes     | Yes     | 136         |
+| Vidulum       | Yes     |         | 170         |
 
-# Supported Testnets
+## V1 to V2 migration [OPTIONAL]
 
-- Archway
-- Axelar
-- Celestia
-- Comdex
-- Defund
-- Deweb
-- Evmos
-- Gitopia
-- Juno
-- Kichain
-- Kujira
-- Kyve
-- Quicksilver
-- Sei
-- Terra
-- Umee
+In V1, the custom port prefix is 2 digits. However, this hobby project has evolved into a more ambitious one and we have run out of the prefixes. Therefore, V2 introduces a breaking change of the 3-digit custom port prefixes.
+
+If you have a node running based on V1 port prefix system, you do not need to do anything. However, if you are as OCD as Polkachu, you might want to migrate all the previous nodes to comply with the new system. Here is a playbook to manage the migration. You still need to close the old ports that are not longer in use, but this playbook should take care of the rest.
+
+```bash
+ansible-playbook support_config_update.yml -e "target=juno_main"
+```
 
 ## Known Issue
 
@@ -141,4 +169,5 @@ Because this repo tries to accommodate as many Tendermint-based chains as possib
 | Axelar           | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
 | Canto            | genesis file needs to be unwrapped from .result.genesis  | Unwrap genesis with jq command                                                       |
 | Injective        | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
+| Kichain          | Some extra lines at the end of app.toml                  | Delete extra lines and adjust some settings these extra lines are supposed to change |
 | Celestia testnet | inconsistent config.toml file variable naming convention | Manually adjust config.toml file                                                     |

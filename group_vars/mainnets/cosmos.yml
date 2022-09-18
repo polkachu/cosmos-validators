@@ -7,8 +7,7 @@ repo: 'https://github.com/cosmos/gaia'
 genesis: 'https://github.com/cosmos/mainnet/blob/master/genesis/genesis.cosmoshub-4.json.gz?raw=true'
 genesis_processing: gz
 minimum_gas_price: '0.0025uatom'
-peers: '3aa86f390e71f416f66dcf68b22b1b640f1fa23d@65.108.131.174:49656'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:49656,bcef90de8a83673c336bf3b3a352445b3a3a1f08@cosmos-seed.sunshinevalidation.io:31038,3b67739570f921cc5e0db4b3efe488ce184155a9@seeds.pupmos.network:2000'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14956'
 custom_port_prefix: 149
 
 # [Optional] Snapshot

@@ -6,8 +6,7 @@ chain_id: nyxd
 node_version: v0.10.2
 repo: https://github.com/CosmWasm/wasmd.git
 genesis: ' https://nymtech.net/genesis/genesis.json'
-peers: 'bbc473d27bb0771d18bd2df77c52b310b07f4e33@65.108.131.174:53656'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:53656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15356'
 custom_port_prefix: 153
 
 # [Optional] Snapshot

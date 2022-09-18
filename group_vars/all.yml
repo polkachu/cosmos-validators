@@ -8,4 +8,8 @@ promtail_version: '2.6.1'
 go_version: '1.18.5'
 
 # cosmovisor
+<<<<<<< HEAD
 cosmovisor_version: 'v1.0.0'
+=======
+cosmovisor_version: 'v1.3.0'
+>>>>>>> 100da738a13349447dca3903810708406a188d01

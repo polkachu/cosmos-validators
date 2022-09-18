@@ -5,4 +5,4 @@
   vars_files:
     - '{{ var_file }}'
   roles:
-    - support_snapshot
+    - support_config_update

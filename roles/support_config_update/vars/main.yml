@@ -1,0 +1,14 @@
+---
+config_port_changes:
+  '(^laddr = "tcp://0.0.0.0:)(.*)(56")': 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}56"'
+  '(^laddr = "tcp:)(.*)(57")': 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}57"'
+  '(^proxy_app = "tcp://127.0.0.1)(.*)(58")': 'proxy_app = "tcp://127.0.0.1:{{ custom_port_prefix }}58"'
+  '(^prometheus_listen_addr = ")(.*)(660")': 'prometheus_listen_addr = ":{{ custom_port_prefix }}61"'
+  '(^pprof_laddr = "localhost:)(.*)(60")': 'pprof_laddr = "localhost:{{ custom_port_prefix }}60"'
+app_port_changes:
+  '(^address = "tcp://0.0.0.0:)(.*)(17")': 'address = "tcp://0.0.0.0:{{ custom_port_prefix }}17"'
+  '(^address = ":)(.*)(80")': 'address = ":{{ custom_port_prefix }}80"'
+  '(^address = "0.0.0.0:)(.*)(90")': 'address = "0.0.0.0:{{ custom_port_prefix }}90"'
+  '(^address = "0.0.0.0:)(.*)(91")': 'address = "0.0.0.0:{{ custom_port_prefix }}91"'
+moniker_changes:
+  '(^moniker =)(.*)': 'moniker = "{{ node_name }}"'

@@ -1,0 +1,15 @@
+---
+- name: Download deb
+  get_url:
+    url: '{{ binary }}'
+    dest: '/tmp/{{ daemon }}.deb'
+
+- name: Install deb
+  apt: deb='/tmp/{{ daemon }}.deb'
+
+- name: Copy binary
+  copy:
+    remote_src: true
+    src: '/usr/local/bin/{{ daemon }}'
+    dest: '{{ user_dir }}/go/bin/{{ daemon }}'
+    mode: '0755'

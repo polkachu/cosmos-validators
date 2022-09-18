@@ -1,18 +1,10 @@
 network: sei
 folder: '.sei'
 daemon: seid
-chain_id: 'sei-devnet-1'
-node_version: '1.0.6beta'
+chain_id: 'atlantic-1'
+node_version: '1.1.2beta-internal'
 repo: https://github.com/sei-protocol/sei-chain.git
-genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-1/genesis.json
-addrbook_file: 'https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-1/addrbook.json'
+genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json
 custom_port_prefix: 119
-# network: sei
-# folder: '.sei'
-# daemon: seid
-# chain_id: 'sei-devnet-1'
-# node_version: '1.0.6beta'
-# repo: https://github.com/sei-protocol/sei-chain.git
-# genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json
-# peers: 'a37d65086e78865929ccb7388146fb93664223f7@18.144.13.149:26656,8ff4bd654d7b892f33af5a30ada7d8239d6f467b@91.223.3.190:51656,c4e8c9b1005fe6459a922f232dd9988f93c71222@65.108.227.133:26656'
-# custom_port_prefix: 119
+peers: '1f54305ee9577e2426ac40c1693b6c6620415524@144.76.91.26:26656,86dac956393266d17aabe7f17b634c6089f7cd58@91.241.214.162:26856,94290dd1f8944ed3450f007637d0099d5bb248b9@45.126.125.173:26656,17c09a1033799859ef4e17f87e2cb2baa3368001@5.161.139.197:26656'
+seeds: 'df1f6617ff5acdc85d9daa890300a57a9d956e5e@sei-atlantic-1.seed.rhinostake.com:16660'
