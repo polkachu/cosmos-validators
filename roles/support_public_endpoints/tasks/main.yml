@@ -7,6 +7,20 @@
     group: 'root'
     mode: '0644'
 
+- name: open api port
+  become: true
+  ufw:
+    rule: allow
+    port: '{{ custom_port_prefix }}17'
+    proto: tcp
+
+- name: open rpc port
+  become: true
+  ufw:
+    rule: allow
+    port: '{{ custom_port_prefix }}57'
+    proto: tcp
+
 - name: restart caddy service
   become: true
   systemd:
@@ -15,10 +29,3 @@
     daemon_reload: yes
     enabled: yes
   changed_when: false
-
-- name: open gPRC port
-  become: true
-  ufw:
-    rule: allow
-    port: '{{ custom_port_prefix }}90'
-    proto: tcp
