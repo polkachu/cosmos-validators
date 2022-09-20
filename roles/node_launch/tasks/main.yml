@@ -43,6 +43,7 @@
   environment:
     PATH: '{{ path }}'
     GOPATH: '{{ user_dir }}/go'
+  run_once: true
 
 - name: Create cosmovisor directories
   command: "$BINARY_PATH/cosmovisor init $BINARY_PATH/{{ daemon }}"
