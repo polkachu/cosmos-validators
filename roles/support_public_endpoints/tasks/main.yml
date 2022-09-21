@@ -1,28 +1,24 @@
-- name: Create Caddyfile in /etc/Caddy/ for RPC and API
-  become: true
+- name: Create Caddyfile in /etc/Caddy/
   template:
     src: 'Caddyfile'
-    dest: /etc/caddy/{{network}}.caddy
+    dest: /etc/caddy/{{ network }}.caddy
     owner: 'root'
     group: 'root'
     mode: '0644'
 
 - name: open api port
-  become: true
   ufw:
     rule: allow
     port: '{{ custom_port_prefix }}17'
     proto: tcp
 
 - name: open rpc port
-  become: true
   ufw:
     rule: allow
     port: '{{ custom_port_prefix }}57'
     proto: tcp
 
 - name: restart caddy service
-  become: true
   systemd:
     name: caddy
     state: restarted

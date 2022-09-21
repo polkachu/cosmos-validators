@@ -1,5 +1,6 @@
 ---
 - name: Make public endpoints available
+  become: true
   hosts: '{{ target }}'
   gather_facts: false
   vars_files:
