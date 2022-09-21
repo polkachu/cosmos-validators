@@ -7,7 +7,7 @@ node_version: v8.1.0
 repo: https://github.com/tharsis/evmos
 genesis: 'https://archive.evmos.org/mainnet/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:34656,5740e4a36e646e80cc5648daf5e983e5b5d8f265@54.39.18.27:26656,906840c2f447915f3d0e37bc68221f5494f541db@3.39.58.32:26656'
-minimum_gas_price: '2500000000000aevmos'
+minimum_gas_price: '250000000aevmos'
 custom_port_prefix: 134
 
 # [Optional] Snapshot
