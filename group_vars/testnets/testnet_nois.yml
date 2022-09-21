@@ -1,0 +1,10 @@
+# this node require special build
+network: nois
+folder: '.noisd'
+daemon: noisd
+chain_id: nois-testnet-002
+node_version: 'v1.1.2'
+repo: https://github.com/noislabs/full-node
+genesis: 'https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-002/genesis.json'
+peers: 'a1222dfb8641e0cb55615b75e0122d5695be1f35@node-0.noislabs.com:26656'
+custom_port_prefix: 173
