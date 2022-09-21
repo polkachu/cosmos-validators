@@ -23,3 +23,13 @@
     Access-Control-Allow-Origin "*"
   }
 }
+
+{{ network }}-grpc.lavenderfive.com {
+  reverse_proxy {
+    to h2c://localhost:{{ custom_port_prefix }}90
+    transport http {
+      versions h2c 2
+      dial_timeout 3s
+    }
+  }
+}

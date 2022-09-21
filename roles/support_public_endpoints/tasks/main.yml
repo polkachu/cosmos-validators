@@ -18,6 +18,12 @@
     port: '{{ custom_port_prefix }}57'
     proto: tcp
 
+- name: open grpc port
+  ufw:
+    rule: allow
+    port: '{{ custom_port_prefix }}90'
+    proto: tcp
+
 - name: restart caddy service
   systemd:
     name: caddy
