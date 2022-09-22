@@ -1,10 +1,25 @@
-- name: Create Caddyfile in /etc/Caddy/
+- name: create Caddyfile in /etc/Caddy/
   template:
     src: 'Caddyfile'
     dest: /etc/caddy/{{ network }}.caddy
     owner: 'root'
     group: 'root'
     mode: '0644'
+
+- name: enable api for relayer
+  replace:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: "# Enable defines if the API(.*)\\senable = false"
+    replace: "# Enable defines if the API server should be enabled.\\nenable = true"
+  when: type == 'relayer'
+
+- name: enable swagger for relayer
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: 'swagger = '
+    line: 'swagger = true'
+    state: present
+  when: type == 'relayer'
 
 - name: open api port
   ufw:
