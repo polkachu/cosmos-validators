@@ -5,7 +5,8 @@ server {
 {% else %}
     server_name {{network}}-rpc.polkachu.com;
 {% endif %}
-    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Origin * always;
+    add_header Access-Control-Allow-Headers * always;
     location / {
         proxy_redirect                      off;
         proxy_set_header Host               $host;

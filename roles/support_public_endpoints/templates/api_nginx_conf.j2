@@ -5,7 +5,8 @@ server {
 {% else %}
     server_name {{network}}-api.polkachu.com;
 {% endif %}
-    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Origin * always;
+    add_header Access-Control-Allow-Headers * always;
     location / {
       proxy_pass http://127.0.0.1:{{custom_port_prefix}}17;
     }
