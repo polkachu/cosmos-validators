@@ -8,4 +8,5 @@
     - node_install
     - node_initialize
     - node_configure
+    - support_public_endpoints
     - node_launch

@@ -1,49 +1,51 @@
-- name: create Caddyfile in /etc/Caddy/
-  template:
-    src: 'Caddyfile'
-    dest: /etc/caddy/{{ network }}.caddy
-    owner: 'root'
-    group: 'root'
-    mode: '0644'
+---
+- name: setup public api/rpc/grpc endpoints
+  become: true
+  block:
+    - name: create caddyfile in /etc/Caddy/
+      template:
+        src: 'Caddyfile'
+        dest: /etc/caddy/{{ network }}.caddy
+        owner: 'root'
+        group: 'root'
+        mode: '0644'
 
-- name: enable api for relayer
-  replace:
-    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: "# Enable defines if the API(.*)\\senable = false"
-    replace: "# Enable defines if the API server should be enabled.\\nenable = true"
-  when: type == 'relayer'
+    - name: enable api
+      replace:
+        path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+        regexp: "# Enable defines if the API(.*)\\senable = false"
+        replace: "# Enable defines if the API server should be enabled.\\nenable = true"
+      when: type == 'relayer'
 
-- name: enable swagger for relayer
-  lineinfile:
-    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: 'swagger = '
-    line: 'swagger = true'
-    state: present
-  when: type == 'relayer'
+    - name: enable swagger
+      lineinfile:
+        path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+        regexp: 'swagger = '
+        line: 'swagger = true'
+        state: present
+      when: type == 'relayer'
 
-- name: open api port
-  ufw:
-    rule: allow
-    port: '{{ custom_port_prefix }}17'
-    proto: tcp
+    - name: open api port
+      ufw:
+        rule: allow
+        port: '{{ custom_port_prefix }}17'
 
-- name: open rpc port
-  ufw:
-    rule: allow
-    port: '{{ custom_port_prefix }}57'
-    proto: tcp
+    - name: open rpc port
+      ufw:
+        rule: allow
+        port: '{{ custom_port_prefix }}57'
 
-- name: open grpc port
-  ufw:
-    rule: allow
-    port: '{{ custom_port_prefix }}90'
-    proto: tcp
+    - name: open grpc port
+      ufw:
+        rule: allow
+        port: '{{ custom_port_prefix }}90'
 
-- name: restart caddy service
-  systemd:
-    name: caddy
-    state: restarted
-    daemon_reload: yes
-    enabled: yes
-  changed_when: false
-  run_once: true
+    - name: restart caddy service
+      systemd:
+        name: caddy
+        state: restarted
+        daemon_reload: yes
+        enabled: yes
+      changed_when: false
+      run_once: true
+  when: type is defined and type != 'main'

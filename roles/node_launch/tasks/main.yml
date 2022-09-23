@@ -15,13 +15,6 @@
     proto: tcp
     port: "{{ custom_port_prefix }}56"
 
-- name: Open rpc port
-  become: true
-  ufw:
-    rule: allow
-    port: "{{ custom_port_prefix }}57"
-  when: type is defined and type != 'main'
-
 - name: Install cosmovisor
   command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
   environment:
