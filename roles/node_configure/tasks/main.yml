@@ -4,6 +4,22 @@
     url: 'https://api.ipify.org?format=json'
   register: public_ip
 
+- name: Update peers in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^persistent_peers ='
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
+  when: peers is defined
+
+- name: Update seeds in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^seeds ='
+    line: 'seeds = "{{ seeds }}"'
+    state: present
+  when: seeds is defined
+
 - name: Set up external address
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
