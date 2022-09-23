@@ -1,5 +1,5 @@
 network: vidulum
-folder: '.vdl'
+folder: '.vidulum'
 daemon: vidulumd
 chain_id: vidulum-1
 node_version: v1.0.0
