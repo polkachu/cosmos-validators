@@ -1,8 +1,0 @@
----
-- name: Install tenderduty service
-  hosts: '{{ target }}'
-  gather_facts: false
-  vars_files:
-    - '{{ var_file }}'
-  roles:
-    - support_tenderduty
