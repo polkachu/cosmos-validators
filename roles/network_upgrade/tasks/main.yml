@@ -1,0 +1,23 @@
+---
+- name: create cosmovisor upgrade directory
+  file:
+    path: '{{ item }}'
+    state: directory
+    mode: '0755'
+  with_items:
+    - '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/{{ upgrade_name }}/bin'
+
+- name: copy daemon file to cosmovisor
+  copy:
+    src: '{{ user_dir }}/go/bin/{{ daemon }}'
+    dest: '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/{{ upgrade_name }}/bin'
+    remote_src: true
+    mode: '0755'
+
+- name: save version
+  command: '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/{{ upgrade_name }}/bin/{{ daemon }} version'
+  register: version
+  
+- name: confirm version
+  debug:
+    msg: '{{ version.stderr_lines }} should be equal to {{ node_version }}'
