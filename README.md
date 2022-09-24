@@ -134,7 +134,7 @@ ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalco
 | Impacthub     | Yes     |         | 166         |
 | Injective     | Yes     |         | 143         |
 | Juno          | Yes     | Yes     | 126         |
-| Kava          | Yes     |         | 139         |
+| Kava          | Yes     | Yes     | 139         |
 | Kichain       | Yes     | Yes     | 135         |
 | Konstellation | Yes     |         | 133         |
 | Kujira        | Yes     | Yes     | 118         |

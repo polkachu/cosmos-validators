@@ -69,7 +69,7 @@
     state: present
   when: type == 'main' or type == 'backup'
 
-- name: Open RPC port for relayer
+- name: Enable RPC port for relayer (Firewall will still manage the access to this port)
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: '{{ custom_port_prefix }}57'
