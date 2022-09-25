@@ -8,6 +8,7 @@ server {
     add_header Access-Control-Allow-Origin * always;
     add_header Access-Control-Allow-Headers * always;
     location / {
+      limit_req zone=limitreqsbyaddr burst=20 nodelay;
       proxy_pass http://127.0.0.1:{{custom_port_prefix}}17;
     }
 }

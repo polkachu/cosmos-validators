@@ -1,0 +1,46 @@
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+	worker_connections 768;
+}
+
+http {
+
+	# Bots
+	deny 54.151.194.132;
+	deny 35.232.31.106;
+	deny 2600:3c00::f03c:92ff:fe4a:69e6;
+	deny 23.82.128.142;
+	deny 2a01:4f9:6a:4c2b::2;
+	deny 34.80.69.180;
+	deny 154.53.44.81;
+	deny 65.108.246.126;
+	deny 45.138.25.164;
+
+	# Rate limit
+	set_real_ip_from 0.0.0.0/0;
+	real_ip_recursive on;
+	real_ip_header X-Forwarded-For;
+	limit_req_zone $binary_remote_addr zone=limitreqsbyaddr:10m rate=30r/m;
+	limit_req_status 429;
+
+	sendfile on;
+	tcp_nopush on;
+	types_hash_max_size 2048;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+
+	access_log /var/log/nginx/access.log;
+	error_log /var/log/nginx/error.log;
+
+	gzip on;
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+}
