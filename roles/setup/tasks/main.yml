@@ -1,0 +1,48 @@
+---
+- name: get port prefixes
+  uri:
+    url: '{{ port_prefix_url }}'
+    method: GET
+    return_content: true
+    status_code: 200
+    body_format: json
+  register: port_prefixes
+  when: port_prefix_url is defined
+  run_once: true
+
+- name: register chain information
+  uri:
+    url: '{{ cosmos_directory_url }}/{{ network }}'
+    method: GET
+    return_content: true
+    status_code: 200
+    body_format: json
+  register: cosmos_directory
+  when: cosmos_directory_url is defined
+
+- name: define variables
+  set_fact:
+    custom_port_prefix: '{{ port_prefixes.json[network] }}'
+    chain_id: '{{ cosmos_directory.json.chain.chain_id }}'
+    repo: '{{ cosmos_directory.json.chain.codebase.git_repo }}'
+    genesis: '{{ cosmos_directory.json.chain.genesis.genesis_url }}'
+    network: '{{ cosmos_directory.json.chain.name }}'
+    folder: '{{ cosmos_directory.json.chain.node_home | replace("$HOME/", "") }}'
+    node_version: '{{ cosmos_directory.json.chain.codebase.recommended_version }}'
+    daemon: '{{ cosmos_directory.json.chain.daemon_name }}'
+    seeds: ''
+
+- name: override node_version
+  set_fact:
+    node_version: '{{ upgrade_version }}'
+  when: upgrade_version is defined
+
+- name: build seed string
+  set_fact:
+    seeds: '{{ item.id }}@{{ item.address }},{{ seeds }}'
+  with_items: 
+    - '{{ cosmos_directory.json.chain.peers.seeds }}'
+
+- name: cut trailing comma
+  set_fact:
+    seeds: '{{ seeds.rstrip(",") }}'

@@ -11,6 +11,7 @@
         mode: '0644'
 
     - name: enable api
+      become: false
       replace:
         path: '{{ user_dir }}/{{ folder }}/config/app.toml'
         regexp: "# Enable defines if the API(.*)\\senable = false"
@@ -18,6 +19,7 @@
       when: type == 'relayer'
 
     - name: enable swagger
+      become: false
       lineinfile:
         path: '{{ user_dir }}/{{ folder }}/config/app.toml'
         regexp: 'swagger = '

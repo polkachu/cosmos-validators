@@ -1,4 +1,4 @@
-network: lum
+network: lumnetwork
 folder: '.lumd'
 daemon: lumd
 chain_id: lum-network-1

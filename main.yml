@@ -5,6 +5,7 @@
   vars_files:
     - '{{ var_file }}'
   roles:
+    - setup
     - node_install
     - node_initialize
     - node_configure
