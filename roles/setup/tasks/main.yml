@@ -22,19 +22,23 @@
     return_content: true
     status_code: 200
     body_format: json
-  register: cosmos_directory
+  register: http_response
   when: cosmos_directory_url is defined
 
-- name: define variables
+- name: consolidate http response to cosmos_directory api
+  set_fact:
+    cosmos_directory: '{{ http_response.json.chain }}'
+
+- name: define network variables
   set_fact:
     custom_port_prefix: '{{ prefixes[network] }}'
-    chain_id: '{{ cosmos_directory.json.chain.chain_id }}'
-    repo: '{{ cosmos_directory.json.chain.codebase.git_repo }}'
-    genesis: '{{ cosmos_directory.json.chain.genesis.genesis_url }}'
-    network: '{{ cosmos_directory.json.chain.name }}'
-    folder: '{{ cosmos_directory.json.chain.node_home | replace("$HOME/", "") }}'
-    node_version: '{{ cosmos_directory.json.chain.codebase.recommended_version }}'
-    daemon: '{{ cosmos_directory.json.chain.daemon_name }}'
+    chain_id: '{{ cosmos_directory.chain_id }}'
+    repo: '{{ cosmos_directory.codebase.git_repo }}'
+    genesis: '{{ cosmos_directory.genesis.genesis_url }}'
+    network: '{{ cosmos_directory.name }}'
+    folder: '{{ cosmos_directory.node_home | replace("$HOME/", "") }}'
+    node_version: '{{ cosmos_directory.codebase.recommended_version }}'
+    daemon: '{{ cosmos_directory.daemon_name }}'
     seeds: ''
 
 - name: override node_version
@@ -46,7 +50,7 @@
   set_fact:
     seeds: '{{ item.id }}@{{ item.address }},{{ seeds }}'
   with_items: 
-    - '{{ cosmos_directory.json.chain.peers.seeds }}'
+    - '{{ cosmos_directory.peers.seeds }}'
 
 - name: cut trailing comma
   set_fact:
