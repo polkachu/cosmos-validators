@@ -10,6 +10,11 @@
   when: port_prefix_url is defined
   run_once: true
 
+- name: set response as json
+  set_fact:
+    prefixes: '{{ port_prefixes.content | from_json }}'
+  when: port_prefix_url is defined
+
 - name: register chain information
   uri:
     url: '{{ cosmos_directory_url }}/{{ network }}'
@@ -22,7 +27,7 @@
 
 - name: define variables
   set_fact:
-    custom_port_prefix: '{{ port_prefixes.json[network] }}'
+    custom_port_prefix: '{{ prefixes[network] }}'
     chain_id: '{{ cosmos_directory.json.chain.chain_id }}'
     repo: '{{ cosmos_directory.json.chain.codebase.git_repo }}'
     genesis: '{{ cosmos_directory.json.chain.genesis.genesis_url }}'
