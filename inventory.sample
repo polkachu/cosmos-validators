@@ -1,31 +1,56 @@
-[mainnets]
-mainnet1 ansible_host=10.0.0.1
+---
+all:
+  children:
+    networks:
+      children:
+        evmos:
+          hosts:
+            evmos_master:
+            evmos_relayer:
+          vars:
+            network: evmos
+        secret:
+          hosts:
+            secret_master:
+            secret_relayer:
+          vars:
+            network: secretnetwork
+    
+    relayers:
+      children:
+        relayer:
+          hosts:
+            evmos_relayer:
+          vars:
+            ansible_host: 2.3.4.5
+      vars:
+        type: relayer          
 
-[backups]
-backup1 ansible_host=10.0.0.1
+    masters:
+      children:
+        ovhcloud:
+          children:
+            secretmaster:
+              hosts:
+                secret_master:
+              vars:
+                ansible_host: 1.2.3.4
+            
+      vars:
+        type: main
 
-[relayers]
-relayer1 ansible_host=10.0.0.3
-
-[juno]
-juno_main ansible_host=10.0.0.1 type=main
-juno_backup ansible_host=10.0.0.2 type=backup prepare=false
-juno_relayer ansible_host=10.0.0.3 type=relayer prepare=false
-juno_seed ansible_host=10.0.0.4
-juno_tenderduty ansible_host=10.0.0.5 target_ip=10.0.0.3
-
-[all:vars]
-ansible_user=ubuntu
-ansible_port=22
-ansible_ssh_private_key_file="~/.ssh/id_rsa"
-var_file="group_vars/mainnets/{{ group_names[0] }}.yml"
-user_dir="/home/{{ansible_user}}"
-path="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:{{ user_dir }}/go/bin"
-node_exporter=true
-promtail=true
-log_monitor=http://10.0.0.100:3100
-node_name="BRAND-{{ network }}-{{ type }}"
-log_name="PREFIX_{{ network }}_{{ type }}"
-snapshot_endpoint='http://10.0.0.2000'
-
-pagerduty_key="SECRET_KEY"
+  vars:
+    ansible_user: deploy
+    ansible_port: 1152
+    ansible_ssh_private_key_file: "~/.ssh/id_ed25519"
+    user_dir: "/home/{{ ansible_user }}"
+    path: "/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:{{ user_dir }}/go/bin"
+    node_exporter: false
+    promtail: false
+    log_monitor: http://10.0.0.100:3100
+    node_name: "lavender.{{ network }}.{{ type }}"
+    log_name: "lavender.{{ network }}.{{ type }}"
+    snapshot_endpoint: 'http://10.0.0.2000'
+    snapshot_profile: 'profile'  
+    cosmos_directory_url: 'https://chains.cosmos.directory'
+    port_prefix_url: https://raw.githubusercontent.com/polkachu/cosmos-port-prefixes/main/networks.json
