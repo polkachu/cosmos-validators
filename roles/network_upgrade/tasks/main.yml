@@ -20,4 +20,4 @@
   
 - name: confirm version
   debug:
-    msg: '{{ version.stdout }} should be equal to {{ node_version }}'
+    msg: '{{ version.stdout }} or {{ version.stderr }} should be equal to {{ node_version }}'
