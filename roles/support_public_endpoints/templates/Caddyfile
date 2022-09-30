@@ -11,10 +11,10 @@
   }
   rate_limit {path} 50r/s
   reverse_proxy {
-    to https://localhost:{{ custom_port_prefix }}57
+    to http://localhost:{{ custom_port_prefix }}57
   }
   handle_path /CustomPath/* {
-    rewrite & /websocket?{query}
+    rewrite * /websocket?{query}
     reverse_proxy websocket:{{ custom_port_prefix }}57
   }
 }
