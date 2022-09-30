@@ -4,7 +4,7 @@ After=network-online.target
 
 [Service]
 User={{ ansible_user }}
-ExecStart={{ user_dir }}/go/bin/tenderseed  -home {{ user_dir }}/{{ folder }} -seeds {{ seed }} -chain-id {{ chain_id }} start
+ExecStart={{ user_dir }}/go/bin/tenderseed  -home {{ user_dir }}/{{ folder }} -seeds {{ seeds }} -chain-id {{ chain_id }} start
 Restart=always
 RestartSec=3
 

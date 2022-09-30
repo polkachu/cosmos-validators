@@ -1,8 +1,19 @@
 ---
+- name: sort hosts
+  hosts: networks
+  gather_facts: no
+  tasks:
+  - group_by:
+      key: seeds
+    when: inventory_hostname.endswith('master')
+
+  - name: change host to tenderseed
+    set_fact:
+      ansible_host: '{{ tenderseed_host }}'
+
 - name: Install seed
-  hosts: '{{ target }}'
-  gather_facts: false
-  vars_files:
-    - '{{ var_file }}'
+  hosts: seeds
+  gather_facts: false    
   roles:
+    - setup
     - support_seed
