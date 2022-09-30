@@ -1,5 +1,4 @@
 ---
-
 - name: Check if node has been initialized
   stat:
     path: '{{ user_dir }}/{{ folder }}'
@@ -48,7 +47,7 @@
     - name: targz genesis download
       include_tasks: genesis_targz.yml
       when: genesis_processing is defined and genesis_processing == "targz" 
-  when: not node_initialized.stat.exists
+  when: not node_initialized.stat.isdir is defined and not node_initialized.stat.isdir
 
 - name: Update minimum gas price on config file
   lineinfile:
