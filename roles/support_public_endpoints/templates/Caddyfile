@@ -9,15 +9,14 @@
     Pragma no-cache
     -Server
   }
-}
-rate_limit {path} 50r/s
-reverse_proxy {
-  to https://localhost:{{ custom_port_prefix }}57
+  rate_limit {path} 50r/s
+  reverse_proxy {
+    to https://localhost:{{ custom_port_prefix }}57
   }
-handle_path /CustomPath/* {
-  rewrite & /websocket?{query}
-  reverse_proxy websocket:{{ custom_port_prefix }}57
- }
+  handle_path /CustomPath/* {
+    rewrite & /websocket?{query}
+    reverse_proxy websocket:{{ custom_port_prefix }}57
+  }
 }
 
 {{ network }}-api.lavenderfive.com {
