@@ -2,9 +2,9 @@ network: gravity
 folder: '.gravity'
 daemon: gravity
 chain_id: gravity-bridge-3
-node_version: 'v1.6.7'
+node_version: 'v1.7.1'
 repo: 'https://github.com/Gravity-Bridge/Gravity-Bridge'
-binary: 'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.6.7/gravity-linux-amd64'
+binary: 'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.1/gravity-linux-amd64'
 genesis: 'https://raw.githubusercontent.com/Gravity-Bridge/gravity-docs/main/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14256'
 custom_port_prefix: 142
