@@ -16,6 +16,7 @@
     port: "{{ custom_port_prefix }}56"
 
 - name: Install cosmovisor
+  become: true
   command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
   environment:
     PATH: '{{ path }}'
