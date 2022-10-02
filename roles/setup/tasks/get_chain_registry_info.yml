@@ -1,0 +1,43 @@
+---
+- name: populate network vars from chain registry
+  block:
+    - name: register chain information
+      uri:
+        url: '{{ cosmos_directory_url }}/{{ network }}'
+        method: GET
+        return_content: true
+        status_code: 200
+        body_format: json
+      register: http_response
+      when: cosmos_directory_url is defined and custom_port_prefix not defined
+
+    - name: consolidate http response to cosmos_directory api
+      set_fact:
+        cosmos_directory: '{{ http_response.json.chain }}'
+
+    - name: define network variables
+      set_fact:
+        chain_id: '{{ chain_id | default(cosmos_directory.chain_id) }}'
+        repo: '{{ git_repo | default(cosmos_directory.codebase.git_rep) }}'
+        genesis: '{{ genesis | default(cosmos_directory.genesis.genesis_url) }}'
+        network: '{{ network | default(cosmos_directory.name) }}'
+        folder: '{{ folder | default(cosmos_directory.node_home) | replace("$HOME/", "") }}'
+        node_version: '{{ node_version | default(cosmos_directory.codebase.recommended_version) }}'
+        daemon: '{{ daemon | default(cosmos_directory.daemon_name) }}'
+        seeds: ''
+
+    - name: override node_version with upgrade
+      set_fact:
+        node_version: '{{ upgrade_version }}'
+      when: upgrade_version is defined
+
+    - name: build seed string
+      set_fact:
+        seeds: '{{ item.id }}@{{ item.address }},{{ seeds }}'
+      with_items: 
+        - '{{ cosmos_directory.peers.seeds }}'
+
+    - name: cut trailing comma
+      set_fact:
+        seeds: '{{ seeds.rstrip(",") }}'
+  when: not custom_port_prefix is defined
