@@ -5,6 +5,6 @@ chain_id: teritori-1
 node_version: v1.0.0
 repo: https://github.com/TERITORI/teritori-chain
 genesis: https://github.com/TERITORI/teritori-mainnet-genesis/raw/main/genesis.json
-seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:15956'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15956,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:15956'
 minimum_gas_price: ''
 custom_port_prefix: 159
