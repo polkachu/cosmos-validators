@@ -102,6 +102,7 @@ ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalco
 | Agoric        | Yes     | Yes     | 144         |
 | Akash         | Yes     |         | 128         |
 | Althea        |         | Yes     | 124         |
+| Androma       |         | Yes     | 150         |
 | Archaway      |         | Yes     | 115         |
 | Assetmantle   | Yes     |         | 146         |
 | Axelar        | Yes     | Yes     | 151         |
@@ -123,6 +124,7 @@ ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalco
 | Deweb         |         | Yes     | 114         |
 | DIG           | Yes     |         | 163         |
 | Echelon       | Yes     |         | 120         |
+| Empower       |         | Yes     | 174         |
 | Evmos         | Yes     | Yes     | 134         |
 | Fetch         | Yes     |         | 152         |
 | Firmachain    | Yes     |         | 164         |
@@ -147,6 +149,7 @@ ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalco
 | Osmosis       | Yes     |         | 125         |
 | Paloma        |         | Yes     | 121         |
 | Passage       | Yes     |         | 156         |
+| Persistence   | Yes     |         | 154         |
 | Quicksilver   |         | Yes     | 111         |
 | Secret        |         |         | 171         |
 | Sifchain      | Yes     |         | 132         |
@@ -155,7 +158,7 @@ ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalco
 | Source        |         | Yes     | 158         |
 | Stargaze      | Yes     | Yes     | 137         |
 | Stride        | Yes     | Yes     | 122         |
-| Teritori      |         | Yes     | 159         |
+| Teritori      | Yes     | Yes     | 159         |
 | Terra2        | Yes     | Yes     | 117         |
 | Umee          | Yes     | Yes     | 136         |
 | Vidulum       | Yes     |         | 170         |

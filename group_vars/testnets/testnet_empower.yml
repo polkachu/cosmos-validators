@@ -1,0 +1,9 @@
+# Need custom install
+network: empower
+folder: '.empowerchain'
+daemon: empowerd
+chain_id: altruistic-1
+node_version: 'main'
+repo: 'https://github.com/empowerchain/empowerchain'
+genesis: 'https://raw.githubusercontent.com/empowerchain/empowerchain/main/testnets/altruistic-1/genesis.json'
+custom_port_prefix: 174
