@@ -1,6 +1,7 @@
 ---
+- name: get chain registry info
+  import_tasks: get_chain_registry_info.yml
+
 - name: get custom port prefix
   import_tasks: get_port_prefix.yml
 
-- name: get chain registry info
-  import_tasks: get_chain_registry_info.yml

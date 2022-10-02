@@ -15,6 +15,6 @@
     prefixes: '{{ port_prefixes.content | from_json }}'
   when: port_prefix_url is defined
 
-- name: define network variables
+- name: assign port prefix
   set_fact:
     custom_port_prefix: '{{ prefixes[network] }}'

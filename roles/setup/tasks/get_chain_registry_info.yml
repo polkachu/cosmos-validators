@@ -9,35 +9,34 @@
         status_code: 200
         body_format: json
       register: http_response
-      when: cosmos_directory_url is defined and custom_port_prefix not defined
 
     - name: consolidate http response to cosmos_directory api
       set_fact:
         cosmos_directory: '{{ http_response.json.chain }}'
 
-    - name: define network variables
+    - name: assign network variables
       set_fact:
         chain_id: '{{ chain_id | default(cosmos_directory.chain_id) }}'
-        repo: '{{ git_repo | default(cosmos_directory.codebase.git_rep) }}'
+        repo: '{{ git_repo | default(cosmos_directory.codebase.git_repo) }}'
         genesis: '{{ genesis | default(cosmos_directory.genesis.genesis_url) }}'
         network: '{{ network | default(cosmos_directory.name) }}'
         folder: '{{ folder | default(cosmos_directory.node_home) | replace("$HOME/", "") }}'
         node_version: '{{ node_version | default(cosmos_directory.codebase.recommended_version) }}'
         daemon: '{{ daemon | default(cosmos_directory.daemon_name) }}'
-        seeds: ''
-
-    - name: override node_version with upgrade
-      set_fact:
-        node_version: '{{ upgrade_version }}'
-      when: upgrade_version is defined
+        seeds: '{{ seeds | default("") }}'
 
     - name: build seed string
       set_fact:
-        seeds: '{{ item.id }}@{{ item.address }},{{ seeds }}'
+        seeds: '{{ item.id }}@{{ item.address }},'
       with_items: 
         - '{{ cosmos_directory.peers.seeds }}'
 
     - name: cut trailing comma
       set_fact:
         seeds: '{{ seeds.rstrip(",") }}'
-  when: not custom_port_prefix is defined
+      
+    - name: override node_version with upgrade
+      set_fact:
+        node_version: '{{ upgrade_version }}'
+      when: upgrade_version is defined
+  when: 'custom_port_prefix is not defined and cosmos_directory_url is defined'
