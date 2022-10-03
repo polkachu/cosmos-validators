@@ -23,18 +23,23 @@
         folder: '{{ folder | default(cosmos_directory.node_home) | replace("$HOME/", "") }}'
         node_version: '{{ node_version | default(cosmos_directory.codebase.recommended_version) }}'
         daemon: '{{ daemon | default(cosmos_directory.daemon_name) }}'
-        seeds: '{{ seeds | default("") }}'
+        denom: '{{ denom | default(cosmos_directory.staking.staking_tokens[0].denom) }}'
+        seeds: '{{ seeds | default("") }}'  
+
+    - name: set minimum gas price
+      set_fact:
+        minimum_gas_price: '{{ minimum_gas_price | default(default_fee|string + denom) }}'
 
     - name: build seed string
       set_fact:
-        seeds: '{{ item.id }}@{{ item.address }},'
+        seeds: '{{ item.id }}@{{ item.address }},{{ seeds }}'
       with_items: 
         - '{{ cosmos_directory.peers.seeds }}'
 
     - name: cut trailing comma
       set_fact:
         seeds: '{{ seeds.rstrip(",") }}'
-      
+
     - name: override node_version with upgrade
       set_fact:
         node_version: '{{ upgrade_version }}'
