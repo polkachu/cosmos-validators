@@ -20,7 +20,9 @@ sudo service {{ network }} stop
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
 cd {{ user_dir }}/{{ folder }}
 {% if wasm is defined and wasm is sameas true %}
+WASM_FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}_wasmonly.tar.lz4)
 tar cvf - data wasm | lz4 > "{{ user_dir }}/$FILENAME"
+tar cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
 {% else %}
 tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
 {% endif %}
@@ -32,6 +34,12 @@ sudo service {{ network }} start
 cd {{ user_dir }}/
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" --profile={{ snapshot_profile }}
 rm $FILENAME
+
+{% if wasm is defined and wasm is sameas true %}
+cd {{ user_dir }}/
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $WASM_FILENAME "s3://wasm/{{ network }}/" --profile={{ snapshot_profile }}
+rm $WASM_FILENAME
+{% endif %}
 
 # Transfer the addrbook
 cd {{ user_dir }}/{{ folder }}/config
