@@ -20,7 +20,7 @@ sudo service {{ network }} stop
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
 cd {{ user_dir }}/{{ folder }}
 {% if wasm is defined and wasm is sameas true %}
-WASM_FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}_wasmonly.tar.lz4)
+WASM_FILENAME='wasmonly.tar.lz4'
 tar cvf - data wasm | lz4 > "{{ user_dir }}/$FILENAME"
 tar cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
 {% else %}
