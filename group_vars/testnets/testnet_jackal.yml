@@ -1,0 +1,10 @@
+network: jackal
+folder: .canine
+daemon: canined
+chain_id: woof-rehearsal
+node_version: master
+repo: https://github.com/JackalLabs/canine-chain
+genesis: https://raw.githubusercontent.com/JackalLabs/woof/master/genesis/woof-rehearsal.json
+peers: '10095bfbe3b11b3efd4c5d8d795651ed452985ec@174.138.166.134:26656,10095bfbe3b11b3efd4c5d8d795651ed452985ec@174.138.166.134:26656'
+minimum_gas_price: 0.002ujkl
+custom_port_prefix: 173

@@ -5,3 +5,6 @@
 - name: get custom port prefix
   import_tasks: get_port_prefix.yml
 
+- name: assign testnet vars
+  include_vars: 'group_vars/testnets/{{ testnet_vars }}'
+  when: 'type == "testnet"'

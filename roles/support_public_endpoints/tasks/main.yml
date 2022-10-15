@@ -50,4 +50,4 @@
         enabled: yes
       changed_when: false
       run_once: true
-  when: type is defined and type != 'main'
+  when: type is defined and type == 'relayer'
