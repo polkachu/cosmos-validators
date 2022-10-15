@@ -1,6 +1,7 @@
-{{ network }}-rpc.lavenderfive.com {
+{{ custom_network | default(network) }}-rpc.lavenderfive.com {
   log
   import rpc-header
+  import blocked
   import rate-limiter
   reverse_proxy {
     to http://localhost:{{ custom_port_prefix }}57
@@ -11,17 +12,19 @@
   }
 }
 
-{{ network }}-api.lavenderfive.com {
+{{ custom_network | default(network) }}-api.lavenderfive.com {
   log
   import api-header
+  import blocked
   import rate-limiter
   reverse_proxy {
     to http://localhost:{{ custom_port_prefix }}17
   }
 }
 
-{{ network }}-grpc.lavenderfive.com {
+{{ custom_network | default(network) }}-grpc.lavenderfive.com {
   log
+  import blocked
   import rate-limiter
   reverse_proxy {
     to h2c://localhost:{{ custom_port_prefix }}90
