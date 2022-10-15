@@ -23,12 +23,20 @@
         folder: '{{ folder | default(cosmos_directory.node_home) | replace("$HOME/", "") }}'
         node_version: '{{ node_version | default(cosmos_directory.codebase.recommended_version) }}'
         daemon: '{{ daemon | default(cosmos_directory.daemon_name) }}'
-        denom: '{{ denom | default(cosmos_directory.staking.staking_tokens[0].denom) }}'
         seeds: '{{ seeds | default("") }}'  
 
-    - name: set minimum gas price
-      set_fact:
-        minimum_gas_price: '{{ minimum_gas_price | default(default_fee|string + denom) }}'
+    - name: define minimum gas prices
+      block:
+        - name: assign minimum gas vars
+          set_fact:
+            denom: '{{ cosmos_directory.fees.fee_tokens[0].denom }}'
+            minimum_fee: '{{ cosmos_directory.fees.fee_tokens[0].fixed_min_gas_price }}'
+
+        - name: set minimum gas price
+          set_fact:
+            minimum_gas_price: '{{ minimum_fee|string + denom }}'
+      when: minimum_gas_price is not defined
+      ignore_errors: true
 
     - name: build seed string
       set_fact:
