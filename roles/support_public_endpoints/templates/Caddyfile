@@ -1,15 +1,7 @@
 {{ network }}-rpc.lavenderfive.com {
   log
-  header {
-    Access-Control-Allow-Methods "POST, GET, OPTIONS"
-    Access-Control-Allow-Headers "*"
-    Access-Control-Allow-Origin "*"
-    Access-Control-Max-Age 86400
-    Cache-Control no-cache
-    Pragma no-cache
-    -Server
-  }
-  rate_limit {path} 50r/s
+  import rpc-header
+  import rate-limiter
   reverse_proxy {
     to http://localhost:{{ custom_port_prefix }}57
   }
@@ -21,17 +13,16 @@
 
 {{ network }}-api.lavenderfive.com {
   log
-  header {
-    Access-Control-Allow-Origin "*"
-  }
-  rate_limit {path} 50r/s
+  import api-header
+  import rate-limiter
   reverse_proxy {
     to http://localhost:{{ custom_port_prefix }}17
   }
 }
 
 {{ network }}-grpc.lavenderfive.com {
-  rate_limit {path} 50r/s
+  log
+  import rate-limiter
   reverse_proxy {
     to h2c://localhost:{{ custom_port_prefix }}90
     transport http {
