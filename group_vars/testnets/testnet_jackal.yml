@@ -1,0 +1,10 @@
+network: jackal
+folder: '.canine'
+daemon: canined
+chain_id: canine-1
+node_version: woof-4
+repo: https://github.com/JackalLabs/canine-chain
+genesis: 'https://raw.githubusercontent.com/JackalLabs/woof/master/genesis/woof-final.json'
+peers: 'e2a022428022d7b93e0ffa0928e424ce1cba0e66@23.88.73.211:26656,f0b2cc6d1f14d7388d2e0e1e4620681a967df5b3@209.34.206.38:26656,53300f221a72ba385f86ca42709a46413d47f5b0@192.168.212.103:26656,f0f1e8791d5bbb87ce35bde8bf3369df68d31c31@131.153.59.6:26656,3ad5b32bcdf8807a3bdd7a3cd7ed87bb576ff71c@89.58.38.59:26656,6071fe2fc7e4f49caa4b1fd1cfe19007152312e0@10.132.0.12:26656,94278f52a294b3d958e31690a6a64d811b513cee@192.168.50.57:26656'
+minimum_gas_price: 0.002ujkl
+custom_port_prefix: 175
