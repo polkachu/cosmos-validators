@@ -1,25 +1,25 @@
 ---
-# - name: Install jq and awscli
-#   become: true
-#   apt:
-#     name:
-#       - awscli
-#       - jq
-#     state: present
-#     update_cache: yes
+- name: Install jq and awscli
+  become: true
+  apt:
+    name:
+      - awscli
+      - jq
+    state: present
+    update_cache: yes
 
-# - name: Install snapd
-#   become: true
-#   apt:
-#     name: snapd
-#     state: present
-#     update_cache: yes
+- name: Install snapd
+  become: true
+  apt:
+    name: snapd
+    state: present
+    update_cache: yes
 
-# - name: Install lz4
-#   become: true
-#   snap:
-#     name: lz4
-#     state: present
+- name: Install lz4
+  become: true
+  snap:
+    name: lz4
+    state: present
 
 - name: Create directory
   file:

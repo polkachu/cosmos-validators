@@ -2,7 +2,7 @@ network: juno
 folder: '.juno'
 daemon: junod
 chain_id: juno-1
-node_version: v9.0.0
+node_version: v10.1.0
 repo: https://github.com/CosmosContracts/juno
 genesis: 'https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12656'

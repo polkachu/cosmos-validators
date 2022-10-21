@@ -2,7 +2,7 @@ network: stargaze
 folder: '.starsd'
 daemon: starsd
 chain_id: stargaze-1
-node_version: 'v7.0.0'
+node_version: 'v7.5.0'
 repo: 'https://github.com/public-awesome/stargaze'
 genesis: 'https://raw.githubusercontent.com/public-awesome/mainnet/main/stargaze-1/genesis.tar.gz'
 genesis_processing: targz

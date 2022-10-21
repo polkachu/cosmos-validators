@@ -2,7 +2,7 @@ network: kava
 folder: '.kava'
 daemon: kava
 chain_id: kava_2222-10
-node_version: v0.18.0
+node_version: v0.18.1
 repo: https://github.com/kava-labs/kava
 genesis: 'https://kava-genesis-files.s3.amazonaws.com/kava-9/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13956'
