@@ -18,11 +18,18 @@ sudo service {{ network }} stop
 
 # Compress the folder
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
-cd {{ user_dir }}/{{ folder }}
-{% if wasm is defined and wasm is sameas true %}
 WASM_FILENAME='wasmonly.tar.lz4'
+cd {{ user_dir }}/{{ folder }}
+
+{% if wasm is defined and wasm == "outside" %}
 tar cvf - data wasm | lz4 > "{{ user_dir }}/$FILENAME"
 tar cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
+
+{% elif wasm is defined and wasm == "inside" %}
+tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
+cd {{ user_dir }}/{{ folder }}/data
+tar cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
+
 {% else %}
 tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
 {% endif %}
@@ -35,7 +42,7 @@ cd {{ user_dir }}/
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" --profile={{ snapshot_profile }}
 rm $FILENAME
 
-{% if wasm is defined and wasm is sameas true %}
+{% if wasm is defined %}
 cd {{ user_dir }}/
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $WASM_FILENAME "s3://wasm/{{ network }}/" --profile={{ snapshot_profile }}
 rm $WASM_FILENAME

@@ -3,7 +3,7 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9001-2
-node_version: v7.0.0
+node_version: v8.2.3
 repo: https://github.com/tharsis/evmos
 genesis: 'https://github.com/tharsis/mainnet/blob/main/evmos_9001-2/genesis.json.zip?raw=true'
 genesis_processing: zip

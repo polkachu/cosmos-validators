@@ -13,3 +13,4 @@ custom_port_prefix: 129
 # [Optional] Snapshot
 snapshot_hour: 0
 snapshot_minute: 0
+wasm: 'inside'
