@@ -52,4 +52,4 @@
       set_fact:
         node_version: '{{ upgrade_version }}'
       when: upgrade_version is defined
-  when: 'custom_port_prefix is not defined and cosmos_directory_url is defined and type != "testnet"'
+  when: (custom_port_prefix is not defined and cosmos_directory_url is defined) and type != 'testnet'
