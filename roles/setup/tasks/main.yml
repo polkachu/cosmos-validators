@@ -1,9 +1,11 @@
 ---
 - name: get chain registry info
   import_tasks: get_chain_registry_info.yml
+  when: (custom_port_prefix is not defined and cosmos_directory_url is defined) and type != 'testnet'
 
 - name: get custom port prefix
   import_tasks: get_port_prefix.yml
+  when: 'custom_port_prefix is not defined'
 
 - name: assign testnet vars
   include_vars: 'group_vars/testnets/{{ testnet_vars }}'
