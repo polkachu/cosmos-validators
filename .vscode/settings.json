@@ -6,5 +6,6 @@
     ".git/objects",
     ".vscode",
     ".vscode-insiders"
-  ]
+  ],
+  "cSpell.words": ["sged"]
 }
