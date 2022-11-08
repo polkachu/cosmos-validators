@@ -75,7 +75,7 @@
     regexp: '{{ item.key }}'
     line: '{{ item.value }}'
   loop: '{{ pruning_test | dict2items }}'
-  when: type is defined and type == 'test'
+  when: type is defined and type == 'testnet'
 
 - name: Adjust indexer setting for main and backup
   lineinfile:

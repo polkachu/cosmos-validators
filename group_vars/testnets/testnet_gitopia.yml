@@ -2,9 +2,12 @@ network: gitopia
 folder: '.gitopia'
 daemon: gitopiad
 chain_id: gitopia-janus-testnet-2
-node_version: v0.13.0
-repo: gitopia://gitopia1dlpc7ps63kj5v0kn5v8eq9sn2n8v8r5z9jmwff/gitopia
-genesis: 'missing_genesis'
-peers: 'missing_peers'
+node_version: v1.2.0
+repo: gitopia://gitopia/gitopia
+genesis: https://server.gitopia.com/raw/gitopia/testnets/master/gitopia-janus-testnet-2/genesis.json.gz
+seeds: '399d4e19186577b04c23296c4f7ecc53e61080cb@seed.gitopia.com:26656'
 minimum_gas_price: '0.001utlore'
 custom_port_prefix: 113
+binary: https://server.gitopia.com/releases/Gitopia/gitopia/v1.2.0/gitopiad_1.2.0_linux_amd64.tar.gz
+binary_processing: targz
+genesis_processing: gz
