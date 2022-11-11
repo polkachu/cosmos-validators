@@ -1,0 +1,10 @@
+network: ics_apollo
+folder: '.hello'
+daemon: interchain-security-cd
+chain_id: apollo
+node_version: NA
+repo: 'https://github.com/cosmos/gaia'
+binary: 'https://github.com/hyphacoop/ics-testnets/blob/main/game-of-chains-2022/apollo/interchain-security-cd?raw=true'
+genesis: '???'
+seeds: '???'
+custom_port_prefix: 179

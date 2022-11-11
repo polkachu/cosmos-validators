@@ -1,5 +1,5 @@
 network: chihuahua
-folder: '.chihuahua'
+folder: '.chihuahuad'
 daemon: chihuahuad
 chain_id: chihuahua-1
 node_version: v2.0.2

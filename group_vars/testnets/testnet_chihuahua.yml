@@ -1,9 +1,9 @@
 network: chihuahua
-folder: '.chihuahua'
+folder: '.chihuahuad'
 daemon: chihuahuad
-chain_id: chitestnet-2
-node_version: v2.0.1
+chain_id: chitestnet-4
+node_version: v4.0.0-rc2
 repo: https://github.com/ChihuahuaChain/chihuahua.git
-genesis: 'https://snapshots1.polkachu.com/misc/genesis.json'
-peers: '0a4a34440b45592b02ad6b9c1c3d64e688ebb02a@65.108.126.34:27756'
+genesis: 'https://raw.githubusercontent.com/polkachu/validator-guide/main/testnet-genesis/chihuahua/chitestnet-4/genesis.json'
+peers: '69481a41415fe35deceea497d481ce9f6b134eef@65.109.28.219:12956'
 custom_port_prefix: 129
