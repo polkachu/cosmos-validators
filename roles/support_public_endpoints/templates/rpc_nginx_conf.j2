@@ -1,7 +1,7 @@
-{% if loan_balancing is defined %}
+{% if loan_balancing is defined and loan_balancing|bool is sameas true %}
 upstream {{ network }}-rpc {
-    server http://127.0.0.1:{{custom_port_prefix}}57 max_fails=3 fail_timeout=30s;
-    server http://127.0.0.1:{{custom_port_prefix}}57 backup;
+    server 127.0.0.1:{{custom_port_prefix}}57 max_fails=3 fail_timeout=30s;
+    server 127.0.0.1:{{custom_port_prefix}}57 backup;
 }
 {% endif %}
 server {
@@ -14,7 +14,7 @@ server {
     add_header Access-Control-Allow-Origin * always;
     add_header Access-Control-Allow-Headers * always;
     location / {
-{% if no_rate_limit is defined %}
+{% if rate_limit is undefined or rate_limit|bool is sameas true %}
         limit_req zone=limitreqsbyaddr burst=20 nodelay;
 {% endif %}
         proxy_redirect                      off;
@@ -24,7 +24,7 @@ server {
         proxy_set_header X-Forwarded-Proto  $scheme;
         # proxy_set_header Upgrade $http_upgrade;
         # proxy_set_header Connection upgrade;
-{% if loan_balancing is defined  %}
+{% if loan_balancing is defined and loan_balancing|bool is sameas true %}
         proxy_pass      http://{{ network }}-rpc;
 {% else %}
         proxy_pass      http://127.0.0.1:{{custom_port_prefix}}57;

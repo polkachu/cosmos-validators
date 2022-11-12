@@ -8,7 +8,7 @@ events {
 }
 
 http {
-{% if rate_limit is defined and rate_limit|bool is sameas true %}
+{% if rate_limit is undefined or rate_limit|bool is sameas true %}
 	# Bots
 	deny 54.151.194.132;
 	deny 35.232.31.106;
