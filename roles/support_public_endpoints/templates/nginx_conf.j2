@@ -8,7 +8,7 @@ events {
 }
 
 http {
-
+{% if no_rate_limit is defined and no_rate_limit|bool sameas true %}
 	# Bots
 	deny 54.151.194.132;
 	deny 35.232.31.106;
@@ -26,7 +26,7 @@ http {
 	real_ip_header X-Forwarded-For;
 	limit_req_zone $binary_remote_addr zone=limitreqsbyaddr:10m rate=30r/m;
 	limit_req_status 429;
-
+{% endif %}
 	sendfile on;
 	tcp_nopush on;
 	types_hash_max_size 2048;

@@ -1,0 +1,10 @@
+network: ics_sputnik
+folder: '.sputnik'
+daemon: sputnikd
+chain_id: sputnik
+node_version: NA
+repo: 'https://github.com/cosmos/gaia'
+binary: 'https://github.com/hyphacoop/ics-testnets/raw/main/game-of-chains-2022/sputnik/interchain-security-cd'
+genesis: 'https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/game-of-chains-2022/sputnik/sputnik-fresh-genesis.json'
+peers: '4b5cee15e6a9c4b96b8c1c4f396a18b0461edc17@46.101.106.107:26656,835173badfc41ecbd867a0395c6a452bda2bb90f@134.209.255.244:26656'
+custom_port_prefix: 180
