@@ -18,7 +18,7 @@ pruning_main_backup:
 pruning_relayer:
   'pruning = "': 'pruning = "custom"'
   'pruning-keep-recent = "': 'pruning-keep-recent = "10000"'
-  'pruning-keep-every = "': 'pruning-keep-every = "2000"'
+  'pruning-keep-every = "': 'pruning-keep-every = "0"'
   'pruning-interval = "': 'pruning-interval = "79"'
   'snapshot-interval = ': 'snapshot-interval = 2000'
   'snapshot-keep-recent = ': 'snapshot-keep-recent= 5'
