@@ -1,5 +1,6 @@
 ---
 - name: Install from source
+  become: false
   block:
     - name: Clone node repo
       git:
