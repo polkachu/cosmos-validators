@@ -1,0 +1,14 @@
+network: joe
+folder: '.joed'
+daemon: joed
+chain_id: joe-1
+node_version: main
+repo: https://github.com/joe-chain/joe
+genesis: 'https://raw.githubusercontent.com/Reecepbcups/joe/main/network/genesis.json'
+peers: '773cbd225a1852499e51affd8f21c9e834733fde@95.217.113.126:26656'
+minimum_gas_price: '0ujoe'
+custom_port_prefix: 183
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
