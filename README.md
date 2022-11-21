@@ -76,6 +76,8 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_cosmos_exporter.yml `  | Set up Cosmos Exporter configuration (assuming Cosmos Exporter already installed)                |
 | `support_public_endpoints.yml ` | Set up Nginx reverse proxy for public PRC/ API                                                   |
 | `support_snapshot.yml `         | Install snapshot script and a cron job                                                           |
+| `support_genesis.yml `          | Install a script to upload genesis                                                               |
+| `support_prune.yml `            | Install a script to prune using cosmprund                                                        |
 | `support_state_sync.yml `       | Install state-sync script                                                                        |
 | `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
 | `support_tenderduty.yml `       | Install Tenderduty                                                                               |

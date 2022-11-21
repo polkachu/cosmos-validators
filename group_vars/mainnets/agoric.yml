@@ -7,6 +7,7 @@ repo: 'https://github.com/Agoric/ag0'
 genesis: 'https://main.agoric.net/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14456'
 custom_port_prefix: 144
+minimum_gas_price: '0.01ubld,0.005uist'
 
 # [Optional] Snapshot
 snapshot_hour: 4

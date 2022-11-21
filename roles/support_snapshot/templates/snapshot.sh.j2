@@ -3,7 +3,7 @@
 # prune node
 sudo service {{ network }} stop
 sleep 5
-/home/ubuntu/go/bin/cosmprund prune ~/{{ folder }}/data --cosmos-sdk=false
+/home/ubuntu/go/bin/cosmprund prune ~/{{ folder }}/data
 sleep 5
 
 # Make sure the service is running
@@ -39,8 +39,14 @@ sudo service {{ network }} start
 
 # Transfer the file and then remove the file
 cd {{ user_dir }}/
+{% if type == 'test' %}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://testnet-snapshots/{{ network }}/" --profile={{ snapshot_profile }}
+{% else %}
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" --profile={{ snapshot_profile }}
+{% endif %}
 rm $FILENAME
+
+{% if type != 'test' %}
 
 {% if wasm is defined %}
 cd {{ user_dir }}/
@@ -51,3 +57,5 @@ rm $WASM_FILENAME
 # Transfer the addrbook
 cd {{ user_dir }}/{{ folder }}/config
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://addrbook/{{ network }}/" --profile={{ snapshot_profile }}
+
+{% endif %}

@@ -42,3 +42,4 @@
     minute: '{{ snapshot_minute }}'
     hour: '{{ snapshot_hour }}'
     job: '/bin/bash {{ user_dir }}/snapshot/{{ network }}.sh'
+  when: type != 'test'

@@ -4,7 +4,7 @@ daemon: galaxyd
 chain_id: 'galaxy-1'
 node_version: 'v1.0.0'
 repo: 'https://github.com/galaxies-labs/galaxy'
-genesis: 'https://media.githubusercontent.com/media/galaxies-labs/networks/main/galaxy-1/genesis.json'
+genesis: 'https://snapshots.polkachu.com/misc/galaxy_genesis.json'
 peers: '842898fce21e24d2a16037754279e6e64bed03e7@65.108.131.174:48656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14856'
 custom_port_prefix: 148
