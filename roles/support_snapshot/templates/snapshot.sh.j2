@@ -1,5 +1,15 @@
 #!/bin/bash
 
+{% if type == 'test' or type == 'testrelay'  %}
+{% set snapshot_folder = "testnet-snapshots" %}
+{% set wasm_folder = "testnet-wasm" %}
+{% set addrbook_folder = "testnet-addrbook" %}
+{% else %}
+{% set snapshot_folder = "snapshots" %}
+{% set wasm_folder = "wasm" %}
+{% set addrbook_folder = "addrbook" %}
+{% endif %}
+
 # prune node
 sudo service {{ network }} stop
 sleep 5
@@ -39,23 +49,15 @@ sudo service {{ network }} start
 
 # Transfer the file and then remove the file
 cd {{ user_dir }}/
-{% if type == 'test' %}
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://testnet-snapshots/{{ network }}/" --profile={{ snapshot_profile }}
-{% else %}
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://snapshots/{{ network }}/" --profile={{ snapshot_profile }}
-{% endif %}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3://{{snapshot_folder}}/{{ network }}/" --profile={{ snapshot_profile }}
 rm $FILENAME
 
-{% if wasm is defined and type != 'test' %}
+{% if wasm is defined %}
 cd {{ user_dir }}/
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $WASM_FILENAME "s3://wasm/{{ network }}/" --profile={{ snapshot_profile }}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $WASM_FILENAME "s3://{{wasm_folder}}/{{ network }}/" --profile={{ snapshot_profile }}
 rm $WASM_FILENAME
 {% endif %}
 
 # Transfer the addrbook
 cd {{ user_dir }}/{{ folder }}/config
-{% if type == 'test' %}
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://testnet-addrbook/{{ network }}/" --profile={{ snapshot_profile }}
-{% else %}
-aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://addrbook/{{ network }}/" --profile={{ snapshot_profile }}
-{% endif %}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://{{addrbook_folder}}/{{ network }}/" --profile={{ snapshot_profile }}

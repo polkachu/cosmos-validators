@@ -1,6 +1,6 @@
 #!/bin/bash
 
-{% if type == 'test' %}
+{% if type == 'test' or type == 'testrelay' %}
 SNAP_RPC="https://{{ network }}-testnet-rpc.polkachu.com:443"
 {% else %}
 SNAP_RPC="https://{{ network }}-rpc.polkachu.com:443"
