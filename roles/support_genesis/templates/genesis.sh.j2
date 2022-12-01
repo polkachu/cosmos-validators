@@ -2,4 +2,8 @@
 
 # Transfer the genesis file
 cd {{ user_dir }}/{{ folder }}/config
+{% if type == 'test' %}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp genesis.json "s3://testnet-genesis/{{ network }}/" --profile={{ snapshot_profile }}
+{% else %}
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp genesis.json "s3://genesis/{{ network }}/" --profile={{ snapshot_profile }}
+{% endif %}

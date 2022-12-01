@@ -8,7 +8,7 @@ sleep 5
 
 # Make sure the service is running
 sudo service {{ network }} start
-sleep 30
+sleep 10
 
 # Get block height
 BLOCK_HEIGHT=$(curl -s http://localhost:{{ custom_port_prefix }}57/status | jq -r .result.sync_info.latest_block_height)
@@ -46,9 +46,7 @@ aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $FILENAME "s3
 {% endif %}
 rm $FILENAME
 
-{% if type != 'test' %}
-
-{% if wasm is defined %}
+{% if wasm is defined and type != 'test' %}
 cd {{ user_dir }}/
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp $WASM_FILENAME "s3://wasm/{{ network }}/" --profile={{ snapshot_profile }}
 rm $WASM_FILENAME
@@ -56,6 +54,8 @@ rm $WASM_FILENAME
 
 # Transfer the addrbook
 cd {{ user_dir }}/{{ folder }}/config
+{% if type == 'test' %}
+aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://testnet-addrbook/{{ network }}/" --profile={{ snapshot_profile }}
+{% else %}
 aws s3 --endpoint="{{ snapshot_endpoint }}" --acl="public-read" cp addrbook.json "s3://addrbook/{{ network }}/" --profile={{ snapshot_profile }}
-
 {% endif %}

@@ -4,7 +4,7 @@ daemon: junod
 chain_id: juno-1
 node_version: v11.0.0
 repo: https://github.com/CosmosContracts/juno
-genesis: 'https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/genesis.json'
+genesis: 'https://snapshots.polkachu.com/genesis/chihuahua/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12656'
 minimum_gas_price: '0.0025ujuno'
 custom_port_prefix: 126

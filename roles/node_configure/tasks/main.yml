@@ -61,13 +61,21 @@
   loop: '{{ pruning_test | dict2items }}'
   when: type is defined and type == 'test'
 
+- name: Adjust pruning setting for testrelay
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_testrelay | dict2items }}'
+  when: type is defined and type == 'testrelay'
+
 - name: Adjust indexer setting for main and backup
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'indexer = "'
     line: 'indexer = "null"'
     state: present
-  when: type == 'main' or type == 'backup'
+  when: type == 'main' or type == 'backup' or type == 'test'
 
 - name: Enable RPC port for relayer (Firewall will still manage the access to this port)
   lineinfile:
@@ -75,14 +83,14 @@
     regexp: '{{ custom_port_prefix }}57'
     line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}57"'
     state: present
-  when: type == 'relayer'
+  when: type == 'relayer' or type == 'testrelay'
 
 - name: Enable API for relayer/test
   replace:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
     regexp: "# Enable defines if the API(.*)\\senable = false"
     replace: "# Enable defines if the API server should be enabled.\\nenable = true"
-  when: type == 'relayer' or type == 'test'
+  when: type == 'relayer' or type == 'testrelay'
 
 - name: Enable Swagger for relayer/test
   lineinfile:
@@ -90,7 +98,7 @@
     regexp: 'swagger = '
     line: 'swagger = true'
     state: present
-  when: type == 'relayer' or type == 'test'
+  when: type == 'relayer' or type == 'testrelay'
 
 - name: Enable prometheus on the config.toml file
   lineinfile:
