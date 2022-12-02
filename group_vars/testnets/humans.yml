@@ -1,0 +1,12 @@
+# Special build command: go build -o humansd cmd/humansd/main.go; cp humansd ~/go/bin
+network: humans
+folder: '.humans'
+daemon: humansd
+chain_id: testnet-1
+node_version: v1
+repo: https://github.com/humansdotai/humans
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/humans/genesis.json'
+peers: '1df6735ac39c8f07ae5db31923a0d38ec6d1372b@45.136.40.6:26656,9726b7ba17ee87006055a9b7a45293bfd7b7f0fc@45.136.40.16:26656,6e84cde074d4af8a9df59d125db3bf8d6722a787@45.136.40.18:26656,eda3e2255f3c88f97673d61d6f37b243de34e9d9@45.136.40.13:26656,4de8c8acccecc8e0bed4a218c2ef235ab68b5cf2@45.136.40.12:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:18456'
+minimum_gas_price: '0.025uheart'
+custom_port_prefix: 184
