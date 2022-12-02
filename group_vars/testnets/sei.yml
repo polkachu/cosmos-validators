@@ -2,7 +2,7 @@ network: sei
 folder: '.sei'
 daemon: seid
 chain_id: 'sei-devnet-1'
-node_version: '1.0.6beta'
+node_version: '1.2.3beta'
 repo: https://github.com/sei-protocol/sei-chain.git
 genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-1/genesis.json
 addrbook_file: 'https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-1/addrbook.json'

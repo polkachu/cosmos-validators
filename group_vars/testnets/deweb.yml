@@ -6,5 +6,5 @@ node_version: v0.3.1
 repo: https://github.com/deweb-services/deweb.git
 genesis: 'https://raw.githubusercontent.com/deweb-services/deweb/main/genesis.json'
 minimum_gas_price: '0.0udws'
-peers: '422c1e98964d04e92c1e847d7214ad01695c42a6@209.126.80.91:26656,4a07e3296fee5bdc2a45f7c5e6348168a1c9b286@144.91.125.55:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11456'
 custom_port_prefix: 114

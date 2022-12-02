@@ -5,5 +5,5 @@ chain_id: okp4-nemeton
 node_version: 'v2.2.0'
 repo: https://github.com/okp4/okp4d
 genesis: 'https://raw.githubusercontent.com/okp4/networks/main/chains/nemeton/genesis.json'
-peers: 'a49302f8999e5a953ebae431c4dde93479e17155@162.19.71.91:26656,f595a1386d5ca2e0d2cd81d3c6372c3bf84bbd16@65.109.31.114:2280'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17656'
 custom_port_prefix: 176
