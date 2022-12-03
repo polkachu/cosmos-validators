@@ -1,9 +1,9 @@
 network: meme
 folder: '.memed'
 daemon: memed
-chain_id: meme-testnet-1
-node_version: v1.0.0
+chain_id: meme-testnet-2
+node_version: v2.0.8
 repo: https://github.com/memecosmos/meme
-genesis: 'https://raw.githubusercontent.com/memecosmos/testnet/main/meme-testnet-1/genesis.json'
-peers: '44aeb03d0366833b45292708273b001b02e30efe@143.198.102.36:26656,7f0f67a55626b7755c0ef8b8e6b0d4f6c2aea035@45.76.177.106:26656,30ded503947be80f44cb3aa82ea9033fcedc9479@128.199.197.228:26656'
+genesis: 'https://raw.githubusercontent.com/memecosmos/testnet/main/meme-testnet-2/genesis.json'
+peers: 'b90b5c9cd043d196fe864670e44692a9a0a19264@135.181.59.162:14756'
 custom_port_prefix: 147
