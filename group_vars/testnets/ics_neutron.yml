@@ -1,0 +1,10 @@
+network: ics_neutron
+folder: '.neutrond'
+daemon: neutrond
+chain_id: neutron
+node_version: f5f1ce84a18d9b274a3caa2719997e26c43d3448
+repo: 'https://github.com/neutron-org/neutron/'
+genesis: https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/game-of-chains-2022/neutron/neutron-genesis.json
+seeds: '919167501b299c98dbbb8ad3ed233aa314add27f@tenderseed.ccvalidators.com:29049'
+peers: '4b5cee15e6a9c4b96b8c1c4f396a18b0461edc17@164.92.123.223:26656,835173badfc41ecbd867a0395c6a452bda2bb90f@164.92.123.238:26656'
+custom_port_prefix: 191

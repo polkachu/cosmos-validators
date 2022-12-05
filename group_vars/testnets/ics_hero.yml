@@ -1,0 +1,11 @@
+network: ics_hero
+folder: '.hero'
+daemon: herod
+chain_id: hero-1
+node_version: NA
+repo: 'https://github.com/cosmos/gaia'
+binary: 'https://github.com/hyphacoop/ics-testnets/blob/main/game-of-chains-2022/hero/herod?raw=true'
+genesis: https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/game-of-chains-2022/hero/hero-genesis.json
+seeds: 'fe7997dd631c2916189dc06f5ee59f27318b708b@tenderseed.ccvalidators.com:29039'
+peers: '4b5cee15e6a9c4b96b8c1c4f396a18b0461edc17@128.199.29.137:26656,835173badfc41ecbd867a0395c6a452bda2bb90f@128.199.26.103:26656'
+custom_port_prefix: 188

@@ -1,0 +1,11 @@
+network: ics_gopher
+folder: '.gopher'
+daemon: gopherd
+chain_id: gopher
+node_version: NA
+repo: 'https://github.com/cosmos/gaia'
+binary: 'https://github.com/hyphacoop/ics-testnets/blob/main/game-of-chains-2022/gopher/interchain-security-cd?raw=true'
+genesis: https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/game-of-chains-2022/gopher/gopher-genesis.json
+peers: '4b5cee15e6a9c4b96b8c1c4f396a18b0461edc17@165.22.234.25:26656,835173badfc41ecbd867a0395c6a452bda2bb90f@165.227.41.194:26656'
+seeds: 'e0a4a0704bbe72d252c541fa7a0da04e7400f589@tenderseed.ccvalidators.com:29059'
+custom_port_prefix: 187
