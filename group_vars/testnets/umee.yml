@@ -2,9 +2,9 @@ network: umee
 folder: '.umee'
 daemon: umeed
 chain_id: canon-2
-node_version: 'v3.0.2'
+node_version: 'v3.2.0-rc1'
 repo: https://github.com/umee-network/umee.git
 genesis: 'https://raw.githubusercontent.com/umee-network/umee/canon-2/networks/canon-2/genesis.json'
-seeds: 'ab9e8d7227a3199c2832018eec42ade5bf47e71d@35.215.72.45:26656,e89407a37d2ebe0dfa2291c5240abe3a5410995f@35.212.203.22:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13656'
 minimum_gas_price: '0uumee'
 custom_port_prefix: 136

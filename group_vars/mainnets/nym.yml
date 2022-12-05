@@ -2,7 +2,7 @@
 network: nym
 folder: '.nyxd'
 daemon: nyxd
-chain_id: nyxd
+chain_id: nyx
 node_version: v0.10.2
 repo: https://github.com/CosmWasm/wasmd.git
 genesis: ' https://nymtech.net/genesis/genesis.json'

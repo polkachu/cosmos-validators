@@ -6,12 +6,12 @@
 - name: Create folder
   file:
     state: directory
-    path: '{{ user_dir }}/{{ folder }}/config'
+    path: '{{ user_dir }}/seeds/{{ folder }}/config'
 
 - name: copy config.toml
   template:
     src: 'config.toml.j2'
-    dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    dest: '{{ user_dir }}/seeds/{{ folder }}/config/config.toml'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0644'
@@ -19,7 +19,7 @@
 - name: copy node_key.json
   template:
     src: 'node_key.json.j2'
-    dest: '{{ user_dir }}/{{ folder }}/config/node_key.json'
+    dest: '{{ user_dir }}/seeds/{{ folder }}/config/node_key.json'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0644'

@@ -2,8 +2,11 @@ network: kichain
 folder: '.kid'
 daemon: kid
 chain_id: kichain-t-4
-node_version: 2.0.0-testnet
+node_version: Testnet-4.0.0-beta
 repo: https://github.com/KiFoundation/ki-tools.git
+binary: https://github.com/KiFoundation/ki-tools/releases/download/4.0.0-beta/kid-testnet-4.0.0-beta-linux-amd64
 genesis: 'https://raw.githubusercontent.com/KiFoundation/ki-networks/v0.1/Testnet/kichain-t-4/genesis.json'
-peers: '46b25d81510f8dcc535ca0924961b266e4f59244@135.125.183.94:26656,ada3bbf64f963e764bfe003276354bd121e80ae0@95.111.248.200:26656,276f6fb420b3595b63c2a13d35868cb530a31578@65.21.159.19:26656,7e5710ee0b1576a78a21a89e1588b6c95ee69873@194.163.137.193:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13556'
 custom_port_prefix: 135
+
+wasm: 'outside'

@@ -1,9 +1,9 @@
 network: saage
 folder: '.sge'
 daemon: sged
-chain_id: sge-network-1
-node_version: v0.0.2
+chain_id: sge-testnet-1
+node_version: v0.0.3
 repo: https://github.com/sge-network/sge
-genesis: https://raw.githubusercontent.com/sge-network/networks/master/sge-network-1/upgrade/genesis.json
-peers: '27f0b281ea7f4c3db01fdb9f4cf7cc910ad240a6@209.34.206.44:26656,18fd8e232f267e5aecf0aec6fef3a0f38a23a386@34.127.86.217:26656,c6664628ced53a67894921f68ad2ca5209ce9a2c@[2a01:4f9:1a:a718::9]:26656,cecb05776665f905a2edb7f4c0000a80ccda67e9@135.181.20.44:2516,9bca3d953334d39b6eeba2324485b73a2f18512b@3.15.209.96:26656,12450c4223a2d6dcfbe5e9b9998cb67634cd2465@38.146.3.193:26656,69556b7190ad565dd173407aa695ccf8308ad1fb@50.19.180.153:26656,cff3e3979a233f6df025fead2b965ff836827216@52.44.14.245:26656,d79b994f1a31a59af7fcf89bba512d0c9afdc06d@65.21.181.169:26676'
+genesis: https://snapshots.polkachu.com/testnet-genesis/saage/genesis.json
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17756'
 custom_port_prefix: 177
