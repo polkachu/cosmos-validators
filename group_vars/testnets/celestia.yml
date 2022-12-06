@@ -7,3 +7,7 @@ repo: https://github.com/celestiaorg/celestia-app.git
 genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mamaki/genesis.json'
 peers: '0eebb7b72d2169c08be75502650e4b1f7b7708cf@135.181.59.162:11656'
 custom_port_prefix: 116
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0

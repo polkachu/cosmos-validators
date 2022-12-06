@@ -11,3 +11,8 @@ custom_port_prefix: 113
 binary: https://server.gitopia.com/releases/Gitopia/gitopia/v1.2.0/gitopiad_1.2.0_linux_amd64.tar.gz
 binary_processing: targz
 genesis_processing: gz
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
+wasm: 'outside'

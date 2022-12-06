@@ -7,3 +7,7 @@ repo: https://github.com/memecosmos/meme
 genesis: 'https://raw.githubusercontent.com/memecosmos/testnet/main/meme-testnet-2/genesis.json'
 peers: 'b90b5c9cd043d196fe864670e44692a9a0a19264@135.181.59.162:14756'
 custom_port_prefix: 147
+
+# [Optional] Snapshot
+snapshot_hour: 6
+snapshot_minute: 0

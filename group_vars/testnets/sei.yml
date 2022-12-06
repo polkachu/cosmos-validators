@@ -18,4 +18,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:1195
 peers: 'c542c905caa475de4fd9ecca401af29dab5dbee5@135.181.59.162:11956'
 custom_port_prefix: 119
 
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
 wasm: 'outside'

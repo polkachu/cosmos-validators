@@ -7,3 +7,7 @@ repo: https://github.com/sge-network/sge
 genesis: https://snapshots.polkachu.com/testnet-genesis/saage/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17756'
 custom_port_prefix: 177
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 30

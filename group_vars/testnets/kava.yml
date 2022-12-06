@@ -9,3 +9,7 @@ peers: 'c8543d201018ccf456f9b11f7a5a7991fd7a33bd@54.208.233.212:26656,e20480a043
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13956'
 minimum_gas_price: '0.001ukava'
 custom_port_prefix: 139
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

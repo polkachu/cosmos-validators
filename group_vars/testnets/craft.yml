@@ -9,4 +9,7 @@ minimum_gas_price: '0.025ucraft'
 seeds: 'a93ea27fcbe3ecef7763c2d8784511551a785bd9@65.109.28.219:15756'
 custom_port_prefix: 157
 
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
 wasm: 'outside'

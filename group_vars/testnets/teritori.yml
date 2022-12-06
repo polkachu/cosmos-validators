@@ -9,4 +9,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:1595
 minimum_gas_price: ''
 custom_port_prefix: 159
 
+# [Optional] Snapshot
+snapshot_hour: 6
+snapshot_minute: 0
 wasm: 'inside'

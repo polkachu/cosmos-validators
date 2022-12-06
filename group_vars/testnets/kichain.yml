@@ -9,4 +9,7 @@ genesis: 'https://raw.githubusercontent.com/KiFoundation/ki-networks/v0.1/Testne
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13556'
 custom_port_prefix: 135
 
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 30
 wasm: 'outside'

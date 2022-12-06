@@ -8,3 +8,7 @@ binary: https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/qu
 genesis: 'https://raw.githubusercontent.com/ingenuity-build/testnets/main/innuendo/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11156'
 custom_port_prefix: 111
+
+# [Optional] Snapshot
+snapshot_hour: 5
+snapshot_minute: 0

@@ -9,4 +9,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:1185
 minimum_gas_price: '0.00125ukuji'
 custom_port_prefix: 118
 
+# [Optional] Snapshot
+snapshot_hour: 7
+snapshot_minute: 30
 wasm: 'outside'
