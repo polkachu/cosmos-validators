@@ -15,4 +15,3 @@ genesis_processing: gz
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
-wasm: 'outside'
