@@ -1,0 +1,15 @@
+network: alliance
+folder: '.alliance'
+daemon: allianced
+chain_id: 'alliance-testnet-1'
+node_version: 'v0.0.1-beta1'
+repo: 'https://github.com/terra-money/alliance'
+binary: https://github.com/terra-money/alliance/releases/download/v0.0.1-beta1/alliance_v0.0.1-beta1_linux_amd64.tar.gz
+binary_processing: targz
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/alliance/genesis.json'
+peers: '3579b6a26faa81c2520a0d21e3db86ac9be31f08@3.75.187.158:26656'
+custom_port_prefix: 193
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
