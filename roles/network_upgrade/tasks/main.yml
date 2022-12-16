@@ -1,4 +1,8 @@
 ---
+- name: sanitize upgrade name
+  set_fact:
+    upgrade_name: "{{ upgrade_name | lower | replace(' ','%20')}}"
+
 - name: create cosmovisor upgrade directory
   file:
     path: '{{ item }}'
