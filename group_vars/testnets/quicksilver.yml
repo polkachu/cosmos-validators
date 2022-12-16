@@ -1,12 +1,12 @@
 network: quicksilver
 folder: '.quicksilverd'
 daemon: quicksilverd
-chain_id: innuendo-3
-node_version: v0.10.3
+chain_id: innuendo-4
+node_version: v0.10.5
 repo: https://github.com/ingenuity-build/quicksilver.git
-binary: https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.3-amd64
+binary: https://github.com/ingenuity-build/testnets/releases/download/v0.10.5/quicksilverd-v0.10.8-amd64
 genesis: 'https://raw.githubusercontent.com/ingenuity-build/testnets/main/innuendo/genesis.json'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11156'
+peers: 'b9b8bb23e61d53ff3b293485d04ea567ebcd7933@65.108.65.94:26656,a94cf3e93cec8eef6d67c2972e4af5eae1a118b2@65.108.2.27:26656,926ce3f8ce4cda6f1a5ee97a937a44f59ff28fbf@65.108.13.176:26656'
 custom_port_prefix: 111
 
 # [Optional] Snapshot

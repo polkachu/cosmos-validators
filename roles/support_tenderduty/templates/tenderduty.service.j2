@@ -1,4 +1,4 @@
-{% if type == 'testtender'  %}
+{% if type is defined and type == 'testtender'  %}
 {% set threshold = "-threshold 50" %}
 {% else %}
 {% set threshold = "" %}

@@ -15,7 +15,7 @@ server {
     add_header Access-Control-Allow-Headers * always;
     location / {
 {% if rate_limit is undefined or rate_limit|bool is sameas true %}
-        limit_req zone=limitreqsbyaddr burst=20 nodelay;
+        limit_req zone=limitreqsbyaddr burst=150 nodelay;
 {% endif %}
 {% if loan_balancing is defined and loan_balancing|bool is sameas true %}
         proxy_pass      http://{{ network }}-api;
