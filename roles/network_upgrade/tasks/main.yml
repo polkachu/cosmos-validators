@@ -15,7 +15,7 @@
     mode: '0755'
 
 - name: save version
-  command: '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/{{ upgrade_name }}/bin/{{ daemon }} version'
+  command: '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/"{{ upgrade_name }}"/bin/{{ daemon }} version'
   register: version
   
 - name: confirm version
