@@ -6,6 +6,10 @@
 
 - name: Initialize Node
   block:
+    - name: Create random node name
+      set_fact:
+        node_name: '{{ 9999999999999999999999 | random | to_uuid }}'
+
     - name: Initialize Node
       command: '{{ daemon }} init {{ node_name }} --chain-id {{ chain_id }} -o'
       environment:
