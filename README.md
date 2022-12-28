@@ -69,19 +69,20 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 
 ## Playbooks
 
-| Playbook                        | Description                                                                                      |
-| ------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `main.yml`                      | The main playbook to set up a node                                                               |
-| `prepare.yml`                   | Prepare the server with node exporter, promtail, go, cosmovisor, and firewall rules              |
-| `support_cosmos_exporter.yml `  | Set up Cosmos Exporter configuration (assuming Cosmos Exporter already installed)                |
-| `support_public_endpoints.yml ` | Set up Nginx reverse proxy for public PRC/ API                                                   |
-| `support_snapshot.yml `         | Install snapshot script and a cron job                                                           |
-| `support_genesis.yml `          | Install a script to upload genesis                                                               |
-| `support_prune.yml `            | Install a script to prune using cosmprund                                                        |
-| `support_state_sync.yml `       | Install state-sync script                                                                        |
-| `support_seed.yml `             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
-| `support_tenderduty.yml `       | Install Tenderduty                                                                               |
-| `system_update.yml `            | Update a server and restart if needed                                                            |
+| Playbook                       | Description                                                                                      |
+| ------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `main.yml`                     | The main playbook to set up a node                                                               |
+| `prepare.yml`                  | Prepare the server with node exporter, promtail, go, cosmovisor, and firewall rules              |
+| `support_backup_node.yml`      | Install snapshot, state_sync, resync, genesis and prune script on backup node                    |
+| `support_snapshot.yml`         | Install snapshot script and a cron job                                                           |
+| `support_state_sync.yml`       | Install state-sync script                                                                        |
+| `support_resync.yml`           | Install weekly scheduled state-sync and recovery script                                          |
+| `support_genesis.yml`          | Install a script to upload genesis                                                               |
+| `support_prune.yml`            | Install a script to prune using cosmprund                                                        |
+| `support_public_endpoints.yml` | Set up Nginx reverse proxy for public PRC/ API                                                   |
+| `support_seed.yml`             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
+| `support_tenderduty.yml`       | Install Tenderduty                                                                               |
+| `system_update.yml`            | Update a server and restart if needed                                                            |
 
 ### Selected playbook Usage Example
 
@@ -99,71 +100,11 @@ ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalco
 
 ## Supported Networks
 
-| Network       | Mainnet | Testnet | Port Prefix |
-| ------------- | ------- | ------- | ----------- |
-| Agoric        | Yes     | Yes     | 144         |
-| Akash         | Yes     |         | 128         |
-| Althea        |         | Yes     | 124         |
-| Androma       |         | Yes     | 150         |
-| Archaway      |         | Yes     | 115         |
-| Assetmantle   | Yes     |         | 146         |
-| Axelar        | Yes     | Yes     | 151         |
-| Bitcanna      | Yes     |         | 130         |
-| Bitsong       | Yes     |         | 160         |
-| Canto         | Yes     |         | 155         |
-| Celestia      |         | Yes     | 116         |
-| Cerberus      | Yes     | Yes     | 138         |
-| Certik        | Yes     |         | 140         |
-| Cheqd         | Yes     |         | 161         |
-| Chihuahua     | Yes     | Yes     | 129         |
-| Comdex        | Yes     | Yes     | 131         |
-| Cosmos        | Yes     |         | 149         |
-| Craft         |         | Yes     | 157         |
-| Crescent      | Yes     |         | 145         |
-| Cudos         | Yes     |         | 123         |
-| Defund        |         | Yes     | 112         |
-| Desmos        | Yes     |         | 162         |
-| Deweb         |         | Yes     | 114         |
-| DIG           | Yes     |         | 163         |
-| Echelon       | Yes     |         | 120         |
-| Empower       |         | Yes     | 174         |
-| Evmos         | Yes     | Yes     | 134         |
-| Fetch         | Yes     |         | 152         |
-| Firmachain    | Yes     |         | 164         |
-| Galaxy        | Yes     |         | 148         |
-| Gitopia       |         | Yes     | 113         |
-| Gravity       | Yes     |         | 142         |
-| Hypersign     |         | Yes     | 109         |
-| IDEP          | Yes     |         | 165         |
-| Impacthub     | Yes     |         | 166         |
-| Injective     | Yes     |         | 143         |
-| Juno          | Yes     | Yes     | 126         |
-| Kava          | Yes     | Yes     | 139         |
-| Kichain       | Yes     | Yes     | 135         |
-| Konstellation | Yes     |         | 133         |
-| Kujira        | Yes     | Yes     | 118         |
-| Kyve          |         | Yes     | 110         |
-| Lum           | Yes     |         | 167         |
-| Meme          | Yes     | Yes     | 147         |
-| Nym           | Yes     |         | 153         |
-| Odin          | Yes     |         | 168         |
-| Omniflix      | Yes     |         | 169         |
-| Osmosis       | Yes     |         | 125         |
-| Paloma        |         | Yes     | 121         |
-| Passage       | Yes     |         | 156         |
-| Persistence   | Yes     |         | 154         |
-| Quicksilver   |         | Yes     | 111         |
-| Secret        |         |         | 171         |
-| Sifchain      | Yes     |         | 132         |
-| Sommelier     | Yes     |         | 141         |
-| Sei           |         | Yes     | 119         |
-| Source        |         | Yes     | 158         |
-| Stargaze      | Yes     | Yes     | 137         |
-| Stride        | Yes     | Yes     | 122         |
-| Teritori      | Yes     | Yes     | 159         |
-| Terra2        | Yes     | Yes     | 117         |
-| Umee          | Yes     | Yes     | 136         |
-| Vidulum       | Yes     |         | 170         |
+See the `group_vars` folder for the list of mainnet and testnet support
+
+## Port Prefix
+
+All port prefixes come from this [repo](https://github.com/polkachu/cosmos-port-prefixes)
 
 ## V1 to V2 migration [OPTIONAL]
 

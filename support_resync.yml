@@ -1,8 +1,8 @@
 ---
-- name: Install snapshot script
+- name: Install state sync script
   hosts: '{{ target }}'
   gather_facts: false
   vars_files:
     - '{{ var_file }}'
   roles:
-    - support_config_update
+    - support_resync

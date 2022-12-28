@@ -1,0 +1,25 @@
+#!/bin/bash
+
+sudo service {{ network }} stop
+sleep 2
+rm {{ user_dir }}/{{ folder }}/data-old -rf
+cp {{ user_dir }}/{{ folder }}/data {{ user_dir }}/{{ folder }}/data-old -r
+
+{% if resync is defined and resync == 'old'  %}
+
+cp {{ user_dir }}/{{ folder }}/config/addrbook.json {{ user_dir }}/{{ folder }}/config/addrbook.backup
+{{ user_dir }}/go/bin/{{ daemon }} unsafe-reset-all
+mv {{ user_dir }}/{{ folder }}/config/addrbook.backup {{ user_dir }}/{{ folder }}/config/addrbook.json
+
+{% else %}
+
+{{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book
+
+{% endif %}
+
+{% if network == 'terra' or network == 'teritori'  %}
+cp {{ user_dir }}/{{ folder }}/data-old/wasm {{ user_dir }}/{{ folder }}/data/wasm -r
+{% endif %}
+
+{{ user_dir }}/state_sync/{{ network }}.sh
+sudo service {{ network }} start

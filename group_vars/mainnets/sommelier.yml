@@ -11,3 +11,4 @@ custom_port_prefix: 141
 # [Optional] Snapshot
 snapshot_hour: 3
 snapshot_minute: 30
+resync: 'old'
