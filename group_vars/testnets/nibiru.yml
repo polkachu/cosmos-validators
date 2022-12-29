@@ -1,0 +1,14 @@
+network: nibiru
+folder: '.nibid'
+daemon: nibid
+chain_id: nibiru-testnet-2
+node_version: v0.16.3
+repo: https://github.com/NibiruChain/nibiru
+genesis: 'https://networks.testnet.nibiru.fi/nibiru-testnet-2/genesis'
+seeds: 'dabcc13d6274f4dd86fd757c5c4a632f5062f817@seed-2.nibiru-testnet-2.nibiru.fi:26656,a5383b33a6086083a179f6de3c51434c5d81c69d@seed-1.nibiru-testnet-2.nibiru.fi:26656'
+custom_port_prefix: 198
+minimum_gas_price: '0.025unibi'
+
+# [Optional] Snapshot
+snapshot_hour: 7
+snapshot_minute: 0

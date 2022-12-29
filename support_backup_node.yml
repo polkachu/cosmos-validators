@@ -9,4 +9,3 @@
     - support_state_sync
     - support_resync
     - support_genesis
-    - support_prune
