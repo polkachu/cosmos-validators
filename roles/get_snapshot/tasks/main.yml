@@ -1,7 +1,12 @@
 ---
+- name: install html2text
+  apt:
+    name:
+      - html2text
+
 - name: customize network with polkachu's settings
   set_fact:
-    network: '{{ {"gravitybridge": "gravity"}[network] | default(network) }}'
+    network: '{{ {"gravitybridge": "gravity","terra2": "terra"}[network] | default(network) }}'
 
 - name: set urls
   set_fact:
@@ -16,7 +21,6 @@
     mode: '0440'
   register: url_correct
   ignore_errors: true
-
 
 - name: download snapshot
   when: url_correct.status_code != 404
@@ -33,6 +37,22 @@
       command: '{{ daemon }} tendermint unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book || {{ daemon }} unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book'
       environment:
         PATH: '{{ path }}'
+      ignore_errors: true
+      register: db_reset
+
+    - name: retry reset
+      when: db_reset.failed == true
+      block:
+        - name: reset db
+          command: '{{ daemon }} tendermint unsafe-reset-all --home {{ user_dir }}/{{ folder }} || {{ daemon }} unsafe-reset-all --home {{ user_dir }}/{{ folder }}'
+          environment:
+            PATH: '{{ path }}'
+
+        - name: download addrbook
+          get_url:
+            url: '{{ addrbook_url }}'
+            dest: '~/{{ folder }}/config/addrbook.json'
+            mode: '0440'
 
     - name: get snapshot command
       shell: 'curl -s {{ snapshot_url }} | grep curl | html2text'
