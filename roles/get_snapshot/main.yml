@@ -1,0 +1,41 @@
+---
+- name: set urls
+  set_fact:
+    snapshot_url: '{{ snapshot_url }}/{{ chain_id }}'
+    addrbook_url: '{{ addrbook_url }}/{{ chain_id }}/addrbook.json'
+
+## ensure snapshot url is valid
+- name: confirm snapshot url
+  command: curl -s {{ snapshot_url }}/{{ chain_id }} 1>/dev/null
+  register: url_correct
+
+- name: download snapshot
+  when: url_correct is 0
+  block: 
+    # download addrbook
+    - name: download addrbook
+      command: wget -O addrbook.json {{ addrbook_url }} --inet4-only
+
+    # mv addrbook
+    - name: move addrbook
+      command: mv addrbook.json ~/{{ folder }}/config
+
+    # stop service
+    - name: stop cosmovisor service
+      become: true
+      systemd:
+        name: '{{ daemon }}'
+        state: stopped
+
+    # reset db
+    - name: reset db
+      command: '{{ daemon }} tendermint unsafe-reset-all --home {{ folder }} --keep-addr-book || {{ daemon }} unsafe-reset-all --home {{ folder }} --keep-addr-book'
+
+    - name: download snapshot
+      command: 'eval $(curl -s https://polkachu.com/tendermint_snapshots/${CHAIN} | grep curl | html2text )'
+
+    - name: restart service
+      become: true
+      systemd:
+        name: '{{ daemon }}'
+        state: restarted
