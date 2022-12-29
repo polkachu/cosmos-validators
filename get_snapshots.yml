@@ -1,0 +1,6 @@
+- name: Get Snapshots
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - setup
+    - get_snapshot

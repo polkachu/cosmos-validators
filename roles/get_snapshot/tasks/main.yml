@@ -1,0 +1,51 @@
+---
+- name: customize network with polkachu's settings
+  set_fact:
+    network: '{{ {"gravitybridge": "gravity"}[network] | default(network) }}'
+
+- name: set urls
+  set_fact:
+    snapshot_url: '{{ snapshot_url }}/{{ network }}'
+    addrbook_url: '{{ addrbook_url }}/{{ network }}/addrbook.json'
+
+# download addrbook
+- name: download addrbook
+  get_url:
+    url: '{{ addrbook_url }}'
+    dest: '~/{{ folder }}/config/addrbook.json'
+    mode: '0440'
+  register: url_correct
+  ignore_errors: true
+
+
+- name: download snapshot
+  when: url_correct.status_code != 404
+  block: 
+    # stop service
+    - name: stop cosmovisor service
+      become: true
+      systemd:
+        name: '{{ daemon }}'
+        state: stopped
+
+    # reset db
+    - name: reset db
+      command: '{{ daemon }} tendermint unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book || {{ daemon }} unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book'
+      environment:
+        PATH: '{{ path }}'
+
+    - name: get snapshot command
+      shell: 'curl -s {{ snapshot_url }} | grep curl | html2text'
+      register: snapshot_command
+    
+    - set_fact:
+        snapshot_command: "{{ snapshot_command.stdout | replace('\n', '') }}"
+
+    - name: download snapshot
+      shell: 'eval $({{ snapshot_command }})'
+
+    - name: restart service
+      become: true
+      systemd:
+        name: '{{ daemon }}'
+        state: restarted
