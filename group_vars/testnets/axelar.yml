@@ -13,7 +13,7 @@ network: axelar
 folder: '.axelar'
 daemon: axelard
 chain_id: 'axelar-testnet-lisbon-3'
-node_version: 'v0.28.0'
+node_version: 'v0.29.0'
 repo: https://github.com/axelarnetwork/axelar-core
 config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
 app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'

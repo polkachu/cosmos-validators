@@ -7,6 +7,7 @@
       - jq
     state: present
     update_cache: yes
+  ignore_errors: true
 
 - name: Install snapd
   become: true

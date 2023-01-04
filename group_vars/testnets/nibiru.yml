@@ -12,3 +12,4 @@ minimum_gas_price: '0.025unibi'
 # [Optional] Snapshot
 snapshot_hour: 7
 snapshot_minute: 0
+wasm: 'inside'
