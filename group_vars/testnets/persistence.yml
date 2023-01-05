@@ -1,0 +1,13 @@
+network: persistence
+folder: '.persistenceCore'
+daemon: persistenceCore
+chain_id: test-core-1
+node_version: v6.0.0-rc5
+repo: https://github.com/persistenceOne/persistenceCore
+genesis: 'https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-1/final_genesis.json'
+peers: '1ec7628853408df8269ba4c93b82f2cda2274cdd@95.165.149.94:24656,02a0f68914c0d0d9e06d0453fce681dc405fa4b7@144.126.135.137:26556'
+custom_port_prefix: 154
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

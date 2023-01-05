@@ -1,0 +1,16 @@
+# Binary needs to be built with "make build-linux"
+network: lava
+folder: '.lava'
+daemon: lavad
+chain_id: lava-testnet-1
+node_version: v0.3.0
+repo: https://github.com/lavanet/lava
+genesis: 'https://raw.githubusercontent.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T/main/testnet-1/genesis_json/genesis.json'
+seeds: '3a445bfdbe2d0c8ee82461633aa3af31bc2b4dc0@prod-pnet-seed-node.lavanet.xyz:26656,e593c7a9ca61f5616119d6beb5bd8ef5dd28d62d@prod-pnet-seed-node2.lavanet.xyz:26656'
+peers: ''
+minimum_gas_price: ''
+custom_port_prefix: 199
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30
