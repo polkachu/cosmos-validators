@@ -40,8 +40,8 @@ all:
         type: main
 
   vars:
-    ansible_user: deploy
-    ansible_port: 1152
+    ansible_user: ubuntu
+    ansible_port: 22
     ansible_ssh_private_key_file: "~/.ssh/id_ed25519"
     user_dir: "/home/{{ ansible_user }}"
     path: "/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:/usr/local/go/bin:{{ user_dir }}/go/bin"
