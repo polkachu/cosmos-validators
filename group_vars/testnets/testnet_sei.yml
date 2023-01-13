@@ -1,10 +1,8 @@
 network: sei
-folder: '.sei'
+folder: .sei
 daemon: seid
-chain_id: 'atlantic-1'
-node_version: '1.1.2beta-internal'
+chain_id: sei-devnet-2
+node_version: 2.0.1beta
 repo: https://github.com/sei-protocol/sei-chain.git
-genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json
-custom_port_prefix: 119
-peers: '1f54305ee9577e2426ac40c1693b6c6620415524@144.76.91.26:26656,86dac956393266d17aabe7f17b634c6089f7cd58@91.241.214.162:26856,94290dd1f8944ed3450f007637d0099d5bb248b9@45.126.125.173:26656,17c09a1033799859ef4e17f87e2cb2baa3368001@5.161.139.197:26656'
-seeds: 'df1f6617ff5acdc85d9daa890300a57a9d956e5e@sei-atlantic-1.seed.rhinostake.com:16660'
+genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-2/genesis.json
+seeds: 'f97a75fb69d3a5fe893dca7c8d238ccc0bd66a8f@sei-devnet.seed.brocha.in:30515'

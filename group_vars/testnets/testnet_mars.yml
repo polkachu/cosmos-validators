@@ -1,0 +1,8 @@
+network: mars
+folder: '.mars'
+daemon: marsd
+chain_id: 'ares-1'
+node_version: 'v1.0.0-rc3'
+repo: 'https://github.com/mars-protocol/hub'
+genesis: 'https://raw.githubusercontent.com/mars-protocol/networks/main/ares-1/genesis.json'
+peers: '3084613c19f2a9fc7d46528702fb38a6c7eb5f7f@164.92.249.191:26656,8c880323a8663b52bef6d91ed7379ec49bdd5e3c@134.122.82.186:26656'

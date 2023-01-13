@@ -1,0 +1,8 @@
+network: namada
+folder: .namada
+daemon: namada
+chain_id: public-testnet-2.0.2feaf2d718c
+node_version: public-testnet-2.0.2feaf2d718c
+repo: https://github.com/sei-protocol/sei-chain.git
+genesis: https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-devnet-2/genesis.json
+seeds: '5a8b0cc8d0c6ebbb1f3f549d55f0853012348023@65.108.105.48:26656'
