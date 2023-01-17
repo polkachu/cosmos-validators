@@ -1,12 +1,16 @@
 network: comdex
 folder: '.comdex'
 daemon: comdex
-chain_id: meteor-test
-node_version: v2.1.0
+chain_id: comdex-test2
+node_version: v7.0.0
 repo: https://github.com/comdex-official/comdex.git
-genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/meteor-test/genesis.json'
-peers: '4202b41ccc3032011969005a215e1dbe36e3ba23@3.109.138.42:26656,223d534f0fd1daeea3578346ad3e49d9cec973b6@54.204.207.38:26656,efa67d2456e8e22e9b29bd127ed3024cffc7ede1@46.166.163.37:26656,494af55997cbb1df62cff1ed4f35b58c31277f63@46.166.172.230:26656'
-minimum_gas_price: '0.2ucmdx'
+genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/testnet-2/genesis.json'
+peers: 'e801945d20c9cf736d4ff096f7e74a435548f3d0@peer-test2-in.comdex.one:26656,86ca6b17f5d3fee15309e1c1aecc8ba716008c95@peer-test2-nv.comdex.one:26656,6d9de52e9f413bb9affda12b333deda302d4568a@peer-test2-oh.comdex.one:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13156'
+minimum_gas_price: '0.025ucmdx'
 custom_port_prefix: 131
 
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
 wasm: 'outside'

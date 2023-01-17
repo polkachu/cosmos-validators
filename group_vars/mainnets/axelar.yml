@@ -3,7 +3,7 @@ network: axelar
 folder: '.axelar'
 daemon: axelard
 chain_id: 'axelar-dojo-1'
-node_version: 'v0.26.5'
+node_version: 'v0.29.1'
 repo: 'https://github.com/axelarnetwork/axelar-core'
 config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
 app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'

@@ -1,10 +1,13 @@
 network: defund
 folder: '.defund'
 daemon: defundd
-chain_id: defund-private-1
-node_version: v0.0.2
+chain_id: defund-private-4
+node_version: v0.2.2
 repo: https://github.com/defund-labs/defund
-genesis: 'https://raw.githubusercontent.com/defund-labs/defund/v0.0.2/testnet/private/genesis.json'
-peers: '79a1ca999264d15653e359742ecc696ff783e057@49.12.246.112:22256,5b10a67cad723fd13060761f8955f371fb1810a2@80.64.208.121:26656,cd3a17a6920bba732f1b2a4b3a12a435ac0845ac@49.12.225.248:26656,0409ad6d8ceef8ab01f4df458dbd58dd9ac32295@121.37.242.170:26656,6c80295b4c221e19cab7dfab496e9c15891f55ba@65.108.151.86:26656,2ef9373a0e8b5487b6fbf100d90faa641242899d@154.12.244.137:26656,1bf56637dcb950453c370ef7726da74436d21a61@95.214.52.200:26656,b9acccdd67617e15c361ea0d6fd2e16c1b9c9efc@209.145.48.178:26656,111ba4e5ae97d5f294294ea6ca03c17506465ec5@208.68.39.221:26656,0409ad6d8ceef8ab01f4df458dbd58dd9ac32295@121.37.242.170:26656'
-seeds: '8e1590558d8fede2f8c9405b7ef550ff455ce842@51.79.30.9:26656,bfffaf3b2c38292bd0aa2a3efe59f210f49b5793@51.91.208.71:26656,106c6974096ca8224f20a85396155979dbd2fb09@198.244.141.176:26656'
+genesis: 'https://raw.githubusercontent.com/defund-labs/testnet/main/defund-private-4/genesis.json'
+seeds: 'd837b7f78c03899d8964351fb95c78e84128dff6@174.83.6.129:30791,f03f3a18bae28f2099648b1c8b1eadf3323cf741@162.55.211.136:26656,f8fa20444c3c56a2d3b4fdc57b3fd059f7ae3127@148.251.43.226:56656,70a1f41dea262730e7ab027bcf8bd2616160a9a9@142.132.202.86:17000,e47e5e7ae537147a23995117ea8b2d4c2a408dcb@172.104.159.69:45656,74e6425e7ec76e6eaef92643b6181c42d5b8a3b8@defund-testnet-seed.itrocket.net:443'
 custom_port_prefix: 112
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
