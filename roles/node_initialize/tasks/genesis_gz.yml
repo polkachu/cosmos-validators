@@ -11,4 +11,4 @@
   copy:
     remote_src: true
     src: /tmp/genesis.json
-    dest: '{{ user_dir }}/{{ folder }}/config'
+    dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
