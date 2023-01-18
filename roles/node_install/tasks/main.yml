@@ -27,7 +27,7 @@
     binary_installed: false
 
 - name: download pre-installed binary
-  when: binary is defined
+  when: binary is defined and not binary_installed
   block: 
     - name: Install from binary zipped
       include_tasks: binary_zip.yml
