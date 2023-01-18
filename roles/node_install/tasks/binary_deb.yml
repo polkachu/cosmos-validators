@@ -5,6 +5,7 @@
     dest: '/tmp/{{ daemon }}.deb'
 
 - name: Install deb
+  become: true
   apt: deb='/tmp/{{ daemon }}.deb'
 
 - name: Copy binary

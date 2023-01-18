@@ -1,5 +1,6 @@
 ---
 - name: install unzip
+  become: true
   apt:
     name: unzip
     state: present
@@ -25,6 +26,6 @@
     dest: '{{ user_dir }}/go/bin/{{ daemon }}'
     mode: '0755'
 
-- name: exit genesis download block
+- name: exit binary install block
   set_fact:
     binary_installed: true
