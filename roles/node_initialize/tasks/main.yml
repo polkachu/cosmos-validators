@@ -36,21 +36,27 @@
         mode: '0644'
       when: addrbook_file is defined
 
-    - name: regular genesis download
-      include_tasks: genesis_default.yml
-      when: genesis_processing is undefined
+    - name: set exit condition
+      set_fact:
+        genesis_downloaded: false
 
-    - name: zip genesis download
-      include_tasks: genesis_zip.yml
-      when: genesis_processing is defined and genesis_processing == "zip"
+    - name: download genesis
+      when: not genesis_downloaded
+      block:
+        - name: zip genesis download
+          include_tasks: genesis_zip.yml
+          when: "'.zip' in genesis"
 
-    - name: gz genesis download
-      include_tasks: genesis_gz.yml
-      when: genesis_processing is defined and genesis_processing == "gz"
+        - name: targz genesis download
+          include_tasks: genesis_targz.yml
+          when: "'.tar.gz' in genesis"
 
-    - name: targz genesis download
-      include_tasks: genesis_targz.yml
-      when: genesis_processing is defined and genesis_processing == "targz" 
+        - name: gz genesis download
+          include_tasks: genesis_gz.yml
+          when: "'.gz' in genesis"
+
+        - name: regular genesis download
+          include_tasks: genesis_default.yml
   when: not node_initialized.stat.exists
 
 - name: Update minimum gas price on config file

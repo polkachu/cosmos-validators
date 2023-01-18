@@ -9,3 +9,7 @@
     src: '/tmp/genesis.tar.gz'
     dest: '{{ user_dir }}/{{ folder }}/config'
     remote_src: true
+
+- name: exit genesis download block
+  set_fact:
+    genesis_downloaded: true

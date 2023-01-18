@@ -16,3 +16,7 @@
     remote_src: yes
     dest: '{{ user_dir }}/{{ folder }}/config'
     mode: '0644'
+
+- name: exit genesis download block
+  set_fact:
+    genesis_downloaded: true

@@ -22,18 +22,24 @@
         GOPATH: '{{ user_dir }}/go'
   when: binary is undefined
 
-- name: Install from binary
-  include_tasks: binary_default.yml
-  when: binary is defined and binary_processing is not defined
+- name: set exit condition
+  set_fact: 
+    binary_installed: false
 
-- name: Install from binary zipped
-  include_tasks: binary_zip.yml
-  when: binary is defined and binary_processing is defined and binary_processing == 'zip'
+- name: download pre-installed binary
+  when: binary is defined
+  block: 
+    - name: Install from binary zipped
+      include_tasks: binary_zip.yml
+      when: "'.zip' in binary"
 
-- name: Install from binary tar gz
-  include_tasks: binary_targz.yml
-  when: binary is defined and binary_processing is defined and binary_processing == 'targz'
+    - name: Install from binary tar gz
+      include_tasks: binary_targz.yml
+      when: "'.tar.gz' in binary"
 
-- name: Install from binary .deb
-  include_tasks: binary_deb.yml
-  when: binary is defined and binary_processing is defined and binary_processing == 'deb'
+    - name: Install from binary .deb
+      include_tasks: binary_deb.yml
+      when: "'.deb' in binary"
+
+    - name: Install from binary
+      include_tasks: binary_default.yml

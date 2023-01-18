@@ -3,3 +3,7 @@
     url: '{{ genesis }}'
     dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
     mode: '0644'
+
+- name: exit genesis download block
+  set_fact:
+    genesis_downloaded: true
