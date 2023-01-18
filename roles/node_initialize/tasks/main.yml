@@ -14,50 +14,50 @@
       command: '{{ daemon }} init {{ node_name }} --chain-id {{ chain_id }} -o'
       environment:
         PATH: '{{ path }}'
-
-    - name: Download config file
-      get_url:
-        url: '{{ config_file }}'
-        dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
-        mode: '0644'
-      when: config_file is defined
-
-    - name: Download app file
-      get_url:
-        url: '{{ app_file }}'
-        dest: '{{ user_dir }}/{{ folder }}/config/app.toml'
-        mode: '0644'
-      when: app_file is defined
-
-    - name: Download addrbook.json file
-      get_url:
-        url: '{{ addrbook_file }}'
-        dest: '{{ user_dir }}/{{ folder }}/config/addrbook.json'
-        mode: '0644'
-      when: addrbook_file is defined
-
-    - name: set exit condition
-      set_fact:
-        genesis_downloaded: false
-
-    - name: download genesis
-      when: not genesis_downloaded
-      block:
-        - name: zip genesis download
-          include_tasks: genesis_zip.yml
-          when: "'.zip' in genesis"
-
-        - name: targz genesis download
-          include_tasks: genesis_targz.yml
-          when: "'.tar.gz' in genesis"
-
-        - name: gz genesis download
-          include_tasks: genesis_gz.yml
-          when: "'.gz' in genesis"
-
-        - name: regular genesis download
-          include_tasks: genesis_default.yml
   when: not node_initialized.stat.exists
+
+- name: set genesis download exit condition
+  set_fact:
+    genesis_downloaded: false
+
+- name: download genesis
+  when: not genesis_downloaded
+  block:
+    - name: zip genesis download
+      include_tasks: genesis_zip.yml
+      when: "'.zip' in genesis"
+
+    - name: targz genesis download
+      include_tasks: genesis_targz.yml
+      when: "'.tar.gz' in genesis"
+
+    - name: gz genesis download
+      include_tasks: genesis_gz.yml
+      when: "'.gz' in genesis"
+
+    - name: regular genesis download
+      include_tasks: genesis_default.yml
+
+- name: Download config file
+  get_url:
+    url: '{{ config_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    mode: '0644'
+  when: config_file is defined
+
+- name: Download app file
+  get_url:
+    url: '{{ app_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    mode: '0644'
+  when: app_file is defined
+
+- name: Download addrbook.json file
+  get_url:
+    url: '{{ addrbook_file }}'
+    dest: '{{ user_dir }}/{{ folder }}/config/addrbook.json'
+    mode: '0644'
+  when: addrbook_file is defined
 
 - name: Update minimum gas price on config file
   lineinfile:

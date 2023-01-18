@@ -22,7 +22,7 @@
         GOPATH: '{{ user_dir }}/go'
   when: binary is undefined
 
-- name: set exit condition
+- name: set binary install exit condition
   set_fact: 
     binary_installed: false
 
