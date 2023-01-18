@@ -43,3 +43,7 @@
 
     - name: Install from binary
       include_tasks: binary_default.yml
+
+- name: custom binary tasks
+  include_tasks: 'custom/{{ custom }}'
+  when: custom is defined

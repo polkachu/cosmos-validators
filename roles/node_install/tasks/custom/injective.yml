@@ -1,0 +1,15 @@
+---
+- name: copy peggo
+  copy:
+    remote_src: true
+    src: '/tmp/peggo'
+    dest: '{{ user_dir }}/go/bin/peggo'
+    mode: '0755'
+
+- name: copy libwasm
+  become: true
+  copy:
+    remote_src: true
+    src: '/tmp/libwasmvm.x86_64.so'
+    dest: '/usr/lib/libwasmvm.x86_64.so'
+    mode: '0755'
