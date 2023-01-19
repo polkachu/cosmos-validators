@@ -17,7 +17,7 @@ mv {{ user_dir }}/{{ folder }}/config/addrbook.backup {{ user_dir }}/{{ folder }
 
 {% endif %}
 
-{% if network == 'terra' or network == 'teritori' or network == 'nibiru' or network == 'mars' %}
+{% if network == 'terra' or network == 'teritori' or network == 'nibiru' or network == 'mars' or network == 'xpla' %}
 cp {{ user_dir }}/{{ folder }}/data-old/wasm {{ user_dir }}/{{ folder }}/data/wasm -r
 {% endif %}
 
