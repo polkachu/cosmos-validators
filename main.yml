@@ -9,4 +9,3 @@
     - node_configure
     - support_public_endpoints
     - node_launch
-    # - get_snapshot
