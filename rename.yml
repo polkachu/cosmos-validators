@@ -1,0 +1,43 @@
+---
+- name: Rename
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - setup
+  tasks:
+    - name: Create random node name
+      set_fact:
+        node_name: '{{ 9999999999999999999999 | random | to_uuid }}'
+
+    - debug:
+        var: node_name
+
+    - name: Adjust moniker
+      lineinfile:
+        path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+        regexp: 'moniker'
+        line: 'moniker = "{{ node_name }}"'
+
+    - name: start cosmovisor service
+      become: true
+      systemd:
+        name: '{{ daemon }}'
+        state: restarted
+
+    - name: Pause restart 
+      pause:
+        seconds: 45
+
+    - name: print moniker
+      shell: "{{ daemon }} status | jq .NodeInfo.moniker"
+      register:
+        moniker_output
+      environment:
+        - BINARY_PATH: '{{ user_dir }}/go/bin'
+        - DAEMON_HOME: '{{ user_dir }}/{{ folder }}'
+        - DAEMON_NAME: '{{ daemon }}'
+        - PATH: '{{ path }}'
+        - GOPATH: '{{ user_dir }}/go'
+
+    - debug:
+        var: moniker_output.stdout
