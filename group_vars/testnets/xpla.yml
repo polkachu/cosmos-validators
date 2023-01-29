@@ -2,7 +2,7 @@ network: xpla
 folder: '.xpla'
 daemon: xplad
 chain_id: 'cube_47-5'
-node_version: 'v0.1.0'
+node_version: '0bcc939f0b0936afb7af827932fcc1a4e6d84fba'
 repo: https://github.com/xpladev/xpla
 genesis: https://raw.githubusercontent.com/xpladev/testnets/main/cube_47-5/genesis.json
 peers: '9ddfac28dc6b28601e3039902ee5a8915dc7891f@3.35.54.221:26656'
