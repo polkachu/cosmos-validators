@@ -13,12 +13,11 @@ app_port_changes:
 pruning_main_backup:
   'pruning = "': 'pruning = "custom"'
   'pruning-keep-recent = "': 'pruning-keep-recent = "100"'
-  'pruning-interval = "': 'pruning-interval = "73"'
+  'pruning-interval = "': 'pruning-interval = "13"'
   'snapshot-interval = ': 'snapshot-interval = 0'
 pruning_relayer:
   'pruning = "': 'pruning = "custom"'
   'pruning-keep-recent = "': 'pruning-keep-recent = "10000"'
-  'pruning-keep-every = "': 'pruning-keep-every = "0"'
   'pruning-interval = "': 'pruning-interval = "79"'
   'snapshot-interval = ': 'snapshot-interval = 2000'
   'snapshot-keep-recent = ': 'snapshot-keep-recent= 5'
@@ -27,6 +26,6 @@ pruning_test:
   'pruning = "': 'pruning = "custom"'
   'pruning-keep-recent = "': 'pruning-keep-recent = "100"'
   'pruning-keep-every = "': 'pruning-keep-every = "0"'
-  'pruning-interval = "': 'pruning-interval = "29"'
+  'pruning-interval = "': 'pruning-interval = "13"'
   'snapshot-interval = ': 'snapshot-interval = 0'
 
