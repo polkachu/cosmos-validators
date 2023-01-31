@@ -1,0 +1,10 @@
+network: uptick
+folder: '.uptickd'
+daemon: uptickd
+chain_id: uptick_7000-2
+node_version: 'v0.2.4'
+repo: https://github.com/UptickNetwork/uptick.git
+genesis: 'https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-2/genesis.json'
+seeds: '2c952455a0e425081b54855091ab84c1fe73c4bc@uptick-testnet-seed.itrocket.net:443'
+addrbook_url: 'https://share.utsa.tech/uptick/addrbook.json'
+custom_port_prefix: 204
