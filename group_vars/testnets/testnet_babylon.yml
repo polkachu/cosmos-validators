@@ -1,0 +1,7 @@
+network: babylon
+folder: .babylond
+daemon: babylond
+chain_id: 'bbn-test-1'
+node_version: 'v0.4.0'
+genesis: https://github.com/babylonchain/networks/raw/main/bbn-test-1/genesis.tar.bz2
+seeds: ''
