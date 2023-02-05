@@ -2,11 +2,10 @@ network: jackal
 folder: '.canine'
 daemon: canined
 chain_id: jackal-1
-node_version: v1.1.0
+node_version: v1.1.2
 repo: https://github.com/JackalLabs/canine-chain
 genesis: 'https://cdn.discordapp.com/attachments/1002389406650466405/1034968352591986859/updated_genesis2.json'
-seeds: 'ec38fb158ffb0272c4b7c951fc790a8f9849e280@198.244.212.27:26656'
-peers: 'c98028a169aabe5f8555090e6cd3370308b391b3@135.181.20.44:2506,ec38fb158ffb0272c4b7c951fc790a8f9849e280@198.244.212.27:26656,ff94a29e02de8369faf37c76d3c97684bbd51bd6@185.16.38.165:17556,39b55b1c49ad0994bbead006be40d9c84b0bf2d4@78.107.253.133:28656,f90a64a0a3f3c0480360e0fe5dd0f806d7741558@207.244.127.5:26656,57d82676ab660e8e4471664d7fee18e3e2e3dd19@89.58.38.59:26656,8be44995ab4eeafcde6e0a9e196c40d483ef6d2a@51.81.155.97:10556'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17556'
 minimum_gas_price: 0.002ujkl
 custom_port_prefix: 175
 

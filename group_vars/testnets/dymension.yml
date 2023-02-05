@@ -1,0 +1,13 @@
+network: dymension
+folder: '.dymension'
+daemon: dymd
+chain_id: 35-C
+node_version: v0.2.0-beta
+repo: https://github.com/dymensionxyz/dymension.git
+genesis: https://raw.githubusercontent.com/dymensionxyz/testnets/main/dymension-hub/35-C/pre-genesis.json
+seeds: 'babc3f3f7804933265ec9c40ad94f4da8e9e0017@testnet-seed.rhinostake.com:20556'
+custom_port_prefix: 205
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

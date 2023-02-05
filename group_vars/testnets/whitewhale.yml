@@ -1,0 +1,15 @@
+network: whitewhale
+folder: '.migalood'
+daemon: migalood
+chain_id: 'narwhal-1'
+node_version: 'v1.0.0-rc0'
+repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain'
+genesis: 'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-chain/main/networks/testnet/genesis.json'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20756'
+custom_port_prefix: 207
+minimum_gas_price: '0whale'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
+wasm: 'outside'

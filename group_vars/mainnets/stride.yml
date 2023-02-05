@@ -2,7 +2,7 @@ network: stride
 folder: '.stride'
 daemon: strided
 chain_id: stride-1
-node_version: 'v1.0.0'
+node_version: 'v5.1.1'
 repo: https://github.com/Stride-Labs/stride
 genesis: 'https://raw.githubusercontent.com/Stride-Labs/testnet/infra-test/poolparty/infra/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12256'

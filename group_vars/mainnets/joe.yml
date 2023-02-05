@@ -2,10 +2,10 @@ network: joe
 folder: '.joed'
 daemon: joed
 chain_id: joe-1
-node_version: main
+node_version: v0.0.2
 repo: https://github.com/joe-chain/joe
 genesis: 'https://raw.githubusercontent.com/Reecepbcups/joe/main/network/genesis.json'
-peers: '773cbd225a1852499e51affd8f21c9e834733fde@95.217.113.126:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:18356'
 minimum_gas_price: '0ujoe'
 custom_port_prefix: 183
 

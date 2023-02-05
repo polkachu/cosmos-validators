@@ -2,7 +2,7 @@ network: crescent
 folder: '.crescent'
 daemon: crescentd
 chain_id: 'crescent-1'
-node_version: 'v1.1.0'
+node_version: 'v4.0.0'
 repo: 'https://github.com/crescent-network/crescent'
 genesis: 'https://github.com/crescent-network/launch/blob/main/mainnet/crescent-1/genesis.json.tar.gz?raw=true'
 genesis_processing: targz
