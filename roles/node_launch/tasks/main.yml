@@ -15,14 +15,6 @@
     proto: tcp
     port: "{{ custom_port_prefix }}56"
 
-- name: Install cosmovisor
-  become: true
-  command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
-  environment:
-    PATH: '{{ path }}'
-    GOPATH: '{{ user_dir }}/go'
-  run_once: true
-
 - name: Create cosmovisor directories
   command: "$BINARY_PATH/cosmovisor init $BINARY_PATH/{{ daemon }}"
   environment:
