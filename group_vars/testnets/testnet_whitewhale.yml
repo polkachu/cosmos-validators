@@ -1,0 +1,8 @@
+network: whitewhale
+folder: .migalood
+daemon: migalood
+chain_id: narwhal-1
+node_version: v1.0.0-rc0
+repo: https://github.com/White-Whale-Defi-Platform/migaloo-chain
+genesis: https://snapshots.polkachu.com/testnet-genesis/whitewhale/genesis.json
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20756'
