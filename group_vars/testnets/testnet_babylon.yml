@@ -1,7 +1,8 @@
 network: babylon
 folder: .babylond
 daemon: babylond
-chain_id: 'bbn-test-1'
-node_version: 'v0.4.0'
-genesis: https://github.com/babylonchain/networks/raw/main/bbn-test-1/genesis.tar.bz2
-seeds: ''
+chain_id: bbn-test1
+node_version: v0.5.0
+genesis: https://snapshots.polkachu.com/testnet-genesis/babylon/genesis.json
+repo: https://github.com/babylonchain/babylon.git
+seeds: ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20656
