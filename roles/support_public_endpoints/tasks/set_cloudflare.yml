@@ -1,31 +1,14 @@
 # https://docs.ansible.com/ansible/latest/collections/community/general/cloudflare_dns_module.html
 ---
-- name: Create rpc endpoint
-  community.general.cloudflare_dns:
-    zone: '{{ cloudflare_zone }}'
-    record: '{{ endpoint_prefix }}-rpc'
-    type: A
-    value: '{{ ansible_host }}'
-    api_token: '{{ cloudflare_token }}'
-    proxied: true
-  register: record
-
 - name: Create grpc endpoint
   community.general.cloudflare_dns:
     zone: '{{ cloudflare_zone }}'
-    record: '{{ endpoint_prefix }}-grpc'
+    record: '{{ item }}'
     type: A
     value: '{{ ansible_host }}'
     api_token: '{{ cloudflare_token }}'
     proxied: true
-  register: record
-
-- name: Create api endpoint
-  community.general.cloudflare_dns:
-    zone: '{{ cloudflare_zone }}'
-    record: '{{ endpoint_prefix }}-api'
-    type: A
-    value: '{{ ansible_host }}'
-    api_token: '{{ cloudflare_token }}'
-    proxied: true
-  register: record
+  loop:
+    - '{{ endpoint_prefix }}-rpc'
+    - '{{ endpoint_prefix }}-grpc'
+    - '{{ endpoint_prefix }}-api'
