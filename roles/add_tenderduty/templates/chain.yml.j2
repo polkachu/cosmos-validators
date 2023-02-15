@@ -1,17 +1,17 @@
 chain_id: '{{ chain-id }}'
 valoper_address: '{{ valoper }}'
-public_fallback: yes
+public_fallback: '{{ yes if type == 'main' else no }}'
 
 alerts:
   stalled_enabled: yes
   stalled_minutes: 15
 
   consecutive_enabled: yes
-  consecutive_missed: 15
+  consecutive_missed: '{{ 15 if type == 'main' else 25 }}'
   consecutive_priority: critical
 
   percentage_enabled: yes
-  percentage_missed: 10
+  percentage_missed: '{{ 10 if type == 'main' else 25 }}'
   percentage_priority: warning
 
   alert_if_inactive: yes
@@ -19,7 +19,7 @@ alerts:
 
   pagerduty:
     enabled: yes
-    api_key: '{{ pagerduty_key }}'' # uses default if blank
+    api_key: '{{ pagerduty_key }}' # uses default if blank
 
   discord:
     enabled: yes
@@ -32,7 +32,9 @@ alerts:
     channel: "" # uses default if blank
 
 nodes:
+{% if type == 'main' %}
   - url: https://{{ endpoint_prefix }}-rpc.lavenderfive.com:443
     alert_if_down: yes
-  - url: http://195.3.221.21:{{ custom_port_prefix }}57
+{% endif %}
+  - url: http://{{ host_ip }}:{{ custom_port_prefix }}57
     alert_if_down: yes

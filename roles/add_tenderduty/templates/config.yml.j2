@@ -1,0 +1,29 @@
+---
+
+# controls whether the dashboard is enabled.
+enable_dashboard: yes
+# What TCP port the dashboard will listen on. Only the port is controllable for now.
+listen_port: 8888
+# hide_logs is useful if the dashboard will be posted publicly. It disables the log feed,
+# and obscures most node-related details. Be aware this isn't fully vetted for preventing
+# info leaks about node names, etc.
+hide_logs: yes
+# How long to wait before alerting that a node is down.
+node_down_alert_minutes: 10
+
+prometheus_enabled: no
+prometheus_listen_port: 28686
+
+pagerduty:
+  enabled: '{{ yes if tenderduty_pagerduty_key else no }}'
+  api_key: '{{ tenderduty_pagerduty_key }}'
+  default_severity: alert
+
+discord:
+  enabled: '{{ yes if tenderduty_discord_webhook else no }}'
+  webhook: '{{ tenderduty_discord_webhook }}'
+
+telegram:
+  enabled: '{{ yes if tenderduty_telegram_key else no }}'
+  api_key: '{{ tenderduty_telegram_key }}'
+  channel: "-666666666"

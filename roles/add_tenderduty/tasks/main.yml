@@ -1,4 +1,15 @@
 ---
-- name: set network endpoint prefix
-  set_fact: 
-    endpoint_prefix: '{{ "testnet-" if type == "testnet" else "" }}{{ custom_network | default(network) }}'
+- name: setup tenderduty
+  when: type != 'relayer'
+  block: 
+    - name: set host ip
+      set_fact:
+        host_ip: '{{ ansible_host }}'
+    - name: change host to tenderseed
+      set_fact:
+        ansible_host: '{{ tenderseed_host }}'
+
+    - name: set network endpoint prefix
+      set_fact: 
+        endpoint_prefix: '{{ "testnet-" if type == "testnet" else "" }}{{ custom_network | default(network) }}'
+
