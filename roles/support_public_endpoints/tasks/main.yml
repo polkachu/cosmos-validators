@@ -21,11 +21,12 @@
     - name: add endpoints to cloudflare
       import_tasks: set_cloudflare.yml
 
-    - name: restart caddy service
-      systemd:
-        name: caddy
-        state: restarted
-        daemon_reload: yes
-        enabled: yes
-      changed_when: false
-      run_once: true
+handlers:
+- name: restart caddy service
+  systemd:
+    name: caddy
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
+  run_once: true
