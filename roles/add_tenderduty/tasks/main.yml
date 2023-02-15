@@ -1,0 +1,4 @@
+---
+- name: set network endpoint prefix
+  set_fact: 
+    endpoint_prefix: '{{ "testnet-" if type == "testnet" else "" }}{{ custom_network | default(network) }}'

@@ -1,0 +1,38 @@
+chain_id: '{{ chain-id }}'
+valoper_address: '{{ valoper }}'
+public_fallback: yes
+
+alerts:
+  stalled_enabled: yes
+  stalled_minutes: 15
+
+  consecutive_enabled: yes
+  consecutive_missed: 15
+  consecutive_priority: critical
+
+  percentage_enabled: yes
+  percentage_missed: 10
+  percentage_priority: warning
+
+  alert_if_inactive: yes
+  alert_if_no_servers: yes
+
+  pagerduty:
+    enabled: yes
+    api_key: '{{ pagerduty_key }}'' # uses default if blank
+
+  discord:
+    enabled: yes
+    webhook: "" # uses default if blank
+
+  # Telegram settings
+  telegram:
+    enabled: no
+    api_key: "" # uses default if blank
+    channel: "" # uses default if blank
+
+nodes:
+  - url: https://{{ endpoint_prefix }}-rpc.lavenderfive.com:443
+    alert_if_down: yes
+  - url: http://195.3.221.21:{{ custom_port_prefix }}57
+    alert_if_down: yes
