@@ -1,12 +1,5 @@
 # https://docs.ansible.com/ansible/latest/collections/community/docker/
 ---
-- name: check if docker is installed
-  command: 'docker'
-  register: docker_installed
-
-- debug:
-    var: docker_installed
-
 # Install Docker
 # --
 - name: add apt-key
@@ -28,10 +21,19 @@
 - name: add user permissions
   shell: "usermod -aG docker {{ ansible_user }}"
 
-- name: Reset ssh connection for changes to take effect
-  meta: "reset_connection"
+- name: ensure docker is started
+  service:
+    name: docker
+    state: started
+    enabled: yes
 
-# Installs Docker SDK
+handlers:
+  - name: restart docker
+    service: 
+      name: docker 
+      state: restarted
+
+# Installs Docker Python SDK
 # --
 - name: install python package manager
   apt:

@@ -1,0 +1,9 @@
+---
+- name: Clone node repo
+  git:
+    repo: 'https://github.com/blockpane/tenderduty'
+    dest: '{{ user_dir }}'
+    version: '{{ tenderduty_version }}'
+    update: yes
+    force: yes
+    recursive: no

@@ -62,6 +62,8 @@ all:
     cloudflare_zone: lavenderfive.com 
 
     # tenderduty
+    tenderduty_user: '{{ ansible_user }}'
+    tenderduty_version: v2.2.0
     tenderduty_host 127.0.0.1
     tenderduty_dns: '{{ cloudflare_zone }}'
     tenderduty_pagerduty_key: ''
@@ -69,3 +71,4 @@ all:
     tenderduty_discord_api: 'https://discord.com/api/webhooks/992...'
     tenderduty_telegram_key: ''
     tenderduty_telegram_channel: ''
+    testnet_tenderduty_host: 127.0.0.1

@@ -1,0 +1,28 @@
+---
+- name: Create caddy file
+  template:
+    src: Caddyfile
+    dest: '{{ tenderduty_user }}/tenderduty/caddy/Caddyfile'
+    mode: '0644'
+  run_once: true
+
+- name: Create Docker Compose file
+  template:
+    src: docker-compose.yml
+    dest: '{{ tenderduty_user }}/tenderduty/docker-compose.yml'
+    mode: '0644'
+  run_once: true
+
+- name: Create config file
+  template:
+    src: config.yml.j2
+    dest: '{{ tenderduty_user }}/tenderduty/config.yml'
+    mode: '0644'
+  run_once: true
+
+- name: Create chains file
+  template:
+    src: chain.yml.j2
+    dest: '{{ tenderduty_user }}/tenderduty/chains.d/{{ network }}.yml'
+    mode: '0644'
+

@@ -1,17 +1,22 @@
 ---
 - name: setup tenderduty
+  become: true
   when: type != 'relayer'
   block: 
     - name: set host ip
       set_fact:
         host_ip: '{{ ansible_host }}'
+
     - name: change host to tenderseed
       set_fact:
-        ansible_host: '{{ tenderduty_host }}'
+        ansible_host: '{{ tenderduty_host if type == 'main' else testnet_tenderduty_host }}'
 
     - name: set network endpoint prefix
       set_fact: 
         endpoint_prefix: '{{ "testnet-" if type == "testnet" else "" }}{{ custom_network | default(network) }}'
+
+    - name: install tenderduty
+      include_tasks: install_tenderduty.yml
 
     # ensure docker is installed
     - name: do initial configuration

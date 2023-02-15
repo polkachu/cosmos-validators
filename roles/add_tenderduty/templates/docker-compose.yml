@@ -1,0 +1,44 @@
+# docker-compose example for tenderduty, copy this file to docker-compose.yml and edit to suit.
+version: '3.2'
+
+networks:
+  monitor-net:
+    driver: bridge
+
+volumes:
+  home:
+  caddy_data: {}
+
+services:
+  tenderduty:
+    build: .
+    command: ""
+    expose:
+      - 8888   # Dashboard
+      - 28686  # Prometheus exporter
+    volumes:
+      - home:/var/lib/tenderduty
+      - ./config.yml:/var/lib/tenderduty/config.yml
+      - ./chains.d:/var/lib/tenderduty/chains.d/
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
+    restart: unless-stopped
+    networks:
+      - monitor-net
+
+  caddy:
+    image: caddy:2.3.0
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+      - "8888:8888"
+    volumes:
+      - ./caddy:/etc/caddy
+      - caddy_data:/data
+    restart: unless-stopped
+    networks:
+      - monitor-net
