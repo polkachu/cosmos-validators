@@ -13,3 +13,11 @@
       set_fact: 
         endpoint_prefix: '{{ "testnet-" if type == "testnet" else "" }}{{ custom_network | default(network) }}'
 
+    # ensure docker is installed
+    - name: do initial configuration
+      run_once: true
+      block: 
+        - name: install docker
+          include_tasks: install_docker.yml
+
+    

@@ -1,0 +1,45 @@
+# https://docs.ansible.com/ansible/latest/collections/community/docker/
+---
+- name: check if docker is installed
+  command: 'docker'
+  register: docker_installed
+
+- debug:
+    var: docker_installed
+
+# Install Docker
+# --
+- name: add apt-key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+
+- name: add docker repo
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+
+- name: install docker 
+  apt:
+    name: 
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    update_cache: yes
+
+- name: add user permissions
+  shell: "usermod -aG docker {{ ansible_user }}"
+
+- name: Reset ssh connection for changes to take effect
+  meta: "reset_connection"
+
+# Installs Docker SDK
+# --
+- name: install python package manager
+  apt:
+    name: python3-pip
+
+- name: install python sdk
+  become_user: "{{ ansible_user }}"
+  pip:
+    name:
+      - docker
+      - docker-compose
