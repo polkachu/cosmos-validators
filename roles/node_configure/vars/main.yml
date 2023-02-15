@@ -27,5 +27,6 @@ pruning_test:
   'pruning-keep-recent = "': 'pruning-keep-recent = "100"'
   'pruning-keep-every = "': 'pruning-keep-every = "0"'
   'pruning-interval = "': 'pruning-interval = "13"'
-  'snapshot-interval = ': 'snapshot-interval = 0'
-
+  'snapshot-interval = ': 'snapshot-interval = 2000'
+  'snapshot-keep-recent = ': 'snapshot-keep-recent= 5'
+  'enabled-unsafe-cors = ': 'enabled-unsafe-cors = false'

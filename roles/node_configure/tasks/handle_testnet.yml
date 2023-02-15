@@ -1,0 +1,7 @@
+---
+- name: Adjust pruning setting for test
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_test | dict2items }}'

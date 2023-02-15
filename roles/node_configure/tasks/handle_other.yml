@@ -1,0 +1,27 @@
+---
+- name: Adjust pruning setting for relayer
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_relayer | dict2items }}'
+
+- name: enable api
+  replace:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: "# Enable defines if the API(.*)\\senable = false"
+    replace: "# Enable defines if the API server should be enabled.\\nenable = true"
+
+- name: enable swagger
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: 'swagger = '
+    line: 'swagger = true'
+    state: present
+
+- name: Open RPC port for non-main
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '{{ custom_port_prefix }}57'
+    line: 'laddr = "tcp://0.0.0.0:{{ custom_port_prefix }}57"'
+    state: present

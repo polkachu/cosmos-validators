@@ -1,0 +1,7 @@
+---
+- name: Main
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - setup
+    - support_public_endpoints

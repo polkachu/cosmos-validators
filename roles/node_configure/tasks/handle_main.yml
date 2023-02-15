@@ -1,0 +1,14 @@
+---
+- name: Adjust pruning setting for main and backup
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_main_backup | dict2items }}'
+
+- name: Adjust indexer setting for main and backup
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'indexer = "'
+    line: 'indexer = "null"'
+    state: present

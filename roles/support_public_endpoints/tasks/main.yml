@@ -1,7 +1,12 @@
 ---
 - name: setup public api/rpc/grpc endpoints
   become: true
+  when: type != 'main'
   block:
+    - name: set network endpoint prefix
+      set_fact: 
+        endpoint_prefix: '{{ "testnet-" if type == "testnet" else "" }}{{ custom_network | default(network) }}'
+
     - name: create caddyfile in /etc/Caddy/
       template:
         src: 'Caddyfile'
@@ -10,37 +15,11 @@
         group: 'root'
         mode: '0644'
 
-    - name: enable api
-      become: false
-      replace:
-        path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-        regexp: "# Enable defines if the API(.*)\\senable = false"
-        replace: "# Enable defines if the API server should be enabled.\\nenable = true"
-      when: type == 'relayer'
+    - name: open firewall
+      import_tasks: set_firewall.yml
 
-    - name: enable swagger
-      become: false
-      lineinfile:
-        path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-        regexp: 'swagger = '
-        line: 'swagger = true'
-        state: present
-      when: type == 'relayer'
-
-    - name: open api port
-      ufw:
-        rule: allow
-        port: '{{ custom_port_prefix }}17'
-
-    - name: open rpc port
-      ufw:
-        rule: allow
-        port: '{{ custom_port_prefix }}57'
-
-    - name: open grpc port
-      ufw:
-        rule: allow
-        port: '{{ custom_port_prefix }}90'
+    - name: add endpoints to cloudflare
+      import_tasks: set_cloudflare.yml
 
     - name: restart caddy service
       systemd:
@@ -50,4 +29,3 @@
         enabled: yes
       changed_when: false
       run_once: true
-  when: type is defined and type == 'relayer'

@@ -1,0 +1,8 @@
+network: andromeda
+folder: .andromedad
+daemon: andromedad
+chain_id: galileo-3
+node_version: galileo-3-v1.1.0-beta1
+repo: https://github.com/andromedaprotocol/andromedad.git
+genesis: https://raw.githubusercontent.com/andromedaprotocol/testnets/galileo-3/genesis.json
+persistent_peers: '06d4ab2369406136c00a839efc30ea5df9acaf11@10.128.0.44:26656,43d667323445c8f4d450d5d5352f499fa04839a8@192.168.0.237:26656,29a9c5bfb54343d25c89d7119fade8b18201c503@192.168.101.79:26656,6006190d5a3a9686bbcce26abc79c7f3f868f43a@37.252.184.230:26656'

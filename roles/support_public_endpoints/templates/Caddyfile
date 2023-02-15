@@ -1,4 +1,4 @@
-{{ custom_network | default(network) }}-rpc.lavenderfive.com {
+{{ endpoint_prefix }}-rpc.lavenderfive.com {
   log
   import rpc-header
   import blocked
@@ -12,7 +12,7 @@
   }
 }
 
-{{ custom_network | default(network) }}-api.lavenderfive.com {
+{{ endpoint_prefix }}-api.lavenderfive.com {
   log
   import api-header
   import blocked
@@ -22,7 +22,7 @@
   }
 }
 
-{{ custom_network | default(network) }}-grpc.lavenderfive.com {
+{{ endpoint_prefix }}-grpc.lavenderfive.com {
   log
   import blocked
   import rate-limiter

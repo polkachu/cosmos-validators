@@ -1,0 +1,56 @@
+---
+- name: Update peers in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^persistent_peers ='
+    line: 'persistent_peers = "{{ peers }}"'
+    state: present
+  when: peers is defined
+
+- name: Update seeds in config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^seeds ='
+    line: 'seeds = "{{ seeds }}"'
+    state: present
+  when: seeds is defined
+
+- name: Set up external address
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'external_address = "'
+    line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}56"'
+    state: present
+
+- name: Adjust config.toml port
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ config_port_changes | dict2items }}'
+
+- name: Adjust Inbound Peers
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'max_num_inbound_peers'
+    line: 'max_num_inbound_peers = 80'
+
+- name: Adjust Outbound Peers
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'max_num_outbound_peers'
+    line: 'max_num_outbound_peers = 60'
+
+- name: Adjust app.toml ports
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ app_port_changes | dict2items }}'
+
+- name: Enable prometheus on the config.toml file
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: '^prometheus ='
+    line: 'prometheus = true'
+    state: present

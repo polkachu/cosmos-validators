@@ -1,0 +1,30 @@
+---
+- name: Create rpc endpoint
+  community.general.cloudflare_dns:
+    zone: lavenderfive.com
+    record: '{{ endpoint_prefix }}-rpc'
+    type: A
+    value: '{{ ansible_host }}'
+    api_token: '{{ cloudflare_apikey }}'
+    proxied: true
+  register: record
+
+- name: Create grpc endpoint
+  community.general.cloudflare_dns:
+    zone: lavenderfive.com
+    record: '{{ endpoint_prefix }}-grpc'
+    type: A
+    value: '{{ ansible_host }}'
+    api_token: '{{ cloudflare_apikey }}'
+    proxied: true
+  register: record
+
+- name: Create api endpoint
+  community.general.cloudflare_dns:
+    zone: lavenderfive.com
+    record: '{{ endpoint_prefix }}-api'
+    type: A
+    value: '{{ ansible_host }}'
+    api_token: '{{ cloudflare_apikey }}'
+    proxied: true
+  register: record
