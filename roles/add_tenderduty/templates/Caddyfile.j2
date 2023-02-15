@@ -1,0 +1,16 @@
+{
+    # email to use on Let's Encrypt
+    email admin@lavenderfive.com
+
+    # Uncomment for debug
+    #acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+    #debug
+}
+
+:8888 {
+    reverse_proxy tenderduty:8888
+}
+
+tenderduty.{{ tenderduty_dns }}{
+    reverse_proxy tenderduty:8888
+}

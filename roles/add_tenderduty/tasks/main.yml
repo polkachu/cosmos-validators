@@ -7,7 +7,7 @@
         host_ip: '{{ ansible_host }}'
     - name: change host to tenderseed
       set_fact:
-        ansible_host: '{{ tenderseed_host }}'
+        ansible_host: '{{ tenderduty_host }}'
 
     - name: set network endpoint prefix
       set_fact: 

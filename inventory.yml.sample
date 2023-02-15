@@ -62,6 +62,7 @@ all:
     cloudflare_zone: lavenderfive.com 
 
     # tenderduty
+    tenderduty_host 127.0.0.1
     tenderduty_dns: '{{ cloudflare_zone }}'
     tenderduty_pagerduty_key: ''
     tenderduty_default_pagerduty_severity: 'alert'
