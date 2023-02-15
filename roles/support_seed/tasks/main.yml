@@ -1,42 +1,53 @@
 ---
-- name: open p2p port
-  become: true
-  command: 'ufw allow {{ custom_port_prefix }}56/tcp'
+- name: setup tenderseed
+  when: type == 'main'
+  block: 
+    - name: change host to tenderseed
+      set_fact:
+        ansible_host: '{{ tenderseed_host }}'
 
-- name: Create folder
-  file:
-    state: directory
-    path: '{{ user_dir }}/{{ folder }}/config'
+    - name: open p2p port
+      become: true
+      command: 'ufw allow {{ custom_port_prefix }}56/tcp'
 
-- name: copy config.toml
-  template:
-    src: 'config.toml.j2'
-    dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    mode: '0644'
+    - name: create default seeds
+      set_fact:
+        default_seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:{{ custom_port_prefix }}56,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:{{ custom_port_prefix }}56'
 
-- name: copy node_key.json
-  template:
-    src: 'node_key.json.j2'
-    dest: '{{ user_dir }}/{{ folder }}/config/node_key.json'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    mode: '0644'
+    - name: Create folder
+      file:
+        state: directory
+        path: '{{ user_dir }}/{{ folder }}/config'
 
-- name: copy tenderseed service file
-  become: true
-  template:
-    src: 'tenderseed.service.j2'
-    dest: '/etc/systemd/system/tenderseed_{{ network }}.service'
-    owner: root
-    group: root
-    mode: '0644'
+    - name: copy config.toml
+      template:
+        src: 'config.toml.j2'
+        dest: '{{ user_dir }}/{{ folder }}/config/config.toml'
+        owner: '{{ ansible_user }}'
+        group: '{{ ansible_user }}'
+        mode: '0644'
 
-- name: start tenderseed service
-  become: true
-  systemd:
-    name: 'tenderseed_{{ network }}'
-    state: restarted
-    daemon_reload: yes
-    enabled: yes
+    - name: copy node_key.json
+      template:
+        src: 'node_key.json.j2'
+        dest: '{{ user_dir }}/{{ folder }}/config/node_key.json'
+        owner: '{{ ansible_user }}'
+        group: '{{ ansible_user }}'
+        mode: '0644'
+
+    - name: copy tenderseed service file
+      become: true
+      template:
+        src: 'tenderseed.service.j2'
+        dest: '/etc/systemd/system/tenderseed_{{ network }}.service'
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: start tenderseed service
+      become: true
+      systemd:
+        name: 'tenderseed_{{ network }}'
+        state: restarted
+        daemon_reload: yes
+        enabled: yes
