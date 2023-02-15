@@ -48,9 +48,23 @@ all:
     node_exporter: false
     promtail: false
     log_monitor: http://10.0.0.100:3100
-    node_name: "lavender.{{ network }}.{{ type }}"
     log_name: "lavender.{{ network }}.{{ type }}"
     snapshot_endpoint: 'http://10.0.0.2000'
     snapshot_profile: 'profile'  
     cosmos_directory_url: 'https://chains.cosmos.directory'
     port_prefix_url: https://raw.githubusercontent.com/polkachu/cosmos-port-prefixes/main/networks.json
+    snapshot_url: https://polkachu.com/tendermint_snapshots
+    addrbook_url: https://snapshots.polkachu.com/addrbook
+    tenderseed_host: 127.0.0.1
+
+    # cloudflare 
+    cloudflare_token: ''
+    cloudflare_zone: lavenderfive.com 
+
+    # tenderduty
+    tenderduty_dns: '{{ cloudflare_zone }}'
+    tenderduty_pagerduty_key: ''
+    tenderduty_default_pagerduty_severity: 'alert'
+    tenderduty_discord_api: 'https://discord.com/api/webhooks/992...'
+    tenderduty_telegram_key: ''
+    tenderduty_telegram_channel: ''
