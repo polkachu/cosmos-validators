@@ -48,3 +48,33 @@
     rule: allow
     port: '{{ custom_port_prefix }}90'
     proto: tcp
+
+- name: Create rpc endpoint
+  cloudflare_dns:
+    zone: polkachu.com
+    record: '{{ dns_prefix }}-rpc'
+    type: A
+    value: '{{ ansible_host }}'
+    api_token: '{{ cloudflare_api_key }}'
+    proxied: true
+  register: record
+
+- name: Create api endpoint
+  cloudflare_dns:
+    zone: polkachu.com
+    record: '{{ dns_prefix }}-api'
+    type: A
+    value: '{{ ansible_host }}'
+    api_token: '{{ cloudflare_api_key }}'
+    proxied: true
+  register: record
+
+- name: Create grpc endpoint
+  cloudflare_dns:
+    zone: polkachu.com
+    record: '{{ dns_prefix }}-grpc'
+    type: A
+    value: '{{ ansible_host }}'
+    api_token: '{{ cloudflare_api_key }}'
+    proxied: false
+  register: record
