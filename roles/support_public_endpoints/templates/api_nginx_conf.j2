@@ -11,8 +11,6 @@ server {
 {% else %}
     server_name {{network}}-api.polkachu.com;
 {% endif %}
-    add_header Access-Control-Allow-Origin * always;
-    add_header Access-Control-Allow-Headers * always;
     location / {
 {% if rate_limit is undefined or rate_limit|bool is sameas true %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;
