@@ -9,6 +9,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:1265
 minimum_gas_price: '0.025ujunox'
 custom_port_prefix: 126
 upgrade_folder: v12
+skip_version: 'v0.34.24-mev.14'
 
 # [Optional] Snapshot
 snapshot_hour: 0

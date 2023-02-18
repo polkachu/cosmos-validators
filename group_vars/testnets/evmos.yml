@@ -2,11 +2,13 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9000-4
-node_version: v10.0.0-rc4
+node_version: v11.0.0-rc3
 repo: https://github.com/tharsis/evmos
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/evmos/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13456'
 custom_port_prefix: 134
+upgrade_folder: v11.0.0-rc3
+skip_version: v0.34.24-mev.14
 
 # [Optional] Snapshot
 snapshot_hour: 1
