@@ -23,23 +23,24 @@
   when: binary is undefined
 
 - name: set binary install exit condition
-  set_fact: 
+  set_fact:
     binary_installed: false
 
 - name: download pre-installed binary
-  when: binary is defined and not binary_installed
-  block: 
+  when: binary is defined
+  block:
     - name: Install from binary zipped
       include_tasks: binary_zip.yml
-      when: "'.zip' in binary"
+      when: binary_processing == "zip"
 
     - name: Install from binary tar gz
       include_tasks: binary_targz.yml
-      when: "'.tar.gz' in binary"
+      when: binary_processing == "targz"
 
     - name: Install from binary .deb
       include_tasks: binary_deb.yml
-      when: "'.deb' in binary"
+      when: binary_processing == "deb"
 
     - name: Install from binary
       include_tasks: binary_default.yml
+      when: binary_processing == "default"

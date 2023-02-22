@@ -1,0 +1,15 @@
+network: 8ball
+folder: '.8ball'
+daemon: 8ball
+chain_id: 'eightball-1'
+node_version: 'TBD'
+repo: 'TBD'
+binary: https://8ball.info/8ball.tar.gz
+binary_processing: targz
+genesis: 'https://8ball.info/8ball-genesis.json'
+peers: 'fca96d0a1d7357afb226a49c4c7d9126118c37e9@one.8ball.info:26656,aa918e17c8066cd3b031f490f0019c1a95afe7e3@two.8ball.info:26656,98b49fea92b266ed8cfb0154028c79f81d16a825@three.8ball.info:26656'
+custom_port_prefix: 213
+
+# [Optional] Snapshot
+snapshot_hour: 3
+snapshot_minute: 30

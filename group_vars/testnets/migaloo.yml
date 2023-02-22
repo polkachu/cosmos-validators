@@ -1,4 +1,4 @@
-network: whitewhale
+network: migaloo
 folder: '.migalood'
 daemon: migalood
 chain_id: 'narwhal-1'
