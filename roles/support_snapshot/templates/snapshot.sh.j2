@@ -32,16 +32,16 @@ WASM_FILENAME='wasmonly.tar.lz4'
 cd {{ user_dir }}/{{ folder }}
 
 {% if wasm is defined and wasm == "outside" %}
-tar cvf - data wasm | lz4 > "{{ user_dir }}/$FILENAME"
-tar cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
+tar --exclude=wasm/wasm/cache -cvf - data wasm | lz4 > "{{ user_dir }}/$FILENAME"
+tar --exclude=wasm/wasm/cache -cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
 
 {% elif wasm is defined and wasm == "inside" %}
-tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
+tar --exclude=data/wasm/cache -cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
 cd {{ user_dir }}/{{ folder }}/data
-tar cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
+tar --exclude=wasm/cache -cvf - wasm | lz4 > "{{ user_dir }}/$WASM_FILENAME"
 
 {% else %}
-tar cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
+tar -cvf - data | lz4 > "{{ user_dir }}/$FILENAME"
 {% endif %}
 
 # Restart the service
