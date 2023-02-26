@@ -30,4 +30,14 @@ server {
         proxy_pass      http://127.0.0.1:{{custom_port_prefix}}57;
 {% endif %}
     }
+
+{% if websocket is defined and websocket|bool is sameas true %}
+    location /websocket {
+        proxy_http_version 1.1;
+        proxy_buffering off;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_pass http://127.0.0.1:{{custom_port_prefix}}57/websocket;
+    }
+{% endif %}
 }
