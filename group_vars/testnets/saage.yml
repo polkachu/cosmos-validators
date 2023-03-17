@@ -1,12 +1,14 @@
 network: saage
 folder: '.sge'
 daemon: sged
-chain_id: sge-testnet-1
-node_version: v0.0.3
+chain_id: sge-network-2
+node_version: v0.0.5
 repo: https://github.com/sge-network/sge
-genesis: https://snapshots.polkachu.com/testnet-genesis/saage/genesis.json
+genesis: https://raw.githubusercontent.com/sge-network/networks/master/sge-network-2/genesis.json
+peers: 4980b478f91de9be0564a547779e5c6cb07eb995@3.239.15.80:26656,0e7042be1b77707aaf0597bb804da90d3a606c08@3.88.40.53:26656
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17756'
 custom_port_prefix: 177
+minimum_gas_price: 0.000usge
 
 # [Optional] Snapshot
 snapshot_hour: 2
