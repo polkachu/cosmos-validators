@@ -2,12 +2,13 @@ network: kichain
 folder: '.kid'
 daemon: kid
 chain_id: kichain-2
-node_version: '4.2.0'
+node_version: '5.0.0'
 repo: https://github.com/KiFoundation/ki-tools.git
 genesis: 'https://github.com/KiFoundation/ki-networks/raw/v0.1/Mainnet/kichain-2/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13556'
 minimum_gas_price: '0.025uxki'
 custom_port_prefix: 135
+upgrade_folder: v5
 
 # [Optional] Snapshot
 snapshot_hour: 2
