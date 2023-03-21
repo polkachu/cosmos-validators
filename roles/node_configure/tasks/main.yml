@@ -103,8 +103,8 @@
 - name: Enable CORS for relayer/test
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'
-    regexp: 'enable-unsafe-cors ='
-    line: 'enable-unsafe-cors = true'
+    regexp: 'enabled-unsafe-cors ='
+    line: 'enabled-unsafe-cors = true'
     state: present
   when: type == 'relayer' or type == 'testrelay'
 
