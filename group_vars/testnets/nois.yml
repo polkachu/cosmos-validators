@@ -1,12 +1,12 @@
-# this node require special build
 network: nois
 folder: '.noisd'
 daemon: noisd
-chain_id: nois-testnet-003
-node_version: '0.29.0-rc2'
-repo: https://github.com/noislabs/full-node
-genesis: 'https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-003/genesis.json'
+chain_id: nois-testnet-004
+node_version: 'v0.6.0'
+repo: https://github.com/noislabs/noisd
+genesis: 'https://raw.githubusercontent.com/noislabs/networks/nois-testnet-004.final.2/nois-testnet-004/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17356'
+peers: '1e88fcf30d0cb3f205320cc1890571ac0827f43f@51.195.89.114:20556,f8383eeefdb51aaf37f231aac6acf837d76afb97@45.63.104.164:26656,8aa378cf04c5eb13943c765c9b8f63b5f263b7e9@89.116.27.24:26956,bfbd43dbfbcda81b6d63f47e211f9d8eb323811c@65.109.39.50:26656'
 minimum_gas_price: '0.05unois'
 custom_port_prefix: 173
 
