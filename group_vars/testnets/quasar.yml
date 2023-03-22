@@ -13,3 +13,4 @@ custom_port_prefix: 182
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 30
+wasm: 'outside'

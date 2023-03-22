@@ -4,11 +4,11 @@ daemon: quasarnoded
 chain_id: quasar-1
 node_version: v0.1.0
 repo: https://github.com/quasar-finance/quasar-preview
-genesis:
-binary:
-peers: ''
+genesis: https://raw.githubusercontent.com/quasar-finance/networks/main/quasar-1/definitive-genesis.json
+peers: '298e0e1faf8a5da43514cc2908d2908658e732a0@38.146.3.148:18256,49b72b4c79d589955a5004797b45ee306da6a889@143.42.237.237:26656,631775a6e058b5dfca4c68dfb3afec5126301c1b@51.75.146.179:8090,b417b1e3125ad895a280999f0749bca3f871bfd2@65.21.193.117:8090,771659b9205187f9094f894c65d29effa79fdd2c@18.156.191.84:26656'
 custom_port_prefix: 182
 
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 30
+wasm: 'outside'

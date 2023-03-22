@@ -2,12 +2,13 @@ network: hypersign
 folder: '.hid-node'
 daemon: hid-noded
 chain_id: jagrat
-node_version: v0.1.3
+node_version: v0.1.7
 repo: https://github.com/hypersign-protocol/hid-node
 genesis: https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:10956'
 minimum_gas_price: '0.02uhid'
 custom_port_prefix: 109
+upgrade_folder: v017
 
 # [Optional] Snapshot
 snapshot_hour: 1
