@@ -1,0 +1,14 @@
+network: quasar
+folder: '.quasarnode'
+daemon: quasarnoded
+chain_id: quasar-1
+node_version: v0.1.0
+repo: https://github.com/quasar-finance/quasar-preview
+genesis:
+binary:
+peers: ''
+custom_port_prefix: 182
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30
