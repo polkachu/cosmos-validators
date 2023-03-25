@@ -1,0 +1,14 @@
+network: noble
+folder: '.noble'
+daemon: nobled
+chain_id: noble-1
+node_version: v1.0.0
+repo: https://github.com/strangelove-ventures/noble
+genesis: 'https://raw.githubusercontent.com/strangelove-ventures/noble-networks/main/mainnet/noble-1/genesis.json'
+peers: 'f0496ab244c4bc607948934fb261bf5ca124377d@34.168.216.136:26656,cca1c141e0bc7c4c0e8570e76278227547199f34@34.82.228.108:26656,bac93149f2d2f8cdebcae6f7ede003c6d55e9bc5@35.185.245.19:26656'
+custom_port_prefix: 215
+minimum_gas_price: '0.0uusdc'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 20
