@@ -2,14 +2,14 @@ network: juno
 folder: .juno
 daemon: junod
 chain_id: uni-6
-node_version: v13.0.1
+node_version: v14.0.0-alpha.1
 repo: https://github.com/CosmosContracts/juno
 genesis: https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni-6/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:12656'
 minimum_gas_price: '0.025ujunox'
 custom_port_prefix: 126
-upgrade_folder: v13
-skip_version: 'v0.34.24-mev.14'
+upgrade_folder: v14
+# skip_version: 'v0.34.24-mev.14'
 
 # [Optional] Snapshot
 snapshot_hour: 0
