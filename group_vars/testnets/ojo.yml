@@ -4,7 +4,7 @@ daemon: ojod
 chain_id: ojo-devnet
 node_version: v0.1.2
 repo: https://github.com/ojo-network/ojo
-genesis: 'https://rpc.devnet-n0.ojo-devnet.node.ojo.network/genesis'
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/ojo/genesis.json'
 peers: '239caa37cb0f131b01be8151631b649dc700cd97@95.217.200.36:46656,a23cc4cbb09108bc9af380083108262454539aeb@35.215.116.65:26656,72e177e03b393588de43f9ed326608f01630fc5a@116.203.245.212:26656'
 custom_port_prefix: 216
 minimum_gas_price: '0.000uojo'
