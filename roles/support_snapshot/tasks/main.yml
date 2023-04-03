@@ -1,14 +1,4 @@
 ---
-- name: Install jq and awscli
-  become: true
-  apt:
-    name:
-      - awscli
-      - jq
-    state: present
-    update_cache: yes
-  ignore_errors: true
-
 - name: Create directory
   file:
     path: '{{ user_dir }}/snapshot'

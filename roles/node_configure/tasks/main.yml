@@ -11,6 +11,13 @@
     line: 'external_address = "{{ public_ip.json.ip }}:{{ custom_port_prefix }}56"'
     state: present
 
+- name: Enforce tendermint namespace for consistency
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'namespace = "'
+    line: 'namespace = "tendermint"'
+    state: present
+
 - name: Adjust config.toml port
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
