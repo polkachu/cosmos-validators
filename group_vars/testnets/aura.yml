@@ -6,9 +6,10 @@ node_version: aura_v0.4.4
 repo: https://github.com/aura-nw/aura
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/aura/genesis.json'
 seeds: '705e3c2b2b554586976ed88bb27f68e4c4176a33@13.250.223.114:26656'
-minimum_gas_price: '0.0025uaura'
+minimum_gas_price: '0.0025euaura'
 custom_port_prefix: 217
 
 # [Optional] Snapshot
 snapshot_hour: 0
 snapshot_minute: 30
+wasm: 'outside'

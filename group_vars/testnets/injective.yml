@@ -1,0 +1,14 @@
+network: injective
+folder: '.injectived'
+daemon: injectived
+chain_id: injective-888
+genesis: https://snapshots.polkachu.com/testnet-genesis/injective/genesis.json
+app_file: https://raw.githubusercontent.com/InjectiveLabs/testnet/master/corfu/70001/app.toml
+config_file: https://raw.githubusercontent.com/InjectiveLabs/testnet/master/corfu/70001/config.toml
+minimum_gas_price: '500000000inj'
+custom_port_prefix: 143
+
+# [Optional] Snapshot
+snapshot_hour: 4
+snapshot_minute: 0
+wasm: 'outside'

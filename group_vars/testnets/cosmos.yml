@@ -2,9 +2,8 @@ network: cosmos
 folder: '.gaia'
 daemon: gaiad
 chain_id: provider
-node_version: NA
+node_version: v9.0.2-rc0
 repo: 'https://github.com/cosmos/gaia'
-binary: 'https://github.com/hyphacoop/ics-testnets/blob/main/game-of-chains-2022/provider/gaiad?raw=true'
-genesis: 'https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/game-of-chains-2022/provider/provider-genesis.json'
-seeds: '7a86ddc92f56e77a26c4fb4d543412f7175a7c9b@143.198.45.140:26656,8372500f2d1dfdcfbf9f0eccceb5e98d37f07b80@tenderseed.ccvalidators.com:29009'
+genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/provider/provider-genesis.json'
+seeds: '08ec17e86dac67b9da70deb20177655495a55407@provider-seed-01.rs-testnet.polypore.xyz:26656,4ea6e56300a2f37b90e58de5ee27d1c9065cf871@provider-seed-02.rs-testnet.polypore.xyz:26656'
 custom_port_prefix: 149

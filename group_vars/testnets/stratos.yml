@@ -1,0 +1,14 @@
+network: stratos
+folder: '.stchaind'
+daemon: stchaind
+chain_id: tropos-5
+node_version: v0.9.0
+repo: https://github.com/stratosnet/stratos-chain
+genesis: 'https://raw.githubusercontent.com/stratosnet/stratos-chain-testnet/main/tropos-5/genesis.json'
+config_file: 'https://raw.githubusercontent.com/stratosnet/stratos-chain-testnet/main/tropos-5/config.toml'
+seeds: 'c2f962cbeda7cf1be0db11996d0766a87181e044@3.20.42.221:26656,f672a826ac72eb8838542346606da8f8af34e402@3.114.5.73:26656,5a83a09a9f87da9791d9fba8b7bb9ba5c80f87c1@34.127.29.128:26656,6405a6e0d5e7ce6530942b876146611d28033af0@35.194.96.100:26656'
+custom_port_prefix: 218
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 45
