@@ -1,13 +1,12 @@
 network: chihuahua
 folder: '.chihuahuad'
 daemon: chihuahuad
-chain_id: chitestnet-5
-node_version: v4.2.0-rc1
+chain_id: chitestnet-6
+node_version: v4.2.1
 repo: https://github.com/ChihuahuaChain/chihuahua.git
-genesis: 'https://raw.githubusercontent.com/polkachu/validator-guide/main/testnet-genesis/chihuahua/chitestnet-5/genesis.json'
+genesis: 'https://raw.githubusercontent.com/polkachu/validator-guide/main/testnet-genesis/chihuahua/chitestnet-6/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:12956'
 custom_port_prefix: 129
-upgrade_folder: v420
 
 # [Optional] Snapshot
 snapshot_hour: 0

@@ -1,0 +1,15 @@
+network: composable
+folder: '.banksy'
+daemon: banksyd
+chain_id: banksy-testnet-1
+node_version: v2.2.0
+repo: 'https://github.com/notional-labs/composable-testnet'
+genesis: 'https://raw.githubusercontent.com/notional-labs/composable-testnet/main/networks/testnet-1/genesis.json'
+peers: '7a4b500c876d141e2ed702e28e5fd7bef8f706bb@135.125.180.36:21256'
+minimum_gas_price: '0ubanksy'
+custom_port_prefix: 222
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
+wasm: 'outside'
