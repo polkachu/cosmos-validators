@@ -13,3 +13,11 @@ upgrade_folder: 2.0.45beta
 snapshot_hour: 2
 snapshot_minute: 0
 wasm: 'outside'
+
+# price feeder
+price_feeder_address: 'sei1xm4gqdpyfqerm42w045mgdqfs5cqye576xeg6x'
+price_feeder_validator: 'seivaloper1qnn8rvtlfya3u4qvryqtjnc6gum4ltajvgyjam'
+price_feeder_backend: os
+price_feeder_network: testnet
+#price_feeder_repo: https://github.com/ojo-network/price-feeder
+#price_feeder_version: 'umee/v2.1.1'
