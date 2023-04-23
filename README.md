@@ -5,7 +5,7 @@
 1. Extendable to most Tendermint-based chains
 1. Support both mainnet and testnet
 1. Stable playbooks and roles; Customizable variables
-1. Support essential functions (snapshot, state-sync, public RPC/API endpoints and Cosmos Exporter) through separate playbooks
+1. Support essential functions (snapshot, state-sync, public RPC/API endpoints) through separate playbooks
 
 ## TL/DR
 
@@ -13,6 +13,7 @@ You run one playbook and set up a node.
 
 ```bash
 ansible-playbook main.yml -e "target=juno_main"
+ansible-playbook -i inventory_testnet.ini main.yml -e "target=juno_test"
 ```
 
 Because we try our best to support the latest node version, it is not recommended for you to sync from Block 1. Rather, please [state-sync](https://polkachu.com/state_sync) or start from a [snapshot](https://polkachu.com/tendermint_snapshots).
@@ -25,7 +26,7 @@ For every network where we run a validator on mainnet, we run 3 nodes (Validator
 
 We have 2 strong opinions about the node configuration:
 
-1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server (we do so for Backup Node and Relayer Node). For example, Juno's custom port prefix is 126 and that of Osmosis is 125. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code.
+1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server. For example, Juno's custom port prefix is 126 and that of Osmosis is 125. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code. The full list of our port prefixes is [here](https://github.com/polkachu/cosmos-port-prefixes). We recommend you follow this conversion.
 1. Each type of node will have its setting based on Polkachu's "best practice". For example, the main node (Validator) has null indexer, and 100/0/<prime number> pruning, and Relayer node has kv indexer and 40000/2000/<prime number> pruning. We will force these setting on you unless you fork the code.
 
 #### Host Variables
@@ -82,7 +83,7 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_public_endpoints.yml` | Set up Nginx reverse proxy for public PRC/ API                                                   |
 | `support_seed.yml`             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
 | `support_tenderduty.yml`       | Install Tenderduty                                                                               |
-| `system_update.yml`            | Update a server and restart if needed                                                            |
+| `support_price_feeder.yml`     | Install price feeders for selected networks (such Umee, Kujira, etc)                             |
 
 ### Selected playbook Usage Example
 
@@ -96,6 +97,19 @@ ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306
 
 ```bash
 ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalcons1qyw2x2sjp40cqasdfyuiahsdfknasdkneafs"
+```
+
+##### support_price_feeder
+
+```bash
+# When you just want to update price feed config
+ansible-playbook support_price_feeder.yml -e "target=kujira_main"
+
+# When you just want to update price feed config and service file
+ansible-playbook support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD"
+
+# When you just want to update price feed config and service file and binary
+ansible-playbook support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD price_feeder_binary=true"
 ```
 
 ## Supported Networks

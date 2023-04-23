@@ -1,0 +1,357 @@
+gas_adjustment = 1.03
+
+[server]
+listen_addr = "0.0.0.0:{{ price_feeder_port }}"
+read_timeout = "20s"
+verbose_cors = true
+write_timeout = "20s"
+
+[[deviation_thresholds]]
+base = "USDT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "UMEE"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "ATOM"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "USDC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "CRO"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "DAI"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "ETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WBTC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "BNB"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "JUNO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stATOM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stOSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "IST"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "AKT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "LUNA"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "WAXL"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "MATIC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "DOT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "stkATOM"
+threshold = "1.5"
+
+[[currency_pairs]]
+base = "UMEE"
+providers = [
+  "okx",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "UMEE"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "USDT"
+providers = [
+  "kraken",
+  "coinbase",
+  "binanceus",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = [
+  "okx",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = [
+  "kraken",
+  "binanceus",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "okx",
+  "bitget",
+  "kraken",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DAI"
+providers = [
+  "okx",
+  "bitget",
+  "huobi",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DAI"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ETH"
+providers = [
+  "okx",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ETH"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WBTC"
+providers = [
+  "okx",
+  "bitget",
+  "crypto",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "CRO"
+providers = [
+  "crypto",
+  "bitget",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "BNB"
+providers = [
+  "binanceus",
+  "bitget",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "stATOM"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "stOSMO"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "IST"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USDT"
+providers = [ "huobi", "gate",]
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USD"
+providers = [ "kraken", "crypto",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USDT"
+providers = [ "bitget", "mexc",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USD"
+providers = [ "kraken",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "OSMO"
+providers = [ "osmosisv2",]
+
+[[currency_pairs]]
+base = "LUNA"
+quote = "USDT"
+providers = [ "okx", "gate", "huobi", "bitget",]
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "huobi",
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "kraken",
+  "coinbase",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "gate",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "coinbase",
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "gate",
+  "mexc",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stkATOM"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[account]
+address = "{{ price_feeder_address }}"
+chain_id = "{{ chain_id }}"
+validator = "{{ price_feeder_validator }}"
+
+[keyring]
+backend = "{{ price_feeder_backend }}"
+dir = "{{ user_dir }}/{{ folder }}"
+
+[rpc]
+grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
+rpc_timeout = "1000ms"
+tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
+
+[telemetry]
+enable-hostname = true
+enable-hostname-label = true
+enable-service-label = true
+enabled = true
+global-labels = [["chain_id", "{{ chain_id }}"]]
+service-name = "price-feeder"
+prometheus-retention-time = 100
+
+[[provider_endpoints]]
+name = "binance"
+rest = "https://api1.binance.com"
+websocket = "stream.binance.com:9443"
+
+[[provider_endpoints]]
+name = "osmosisv2"
+rest = "https://api.osmo-api.prod.network.umee.cc"
+websocket = "api.osmo-api.prod.network.umee.cc"

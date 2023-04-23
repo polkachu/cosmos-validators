@@ -12,3 +12,12 @@ minimum_gas_price: '0.000uojo'
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 30
+
+# price feeder (update with your own)
+price_feeder_port: 7172
+price_feeder_address: 'ojo1xrrfek3qpz4ja8ccrjklfy064asyqq9k3jsupy'
+price_feeder_validator: 'ojovaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslepual9'
+price_feeder_backend: os
+price_feeder_network: testnet
+price_feeder_repo: https://github.com/ojo-network/price-feeder
+price_feeder_version: 'v0.1.1'

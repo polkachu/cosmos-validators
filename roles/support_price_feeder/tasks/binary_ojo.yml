@@ -1,0 +1,26 @@
+---
+- name: Clone price feeder repo
+  git:
+    repo: '{{ price_feeder_repo}}'
+    dest: '{{ user_dir }}/{{ network }}_price_feeder'
+    version: '{{ price_feeder_version }}'
+    update: yes
+    force: yes
+    recursive: no
+
+- name: Install price feeder
+  command: '{{ item }}'
+  args:
+    chdir: '{{ user_dir }}/{{ network }}_price_feeder'
+  with_items:
+    - 'make install'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '{{ user_dir }}/go'
+
+- name: Copy price feeder binary
+  copy:
+    remote_src: true
+    src: '{{ user_dir }}/go/bin/price-feeder'
+    dest: '{{ user_dir }}/go/bin/{{ network }}_price_feeder'
+    mode: '0755'

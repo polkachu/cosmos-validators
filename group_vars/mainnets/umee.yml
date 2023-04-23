@@ -13,3 +13,10 @@ upgrade_folder: v4.3
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
+
+# price feeder
+price_feeder_port: 7171
+price_feeder_address: 'umee196hy8ang40mv6scz9xh6frghwketdhhyzukyqk'
+price_feeder_validator: 'umeevaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phlh7lv'
+price_feeder_backend: test
+price_feeder_network: mainnet

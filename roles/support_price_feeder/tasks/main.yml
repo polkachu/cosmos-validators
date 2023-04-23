@@ -1,0 +1,33 @@
+---
+- name: Install price feeder binary when needed
+  include_tasks: 'binary_{{ network }}.yml'
+  when: price_feeder_binary is defined and price_feeder_binary|bool == true
+
+- name: Ensure that the price feeder config folder exists
+  file:
+    path: '{{ user_dir }}/.price_feeder'
+    state: directory
+
+- name: copy price feeder config file
+  template:
+    src: '{{ network }}/{{ price_feeder_network }}.toml.j2'
+    dest: '{{ user_dir }}/.price_feeder/{{ network }}.toml'
+    mode: '0644'
+
+- name: copy price feeder service file
+  become: true
+  template:
+    src: '{{ network }}/price_feeder.service.j2'
+    dest: '/etc/systemd/system/{{ network }}_pf.service'
+    owner: root
+    group: root
+    mode: '0644'
+  when: price_feeder_password is defined
+
+- name: start price feeder service
+  become: true
+  systemd:
+    name: '{{ network }}_pf'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

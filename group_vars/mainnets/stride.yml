@@ -2,12 +2,12 @@ network: stride
 folder: '.stride'
 daemon: strided
 chain_id: stride-1
-node_version: 'v8.0.0'
+node_version: 'v9.0.0'
 repo: https://github.com/Stride-Labs/stride
 genesis: 'https://raw.githubusercontent.com/Stride-Labs/testnet/infra-test/poolparty/infra/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12256'
 custom_port_prefix: 122
-upgrade_folder: v8
+upgrade_folder: v9
 
 # [Optional] Snapshot
 snapshot_hour: 8

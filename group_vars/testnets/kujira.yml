@@ -14,3 +14,12 @@ upgrade_folder: v0.8.5
 snapshot_hour: 7
 snapshot_minute: 30
 wasm: 'outside'
+
+# price feeder (update with your own)
+price_feeder_port: 7171
+price_feeder_address: 'kujira1jt9w26mpxxjsk63mvd4m2ynj0af09csljfu7ym'
+price_feeder_validator: 'kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3'
+price_feeder_backend: file
+price_feeder_network: testnet
+price_feeder_repo: https://github.com/Team-Kujira/oracle-price-feeder
+price_feeder_version: 'v0.2.0'

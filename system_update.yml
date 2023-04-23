@@ -1,5 +1,0 @@
----
-- hosts: '{{ target }}'
-  become: true
-  roles:
-    - system_update

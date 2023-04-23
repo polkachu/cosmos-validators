@@ -1,0 +1,191 @@
+gas_adjustment = 1.8
+
+gas_prices = "0.00125ukuji"
+enable_server = true
+enable_voter = true
+provider_timeout = "500ms"
+
+history_db = "/var/tmp/feeder.db"
+
+[server]
+listen_addr = "0.0.0.0:{{ price_feeder_port }}"
+read_timeout = "20s"
+verbose_cors = true
+write_timeout = "20s"
+
+[[deviation_thresholds]]
+base = "USDT"
+threshold = "2"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = ["binance", "bitget", "crypto", "huobi", "okx"]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = ["binanceus", "coinbase", "kraken", "osmosis"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "BNB"
+providers = ["binance", "bitget", "huobi", "okx"]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "BNB"
+providers = ["binanceus"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "BTC"
+providers = ["binance", "bitget", "huobi", "okx"]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "BTC"
+providers = ["binanceus", "coinbase", "crypto", "kraken"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "DOT"
+providers = ["binance", "bitget", "crypto", "huobi", "okx"]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DOT"
+providers = ["binanceus", "coinbase", "kraken", "osmosis"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ETH"
+providers = ["binance", "bitget", "huobi", "okx"]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ETH"
+providers = ["binanceus", "coinbase", "crypto", "kraken"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "LUNA"
+providers = ["binance", "bitget", "huobi", "okx"]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "LUNA"
+providers = ["kraken"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "OSMO"
+quote = "USD"
+providers = ["osmosis"]
+
+[[currency_pairs]]
+base = "OSMO"
+quote = "USDT"
+providers = ["binance", "bitget", "bkex", "gate", "kucoin", "mexc", "xt"]
+
+[[currency_pairs]]
+base = "PAXG"
+quote = "USDT"
+providers = ["binance", "bitget", "crypto", "mexc"]
+
+[[currency_pairs]]
+base = "PAXG"
+quote = "USD"
+providers = ["binanceus", "kraken"]
+
+[[currency_pairs]]
+base = "STATOM"
+quote = "USD"
+providers = ["osmosis"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "STOSMO"
+quote = "USD"
+providers = ["osmosis"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "USDT"
+providers = ["binanceus", "coinbase", "crypto", "kraken", "osmosis"]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WBTC"
+quote = "BTC"
+providers = ["binance", "binanceus", "coinbase", "huobi", "kraken"]
+
+[[currency_pairs]]
+base = "WBTC"
+quote = "USDT"
+providers = ["bitget", "okx"]
+
+[[currency_pairs]]
+base = "WBTC"
+quote = "USD"
+providers = ["crypto", "osmosis"]
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "USDT"
+providers = ["mexc"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "USK"
+quote = "USDC"
+providers = ["fin"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [ "bitget", "kraken", "huobi", "okx" ]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "USDC"
+quote = "USD"
+providers = ["osmosis", "crypto", "kraken"]
+
+[account]
+address = "{{ price_feeder_address }}"
+chain_id = "{{ chain_id }}"
+validator = "{{ price_feeder_validator }}"
+prefix = "kujira"
+fee_granter="{{ price_feeder_fee_granter }}"
+
+[keyring]
+backend = "{{ price_feeder_backend }}"
+dir = "{{ user_dir }}/{{ folder }}"
+
+[rpc]
+grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
+rpc_timeout = "100ms"
+tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
+
+[telemetry]
+enable_hostname = true
+enable_hostname_label = true
+enable_service_label = true
+enabled = true
+global_labels = [["chain_id", "{{ chain_id }}"]]
+service_name = "price-feeder"
+type = "prometheus"
+prometheus_retention = 120
+
+[[provider_endpoints]]
+name = "binance"
+rest = "https://api1.binance.com"
+websocket = "stream.binance.us:9443"
+
+[[provider_endpoints]]
+name = "fin"
+rest = "https://kaiyo-1.gigalixirapp.com"
