@@ -16,7 +16,6 @@ snapshot_minute: 30
 wasm: 'outside'
 
 # price feeder (update with your own)
-price_feeder_port: 7171
 price_feeder_address: 'kujira1xrrfek3qpz4ja8ccrjklfy064asyqq9kz65he9'
 price_feeder_validator: 'kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3'
 price_feeder_backend: file

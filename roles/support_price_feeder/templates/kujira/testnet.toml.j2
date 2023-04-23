@@ -8,7 +8,7 @@ provider_timeout = "500ms"
 history_db = "/var/tmp/feeder.db"
 
 [server]
-listen_addr = "0.0.0.0:{{ price_feeder_port }}"
+listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
 read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"

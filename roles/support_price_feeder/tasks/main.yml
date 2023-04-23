@@ -24,6 +24,13 @@
     mode: '0644'
   when: price_feeder_password is defined
 
+- name: Open price feeder port
+  become: true
+  ufw:
+    rule: allow
+    proto: tcp
+    port: '{{ custom_port_prefix }}71'
+
 - name: start price feeder service
   become: true
   systemd:

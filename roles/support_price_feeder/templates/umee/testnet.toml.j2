@@ -1,4 +1,4 @@
-gas_adjustment = 1
+gas_adjustment = 1.03
 
 [server]
 listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
@@ -62,6 +62,34 @@ threshold = "2"
 base = "IST"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "AKT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "LUNA"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "WAXL"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "MATIC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "DOT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "stkATOM"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "qATOM"
+threshold = "1.5"
+
 [[currency_pairs]]
 base = "UMEE"
 providers = [
@@ -91,7 +119,6 @@ base = "ATOM"
 providers = [
   "okx",
   "bitget",
-  "kraken",
 ]
 quote = "USDT"
 
@@ -196,8 +223,6 @@ quote = "USD"
 base = "stATOM"
 providers = [
   "osmosisv2",
-  "bitget",
-  "gate",
 ]
 quote = "ATOM"
 
@@ -205,8 +230,6 @@ quote = "ATOM"
 base = "stOSMO"
 providers = [
   "osmosisv2",
-  "bitget",
-  "gate",
 ]
 quote = "OSMO"
 
@@ -214,10 +237,102 @@ quote = "OSMO"
 base = "IST"
 providers = [
   "osmosisv2",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USDT"
+providers = [ "huobi", "gate",]
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USD"
+providers = [ "kraken", "crypto",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USDT"
+providers = [ "bitget", "mexc",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USD"
+providers = [ "kraken",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "OSMO"
+providers = [ "osmosisv2",]
+
+[[currency_pairs]]
+base = "LUNA"
+quote = "USDT"
+providers = [ "okx", "gate", "huobi", "bitget",]
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "huobi",
   "bitget",
   "gate",
 ]
-quote = "OSMO"
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "kraken",
+  "coinbase",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "gate",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "coinbase",
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "gate",
+  "mexc",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stkATOM"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "qATOM"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
 
 [account]
 address = "{{ price_feeder_address }}"
@@ -225,12 +340,12 @@ chain_id = "{{ chain_id }}"
 validator = "{{ price_feeder_validator }}"
 
 [keyring]
-backend = "os"
+backend = "{{ price_feeder_backend }}"
 dir = "{{ user_dir }}/{{ folder }}"
 
 [rpc]
 grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
-rpc_timeout = "100ms"
+rpc_timeout = "1000ms"
 tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
 
 [telemetry]

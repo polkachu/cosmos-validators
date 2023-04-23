@@ -13,3 +13,11 @@ upgrade_folder: v4.3-beta
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
+
+# price feeder
+price_feeder_address: 'umee1xrrfek3qpz4ja8ccrjklfy064asyqq9kpytssa'
+price_feeder_validator: 'umeevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09csl3nykuf'
+price_feeder_backend: test
+price_feeder_network: testnet
+price_feeder_repo: https://github.com/ojo-network/price-feeder
+price_feeder_version: 'umee/v2.1.1'
