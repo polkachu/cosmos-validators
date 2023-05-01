@@ -2,7 +2,7 @@ network: persistence
 folder: '.persistenceCore'
 daemon: persistenceCore
 chain_id: test-core-1
-node_version: v8.0.0-rc0
+node_version: v8.0.0-rc2
 repo: https://github.com/persistenceOne/persistenceCore
 genesis: 'https://raw.githubusercontent.com/persistenceOne/networks/master/test-core-1/final_genesis.json'
 peers: '1ec7628853408df8269ba4c93b82f2cda2274cdd@95.165.149.94:24656,02a0f68914c0d0d9e06d0453fce681dc405fa4b7@144.126.135.137:26556'
@@ -13,3 +13,11 @@ upgrade_folder: v8
 snapshot_hour: 1
 snapshot_minute: 30
 wasm: 'outside'
+
+# price feeder (update with your own)
+price_feeder_address: 'persistence1xrrfek3qpz4ja8ccrjklfy064asyqq9ka7su6t'
+price_feeder_validator: 'persistencevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09cslyfcgwv'
+price_feeder_backend: file
+price_feeder_network: testnet
+price_feeder_repo: https://github.com/persistenceOne/oracle-feeder
+price_feeder_version: 'v1.0.1-alpha'

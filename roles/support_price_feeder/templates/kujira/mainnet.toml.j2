@@ -99,15 +99,15 @@ providers = ["binanceus", "kraken"]
 
 [[currency_pairs]]
 base = "STATOM"
-quote = "USD"
-providers = ["osmosis"]
+quote = "ATOM"
+providers = ["osmosisv2"]
 derivative = "tvwap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "STOSMO"
-quote = "USD"
-providers = ["osmosis"]
+quote = "OSMO"
+providers = ["osmosisv2"]
 derivative = "tvwap"
 derivative_period = "30m"
 
@@ -188,4 +188,18 @@ websocket = "stream.binance.us:9443"
 
 [[provider_endpoints]]
 name = "fin"
-rest = "https://kaiyo-1.gigalixirapp.com"
+urls = ["https://kaiyo-1.gigalixirapp.com", "https://api-kujira.mintthemoon.xyz"]
+
+[[provider_endpoints]]
+name = "osmosisv2"
+urls = [
+  "https://osmosis-api.polkachu.com",
+  "https://rest.cosmos.directory/osmosis"
+]
+
+[[provider_endpoints]]
+name = "osmosis"
+urls = [
+  "https://api.osmosis.zone",
+  "https://api-osmosis.imperator.co",
+]

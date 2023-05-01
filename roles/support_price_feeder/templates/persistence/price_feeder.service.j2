@@ -1,11 +1,11 @@
 [Unit]
-Description={{ network }} Price Feeder
+Description={{ network }}Price Feeder
 After=network-online.target
 
 [Service]
 User={{ ansible_user }}
 Type=simple
-Environment="PRICE_FEEDER_PASS={{ price_feeder_password }}"
+Environment="ORACLE_FEEDER_KEY_PASSPHRASE={{ price_feeder_password }}"
 ExecStart={{ user_dir }}/go/bin/{{ network }}_price_feeder {{ user_dir }}/.price_feeder/{{ network }}.toml
 Restart=always
 StartLimitInterval=0

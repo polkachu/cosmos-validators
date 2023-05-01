@@ -1,0 +1,59 @@
+gas_adjustment = 1.5
+
+fees = "100uxprt"
+
+[server]
+listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
+read_timeout = "20s"
+verbose_cors = true
+write_timeout = "20s"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "ATOM"
+threshold = "1.5"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = [
+  "kraken",
+  "binance",
+  "coinbase",
+  "huobi",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "osmosis",
+  "kraken",
+  "binance"
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "kraken",
+  "osmosis",
+]
+quote = "USD"
+
+[account]
+address = "{{ price_feeder_address }}"
+chain_id = "{{ chain_id }}"
+validator = "{{ price_feeder_validator }}"
+
+[keyring]
+backend = "{{ price_feeder_backend }}"
+dir = "{{ user_dir }}/{{ folder }}"
+
+[rpc]
+grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
+rpc_timeout = "100ms"
+tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
