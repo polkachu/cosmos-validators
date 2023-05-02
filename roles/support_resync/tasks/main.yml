@@ -27,5 +27,5 @@
     name: '{{ network }} resync'
     hour: 12
     minute: 0
-    weekday: 0
+    weekday: 1
     job: '/bin/bash {{ user_dir }}/state_sync/resync/{{ network }}_resync.sh'
