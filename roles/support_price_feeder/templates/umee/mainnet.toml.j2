@@ -86,6 +86,14 @@ threshold = "1.5"
 base = "stkATOM"
 threshold = "1.5"
 
+[[deviation_thresholds]]
+base = "qATOM"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "CBETH"
+threshold = "1.5"
+
 [[currency_pairs]]
 base = "UMEE"
 providers = [
@@ -322,6 +330,18 @@ providers = [
   "osmosisv2",
 ]
 quote = "ATOM"
+
+[[currency_pairs]]
+base = "qATOM"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "CBETH"
+quote = "USD"
+providers = [ "coinbase",]
 
 [account]
 address = "{{ price_feeder_address }}"
