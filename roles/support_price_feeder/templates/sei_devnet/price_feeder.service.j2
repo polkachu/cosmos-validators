@@ -1,0 +1,14 @@
+[Unit]
+Description={{ network }} Price Feeder
+After=network-online.target
+
+[Service]
+User={{ ansible_user }}
+Environment="PRICE_FEEDER_PASS={{ price_feeder_password }}"
+Type=simple
+ExecStart={{ user_dir }}/go/bin/{{ network }}_price_feeder {{ user_dir }}/.price_feeder/{{ network }}.toml
+Restart=always
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

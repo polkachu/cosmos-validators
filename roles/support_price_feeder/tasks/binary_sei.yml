@@ -1,0 +1,17 @@
+---
+- name: Install price feeder
+  command: '{{ item }}'
+  args:
+    chdir: '{{ user_dir }}/{{ network }}'
+  with_items:
+    - 'make install-price-feeder'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '{{ user_dir }}/go'
+
+- name: Copy price feeder binary
+  copy:
+    remote_src: true
+    src: '{{ user_dir }}/go/bin/price-feeder'
+    dest: '{{ user_dir }}/go/bin/{{ network }}_price_feeder'
+    mode: '0755'

@@ -9,6 +9,10 @@ read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
 
+[[deviation_thresholds]]
+base = "USDT"
+threshold = "2"
+
 [[currency_pairs]]
 base = "ETH"
 chain_denom = "ueth"
@@ -51,7 +55,7 @@ quote = "USD"
 
 [[currency_pairs]]
 base = "USDT"
-chain_denom = "factory/sei1jdppe6fnj2q7hjsepty5crxtrryzhuqsjrj95y/uust2"
+chain_denom = "factory/sei1a27kj2j27c6uz58rn9zmhcjee9s3h3nhyhtvjj/uust2"
 providers = [
   "huobi",
   "kraken",
