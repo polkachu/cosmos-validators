@@ -2,8 +2,13 @@ network: neutron
 folder: '.neutrond'
 daemon: neutrond
 chain_id: pion-1
-node_version: v0.4.2
+node_version: v1.0.0-rc1
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/pion-1/pion-1-genesis.json'
 seeds: 'e2c07e8e6e808fb36cca0fc580e31216772841df@p2p-palvus.pion-1.ntrn.tech:26656'
 custom_port_prefix: 191
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
+wasm: 'outside'
