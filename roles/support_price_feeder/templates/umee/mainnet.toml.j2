@@ -227,6 +227,7 @@ quote = "USD"
 base = "stATOM"
 providers = [
   "osmosisv2",
+  "crescent",
 ]
 quote = "ATOM"
 
@@ -243,6 +244,20 @@ providers = [
   "osmosisv2",
 ]
 quote = "OSMO"
+
+[[currency_pairs]]
+base = "IST"
+providers = [
+  "crescent",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "kraken",
+]
+quote = "USD"
 
 [[currency_pairs]]
 base = "AKT"
@@ -328,6 +343,7 @@ quote = "USDT"
 base = "stkATOM"
 providers = [
   "osmosisv2",
+  "crescent",
 ]
 quote = "ATOM"
 
@@ -373,5 +389,5 @@ websocket = "stream.binance.com:9443"
 
 [[provider_endpoints]]
 name = "osmosisv2"
-rest = "https://api.osmo-api.prod.network.umee.cc"
-websocket = "api.osmo-api.prod.network.umee.cc"
+rest = "https://api.osmo-api.prod.ojo.network"
+websocket = "api.osmo-api.prod.ojo.network"

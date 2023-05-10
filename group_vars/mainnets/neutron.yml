@@ -1,0 +1,15 @@
+network: neutron
+folder: '.neutrond'
+daemon: neutrond
+chain_id: pion-1
+node_version: v1.0.1
+repo: 'https://github.com/neutron-org/neutron'
+genesis: 'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json'
+seeds: '24f609fb5946ca3a979f40b7f54132c00104433e@p2p-erheim.neutron-1.neutron.org:26656'
+minimum_gas_price: 0.01untrn
+custom_port_prefix: 191
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
+wasm: 'outside'
