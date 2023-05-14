@@ -1,0 +1,16 @@
+# Need revision
+network: gitopia
+folder: '.gitopia'
+daemon: gitopiad
+chain_id: gitopia
+node_version: v2.0.0
+repo: https://github.com/gitopia/gitopia
+genesis: https://github.com/gitopia/mainnet/raw/master/genesis.tar.gz
+genesis_processing: targz
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11356'
+minimum_gas_price: '0.001utlore'
+custom_port_prefix: 113
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
