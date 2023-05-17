@@ -2,13 +2,14 @@ network: noria
 folder: '.noria'
 daemon: noriad
 chain_id: 'oasis-3'
-node_version: 'v1.0.0'
+node_version: 'v1.2.0'
 repo: 'https://github.com/noria-net/noria.git'
 genesis: 'https://raw.githubusercontent.com/noria-net/noria/main/genesis.json'
 peers: 'c166422d24413f0661b006af29f7545890a9a1f0@54.173.208.94:26656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22156'
 minimum_gas_price: 0.0025unoria
 custom_port_prefix: 221
+upgrade_folder: v1.2.0
 
 # [Optional] Snapshot
 snapshot_hour: 1

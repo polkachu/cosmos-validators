@@ -2,11 +2,12 @@ network: fetch
 folder: '.fetchd'
 daemon: fetchd
 chain_id: fetchhub-4
-node_version: v0.10.6
+node_version: v0.10.7
 repo: https://github.com/fetchai/fetchd.git
 genesis: 'https://github.com/fetchai/genesis-fetchhub/blob/main/fetchhub-4/data/genesis_migrated_5300200.json?raw=true'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15256'
 custom_port_prefix: 152
+upgrade_folder: fetchd-v0.10.7
 
 # [Optional] Snapshot
 snapshot_hour: 6

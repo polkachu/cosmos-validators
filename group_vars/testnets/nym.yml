@@ -1,22 +1,16 @@
-# Custom build process "BECH32_PREFIX=nyxt make build"
+# Custom build process "BECH32_PREFIX=nymt make build"
+
 network: nym
 folder: '.nyxd'
 daemon: nyxd
 chain_id: sandbox
-node_version: 'd67918442d93d5bdaa12674342c894091401d84f'
+node_version: 'v0.26.1-sandbox'
 repo: https://github.com/nymtech/nyxd.git
-genesis: 'https://sandbox-validator1.nymtech.net/genesis'
-peers: '8421c0a3d90d490e27e8061f2abcb1276c8358b6@sandbox-validator1.nymtech.net:26656'
+genesis: 'https://sandbox-validator1.nymtech.net/snapshots/genesis.json'
+peers: '8421c0a3d90d490e27e8061f2abcb1276c8358b6@sandbox-validator1.nymtech.net:26666'
 custom_port_prefix: 153
-upgrade_folder: v0.30.2
 
 # [Optional] Snapshot
 snapshot_hour: 7
 snapshot_minute: 0
 wasm: 'outside'
-# d67918442d93d5bdaa12674342c894091401d84f
-# correct nyxd/v0.30.0-64-gd679184
-# nyxd/v0.30.0-66-g5d416d0
-# 5d416d006b6b6378beed452df3f1fb999376b5cf?
-
-# go build -mod=readonly -tags "netgo,ledger" -ldflags '-X github.com/cosmos/cosmos-sdk/version.Name=nyxd -X github.com/cosmos/cosmos-sdk/version.AppName=nyxd -X github.com/CosmWasm/wasmd/app.NodeDir=.nyxd -X github.com/cosmos/cosmos-sdk/version.Version=release/v0.30.2 -X github.com/cosmos/cosmos-sdk/version.Commit=d67918442d93d5bdaa12674342c894091401d84f -X github.com/CosmWasm/wasmd/app.Bech32Prefix=nymt -X "github.com/cosmos/cosmos-sdk/version.BuildTags=netgo,ledger"' -trimpath -o build/nyxd ./cmd/nyxd
