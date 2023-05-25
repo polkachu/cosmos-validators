@@ -1,0 +1,16 @@
+network: nolus
+folder: '.nolus'
+daemon: nolusd
+chain_id: pirin-1
+node_version: v0.3.0
+repo: https://github.com/nolus-protocol/nolus-core.git
+genesis: 'https://raw.githubusercontent.com/nolus-protocol/nolus-networks/main/mainnet/pirin-1/genesis.json?raw=true'
+seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:19756'
+minimum_gas_price: '0.0025unls'
+custom_port_prefix: 197
+upgrade_folder: v0.3.0
+
+# [Optional] Snapshot
+snapshot_hour: 12
+snapshot_minute: 0
+wasm: 'outside'
