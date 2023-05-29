@@ -305,6 +305,20 @@ base = "WBTC"
 quote = "USDT"
 providers = ["bitget", "bybit", "crypto", "gate", "hitbtc", "mexc", "phemex", "poloniex", "xt"]
 
+[[currency_pairs]]
+base = "MNTA"
+quote = "USDC"
+providers = ["fin"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WINK"
+quote = "USK"
+providers = ["fin"]
+derivative = "tvwap"
+derivative_period = "30m"
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
