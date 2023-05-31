@@ -2,7 +2,7 @@ network: crescent
 folder: '.crescent'
 daemon: crescentd
 chain_id: 'crescent-1'
-node_version: 'v4.1.0'
+node_version: 'v4.1.1'
 repo: 'https://github.com/crescent-network/crescent'
 genesis: 'https://github.com/crescent-network/launch/blob/main/mainnet/crescent-1/genesis.json.tar.gz?raw=true'
 genesis_processing: targz
@@ -10,6 +10,7 @@ minimum_gas_price: '0.01ucre,0.01ubcre'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14556'
 custom_port_prefix: 145
 upgrade_folder: v4
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 5

@@ -1,12 +1,23 @@
+# network: composable
+# folder: '.banksy'
+# daemon: banksyd
+# chain_id: banksy-testnet-2
+# node_version: v2.3.2
+# repo: 'https://github.com/notional-labs/composable-testnet'
+# genesis: 'https://raw.githubusercontent.com/notional-labs/composable-networks/main/testnet-2/genesis.json'
+# seeds: '872c8a78a17a24d6f44e1126c46ef52069c7bb18@65.109.80.150:2630,5c2a752c9b1952dbed075c56c600c3a79b58c395@composable-testnet-seed.autostake.com:26656,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:22256,3f472746f46493309650e5a033076689996c8881@composable-testnet.rpc.kjnodes.com:15959'
+# minimum_gas_price: '0upica'
+# custom_port_prefix: 222
+
 network: composable
 folder: '.banksy'
 daemon: banksyd
-chain_id: banksy-testnet-1
-node_version: v2.2.0
+chain_id: banksy-testnet-3
+node_version: v2.3.5
 repo: 'https://github.com/notional-labs/composable-testnet'
-genesis: 'https://raw.githubusercontent.com/notional-labs/composable-testnet/main/networks/testnet-1/genesis.json'
-peers: '7a4b500c876d141e2ed702e28e5fd7bef8f706bb@135.125.180.36:21256'
-minimum_gas_price: '0ubanksy'
+genesis: 'https://raw.githubusercontent.com/notional-labs/composable-networks/main/banksy-testnet-3/genesis.json'
+seeds: '364b8245e72f083b0aa3e0d59b832020b66e9e9d@65.109.80.150:21500'
+minimum_gas_price: '0upica'
 custom_port_prefix: 222
 
 # [Optional] Snapshot

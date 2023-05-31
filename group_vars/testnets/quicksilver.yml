@@ -1,13 +1,12 @@
 network: quicksilver
 folder: '.quicksilverd'
 daemon: quicksilverd
-chain_id: innuendo-5
-node_version: v1.4.0-rc10.2
+chain_id: rhye-1
+node_version: v1.4.2-rc7
 repo: https://github.com/ingenuity-build/quicksilver.git
-genesis: 'https://raw.githubusercontent.com/ingenuity-build/testnets/main/innuendo/genesis.json'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11156'
+genesis: 'https://raw.githubusercontent.com/ingenuity-build/testnets/main/rhye/genesis.json'
+peers: '8e14e58b054248a04be96e4a40d6359e93b636ac@65.108.65.94:26656,5a3c424c19d9ab694190a7805a2b1a146460d752@65.108.2.27:26656,e6bf55bc9f08958b7518bea455423375db78d1ef@65.108.13.176:26657'
 custom_port_prefix: 111
-upgrade_folder: v1.4.0-rc10
 
 # [Optional] Snapshot
 snapshot_hour: 5

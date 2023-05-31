@@ -281,7 +281,7 @@ providers = [ "kraken",]
 
 [[currency_pairs]]
 base = "JUNO"
-quote = "OSMO"
+quote = "ATOM"
 providers = [ "osmosisv2",]
 
 [[currency_pairs]]
@@ -342,7 +342,6 @@ quote = "USDT"
 [[currency_pairs]]
 base = "stkATOM"
 providers = [
-  "osmosisv2",
   "crescent",
 ]
 quote = "ATOM"
@@ -358,6 +357,7 @@ quote = "ATOM"
 base = "CBETH"
 quote = "USD"
 providers = [ "coinbase",]
+
 
 [account]
 address = "{{ price_feeder_address }}"

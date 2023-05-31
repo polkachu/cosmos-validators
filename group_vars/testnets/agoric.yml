@@ -1,11 +1,11 @@
 network: agoric
 folder: '.agoric'
 daemon: agd
-chain_id: 'agoric-emerynet-5'
-node_version: 'agoric-upgrade-6'
-repo: 'https://github.com/Agoric/ag0'
+chain_id: 'agoric-emerynet-7'
+node_version: 'pismoC'
+repo: 'https://github.com/Agoric/agoric-sdk'
 genesis: 'https://emerynet.rpc.agoric.net/genesis'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:14456'
+seeds: '0f04c4610b7511a64b8644944b907416db568590@34.171.162.87:26656'
 custom_port_prefix: 144
 
 # [Optional] Snapshot

@@ -2,14 +2,11 @@
 network: quasar
 folder: '.quasarnode'
 daemon: quasarnoded
-chain_id: qsr-questnet-04
-node_version: 0.0.2-alpha-11
+chain_id: quasar-test-1
+node_version: v0.1.0
 repo: https://github.com/quasar-finance/quasar-preview
-genesis: https://raw.githubusercontent.com/quasar-finance/questnet/main/v04/definitive-genesis.json
-binary: https://github.com/quasar-finance/binary-release/blob/main/v0.0.2-alpha-11/quasarnoded-linux-amd64?raw=true
-binary_processing: default
-peers: '8a19aa6e874ed5720aad2e7d02567ec932d92d22@141.94.248.63:26656,444b80ce750976df59b88ac2e08d720e1dbbf230@68.183.75.239:26666,20b4f9207cdc9d0310399f848f057621f7251846@222.106.187.13:40606,7ef67269c8ec37ff8a538a5ae83ca670fd2da686@137.184.192.123:26656,19afe579cc0a2b38ca87143f779f45e9a7f18a2f@18.134.191.148:26656,a23f002bda10cb90fa441a9f2435802b35164441@38.146.3.203:18256'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:18256'
+genesis: https://raw.githubusercontent.com/quasar-finance/networks/main/quasar-test-1/definitive-genesis.json
+peers: '265bc06fe615ee1851a11ca41c861bd0e501da56@34.175.185.244:26656'
 custom_port_prefix: 182
 
 # [Optional] Snapshot
