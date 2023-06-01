@@ -17,6 +17,18 @@ write_timeout = "20s"
 base = "USDT"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "KUJI"
+threshold = "2"
+
+[[provider_min_overrides]]
+denoms = ["STATOM", "STOSMO", "MNTA", "WINK", "USK"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["KUJI"]
+providers = 2
+
 [[currency_pairs]]
 base = "AKT"
 quote = "USD"
@@ -186,6 +198,20 @@ providers = ["binance", "bitget", "bkex", "crypto", "gate", "huobi", "kucoin", "
 base = "KUJI"
 quote = "USDT"
 providers = ["mexc"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "USD"
+providers = ["osmosis"]
+derivative = "tvwap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "USDC"
+providers = ["fin"]
 derivative = "tvwap"
 derivative_period = "30m"
 
