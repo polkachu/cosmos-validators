@@ -1,0 +1,15 @@
+network: irisnet
+folder: '.iris'
+daemon: iris
+chain_id: irishub-1
+node_version: v2.0.0
+repo: https://github.com/irisnet/irishub.git
+genesis: 'https://raw.githubusercontent.com/irisnet/mainnet/master/config/genesis.json?raw=true'
+seeds: '6a6de770deaa4b8c061dffd82e9c7f4d40c2165d@seed-1.mainnet.irisnet.org:26656,a17d7923293203c64ba75723db4d5f28e642f469@seed-2.mainnet.irisnet.org:26656'
+custom_port_prefix: 226
+upgrade_folder: v2.0.0
+
+# [Optional] Snapshot
+snapshot_hour: 12
+snapshot_minute: 0
+wasm: 'outside'

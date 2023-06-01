@@ -1,0 +1,16 @@
+network: regen
+folder: '.regen'
+daemon: regen
+chain_id: regen-1
+node_version: v5.1.0
+repo: https://github.com/regen-network/regen-ledger.git
+genesis: 'https://raw.githubusercontent.com/regen-network/mainnet/main/regen-1/genesis.json?raw=true'
+seeds: 'aebb8431609cb126a977592446f5de252d8b7fa1@104.236.201.138:26656,e1b058e5cfa2b836ddaa496b10911da62dcf182e@regen-seed-1.allnodes.me:26656'
+minimum_gas_price: '0.025uregen'
+custom_port_prefix: 227
+upgrade_folder: v5.1
+
+# [Optional] Snapshot
+snapshot_hour: 12
+snapshot_minute: 0
+wasm: 'outside'
