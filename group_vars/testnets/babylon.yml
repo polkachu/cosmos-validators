@@ -1,12 +1,13 @@
 network: babylon
 folder: '.babylond'
 daemon: babylond
-chain_id: bbn-test1
-node_version: v0.5.0
+chain_id: bbn-test-2
+node_version: v0.7.2
 repo: https://github.com/babylonchain/babylon.git
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/babylon/genesis.json'
-peers: '03ce5e1b5be3c9a81517d415f65378943996c864@18.207.168.204:26656,a5fabac19c732bf7d814cf22e7ffc23113dc9606@34.238.169.221:26656'
+peers: '8af526c37c4892745038d8016ec44056b1a70725@13.58.80.208:26656, 37896797924b1cb18bce9b9542ba3da915a85038@3.145.70.213:26656,8af526c37c4892745038d8016ec44056b1a70725@rpc1.testnet.babylonchain.io:26656'
 custom_port_prefix: 206
+minimum_gas_price: 0.00001ubbn
 
 # [Optional] Snapshot
 snapshot_hour: 0

@@ -1,7 +1,7 @@
 # Require special installation: https://github.com/Agoric/agoric-sdk/wiki/ag0-to-agd-upgrade-for-mainnet-1-launch
 network: agoric
 folder: '.agoric'
-daemon: ag0
+daemon: agd
 chain_id: 'agoric-3'
 node_version: 'agoric-upgrade-8'
 repo: 'https://github.com/Agoric/ag0'

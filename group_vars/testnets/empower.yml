@@ -2,7 +2,7 @@ network: empower
 folder: '.empowerchain'
 daemon: empowerd
 chain_id: circulus-1
-node_version: '1ff234c3069ffd9b32099b3b679eca895c3aae2e'
+node_version: 'v1.0.0-rc2'
 repo: 'https://github.com/empowerchain/empowerchain'
 genesis: 'https://raw.githubusercontent.com/EmpowerPlastic/empowerchain/main/testnets/circulus-1/genesis.json'
 seeds: 'd6a7cd9fa2bafc0087cb606de1d6d71216695c25@51.159.161.174:26656'

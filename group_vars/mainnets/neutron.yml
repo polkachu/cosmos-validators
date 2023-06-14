@@ -1,7 +1,7 @@
 network: neutron
 folder: '.neutrond'
 daemon: neutrond
-chain_id: pion-1
+chain_id: neutron-1
 node_version: v1.0.2
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json'

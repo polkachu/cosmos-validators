@@ -2,7 +2,7 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9001-2
-node_version: v12.1.4
+node_version: v12.1.5
 repo: https://github.com/tharsis/evmos
 genesis: 'https://github.com/tharsis/mainnet/blob/main/evmos_9001-2/genesis.json.zip?raw=true'
 genesis_processing: zip
@@ -12,7 +12,6 @@ minimum_gas_price: '250000000aevmos'
 custom_port_prefix: 134
 upgrade_folder: v12.1.0
 update_website_immediately: true
-# skip_version: v0.34.26-mev.16
 
 # [Optional] Snapshot
 snapshot_hour: 1

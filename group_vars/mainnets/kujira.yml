@@ -2,7 +2,7 @@ network: kujira
 folder: .kujira
 daemon: kujirad
 chain_id: kaiyo-1
-node_version: v0.8.6
+node_version: v0.8.7
 repo: 'https://github.com/Team-Kujira/core'
 genesis: 'https://raw.githubusercontent.com/Team-Kujira/networks/master/mainnet/kaiyo-1.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11856'

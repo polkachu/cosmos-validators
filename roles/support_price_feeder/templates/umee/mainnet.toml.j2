@@ -35,8 +35,8 @@ base = "ETH"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "WBTC"
-threshold = "1.5"
+base = "BTC"
+threshold = "2"
 
 [[deviation_thresholds]]
 base = "BNB"
@@ -114,7 +114,7 @@ base = "USDT"
 providers = [
   "kraken",
   "coinbase",
-  "binanceus",
+  "crypto",
 ]
 quote = "USD"
 
@@ -130,7 +130,7 @@ quote = "USDT"
 base = "ATOM"
 providers = [
   "kraken",
-  "binanceus",
+  "crypto",
 ]
 quote = "USD"
 
@@ -195,7 +195,7 @@ quote = "USDT"
 [[currency_pairs]]
 base = "BNB"
 providers = [
-  "binanceus",
+  "mexc",
   "bitget",
   "okx",
 ]
@@ -357,7 +357,6 @@ quote = "ATOM"
 base = "CBETH"
 quote = "USD"
 providers = [ "coinbase",]
-
 
 [account]
 address = "{{ price_feeder_address }}"

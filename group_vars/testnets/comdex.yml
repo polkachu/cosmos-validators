@@ -1,15 +1,15 @@
 network: comdex
 folder: '.comdex'
 daemon: comdex
-chain_id: comdex-test2
-node_version: v11.0.0
+chain_id: comdex-test3
+node_version: v11.4.0
 repo: https://github.com/comdex-official/comdex.git
-genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/testnet-2/genesis.json'
-peers: 'e801945d20c9cf736d4ff096f7e74a435548f3d0@peer-test2-in.comdex.one:26656,86ca6b17f5d3fee15309e1c1aecc8ba716008c95@peer-test2-nv.comdex.one:26656,6d9de52e9f413bb9affda12b333deda302d4568a@peer-test2-oh.comdex.one:26656'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13156'
+genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/testnet-3/genesis.json'
+peers: '7559a101ded1a65bc907bd106340c40811d8dae8@95.165.149.94:28656'
 minimum_gas_price: '0.025ucmdx'
 custom_port_prefix: 131
-upgrade_folder: v11.0.0
+upgrade_folder: v11.4.0
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 2

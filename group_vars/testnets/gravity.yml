@@ -1,0 +1,13 @@
+network: gravity
+folder: '.gravity'
+daemon: gravity
+chain_id: gravitygaze-3
+node_version: '?'
+repo: 'https://github.com/EmpowerPlastic/Gravity-Bridge'
+genesis: 'https://raw.githubusercontent.com/EmpowerPlastic/Gravity-Bridge/game-of-nfts-stargaze/gravitygaze-3/genesis.json'
+peers: '478286f225a7ddfe70b663ad016007f2a66dfddd@51.159.152.113:26656'
+custom_port_prefix: 142
+
+# [Optional] Snapshot
+snapshot_hour: 4
+snapshot_minute: 0
