@@ -10,6 +10,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13756'
 custom_port_prefix: 137
 upgrade_folder: v10
 update_website_immediately: false
+gas_params: '--gas auto --gas-adjustment 1.5 --gas-prices 1ustars'
 
 # [Optional] Snapshot
 snapshot_hour: 2
