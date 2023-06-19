@@ -2,12 +2,13 @@ network: stride
 folder: '.stride'
 daemon: strided
 chain_id: 'stride-testnet-1'
-node_version: 'v9.0.1-testnet'
+node_version: 'v10.0.0-testnet'
 repo: https://github.com/Stride-Labs/stride.git
 genesis: https://raw.githubusercontent.com/Stride-Labs/mainnet/main/testnet/genesis.json
 peers: '42340aa645a1d71470b48336e8c306b9de77879d@stride-validator-direct.testnet-1.stridenet.co:26656'
 custom_port_prefix: 122
-upgrade_folder: v9
+upgrade_folder: v10
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 8

@@ -84,6 +84,7 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_seed.yml`             | Install seed node with Tenderseed. You need a node_key.json.j2 file so the node_id is consistent |
 | `support_tenderduty.yml`       | Install Tenderduty                                                                               |
 | `support_price_feeder.yml`     | Install price feeders for selected networks (such Umee, Kujira, etc)                             |
+| `support_scripts.yml`          | Install scripts to make node operations easier                                                   |
 
 ### Selected playbook Usage Example
 
@@ -110,6 +111,21 @@ ansible-playbook support_price_feeder.yml -e "target=kujira_main price_feeder_pa
 
 # When you just want to update price feed config and service file and binary
 ansible-playbook support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD price_feeder_binary=true"
+```
+
+##### support_scripts
+
+```bash
+ansible-playbook support_scripts.yml -e "target=juno_main"
+```
+
+Currently, we have 4 supported scripts. Their usage is documented below using Juno as example:
+
+```bash
+./scripts/bank_balances/juno.sh
+./scripts/bank_send/juno.sh ADDRESS 1000000ujuno
+./scripts/distribution_withdrawal/juno.sh
+./scripts/gov_vote/juno.sh 1 yes
 ```
 
 ## Supported Networks

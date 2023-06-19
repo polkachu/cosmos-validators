@@ -1,0 +1,12 @@
+#!/bin/bash
+{% if gas_params is defined %}
+{% set tx_flags = gas_params %}
+{% else %}
+{% set tx_flags = '' %}
+{% endif %}
+
+# Constants
+KEY="{{ polkachu_key }}"
+PASSPHRASE="{{ polkachu_secret }}"
+
+echo ${PASSPHRASE} | {{ daemon }} tx bank send $KEY $1 $2  -b block {{ tx_flags }} --yes

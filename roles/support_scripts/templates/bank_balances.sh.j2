@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Constants
+KEY="{{ polkachu_key }}"
+PASSPHRASE="{{ polkachu_secret }}"
+
+KEY_STATUS=$(echo ${PASSPHRASE} | {{ daemon }} keys show ${KEY} --output json)
+ACCOUNT_ADDRESS=$(echo ${KEY_STATUS} | jq -r ".address")
+
+{{ daemon }} q bank balances ${ACCOUNT_ADDRESS}

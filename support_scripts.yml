@@ -1,0 +1,8 @@
+---
+- name: Install some useful script
+  hosts: '{{ target }}'
+  gather_facts: false
+  vars_files:
+    - '{{ var_file }}'
+  roles:
+    - support_scripts

@@ -1,0 +1,18 @@
+network: router
+folder: '.routerd'
+daemon: routerd
+chain_id: 'router_9601-1'
+node_version: 'v1.0.0-rc1'
+repo: https://github.com/router-protocol/router-chain-releases
+binary: https://github.com/router-protocol/router-chain-releases/blob/main/linux/routerd.tar
+binary_processing: targz
+genesis: https://tm.rpc.testnet.routerchain.dev/genesis
+peers: '36eb478177e691b3389cdc60ed618c57f2a4acd7@13.127.150.80:26656,16bc9a252c2cb82c6aefdc82826f7d7021114f0a@13.127.165.58:26656,074d7d3c5d142cbec150093086055d73be0080cf@35.178.32.171:26656'
+seeds: '36eb478177e691b3389cdc60ed618c57f2a4acd7@13.127.150.80:26656,16bc9a252c2cb82c6aefdc82826f7d7021114f0a@13.127.165.58:26656,074d7d3c5d142cbec150093086055d73be0080cf@35.178.32.171:26656'
+custom_port_prefix: 237
+#upgrade_folder: v10
+#update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 30

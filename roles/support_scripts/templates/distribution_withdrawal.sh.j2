@@ -1,0 +1,17 @@
+#!/bin/bash
+{% if gas_params is defined %}
+{% set tx_flags = gas_params %}
+{% else %}
+{% set tx_flags = '' %}
+{% endif %}
+
+# Constants
+KEY="{{ polkachu_key }}"
+PASSPHRASE="{{ polkachu_secret }}"
+
+# Get validator
+VALIDATOR_STATUS=$(echo ${PASSPHRASE} | {{ daemon }} keys show ${KEY} --bech val --output json)
+VALIDATOR=$(echo ${VALIDATOR_STATUS} | jq -r ".address")
+
+# Withdraw rewards
+echo ${PASSPHRASE} | {{ daemon }} tx distribution withdraw-rewards ${VALIDATOR} --commission --yes --from ${KEY} {{ tx_flags }}

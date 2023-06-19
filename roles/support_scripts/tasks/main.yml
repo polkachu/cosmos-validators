@@ -1,0 +1,56 @@
+---
+- name: Create gov_vote directory
+  file:
+    path: '{{ user_dir }}/scripts/gov_vote'
+    state: directory
+    mode: '0755'
+
+- name: Copy gov vote script
+  template:
+    src: 'gov_vote.sh.j2'
+    dest: '{{ user_dir }}/scripts/gov_vote/{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'
+
+- name: Create distribution_withdraw directory
+  file:
+    path: '{{ user_dir }}/scripts/distribution_withdrawal'
+    state: directory
+    mode: '0755'
+
+- name: Copy distribution withdrawal script
+  template:
+    src: 'distribution_withdrawal.sh.j2'
+    dest: '{{ user_dir }}/scripts/distribution_withdrawal/{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'
+
+- name: Create bank_balances directory
+  file:
+    path: '{{ user_dir }}/scripts/bank_balances'
+    state: directory
+    mode: '0755'
+
+- name: Copy bank_balances script
+  template:
+    src: 'bank_balances.sh.j2'
+    dest: '{{ user_dir }}/scripts/bank_balances/{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'
+
+- name: Create bank_send directory
+  file:
+    path: '{{ user_dir }}/scripts/bank_send'
+    state: directory
+    mode: '0755'
+
+- name: Copy bank_send script
+  template:
+    src: 'bank_send.sh.j2'
+    dest: '{{ user_dir }}/scripts/bank_send/{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'

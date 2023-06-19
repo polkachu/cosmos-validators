@@ -1,0 +1,29 @@
+---
+- name: set dns_prefix for skip
+  set_fact:
+    dns_prefix: '{{ chain_id }}-skip'
+
+- name: check if .htpasswd file already exists
+  stat:
+    path: /etc/nginx/.htpasswd
+  register: htpasswd_file
+
+- name: install apache2-utils
+  become: true
+  apt:
+    name: apache2-utils
+    state: present
+    update_cache: yes
+  when: not htpasswd_file.stat.exists
+
+- name: generate .htpasswd file
+  become: true
+  shell: |
+    set -o pipefail
+    htpasswd -bc /etc/nginx/.htpasswd {{ skip_user }} {{ skip_password }}
+    chmod 600 /etc/nginx/.htpasswd
+    chown www-data:www-data /etc/nginx/.htpasswd
+  args:
+    executable: /bin/bash
+  changed_when: false
+  when: not htpasswd_file.stat.exists

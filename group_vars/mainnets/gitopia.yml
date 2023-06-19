@@ -11,6 +11,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11356'
 minimum_gas_price: '0.001ulore'
 custom_port_prefix: 113
 update_website_immediately: true
+gas_params: '--fees 200ulore'
 
 # [Optional] Snapshot
 snapshot_hour: 2
