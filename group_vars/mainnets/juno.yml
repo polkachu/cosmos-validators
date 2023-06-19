@@ -10,6 +10,7 @@ minimum_gas_price: '0ujuno'
 custom_port_prefix: 126
 upgrade_folder: v15
 update_website_immediately: false
+gas_params: '--gas-prices 0.025ujuno --gas-adjustment 1.8 --gas 250000'
 
 # [Optional] Snapshot
 snapshot_hour: 0
