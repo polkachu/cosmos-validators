@@ -345,6 +345,26 @@ providers = ["fin"]
 derivative = "tvwap"
 derivative_period = "30m"
 
+[[currency_pairs]]
+base = "LINK"
+quote = "USD"
+providers = ["coinbase", "crypto", "kraken"]
+
+[[currency_pairs]]
+base = "LINK"
+quote = "USDT"
+providers = ["binance", "bitget", "gate", "huobi", "lbank", "okx", "phemex", "xt"]
+
+[[currency_pairs]]
+base = "UNI"
+quote = "USD"
+providers = ["coinbase", "crypto", "kraken"]
+
+[[currency_pairs]]
+base = "UNI"
+quote = "USDT"
+providers = ["binance", "bitget", "gate", "huobi", "lbank", "okx", "phemex", "poloniex", "xt"]
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
