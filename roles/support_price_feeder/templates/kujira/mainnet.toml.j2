@@ -392,13 +392,11 @@ type = "prometheus"
 prometheus_retention = 120
 
 [[provider_endpoints]]
-name = "binance"
-rest = "https://api1.binance.com"
-websocket = "stream.binance.us:9443"
-
-[[provider_endpoints]]
 name = "fin"
-urls = ["https://kaiyo-1.gigalixirapp.com", "https://api-kujira.mintthemoon.xyz"]
+urls = [
+  "https://kaiyo-1.gigalixirapp.com",
+  "https://api.kujira.app"
+]
 
 [[provider_endpoints]]
 name = "osmosisv2"
