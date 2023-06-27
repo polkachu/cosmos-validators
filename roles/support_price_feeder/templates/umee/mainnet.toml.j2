@@ -7,6 +7,14 @@ verbose_cors = true
 write_timeout = "20s"
 
 [[deviation_thresholds]]
+base = "MARS"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "CMST"
+threshold = "1.5"
+
+[[deviation_thresholds]]
 base = "USDT"
 threshold = "1.5"
 
@@ -93,6 +101,10 @@ threshold = "1.5"
 [[deviation_thresholds]]
 base = "CBETH"
 threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "stJUNO"
+threshold = "2"
 
 [[currency_pairs]]
 base = "UMEE"
@@ -358,6 +370,27 @@ base = "CBETH"
 quote = "USD"
 providers = [ "coinbase",]
 
+[[currency_pairs]]
+base = "CMST"
+providers = [
+  "crescent",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "MARS"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "stJUNO"
+providers = [
+  "osmosisv2",
+]
+quote = "JUNO"
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
@@ -388,5 +421,10 @@ websocket = "stream.binance.com:9443"
 
 [[provider_endpoints]]
 name = "osmosisv2"
-rest = "https://api.osmo-api.prod.network.umee.cc"
-websocket = "api.osmo-api.prod.network.umee.cc"
+rest = "https://api.osmo-api.prod.ojo.network"
+websocket = "api.osmo-api.prod.ojo.network"
+
+[[provider_endpoints]]
+name = "crescent"
+rest = "https://api.cresc-api.prod.ojo.network"
+websocket = "api.cresc-api.prod.ojo.network"

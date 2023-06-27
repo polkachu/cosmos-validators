@@ -1,0 +1,13 @@
+network: stride
+folder: '.stride'
+daemon: strided
+chain_id: 'stride-ics-testnet-two-1'
+node_version: 'v10.0.0'
+repo: https://github.com/Stride-Labs/stride.git
+genesis: https://raw.githubusercontent.com/Stride-Labs/mainnet/ics-testnet/ics-testnet/genesis.json
+peers: 'd747545dbab1eb86caff7ec64fca3b7f2ace07fd@stride-direct.testnet-2.stridenet.co:26656'
+custom_port_prefix: 122
+
+# [Optional] Snapshot
+snapshot_hour: 8
+snapshot_minute: 30
