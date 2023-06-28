@@ -1,13 +1,61 @@
 ---
-- name: placeholder
-  debug:
-    msg: 'hello world'
-# wget -O aura_1530150.tar.lz4 https://snapshots.polkachu.com/snapshots/aura/aura_1530150.tar.lz4 --inet4-only
+- name: Stop node process
+  become: true
+  systemd:
+    name: '{{ network }}'
+    state: stopped
+    enabled: false
+  ignore_errors: true
 
-# sudo service aura stop
+- name: Remove project git folder
+  file:
+    path: '{{ user_dir }}/{{ network }}'
+    state: absent
 
-# aurad tendermint unsafe-reset-all --home $HOME/.aura --keep-addr-book
+- name: Remove node data folder
+  file:
+    path: '{{ user_dir }}/{{ folder }}'
+    state: absent
 
-# lz4 -c -d aura_1530150.tar.lz4  | tar -x -C $HOME/.aura
+- name: remove systemd file
+  become: true
+  file:
+    path: '/etc/systemd/system/{{ network }}.service'
+    state: absent
 
-# sudo service aura start
+- name: remove binary from go bin
+  file:
+    path: '{{ user_dir }}/{{ daemon }}'
+    state: absent
+
+- name: remove genesis file, snapshot file, state sync file and resync files
+  file:
+    path: '{{ item }}'
+    state: absent
+  loop:
+    - '{{ user_dir }}/snapshot/{{ network }}.sh'
+    - '{{ user_dir }}/genesis/{{ network }}.sh'
+    - '{{ user_dir }}/state_sync/{{ network }}.sh'
+    - '{{ user_dir }}/state_sync/resync/{{ network }}_recover.sh'
+    - '{{ user_dir }}/state_sync/resync/{{ network }}_resync.sh'
+
+- name: remove nginx files
+  become: true
+  file:
+    path: '{{ item }}'
+    state: absent
+  loop:
+    - '/etc/nginx/sites-enabled/{{ network }}-api'
+    - '/etc/nginx/sites-enabled/{{ network }}-rpc'
+
+- name: remove snapshot cronjob
+  cron:
+    user: '{{ ansible_user }}'
+    name: '{{ network }} snapshot'
+    state: absent
+
+- name: remove resync cronjob
+  cron:
+    user: '{{ ansible_user }}'
+    name: '{{ network }} resync'
+    state: absent
