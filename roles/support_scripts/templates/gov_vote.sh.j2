@@ -9,4 +9,4 @@
 KEY="{{ polkachu_key }}"
 PASSPHRASE="{{ polkachu_secret }}"
 
-echo ${PASSPHRASE} | {{ daemon }} tx gov vote $1 $2 --from $KEY -b block {{ tx_flags }} --yes
+echo ${PASSPHRASE} | {{ daemon }} tx gov vote $1 $2 --from $KEY -b sync {{ tx_flags }} --yes
