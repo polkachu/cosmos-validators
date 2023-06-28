@@ -1,0 +1,13 @@
+---
+- name: placeholder
+  debug:
+    msg: 'hello world'
+# wget -O aura_1530150.tar.lz4 https://snapshots.polkachu.com/snapshots/aura/aura_1530150.tar.lz4 --inet4-only
+
+# sudo service aura stop
+
+# aurad tendermint unsafe-reset-all --home $HOME/.aura --keep-addr-book
+
+# lz4 -c -d aura_1530150.tar.lz4  | tar -x -C $HOME/.aura
+
+# sudo service aura start

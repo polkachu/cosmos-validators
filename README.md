@@ -85,6 +85,8 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_tenderduty.yml`       | Install Tenderduty                                                                               |
 | `support_price_feeder.yml`     | Install price feeders for selected networks (such Umee, Kujira, etc)                             |
 | `support_scripts.yml`          | Install scripts to make node operations easier                                                   |
+| `support_sync_snapshot.yml`    | Sync node from a snapshot                                                                        |
+| `support_remove_node.yml`      | Remove a node and clean up                                                                       |
 
 ### Selected playbook Usage Example
 

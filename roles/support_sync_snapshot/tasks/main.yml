@@ -1,0 +1,56 @@
+---
+- name: Stop node process
+  become: true
+  systemd:
+    name: '{{ network }}'
+    state: stopped
+    daemon_reload: yes
+    enabled: yes
+
+- name: Move priv_validator_state.json to a safe location
+  command: 'mv {{ user_dir }}/{{ folder }}/data/priv_validator_state.json {{ user_dir }}/{{ folder }}'
+
+- name: Get the latest snapshot url
+  uri:
+    url: '{{ snapshot_base_url }}/{{ network }}/snapshot'
+    headers:
+      x-polkachu: '{{ snapshot_secret }}'
+  register: snapshot
+
+- name: Download snapshot to home folder
+  get_url:
+    url: '{{ snapshot.json.snapshot.url }}'
+    dest: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
+    mode: '0644'
+
+- name: Unsafe reset
+  shell: '{{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home $HOME/{{ folder }} --keep-addr-book'
+
+- name: Extract snapshot
+  shell: 'lz4 -c -d $HOME/{{ snapshot.json.snapshot.name }} | tar -x -C $HOME/{{ folder }}'
+
+- name: Move priv_validator_state.json back
+  command: 'mv {{ user_dir }}/{{ folder }}/priv_validator_state.json {{ user_dir }}/{{ folder }}/data/'
+
+- name: Delete the downloaded snapshot file
+  file:
+    path: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
+    state: absent
+
+- name: start node process
+  become: true
+  systemd:
+    name: '{{ network }}'
+    state: started
+    daemon_reload: yes
+    enabled: yes
+
+- name: Pause for 5 seconds
+  pause:
+    seconds: 5
+
+- name: Ensure it is running
+  uri:
+    url: 'http://localhost:{{ custom_port_prefix }}61'
+    method: GET
+    status_code: 200
