@@ -1,0 +1,15 @@
+network: aura
+folder: '.aura'
+daemon: aurad
+chain_id: xstaxy-1
+node_version: aura_v0.4.5
+repo: https://github.com/aura-nw/aura
+genesis: 'https://raw.githubusercontent.com/aura-nw/mainnet-artifacts/main/xstaxy-1/genesis.json'
+seeds: '22a0ca5f64187bb477be1d82166b1e9e184afe50@18.143.52.13:26656,ebc272824924ea1a27ea3183dd0b9ba713494f83@auranetwork-mainnet-seed.autostake.com:26966,0b8bd8c1b956b441f036e71df3a4d96e85f843b8@13.250.159.219:26656,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@aura.rpc.kjnodes.com:11759,dc92560346a63ac23e117a8b16207c6adbb57f5e@seeds.whispernode.com:21756,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:21756'
+minimum_gas_price: '0.0025euaura'
+custom_port_prefix: 217
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30
+wasm: 'outside'
