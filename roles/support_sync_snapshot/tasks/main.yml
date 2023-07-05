@@ -1,4 +1,27 @@
 ---
+- name: Get the latest snapshot url
+  set_fact:
+    url_fragment: "{% if network_type == 'mainnet' %}snapshot\
+      {% else %}testnet_snapshot\
+      {% endif %}"
+
+- name: Get the latest snapshot url
+  uri:
+    url: '{{ snapshot_base_url }}/{{ network }}/{{ url_fragment }}'
+    headers:
+      x-polkachu: '{{ snapshot_secret }}'
+  register: snapshot
+
+- name: Print snapshot_url
+  debug:
+    msg: 'Downloading {{ network }} snapshot {{ snapshot.json.snapshot.url  }}'
+
+- name: Download snapshot to home folder
+  get_url:
+    url: '{{ snapshot.json.snapshot.url }}'
+    dest: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
+    mode: '0644'
+
 - name: Stop node process
   become: true
   systemd:
@@ -10,19 +33,6 @@
 - name: Move priv_validator_state.json to a safe location
   command: 'mv {{ user_dir }}/{{ folder }}/data/priv_validator_state.json {{ user_dir }}/{{ folder }}'
 
-- name: Get the latest snapshot url
-  uri:
-    url: '{{ snapshot_base_url }}/{{ network }}/snapshot'
-    headers:
-      x-polkachu: '{{ snapshot_secret }}'
-  register: snapshot
-
-- name: Download snapshot to home folder
-  get_url:
-    url: '{{ snapshot.json.snapshot.url }}'
-    dest: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
-    mode: '0644'
-
 - name: Unsafe reset
   shell: '{{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home $HOME/{{ folder }} --keep-addr-book'
 
@@ -32,10 +42,9 @@
 - name: Move priv_validator_state.json back
   command: 'mv {{ user_dir }}/{{ folder }}/priv_validator_state.json {{ user_dir }}/{{ folder }}/data/'
 
-- name: Delete the downloaded snapshot file
-  file:
-    path: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
-    state: absent
+- name: Pause for 5 seconds
+  pause:
+    seconds: 5
 
 - name: start node process
   become: true
@@ -45,9 +54,14 @@
     daemon_reload: yes
     enabled: yes
 
-- name: Pause for 5 seconds
+- name: Pause for 10 seconds
   pause:
-    seconds: 5
+    seconds: 10
+
+- name: Delete the downloaded snapshot file
+  file:
+    path: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
+    state: absent
 
 - name: Ensure it is running
   uri:

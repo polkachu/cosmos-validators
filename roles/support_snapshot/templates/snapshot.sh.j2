@@ -28,7 +28,7 @@ sudo service {{ network }} stop
 
 # Compress the folder
 FILENAME=$(echo {{ network }}_${BLOCK_HEIGHT}.tar.lz4)
-WASM_FILENAME='wasmonly.tar.lz4'
+WASM_FILENAME='{{ network }}_wasmonly.tar.lz4'
 cd {{ user_dir }}/{{ folder }}
 
 {% if wasm is defined and wasm == "outside" %}

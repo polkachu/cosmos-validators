@@ -6,10 +6,11 @@ chain_id: athens_7001-1
 node_version: v3.0.0
 repo: 'https://github.com/zeta-chain/network-athens3'
 binary: 'https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu-22-amd64'
+binary_processing: default
 config_file: 'https://raw.githubusercontent.com/zeta-chain/network-athens3/main/network_files/config/config.toml'
 app_file: 'https://raw.githubusercontent.com/zeta-chain/network-athens3/main/network_files/config/app.toml'
 genesis: 'https://raw.githubusercontent.com/zeta-chain/network-athens3/main/network_files/config/genesis.json'
-seeds: ''
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22556'
 custom_port_prefix: 225
 gas_params: '--chain-id athens_7001-1'
 

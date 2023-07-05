@@ -26,6 +26,10 @@ denoms = ["STATOM", "STOSMO", "MNTA", "WINK", "USK"]
 providers = 1
 
 [[provider_min_overrides]]
+denoms = ["WSTETH", "WETH"]
+providers = 1
+
+[[provider_min_overrides]]
 denoms = ["KUJI"]
 providers = 2
 
@@ -198,21 +202,21 @@ providers = ["binance", "bitget", "bkex", "crypto", "gate", "huobi", "kucoin", "
 base = "KUJI"
 quote = "USDT"
 providers = ["mexc"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "KUJI"
 quote = "USD"
 providers = ["osmosis"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "KUJI"
 quote = "USDC"
 providers = ["fin"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
@@ -284,14 +288,14 @@ providers = ["binance", "bybit", "gate", "huobi", "kucoin", "lbank", "mexc"]
 base = "STATOM"
 quote = "ATOM"
 providers = ["osmosisv2"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "STOSMO"
 quote = "OSMO"
 providers = ["osmosisv2"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
@@ -313,7 +317,7 @@ providers = ["binanceus", "coinbase", "crypto", "gate", "kraken", "osmosis"]
 base = "USK"
 quote = "USDC"
 providers = ["fin"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
@@ -335,14 +339,14 @@ providers = ["bitget", "bybit", "crypto", "gate", "hitbtc", "mexc", "phemex", "p
 base = "MNTA"
 quote = "USDC"
 providers = ["fin"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "WINK"
 quote = "USK"
 providers = ["fin"]
-derivative = "tvwap"
+derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
@@ -364,6 +368,18 @@ providers = ["coinbase", "crypto", "kraken"]
 base = "UNI"
 quote = "USDT"
 providers = ["binance", "bitget", "gate", "huobi", "lbank", "okx", "phemex", "poloniex", "xt"]
+
+[[currency_pairs]]
+base = "WSTETH"
+quote = "WETH"
+providers = ["uniswapv3"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WETH"
+quote = "USDC"
+providers = ["uniswapv3"]
 
 [account]
 address = "{{ price_feeder_address }}"
@@ -411,3 +427,19 @@ urls = [
   "https://api.osmosis.zone",
   "https://api-osmosis.imperator.co"
 ]
+
+[[provider_endpoints]]
+name = "finv2"
+urls = [
+  "http://127.0.0.1:{{ custom_port_prefix }}17",
+  "https://kujira-api.polkachu.com",
+]
+
+[contract_addresses.finv2]
+KUJIUSDC = "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
+MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
+WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
+
+[contract_addresses.uniswapv3]
+USDCWETH = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+WSTETHWETH = "0x109830a1AAaD605BbF02a9dFA7B0B92EC2FB7dAa"

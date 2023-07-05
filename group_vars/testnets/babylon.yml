@@ -5,7 +5,8 @@ chain_id: bbn-test-2
 node_version: v0.7.2
 repo: https://github.com/babylonchain/babylon.git
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/babylon/genesis.json'
-peers: '8af526c37c4892745038d8016ec44056b1a70725@13.58.80.208:26656, 37896797924b1cb18bce9b9542ba3da915a85038@3.145.70.213:26656,8af526c37c4892745038d8016ec44056b1a70725@rpc1.testnet.babylonchain.io:26656'
+peers: '8af526c37c4892745038d8016ec44056b1a70725@13.58.80.208:26656, 37896797924b1cb18bce9b9542ba3da915a85038@3.145.70.213:26656,8af526c37c4892745038d8016ec44056b1a70725@rpc1.testnet.babylonchain.io:26656,1016bb6d890ffafe49eb8b2264937bdbcd775135@46.4.5.45:20656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20656'
 custom_port_prefix: 206
 minimum_gas_price: 0.00001ubbn
 
