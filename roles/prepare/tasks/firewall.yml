@@ -5,14 +5,6 @@
     state: present
     update_cache: yes
 
-- name: Open node_exporter port
-  ufw:
-    rule: allow
-    proto: tcp
-    port: 9100
-  when:
-    - node_exporter|bool == true
-
 - name: Open ssh port
   ufw:
     rule: limit

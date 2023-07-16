@@ -72,6 +72,6 @@
       network: '{{ network }}'
       type: '{{ network_type }}'
       node_version: '{{ node_version }}'
-      secret: '{{ polkachu_secret }}'
+      secret: '{{ polkachu_website_secret }}'
   register: results
-  when: polkachu_secret is defined and (type == 'main' or type == 'test') and update_website_immediately is defined and update_website_immediately|bool == true
+  when: polkachu_website_secret is defined and (type == 'main' or type == 'test') and update_website_immediately is defined and update_website_immediately|bool == true

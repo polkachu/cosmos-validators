@@ -2,7 +2,7 @@ network: umee
 folder: '.umee'
 daemon: umeed
 chain_id: canon-3
-node_version: v5.0.1
+node_version: v5.1.0-rc2
 repo: https://github.com/umee-network/umee.git
 genesis: 'https://canon-3.rpc.network.umee.cc/genesis'
 seeds: '3f472746f46493309650e5a033076689996c8881@umee-testnet.rpc.kjnodes.com:16259'
@@ -15,11 +15,3 @@ update_website_immediately: true
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
-
-# price feeder
-price_feeder_address: 'umee1xrrfek3qpz4ja8ccrjklfy064asyqq9kpytssa'
-price_feeder_validator: 'umeevaloper1jt9w26mpxxjsk63mvd4m2ynj0af09csl3nykuf'
-price_feeder_backend: test
-price_feeder_network: testnet
-price_feeder_repo: https://github.com/ojo-network/price-feeder
-price_feeder_version: 'umee/v2.1.1'

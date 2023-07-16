@@ -15,10 +15,6 @@
     state: present
   when: seeds is defined
 
-- name: open prometheus port
-  become: true
-  command: 'ufw allow {{ custom_port_prefix }}61/tcp'
-
 - name: open p2p port
   become: true
   command: 'ufw allow {{ custom_port_prefix }}56/tcp'

@@ -1,23 +1,13 @@
 # need to redo config.toml to ensure it is correct
-# network: celestia
-# folder: '.celestia-app'
-# daemon: celestia-appd
-# chain_id: mocha
-# node_version: 'v0.11.0'
-# repo: https://github.com/celestiaorg/celestia-app.git
-# genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha/genesis.json'
-# seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11656'
-# peers: 'eaa763cde89fcf5a8fe44274a5ee3ce24bce2c5b@64.227.18.169:26656,0d0f0e4a149b50a96207523a5408611dae2796b6@198.199.82.109:26656,c2870ce12cfb08c4ff66c9ad7c49533d2bd8d412@178.170.47.171:26656'
-# custom_port_prefix: 116
-
 network: celestia
 folder: '.celestia-app'
 daemon: celestia-appd
-chain_id: blockspacerace-0
-node_version: 'v0.12.2'
+chain_id: mocha-3
+node_version: 'v1.0.0-rc9'
 repo: https://github.com/celestiaorg/celestia-app.git
-genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/blockspacerace/genesis.json'
-seeds: '0293f2cf7184da95bc6ea6ff31c7e97578b9c7ff@65.109.106.95:26656,8f14ec71e1d712c912c27485a169c2519628cfb6@celest-test-seed.theamsolutions.info:22256'
+genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha-3/genesis.json'
+seeds: '3314051954fc072a0678ec0cbac690ad8676ab98@65.108.66.220:26656'
+peers: 'ec11f3be74010b78882de2cbd170d7ad4458d8ac@157.245.250.63:26656'
 custom_port_prefix: 116
 
 # [Optional] Snapshot

@@ -1,4 +1,18 @@
 ---
+- name: Create bank_balances directory
+  file:
+    path: '{{ user_dir }}/scripts/bank_balances'
+    state: directory
+    mode: '0755'
+
+- name: Copy bank_balances script
+  template:
+    src: 'bank_balances.sh.j2'
+    dest: '{{ user_dir }}/scripts/bank_balances/{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'
+
 - name: Create gov_vote directory
   file:
     path: '{{ user_dir }}/scripts/gov_vote'
@@ -23,20 +37,6 @@
   template:
     src: 'distribution_withdrawal.sh.j2'
     dest: '{{ user_dir }}/scripts/distribution_withdrawal/{{ network }}.sh'
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
-    mode: '0700'
-
-- name: Create bank_balances directory
-  file:
-    path: '{{ user_dir }}/scripts/bank_balances'
-    state: directory
-    mode: '0755'
-
-- name: Copy bank_balances script
-  template:
-    src: 'bank_balances.sh.j2'
-    dest: '{{ user_dir }}/scripts/bank_balances/{{ network }}.sh'
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
     mode: '0700'

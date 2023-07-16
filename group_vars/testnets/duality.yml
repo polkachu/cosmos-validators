@@ -1,11 +1,11 @@
 network: duality
 folder: '.duality'
 daemon: dualityd
-chain_id: duality-rehearsal-1
-node_version: v0.2.2
+chain_id: duality-testnet-1
+node_version: v0.3.4
 repo: 'https://github.com/duality-labs/duality'
-genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/duality-rehearsal-1/duality-rehearsal-1-genesis.json'
-seeds: '08ec17e86dac67b9da70deb20177655495a55407@duality-seed.rs-testnet.polypore.xyz:26656'
+genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/duality-testnet-1/duality-testnet-1-genesis.json'
+seeds: '2b92aec80bbac6f559a2444b3f14f54b12afcab1@p2p.testnet-1.duality.xyz:26656'
 custom_port_prefix: 231
 
 # [Optional] Snapshot
