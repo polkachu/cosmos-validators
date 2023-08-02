@@ -2,7 +2,7 @@ network: stride
 folder: '.stride'
 daemon: strided
 chain_id: 'stride-testnet-1'
-node_version: 'v10.0.0-testnet'
+node_version: 'v12.1.0-testnet'
 repo: https://github.com/Stride-Labs/stride.git
 genesis: https://raw.githubusercontent.com/Stride-Labs/mainnet/main/testnet/genesis.json
 peers: '42340aa645a1d71470b48336e8c306b9de77879d@stride-validator-direct.testnet-1.stridenet.co:26656'
