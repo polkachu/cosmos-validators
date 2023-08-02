@@ -1,0 +1,16 @@
+# custom installation
+network: arkeo
+folder: '.arkeo'
+daemon: arkeod
+chain_id: 'arkeo'
+node_version: 'latest'
+repo: 'https://github.com/arkeonetwork/arkeo'
+genesis: 'http://seed.arkeo.network:26657/genesis'
+peers: ''
+seeds: ''
+minimum_gas_price: 0.001uarkeo
+custom_port_prefix: 228
+
+# [Optional] Snapshot
+snapshot_hour: 4
+snapshot_minute: 30

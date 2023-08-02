@@ -3,6 +3,10 @@
   import_tasks: skip.yml
   when: partner is defined and partner == 'skip'
 
+- name: import tasks for strd
+  import_tasks: strd.yml
+  when: partner is defined and partner == 'strd'
+
 - name: install nginx package
   become: true
   apt:

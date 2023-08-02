@@ -3,7 +3,7 @@ network: zetachain
 folder: '.zetacored'
 daemon: zetacored
 chain_id: athens_7001-1
-node_version: v3.0.0
+node_version: v6.0.0
 repo: 'https://github.com/zeta-chain/network-athens3'
 binary: 'https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu-22-amd64'
 binary_processing: default

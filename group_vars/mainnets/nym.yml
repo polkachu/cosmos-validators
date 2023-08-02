@@ -1,13 +1,14 @@
-# [NOTE] Nym has a unique compiling process. You need to manually run the compiling, skip node_install playbook and run the other playbooks
 network: nym
 folder: '.nyxd'
 daemon: nyxd
 chain_id: nyx
-node_version: v0.10.2
-repo: https://github.com/CosmWasm/wasmd.git
+node_version: v0.32.0
+repo: https://github.com/nymtech/nyxd
 genesis: ' https://nymtech.net/genesis/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15356'
 custom_port_prefix: 153
+upgrade_folder: v0.32.0
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 7

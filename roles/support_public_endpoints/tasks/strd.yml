@@ -1,0 +1,4 @@
+---
+- name: set dns_prefix for skip
+  set_fact:
+    dns_prefix: '{{ network }}-strd'

@@ -33,6 +33,14 @@ providers = 1
 denoms = ["KUJI"]
 providers = 2
 
+[[provider_min_overrides]]
+denoms = ["NTRN"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["AMPKUJI"]
+providers = 1
+
 [[currency_pairs]]
 base = "AKT"
 quote = "USD"
@@ -381,6 +389,20 @@ base = "WETH"
 quote = "USDC"
 providers = ["uniswapv3"]
 
+[[currency_pairs]]
+base = "NTRN"
+quote = "ATOM"
+providers = ["astroport_neutron"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "AMPKUJI"
+quote = "KUJI"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
@@ -435,11 +457,22 @@ urls = [
   "https://kujira-api.polkachu.com",
 ]
 
+[[provider_endpoints]]
+name = "astroport_neutron"
+urls = [
+  "https://neutron-api.polkachu.com",
+  "https://rest.cosmos.directory/neutron"
+]
+
 [contract_addresses.finv2]
 KUJIUSDC = "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
 MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
 WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
+AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s"
 
 [contract_addresses.uniswapv3]
 USDCWETH = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
 WSTETHWETH = "0x109830a1AAaD605BbF02a9dFA7B0B92EC2FB7dAa"
+
+[contract_addresses.astroport_neutron]
+NTRNATOM = "neutron1e22zh5p8meddxjclevuhjmfj69jxfsa8uu3jvht72rv9d8lkhves6t8veq"

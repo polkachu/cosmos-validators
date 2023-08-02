@@ -4,3 +4,4 @@ debug.yml
 playground/
 roles/support_seed/templates/node_key.json.j2
 group_vars/mainnets/sei_copy.yml
+roles/support_restake/templates/restake.json

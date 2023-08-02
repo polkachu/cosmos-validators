@@ -1,0 +1,6 @@
+---
+- name: Update restake config
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - support_restake
