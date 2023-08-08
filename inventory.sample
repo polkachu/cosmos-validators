@@ -1,12 +1,3 @@
-[mainnets]
-mainnet1 ansible_host=10.0.0.1
-
-[backups]
-backup1 ansible_host=10.0.0.1
-
-[relayers]
-relayer1 ansible_host=10.0.0.3
-
 [juno]
 juno_main ansible_host=10.0.0.1 type=main
 juno_backup ansible_host=10.0.0.2 type=backup prepare=false

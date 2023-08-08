@@ -26,7 +26,7 @@ For every network where we run a validator on mainnet, we run 3 nodes (Validator
 
 We have 2 strong opinions about the node configuration:
 
-1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server. For example, Juno's custom port prefix is 126 and that of Osmosis is 125. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code. The full list of our port prefixes is [here](https://github.com/polkachu/cosmos-port-prefixes). We recommend you follow this conversion.
+1. Each network will have its custom port prefix. This is to prevent port collision if you run multiple nodes on the same server. For example, Juno's custom port prefix is 126 and that of Osmosis is 125. Since it is rather arbitrary, we are going to force the same convention on you unless you fork the code. The full list of our port prefixes is [here](https://github.com/polkachu/cosmos-port-prefixes). We recommend you follow this convention.
 1. Each type of node will have its setting based on Polkachu's "best practice". For example, the main node (Validator) has null indexer, and 100/0/<prime number> pruning, and Relayer node has kv indexer and 40000/2000/<prime number> pruning. We will force these setting on you unless you fork the code.
 
 #### Host Variables
