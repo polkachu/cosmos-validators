@@ -10,6 +10,7 @@ custom_port_prefix: 232
 minimum_gas_price: '0.0025uguu'
 upgrade_folder: v3_2_1
 update_website_immediately: false
+gas_params: '--fees 500uguu'
 
 # [Optional] Snapshot
 snapshot_hour: 4
