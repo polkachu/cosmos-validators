@@ -1,0 +1,17 @@
+network: sentinel
+folder: '.sentinelhub'
+daemon: sentinelhub
+chain_id: sentinelhub-2
+node_version: 'v0.11.1'
+repo: 'https://github.com/sentinel-official/hub.git'
+genesis: 'https://raw.githubusercontent.com/sentinel-official/networks/main/sentinelhub-2/genesis.zip'
+genesis_processing: zip
+peers: '4c011a64e66a38df4139ad2af5e8fe0798d00624@65.109.97.249:23956'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:23956'
+custom_port_prefix: 239
+upgrade_folder: v11
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0

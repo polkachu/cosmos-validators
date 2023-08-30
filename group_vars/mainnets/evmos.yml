@@ -4,8 +4,7 @@ daemon: evmosd
 chain_id: evmos_9001-2
 node_version: v13.0.2
 repo: https://github.com/tharsis/evmos
-genesis: 'https://github.com/tharsis/mainnet/blob/main/evmos_9001-2/genesis.json.zip?raw=true'
-genesis_processing: zip
+genesis: 'https://snapshots.polkachu.com/genesis/evmos/genesis.json'
 peers: '425b9969981dd38bbc53c0f3f01593fdca631667@65.108.131.174:13456'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13456'
 minimum_gas_price: '250000000aevmos'

@@ -75,3 +75,14 @@
       secret: '{{ polkachu_website_secret }}'
   register: results
   when: polkachu_website_secret is defined and (type == 'main' or type == 'test') and update_website_immediately is defined and update_website_immediately|bool == true
+
+- name: Pause for 10 seconds
+  pause:
+    seconds: 10
+
+- name: Ensure it is running
+  uri:
+    url: 'http://localhost:{{ custom_port_prefix }}61'
+    method: GET
+    status_code: 200
+  ignore_errors: true

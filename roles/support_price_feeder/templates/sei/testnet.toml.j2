@@ -10,7 +10,7 @@ verbose_cors = true
 write_timeout = "20s"
 
 [[deviation_thresholds]]
-base = "USDT"
+base = "ETH"
 threshold = "2"
 
 [[currency_pairs]]
@@ -18,10 +18,16 @@ base = "ETH"
 chain_denom = "ueth"
 providers = [
   "huobi",
-  "kraken",
+  "crypto",
   "coinbase",
+  "kraken",
+  "okx"
 ]
-quote = "USD"
+quote = "USDT"
+
+[[deviation_thresholds]]
+base = "BTC"
+threshold = "2"
 
 [[currency_pairs]]
 base = "BTC"
@@ -29,9 +35,15 @@ chain_denom = "ubtc"
 providers = [
   "huobi",
   "kraken",
+  "crypto",
   "coinbase",
+  "okx",
 ]
-quote = "USD"
+quote = "USDT"
+
+[[deviation_thresholds]]
+base = "SOL"
+threshold = "2"
 
 [[currency_pairs]]
 base = "SOL"
@@ -41,7 +53,11 @@ providers = [
   "kraken",
   "coinbase",
 ]
-quote = "USD"
+quote = "USDT"
+
+[[deviation_thresholds]]
+base = "ATOM"
+threshold = "2"
 
 [[currency_pairs]]
 base = "ATOM"
@@ -51,14 +67,46 @@ providers = [
   "kraken",
   "coinbase",
 ]
-quote = "USD"
+quote = "USDT"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "2"
+
+[[currency_pairs]]
+base = "OSMO"
+chain_denom = "uosmo"
+providers = [
+  "huobi",
+  "okx",
+  "gate",
+]
+quote = "USDT"
+
+[[deviation_thresholds]]
+base = "DAI"
+threshold = "2"
+
+[[currency_pairs]]
+base = "DAI"
+chain_denom = "factory/sei1jdppe6fnj2q7hjsepty5crxtrryzhuqsjrj95y/uust2"
+providers = [
+  "kraken",
+  "crypto",
+  "okx",
+]
+quote = "USDT"
+
+[[deviation_thresholds]]
+base = "USDT"
+threshold = "2"
 
 [[currency_pairs]]
 base = "USDT"
-chain_denom = "factory/sei1jdppe6fnj2q7hjsepty5crxtrryzhuqsjrj95y/uust2"
+chain_denom = "uusdt"
 providers = [
-  "huobi",
   "kraken",
+  "crypto",
   "coinbase",
 ]
 quote = "USD"

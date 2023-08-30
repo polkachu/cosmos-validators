@@ -2,7 +2,7 @@ network: nois
 folder: '.noisd'
 daemon: noisd
 chain_id: nois-1
-node_version: 'v1.0.3'
+node_version: 'v1.0.4'
 repo: https://github.com/noislabs/noisd
 genesis: 'https://raw.githubusercontent.com/noislabs/networks/nois1.final.1/nois-1/genesis.json'
 seeds: 'babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:17356'

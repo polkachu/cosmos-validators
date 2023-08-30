@@ -1,0 +1,4 @@
+---
+- name: set dns_prefix for comp
+  set_fact:
+    dns_prefix: '{{ network }}-cmp'
