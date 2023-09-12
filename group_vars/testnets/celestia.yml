@@ -2,12 +2,12 @@
 network: celestia
 folder: '.celestia-app'
 daemon: celestia-appd
-chain_id: mocha-3
-node_version: 'v1.0.0-rc10'
+chain_id: mocha-4
+node_version: '1.0.0-rc14'
 repo: https://github.com/celestiaorg/celestia-app.git
-genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha-3/genesis.json'
+genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha-4/genesis.json'
 seeds: '3314051954fc072a0678ec0cbac690ad8676ab98@65.108.66.220:26656'
-peers: 'ec11f3be74010b78882de2cbd170d7ad4458d8ac@157.245.250.63:26656'
+peers: '34499b1ac473fbb03894c883178ecc83f0d6eaf6@64.227.18.169:26656'
 custom_port_prefix: 116
 update_website_immediately: true
 

@@ -2,12 +2,13 @@ network: band
 folder: '.band'
 daemon: bandd
 chain_id: laozi-mainnet
-node_version: 'v2.5.1'
+node_version: 'v2.5.3'
 repo: 'https://github.com/bandprotocol/chain'
 genesis: 'https://raw.githubusercontent.com/bandprotocol/launch/master/laozi-mainnet/genesis.json'
 seeds: '8d42bdcb6cced03e0b67fa3957e4e9c8fd89015a@34.87.86.195:26656,543e0cab9c3016a0e99775443a17bcf163038912@34.150.156.78:26656'
 custom_port_prefix: 229
 minimum_gas_price: 0.0025uband
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 0

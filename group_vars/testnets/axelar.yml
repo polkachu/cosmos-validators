@@ -3,14 +3,14 @@ network: axelar
 folder: '.axelar'
 daemon: axelard
 chain_id: 'axelar-testnet-lisbon-3'
-node_version: 'v0.33.0'
+node_version: 'v0.34.1'
 repo: https://github.com/axelarnetwork/axelar-core
 config_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml'
 app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml'
 genesis: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/resources/testnet/genesis.json'
 seeds: 'a005b8923888007eb5cf9ed8c8120ed956bc31f7@k8s-testnet-axelarco-c0dd71f944-b4c8da2f814e7b8f.elb.us-east-2.amazonaws.com:26656'
 custom_port_prefix: 151
-upgrade_folder: v0.33
+upgrade_folder: v0.34
 
 # [Optional] Snapshot
 snapshot_hour: 6

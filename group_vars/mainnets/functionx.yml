@@ -1,0 +1,16 @@
+network: functionx
+folder: '.fxcore'
+daemon: fxcored
+chain_id: fxcore
+node_version: v5.0.0
+repo: https://github.com/functionx/fx-core.git
+genesis: 'https://raw.githubusercontent.com/FunctionX/fx-core/main/public/mainnet/genesis.json'
+seeds: 'c5877d9d243af1a504caf5b7f7a9c915b3ae94ae@fxcore-mainnet-seed-node-1.functionx.io:26656,b289311ece065c813287e3a25835bb6378999aa5@fxcore-mainnet-seed-node-2.functionx.io:26656,96f04dffc25ffcce11e179581d2a3ab6cb5535d5@fxcore-mainnet-node-1.functionx.io:26656,836ded83bac83a4ac8511826fa1ad4ca2238f960@fxcore-mainnet-node-2.functionx.io:26656,7c7a260eeefda37eac896ae423e78cf345a2ef70@fxcore-mainnet-node-3.functionx.io:26656,0fee38117655b6961319950d6beb929fb194217c@fxcore-mainnet-node-4.functionx.io:26656,6e8818051a2ca9b8be67a6f2ba48c33d8c489d5c@fxcore-mainnet-node-5.functionx.io:26656'
+minimum_gas_price: '0FX'
+custom_port_prefix: 242
+upgrade_folder: 'v5.0.x'
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

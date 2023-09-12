@@ -1,0 +1,14 @@
+network: sge
+folder: '.sge'
+daemon: sged
+chain_id: sgenet-1
+node_version: v1.1.0
+repo: https://github.com/sge-network/sge
+genesis: 'https://raw.githubusercontent.com/sge-network/networks/master/mainnet/sgenet-1/genesis.json'
+peers: '4980b478f91de9be0564a547779e5c6cb07eb995@3.239.15.80:26656,0e7042be1b77707aaf0597bb804da90d3a606c08@3.88.40.53:26656'
+minimum_gas_price: '10usge'
+custom_port_prefix: 177
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 30
