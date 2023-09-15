@@ -2,12 +2,12 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9000-4
-node_version: v14.0.0-rc3
+node_version: v14.0.0-rc5
 repo: https://github.com/tharsis/evmos
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/evmos/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13456'
 custom_port_prefix: 134
-upgrade_folder: v14.0.0-rc2
+upgrade_folder: v14.0.0-rc5
 update_website_immediately: true
 gas_params: '--fees 2000000000000atevmos'
 

@@ -10,7 +10,31 @@ verbose_cors = true
 write_timeout = "20s"
 
 [[deviation_thresholds]]
+base = "ETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "BTC"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "USDC"
+threshold = "2"
+
+[[deviation_thresholds]]
 base = "USDT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "ATOM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SEI"
 threshold = "2"
 
 [[currency_pairs]]
@@ -18,10 +42,12 @@ base = "ETH"
 chain_denom = "ueth"
 providers = [
   "huobi",
-  "kraken",
+  "crypto",
   "coinbase",
+  "kraken",
+  "okx"
 ]
-quote = "USD"
+quote = "USDT"
 
 [[currency_pairs]]
 base = "BTC"
@@ -29,9 +55,11 @@ chain_denom = "ubtc"
 providers = [
   "huobi",
   "kraken",
+  "crypto",
   "coinbase",
+  "okx",
 ]
-quote = "USD"
+quote = "USDT"
 
 [[currency_pairs]]
 base = "USDC"
@@ -39,17 +67,47 @@ chain_denom = "uusdc"
 providers = [
   "huobi",
   "kraken",
-  "coinbase",
+  "okx",
 ]
-quote = "USD"
+quote = "USDT"
 
 [[currency_pairs]]
 base = "USDT"
 chain_denom = "uusdt"
 providers = [
-  "huobi",
   "kraken",
+  "crypto",
   "coinbase",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "OSMO"
+chain_denom = "uosmo"
+providers = [
+  "okx",
+  "huobi",
+  "gate"
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SEI"
+chain_denom = "usei"
+providers = [
+  "okx",
+  "coinbase",
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ATOM"
+chain_denom = "uatom"
+providers = [
+  "okx",
+  "coinbase",
+  "kraken",
 ]
 quote = "USD"
 

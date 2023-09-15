@@ -1,11 +1,11 @@
 server {
     listen 80;
-    server_name {{dns_prefix}}-api.polkachu.com;
+    server_name {{api}}.polkachu.com;
     location / {
 {% if partner is undefined %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;
 {% endif %}
-{% if partner is defined and partner == "skip" %}
+{% if partner is defined and (partner == "skip" or partner == "skip_extra") %}
         auth_basic "Skip";
         auth_basic_user_file ".htpasswd";
 {% endif %}

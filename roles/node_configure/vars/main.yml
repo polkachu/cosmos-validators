@@ -30,8 +30,9 @@ pruning_test:
   'snapshot-interval = ': 'snapshot-interval = 0'
 pruning_testrelay:
   'pruning = "': 'pruning = "custom"'
-  'pruning-keep-recent = "': 'pruning-keep-recent = "10000"'
+  'pruning-keep-recent = "': 'pruning-keep-recent = "20000"'
   'pruning-keep-every = "': 'pruning-keep-every = "2000"'
   'pruning-interval = "': 'pruning-interval = "17"'
   'snapshot-interval = ': 'snapshot-interval = 2000'
   'snapshot-keep-recent = ': 'snapshot-keep-recent= 5'
+  'enabled-unsafe-cors = ': 'enabled-unsafe-cors = false'

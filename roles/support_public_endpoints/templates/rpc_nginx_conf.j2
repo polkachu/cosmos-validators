@@ -1,13 +1,13 @@
 server {
     listen 80;
-    server_name {{dns_prefix}}-rpc.polkachu.com;
+    server_name {{rpc}}.polkachu.com;
     add_header Access-Control-Allow-Origin * always;
     add_header Access-Control-Allow-Headers * always;
     location / {
 {% if partner is undefined %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;
 {% endif %}
-{% if partner is defined and partner == "skip" %}
+{% if partner is defined and (partner == "skip" or partner == "skip_extra") %}
         auth_basic "Skip";
         auth_basic_user_file ".htpasswd";
 {% endif %}

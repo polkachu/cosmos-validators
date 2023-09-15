@@ -3,13 +3,14 @@ network: gitopia
 folder: '.gitopia'
 daemon: gitopiad
 chain_id: gitopia
-node_version: v2.1.1
+node_version: v3.0.1
 repo: https://github.com/gitopia/gitopia
 genesis: https://github.com/gitopia/mainnet/raw/master/genesis.tar.gz
 genesis_processing: targz
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11356'
 minimum_gas_price: '0.001ulore'
 custom_port_prefix: 113
+upgrade_folder: 'v3'
 update_website_immediately: true
 gas_params: '--fees 200ulore'
 

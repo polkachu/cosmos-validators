@@ -2,14 +2,14 @@ network: umee
 folder: '.umee'
 daemon: umeed
 chain_id: canon-3
-node_version: v5.2.0
+node_version: v6.0.1
 repo: https://github.com/umee-network/umee.git
 genesis: 'https://canon-3.rpc.network.umee.cc/genesis'
 seeds: '3f472746f46493309650e5a033076689996c8881@umee-testnet.rpc.kjnodes.com:16259'
 peers: '422c28cdd532f859ccb72d4a092fc066afd6d023@canon-3.network.umee.cc:10000,964c4c485efd99448616e6795d168cf0335f929b@canon-3.network.umee.cc:10001,7b5c70f331f8f76d1aca6b1b99e513839f22def9@canon-3.network.umee.cc:10002,3468da7cbb6829111b45bf8153a520674a1a9b10@canon-3.network.umee.cc:10003'
 minimum_gas_price: '0uumee'
 custom_port_prefix: 136
-upgrade_folder: v5.2
+upgrade_folder: v6.0
 update_website_immediately: true
 
 # [Optional] Snapshot
