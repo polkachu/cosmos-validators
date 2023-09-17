@@ -2,14 +2,14 @@ network: umee
 folder: '.umee'
 daemon: umeed
 chain_id: umee-1
-node_version: v5.2.0
+node_version: v6.0.1
 repo: https://github.com/umee-network/umee.git
 genesis: 'https://github.com/umee-network/mainnet/raw/main/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13656'
 custom_port_prefix: 136
 minimum_gas_price: '0.1uumee'
-upgrade_folder: v5.2
-update_website_immediately: true
+upgrade_folder: v6.0
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 2
