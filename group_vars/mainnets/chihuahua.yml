@@ -2,13 +2,13 @@ network: chihuahua
 folder: '.chihuahuad'
 daemon: chihuahuad
 chain_id: chihuahua-1
-node_version: v5.0.2
+node_version: v5.0.3
 repo: https://github.com/ChihuahuaChain/chihuahua.git
 genesis: 'https://snapshots.polkachu.com/misc/chihuahua_genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12956'
 minimum_gas_price: '1uhuahua'
 custom_port_prefix: 129
-upgrade_folder: v502
+upgrade_folder: v503
 update_website_immediately: false
 gas_params: '--gas-prices=1uhuahua --gas-adjustment 2.5 --gas auto'
 

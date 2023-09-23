@@ -2,7 +2,7 @@ network: lava
 folder: '.lava'
 daemon: lavad
 chain_id: lava-testnet-1
-node_version: v0.22.0
+node_version: v0.23.5
 repo: https://github.com/lavanet/lava
 genesis: 'https://raw.githubusercontent.com/lavanet/lava-config/main/testnet-2/genesis_json/genesis.json'
 binary: 'https://lava-binary-upgrades.s3.amazonaws.com/testnet-2/cosmovisor-upgrades/cosmovisor-upgrades.zip'
@@ -12,7 +12,7 @@ peers: '5e068fccd370b2f2e5ab4240a304323af6385f1f@172.93.110.154:27656'
 minimum_gas_price: '0ulava'
 custom_port_prefix: 199
 gas_params: '--gas auto --gas-adjustment 1.5'
-upgrade_folder: v0.22.0
+upgrade_folder: v0.23.5
 
 # [Optional] Snapshot
 snapshot_hour: 1

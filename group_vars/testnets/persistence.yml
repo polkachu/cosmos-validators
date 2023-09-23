@@ -2,7 +2,7 @@ network: persistence
 folder: '.persistenceCore'
 daemon: persistenceCore
 chain_id: test-core-2
-node_version: v9.2.0
+node_version: v9.2.1
 repo: https://github.com/persistenceOne/persistenceCore
 genesis: 'https://raw.githubusercontent.com/persistenceOne/networks/f42b7a498c47255a383bbe47050dd951036d475a/test-core-2/genesis.json'
 peers: 'cee6b94965f301e8b5ad905a65fa39c03cd193ce@51.68.152.17:26656,7f971fc5fc2ffedbaf32f3b4021645571461a712@198.244.177.67:26656,21ca0b996db604681fb73721ecb01d2c6410c628@162.19.94.46:26656'
