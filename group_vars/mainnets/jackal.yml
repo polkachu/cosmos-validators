@@ -10,6 +10,7 @@ minimum_gas_price: 0.002ujkl
 custom_port_prefix: 175
 upgrade_folder: v3
 update_website_immediately: false
+wasm: 'outside'
 
 # [Optional] Snapshot
 snapshot_hour: 4
