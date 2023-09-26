@@ -9,6 +9,7 @@ read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
 
+
 [[deviation_thresholds]]
 base = "ETH"
 threshold = "2"
@@ -23,6 +24,18 @@ threshold = "2"
 
 [[deviation_thresholds]]
 base = "USDT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "ATOM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SEI"
 threshold = "2"
 
 [[currency_pairs]]
@@ -56,6 +69,7 @@ providers = [
   "huobi",
   "kraken",
   "okx",
+  "gate",
 ]
 quote = "USDT"
 
@@ -68,6 +82,55 @@ providers = [
   "coinbase",
 ]
 quote = "USD"
+
+[[currency_pairs]]
+base = "OSMO"
+chain_denom = "uosmo"
+providers = [
+  "huobi",
+  "binance",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+chain_denom = "uosmo"
+providers = [
+  "coinbase"
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "SEI"
+chain_denom = "usei"
+providers = [
+  "binance",
+  "huobi",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SEI"
+chain_denom = "usei"
+providers = [
+  "kraken",
+  "coinbase",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ATOM"
+chain_denom = "uatom"
+providers = [
+  "huobi",
+  "crypto",
+  "binance",
+  "gate",
+  "okx",
+]
+quote = "USDT"
 
 [account]
 address = "{{ price_feeder_address }}"
