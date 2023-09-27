@@ -2,13 +2,13 @@ network: lum
 folder: '.lumd'
 daemon: lumd
 chain_id: lum-network-1
-node_version: v1.5.2
+node_version: v1.6.1
 repo: https://github.com/lum-network/chain
 genesis: https://raw.githubusercontent.com/lum-network/mainnet/master/genesis.json
 seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:16756'
 minimum_gas_price: '0ulum'
 custom_port_prefix: 167
-upgrade_folder: v1.5.2
+upgrade_folder: v1.6.1
 update_website_immediately: true
 
 # [Optional] Snapshot
