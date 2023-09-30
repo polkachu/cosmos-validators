@@ -9,7 +9,7 @@ seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:16756'
 minimum_gas_price: '0ulum'
 custom_port_prefix: 167
 upgrade_folder: v1.6.1
-update_website_immediately: true
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 1

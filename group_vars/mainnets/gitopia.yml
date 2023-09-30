@@ -1,4 +1,3 @@
-# Need revision
 network: gitopia
 folder: '.gitopia'
 daemon: gitopiad

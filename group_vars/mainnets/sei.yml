@@ -2,13 +2,13 @@ network: sei
 folder: '.sei'
 daemon: seid
 chain_id: 'pacific-1'
-node_version: 'v3.0.9'
+node_version: 'v3.1.1'
 repo: https://github.com/sei-protocol/sei-chain.git
 genesis: 'https://raw.githubusercontent.com/sei-protocol/testnet/main/atlantic-2/genesis.json'
 peers: '380c732671cec070a9a7b979d277e26325f26d61@136.243.67.189:11956'
 seed: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11956'
 custom_port_prefix: 119
-upgrade_folder: 'v3.0.9'
+upgrade_folder: 'v3.1.1'
 minimum_gas_price: 0.1usei
 update_website_immediately: false
 gas_params: '--fees 20000usei'

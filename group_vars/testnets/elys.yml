@@ -2,12 +2,12 @@ network: elys
 folder: '.elys'
 daemon: elysd
 chain_id: 'elystestnet-1'
-node_version: 'v0.11.0'
+node_version: 'v0.12.0'
 repo: https://github.com/elys-network/elys
 genesis: https://rpc.testnet.elys.network/genesis
 peers: 'ae22b82b1dc34fa0b1a64854168692310f562136@198.27.74.140:26656'
 custom_port_prefix: 220
-upgrade_folder: 'v0.11.0'
+upgrade_folder: 'v0.12.0'
 update_website_immediately: true
 
 # [Optional] Snapshot

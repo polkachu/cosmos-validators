@@ -110,6 +110,18 @@ threshold = "2"
 base = "USK"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "stUMEE"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "NCT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SOMM"
+threshold = "2"
+
 [[currency_pairs]]
 base = "UMEE"
 providers = [
@@ -243,7 +255,6 @@ quote = "USD"
 base = "stATOM"
 providers = [
   "osmosisv2",
-  "crescent",
 ]
 quote = "ATOM"
 
@@ -402,6 +413,36 @@ providers = [
 ]
 quote = "USDC"
 
+[[currency_pairs]]
+base = "stUMEE"
+providers = [
+  "osmosisv2",
+]
+quote = "UMEE"
+
+[[currency_pairs]]
+base = "NCT"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "gate",
+]
+quote = "USDT"
+
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
@@ -424,11 +465,6 @@ enabled = true
 global-labels = [["chain_id", "{{ chain_id }}"]]
 service-name = "price-feeder"
 prometheus-retention-time = 100
-
-[[provider_endpoints]]
-name = "binance"
-rest = "https://api1.binance.com"
-websocket = "stream.binance.com:9443"
 
 [[provider_endpoints]]
 name = "osmosisv2"

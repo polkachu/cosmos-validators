@@ -2,7 +2,7 @@ network: chihuahua
 folder: '.chihuahuad'
 daemon: chihuahuad
 chain_id: chihuahua-1
-node_version: v5.0.3
+node_version: v5.0.4
 repo: https://github.com/ChihuahuaChain/chihuahua.git
 genesis: 'https://snapshots.polkachu.com/misc/chihuahua_genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12956'
