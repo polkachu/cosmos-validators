@@ -2,14 +2,15 @@ network: kujira
 folder: .kujira
 daemon: kujirad
 chain_id: harpoon-4
-node_version: v0.8.8
+node_version: v0.9.0-patch
 repo: 'https://github.com/Team-Kujira/core'
 genesis: 'https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/harpoon-4.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11856'
 minimum_gas_price: '0.00125ukuji'
 custom_port_prefix: 118
-upgrade_folder: v0.8.5
+upgrade_folder: v0.9.0
 update_website_immediately: true
+gas_params: '--fees 250ukuji'
 
 # [Optional] Snapshot
 snapshot_hour: 7

@@ -41,6 +41,10 @@ providers = 1
 denoms = ["AMPKUJI"]
 providers = 1
 
+[[provider_min_overrides]]
+denoms = ["STARS", "SOMM"]
+providers = 1
+
 [[currency_pairs]]
 base = "AKT"
 quote = "USD"
@@ -403,6 +407,34 @@ providers = ["finv2"]
 derivative = "twap"
 derivative_period = "30m"
 
+[[currency_pairs]]
+base = "STARS"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "STARS"
+quote = "USD"
+providers = ["osmosis"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "SOMM"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "SOMM"
+quote = "USD"
+providers = ["osmosis"]
+derivative = "twap"
+derivative_period = "30m"
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
@@ -481,6 +513,8 @@ NTRNATOM = "neutron1e22zh5p8meddxjclevuhjmfj69jxfsa8uu3jvht72rv9d8lkhves6t8veq"
 ATOMSTATOM = "803"
 STOSMOOSMO = "833"
 MNTAOSMO = "1215"
+SOMMOSMO = "627"
+STARSOSMO = "1096"
 
 [contract_addresses.camelotv2]
 KUJIUSDC = "0xDB7D929434F0a52fFE3E5631044776b23E6f8a67"
