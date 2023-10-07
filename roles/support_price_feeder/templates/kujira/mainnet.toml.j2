@@ -45,6 +45,11 @@ providers = 1
 denoms = ["STARS", "SOMM"]
 providers = 1
 
+[[provider_min_overrides]]
+denoms = ["RLB"]
+providers = 1
+
+
 [[currency_pairs]]
 base = "AKT"
 quote = "USD"
@@ -435,6 +440,33 @@ providers = ["osmosis"]
 derivative = "twap"
 derivative_period = "30m"
 
+[[currency_pairs]]
+base = "RLB"
+quote = "WETH"
+providers = ["uniswapv3"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "HNT"
+quote = "USDT"
+providers = ["bitget", "gate", "okx", "kucoin", "bitmart", "bybit"]
+
+[[currency_pairs]]
+base = "HNT"
+quote = "USD"
+providers = ["coinbase", "crypto"]
+
+[[currency_pairs]]
+base = "SOL"
+quote = "USDT"
+providers = ["binance", "huobi", "okx", "bybit", "xt", "gate", "bitget", "kucoin"]
+
+[[currency_pairs]]
+base = "SOL"
+quote = "USD"
+providers = ["coinbase", "kraken"]
+
 [account]
 address = "{{ price_feeder_address }}"
 chain_id = "{{ chain_id }}"
@@ -505,6 +537,7 @@ AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s
 [contract_addresses.uniswapv3]
 USDCWETH = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
 WSTETHWETH = "0x109830a1AAaD605BbF02a9dFA7B0B92EC2FB7dAa"
+RLBWETH = "0x510100d5143e011db24e2aa38abe85d73d5b2177"
 
 [contract_addresses.astroport_neutron]
 NTRNATOM = "neutron1e22zh5p8meddxjclevuhjmfj69jxfsa8uu3jvht72rv9d8lkhves6t8veq"
