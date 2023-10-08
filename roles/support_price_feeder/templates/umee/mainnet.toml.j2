@@ -6,6 +6,7 @@ read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
 
+# deviation_thresholds
 [[deviation_thresholds]]
 base = "MARS"
 threshold = "1.5"
@@ -115,13 +116,22 @@ base = "stUMEE"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "NCT"
+base = "RETH"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "SOMM"
+base = "LINK"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "WETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WBTC"
+threshold = "2"
+
+# currency_pairs
 [[currency_pairs]]
 base = "UMEE"
 providers = [
@@ -133,7 +143,7 @@ quote = "USDT"
 [[currency_pairs]]
 base = "UMEE"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -143,6 +153,13 @@ providers = [
   "kraken",
   "coinbase",
   "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "kraken",
 ]
 quote = "USD"
 
@@ -232,7 +249,7 @@ quote = "USDT"
 [[currency_pairs]]
 base = "OSMO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -252,23 +269,67 @@ providers = [
 quote = "USD"
 
 [[currency_pairs]]
+base = "WETH"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "USDC"
+[[currency_pairs.pair_address_providers]]
+address = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "WBTC"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "CBETH"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0x840deeef2f115cf50da625f7368c24af6fe74410"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "LINK"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
 base = "stATOM"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
 [[currency_pairs]]
 base = "stOSMO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
 [[currency_pairs]]
 base = "IST"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
@@ -309,7 +370,7 @@ providers = [ "kraken",]
 [[currency_pairs]]
 base = "JUNO"
 quote = "ATOM"
-providers = [ "osmosisv2",]
+providers = [ "osmosis",]
 
 [[currency_pairs]]
 base = "LUNA"
@@ -369,14 +430,14 @@ quote = "USDT"
 [[currency_pairs]]
 base = "stkATOM"
 providers = [
-  "crescent",
+  "osmosis",
 ]
 quote = "ATOM"
 
 [[currency_pairs]]
 base = "qATOM"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -388,21 +449,21 @@ providers = [ "coinbase",]
 [[currency_pairs]]
 base = "CMST"
 providers = [
-  "crescent",
+  "osmosis",
 ]
-quote = "USDC"
+quote = "OSMO"
 
 [[currency_pairs]]
 base = "MARS"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
 [[currency_pairs]]
 base = "stJUNO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "JUNO"
 
@@ -416,31 +477,41 @@ quote = "USDC"
 [[currency_pairs]]
 base = "stUMEE"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "UMEE"
 
 [[currency_pairs]]
-base = "NCT"
+base = "RETH"
 providers = [
-  "osmosisv2",
+  "eth-uniswap",
 ]
-quote = "OSMO"
 
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0xa4e0faA58465A2D369aa21B3e42d43374c6F9613"
+provider = "eth-uniswap"
 
-[[currency_pairs]]
-base = "SOMM"
-providers = [
-  "osmosisv2",
-]
-quote = "OSMO"
+# provider_endpoints
+[[provider_endpoints]]
+name = "osmosis"
+rest = "https://api.osmo-api.prod.ojo.network"
+websocket = "api.osmo-api.prod.ojo.network"
 
-[[currency_pairs]]
-base = "SOMM"
-providers = [
-  "gate",
-]
-quote = "USDT"
+[[provider_endpoints]]
+name = "crescent"
+rest = "https://api.cresc-api.prod.ojo.network"
+websocket = "api.cresc-api.prod.ojo.network"
+
+[[provider_endpoints]]
+name = "binance"
+rest = "https://api1.binance.com"
+websocket = "stream.binance.com:9443"
+
+[[provider_endpoints]]
+name = "eth-uniswap"
+rest = "https://api.studio.thegraph.com/query/46403/unidexer/version/latest"
+websocket = "not supported"
 
 
 [account]
@@ -465,13 +536,3 @@ enabled = true
 global-labels = [["chain_id", "{{ chain_id }}"]]
 service-name = "price-feeder"
 prometheus-retention-time = 100
-
-[[provider_endpoints]]
-name = "osmosisv2"
-rest = "https://api.osmo-api.prod.ojo.network"
-websocket = "api.osmo-api.prod.ojo.network"
-
-[[provider_endpoints]]
-name = "crescent"
-rest = "https://api.cresc-api.prod.ojo.network"
-websocket = "api.cresc-api.prod.ojo.network"
