@@ -11,4 +11,4 @@ go_version: '1.21.1'
 cosmovisor_version: 'v1.0.0'
 
 # Snapshot base URL
-snapshot_base_url: 'https://polkachu.com/api/v1/chains'
+snapshot_base_url: 'https://polkachu.com/api/v2/chain_snapshots'

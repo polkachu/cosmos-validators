@@ -131,6 +131,14 @@ threshold = "2"
 base = "WBTC"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "NCT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SOMM"
+threshold = "2"
+
 # currency_pairs
 [[currency_pairs]]
 base = "UMEE"
@@ -491,6 +499,27 @@ quote = "WETH"
 [[currency_pairs.pair_address_providers]]
 address = "0xa4e0faA58465A2D369aa21B3e42d43374c6F9613"
 provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "NCT"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "gate",
+]
+quote = "USDT"
 
 # provider_endpoints
 [[provider_endpoints]]

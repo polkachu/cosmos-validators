@@ -65,7 +65,7 @@
 
 - name: Update Polkachu website (completely optional)
   uri:
-    url: https://polkachu.com/api/v1/chain_node_version_update
+    url: https://polkachu.com/api/v2/chain_node_version_update
     method: POST
     body_format: json
     body:

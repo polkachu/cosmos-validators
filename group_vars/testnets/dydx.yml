@@ -3,7 +3,7 @@ network: 'dydx'
 folder: '.dydxprotocol'
 daemon: dydxprotocold
 chain_id: dydx-testnet-3
-node_version: 'protocol/v0.3.0'
+node_version: 'protocol/v0.3.5'
 repo: 'https://github.com/dydxprotocol/v4-chain'
 binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv0.2.2/dydxprotocold-v0.2.2-linux-amd64.tar.gz'
 binary_processing: targz

@@ -2,7 +2,7 @@ network: migaloo
 folder: '.migalood'
 daemon: migalood
 chain_id: 'migaloo-1'
-node_version: 'v3.0.0'
+node_version: 'v3.0.1-hotfix'
 repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain'
 genesis: 'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-chain/release/v1.0.x/networks/mainnet/genesis.json'
 seeds: '013226057046995f2fa6cbaaa4a1d90508ddc2c1@tenderseed.ccvalidators.com:26013'
