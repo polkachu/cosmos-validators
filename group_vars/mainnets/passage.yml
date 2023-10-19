@@ -2,11 +2,13 @@ network: passage
 folder: '.passage'
 daemon: passage
 chain_id: passage-2
-node_version: v2.0.1
+node_version: v2.2.0
 repo: https://github.com/envadiv/Passage3D
 genesis: 'https://raw.githubusercontent.com/envadiv/mainnet/main/passage-2/genesis.json'
 seeds: 'ad9f93c38fafff854cdd65741df556d043dd6edb@5.161.71.7:26656,fbdcc82eeacc81f9ef7d77d22120f4567457c850@5.161.184.142:26656'
+upgrade_folder: v2.2.0
 custom_port_prefix: 156
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 8

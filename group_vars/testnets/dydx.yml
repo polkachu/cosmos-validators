@@ -2,16 +2,15 @@
 network: 'dydx'
 folder: '.dydxprotocol'
 daemon: dydxprotocold
-chain_id: dydx-testnet-3
-node_version: 'protocol/v0.3.5'
+chain_id: dydx-testnet-4
+node_version: 'protocol/v0.4.0'
 repo: 'https://github.com/dydxprotocol/v4-chain'
-binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv0.2.2/dydxprotocold-v0.2.2-linux-amd64.tar.gz'
+binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv0.4.0/dydxprotocold-v0.4.0-linux-arm64.tar.gz'
 binary_processing: targz
-genesis: 'https://dydx-rpc-testnet.enigma-validator.com/genesis?'
-seeds: '5b00f9ab668c35f7fcaff9a0607da59273bee399@dydx-testnet3-seednode.allthatnode.com:26656, 5454e22c769c5103e51c336121c532e9d6289348@tenderseed.ccvalidators.com:29103, f3339d67eac6e6a082555d2db6556ee4c0ce5f61@test-dydx-seed.kingnodes.com:26856, 87ee8de5f0f82af6ee6740a30f8844bbe6434413@seed.dydx-testnet.cros-nest.com:26656, b8695dc21fa1b8395abb131e37c5bf5763b61d1d@dydx-testnet-3.notional.ventures:26656, 20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:23856'
-upgrade_folder: 'v0.3.0'
+genesis: 'https://raw.githubusercontent.com/dydxprotocol/v4-testnets/main/dydx-testnet-4/genesis.json'
+seeds: '19d38bb5cea1378db3e16615e63594dc26119a1a@dydx-testnet4-seednode.allthatnode.com:26656,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:23856'
+min_gas_prices: '0.025ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5,25000000000adv4tnt'
 custom_port_prefix: 238
-update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

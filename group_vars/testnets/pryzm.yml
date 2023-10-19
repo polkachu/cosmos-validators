@@ -1,0 +1,17 @@
+network: pryzm
+folder: '.pryzm'
+daemon: pryzmd
+chain_id: 'spectrum-1'
+node_version: 'v0.6.0'
+repo: 'TBD'
+binary: 'https://storage.googleapis.com/pryzm-resources/pryzmd-0.6.0-linux-amd64.tar.gz'
+binary_processing: targz
+genesis: https://storage.googleapis.com/pryzm-resources/genesis.json
+seeds: '915d90e2ff56e77380c81f0849e388e669cc65bc@ptseed.pryzm.zone:26656'
+custom_port_prefix: 248
+upgrade_folder: v15
+update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 8
+snapshot_minute: 30

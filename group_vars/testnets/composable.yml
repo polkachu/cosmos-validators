@@ -1,14 +1,14 @@
 network: composable
 folder: '.banksy'
 daemon: centaurid
-chain_id: banksy-testnet-3
-node_version: v5.0.0
+chain_id: banksy-testnet-4
+node_version: v6.0.3-ics
 repo: 'https://github.com/notional-labs/composable-testnet'
-genesis: 'https://raw.githubusercontent.com/notional-labs/composable-networks/main/banksy-testnet-3/genesis.json'
-seeds: '364b8245e72f083b0aa3e0d59b832020b66e9e9d@65.109.80.150:21500,c0f197bdf6c4a4a16eb9db112d1ec9545336fd43@168.119.91.22:2250'
+genesis: 'https://raw.githubusercontent.com/notional-labs/composable-networks/main/banksy-testnet-4/genesis.json'
+seeds: 'a89d3d9fc0465615aa1100dcf53172814aa2b8cf@168.119.91.22:2260'
 minimum_gas_price: '0upica'
 custom_port_prefix: 222
-upgrade_folder: v3
+upgrade_folder: v6.0.3-ics
 update_website_immediately: true
 
 # [Optional] Snapshot

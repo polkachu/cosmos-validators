@@ -2,12 +2,12 @@ network: stride
 folder: '.stride'
 daemon: strided
 chain_id: stride-1
-node_version: 'v15.0.0'
+node_version: 'v16.0.0'
 repo: https://github.com/Stride-Labs/stride
 genesis: 'https://raw.githubusercontent.com/Stride-Labs/testnet/infra-test/poolparty/infra/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12256'
 custom_port_prefix: 122
-upgrade_folder: v15
+upgrade_folder: v16
 minimum_gas_price: '0.0005ustrd,0.001stuosmo,0.0001stuatom,0.001ibc/D24B4564BCD51D3D02D9987D92571EAC5915676A9BD6D9B0C1D0254CB8A5EA34,0.0001ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2'
 update_website_immediately: false
 gas_params: '--gas auto --gas-adjustment 1.5'
