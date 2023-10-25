@@ -7,7 +7,7 @@ repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain'
 genesis: 'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-chain/release/v1.0.x/networks/mainnet/genesis.json'
 seeds: '013226057046995f2fa6cbaaa4a1d90508ddc2c1@tenderseed.ccvalidators.com:26013'
 custom_port_prefix: 207
-minimum_gas_price: '0uwhale'
+minimum_gas_price: '1uwhale'
 upgrade_folder: 'v3.0.0'
 update_website_immediately: false
 

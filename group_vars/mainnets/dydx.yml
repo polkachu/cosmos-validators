@@ -1,0 +1,16 @@
+network: 'dydx'
+folder: '.dydxprotocol'
+daemon: dydxprotocold
+chain_id: 'dydx-mainnet-1'
+node_version: 'v1.0.0'
+repo: ''
+binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv1.0.0/dydxprotocold-v1.0.0-linux-amd64.tar.gz'
+binary_processing: targz
+genesis: 'https://raw.githubusercontent.com/dydxopsdao/networks/main/dydx-mainnet-1/genesis.json'
+peers: 'f0551461cc24faf6ef1aed779ec207bec48f591b@dydx.validator.neuler.xyz:26656,58fc0e934558740d76e07dba2c25bb19ce73fc5c@141.95.85.165:26656,f1fd898d7f16fc63a43b25b62707032749f6e728@181.41.140.170:26656,801054b990e190c4b443e3332c5e44cd519e27c5@172.105.219.146:26656'
+min_gas_prices: '0.025ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5,12500000000adydx'
+custom_port_prefix: 238
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

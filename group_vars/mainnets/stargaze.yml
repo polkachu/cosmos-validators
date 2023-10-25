@@ -2,14 +2,14 @@ network: stargaze
 folder: '.starsd'
 daemon: starsd
 chain_id: stargaze-1
-node_version: 'v12.0.0'
+node_version: 'v12.1.0'
 repo: 'https://github.com/public-awesome/stargaze'
 genesis: 'https://raw.githubusercontent.com/public-awesome/mainnet/main/stargaze-1/genesis.tar.gz'
 genesis_processing: targz
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13756'
 custom_port_prefix: 137
 upgrade_folder: v12
-update_website_immediately: false
+update_website_immediately: true
 gas_params: '--gas auto --gas-adjustment 1.5 --gas-prices 1ustars'
 
 # [Optional] Snapshot

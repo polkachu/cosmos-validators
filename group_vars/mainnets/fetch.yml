@@ -8,6 +8,7 @@ genesis: 'https://github.com/fetchai/genesis-fetchhub/blob/main/fetchhub-4/data/
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15256'
 custom_port_prefix: 152
 upgrade_folder: fetchd-v0.10.7
+minimum_gas_price: '0.0afet'
 
 # [Optional] Snapshot
 snapshot_hour: 6

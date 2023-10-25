@@ -8,6 +8,7 @@ genesis: 'https://raw.githubusercontent.com/planq-network/networks/main/mainnet/
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20356'
 custom_port_prefix: 203
 update_website_immediately: true
+minimum_gas_price: '0aplanq'
 
 # [Optional] Snapshot
 snapshot_hour: 1

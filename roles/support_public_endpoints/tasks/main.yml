@@ -23,6 +23,10 @@
   import_tasks: comp.yml
   when: partner is defined and partner == 'comp'
 
+- name: import tasks for comp
+  import_tasks: dydx.yml
+  when: partner is defined and partner == 'dydx'
+
 - name: install nginx package
   become: true
   apt:

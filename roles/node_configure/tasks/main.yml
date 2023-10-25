@@ -60,6 +60,14 @@
   loop: '{{ pruning_relayer | dict2items }}'
   when: type is defined and type == 'relayer'
 
+- name: Adjust pruning setting for archive
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: '{{ item.key }}'
+    line: '{{ item.value }}'
+  loop: '{{ pruning_archive | dict2items }}'
+  when: type is defined and type == 'archive'
+
 - name: Adjust pruning setting for test
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/app.toml'

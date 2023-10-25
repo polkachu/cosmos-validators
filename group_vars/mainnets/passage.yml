@@ -9,6 +9,7 @@ seeds: 'ad9f93c38fafff854cdd65741df556d043dd6edb@5.161.71.7:26656,fbdcc82eeacc81
 upgrade_folder: v2.2.0
 custom_port_prefix: 156
 update_website_immediately: false
+minimum_gas_price: '0upasg'
 
 # [Optional] Snapshot
 snapshot_hour: 8

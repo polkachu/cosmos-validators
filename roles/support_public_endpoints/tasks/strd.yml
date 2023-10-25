@@ -1,6 +1,6 @@
 ---
 - name: set dns_prefix for strd
   set_fact:
-    rpc: '{{ chain_id }}-strd-rpc'
-    api: '{{ chain_id }}-strd-api'
-    grpc: '{{ chain_id }}-strd-grpc'
+    rpc: '{{ network }}-strd-rpc'
+    api: '{{ network }}-strd-api'
+    grpc: '{{ network }}-strd-grpc'

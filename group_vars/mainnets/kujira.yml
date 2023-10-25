@@ -22,5 +22,5 @@ price_feeder_validator: 'kujiravaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4pnsu9m3'
 price_feeder_backend: file
 price_feeder_network: mainnet
 price_feeder_repo: https://github.com/Team-Kujira/oracle-price-feeder
-price_feeder_version: 'v0.7.2'
+price_feeder_version: 'v0.7.3'
 price_feeder_fee_granter: 'kujira1vkje22mayn72r0a7kna6agv0sqm6k94ry9k6dd'

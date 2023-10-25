@@ -9,6 +9,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14156'
 custom_port_prefix: 141
 upgrade_folder: v6
 update_website_immediately: false
+minimum_gas_price: '0usomm'
 
 # [Optional] Snapshot
 snapshot_hour: 3

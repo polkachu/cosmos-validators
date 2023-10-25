@@ -6,7 +6,7 @@ node_version: v0.12.0
 repo: https://github.com/OmniFlix/omniflixhub
 genesis: https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json
 seeds: '9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae28207474eb9f168fff9720fd4d418df1ed@35.240.196.102:26656'
-minimum_gas_price: ''
+minimum_gas_price: '0uflix'
 custom_port_prefix: 169
 upgrade_folder: v0.12.x
 update_website_immediately: false

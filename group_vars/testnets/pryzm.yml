@@ -11,6 +11,8 @@ seeds: '915d90e2ff56e77380c81f0849e388e669cc65bc@ptseed.pryzm.zone:26656'
 custom_port_prefix: 248
 upgrade_folder: v15
 update_website_immediately: true
+minimum_gas_price: '0.015upryzm,0.015uusdc'
+gas_params: '--fees 3000upryzm'
 
 # [Optional] Snapshot
 snapshot_hour: 8

@@ -10,6 +10,7 @@ binary_processing: targz
 peers: '5ee2c6cb046d62f90cfdb14eb6f124b60a7a150f@65.108.238.103:19656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:19656'
 custom_port_prefix: 196
+minimum_gas_price: '0uswth'
 
 # [Optional] Snapshot
 snapshot_hour: 1

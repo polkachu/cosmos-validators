@@ -11,6 +11,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:23956'
 custom_port_prefix: 239
 upgrade_folder: v11
 update_website_immediately: false
+minimum_gas_price: '0udvpn'
 
 # [Optional] Snapshot
 snapshot_hour: 2

@@ -11,6 +11,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14256'
 custom_port_prefix: 142
 upgrade_folder: antares
 gas_params: '--gas=auto --gas-adjustment=1.4'
+minimum_gas_price: '0ugraviton'
 
 # [Optional] Snapshot
 snapshot_hour: 4
