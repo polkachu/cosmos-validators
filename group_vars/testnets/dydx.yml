@@ -3,9 +3,9 @@ network: 'dydx'
 folder: '.dydxprotocol'
 daemon: dydxprotocold
 chain_id: dydx-testnet-4
-node_version: 'protocol/v0.4.0'
+node_version: 'protocol/v1.0.1'
 repo: 'https://github.com/dydxprotocol/v4-chain'
-binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv0.4.0/dydxprotocold-v0.4.0-linux-arm64.tar.gz'
+binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv1.0.1/dydxprotocold-v1.0.1-linux-amd64.tar.gz'
 binary_processing: targz
 genesis: 'https://raw.githubusercontent.com/dydxprotocol/v4-testnets/main/dydx-testnet-4/genesis.json'
 seeds: '19d38bb5cea1378db3e16615e63594dc26119a1a@dydx-testnet4-seednode.allthatnode.com:26656,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:23856'

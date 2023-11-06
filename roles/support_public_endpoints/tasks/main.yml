@@ -23,9 +23,13 @@
   import_tasks: comp.yml
   when: partner is defined and partner == 'comp'
 
-- name: import tasks for comp
+- name: import tasks for dydx
   import_tasks: dydx.yml
   when: partner is defined and partner == 'dydx'
+
+- name: import tasks for agor
+  import_tasks: agor.yml
+  when: partner is defined and partner == 'agor'
 
 - name: install nginx package
   become: true

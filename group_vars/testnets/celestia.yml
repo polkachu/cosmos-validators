@@ -3,7 +3,7 @@ network: celestia
 folder: '.celestia-app'
 daemon: celestia-appd
 chain_id: mocha-4
-node_version: 'v1.0.0-rc16'
+node_version: 'v1.3.0'
 repo: https://github.com/celestiaorg/celestia-app.git
 genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha-4/genesis.json'
 seeds: '3314051954fc072a0678ec0cbac690ad8676ab98@65.108.66.220:26656'

@@ -3,14 +3,14 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9001-2
-node_version: v14.1.0
+node_version: v15.0.0
 repo: https://github.com/tharsis/evmos
 genesis: 'https://snapshots.polkachu.com/genesis/evmos/genesis.json'
 peers: '425b9969981dd38bbc53c0f3f01593fdca631667@65.108.131.174:13456'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13456'
 minimum_gas_price: '250000000aevmos'
 custom_port_prefix: 134
-upgrade_folder: v14.0.0
+upgrade_folder: v15.0.0
 update_website_immediately: true
 
 # [Optional] Snapshot

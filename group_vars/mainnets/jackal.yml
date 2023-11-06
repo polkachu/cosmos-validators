@@ -2,7 +2,7 @@ network: jackal
 folder: '.canine'
 daemon: canined
 chain_id: jackal-1
-node_version: v3.0.0
+node_version: v3.0.2
 repo: https://github.com/JackalLabs/canine-chain
 genesis: 'https://cdn.discordapp.com/attachments/1002389406650466405/1034968352591986859/updated_genesis2.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17556'

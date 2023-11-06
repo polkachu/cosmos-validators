@@ -1,0 +1,15 @@
+network: nibiru
+folder: '.nibid'
+daemon: nibid
+chain_id: cataclysm-1
+node_version: v1.0.0
+repo: https://github.com/NibiruChain/nibiru
+genesis: ''
+seeds: ''
+custom_port_prefix: 198
+minimum_gas_price: ''
+
+# [Optional] Snapshot
+snapshot_hour: 7
+snapshot_minute: 0
+wasm: 'inside'

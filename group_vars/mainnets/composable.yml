@@ -2,14 +2,14 @@ network: composable
 folder: '.banksy'
 daemon: centaurid
 chain_id: centauri-1
-node_version: 'v5.2.2-client-fix'
+node_version: 'v6.3.0'
 repo: 'https://github.com/notional-labs/composable-centauri'
 genesis: 'https://raw.githubusercontent.com/notional-labs/composable-networks/main/mainnet/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:22256'
 minimum_gas_price: '0ppica'
 custom_port_prefix: 222
-upgrade_folder: 'v5'
-update_website_immediately: true
+upgrade_folder: 'v6'
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 1

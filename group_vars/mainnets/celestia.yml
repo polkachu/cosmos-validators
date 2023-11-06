@@ -1,0 +1,15 @@
+network: celestia
+folder: '.celestia-app'
+daemon: celestia-appd
+chain_id: celestia
+node_version: 'v1.3.0'
+repo: https://github.com/celestiaorg/celestia-app.git
+genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/celestia/genesis.json'
+peers: '4b19506a0432de219ee2db883c53756c1b3cbdfb@88.217.142.187:26656,890940193b592e7b53b882b62bf85d7a25190192@51.222.244.105:26656,a623f039a36391662a3b514d1fa17fbaa2e25319@149.50.96.24:16656,7d5767dfe229d6b82246165c1c353a56a6da1983@54.177.201.19:26656'
+custom_port_prefix: 116
+minimum_gas_price: '0.1utia'
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
