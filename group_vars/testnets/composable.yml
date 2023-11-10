@@ -2,7 +2,7 @@ network: composable
 folder: '.banksy'
 daemon: centaurid
 chain_id: banksy-testnet-4
-node_version: v6.0.3-ics
+node_version: v6.2.3-testnet
 repo: 'https://github.com/notional-labs/composable-testnet'
 genesis: 'https://raw.githubusercontent.com/notional-labs/composable-networks/main/banksy-testnet-4/genesis.json'
 seeds: 'a89d3d9fc0465615aa1100dcf53172814aa2b8cf@168.119.91.22:2260'

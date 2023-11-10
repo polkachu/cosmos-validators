@@ -7,7 +7,7 @@ repo: https://github.com/Sifchain/sifnode.git
 genesis: 'https://raw.githubusercontent.com/Sifchain/networks/master/betanet/sifchain-1/genesis.json.gz'
 genesis_processing: gz
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13256'
-minimum_gas_price: '0.001rowan'
+minimum_gas_price: '200rowan'
 upgrade_folder: '1.2.0-beta'
 custom_port_prefix: 132
 

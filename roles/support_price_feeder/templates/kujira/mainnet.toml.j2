@@ -602,7 +602,7 @@ prometheus_retention = 120
 [[provider_endpoints]]
 name = "astroport_neutron"
 urls = [
-  "http://insertyourfavoriteRESTendpoint.here",
+  "https://neutron-api.polkachu.com",
   "https://api-neutron.cosmos-spaces.cloud",
   "https://rest-kralum.neutron-1.neutron.org",
   "http://api.neutron.nodestake.top",
@@ -632,8 +632,8 @@ provider_timeout = "1000ms"
 [[provider_endpoints]]
 name = "finv2"
 urls = [
-  "http://127.0.0.1:1317",
-  "http://insertyourfavoriteRESTendpoint.here"
+  "http://127.0.0.1:{{ custom_port_prefix }}17",
+  "https://kujira-api.polkachu.com",
 ]
 
 [contract_addresses.finv2]
@@ -654,7 +654,7 @@ WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
 [[provider_endpoints]]
 name = "osmosisv2"
 urls = [
-  "http://insertyourfavoriteRESTendpoint.here",
+  "https://osmosis-api.polkachu.com",
   "https://lcd.osmosis.zone",
   "https://api.osl.zone",
   "https://rest-osmosis.ecostake.com",
@@ -676,7 +676,7 @@ STOSMOOSMO = "833"
 [[provider_endpoints]]
 name = "uniswapv3"
 urls = [
-  "http://insertyourfavoriteETHendpoint.here"
+  "{{ eth_endpoint }}"
 ]
 provider_timeout = "3000ms"
 
