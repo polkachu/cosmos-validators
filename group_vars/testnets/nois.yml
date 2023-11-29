@@ -5,9 +5,7 @@ chain_id: nois-testnet-005
 node_version: 'v1.0.4'
 repo: https://github.com/noislabs/noisd
 genesis: 'https://raw.githubusercontent.com/noislabs/networks/nois-testnet-005/nois-testnet-005/genesis.json'
-seeds: 'bf07906c7cf0f23606c83be15624be2c67b3929c@139.59.154.47:17356'
-# seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17356'
-peers: ''
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17356'
 minimum_gas_price: '0.05unois'
 custom_port_prefix: 173
 

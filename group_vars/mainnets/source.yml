@@ -1,0 +1,15 @@
+network: source
+folder: '.source'
+daemon: sourced
+chain_id: 'source-1'
+node_version: 'v3.0.0'
+repo: 'https://github.com/Source-Protocol-Cosmos/source.git'
+genesis: 'https://raw.githubusercontent.com/Source-Protocol-Cosmos/mainnet/master/source-1/genesis.json'
+peers: '96d63849a529a15f037a28c276ea6e3ac2449695@34.222.1.252:26656,0107ac60e43f3b3d395fea706cb54877a3241d21@35.87.85.162:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15856'
+minimum_gas_price: '0.25usource'
+custom_port_prefix: 158
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

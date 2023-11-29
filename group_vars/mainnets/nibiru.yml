@@ -13,3 +13,10 @@ minimum_gas_price: 0.025unibi
 snapshot_hour: 7
 snapshot_minute: 0
 wasm: 'inside'
+
+# price feeder (update with your own)
+price_feeder_address: ''
+price_feeder_validator: 'nibivaloper1cz36jg407s0z4f2vd7u6yc44v480dtpljrhdf6'
+price_feeder_network: mainnet
+price_feeder_repo: https://github.com/NibiruChain/pricefeeder
+price_feeder_version: 'v1.0.0'

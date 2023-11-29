@@ -1,0 +1,14 @@
+network: soarchain
+folder: '.soarchain'
+daemon: soarchaind
+chain_id: soarchaintestnet
+node_version: 0.2.5
+repo: 'TBD'
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/soarchain/genesis.json'
+peers: 'e0ee4d996f87d0f2b7706e35e162531c7fd76493@34.165.238.45:26656'
+minimum_gas_price: '0.0001utmotus'
+custom_port_prefix: 252
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

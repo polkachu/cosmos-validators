@@ -1,0 +1,15 @@
+network: union
+folder: '.union'
+daemon: uniond
+chain_id: 'union-testnet-4'
+node_version: 'v0.14.0'
+repo: TBD
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/union/genesis.json'
+seeds: 'a069a341154484298156a56ace42b6e6a71e7b9d@blazingbit.io:27656,8a07752a234bb16471dbb577180de7805ba6b5d9@union.testnet.4.seed.poisonphang.com:26656'
+custom_port_prefix: 246
+minimum_gas_price: '0muno'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'

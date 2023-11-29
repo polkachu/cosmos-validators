@@ -1,0 +1,20 @@
+[Unit]
+Description={{ network }} Price Feeder
+After=network-online.target
+
+[Service]
+User={{ ansible_user }}
+ExecStart={{ user_dir }}/go/bin/{{ network }}_price_feeder
+Restart=always
+StartLimitInterval=0
+RestartSec=3
+LimitNOFILE=65535
+Environment=CHAIN_ID='cataclysm-1'
+Environment=GRPC_ENDPOINT='localhost:{{ custom_port_prefix }}90'
+Environment=WEBSOCKET_ENDPOINT='ws://localhost:{{ custom_port_prefix }}57/websocket'
+Environment=EXCHANGE_SYMBOLS_MAP='{"bitfinex":{"ubtc:unusd":"tBTCUSD","ubtc:uusd":"tBTCUSD","ueth:unusd":"tETHUSD","ueth:uusd":"tETHUSD","uusdc:uusd":"tUDCUSD","uusdc:unusd":"tUDCUSD"},"coingecko":{"ubtc:uusd":"bitcoin","ubtc:unusd":"bitcoin","ueth:uusd":"ethereum","ueth:unusd":"ethereum","uusdt:uusd":"tether","uusdt:unusd":"tether","uusdc:uusd":"usd-coin","uusdc:unusd":"usd-coin","uatom:uusd":"cosmos","uatom:unusd":"cosmos","ubnb:uusd":"binancecoin","ubnb:unusd":"binancecoin","uavax:uusd":"avalanche-2","uavax:unusd":"avalanche-2","usol:uusd":"solana","usol:unusd":"solana","uada:uusd":"cardano","uada:unusd":"cardano"}}'
+Environment=FEEDER_MNEMONIC=''
+Environment=VALIDATOR_ADDRESS='{{ price_feeder_validator }}'
+
+[Install]
+WantedBy=multi-user.target

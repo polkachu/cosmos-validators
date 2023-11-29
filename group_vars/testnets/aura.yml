@@ -2,13 +2,13 @@ network: aura
 folder: '.aura'
 daemon: aurad
 chain_id: euphoria-2
-node_version: euphoria_v0.7.0
+node_version: v0.7.2-euphoria
 repo: https://github.com/aura-nw/aura
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/aura/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:21756'
 minimum_gas_price: '0.0025euaura'
 custom_port_prefix: 217
-upgrade_folder: v0.7.0
+upgrade_folder: v0.7.2
 update_website_immediately: true
 
 # [Optional] Snapshot

@@ -2,14 +2,14 @@ network: terra
 folder: '.terra'
 daemon: terrad
 chain_id: pisco-1
-node_version: 'v2.6.0-rc1'
+node_version: 'v2.8.0'
 repo: https://github.com/terra-money/core
 genesis: https://raw.githubusercontent.com/terra-money/testnet/master/pisco-1/genesis.json
 peers: 'a4a8fbd7d26242263250a1d3ecb39f113832534b@52.73.183.21:26656,3a4c8f4d75781f39b558c3889157acfaa144a793@50.19.18.17:26656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:11756'
 minimum_gas_price: '0.015uluna'
 custom_port_prefix: 117
-upgrade_folder: v2.6
+upgrade_folder: v2.8
 update_website_immediately: true
 
 # [Optional] Snapshot
