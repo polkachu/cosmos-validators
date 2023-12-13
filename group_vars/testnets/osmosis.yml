@@ -2,13 +2,13 @@ network: osmosis
 folder: '.osmosisd'
 daemon: osmosisd
 chain_id: osmo-test-5
-node_version: 'v20.0.0-rc1-testnet'
+node_version: 'v21.0.0-a-rc4-testnet'
 repo: https://github.com/osmosis-labs/osmosis
 genesis: 'https://genesis.osmotest5.osmosis.zone/genesis.json'
 seeds: 'bb197876fd952d245ef6377e3651c157e3d7ed81@157.245.26.231:26656,7c2b9e76be5c2142c76b429d9c29e902599ceb44@157.245.21.183:26656'
 peers: '9df5654683bb903f582d41b7b2e119b29b833cf1@46.4.5.45:12556'
 custom_port_prefix: 125
-upgrade_folder: v20
+upgrade_folder: v21a
 update_website_immediately: true
 
 # [Optional] Snapshot

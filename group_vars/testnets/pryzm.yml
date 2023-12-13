@@ -1,19 +1,16 @@
 network: pryzm
 folder: '.pryzm'
 daemon: pryzmd
-chain_id: 'spectrum-1'
-node_version: 'v0.6.0'
+chain_id: 'indigo-1'
+node_version: '0.9.0'
 repo: 'TBD'
-binary: 'https://storage.googleapis.com/pryzm-resources/pryzmd-0.7.0-linux-amd64.tar.gz'
+binary: 'https://storage.googleapis.com/pryzm-resources/pryzmd-0.9.0-linux-amd64.tar.gz'
 binary_processing: targz
-genesis: https://storage.googleapis.com/pryzm-resources/genesis.json
-seeds: '915d90e2ff56e77380c81f0849e388e669cc65bc@ptseed.pryzm.zone:26656'
+genesis: https://storage.googleapis.com/pryzm-resources/indigo-1/genesis.json
+seeds: 'ff17ca4f46230306412ff5c0f5e85439ee5136f0@testnet-seed.pryzm.zone:26656'
+minimum_gas_price: '0.015upryzm,0.01factory/pryzm15k9s9p0ar0cx27nayrgk6vmhyec3lj7vkry7rx/uusdsim'
 custom_port_prefix: 248
-upgrade_folder: v15
-update_website_immediately: true
-minimum_gas_price: '0.015upryzm,0.015uusdc'
-gas_params: '--fees 3000upryzm'
 
 # [Optional] Snapshot
-snapshot_hour: 8
+snapshot_hour: 3
 snapshot_minute: 30

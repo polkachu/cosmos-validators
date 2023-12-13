@@ -2,13 +2,14 @@ network: neutron
 folder: '.neutrond'
 daemon: neutrond
 chain_id: neutron-1
-node_version: v1.0.4
+node_version: v2.0.0
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json'
 seeds: '24f609fb5946ca3a979f40b7f54132c00104433e@p2p-erheim.neutron-1.neutron.org:26656'
 minimum_gas_price: '0.01untrn,0.005ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9,0.05ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349'
+upgrade_folder: v2.0.0
 custom_port_prefix: 191
-update_website_immediately: true
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 1

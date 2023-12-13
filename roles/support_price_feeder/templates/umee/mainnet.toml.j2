@@ -1,4 +1,4 @@
-gas_adjustment = 1.03
+gas_adjustment = 1.6
 
 [server]
 listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
@@ -147,11 +147,23 @@ threshold = "2"
 base = "INJ"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "SFRXETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WSTETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "TIA"
+threshold = "2"
+
 # currency_pairs
 [[currency_pairs]]
 base = "UMEE"
 providers = [
-  "okx",
+  "mexc",
   "gate",
 ]
 quote = "USDT"
@@ -289,44 +301,21 @@ base = "WETH"
 providers = [
   "eth-uniswap"
 ]
-
 quote = "USDC"
-[[currency_pairs.pair_address_providers]]
-address = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
-provider = "eth-uniswap"
 
 [[currency_pairs]]
 base = "WBTC"
 providers = [
   "eth-uniswap"
 ]
-
 quote = "WETH"
-[[currency_pairs.pair_address_providers]]
-address = "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed"
-provider = "eth-uniswap"
 
 [[currency_pairs]]
 base = "CBETH"
 providers = [
   "eth-uniswap"
 ]
-
 quote = "WETH"
-[[currency_pairs.pair_address_providers]]
-address = "0x840deeef2f115cf50da625f7368c24af6fe74410"
-provider = "eth-uniswap"
-
-[[currency_pairs]]
-base = "LINK"
-providers = [
-  "eth-uniswap"
-]
-
-quote = "WETH"
-[[currency_pairs.pair_address_providers]]
-address = "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8"
-provider = "eth-uniswap"
 
 [[currency_pairs]]
 base = "stATOM"
@@ -502,11 +491,7 @@ base = "RETH"
 providers = [
   "eth-uniswap",
 ]
-
 quote = "WETH"
-[[currency_pairs.pair_address_providers]]
-address = "0xa4e0faA58465A2D369aa21B3e42d43374c6F9613"
-provider = "eth-uniswap"
 
 [[currency_pairs]]
 base = "NCT"
@@ -550,6 +535,30 @@ providers = [
   "gate",
   "bitget",
   "mexc",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SFRXETH"
+providers = [
+  "eth-uniswap"
+]
+quote = "WETH"
+
+[[currency_pairs]]
+base = "WSTETH"
+providers = [
+  "eth-uniswap"
+]
+quote = "WETH"
+
+[[currency_pairs]]
+base = "TIA"
+providers = [
+  "binance",
+  "okx",
+  "bitget",
+  "gate",
 ]
 quote = "USDT"
 

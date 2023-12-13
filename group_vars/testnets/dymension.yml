@@ -2,12 +2,14 @@ network: dymension
 folder: '.dymension'
 daemon: dymd
 chain_id: froopyland_100-1
-node_version: v1.0.2-beta
+node_version: v2.0.0-alpha.5
 repo: https://github.com/dymensionxyz/dymension.git
 genesis: https://raw.githubusercontent.com/dymensionxyz/testnets/main/dymension-hub/froopyland/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20556'
 peers: 'e7857b8ed09bd0101af72e30425555efa8f4a242@148.251.177.108:20556,3410e9bc9c429d6f35e868840f6b7a0ccb29020b@46.4.5.45:20556'
+upgrade_folder: v2
 custom_port_prefix: 205
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

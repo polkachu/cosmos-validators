@@ -21,7 +21,7 @@ server {
         # proxy_set_header Connection upgrade;
 {% else %}
         proxy_set_header Upgrade $http_upgrade;
-        #proxy_set_header Connection upgrade;
+        proxy_set_header Connection upgrade;
 {% endif %}
         proxy_pass      http://127.0.0.1:{{custom_port_prefix}}57;
     }
