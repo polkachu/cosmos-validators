@@ -2,10 +2,10 @@ network: terraclassic
 folder: '.terra'
 daemon: terrad
 chain_id: 'columbus-5'
-node_version: 'v2.3.0'
-repo: https://github.com/terra-money/classic-core
+node_version: 'v2.3.2'
+repo: https://github.com/classic-terra/core
 genesis: 'https://columbus-genesis.s3.ap-northeast-1.amazonaws.com/columbus-5-genesis.json'
 seeds: ''
 minimum_gas_price: '0.015uluna'
 custom_port_prefix: 117
-upgrade_folder: 'v6'
+upgrade_folder: 'v6_1'

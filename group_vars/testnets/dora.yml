@@ -1,0 +1,16 @@
+network: dora
+folder: '.dora'
+daemon: dorad
+chain_id: vota-vk
+node_version: 0.3.0
+repo: https://github.com/DoraFactory/doravota.git
+genesis: 'https://raw.githubusercontent.com/DoraFactory/doravota/main/config/incentivized/genesis.json'
+peers: '74875dff1e01453fe7f37fc0e8820c162992e194@152.228.211.19:26656,3cf64b56149df6c1990ba8e15a0509c52bc1647a@213.133.100.172:27565,43544871409922af8fbf80723aa1c9cbfba26c25@18.143.75.85:26656,f185cdfe3345535cccb6af40069abd94f98b4b38@13.213.30.203:26656,b0eb31338701a6a3f71615de7c4f176ab32c1feb@52.221.239.121:26656'
+minimum_gas_price: '0peaka'
+upgrade_folder: '0.3.0'
+update_website_immediately: true
+custom_port_prefix: 253
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

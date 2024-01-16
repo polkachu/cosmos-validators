@@ -1,10 +1,8 @@
 gas_adjustment = 2.5
-
-gas_prices = "0.00125ukuji"
+gas_prices = "0.0034ukuji"
 enable_server = true
 enable_voter = true
 provider_timeout = "500ms"
-
 history_db = "/var/tmp/feeder.db"
 
 [server]
@@ -12,6 +10,32 @@ listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
 read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
+
+[account]
+address = "{{ price_feeder_address }}"
+chain_id = "{{ chain_id }}"
+validator = "{{ price_feeder_validator }}"
+prefix = "kujira"
+fee_granter="{{ price_feeder_fee_granter }}"
+
+[keyring]
+backend = "{{ price_feeder_backend }}"
+dir = "{{ user_dir }}/{{ folder }}"
+
+[rpc]
+grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
+rpc_timeout = "100ms"
+tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
+
+[telemetry]
+enable_hostname = true
+enable_hostname_label = true
+enable_service_label = true
+enabled = true
+global_labels = [["chain_id", "{{ chain_id }}"]]
+service_name = "price-feeder"
+type = "prometheus"
+prometheus_retention = 120
 
 ### Deviation Thresholds ###
 [[deviation_thresholds]]
@@ -53,6 +77,10 @@ providers = 1
 
 [[provider_min_overrides]]
 denoms = ["QCKUJI", "QCMNTA", "NSTK"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["AXL"]
 providers = 1
 
 ### AMPKUJI ###
@@ -476,13 +504,6 @@ providers = ["osmosisv2"]
 derivative = "twap"
 derivative_period = "30m"
 
-[[currency_pairs]]
-base = "STATOM"
-quote = "MNTA"
-providers = ["finv2"]
-derivative = "twap"
-derivative_period = "30m"
-
 ### stOSMO ###
 [[currency_pairs]]
 base = "STOSMO"
@@ -565,6 +586,28 @@ base = "WETH"
 quote = "USDC"
 providers = ["uniswapv3"]
 
+### WHALE ###
+[[currency_pairs]]
+base = "WHALE"
+quote = "USDT"
+providers = ["mexc"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WHALE"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WHALE"
+quote = "MNTA"
+providers = ["fin"]
+derivative = "twap"
+derivative_period = "30m"
+
 ### WINK ###
 [[currency_pairs]]
 base = "WINK"
@@ -592,14 +635,14 @@ derivative_period = "30m"
 [[currency_pairs]]
 base = "RIO"
 quote = "USDT"
-providers = ["mexc", “okx”]
+providers = ["mexc", "okx"]
 
-[[currency_pairs]]
-base = "RIO"
-quote = "ETH"
-providers = ["pancakev3_bsc"]
-derivative = "twap"
-derivative_period = "30m"
+#[[currency_pairs]]
+#base = "RIO"
+#quote = "ETH"
+#providers = ["pancakev3_bsc"]
+#derivative = "twap"
+#derivative_period = "30m"
 
 [[currency_pairs]]
 base = "NSTK"
@@ -622,33 +665,27 @@ providers = ["finv2"]
 derivative = "twap"
 derivative_period = "30m"
 
-[account]
-address = "{{ price_feeder_address }}"
-chain_id = "{{ chain_id }}"
-validator = "{{ price_feeder_validator }}"
-prefix = "kujira"
-fee_granter="{{ price_feeder_fee_granter }}"
+### AXL ###
+[[currency_pairs]]
+base = "AXL"
+quote = "USD"
+providers = ["coinbase", "crypto"]
 
-[keyring]
-backend = "{{ price_feeder_backend }}"
-dir = "{{ user_dir }}/{{ folder }}"
+[[currency_pairs]]
+base = "AXL"
+quote = "USDT"
+providers = ["bitget", "gate", "huobi", "kucoin", "mexc"]
 
-[rpc]
-grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
-rpc_timeout = "100ms"
-tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
+### TIA ###
+[[currency_pairs]]
+base = "TIA"
+quote = "USD"
+providers = ["coinbase", "kraken"]
 
-[telemetry]
-enable_hostname = true
-enable_hostname_label = true
-enable_service_label = true
-enabled = true
-global_labels = [["chain_id", "{{ chain_id }}"]]
-service_name = "price-feeder"
-type = "prometheus"
-prometheus_retention = 120
-
-### Endpoints ###
+[[currency_pairs]]
+base = "TIA"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "gate", "huobi", "kucoin", "okx"]
 
 ### Astroport ###
 [[provider_endpoints]]
@@ -660,6 +697,8 @@ urls = [
   "http://api.neutron.nodestake.top",
   "https://api.novel.remedy.tm.p2p.org"
 ]
+
+
 
 [contract_addresses.astroport_neutron]
 NTRNATOM = "neutron1e22zh5p8meddxjclevuhjmfj69jxfsa8uu3jvht72rv9d8lkhves6t8veq"
@@ -691,20 +730,16 @@ urls = [
 [contract_addresses.finv2]
 AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s"
 KUJIUSDC = "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
-MNTAKUJI = "kujira1nkgq8xl4flsau7v3vphr3ayc7tprgazg6pzjmq8plkr76v385fhsx26qfa"
 MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
-MNTAUSK = "kujira1mf4v3x3pkuthha5a4r9jd0slgulcxkucy4weuqsvx2n030twduzqewuznf"
-MNTAwBTC = "kujira1y50nul39ql5sf42p67nrsy9j0luly2mvaxmlkmx6888pnzw66k6qc0gku9"
-SOMMMNTA = "kujira1nx5lqc2j4w0ak5dxevj82lar5kunxwj5yamr39xqfazmkksx4f2sksf0hz"
-STARSMNTA = "kujira1hsdzhyvuc2z3f8d3yae84uk62d69vk68vxgudkun7gccz6hvrvfq0vx6fd"
-STATOMMNTA = "kujira1l2x5c2fjjnw9uhrfhtme9snw3tzs4jt8cm0q2ysqssx6zskxatesjm7w7f"
-WBTCMNTA = "kujira1y50nul39ql5sf42p67nrsy9j0luly2mvaxmlkmx6888pnzw66k6qc0gku9"
-wBTCMNTA = "kujira1y50nul39ql5sf42p67nrsy9j0luly2mvaxmlkmx6888pnzw66k6qc0gku9"
-USDCUSK = "kujira1rwx6w02alc4kaz7xpyg3rlxpjl4g63x5jq292mkxgg65zqpn5llq202vh5"
-WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
 NSTKUSK = "kujira1ggtmfuktfcf6plhtdejyyqn5de5uge3tef0jv64ru68h2ctuvyqs3355mn"
 QCKUJIKUJI = "kujira14wsrem89304kpkl6d0j58dl6479eekwt047ccs0qzv9f60w80wzs8rjq4j"
 QCMNTAMNTA = "kujira1ujsr2ge7dr723kse7thjv2rm3k7dkmjaxqzdh8qkcnx5gqz57jsqxy4ker"
+SOMMMNTA = "kujira1nx5lqc2j4w0ak5dxevj82lar5kunxwj5yamr39xqfazmkksx4f2sksf0hz"
+STARSMNTA = "kujira1hsdzhyvuc2z3f8d3yae84uk62d69vk68vxgudkun7gccz6hvrvfq0vx6fd"
+STATOMMNTA = "kujira1l2x5c2fjjnw9uhrfhtme9snw3tzs4jt8cm0q2ysqssx6zskxatesjm7w7f"
+USDCUSK = "kujira1rwx6w02alc4kaz7xpyg3rlxpjl4g63x5jq292mkxgg65zqpn5llq202vh5"
+WHALEMNTA = "kujira1865zmuchjd0g0xr2q5n6hm747s8xju5k8h6mympk4vmqefkuy3hqc66tcw"
+WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
 
 [[provider_endpoints]]
 name = "osmosisv2"
@@ -718,15 +753,13 @@ urls = [
 provider_timeout = "3000ms"
 
 [contract_addresses.osmosisv2]
-KUJIOSMO = "744"
+JUNOOSMO = "1097"
 MNTAOSMO = "1215"
 SOMMOSMO = "627"
-#STARSATOM = "611"
-STARSOSMO = "1096"
+STARSOSMO = "604"
 STATOMATOM = "1136"
 STOSMOOSMO = "833"
-#wBTCOSMO = "1090"
-JUNOOSMO = "1097"
+WHALEOSMO = "1318"
 
 ### Uniswap ###
 [[provider_endpoints]]
@@ -741,9 +774,3 @@ RLBWETH = "0x510100d5143e011db24e2aa38abe85d73d5b2177"
 USDCWETH = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
 WSTETHWETH = "0x109830a1AAaD605BbF02a9dFA7B0B92EC2FB7dAa"
 WETHRIO = "0x5b7e3e37a1aa6369386e5939053779abd3597508"
-
-[contract_addresses.pancakev3_bsc]
-ETHRIO = "0x043681828303cdf9398f0768bf1da99feebf7ee8"
-
-#[[healthchecks]]
-#url = "https://hc-ping.com/HEALTHCHECK-UUID"

@@ -2,17 +2,16 @@ network: nois
 folder: '.noisd'
 daemon: noisd
 chain_id: nois-1
-node_version: 'v1.0.4'
+node_version: 'v1.0.5'
 repo: https://github.com/noislabs/noisd
 genesis: 'https://raw.githubusercontent.com/noislabs/networks/nois1.final.1/nois-1/genesis.json'
 seeds: 'babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:17356'
 peers: '3c5926d0b4b8750f16f6495063e6d762b2556d1e@65.21.122.47:27656,f9c01cefd0f119b29b72c96bd84f37bb9d273874@65.108.6.45:61456'
 minimum_gas_price: '0.05unois'
 custom_port_prefix: 173
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 5
 snapshot_minute: 0
 wasm: 'outside'
-# seed: ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17356
-# peer: c695f41458b08fe87729beffa513f1c38d20d1db@193.70.33.64:17356

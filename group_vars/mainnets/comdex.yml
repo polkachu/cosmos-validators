@@ -2,13 +2,13 @@ network: comdex
 folder: '.comdex'
 daemon: comdex
 chain_id: comdex-1
-node_version: v11.5.1
+node_version: v13.4.0
 repo: https://github.com/comdex-official/comdex.git
 genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/mainnet/comdex-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13156'
 minimum_gas_price: '0.025ucmdx'
 custom_port_prefix: 131
-upgrade_folder: v11.5.0
+upgrade_folder: v13.3.0
 update_website_immediately: true
 
 # [Optional] Snapshot

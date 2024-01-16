@@ -31,6 +31,10 @@
   import_tasks: agor.yml
   when: partner is defined and partner == 'agor'
 
+- name: import tasks for zm
+  import_tasks: zm.yml
+  when: partner is defined and partner == 'zm'
+
 - name: install nginx package
   become: true
   apt:

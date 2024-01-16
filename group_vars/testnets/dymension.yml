@@ -2,7 +2,7 @@ network: dymension
 folder: '.dymension'
 daemon: dymd
 chain_id: froopyland_100-1
-node_version: v2.0.0-alpha.5
+node_version: v2.0.0-alpha.7
 repo: https://github.com/dymensionxyz/dymension.git
 genesis: https://raw.githubusercontent.com/dymensionxyz/testnets/main/dymension-hub/froopyland/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20556'

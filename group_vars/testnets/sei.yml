@@ -2,12 +2,12 @@ network: sei
 folder: '.sei'
 daemon: seid
 chain_id: 'atlantic-2'
-node_version: 'v3.3.1'
+node_version: 'v3.6.1'
 repo: https://github.com/sei-protocol/sei-chain.git
 genesis: 'https://raw.githubusercontent.com/sei-protocol/testnet/main/atlantic-2/genesis.json'
 peers: '65c257f9275beb1b99ca169ef89743c034b15db0@3.76.192.224:26656,650a118a5919c1d0eb3d9f17b14cfb2a6b1c8b9d@3.120.150.255:26656,5710d992d9c33b01c3b23df4cbd715e9b4c7b46b@3.71.0.14:26656,272699de6f61eb4a7509ae33fa49af0d4bf13784@18.192.115.237:26656,862b03573172a3366afe1cabb903ba0552689e63@198.244.228.59:11956,1a71212a12e67dbf0d1b557e54251676f8f8af6b@65.21.200.7:7000,762cf4f35aec09857df14ac2bc78824f8f89d5db@65.109.28.219:26656'
 custom_port_prefix: 119
-upgrade_folder: v3.3.0
+upgrade_folder: v3.6.1
 minimum_gas_price: 3.5usei
 update_website_immediately: true
 gas_params: '--fees 2000usei'

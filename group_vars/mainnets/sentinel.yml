@@ -2,7 +2,7 @@ network: sentinel
 folder: '.sentinelhub'
 daemon: sentinelhub
 chain_id: sentinelhub-2
-node_version: 'v0.11.1'
+node_version: 'v0.11.5'
 repo: 'https://github.com/sentinel-official/hub.git'
 genesis: 'https://raw.githubusercontent.com/sentinel-official/networks/main/sentinelhub-2/genesis.zip'
 genesis_processing: zip

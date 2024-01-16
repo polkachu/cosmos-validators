@@ -9,6 +9,7 @@ genesis: 'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha-4/
 seeds: '3314051954fc072a0678ec0cbac690ad8676ab98@65.108.66.220:26656'
 peers: '34499b1ac473fbb03894c883178ecc83f0d6eaf6@64.227.18.169:26656'
 custom_port_prefix: 116
+minimum_gas_price: '0.002utia'
 update_website_immediately: true
 
 # [Optional] Snapshot

@@ -2,13 +2,14 @@ network: odin
 folder: '.odin'
 daemon: odind
 chain_id: odin-mainnet-freya
-node_version: v0.6.0
+node_version: v0.6.2
 repo: https://github.com/ODIN-PROTOCOL/odin-core
-genesis: https://raw.githubusercontent.com/ODIN-PROTOCOL/networks/master/mainnets/odin-mainnet-freya/genesis.json
-seeds: 'c8ee9f66163f0c1220c586eab1a2a57f6381357f@odin.seed.rhinostake.com:16658'
-minimum_gas_price: ''
+genesis: https://defiantlabs-public.s3.amazonaws.com/odin/mainnet/genesis.json
+seeds: '02e905f49e1b869f55ad010979931b542302a9e6@35.241.221.154:26656,1fbdc459f333221abd04eb82f6ca623a3648bba0@142.132.231.209:26656'
+minimum_gas_price: '0.0125loki'
 custom_port_prefix: 168
 
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 30
+wasm: 'outside'

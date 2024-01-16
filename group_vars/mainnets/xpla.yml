@@ -2,7 +2,7 @@ network: xpla
 folder: '.xpla'
 daemon: xplad
 chain_id: 'dimension_37-1'
-node_version: 'v1.3.0'
+node_version: 'v1.3.3'
 repo: https://github.com/xpladev/xpla
 genesis: https://raw.githubusercontent.com/xpladev/mainnet/main/dimension_37-1/genesis.json
 seeds: 'e7b6016ce5663a69ba71a982072315545eb0d5f6@seed.xpla.delightlabs.io:26656'
@@ -10,6 +10,7 @@ peers: '15efa0a83dff372752369cc984492d9ee72f332b@54.81.115.88:26656,e0d49fdef6af
 custom_port_prefix: 201
 upgrade_folder: Volunteer
 minimum_gas_price: '0uxpla'
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

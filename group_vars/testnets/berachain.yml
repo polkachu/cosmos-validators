@@ -1,0 +1,13 @@
+network: berachain
+folder: '.berad'
+daemon: berad
+chain_id: artio-80085
+node_version: 'v0.1.0-alpha'
+repo: TBD
+genesis: https://raw.githubusercontent.com/berachain/networks/main/testnets/artio-80085/config/genesis.json?token=GHSAT0AAAAAACMOMAD2E7NFZF5I3BFGCYYUZM3MKVA
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:25456'
+custom_port_prefix: 254
+
+# [Optional] Snapshot
+snapshot_hour: 12
+snapshot_minute: 0

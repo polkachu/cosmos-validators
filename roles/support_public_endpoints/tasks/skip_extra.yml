@@ -1,9 +1,9 @@
 ---
 - name: set dns_prefix for skip
   set_fact:
-    rpc: '{{ chain_id }}-skip-rpc-1'
-    api: '{{ chain_id }}-skip-api-1'
-    grpc: '{{ chain_id }}-skip-grpc-1'
+    rpc: '{{ chain_id }}-skip-rpc-{{ node_number }}'
+    api: '{{ chain_id }}-skip-api-{{ node_number }}'
+    grpc: '{{ chain_id }}-skip-grpc-{{ node_number }}'
 
 - name: check if .htpasswd file already exists
   stat:
