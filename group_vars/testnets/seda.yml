@@ -1,0 +1,13 @@
+network: seda
+folder: '.seda-chain'
+daemon: seda-chaind
+chain_id: seda-1-testnet
+node_version: v0.0.5
+repo: 'https://github.com/sedaprotocol/seda-chain'
+custom_port_prefix: 258
+genesis: 'http://13.41.125.154:26657/genesis'
+seeds: 'c24f01b4a897b37dd958633943c5b1d1ec5809f1@18.171.36.35:26656,cf332254c6b8aeedba4a716568458db742ecc79c@13.41.125.154:26656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:25856'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

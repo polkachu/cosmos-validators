@@ -18,6 +18,9 @@
 - name: firewall setup
   import_tasks: firewall.yml
 
+- name: install nginx
+  import_tasks: nginx.yml
+
 - name: install cosmos software
   import_tasks: cosmos_software.yml
   when: cosmos_software|default(true)|bool == true

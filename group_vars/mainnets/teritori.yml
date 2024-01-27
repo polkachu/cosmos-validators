@@ -2,13 +2,13 @@ network: teritori
 folder: '.teritorid'
 daemon: teritorid
 chain_id: teritori-1
-node_version: v1.4.0
+node_version: v2.0.6
 repo: https://github.com/TERITORI/teritori-chain
 genesis: https://media.githubusercontent.com/media/TERITORI/teritori-chain/v1.1.2/mainnet/teritori-1/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15956'
 minimum_gas_price: '0.0utori'
 custom_port_prefix: 159
-upgrade_folder: v1.4.0
+upgrade_folder: v2.0.0
 update_website_immediately: false
 
 # [Optional] Snapshot

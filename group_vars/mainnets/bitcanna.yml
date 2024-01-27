@@ -2,14 +2,14 @@ network: bitcanna
 folder: '.bcna'
 daemon: bcnad
 chain_id: bitcanna-1
-node_version: v2.0.3
+node_version: v3.0.0
 repo: https://github.com/BitCannaGlobal/bcna
 genesis: 'https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13056'
 minimum_gas_price: '0.001ubcna'
 custom_port_prefix: 130
-upgrade_folder: wakeandbake
-update_website_immediately: true
+upgrade_folder: GanjaRevolution
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 1

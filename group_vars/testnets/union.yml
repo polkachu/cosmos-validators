@@ -1,11 +1,12 @@
 network: union
 folder: '.union'
 daemon: uniond
-chain_id: 'union-testnet-4'
-node_version: 'v0.14.0'
+chain_id: 'union-testnet-5'
+node_version: 'v0.18.0'
 repo: TBD
-genesis: 'https://snapshots.polkachu.com/testnet-genesis/union/genesis.json'
-seeds: 'a069a341154484298156a56ace42b6e6a71e7b9d@blazingbit.io:27656,8a07752a234bb16471dbb577180de7805ba6b5d9@union.testnet.4.seed.poisonphang.com:26656'
+binary: https://api.nodes.guru/uniond
+genesis: 'https://api.nodes.guru/union-testnet-5-genesis.json'
+seeds: 'daa56ac6573c6427ecef438d4c248d72b206597b@union.testnet.4.seed.poisonphang.com:26656'
 custom_port_prefix: 246
 minimum_gas_price: '0muno'
 

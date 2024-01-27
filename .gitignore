@@ -5,3 +5,6 @@ playground/
 roles/support_seed/templates/node_key.json.j2
 group_vars/mainnets/sei_copy.yml
 roles/support_restake/templates/restake.json
+group_vars/testnets/initia.yml
+group_vars/testnets/berachain.yml
+group_vars/mainnets/zetachain.yml

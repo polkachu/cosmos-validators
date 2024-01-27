@@ -10,3 +10,8 @@ peers: '55a1d7354f783b0983cf6ff5d13ca98f9eb611e3@54.254.158.153:26656,6c77c0ef28
 minimum_gas_price: '0peaka'
 upgrade_folder: '0.3.0'
 custom_port_prefix: 253
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30
+wasm: 'outside'

@@ -11,6 +11,20 @@
     port: '{{ ansible_port }}'
     proto: tcp
 
+- name: Allow access from Monitoring server
+  ufw:
+    rule: allow
+    src: '{{ monitoring_server }}'
+    comment: 'Monitor'
+  when: monitoring_server is defined
+
+- name: Allow access from Polkachu server
+  ufw:
+    rule: allow
+    src: '{{ polkachu_server }}'
+    comment: 'Polkachu'
+  when: polkachu_server is defined
+
 - name: Enable firewall
   ufw:
     state: enabled

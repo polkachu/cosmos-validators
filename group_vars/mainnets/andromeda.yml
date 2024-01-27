@@ -1,0 +1,14 @@
+network: andromeda
+folder: '.andromeda'
+daemon: andromedad
+chain_id: 'andromeda-1'
+node_version: 'andromeda-1-v0.1.0'
+repo: 'https://github.com/andromedaprotocol/andromedad'
+genesis: 'https://raw.githubusercontent.com/andromedaprotocol/mainnet/release/genesis.json'
+peers: '17dda7b03ce866dbe36c048282fb742dd895a489@95.56.244.244:56659,b11f979002d6e77062094e2fcf904d60755f59c4@141.95.66.199:27402,3219b5948e6aa5101c3130274b13ee0c06a96562@57.128.92.207:27402,26cdc42778d24c8b0b0b68ed07c97685bfd8682f@178.162.165.65:26656'
+custom_port_prefix: 212
+minimum_gas_price: '0uandr'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

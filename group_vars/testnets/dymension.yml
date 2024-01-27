@@ -10,6 +10,7 @@ peers: 'e7857b8ed09bd0101af72e30425555efa8f4a242@148.251.177.108:20556,3410e9bc9
 upgrade_folder: v2
 custom_port_prefix: 205
 update_website_immediately: true
+minimum_gas_price: 20000000000adym
 
 # [Optional] Snapshot
 snapshot_hour: 1
