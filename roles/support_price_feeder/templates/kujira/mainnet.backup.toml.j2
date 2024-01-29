@@ -1,0 +1,777 @@
+gas_adjustment = 2.5
+gas_prices = "0.0034ukuji"
+enable_server = true
+enable_voter = true
+provider_timeout = "500ms"
+
+history_db = "/var/tmp/feeder.db"
+
+[server]
+listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
+read_timeout = "20s"
+verbose_cors = true
+write_timeout = "20s"
+
+[account]
+address = "{{ price_feeder_address }}"
+chain_id = "{{ chain_id }}"
+validator = "{{ price_feeder_validator }}"
+prefix = "kujira"
+fee_granter="{{ price_feeder_fee_granter }}"
+
+[keyring]
+backend = "{{ price_feeder_backend }}"
+dir = "{{ user_dir }}/{{ folder }}"
+
+[rpc]
+grpc_endpoint = "localhost:{{ custom_port_prefix }}90"
+rpc_timeout = "100ms"
+tmrpc_endpoint = "http://localhost:{{ custom_port_prefix }}57"
+
+[telemetry]
+enable_hostname = true
+enable_hostname_label = true
+enable_service_label = true
+enabled = true
+global_labels = [["chain_id", "{{ chain_id }}"]]
+service_name = "price-feeder"
+type = "prometheus"
+prometheus_retention = 120
+
+### Deviation Thresholds ###
+[[deviation_thresholds]]
+base = "USDT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "KUJI"
+threshold = "2"
+
+### Provider Min Overrides ###
+[[provider_min_overrides]]
+denoms = ["AMPKUJI"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["STARS", "SOMM"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["STATOM", "STOSMO", "MNTA", "WINK", "USK"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["KUJI"]
+providers = 2
+
+[[provider_min_overrides]]
+denoms = ["NTRN"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["RLB"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["WSTETH", "WETH"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["QCKUJI", "QCMNTA", "NSTK"]
+providers = 1
+
+[[provider_min_overrides]]
+denoms = ["AXL"]
+providers = 1
+
+### AMPKUJI ###
+[[currency_pairs]]
+base = "AMPKUJI"
+quote = "KUJI"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### AKT ###
+[[currency_pairs]]
+base = "AKT"
+quote = "USD"
+providers = ["crypto", "kraken"]
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USDT"
+providers = ["gate", "huobi", "kucoin"]
+
+### ARB ###
+[[currency_pairs]]
+base = "ARB"
+quote = "USD"
+providers = ["bitfinex", "crypto", "kraken"]
+
+[[currency_pairs]]
+base = "ARB"
+quote = "USDT"
+providers = ["bitget", "bybit", "gate", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### ATOM ###
+[[currency_pairs]]
+base = "ATOM"
+quote = "USD"
+providers = ["kraken"]
+
+[[currency_pairs]]
+base = "ATOM"
+quote = "USDT"
+providers = ["bitget", "bybit", "crypto", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### AVAX ###
+[[currency_pairs]]
+base = "AVAX"
+quote = "USD"
+providers = ["bitfinex", "kraken"]
+
+[[currency_pairs]]
+base = "AVAX"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "crypto", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### BAND ###
+[[currency_pairs]]
+base = "BAND"
+quote = "USD"
+providers = ["bitfinex", "kraken"]
+
+[[currency_pairs]]
+base = "BAND"
+quote = "USDT"
+providers = ["binance", "bitget", "gate", "huobi", "kucoin", "okx", "phemex"]
+
+### BNB ###
+#[[currency_pairs]]
+#base = "BNB"
+#quote = "USD"
+#providers = ["binanceus"]
+
+[[currency_pairs]]
+base = "BNB"
+quote = "USDT"
+providers = ["bitget", "bybit", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### BTC ###
+[[currency_pairs]]
+base = "BTC"
+quote = "USD"
+providers = ["bitfinex", "crypto"]
+
+[[currency_pairs]]
+base = "BTC"
+quote = "USDT"
+providers = ["bitget", "bybit", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### CRO ###
+[[currency_pairs]]
+base = "CRO"
+quote = "USDT"
+providers = ["bitget", "crypto", "gate", "kucoin", "lbank", "mexc", "okx"]
+
+### DOT ###
+[[currency_pairs]]
+base = "DOT"
+quote = "USD"
+providers = ["bitfinex", "coinbase", "kraken"]
+
+[[currency_pairs]]
+base = "DOT"
+quote = "USDT"
+providers = ["bitget", "bybit", "crypto", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### ETH ###
+#[[currency_pairs]]
+#base = "ETH"
+#quote = "BTC"
+#providers = ["lbank"]
+
+[[currency_pairs]]
+base = "ETH"
+quote = "USD"
+providers = ["bitfinex", "crypto"]
+
+[[currency_pairs]]
+base = "ETH"
+quote = "USDT"
+providers = ["bitget", "bybit", "gate", "hitbtc", "huobi", "kraken", "kucoin", "mexc", "okx", "phemex"]
+
+### FET ###
+[[currency_pairs]]
+base = "FET"
+quote = "USD"
+providers = ["bitfinex", "kraken"]
+
+[[currency_pairs]]
+base = "FET"
+quote = "USDT"
+providers = ["binance", "bitget", "crypto", "gate", "huobi", "kucoin", "lbank", "mexc", "phemex"]
+
+### FTM ###
+[[currency_pairs]]
+base = "FTM"
+quote = "USD"
+providers = ["bitfinex", "kraken"]
+
+[[currency_pairs]]
+base = "FTM"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "crypto", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### GLMR ###
+#[[currency_pairs]]
+#base = "GLMR"
+#quote = "USD"
+#providers = ["kraken"]
+
+[[currency_pairs]]
+base = "GLMR"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "crypto", "gate", "huobi", "kucoin", "lbank", "mexc", "okx"]
+
+### HNT ###
+[[currency_pairs]]
+base = "HNT"
+quote = "USD"
+providers = ["coinbase", "crypto"]
+
+[[currency_pairs]]
+base = "HNT"
+quote = "USDT"
+providers = ["bitget", "bybit", "gate", "kucoin", "okx"]
+
+### INJ ###
+[[currency_pairs]]
+base = "INJ"
+quote = "USD"
+providers = ["coinbase", "kraken"]
+
+[[currency_pairs]]
+base = "INJ"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "crypto", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "phemex"]
+
+### JUNO ###
+[[currency_pairs]]
+base = "JUNO"
+quote = "USD"
+providers = ["kraken"]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USDT"
+providers = ["bitget", "mexc"]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### KAVA ###
+[[currency_pairs]]
+base = "KAVA"
+quote = "USD"
+providers = ["kraken"]
+
+[[currency_pairs]]
+base = "KAVA"
+quote = "USDT"
+providers = ["binance", "bitget", "crypto", "gate", "huobi", "kucoin", "lbank", "mexc"]
+
+### KUJI ###
+[[currency_pairs]]
+base = "KUJI"
+quote = "USDC"
+providers = ["camelotv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "USDC"
+providers = ["fin"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "USDT"
+providers = ["mexc"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### LINK ###
+[[currency_pairs]]
+base = "LINK"
+quote = "USD"
+providers = ["coinbase", "crypto", "kraken"]
+
+[[currency_pairs]]
+base = "LINK"
+quote = "USDT"
+providers = ["binance", "bitget", "gate", "huobi", "lbank", "okx", "phemex"]
+
+### LUNA ###
+[[currency_pairs]]
+base = "LUNA"
+quote = "USD"
+providers = ["bitfinex", "kraken"]
+
+[[currency_pairs]]
+base = "LUNA"
+quote = "USDT"
+providers = ["bitget", "bybit", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### LUNC ###
+[[currency_pairs]]
+base = "LUNC"
+quote = "USD"
+providers = ["crypto"]
+
+[[currency_pairs]]
+base = "LUNC"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### MATIC ###
+[[currency_pairs]]
+base = "MATIC"
+quote = "USD"
+providers = ["bitfinex", "crypto", "kraken"]
+
+[[currency_pairs]]
+base = "MATIC"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "gate", "hitbtc", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### MNTA ###
+[[currency_pairs]]
+base = "MNTA"
+quote = "KUJI"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "MNTA"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+#[[currency_pairs]]
+#base = "MNTA"
+#quote = "USDC"
+#providers = ["finv2"]
+#derivative = "twap"
+#derivative_period = "30m"
+
+[[currency_pairs]]
+base = "MNTA"
+quote = "USK"
+providers = ["fin"]
+derivative = "twap"
+derivative_period = "30m"
+
+#[[currency_pairs]]
+#base = "MNTA"
+#quote = "wBTC"
+#providers = ["finv2"]
+#derivative = "twap"
+#derivative_period = "30m"
+
+### NTRN ###
+[[currency_pairs]]
+base = "NTRN"
+quote = "ATOM"
+providers = ["astroport_neutron"]
+derivative = "twap"
+derivative_period = "30m"
+
+### OSMO ###
+[[currency_pairs]]
+base = "OSMO"
+quote = "USD"
+providers = ["coinbase"]
+
+[[currency_pairs]]
+base = "OSMO"
+quote = "USDT"
+providers = ["binance", "bitget", "gate", "huobi", "kucoin", "lbank", "mexc"]
+
+### PAXG ###
+[[currency_pairs]]
+base = "PAXG"
+quote = "USD"
+providers = ["kraken"]
+
+[[currency_pairs]]
+base = "PAXG"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "crypto", "kucoin", "mexc", "phemex"]
+
+### RLB ###
+[[currency_pairs]]
+base = "RLB"
+quote = "WETH"
+providers = ["uniswapv3"]
+derivative = "twap"
+derivative_period = "30m"
+
+### SCRT ###
+#[[currency_pairs]]
+#base = "SCRT"
+#quote = "BTC"
+#providers = ["bkex"]
+
+[[currency_pairs]]
+base = "SCRT"
+quote = "USD"
+providers = ["kraken"]
+
+[[currency_pairs]]
+base = "SCRT"
+quote = "USDT"
+providers = ["binance", "bybit", "gate", "huobi", "kucoin", "lbank", "mexc"]
+
+### SOL ###
+[[currency_pairs]]
+base = "SOL"
+quote = "USD"
+providers = ["coinbase", "kraken"]
+
+[[currency_pairs]]
+base = "SOL"
+quote = "USDT"
+providers = ["binance", "huobi", "okx", "bybit", "xt", "gate", "bitget", "kucoin"]
+
+### SOMM ###
+[[currency_pairs]]
+base = "SOMM"
+quote = "MNTA"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "SOMM"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### STARS ###
+#[[currency_pairs]]
+#base = "STARS"
+#quote = "ATOM"
+#providers = ["osmosisv2"]
+#derivative = "twap"
+#derivative_period = "30m"
+
+[[currency_pairs]]
+base = "STARS"
+quote = "MNTA"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "STARS"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### stATOM ###
+[[currency_pairs]]
+base = "STATOM"
+quote = "ATOM"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### stOSMO ###
+[[currency_pairs]]
+base = "STOSMO"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### UNI ###
+[[currency_pairs]]
+base = "UNI"
+quote = "USD"
+providers = ["coinbase", "crypto", "kraken"]
+
+[[currency_pairs]]
+base = "UNI"
+quote = "USDT"
+providers = ["binance", "bitget", "gate", "huobi", "lbank", "okx", "phemex", "poloniex"]
+
+### USDC ###
+[[currency_pairs]]
+base = "USDC"
+quote = "USD"
+providers = ["kraken"]
+
+[[currency_pairs]]
+base = "USDC"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "gate", "huobi", "kucoin", "lbank", "mexc", "okx", "phemex"]
+
+### USDT ###
+[[currency_pairs]]
+base = "USDT"
+quote = "USD"
+providers = ["crypto", "gate", "kraken"]
+
+### USK ###
+#[[currency_pairs]]
+#base = "USK"
+#quote = "KUJI"
+#providers = ["finv2"]
+#derivative = "twap"
+#derivative_period = "30m"
+
+[[currency_pairs]]
+base = "USK"
+quote = "MNTA"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "USK"
+quote = "USDC"
+providers = ["fin"]
+derivative = "twap"
+derivative_period = "30m"
+
+### WBTC ###
+[[currency_pairs]]
+base = "WBTC"
+quote = "BTC"
+providers = ["kraken", "kucoin"]
+
+[[currency_pairs]]
+base = "WBTC"
+quote = "MNTA"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WBTC"
+quote = "USDT"
+providers = ["bitget", "bybit", "hitbtc", "mexc", "okx", "phemex"]
+
+### WETH ###
+[[currency_pairs]]
+base = "WETH"
+quote = "USDC"
+providers = ["uniswapv3"]
+
+### WHALE ###
+[[currency_pairs]]
+base = "WHALE"
+quote = "USDT"
+providers = ["mexc"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WHALE"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WHALE"
+quote = "MNTA"
+providers = ["fin"]
+derivative = "twap"
+derivative_period = "30m"
+
+### WINK ###
+[[currency_pairs]]
+base = "WINK"
+quote = "USK"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### WSTETH ###
+[[currency_pairs]]
+base = "WSTETH"
+quote = "WETH"
+providers = ["uniswapv3"]
+derivative = "twap"
+derivative_period = "30m"
+
+### RIO ###
+[[currency_pairs]]
+base = "RIO"
+quote = "WETH"
+providers = ["uniswapv3"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "RIO"
+quote = "USDT"
+providers = ["mexc", "okx"]
+
+#[[currency_pairs]]
+#base = "RIO"
+#quote = "ETH"
+#providers = ["pancakev3_bsc"]
+#derivative = "twap"
+#derivative_period = "30m"
+
+[[currency_pairs]]
+base = "NSTK"
+quote = "USK"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "QCKUJI"
+quote = "KUJI"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "QCMNTA"
+quote = "MNTA"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+### AXL ###
+[[currency_pairs]]
+base = "AXL"
+quote = "USD"
+providers = ["coinbase", "crypto"]
+
+[[currency_pairs]]
+base = "AXL"
+quote = "USDT"
+providers = ["bitget", "gate", "huobi", "kucoin", "mexc"]
+
+### TIA ###
+[[currency_pairs]]
+base = "TIA"
+quote = "USD"
+providers = ["coinbase", "kraken"]
+
+[[currency_pairs]]
+base = "TIA"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "gate", "huobi", "kucoin", "okx"]
+
+### Astroport ###
+[[provider_endpoints]]
+name = "astroport_neutron"
+urls = [
+  "https://neutron-api.polkachu.com",
+  "https://api-neutron.cosmos-spaces.cloud",
+  "https://rest-kralum.neutron-1.neutron.org",
+  "http://api.neutron.nodestake.top",
+  "https://api.novel.remedy.tm.p2p.org"
+]
+
+
+
+[contract_addresses.astroport_neutron]
+NTRNATOM = "neutron1e22zh5p8meddxjclevuhjmfj69jxfsa8uu3jvht72rv9d8lkhves6t8veq"
+
+### Camelot ###
+[contract_addresses.camelotv2]
+KUJIUSDC = "0xDB7D929434F0a52fFE3E5631044776b23E6f8a67"
+
+[contract_addresses.camelotv3]
+WETHUSDC = "0x521aa84ab3fcc4c05cABaC24Dc3682339887B126"
+
+### Fin ###
+[[provider_endpoints]]
+name = "fin"
+urls = [
+  "https://api.kujira.app",
+  "https://kaiyo-1.gigalixirapp.com"
+]
+provider_timeout = "1000ms"
+
+### Finv2 ###
+[[provider_endpoints]]
+name = "finv2"
+urls = [
+  "http://127.0.0.1:{{ custom_port_prefix }}17",
+  "https://kujira-api.polkachu.com",
+]
+
+[contract_addresses.finv2]
+AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s"
+KUJIUSDC = "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
+MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
+NSTKUSK = "kujira1ggtmfuktfcf6plhtdejyyqn5de5uge3tef0jv64ru68h2ctuvyqs3355mn"
+QCKUJIKUJI = "kujira14wsrem89304kpkl6d0j58dl6479eekwt047ccs0qzv9f60w80wzs8rjq4j"
+QCMNTAMNTA = "kujira1ujsr2ge7dr723kse7thjv2rm3k7dkmjaxqzdh8qkcnx5gqz57jsqxy4ker"
+SOMMMNTA = "kujira1nx5lqc2j4w0ak5dxevj82lar5kunxwj5yamr39xqfazmkksx4f2sksf0hz"
+STARSMNTA = "kujira1hsdzhyvuc2z3f8d3yae84uk62d69vk68vxgudkun7gccz6hvrvfq0vx6fd"
+STATOMMNTA = "kujira1l2x5c2fjjnw9uhrfhtme9snw3tzs4jt8cm0q2ysqssx6zskxatesjm7w7f"
+USDCUSK = "kujira1rwx6w02alc4kaz7xpyg3rlxpjl4g63x5jq292mkxgg65zqpn5llq202vh5"
+WHALEMNTA = "kujira1865zmuchjd0g0xr2q5n6hm747s8xju5k8h6mympk4vmqefkuy3hqc66tcw"
+WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
+
+[[provider_endpoints]]
+name = "osmosisv2"
+urls = [
+  "https://osmosis-api.polkachu.com",
+  "https://lcd.osmosis.zone",
+  "https://api.osl.zone",
+  "https://rest-osmosis.ecostake.com",
+  "https://rest.cosmos.directory/osmosis"
+]
+provider_timeout = "3000ms"
+
+[contract_addresses.osmosisv2]
+JUNOOSMO = "1097"
+MNTAOSMO = "1215"
+SOMMOSMO = "627"
+STARSOSMO = "604"
+STATOMATOM = "1136"
+STOSMOOSMO = "833"
+WHALEOSMO = "1318"
+
+### Uniswap ###
+[[provider_endpoints]]
+name = "uniswapv3"
+urls = [
+  "{{ eth_endpoint }}"
+]
+provider_timeout = "3000ms"
+
+[contract_addresses.uniswapv3]
+RLBWETH = "0x510100d5143e011db24e2aa38abe85d73d5b2177"
+USDCWETH = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+WSTETHWETH = "0x109830a1AAaD605BbF02a9dFA7B0B92EC2FB7dAa"
+WETHRIO = "0x5b7e3e37a1aa6369386e5939053779abd3597508"

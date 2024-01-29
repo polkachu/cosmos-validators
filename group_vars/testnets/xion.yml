@@ -2,7 +2,7 @@ network: xion
 folder: '.xiond'
 daemon: xiond
 chain_id: xion-testnet-1
-node_version: v0.3.3
+node_version: v0.3.4
 repo: https://github.com/burnt-labs/xion.git
 genesis: 'https://files.xion-testnet-1.burnt.com/genesis.json'
 seeds: '7900d5f177228def24170f9631db76afab20278e@seed.xion-testnet-1.burnt.com:11656'
