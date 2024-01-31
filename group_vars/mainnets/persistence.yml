@@ -2,13 +2,13 @@ network: persistence
 folder: '.persistenceCore'
 daemon: persistenceCore
 chain_id: core-1
-node_version: v10.3.0
+node_version: v10.4.0
 repo: https://github.com/persistenceOne/persistenceCore
 genesis: 'https://raw.githubusercontent.com/persistenceOne/networks/master/core-1/final_genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15456'
 minimum_gas_price: '0.005uxprt'
 custom_port_prefix: 154
-upgrade_folder: v10.3.0
+upgrade_folder: v10.4.0
 update_website_immediately: false
 gas_params: '--fees 1000uxprt'
 

@@ -8,18 +8,6 @@
     force: yes
     recursive: no
 
-- name: Skip replace tendermint
-  command: '{{ item }}'
-  with_items:
-    - 'go mod edit -replace github.com/tendermint/tendermint=github.com/skip-mev/mev-tendermint@{{ skip_version }}'
-    - 'go mod tidy'
-  args:
-    chdir: '{{ user_dir }}/{{ network }}'
-  environment:
-    PATH: '{{ path }}'
-    GOPATH: '{{ user_dir }}/go'
-  when: skip_version is defined and (type == "main" or type == "test")
-
 - name: Install node
   command: '{{ item }}'
   args:
