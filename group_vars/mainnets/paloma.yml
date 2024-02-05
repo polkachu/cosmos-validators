@@ -1,0 +1,15 @@
+network: paloma
+folder: '.paloma'
+daemon: palomad
+chain_id: 'messenger'
+node_version: 'v1.11.0'
+repo: https://github.com/palomachain/paloma
+genesis: https://raw.githubusercontent.com/palomachain/mainnet/master/messenger/genesis.json
+custom_port_prefix: 121
+upgrade_folder: 'v1.11.0'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12156'
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

@@ -306,6 +306,13 @@ providers = [
 ]
 
 [[currency_pairs]]
+base = "FUZN"
+quote = "USK"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
 base = "GLMR"
 quote = "USDT"
 providers = [
@@ -796,6 +803,7 @@ derivative_period = "30m"
 [[provider_min_overrides]]
 denoms = [
     "AMPKUJI",
+    "FUZN",
     "JUNO",
     "MNTA",
     "NSTK",
@@ -890,6 +898,7 @@ ATOMSTKATOM = "persistence1335rlmhujm0gj5e9gh7at9jpqvqckz0mpe4v284ar4lw5mlkryzsz
 
 [contract_addresses.finv2]
 AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s"
+FUZNUSK = "kujira1w6gpsfn55ufh3g3pf6qjrdhfj6rp09zqmruvgvzupkl39mtlpcdqw2ys7e"
 KUJIUSDC = "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867"
 KUJIUSK = "kujira193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyq66wfrf"
 MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"

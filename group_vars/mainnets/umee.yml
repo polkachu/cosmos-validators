@@ -14,7 +14,7 @@ update_website_immediately: false
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
-wasm: outside
+wasm: 'outside'
 
 # price feeder
 price_feeder_address: 'umee196hy8ang40mv6scz9xh6frghwketdhhyzukyqk'

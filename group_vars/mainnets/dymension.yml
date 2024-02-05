@@ -1,0 +1,16 @@
+network: dymension
+folder: '.dymension'
+daemon: dymd
+chain_id: dymension_1100-1
+node_version: v3.0.0
+repo: https://github.com/dymensionxyz/dymension.git
+genesis: https://github.com/dymensionxyz/networks/raw/main/mainnet/dymension/genesis.json
+seeds: '284313184f63d9f06b218a67a0e2de126b64258d@seeds.silknodes.io:25155,2031373ae11f2ce79a5e61fb15308c860559cc64@tenderseed.ccvalidators.com:29202'
+peers: 'a53c0884c5225f13a99e0af9ef04cd50facee668@84.203.117.234:26691,879aca1f688346ca7a3901aa1e9fc62f48112f01@65.109.124.111:26656'
+custom_port_prefix: 205
+update_website_immediately: false
+minimum_gas_price: 20000000000adym
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

@@ -3,7 +3,7 @@ network: evmos
 folder: '.evmosd'
 daemon: evmosd
 chain_id: evmos_9001-2
-node_version: v16.0.2
+node_version: v16.0.3
 repo: https://github.com/tharsis/evmos
 genesis: 'https://snapshots.polkachu.com/genesis/evmos/genesis.json'
 peers: '425b9969981dd38bbc53c0f3f01593fdca631667@65.108.131.174:13456'
