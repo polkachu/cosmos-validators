@@ -166,6 +166,10 @@ threshold = "2"
 base = "STRD"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "milkTIA"
+threshold = "2"
+
 # currency_pairs
 [[currency_pairs]]
 base = "UMEE"
@@ -578,6 +582,20 @@ quote = "OSMO"
 
 [[currency_pairs]]
 base = "STRD"
+providers = [
+  "osmosis",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "milkTIA"
+providers = [
+  "osmosis",
+]
+quote = "TIA"
+
+[[currency_pairs]]
+base = "milkTIA"
 providers = [
   "osmosis",
 ]
