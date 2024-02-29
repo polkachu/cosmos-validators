@@ -17,5 +17,3 @@ update_website_immediately: false
 # [Optional] Snapshot
 snapshot_hour: 6
 snapshot_minute: 30
-#Wed Sep 13 2023 06:23:08
-#9,125,262

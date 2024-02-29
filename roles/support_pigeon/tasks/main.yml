@@ -1,0 +1,25 @@
+---
+- name: Copy pigeon config yaml
+  template:
+    src: 'pigeon.yaml'
+    dest: '{{ user_dir }}/.pigeon/config.yaml'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0644'
+
+- name: copy pigeon service file
+  become: true
+  template:
+    src: 'pigeon.service'
+    dest: '/etc/systemd/system/pigeon.service'
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: start pigeon service
+  become: true
+  systemd:
+    name: 'pigeon'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

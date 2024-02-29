@@ -35,6 +35,14 @@
   import_tasks: zm.yml
   when: partner is defined and partner == 'zm'
 
+- name: import tasks for trp
+  import_tasks: trp.yml
+  when: partner is defined and partner == 'trp'
+
+- name: import tasks for newt
+  import_tasks: newt.yml
+  when: partner is defined and partner == 'newt'
+
 - name: install nginx package
   become: true
   apt:

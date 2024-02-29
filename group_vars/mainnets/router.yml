@@ -4,8 +4,8 @@ daemon: routerd
 chain_id: 'router_9600-1'
 node_version: 2.0.0-nitro
 repo: TBD
-genesis: 'https://sentry.tm.rpc.routerprotocol.com/genesis'
-peers: '49e4a20d999fe27868a67fc72bc6bf0e1424a610@188.214.133.133:26656,e90a88795977f7cc24982d5684f0f5a4581cd672@185.8.104.157:26656,fbb30fa866f318e9e1c48188711526fc69f66d18@188.214.133.174:26656'
+genesis: 'https://snapshots.polkachu.com/genesis/router/genesis.json'
+peers: '49e4a20d999fe27868a67fc72bc6bf0e1424a610@188.214.133.133:26656,e90a88795977f7cc24982d5684f0f5a4581cd672@185.8.104.157:26656,fbb30fa866f318e9e1c48188711526fc69f66d18@188.214.133.174:26656,a44836418adad0b207469c73e09216831d81edaa@65.109.69.59:23756'
 minimum_gas_price: '0route'
 custom_port_prefix: 237
 

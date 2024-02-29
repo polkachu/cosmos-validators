@@ -2,11 +2,12 @@ network: nibiru
 folder: '.nibid'
 daemon: nibid
 chain_id: cataclysm-1
-node_version: v1.0.0
+node_version: v1.0.1
 repo: https://github.com/NibiruChain/nibiru
 genesis: 'https://raw.githubusercontent.com/NibiruChain/Networks/main/Mainnet/cataclysm-1/genesis.json'
 peers: '151acb0de556f4a059f9bd40d46190ee91f06422@34.38.151.176:26656,05106550b6e738d8ce50cb857520124bbcce318f@35.189.236.126:26656,6167aeb44b0426a21322641a97357396274d0235@34.76.74.18:26656'
 custom_port_prefix: 198
+upgrade_folder: v1.0.1
 minimum_gas_price: 0.025unibi
 
 # [Optional] Snapshot

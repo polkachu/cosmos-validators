@@ -3,11 +3,12 @@ network: quasar
 folder: '.quasarnode'
 daemon: quasarnoded
 chain_id: quasar-test-1
-node_version: v0.1.0
+node_version: v1.0.1-rc-testnet
 repo: https://github.com/quasar-finance/quasar-preview
 genesis: https://raw.githubusercontent.com/quasar-finance/networks/main/quasar-test-1/definitive-genesis.json
 peers: '265bc06fe615ee1851a11ca41c861bd0e501da56@34.175.185.244:26656'
 custom_port_prefix: 182
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

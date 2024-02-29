@@ -2,7 +2,7 @@ network: bitcanna
 folder: '.bcna'
 daemon: bcnad
 chain_id: bitcanna-1
-node_version: v3.0.1
+node_version: v3.0.2
 repo: https://github.com/BitCannaGlobal/bcna
 genesis: 'https://raw.githubusercontent.com/BitCannaGlobal/bcna/main/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13056'

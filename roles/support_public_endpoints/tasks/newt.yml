@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for newt
+  set_fact:
+    rpc: '{{ network }}-newt-rpc'
+    api: '{{ network }}-newt-api'
+    grpc: '{{ network }}-newt-grpc'

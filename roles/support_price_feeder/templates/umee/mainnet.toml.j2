@@ -170,6 +170,15 @@ threshold = "2"
 base = "milkTIA"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "DYDX"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stTIA"
+threshold = "2"
+
+
 # currency_pairs
 [[currency_pairs]]
 base = "UMEE"
@@ -352,7 +361,7 @@ quote = "OSMO"
 [[currency_pairs]]
 base = "IST"
 providers = [
-  "crescent",
+  "osmosis",
 ]
 quote = "USDC"
 
@@ -376,7 +385,7 @@ providers = [ "kraken", "crypto",]
 [[currency_pairs]]
 base = "JUNO"
 quote = "USDT"
-providers = [ "bitget", "mexc",]
+providers = ["mexc",]
 
 [[currency_pairs]]
 base = "JUNO"
@@ -601,16 +610,32 @@ providers = [
 ]
 quote = "USDC"
 
+[[currency_pairs]]
+base = "DYDX"
+providers = [
+  "osmosis",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "DYDX"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "stTIA"
+providers = [
+  "osmosis",
+]
+quote = "TIA"
+
 # provider_endpoints
 [[provider_endpoints]]
 name = "osmosis"
 rest = "https://api.osmo-api.prod.ojo.network"
 websocket = "api.osmo-api.prod.ojo.network"
-
-[[provider_endpoints]]
-name = "crescent"
-rest = "https://api.cresc-api.prod.ojo.network"
-websocket = "api.cresc-api.prod.ojo.network"
 
 [[provider_endpoints]]
 name = "binance"
