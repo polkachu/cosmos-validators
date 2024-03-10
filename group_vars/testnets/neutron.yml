@@ -2,13 +2,13 @@ network: neutron
 folder: '.neutrond'
 daemon: neutrond
 chain_id: pion-1
-node_version: v2.0.2
+node_version: v3.0.0
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://github.com/cosmos/testnets/raw/master/replicated-security/pion-1/pion-1-genesis-with-ccv.json.gz'
 genesis_processing: gz
 seeds: 'e2c07e8e6e808fb36cca0fc580e31216772841df@p2p-palvus.pion-1.ntrn.tech:26656'
 peers: '5f0604c2b8161004866c954c1d877f565b2fc69c@pion-banana.rs-testnet.polypore.xyz:26656,6e7c0583e6e18fccedcceaffc1ac5a33ab898fa8@pion-cherry.rs-testnet.polypore.xyz:26656'
-upgrade_folder: v2.0.2
+upgrade_folder: v3.0.0
 custom_port_prefix: 191
 update_website_immediately: true
 minimum_gas_price: '0untrn'

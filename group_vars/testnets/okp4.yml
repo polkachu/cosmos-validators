@@ -2,10 +2,11 @@ network: okp4
 folder: '.okp4d'
 daemon: okp4d
 chain_id: okp4-drunemeton-1
-node_version: 'v6.0.0'
+node_version: 'v7.0.0'
 repo: https://github.com/okp4/okp4d
 genesis: 'https://raw.githubusercontent.com/okp4/networks/main/chains/drunemeton-1/genesis.json'
 peers: 'b199bc44f7a4ed22ae70eec65eafcabe3e2be1ab@178.18.251.173:26656,0fa7bfd908520a739f8237c88346e3a9e00f48cc@142.132.202.92:26956,d698ea5fe6d804bad0e9f129ce7229fb168d92d6@65.21.32.216:46656'
+upgrade_folder: v7.0.0
 custom_port_prefix: 176
 
 # [Optional] Snapshot

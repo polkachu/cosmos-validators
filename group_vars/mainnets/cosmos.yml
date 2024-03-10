@@ -2,15 +2,15 @@ network: cosmos
 folder: '.gaia'
 daemon: gaiad
 chain_id: cosmoshub-4
-node_version: v14.1.0
+node_version: v15.0.0
 repo: 'https://github.com/cosmos/gaia'
 genesis: 'https://github.com/cosmos/mainnet/blob/master/genesis/genesis.cosmoshub-4.json.gz?raw=true'
 genesis_processing: gz
 minimum_gas_price: '0.0025uatom'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14956'
 custom_port_prefix: 149
-upgrade_folder: v14
-update_website_immediately: true
+upgrade_folder: v15
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 0

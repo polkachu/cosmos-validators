@@ -2,12 +2,12 @@ network: quicksilver
 folder: '.quicksilverd'
 daemon: quicksilverd
 chain_id: quicksilver-2
-node_version: v1.4.7
+node_version: v1.5.0
 repo: https://github.com/ingenuity-build/quicksilver.git
 genesis: https://raw.githubusercontent.com/ingenuity-build/mainnet/main/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11156'
 custom_port_prefix: 111
-upgrade_folder: v1.4.7
+upgrade_folder: v1.5.0
 update_website_immediately: false
 minimum_gas_price: '0uqck'
 
