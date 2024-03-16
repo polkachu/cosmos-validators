@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name {{api}}.polkachu.com;
+    server_name {{api}}.kitkat.zone;
     location / {
 {% if partner is undefined or partner == "dydx" %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;

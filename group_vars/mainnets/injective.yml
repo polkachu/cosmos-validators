@@ -3,7 +3,7 @@ folder: '.injectived'
 daemon: injectived
 chain_id: injective-1
 genesis: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/genesis.json
-binary: https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.9.0-1673640888/linux-amd64.zip
+binary: https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.1-1705909076/linux-amd64.zip
 binary_processing: zip
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14356'
 app_file: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/app.toml

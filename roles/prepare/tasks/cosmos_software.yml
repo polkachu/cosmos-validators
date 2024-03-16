@@ -29,7 +29,7 @@
     mode: '0755'
 
 - name: Go get cosmovisor
-  command: 'go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
+  command: 'go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@{{ cosmovisor_version }}'
   environment:
     PATH: '{{ path }}'
     GOPATH: '{{ user_dir }}/go'

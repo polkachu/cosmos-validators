@@ -4,7 +4,7 @@ daemon: archwayd
 chain_id: archway-1
 node_version: 'v6.0.0'
 repo: https://github.com/archway-network/archway
-genesis: 'https://github.com/archway-network/networks/raw/main/archway-1/genesis/genesis.json.gz'
+genesis: 'https://github.com/archway-network/networks/raw/main/archway/genesis/genesis.json.gz'
 seeds: '3ba7bf08f00e228026177e9cdc027f6ef6eb2b39@35.232.234.58:26656'
 custom_port_prefix: 115
 minimum_gas_price: '0.0uaarch'

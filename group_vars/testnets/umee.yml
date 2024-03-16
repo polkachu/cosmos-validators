@@ -1,17 +1,25 @@
 network: umee
 folder: '.umee'
 daemon: umeed
-chain_id: canon-3
-node_version: v6.0.1
+chain_id: canon-4
+node_version: v6.2.0-canon
 repo: https://github.com/umee-network/umee.git
-genesis: 'https://canon-3.rpc.network.umee.cc/genesis'
-seeds: '3f472746f46493309650e5a033076689996c8881@umee-testnet.rpc.kjnodes.com:16259'
-peers: '422c28cdd532f859ccb72d4a092fc066afd6d023@canon-3.network.umee.cc:10000,964c4c485efd99448616e6795d168cf0335f929b@canon-3.network.umee.cc:10001,7b5c70f331f8f76d1aca6b1b99e513839f22def9@canon-3.network.umee.cc:10002,3468da7cbb6829111b45bf8153a520674a1a9b10@canon-3.network.umee.cc:10003'
-minimum_gas_price: '0uumee'
+genesis: 'https://canon-4.rpc.network.umee.cc/genesis'
+peers: 'ee7d691781717cbd1bf6f965dc45aad19c7af05f@canon-4.network.umee.cc:10000,dfd1d83b668ff2e59dc1d601a4990d1bd95044ba@canon-4.network.umee.cc:10001,e25008728d8f800383561d5ce68cff2d6bfc3826@canon-4.network.umee.cc:10002'
+minimum_gas_price: '0.1uumee'
 custom_port_prefix: 136
-upgrade_folder: v6.0
+upgrade_folder: v6.2.0-canon
 update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 2
 snapshot_minute: 0
+
+price_feeder_address: 'umee1xhpkuqcp5p5xj4564zkrh7tsr3r6f6hvcel6u7'
+price_feeder_validator: 'umeevaloper1xhpkuqcp5p5xj4564zkrh7tsr3r6f6hvcac4d5'
+price_feeder_backend: os
+price_feeder_network: testnet
+price_feeder_repo: https://github.com/ojo-network/price-feeder
+price_feeder_version: 'umee/v2.3.0'
+price_feeder_binary: true
+price_feeder_password: 'THIS_IS_NOT_A_REAL_PASSWORD'

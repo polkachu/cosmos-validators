@@ -1,13 +1,13 @@
 network: quicksilver
 folder: '.quicksilverd'
 daemon: quicksilverd
-chain_id: rhye-1
-node_version: v1.4.4-rc.3
+chain_id: rhye-2
+node_version: v1.4.5-rc7
 repo: https://github.com/ingenuity-build/quicksilver.git
-genesis: 'https://raw.githubusercontent.com/ingenuity-build/testnets/main/rhye/genesis.json'
-peers: '8e14e58b054248a04be96e4a40d6359e93b636ac@65.108.65.94:26656,5a3c424c19d9ab694190a7805a2b1a146460d752@65.108.2.27:26656,e6bf55bc9f08958b7518bea455423375db78d1ef@65.108.13.176:26657'
+genesis: 'https://github.com/ingenuity-build/testnets/raw/main/rhye-2/genesis.json'
+peers: 'e6bf55bc9f08958b7518bea455423375db78d1ef@65.108.13.176:26656,8e14e58b054248a04be96e4a40d6359e93b636ac@65.108.65.94:26656,5a3c424c19d9ab694190a7805a2b1a146460d752@65.108.2.27:26656'
 custom_port_prefix: 111
-upgrade_folder: v1.4.4-rc.3
+upgrade_folder: v1.4.5-rc7
 update_website_immediately: true
 
 # [Optional] Snapshot

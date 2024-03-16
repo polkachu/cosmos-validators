@@ -1,0 +1,25 @@
+---
+- name: download binary
+  get_url:
+    url: '{{ binary }}'
+    dest: '/tmp/binary.deb'
+    mode: '0700'
+    force: yes
+
+- name: Install deb binary
+  become: true
+  command: dpkg -i /tmp/binary.deb
+
+- name: Copy binary to /home/ubuntu/go/bin
+  become: true
+  copy:
+    remote_src: true
+    src: '/usr/local/bin/{{ daemon}}'
+    dest: '/home/ubuntu/go/bin/{{ daemon }}'
+    mode: '0755'
+
+- name: Remove old file
+  become: true
+  file: 
+    path: '/usr/local/bin/{{ daemon}}'
+    state: absent

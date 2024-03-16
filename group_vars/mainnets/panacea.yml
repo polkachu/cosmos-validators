@@ -1,0 +1,18 @@
+network: panacea
+folder: '.panacea'
+daemon: panacead
+chain_id: panacea-3
+node_version: v2.0.7-2
+repo: https://github.com/medibloc/panacea-core
+genesis: 'https://github.com/medibloc/panacea-mainnet/raw/master/panacea-3/genesis.json'
+seeds: '395aead00e99f828e4af92531dcd8c8da1255a8f@3.36.50.133:26656,c238f279c970764d6893ae44bdf5c949dc22b009@13.114.44.199:26656,00c57e36559b49ce7d29fa4920b5132584994368@52.77.227.241:26656'
+minimum_gas_price: '5umed'
+custom_port_prefix: 490
+upgrade_folder: v2.0.7
+update_website_immediately: true
+gas_params: '--fees 10000000umed'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30
+wasm: 'outside'

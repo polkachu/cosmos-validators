@@ -5,8 +5,8 @@ chain_id: omniflixhub-1
 node_version: v3.1.0
 repo: https://github.com/OmniFlix/omniflixhub
 genesis: https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json
-seeds: '9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae28207474eb9f168fff9720fd4d418df1ed@35.240.196.102:26656'
-minimum_gas_price: '0uflix'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:16956,9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae28207474eb9f168fff9720fd4d418df1ed@35.240.196.102:26656'
+minimum_gas_price: '0.001uflix'
 custom_port_prefix: 169
 upgrade_folder: v3
 update_website_immediately: false
