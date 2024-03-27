@@ -10,7 +10,7 @@ binary_processing: default
 config_file: 'https://raw.githubusercontent.com/zeta-chain/network-config/main/mainnet/config.toml'
 app_file: 'https://raw.githubusercontent.com/zeta-chain/network-config/main/mainnet/app.toml'
 genesis: 'https://raw.githubusercontent.com/zeta-chain/network-config/main/mainnet/genesis.json'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22556'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:22556,912d07ae1c869e7a573c09cb7397304874388b5b@104.154.216.162:26656'
 custom_port_prefix: 225
 gas_params: '--chain-id zetachain_7000-1'
 
