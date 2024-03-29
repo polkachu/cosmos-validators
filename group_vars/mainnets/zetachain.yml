@@ -1,4 +1,3 @@
-# Not ready
 network: zetachain
 folder: '.zetacored'
 daemon: zetacored
@@ -15,5 +14,5 @@ custom_port_prefix: 225
 gas_params: '--chain-id zetachain_7000-1'
 
 # [Optional] Snapshot
-snapshot_hour: 0
+snapshot_hour: 1
 snapshot_minute: 0
