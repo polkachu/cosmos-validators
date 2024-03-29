@@ -1,0 +1,18 @@
+# download binary and initialize the node yourself and download genesis and then do node_configure and node_launch. I know. But the coreum's home folder messes up this script! Also, revise the service file manually regarding --home in the start command
+network: coreum
+folder: '.core/coreum-mainnet-1'
+daemon: cored
+chain_id: coreum-mainnet-1
+node_version: 'v3.0.2'
+repo: https://github.com/coreumorg/coreum-app.git
+binary: 'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-amd64'
+binary_processing: 'default'
+genesis: 'https://snapshots.polkachu.com/genesis/coreum/genesis.json'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:24456'
+peers: '38373344dcb4bbd9e3ce05ecd5ac810079571863@35.202.65.41:26656,ba3c27af660fd660c480f1b848dd02deddf2420b@35.205.225.72:26656,e726816f42831689eab9378d5d577f1d06d25716@169.155.170.144:26656,9a40f1605f03045aaeccbfdcaaea7ca3adab4ac3@130.193.38.108:26656'
+custom_port_prefix: 244
+
+# [Optional] Snapshot
+snapshot_hour: 2
+snapshot_minute: 0
+wasm: 'outside'

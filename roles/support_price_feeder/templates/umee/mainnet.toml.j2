@@ -178,6 +178,17 @@ threshold = "2"
 base = "stTIA"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "BLD"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stDYDX"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "KAVA"
+threshold = "2"
 
 # currency_pairs
 [[currency_pairs]]
@@ -630,6 +641,37 @@ providers = [
   "osmosis",
 ]
 quote = "TIA"
+
+[[currency_pairs]]
+base = "BLD"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "BLD"
+providers = [
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stDYDX"
+providers = [
+  "osmosis",
+]
+quote = "DYDX"
+
+[[currency_pairs]]
+base = "KAVA"
+quote = "USDT"
+providers = ["binance", "gate", "bitget", "binanceus", "crypto"]
+
+[[currency_pairs]]
+base = "KAVA"
+quote = "USD"
+providers = ["kraken", "coinbase", "crypto"]
 
 # provider_endpoints
 [[provider_endpoints]]

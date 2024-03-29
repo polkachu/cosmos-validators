@@ -2,13 +2,13 @@ network: umee
 folder: '.umee'
 daemon: umeed
 chain_id: umee-1
-node_version: v6.3.0
+node_version: v6.4.0
 repo: https://github.com/umee-network/umee.git
 genesis: 'https://github.com/umee-network/mainnet/raw/main/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13656'
 custom_port_prefix: 136
 minimum_gas_price: '0.1uumee'
-upgrade_folder: v6.3
+upgrade_folder: v6.4
 update_website_immediately: false
 
 # [Optional] Snapshot
@@ -22,4 +22,4 @@ price_feeder_validator: 'umeevaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phlh7lv'
 price_feeder_backend: test
 price_feeder_network: mainnet
 price_feeder_repo: https://github.com/ojo-network/price-feeder
-price_feeder_version: 'umee/v2.4.0'
+price_feeder_version: 'umee/v2.4.1'

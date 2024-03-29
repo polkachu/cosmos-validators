@@ -2,12 +2,12 @@ network: sge
 folder: '.sge'
 daemon: sged
 chain_id: sge-network-4
-node_version: v1.3.1
+node_version: v1.5.3
 repo: https://github.com/sge-network/sge
 genesis: 'https://raw.githubusercontent.com/sge-network/networks/master/testnet/sge-network-4/genesis.json'
 peers: 'a606813400988dc5176645d5e2a7dbc478e8e00b@34.87.20.73:26656,51e4e7b04d2f669f5efa53e8d95891fa04e4c5b9@206.125.33.62:26656,58556b5fb572e20d41ce686149ab7b1646ad63a9@65.108.15.170:26656,6544694453634e97dbc47607f2e54031c80e1fc7@50.19.180.153:26656,c7545c27bd229b21056653cfc1c01b26add7656e@52.44.14.245:26656,166a5f5d3377099d8d579f28fa8e4aa76eaa2084@52.44.14.245:26656,c963c8238f6e3e12438f96ed7da4381569051a8d@50.19.180.153:26656,31bda14eacbc1c1c537c4b7c2e8d338a06c8c5fd@57.128.37.47:26656,1e5f1fa5725ab5e09209b7935c6ea3f57b2711ed@[2a01:4f9:1a:9462::3]:26656,145d0f311ef1485f5b95eebecbc758fce01b4bb6@38.146.3.184:17756,2b4efc999c6aaad3cb2456fa5385f16f90e2c3d2@95.217.106.215:11156,f68a6ed90d7afd7c6f674014944c5fd7045c52f0@65.108.2.41:56656'
 custom_port_prefix: 177
-upgrade_folder: v1.3.1
+upgrade_folder: v1.5.3
 minimum_gas_price: 0.000usge
 update_website_immediately: true
 

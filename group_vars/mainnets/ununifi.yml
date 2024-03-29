@@ -2,13 +2,13 @@ network: ununifi
 folder: '.ununifi'
 daemon: ununifid
 chain_id: 'ununifi-beta-v1'
-node_version: 'v4.0.1'
+node_version: 'v4.0.2'
 repo: 'https://github.com/UnUniFi/chain'
 genesis: 'https://raw.githubusercontent.com/UnUniFi/network/5cc7d22a5b433cb926f46cd76d0ef36876a23196/launch/ununifi-beta-v1/genesis.json'
 peers: 'fa38d2a851de43d34d9602956cd907eb3942ae89@a.ununifi.cauchye.net:26656,404ea79bd31b1734caacced7a057d78ae5b60348@b.ununifi.cauchye.net:26656'
 custom_port_prefix: 232
 minimum_gas_price: '0.0025uguu'
-upgrade_folder: v4_0_1
+upgrade_folder: v4_0_2
 update_website_immediately: false
 gas_params: '--fees 500uguu'
 

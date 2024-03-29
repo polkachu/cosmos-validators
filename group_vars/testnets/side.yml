@@ -1,11 +1,11 @@
 network: side
 folder: '.side'
 daemon: sided
-chain_id: side-testnet-2
-node_version: v0.6.0
+chain_id: side-testnet-3
+node_version: v0.7.0
 repo: https://github.com/sideprotocol/sidechain.git
-genesis: https://raw.githubusercontent.com/sideprotocol/testnet/main/side-testnet-2/genesis.json
-seeds: '693bdfec73a81abddf6f758aa49321de48456a96@13.231.67.192:26656'
+genesis: https://github.com/sideprotocol/testnet/raw/main/side-testnet-3/genesis.json
+seeds: '00170c0c23c3e97c740680a7f881511faf68289a@202.182.119.24:26656'
 minimum_gas_price: '0.0005uside'
 custom_port_prefix: 263
 update_website_immediately: true
