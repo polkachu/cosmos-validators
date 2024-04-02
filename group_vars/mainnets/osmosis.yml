@@ -6,6 +6,7 @@ node_version: v23.0.0
 repo: https://github.com/osmosis-labs/osmosis
 genesis: 'https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12556'
+peers: '0e0f4c3be78da686dd84d0653427e6839e273a95@65.108.7.249:12556'
 custom_port_prefix: 125
 upgrade_folder: v23
 update_website_immediately: false

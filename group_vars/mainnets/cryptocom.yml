@@ -2,8 +2,7 @@ network: cryptocom
 folder: '.chain-maind'
 daemon: chain-maind
 chain_id: 'crypto-org-chain-mainnet-1'
-#chain_id: 'crypto-org-mainnet'
-node_version: 'v4.2.8'
+node_version: 'v4.2.9'
 repo: 'https://github.com/crypto-org-chain/chain-main'
 genesis: 'https://raw.githubusercontent.com/crypto-org-chain/mainnet/main/crypto-org-chain-mainnet-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20256'

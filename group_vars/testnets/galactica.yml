@@ -1,0 +1,14 @@
+network: galactica
+folder: '.galactica'
+daemon: galacticad
+chain_id: galactica_9301-1
+node_version: v0.1.1
+repo: https://github.com/Galactica-corp/galactica
+genesis: 'https://raw.githubusercontent.com/Galactica-corp/networks/main/galactica_9301-1/genesis.json'
+seeds: '2b590732225bca0f3f55db543861063c705bcd40@seed01-reticulum.galactica.com:26656,fe758700e25b59b6ba6e2784badcb6024ba1b760@seed02-reticulum.galactica.com:26656,028d8c875660f0e3fb1d893acd0b2220c619625f@seed03-reticulum.galactica.com:26656'
+custom_port_prefix: 274
+update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

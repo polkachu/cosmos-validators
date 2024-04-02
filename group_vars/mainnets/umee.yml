@@ -22,4 +22,4 @@ price_feeder_validator: 'umeevaloper1gp957czryfgyvxwn3tfnyy2f0t9g2p4phlh7lv'
 price_feeder_backend: test
 price_feeder_network: mainnet
 price_feeder_repo: https://github.com/ojo-network/price-feeder
-price_feeder_version: 'umee/v2.4.1'
+price_feeder_version: 'umee/v2.4.3-rc1'
