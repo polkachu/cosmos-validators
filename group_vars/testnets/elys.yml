@@ -2,7 +2,7 @@ network: elys
 folder: '.elys'
 daemon: elysd
 chain_id: 'elystestnet-1'
-node_version: 'v0.29.30-p1'
+node_version: 'v0.29.30-p2'
 repo: https://github.com/elys-network/elys
 genesis: https://rpc.testnet.elys.network/genesis
 peers: 'ae22b82b1dc34fa0b1a64854168692310f562136@198.27.74.140:26656'

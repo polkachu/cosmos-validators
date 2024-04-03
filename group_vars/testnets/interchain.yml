@@ -1,0 +1,13 @@
+network: interchain
+folder: '.interchain-security-p'
+daemon: interchain-security-pd
+chain_id: pss-devnet-provider
+node_version: pss-devnet-1
+repo: 'https://github.com/cosmos/interchain-security'
+genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/provider/provider-genesis.json'
+peers: 'f048c1ad444283d7ada07b834202e89aa84dbe87@provider-validator.pss-devnet.polypore.xyz:26656'
+custom_port_prefix: 186
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
