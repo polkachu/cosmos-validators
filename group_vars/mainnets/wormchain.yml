@@ -1,4 +1,4 @@
-# Custom build method
+# Custom build method. cd into wormchain subfolder and make build/wormchaind
 network: wormchain
 folder: '.wormchain'
 daemon: wormchaind
@@ -6,7 +6,7 @@ chain_id: 'wormchain'
 node_version: 'v2.23.1'
 repo: 'https://github.com/wormhole-foundation/wormhole'
 genesis: 'https://dl.ccvalidators.com/SERVICE/wormchain/genesis.json'
-peers: '2b2255ac102a13270e9d1d2b3fcd89ae17171006@144.76.195.215:36996,d760f9f819900cb2b99ede3b39f647991cf40623@35.215.43.121:26656,172d27e3d04be4dbab2823805d3097b86b1f4806@144.76.195.215:36996,03ad2028fddedaab2ddd1419969bdfabf7ef115a@144.76.195.215:36996'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:25956'
 custom_port_prefix: 259
 
 # [Optional] Snapshot

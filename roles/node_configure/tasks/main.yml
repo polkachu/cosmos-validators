@@ -84,13 +84,21 @@
   loop: '{{ pruning_testrelay | dict2items }}'
   when: type is defined and type == 'testrelay'
 
-- name: Adjust indexer setting for main and backup
+- name: Adjust indexer setting to null for main and backup
   lineinfile:
     path: '{{ user_dir }}/{{ folder }}/config/config.toml'
     regexp: 'indexer = "'
     line: 'indexer = "null"'
     state: present
   when: type == 'main' or type == 'backup' or type == 'test'
+
+- name: Adjust indexer setting to kv for relayer and testrelay
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/config.toml'
+    regexp: 'indexer = "'
+    line: 'indexer = "kv"'
+    state: present
+  when: type == 'relayer' or type == 'testrelay'
 
 - name: Enable RPC port for relayer (Firewall will still manage the access to this port)
   lineinfile:
