@@ -190,6 +190,11 @@ threshold = "2"
 base = "KAVA"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "SEI"
+threshold = "2"
+
+
 # currency_pairs
 [[currency_pairs]]
 base = "UMEE"
@@ -672,6 +677,24 @@ providers = ["binance", "gate", "bitget", "binanceus", "crypto"]
 base = "KAVA"
 quote = "USD"
 providers = ["kraken", "coinbase", "crypto"]
+
+[[currency_pairs]]
+base = "SEI"
+providers = [
+  "binance",
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SEI"
+providers = [
+  "kraken",
+  "crypto",
+  "coinbase",
+]
+quote = "USD"
 
 # provider_endpoints
 [[provider_endpoints]]

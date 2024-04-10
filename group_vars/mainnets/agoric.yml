@@ -13,4 +13,4 @@ gas_params: '--fees 2000ubld'
 
 # [Optional] Snapshot
 snapshot_hour: 4
-snapshot_minute: 30
+snapshot_minute: 30d
