@@ -4,7 +4,7 @@ daemon: interchain-security-pd
 chain_id: pss-devnet-provider
 node_version: pss-devnet-1
 repo: 'https://github.com/cosmos/interchain-security'
-genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/provider/provider-genesis.json'
+genesis: 'https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/pss-devnet/pss-devnet-provider/provider-genesis.json'
 peers: 'f048c1ad444283d7ada07b834202e89aa84dbe87@provider-validator.pss-devnet.polypore.xyz:26656'
 custom_port_prefix: 186
 

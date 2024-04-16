@@ -1,0 +1,14 @@
+network: seda
+folder: '.sedad'
+daemon: sedad
+chain_id: seda-1-dryrun
+node_version: v0.1.0-rc0
+repo: 'https://github.com/sedaprotocol/seda-chain'
+custom_port_prefix: 258
+genesis: 'TBD'
+seeds: 'TBD'
+# minimum_gas_price: 'TBD'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

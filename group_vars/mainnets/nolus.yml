@@ -2,14 +2,14 @@ network: nolus
 folder: '.nolus'
 daemon: nolusd
 chain_id: pirin-1
-node_version: v0.5.2
+node_version: v0.5.3
 repo: https://github.com/nolus-protocol/nolus-core.git
 genesis: 'https://raw.githubusercontent.com/nolus-protocol/nolus-networks/main/mainnet/pirin-1/genesis.json?raw=true'
 seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:11956,ebc272824924ea1a27ea3183dd0b9ba713494f83@nolus-mainnet-seed.autostake.com:27016,400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@nolus.rpc.kjnodes.com:14359'
 peers: 'e690dc0b52e8289e88ef8d944c0324da758af9c8@65.108.238.166:19756'
 minimum_gas_price: '0.0025unls'
 custom_port_prefix: 197
-upgrade_folder: v0.5.2
+upgrade_folder: v0.5.3
 update_website_immediately: false
 
 # [Optional] Snapshot

@@ -2,7 +2,7 @@ network: cosmos
 folder: '.gaia'
 daemon: gaiad
 chain_id: cosmoshub-4
-node_version: v15.1.0
+node_version: v15.2.0
 repo: 'https://github.com/cosmos/gaia'
 genesis: 'https://github.com/cosmos/mainnet/blob/master/genesis/genesis.cosmoshub-4.json.gz?raw=true'
 genesis_processing: gz
