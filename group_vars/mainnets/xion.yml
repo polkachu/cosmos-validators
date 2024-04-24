@@ -2,12 +2,13 @@ network: xion
 folder: '.xiond'
 daemon: xiond
 chain_id: xion-mainnet-1
-node_version: v0.3.7
+node_version: v0.3.9
 repo: https://github.com/burnt-labs/xion.git
 genesis: 'https://raw.githubusercontent.com/burnt-labs/burnt-networks/main/mainnet/xion-mainnet-1/genesis.json'
 seeds: '4f0fd0c68f4141886f2a306e6c64cb191d71ef78@xion-mainnet-1.burnt.com:12656'
 peers: '22371d31b93490e1d79899446e73839e9fd4c004@xion-mainnet-1.burnt.com:42656,083eb4d9191e727e0fcce7a73e93863cc0f79fa5@xion-mainnet-1.burnt.com:43656,eb183c6f9c1c44d3c9198415b84e43d74fe84c58@xion-mainnet-1.burnt.com:44656'
 update_website_immediately: false
+upgrade_folder: v6
 custom_port_prefix: 223
 
 # [Optional] Snapshot

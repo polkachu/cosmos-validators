@@ -2,13 +2,14 @@ network: dymension
 folder: '.dymension'
 daemon: dymd
 chain_id: dymension_1100-1
-node_version: v3.0.0
+node_version: v3.1.0
 repo: https://github.com/dymensionxyz/dymension.git
 genesis: https://github.com/dymensionxyz/networks/raw/main/mainnet/dymension/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20556'
 peers: '09b1a88148c16a3cc629b7cfc12fb369d7a3399a@65.108.233.90:26656,39c335604e9e9323eb177ef8c33f8ab4a4317498@85.215.125.37:26656,fb7a8f69270a7de8a3c1b1e79e194a407d305c63@84.203.117.234:26691'
 custom_port_prefix: 205
 update_website_immediately: false
+upgrade_folder: v3
 minimum_gas_price: 5000000000adym
 
 # [Optional] Snapshot

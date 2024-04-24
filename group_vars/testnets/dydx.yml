@@ -9,7 +9,7 @@ binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv
 binary_processing: targz
 genesis: 'https://raw.githubusercontent.com/dydxprotocol/v4-testnets/main/dydx-testnet-4/genesis.json'
 seeds: '19d38bb5cea1378db3e16615e63594dc26119a1a@dydx-testnet4-seednode.allthatnode.com:26656,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:23856'
-min_gas_prices: '0.025ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5,25000000000adv4tnt'
+minimum_gas_price: '0.025ibc/8E27BA2D5493AF5636760E354E46004562C46AB7EC0CC4C1CA14E9E20E2545B5,25000000000adv4tnt'
 upgrade_folder: 'v3.0.0'
 custom_port_prefix: 238
 

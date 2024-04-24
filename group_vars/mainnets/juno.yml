@@ -2,14 +2,14 @@ network: juno
 folder: '.juno'
 daemon: junod
 chain_id: juno-1
-node_version: v21.0.0
+node_version: v22.0.0
 repo: https://github.com/CosmosContracts/juno
 genesis: 'https://snapshots.polkachu.com/genesis/juno/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12656'
 minimum_gas_price: '0ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9,0ujuno'
 custom_port_prefix: 126
 gas_params: '--gas-prices 0.25ujuno --gas-adjustment 1.8 --gas 500000'
-upgrade_folder: v21
+upgrade_folder: v22
 update_website_immediately: false
 
 # [Optional] Snapshot

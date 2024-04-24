@@ -2,7 +2,7 @@ network: xpla
 folder: '.xpla'
 daemon: xplad
 chain_id: 'dimension_37-1'
-node_version: 'v1.4.0'
+node_version: 'v1.4.1'
 repo: https://github.com/xpladev/xpla
 genesis: https://raw.githubusercontent.com/xpladev/mainnet/main/dimension_37-1/genesis.json
 seeds: 'e7b6016ce5663a69ba71a982072315545eb0d5f6@seed.xpla.delightlabs.io:26656'

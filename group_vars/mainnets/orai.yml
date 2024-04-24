@@ -1,11 +1,13 @@
+# cd into another orai folder and then make install
 network: orai
 folder: '.oraid'
 daemon: oraid
 chain_id: Oraichain
-node_version: 'v0.41.7'
+node_version: 'v0.41.8'
 repo: 'https://github.com/oraichain/orai.git'
 genesis: 'https://snapshots.polkachu.com/genesis/orai/genesis.json'
 peers: 'd263c8c8fdd279d33de643c3baffbe053d0a8a73@18.223.242.70:26656,e32c5d1c5f4cbef6d6910fc5b828741cb1bfd08f@18.221.220.160:26656'
+upgrade_folder: v0.41.8
 custom_port_prefix: 233
 
 # [Optional] Snapshot

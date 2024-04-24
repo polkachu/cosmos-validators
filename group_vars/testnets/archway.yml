@@ -2,12 +2,12 @@ network: archway
 folder: '.archway'
 daemon: archwayd
 chain_id: constantine-3
-node_version: 'v6.0.0'
+node_version: 'v7.0.0-rc.3'
 repo: https://github.com/archway-network/archway
 genesis: 'https://raw.githubusercontent.com/archway-network/networks/main/constantine-3/genesis.json'
 seeds: 'e8d60ff778f3c27f54382ff22c7ac071f2a81027@35.223.36.227:26656'
 custom_port_prefix: 115
-upgrade_folder: v6.0.0
+upgrade_folder: v7.0.0
 update_website_immediately: true
 gas_params: '--fees 180000000000000000aconst'
 minimum_gas_price: '0.0uaarch'
