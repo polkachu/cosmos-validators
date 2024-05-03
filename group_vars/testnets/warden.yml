@@ -1,0 +1,14 @@
+network: warden
+folder: '.warden'
+daemon: wardend
+chain_id: 'buenavista-1'
+node_version: 'v0.3.0'
+repo: https://github.com/warden-protocol/wardenprotocol
+genesis: 'https://raw.githubusercontent.com/warden-protocol/networks/main/testnets/buenavista/genesis.json'
+peers: '3f6e3d6f99c23487e797d28eb9d95e3cfb0b6e61@84.247.147.57:26656,22df256e71ba01bba80038c527a4f1103ad129d9@65.108.251.125:26656,ee528080741055cb7067f3e0bdda9badac834fc5@81.0.249.86:11256,ff13a301d956badc596de7145b19052f0965d62d@44.205.14.73:666,e9776f41f1682012555b86a3353db46188e19bc3@173.249.39.125:26656,89fbdc8995727e1c0d8525cdf087f1a6517f2685@168.119.10.134:29482,8973f6b31d3183daca419415a424604a5f67b8bd@138.201.51.154:30504,d4af4ec2657c9756c87aa5b49d2d724b45f96d8b@188.165.228.73:26656'
+custom_port_prefix: 273
+minimum_gas_price: '0.025uward'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

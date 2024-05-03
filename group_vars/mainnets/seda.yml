@@ -1,7 +1,7 @@
 network: seda
 folder: '.sedad'
 daemon: sedad
-chain_id: seda-1-dryrun
+chain_id: seda-1
 node_version: v0.1.1
 repo: 'https://github.com/sedaprotocol/seda-chain'
 binary: https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.0/sedad-amd64

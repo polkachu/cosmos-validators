@@ -43,6 +43,10 @@
   import_tasks: newt.yml
   when: partner is defined and partner == 'newt'
 
+- name: import tasks for tw
+  import_tasks: tw.yml
+  when: partner is defined and partner == 'tw'
+
 - name: install nginx package
   become: true
   apt:

@@ -3,7 +3,7 @@ network: androma
 folder: '.androma'
 daemon: andromad
 chain_id: 'androma-1'
-node_version: 'TBD'
+node_version: 'v0.1.1'
 repo: https://github.com/AndromaverseLabs/testnet
 genesis: https://raw.githubusercontent.com/AndromaverseLabs/testnet/main/genesis.json
 peers: '4d6e5790be281a584c9226749a4d09ce14fabd02@65.108.194.40:32656,9943fed25f830a8c0eaa63efa9e637c1875bfdc8@38.242.219.158:26656'
