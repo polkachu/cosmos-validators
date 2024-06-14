@@ -1,0 +1,15 @@
+network: cosmostheta
+folder: '.gaia'
+daemon: gaiad
+chain_id: theta-testnet-001
+node_version: v17.0.0-rc0
+repo: 'https://github.com/cosmos/gaia'
+genesis: 'https://ss-t.cosmos.nodestake.org/genesis.json'
+seeds: '98cf32004f01b58019d3d9e03a5adb8f96f1b8d0@rpc-t.cosmos.nodestake.org:666'
+peers: '870f57f11e298bd899eef6efe0459f9b6b695219@85.10.193.51:28656,be8a6a3a60ef5bce20229c20d64f91e887b12c58@185.252.220.89:26656,76ec4a7f9c18384ce719e1587ec18502eea92f29@37.120.245.84:26656,04278664f9b8f892a9d4a4897f382315ec603dfb@13.215.115.102:26656'
+custom_port_prefix: 280
+minimum_gas_price: '0token'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

@@ -9,6 +9,10 @@ server {
         auth_basic "Skip";
         auth_basic_user_file ".htpasswd";
 {% endif %}
+{% if partner is defined and (partner == "cube") %}
+        auth_basic "Cube";
+        auth_basic_user_file ".htpasswd";
+{% endif %}
         proxy_pass http://127.0.0.1:{{custom_port_prefix}}17;
     }
 }

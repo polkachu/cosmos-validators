@@ -4,6 +4,8 @@ daemon: crossfid
 chain_id: crossfi-evm-testnet-1
 node_version: 'v0.3.0'
 repo: https://github.com/crossfichain/crossfi-node
+binary: 'https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz'
+binary_processing: targz
 genesis: 'https://raw.githubusercontent.com/crossfichain/testnet/master/config/genesis.json'
 seeds: 'dd83e3c7c4e783f8a46dbb010ec8853135d29df0@crossfi-testnet-seed.itrocket.net:36656'
 custom_port_prefix: 260

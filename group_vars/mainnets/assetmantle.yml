@@ -2,7 +2,7 @@ network: assetmantle
 folder: '.mantleNode'
 daemon: mantleNode
 chain_id: 'mantle-1'
-node_version: 'v1.0.0'
+node_version: 'v1.0.1'
 repo: 'https://github.com/AssetMantle/node'
 genesis: 'https://raw.githubusercontent.com/AssetMantle/genesisTransactions/main/mantle-1/final_genesis.json'
 peers: '7bdf1a10bea595c9d71566d3eec54a1c04ef09a4@65.108.131.174:46656'

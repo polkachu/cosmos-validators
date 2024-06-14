@@ -3,7 +3,7 @@ network: wormchain
 folder: '.wormchain'
 daemon: wormchaind
 chain_id: 'wormchain'
-node_version: 'v2.23.1'
+node_version: 'v2.24.2-wormchaind'
 repo: 'https://github.com/wormhole-foundation/wormhole'
 genesis: 'https://dl.ccvalidators.com/SERVICE/wormchain/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:25956'
@@ -13,3 +13,4 @@ custom_port_prefix: 259
 snapshot_hour: 0
 snapshot_minute: 30
 wasm: 'outside'
+#v2.24.2-wormchaind

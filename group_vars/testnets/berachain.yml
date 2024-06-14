@@ -6,6 +6,7 @@ node_version: 'v0.1.0-alpha'
 repo: TBD
 genesis: https://snapshots.polkachu.com/testnet-genesis/berachain/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:25456'
+peers: 'f4d7fc28226efc4d8bdb76c0f84171574ada1386@65.109.59.22:25456,66a1c4151240983e564db3a8c0b941ab24bdd5f8@65.109.57.221:25456,473e72043296166ed015b566e4ffb7d5bb551ea6@65.109.113.233:25456'
 custom_port_prefix: 254
 
 # [Optional] Snapshot

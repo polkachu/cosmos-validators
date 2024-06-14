@@ -2,14 +2,14 @@ network: terra
 folder: '.terra'
 daemon: terrad
 chain_id: 'phoenix-1'
-node_version: 'v2.11.1'
+node_version: 'v2.11.4'
 repo: https://github.com/terra-money/core
 genesis: 'https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11756'
 minimum_gas_price: '0.015uluna,0.018ibc/2C962DAB9F57FE0921435426AE75196009FAA1981BF86991203C8411F8980FDB,0.018ibc/B3504E092456BA618CC28AC671A71FB08C6CA0FD0BE7C8A5B5A3E2DD933CC9E4'
 custom_port_prefix: 117
 upgrade_folder: 'v2.11'
-update_website_immediately: false
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 7

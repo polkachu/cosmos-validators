@@ -11,6 +11,10 @@ server {
         auth_basic "Skip";
         auth_basic_user_file ".htpasswd";
 {% endif %}
+{% if partner is defined and (partner == "cube") %}
+        auth_basic "Cube";
+        auth_basic_user_file ".htpasswd";
+{% endif %}
         proxy_redirect                      off;
         proxy_set_header Host               $host;
         proxy_set_header X-Real-IP          $remote_addr;

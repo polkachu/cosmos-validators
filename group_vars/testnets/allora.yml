@@ -1,0 +1,13 @@
+network: allora
+folder: '.allorad'
+daemon: allorad
+chain_id: 'testnet'
+node_version: 'v0.0.10'
+repo: https://github.com/allora-network/allora-chain
+genesis: https://raw.githubusercontent.com/allora-network/networks/main/testnet/genesis.json
+custom_port_prefix: 267
+seeds: '83c9558aaf4235574c7e78a568243b1f7eba6bae@seed-0.testnet.allora.network:32000,3584b56ad639bb46c20ec9e5d05f39b630c19c4b@seed-1.testnet.allora.network:32001,99c10c7c5ccad59090e34d0fd181dc9b779f1fc5@seed-2.testnet.allora.network:32002'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

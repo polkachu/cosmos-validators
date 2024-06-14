@@ -2,12 +2,13 @@ network: dora
 folder: '.dora'
 daemon: dorad
 chain_id: vota-testnet
-node_version: 0.3.1
+node_version: 0.4.0
 repo: https://github.com/DoraFactory/doravota.git
 genesis: 'https://raw.githubusercontent.com/DoraFactory/doravota/main/config/testnet/genesis.json'
 seeds: 'dcf2d8132162293de52ca474eee308a03689ef75@dora-testnet-seed.itrocket.net:39656'
 minimum_gas_price: '0peaka'
 update_website_immediately: true
+upgrade_folder: 0.4.0
 custom_port_prefix: 253
 
 # [Optional] Snapshot

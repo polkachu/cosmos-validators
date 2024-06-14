@@ -13,3 +13,4 @@ update_website_immediately: true
 # [Optional] Snapshot
 snapshot_hour: 8
 snapshot_minute: 30
+wasm: outside

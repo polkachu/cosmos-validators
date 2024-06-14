@@ -47,6 +47,10 @@
   import_tasks: tw.yml
   when: partner is defined and partner == 'tw'
 
+- name: import tasks for cube
+  import_tasks: cube.yml
+  when: partner is defined and partner == 'cube'
+
 - name: install nginx package
   become: true
   apt:

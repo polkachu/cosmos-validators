@@ -3,7 +3,7 @@ network: union
 folder: '.union'
 daemon: uniond
 chain_id: 'union-testnet-8'
-node_version: 'v0.21.0'
+node_version: 'v0.24.0'
 binary: https://services.staketab.org/union-testnet/uniond
 binary_processing: default
 genesis: 'https://union.build/genesis.json'

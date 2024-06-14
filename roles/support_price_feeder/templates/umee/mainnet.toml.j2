@@ -194,6 +194,9 @@ threshold = "2"
 base = "SEI"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "NTRN"
+threshold = "2"
 
 # currency_pairs
 [[currency_pairs]]
@@ -695,6 +698,12 @@ providers = [
   "coinbase",
 ]
 quote = "USD"
+
+[[currency_pairs]]
+base = "NTRN"
+quote = "USDT"
+providers = [ "binance", "bitget", "gate",]
+
 
 # provider_endpoints
 [[provider_endpoints]]

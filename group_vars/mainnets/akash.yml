@@ -6,7 +6,7 @@ node_version: 'v0.34.0'
 repo: 'https://github.com/ovrclk/akash'
 genesis: 'https://raw.githubusercontent.com/ovrclk/net/master/mainnet/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:12856'
-minimum_gas_price: '0.025uakt'
+minimum_gas_price: '0.0025uakt'
 custom_port_prefix: 128
 upgrade_folder: 'v0.34.0'
 update_website_immediately: false

@@ -15,5 +15,5 @@ upgrade_folder: 'v0.35'
 update_website_immediately: false
 
 # [Optional] Snapshot
-snapshot_hour: 6
+snapshot_hour: 1
 snapshot_minute: 30

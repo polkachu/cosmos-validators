@@ -2,7 +2,7 @@ network: 'dydx'
 folder: '.dydxprotocol'
 daemon: dydxprotocold
 chain_id: 'dydx-mainnet-1'
-node_version: 'v1.0.1'
+node_version: 'v4.1.2'
 repo: 'https://github.com/dydxprotocol/v4-chain'
 binary: 'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv1.0.0/dydxprotocold-v1.0.0-linux-amd64.tar.gz'
 binary_processing: targz

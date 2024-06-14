@@ -2,15 +2,15 @@ network: sei
 folder: '.sei'
 daemon: seid
 chain_id: 'pacific-1'
-node_version: 'v3.9.0'
+node_version: 'v5.5.4'
 repo: https://github.com/sei-protocol/sei-chain.git
 genesis: 'https://snapshots.polkachu.com/genesis/sei/genesis.json'
 peers: '380c732671cec070a9a7b979d277e26325f26d61@136.243.67.189:11956'
 seed: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11956'
 custom_port_prefix: 119
-upgrade_folder: v3.9.0
+upgrade_folder: v5.5.2
 minimum_gas_price: 0.02usei
-update_website_immediately: false
+update_website_immediately: true
 gas_params: '--fees 20000usei'
 
 # [Optional] Snapshot

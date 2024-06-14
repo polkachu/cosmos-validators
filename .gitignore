@@ -7,4 +7,5 @@ group_vars/mainnets/sei_copy.yml
 roles/support_restake/templates/restake.json
 group_vars/testnets/initia.yml
 group_vars/testnets/ethos.yml
+group_vars/testnets/nillion.yml
 group_vars/mainnets/lava.yml

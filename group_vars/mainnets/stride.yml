@@ -15,3 +15,4 @@ gas_params: '--gas auto --gas-adjustment 1.5'
 # [Optional] Snapshot
 snapshot_hour: 8
 snapshot_minute: 30
+wasm: outside

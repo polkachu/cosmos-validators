@@ -1,0 +1,15 @@
+network: sunrise
+folder: '.sunrise'
+daemon: sunrised
+chain_id: 'sunrise-test-1'
+node_version: 'v0.0.8'
+repo: https://github.com/sunriselayer/sunrise
+genesis: https://raw.githubusercontent.com/sunriselayer/network/main/sunrise-test-1/genesis.json
+seeds: '120b994a9de2edca8d2c5631ee77cc63f9fd622a@3.1.6.122:26656,b53fec5f6a2b17397535654833fe4183b503997c@34.143.188.112:26656'
+custom_port_prefix: 283
+update_website_immediately: true
+minimum_gas_price: '1urise'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

@@ -20,4 +20,4 @@ price_feeder_address: ''
 price_feeder_validator: 'nibivaloper1cz36jg407s0z4f2vd7u6yc44v480dtpljrhdf6'
 price_feeder_network: mainnet
 price_feeder_repo: https://github.com/NibiruChain/pricefeeder
-price_feeder_version: 'v1.0.0'
+price_feeder_version: 'v1.0.2'
