@@ -2,7 +2,7 @@ network: neutron
 folder: '.neutrond'
 daemon: neutrond
 chain_id: pion-1
-node_version: v4.0.0-rc2
+node_version: v4.0.0-rc3
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://github.com/cosmos/testnets/raw/master/replicated-security/pion-1/pion-1-genesis-with-ccv.json.gz'
 genesis_processing: gz

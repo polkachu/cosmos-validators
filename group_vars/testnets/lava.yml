@@ -2,7 +2,7 @@ network: lava
 folder: '.lava'
 daemon: lavad
 chain_id: lava-testnet-1
-node_version: v2.1.1
+node_version: v2.1.3
 repo: https://github.com/lavanet/lava
 genesis: 'https://raw.githubusercontent.com/lavanet/lava-config/main/testnet-2/genesis_json/genesis.json'
 binary: 'https://lava-binary-upgrades.s3.amazonaws.com/testnet-2/cosmovisor-upgrades/cosmovisor-upgrades.zip'
