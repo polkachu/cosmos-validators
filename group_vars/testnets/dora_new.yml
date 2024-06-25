@@ -1,0 +1,15 @@
+network: dora
+folder: '.dora'
+daemon: dorad
+chain_id: vota-sf
+node_version: 0.4.0
+repo: https://github.com/DoraFactory/doravota.git
+genesis: 'https://vota-sf-rpc.dorafactory.org/genesis'
+peers: 'ceae16d973e8fd77cce67b946a9b6bfdf444f316@3.122.237.115:26656,059e1ec595989c8c4ef3fd3552070f5f93888547@52.59.113.160:26656'
+seeds: 'ceae16d973e8fd77cce67b946a9b6bfdf444f316@3.122.237.115:26656,059e1ec595989c8c4ef3fd3552070f5f93888547@52.59.113.160:26656'
+minimum_gas_price: '0peaka'
+custom_port_prefix: 253
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

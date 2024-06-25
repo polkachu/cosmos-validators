@@ -51,6 +51,10 @@
   import_tasks: cube.yml
   when: partner is defined and partner == 'cube'
 
+- name: import tasks for walk
+  import_tasks: walk.yml
+  when: partner is defined and partner == 'walk'
+
 - name: install nginx package
   become: true
   apt:
