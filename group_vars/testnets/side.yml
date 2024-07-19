@@ -1,11 +1,11 @@
 network: side
 folder: '.side'
 daemon: sided
-chain_id: S2-testnet-2
-node_version: v0.8.1
-repo: https://github.com/sideprotocol/sidechain.git
-genesis: https://github.com/sideprotocol/testnet/raw/main/S2-testnet-2/genesis.json
-seeds: '582dedd866dd77f25ac0575118cf32df1ee50f98@202.182.119.24:26656'
+chain_id: grimoria-testnet-1
+node_version: v0.9.0
+repo: https://github.com/sideprotocol/side
+genesis: https://snapshots.polkachu.com/testnet-genesis/side/genesis.json
+peers: 6bef0693d7a31fed473b95123ad19b544b414093@202.182.119.24:26656,44f8009ed91fddd7ee51117482ede20fb4f33e78@149.28.156.79:26656
 minimum_gas_price: '0.0005uside'
 custom_port_prefix: 263
 update_website_immediately: true

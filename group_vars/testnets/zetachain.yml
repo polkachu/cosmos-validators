@@ -1,25 +1,13 @@
 folder: '.zetacored'
-
 daemon: zetacored
-
 chain_id: athens_7001-1
-
 node_version: v15.0.0
-
 repo: 'https://github.com/zeta-chain/network-athens3'
-
 binary: 'https://github.com/zeta-chain/node/releases/download/v15.0.0/zetacored-linux-amd64'
-
 binary_processing: default
-
 config_file: 'https://raw.githubusercontent.com/zeta-chain/network-config/main/athens3/config.toml'
-
 app_file: 'https://raw.githubusercontent.com/zeta-chain/network-config/main/athens3/app.toml'
-
 genesis: 'https://raw.githubusercontent.com/zeta-chain/network-config/main/athens3/genesis.json'
-
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22556'
-
 custom_port_prefix: 225
-
 gas_params: '--chain-id athens_7001-1'

@@ -1,0 +1,14 @@
+network: int3face
+folder: '.int3faced'
+daemon: int3faced
+chain_id: 'int3-test-1'
+node_version: 'v0.2.0'
+repo: TBD
+genesis: https://raw.githubusercontent.com/Int3facechain/networks/main/int3-test-1/genesis.json
+peers: '3902406e95eb247c3aef995ac04c9f4375313d1d@188.245.39.49:26656,98d64b811200d6168ecd9d68d194944f512d4639@188.245.39.74:26656,ae227853acb4c25fe2e9992703cb9e279933af41@188.245.39.76:26656'
+custom_port_prefix: 287
+
+# [Optional] Snapshot
+snapshot_hour: 3
+snapshot_minute: 30
+wasm: 'outside'

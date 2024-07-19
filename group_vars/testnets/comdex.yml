@@ -2,14 +2,12 @@ network: comdex
 folder: '.comdex'
 daemon: comdex
 chain_id: comdex-test3
-node_version: v13.3.0
+node_version: v14.0.0
 repo: https://github.com/comdex-official/comdex.git
 genesis: 'https://raw.githubusercontent.com/comdex-official/networks/main/testnet/testnet-3/genesis.json'
-peers: '7559a101ded1a65bc907bd106340c40811d8dae8@95.165.149.94:28656'
+peers: '8df6bd8c97822de7e65743fa13af6cb9d505de07@46.166.172.243:26656,dc271ed63533affc1ed9a33e56fb9f5906a2ad64@5.199.163.67:26656,1505424d58e0bd49a85cbf013a1469eebbbbb4db@5.199.163.68:26656,6a5a7e9d6d36b64d6b836c250e65232446d098f8@149.56.36.207:26656,94173b71b3719112d30bcc290289c935152febb1@188.214.134.116:26656'
 minimum_gas_price: '0.025ucmdx'
 custom_port_prefix: 131
-upgrade_folder: v13.3.0
-update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 2
