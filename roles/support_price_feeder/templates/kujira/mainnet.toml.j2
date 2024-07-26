@@ -108,6 +108,7 @@ urls = [
   "https://rest-persistence.architectnodes.com",
   "https://api-persistence-01.stakeflow.io",
 ]
+
 #
 #  CURRENCY PAIRS
 # ------------------------------------------------------------
@@ -200,6 +201,13 @@ providers = [
 ]
 
 [[currency_pairs]]
+base = "AQLA"
+quote = "USDC"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
 base = "AXL"
 quote = "USD"
 providers = ["coinbase", "crypto", "kraken"]
@@ -270,6 +278,11 @@ providers = [
 base = "CACAO"
 quote = "BTC"
 providers = ["maya"]
+
+[[currency_pairs]]
+base = "CTK"
+quote = "USDT"
+providers = ["binance", "bingx", "gate", "xt"]
 
 [[currency_pairs]]
 base = "CRO"
@@ -448,9 +461,12 @@ base = "JUNO"
 quote = "USD"
 providers = ["kraken"]
 
-[provider_weight.JUNO]
-osmosisv2 = 1
-kraken = 2
+[[currency_pairs]]
+base = "KART"
+quote = "USK"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
 
 [[currency_pairs]]
 base = "KAVA"
@@ -691,6 +707,27 @@ quote = "USDT"
 providers = ["binance", "bybit", "gate", "huobi", "kucoin", "lbank"]
 
 [[currency_pairs]]
+base = "SEI"
+quote = "USD"
+providers = ["coinbase", "kraken"]
+
+[[currency_pairs]]
+base = "SEI"
+quote = "USDT"
+providers = [
+    "binance",
+    "bingx",
+    "bitget",
+    "bitmart",
+    "bybit",
+    "gate",
+    "huobi",
+    "kucoin",
+    "pionex",
+    "xt",
+]
+
+[[currency_pairs]]
 base = "SHD"
 quote = "MNTA"
 providers = ["finv2", "shade"]
@@ -830,7 +867,16 @@ providers = ["coinbase", "kraken"]
 [[currency_pairs]]
 base = "TIA"
 quote = "USDT"
-providers = ["binance", "bitget", "bybit", "gate", "huobi", "kucoin", "okx"]
+providers = [
+    "binance",
+    "bitget",
+    "bybit",
+    "gate",
+    "huobi",
+    "kucoin",
+    "okx",
+    "pionex",
+]
 
 [[currency_pairs]]
 base = "WBTC"
@@ -840,15 +886,7 @@ providers = ["binance", "coinbase", "kucoin", "okx"]
 [[currency_pairs]]
 base = "WBTC"
 quote = "USDT"
-providers = [
-    "bitget",
-    "bybit",
-    "crypto",
-    "gate",
-    "hitbtc",
-    "phemex",
-    "poloniex",
-]
+providers = ["bitget", "bybit", "crypto", "gate", "hitbtc", "phemex"]
 
 [[currency_pairs]]
 base = "WETH"
@@ -897,9 +935,11 @@ derivative_period = "30m"
 [[provider_min_overrides]]
 denoms = [
     "AMPKUJI",
+    "AQLA",
     "CACAO",
     "FUZN",
     "JUNO",
+    "KART",
     "MNTA",
     "NSTK",
     "QCKUJI",
@@ -1013,7 +1053,9 @@ ATOMSTKATOM = "persistence1335rlmhujm0gj5e9gh7at9jpqvqckz0mpe4v284ar4lw5mlkryzsz
 
 [contract_addresses.finv2]
 AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s"
+AQLAUSDC = "kujira1nswv58h3acql85587rkusqx3zn7k9qx3a3je8wqd3xnw39erpwnsddsm8z"
 FUZNUSK = "kujira1w6gpsfn55ufh3g3pf6qjrdhfj6rp09zqmruvgvzupkl39mtlpcdqw2ys7e"
+KARTUSK = "kujira19n770r9q5haax7mfgy8acrgz7gsamgyjhcvqvxfgrq25983lc42qtszngq"
 KUJIUSDC = "kujira1pw96huy6z02uk8hdpruk6g8u700dp8yxjhp46c24rwkzay2lfd3quqdum5"
 MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
 NSTKUSK = "kujira1ggtmfuktfcf6plhtdejyyqn5de5uge3tef0jv64ru68h2ctuvyqs3355mn"
@@ -1073,7 +1115,9 @@ STARS = 6
 WHALE = 6
 
 [decimals.finv2]
+AQLA = 6
 FUZN = 6
+KART = 6
 KUJI = 6
 MNTA = 6
 NSTK = 6

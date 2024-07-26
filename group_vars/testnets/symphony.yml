@@ -1,0 +1,13 @@
+network: symphony
+folder: '.symphonyd'
+daemon: symphonyd
+chain_id: symphony-testnet-2
+node_version: v0.2.1
+repo: https://github.com/Orchestra-Labs/symphony
+genesis: 'https://files.nodeshub.online/testnet/symphony/genesis.json'
+seeds: '6f6a3a908634b79b6fe7c4988efec2553f188234@symphony.test.seed.nodeshub.online:29156'
+custom_port_prefix: 291
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30
