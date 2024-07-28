@@ -7,7 +7,7 @@ User={{ ansible_user }}
 ExecStart={{ user_dir }}/go/bin/cosmovisor start --home {{ user_dir }}/{{ folder }}
 Restart=always
 RestartSec=3
-LimitNOFILE=4096
+LimitNOFILE=65536
 Environment="DAEMON_NAME={{ daemon }}"
 Environment="DAEMON_HOME={{ user_dir }}/{{ folder }}"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"

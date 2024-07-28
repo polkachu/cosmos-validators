@@ -1,0 +1,14 @@
+network: shido
+folder: '.shidod'
+daemon: shidod
+chain_id: shido_9008-1
+node_version: 'v1.0.0'
+repo: https://github.com/ShidoGlobal/shidochain
+genesis: 'https://raw.githubusercontent.com/ShidoGlobal/mainnetShidoNodeSync/main/genesis.json'
+seeds: '181fcc5672fee87751eb369491744e85ba0651f5@18.153.233.126:26656,8d46e292347951d651486611abac77825a0c83f8@18.199.25.117:26656'
+custom_port_prefix: 286
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'

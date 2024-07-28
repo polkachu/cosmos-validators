@@ -38,6 +38,77 @@ service_name = "price-feeder"
 type = "prometheus"
 prometheus_retention = 120
 
+
+
+# providers: fin
+# ["https://api.kujira.app", "https://kaiyo-1.gigalixirapp.com"]
+[url_set.fin]
+urls = ["https://kaiyo-1.gigalixirapp.com"]
+
+# providers: finv2
+# https://cosmos.directory/kujira/nodes (REST)
+[url_set.api_kujira]
+urls = [
+  "http://127.0.0.1:{{ custom_port_prefix }}17", #SET YOUR API IF EXIST
+  "https://api-kujira.starsquid.io"
+]
+
+# providers: astroport_neutron
+# https://cosmos.directory/neutron/nodes (REST)
+[url_set.api_neutron]
+urls = [
+  "https://neutron-api.polkachu.com",
+  "https://rest.cosmos.directory/neutron"
+]
+
+# providers: camelotv3
+[url_set.rpc_arbitrum]
+urls = [
+  "https://arbitrum-rpc.polkachu.com",
+]
+
+# providers: osmosisv2
+# https://cosmos.directory/osmosis/nodes (REST)
+[url_set.api_osmosis]
+urls = [
+  "https://lcd-osmosis.blockapsis.com",
+  "https://rest-osmosis.ecostake.com",
+  "https://lcd.osmosis.zone",
+]
+
+# providers: whitewhale_whale
+[url_set.api_migaloo]
+urls = [
+  "https://migaloo-api.polkachu.com",
+]
+
+# providers: uniswapv3
+# https://ethereumnodes.com
+[url_set.rpc_ethereum]
+urls = [
+  "https://rpc.ankr.com/eth",
+  "https://ethereum.blockpi.network/v1/rpc/public",
+  "https://mainnet.infura.io/v3"
+]
+
+# providers: shade
+# https://cosmos.directory/secretnetwork/nodes (REST)
+[url_set.api_secret]
+urls = [
+  "https://secretnetwork-api.highstakes.ch:1317",
+  "https://rest.cosmos.directory/secretnetwork",
+  "https://secretnetwork-api.lavenderfive.com",
+]
+
+# providers: dexter
+# https://cosmos.directory/persistence/nodes (REST)
+[url_set.api_persistence]
+urls = [
+  "https://persistence-mainnet-rest.cosmonautstakes.com",
+  "https://rest-persistence.architectnodes.com",
+  "https://api-persistence-01.stakeflow.io",
+]
+
 #
 #  CURRENCY PAIRS
 # ------------------------------------------------------------
@@ -55,7 +126,7 @@ providers = ["gate", "huobi", "kucoin"]
 [[currency_pairs]]
 base = "AMPKUJI"
 quote = "KUJI"
-providers = ["finv2"]
+providers = ["finv2", "unstake"]
 derivative = "twap"
 derivative_period = "30m"
 
@@ -130,9 +201,9 @@ providers = [
 ]
 
 [[currency_pairs]]
-base = "AXL"
-quote = "MNTA"
-providers = ["fin"]
+base = "AQLA"
+quote = "USDC"
+providers = ["finv2"]
 derivative = "twap"
 derivative_period = "30m"
 
@@ -204,6 +275,16 @@ providers = [
 ]
 
 [[currency_pairs]]
+base = "CACAO"
+quote = "BTC"
+providers = ["maya"]
+
+[[currency_pairs]]
+base = "CTK"
+quote = "USDT"
+providers = ["binance", "bingx", "gate", "xt"]
+
+[[currency_pairs]]
 base = "CRO"
 quote = "USDT"
 providers = ["bitget", "crypto", "gate", "kucoin", "lbank", "okx", "xt"]
@@ -230,6 +311,26 @@ providers = [
     "poloniex",
     "xt",
 ]
+
+[[currency_pairs]]
+base = "DYDX"
+quote = "USDT"
+providers = ["binance", "gate", "huobi", "kucoin", "okx"]
+
+[[currency_pairs]]
+base = "DYDX"
+quote = "USDC"
+providers = ["bitget"]
+
+[[currency_pairs]]
+base = "DYM"
+quote = "USD"
+providers = ["bitfinex", "kraken"]
+
+[[currency_pairs]]
+base = "DYM"
+quote = "USDT"
+providers = ["binance", "bitget", "bybit", "gate", "kucoin"]
 
 [[currency_pairs]]
 base = "ETH"
@@ -361,6 +462,13 @@ quote = "USD"
 providers = ["kraken"]
 
 [[currency_pairs]]
+base = "KART"
+quote = "USK"
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
 base = "KAVA"
 quote = "USD"
 providers = ["coinbase", "kraken"]
@@ -381,8 +489,15 @@ providers = [
 
 [[currency_pairs]]
 base = "KUJI"
+quote = "USDT"
+providers = ["coinex"]
+derivative = "twap"
+derivative_period = "10m"
+
+[[currency_pairs]]
+base = "KUJI"
 quote = "USDC"
-providers = ["fin"]
+providers = ["finv2"]
 derivative = "twap"
 derivative_period = "30m"
 
@@ -392,6 +507,27 @@ quote = "WETH"
 providers = ["camelotv3"]
 derivative = "twap"
 derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "CACAO"
+providers = ["maya"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "OSMO"
+providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "KUJI"
+quote = "USD"
+providers = ["kraken"]
+derivative = "twap"
+derivative_period = "10m"
 
 [[currency_pairs]]
 base = "LINK"
@@ -497,7 +633,7 @@ derivative_period = "30m"
 [[currency_pairs]]
 base = "NTRN"
 quote = "USDT"
-providers = ["binance", "bitget", "gate", "kucoin", "phemex"]
+providers = ["binance", "bitget", "bitmart", "gate", "kucoin", "phemex"]
 
 [[currency_pairs]]
 base = "OSMO"
@@ -530,28 +666,28 @@ providers = [
 [[currency_pairs]]
 base = "QCKUJI"
 quote = "KUJI"
-providers = ["finv2"]
+providers = ["finv2", "unstake"]
 derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "QCMNTA"
 quote = "MNTA"
-providers = ["finv2"]
+providers = ["finv2", "unstake"]
 derivative = "twap"
 derivative_period = "30m"
 
 [[currency_pairs]]
 base = "RIO"
-quote = "ETH"
-providers = ["okx"]
+quote = "WETH"
+providers = ["uniswapv3"]
 derivative = "twap"
-derivative_period = "20m"
+derivative_period = "30m"
 
 [[currency_pairs]]
 base = "RIO"
 quote = "USDT"
-providers = ["okx"]
+providers = ["bingx", "coinex", "kucoin", "okx", "pionex"]
 
 [[currency_pairs]]
 base = "RLB"
@@ -569,6 +705,27 @@ providers = ["kraken"]
 base = "SCRT"
 quote = "USDT"
 providers = ["binance", "bybit", "gate", "huobi", "kucoin", "lbank"]
+
+[[currency_pairs]]
+base = "SEI"
+quote = "USD"
+providers = ["coinbase", "kraken"]
+
+[[currency_pairs]]
+base = "SEI"
+quote = "USDT"
+providers = [
+    "binance",
+    "bingx",
+    "bitget",
+    "bitmart",
+    "bybit",
+    "gate",
+    "huobi",
+    "kucoin",
+    "pionex",
+    "xt",
+]
 
 [[currency_pairs]]
 base = "SHD"
@@ -609,6 +766,11 @@ quote = "OSMO"
 providers = ["osmosisv2"]
 derivative = "twap"
 derivative_period = "30m"
+
+[[currency_pairs]]
+base = "SOMM"
+quote = "USDT"
+providers = ["coinex"]
 
 [[currency_pairs]]
 base = "STARS"
@@ -705,7 +867,16 @@ providers = ["coinbase", "kraken"]
 [[currency_pairs]]
 base = "TIA"
 quote = "USDT"
-providers = ["binance", "bitget", "bybit", "gate", "huobi", "kucoin", "okx"]
+providers = [
+    "binance",
+    "bitget",
+    "bybit",
+    "gate",
+    "huobi",
+    "kucoin",
+    "okx",
+    "pionex",
+]
 
 [[currency_pairs]]
 base = "WBTC"
@@ -715,15 +886,7 @@ providers = ["binance", "coinbase", "kucoin", "okx"]
 [[currency_pairs]]
 base = "WBTC"
 quote = "USDT"
-providers = [
-    "bitget",
-    "bybit",
-    "crypto",
-    "gate",
-    "hitbtc",
-    "phemex",
-    "poloniex",
-]
+providers = ["bitget", "bybit", "crypto", "gate", "hitbtc", "phemex"]
 
 [[currency_pairs]]
 base = "WETH"
@@ -733,7 +896,7 @@ providers = ["uniswapv3"]
 [[currency_pairs]]
 base = "WHALE"
 quote = "MNTA"
-providers = ["fin"]
+providers = ["finv2"]
 derivative = "twap"
 derivative_period = "30m"
 
@@ -741,6 +904,13 @@ derivative_period = "30m"
 base = "WHALE"
 quote = "OSMO"
 providers = ["osmosisv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+[[currency_pairs]]
+base = "WHALE"
+quote = "USDC"
+providers = ["whitewhale_whale"]
 derivative = "twap"
 derivative_period = "30m"
 
@@ -758,16 +928,6 @@ providers = ["uniswapv3"]
 derivative = "twap"
 derivative_period = "30m"
 
-[[currency_pairs]]
-base = "DYM"
-quote = "USD"
-providers = ["bitfinex", "kraken"]
-
-[[currency_pairs]]
-base = "DYM"
-quote = "USDT"
-providers = ["bitget", "bybit", "gate", "kucoin"]
-
 #
 #  PROVIDER OVERRIDES
 # ------------------------------------------------------------
@@ -775,12 +935,16 @@ providers = ["bitget", "bybit", "gate", "kucoin"]
 [[provider_min_overrides]]
 denoms = [
     "AMPKUJI",
+    "AQLA",
+    "CACAO",
     "FUZN",
     "JUNO",
+    "KART",
     "MNTA",
     "NSTK",
     "QCKUJI",
     "QCMNTA",
+    "RIO",
     "RLB",
     "SHD",
     "SOMM",
@@ -793,7 +957,6 @@ denoms = [
     "WHALE",
     "WINK",
     "WSTETH",
-    "RIO",
 ]
 providers = 1
 
@@ -810,11 +973,11 @@ base = "KUJI"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "USDT"
+base = "RIO"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "WHALE"
+base = "SOMM"
 threshold = "2"
 
 [[deviation_thresholds]]
@@ -823,6 +986,14 @@ threshold = "2"
 
 [[deviation_thresholds]]
 base = "STKATOM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "USDT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WHALE"
 threshold = "2"
 
 #
@@ -834,20 +1005,22 @@ name = "astroport_neutron"
 url_set = "api_neutron"
 
 [[provider_endpoints]]
+name = "camelotv3"
+url_set = "rpc_arbitrum"
+
+[[provider_endpoints]]
 name = "dexter"
 url_set = "api_persistence"
 
 [[provider_endpoints]]
-name = "fin"
-url_set = "fin"
-
-[[provider_endpoints]]
 name = "finv2"
 url_set = "api_kujira"
+volume_blocks = 20
 
 [[provider_endpoints]]
 name = "osmosisv2"
 url_set = "api_osmosis"
+volume_blocks = 20
 
 [[provider_endpoints]]
 name = "shade"
@@ -856,6 +1029,15 @@ url_set = "api_secret"
 [[provider_endpoints]]
 name = "uniswapv3"
 url_set = "rpc_ethereum"
+
+[[provider_endpoints]]
+name = "unstake"
+url_set = "api_kujira"
+
+[[provider_endpoints]]
+name = "whitewhale_whale"
+url_set = "api_migaloo"
+volume_blocks = 20
 
 [contract_addresses.astroport_neutron]
 NTRNATOM = "neutron1e22zh5p8meddxjclevuhjmfj69jxfsa8uu3jvht72rv9d8lkhves6t8veq"
@@ -871,35 +1053,37 @@ ATOMSTKATOM = "persistence1335rlmhujm0gj5e9gh7at9jpqvqckz0mpe4v284ar4lw5mlkryzsz
 
 [contract_addresses.finv2]
 AMPKUJIKUJI = "kujira1lse59wt7a5yksdd08mennt299katjkfzdhmh8hvck8ln08jktcmsxrnh8s"
+AQLAUSDC = "kujira1nswv58h3acql85587rkusqx3zn7k9qx3a3je8wqd3xnw39erpwnsddsm8z"
 FUZNUSK = "kujira1w6gpsfn55ufh3g3pf6qjrdhfj6rp09zqmruvgvzupkl39mtlpcdqw2ys7e"
+KARTUSK = "kujira19n770r9q5haax7mfgy8acrgz7gsamgyjhcvqvxfgrq25983lc42qtszngq"
 KUJIUSDC = "kujira1pw96huy6z02uk8hdpruk6g8u700dp8yxjhp46c24rwkzay2lfd3quqdum5"
 MNTAUSDC = "kujira1ws9w7wl68prspv3rut3plv8249rm0ea0kk335swye3sl2slld4lqdmc0lv"
 NSTKUSK = "kujira1ggtmfuktfcf6plhtdejyyqn5de5uge3tef0jv64ru68h2ctuvyqs3355mn"
 QCKUJIKUJI = "kujira14wsrem89304kpkl6d0j58dl6479eekwt047ccs0qzv9f60w80wzs8rjq4j"
 QCMNTAMNTA = "kujira1ujsr2ge7dr723kse7thjv2rm3k7dkmjaxqzdh8qkcnx5gqz57jsqxy4ker"
 SHDMNTA = "kujira14u8ynhj7d8h2379yqj5q2ma0xxpvfjlrpauhzxgnj40ejq953mlsugux8d"
-
 SOMMMNTA = "kujira1nx5lqc2j4w0ak5dxevj82lar5kunxwj5yamr39xqfazmkksx4f2sksf0hz"
 STARSMNTA = "kujira1hsdzhyvuc2z3f8d3yae84uk62d69vk68vxgudkun7gccz6hvrvfq0vx6fd"
+STATOMATOM = "kujira158zzjcvkz7r3j5hueurcw22qrjerqw4dtrzlalztr7whjykjwvrsrahdnq"
 STATOMMNTA = "kujira1l2x5c2fjjnw9uhrfhtme9snw3tzs4jt8cm0q2ysqssx6zskxatesjm7w7f"
 USDCUSK = "kujira15a657mgszm30vdhytpmfslcyc4cztn5lsuv9rxzwdqmuwgd8znps8l3yy2"
 WHALEMNTA = "kujira1865zmuchjd0g0xr2q5n6hm747s8xju5k8h6mympk4vmqefkuy3hqc66tcw"
 WINKUSK = "kujira1qxtd87qus6uzvqs4jv9r0j9ccd4yla42s6qag7y8fp7hhv68nzas6hqxgw"
-STATOMATOM = "kujira158zzjcvkz7r3j5hueurcw22qrjerqw4dtrzlalztr7whjykjwvrsrahdnq"
+
+[contract_addresses.maya]
+BTCCACAO = "BTC.BTC"
+KUJICACAO = "KUJI.KUJI"
 
 [contract_addresses.osmosisv2]
 ATOMSTKATOM = "886"
 JUNOOSMO = "1097"
+KUJIOSMO = "744"
 MNTAOSMO = "1215"
-SOMMOSMO = "627"
-STARSOSMO = "604"
-STATOMATOM = "1136"
+SOMMOSMO = "1103"
+STARSOSMO = "1096"
+STATOMATOM = "1283"
 STOSMOOSMO = "833"
 WHALEOSMO = "1318"
-NTRNUSDC = "1324"
-
-[contract_addresses.pancakev3_bsc]
-ETHRIO = "0x043681828303cdf9398f0768bf1da99feebf7ee8"
 
 [contract_addresses.shade]
 ATOMSTKATOM = "secret18537ttv4l4k2ea0xp6ay3sv4c243fyjtj2uqz7"
@@ -911,62 +1095,52 @@ USDCWETH = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
 WETHRIO = "0x5b7e3e37a1aa6369386e5939053779abd3597508"
 WSTETHWETH = "0x109830a1AAaD605BbF02a9dFA7B0B92EC2FB7dAa"
 
+[contract_addresses.unstake]
+AMPKUJIKUJI = "kujira1x0rx0543jpjfpuskusaca54d2t8f6v6m3eaqwpgahxtmq7kc7vls2j3hth"
+QCKUJIKUJI = "kujira1hmk8wy7vk0v0vpqasv6zv7hm3n2vce4m3yzkns6869j8h4u5qk2q0xndku"
+QCMNTAMNTA = "kujira1ql30ep2a4f3cswhrr8sjp54t56l7qz7n7jzcnux2m286k6ev7s8q6m8jnp"
 
+[contract_addresses.velodromev2]
+KUJIWETH = "0x763C9dC392B6BEFe79Fa227056dD9279bAbb4E14"
 
-# providers: fin
-# ["https://api.kujira.app", "https://kaiyo-1.gigalixirapp.com"]
-[url_set.fin]
-urls = ["https://kaiyo-1.gigalixirapp.com"]
+[contract_addresses.whitewhale_whale]
+WHALEUSDC = "migaloo1xv4ql6t6r8zawlqn2tyxqsrvjpmjfm6kvdfvytaueqe3qvcwyr7shtx0hj"
 
-# providers: finv2
-# https://cosmos.directory/kujira/nodes (REST)
-[url_set.api_kujira]
-urls = [
-  "http://127.0.0.1:{{ custom_port_prefix }}17", #SET YOUR API IF EXIST
-  "https://api-kujira.starsquid.io"
-]
+[decimals.osmosisv2]
+JUNO = 6
+KUJI = 6
+OSMO = 6
+SOMM = 6
+STARS = 6
+WHALE = 6
 
+[decimals.finv2]
+AQLA = 6
+FUZN = 6
+KART = 6
+KUJI = 6
+MNTA = 6
+NSTK = 6
+SOMM = 6
+STARS = 6
+USDC = 6
+USK = 6
+WHALE = 6
+WINK = 6
 
-# providers: astroport_neutron
-# https://cosmos.directory/neutron/nodes (REST)
-[url_set.api_neutron]
-urls = [
-  "https://neutron-api.polkachu.com",
-  "https://rest.cosmos.directory/neutron"
-]
+[decimals.whitewhale_whale]
+USDC = 6
+WHALE = 6
 
-# providers: osmosisv2
-# https://cosmos.directory/osmosis/nodes (REST)
-[url_set.api_osmosis]
-urls = [
-  "https://lcd-osmosis.blockapsis.com",
-  "https://rest-osmosis.ecostake.com",
-  "https://lcd.osmosis.zone",
-]
+[decimals.unstake]
+KUJI = 6
+MNTA = 6
 
-# providers: uniswapv3
-# https://ethereumnodes.com
-[url_set.rpc_ethereum]
-urls = [
-  "https://rpc.ankr.com/eth",
-  "https://ethereum.blockpi.network/v1/rpc/public",
-  "https://mainnet.infura.io/v3"
-]
+[decimals.camelotv3]
+KUJI = 6
+WETH = 18
 
-# providers: shade
-# https://cosmos.directory/secretnetwork/nodes (REST)
-[url_set.api_secret]
-urls = [
-  "https://secretnetwork-api.highstakes.ch:1317",
-  "https://rest.cosmos.directory/secretnetwork",
-  "https://secretnetwork-api.lavenderfive.com",
-]
-
-# providers: dexter
-# https://cosmos.directory/persistence/nodes (REST)
-[url_set.api_persistence]
-urls = [
-  "https://persistence-mainnet-rest.cosmonautstakes.com",
-  "https://rest-persistence.architectnodes.com",
-  "https://api-persistence-01.stakeflow.io",
-]
+[periods.unstake]
+AMPKUJIKUJI = 14
+QCKUJIKUJI = 14
+QCMNTAMNTA = 21
