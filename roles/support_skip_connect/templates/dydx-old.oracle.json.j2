@@ -1,0 +1,43 @@
+{
+  "providers": {
+    "raydium_api": {
+      "endpoints": [
+        {
+          "url": "https://solana.polkachu.com",
+          "authentication": {
+            "apiKey": "X-Api-Key",
+            "apiKeyHeader": "{{ polkachu_api_key }}"
+          }
+        },
+        {
+          "url": "https://slinky-solana.kingnodes.com",
+          "authentication": {
+            "apiKey": "X-Api-Key",
+            "apiKeyHeader": "{{ kingnodes_api_key }}"
+          }
+        },
+        {
+          "url": "https://solana.lavenderfive.com",
+          "authentication": {
+            "apiKey": "X-Api-Key",
+            "apiKeyHeader": "{{ lavenderfive_api_key }}"
+          }
+        },
+        {
+          "url": "https://solana-rpc.rhino-apis.com",
+          "authentication": {
+            "apiKey": "X-Api-Key",
+            "apiKeyHeader": "{{ rhino_api_key }}"
+          }
+        }
+      ]
+    }
+  },
+  "production": true,
+  "metrics": {
+    "prometheusServerAddress": "0.0.0.0:8002",
+    "enabled": true
+  },
+  "host": "0.0.0.0",
+  "port": "8081"
+}
