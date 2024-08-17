@@ -3,15 +3,15 @@ network: canto
 folder: '.cantod'
 daemon: cantod
 chain_id: 'canto_7700-1'
-node_version: 'v7.0.0'
+node_version: 'v8.1.0'
 repo: 'https://github.com/Canto-Network/Canto.git'
 genesis: 'https://snapshots.polkachu.com/genesis/canto/genesis.json'
 minimum_gas_price: '0.0001acanto'
-peers: '158e1c4d2bc16a60467137fef13b4910857a69c4@65.108.131.174:55656'
+peers: '158e1c4d2bc16a60467137fef13b4910857a69c4@65.108.131.174:15556'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15556'
 custom_port_prefix: 155
-upgrade_folder: v7.0.0
-update_website_immediately: true
+upgrade_folder: v8.0.0
+update_website_immediately: false
 gas_params: '--fees 300000000000000000acanto --gas=300000'
 
 # [Optional] Snapshot

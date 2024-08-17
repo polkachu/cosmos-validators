@@ -1,14 +1,13 @@
 network: soarchain
 folder: '.soarchain'
 daemon: soarchaind
-chain_id: soarchaintestnet
-node_version: 0.2.9
-repo: 'TBD'
-genesis: 'https://snapshots.polkachu.com/testnet-genesis/soarchain/genesis.json'
-peers: 'e0ee4d996f87d0f2b7706e35e162531c7fd76493@34.165.238.45:26656'
-minimum_gas_price: '0.0001utmotus'
+chain_id: soarchaintestnet-1
+node_version: v0.2.11
+repo: 'https://github.com/soar-robotics/mainnet-rehearsal'
+genesis: 'https://raw.githubusercontent.com/soar-robotics/mainnet-rehearsal/main/network/genesis.json'
+peers: 05b7ffc7bca7705671332a462b287c65fac8f21b@47.254.130.213:26656,77600969c08133edcff63a7a610945ee7a6ca1c8@109.205.180.29:26656,90819bb9cf42f975ec3824b01e50e94df3d181ae@88.99.68.93:26656
+minimum_gas_price: '0.0001utsoar'
 custom_port_prefix: 252
-upgrade_folder: v4
 
 # [Optional] Snapshot
 snapshot_hour: 1

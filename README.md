@@ -88,6 +88,7 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 | `support_sync_snapshot.yml`    | Sync node from a snapshot                                                                        |
 | `support_remove_node.yml`      | Remove a node and clean up                                                                       |
 | `support_update_min_gas.yml`   | Update minimum gas price                                                                         |
+| `support_skip_connect.yml`     | Install skip connect                                                                             |
 
 ### Selected playbook Usage Example
 
