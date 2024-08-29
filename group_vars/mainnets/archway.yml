@@ -2,7 +2,7 @@ network: archway
 folder: '.archway'
 daemon: archwayd
 chain_id: archway-1
-node_version: 'v7.0.1'
+node_version: 'v8.0.0'
 repo: https://github.com/archway-network/archway
 genesis: 'https://snapshots.polkachu.com/genesis/archway/genesis.json'
 seeds: '3ba7bf08f00e228026177e9cdc027f6ef6eb2b39@35.232.234.58:26656'

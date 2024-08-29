@@ -2,7 +2,7 @@ network: bitsong
 folder: '.bitsongd'
 daemon: bitsongd
 chain_id: bitsong-2b
-node_version: v0.16.0
+node_version: v0.17.0
 repo: https://github.com/bitsongofficial/go-bitsong
 genesis: https://raw.githubusercontent.com/bitsongofficial/networks/master/bitsong-2b/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:16056'

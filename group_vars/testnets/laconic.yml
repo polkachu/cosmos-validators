@@ -1,0 +1,13 @@
+network: laconic
+folder: '.laconicd'
+daemon: laconicd
+chain_id: 'laconic_9000-1'
+node_version: 'v0.1.7'
+repo: 'https://git.vdb.to/cerc-io/laconicd'
+genesis: 'https://raw.githubusercontent.com/hyphacoop/loro-testnet/main/docs/genesis.json'
+seeds: '545297cafc624e0f10a0fd7c1840854bb293d3b8@laconicd.laconic.com:26656'
+custom_port_prefix: 293
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
