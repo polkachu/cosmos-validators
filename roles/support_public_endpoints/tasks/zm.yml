@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for zm
+  set_fact:
+    rpc: '{{ network }}-zm-rpc'
+    api: '{{ network }}-zm-api'
+    grpc: '{{ network }}-zm-grpc'

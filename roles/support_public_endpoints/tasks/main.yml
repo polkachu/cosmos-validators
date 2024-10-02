@@ -1,11 +1,63 @@
 ---
+- name: import tasks for mainnet
+  import_tasks: mainnet.yml
+  when: partner is not defined and network_type == 'mainnet'
+
+- name: import tasks for testnet
+  import_tasks: testnet.yml
+  when: partner is not defined and network_type == 'testnet'
+
 - name: import tasks for skip
   import_tasks: skip.yml
   when: partner is defined and partner == 'skip'
 
+- name: import tasks for skip_extra
+  import_tasks: skip_extra.yml
+  when: partner is defined and partner == 'skip_extra'
+
 - name: import tasks for strd
   import_tasks: strd.yml
   when: partner is defined and partner == 'strd'
+
+- name: import tasks for comp
+  import_tasks: comp.yml
+  when: partner is defined and partner == 'comp'
+
+- name: import tasks for dydx
+  import_tasks: dydx.yml
+  when: partner is defined and partner == 'dydx'
+
+- name: import tasks for agor
+  import_tasks: agor.yml
+  when: partner is defined and partner == 'agor'
+
+- name: import tasks for zm
+  import_tasks: zm.yml
+  when: partner is defined and partner == 'zm'
+
+- name: import tasks for trp
+  import_tasks: trp.yml
+  when: partner is defined and partner == 'trp'
+
+- name: import tasks for newt
+  import_tasks: newt.yml
+  when: partner is defined and partner == 'newt'
+
+- name: import tasks for tw
+  import_tasks: tw.yml
+  when: partner is defined and partner == 'tw'
+
+- name: import tasks for cube
+  import_tasks: cube.yml
+  when: partner is defined and partner == 'cube'
+
+- name: import tasks for walk
+  import_tasks: walk.yml
+  when: partner is defined and partner == 'walk'
+
+- name: import tasks for nbl
+  import_tasks: nbl.yml
+  when: partner is defined and partner == 'nbl'
 
 - name: install nginx package
   become: true
@@ -60,7 +112,7 @@
 - name: Create rpc endpoint
   cloudflare_dns:
     zone: polkachu.com
-    record: '{{ dns_prefix }}-rpc'
+    record: '{{ rpc }}'
     type: A
     value: '{{ ansible_host }}'
     api_token: '{{ cloudflare_api_key }}'
@@ -70,7 +122,7 @@
 - name: Create api endpoint
   cloudflare_dns:
     zone: polkachu.com
-    record: '{{ dns_prefix }}-api'
+    record: '{{ api }}'
     type: A
     value: '{{ ansible_host }}'
     api_token: '{{ cloudflare_api_key }}'
@@ -80,7 +132,7 @@
 - name: Create grpc endpoint
   cloudflare_dns:
     zone: polkachu.com
-    record: '{{ dns_prefix }}-grpc'
+    record: '{{ grpc }}'
     type: A
     value: '{{ ansible_host }}'
     api_token: '{{ cloudflare_api_key }}'

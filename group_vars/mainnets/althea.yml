@@ -1,0 +1,16 @@
+network: althea
+folder: '.althea'
+daemon: althea
+chain_id: althea_258432-1
+node_version: 'v1.4.0'
+repo: https://github.com/althea-net/althea-chain
+genesis: 'https://raw.githubusercontent.com/AltheaFoundation/althea-L1-docs/main/althea-l1-mainnet-genesis.json'
+binary: 'https://github.com/althea-net/althea-L1/releases/download/v1.4.0/althea-linux-amd64'
+binary_processing: default
+seeds: '46ad21a616527181ea3d992339268a5a25c771fa@95.216.38.96:14656'
+peers: '4d9c73a9e541453b56add8fadf0839fd1442d979@15.235.115.155:17200,a0eca501485cc74e0568973ef502d05023f6500d@158.247.226.255:17200,ab9a9e6ea747839652dfe4480e66a5eb78a385e8@51.81.167.60:17200'
+custom_port_prefix: 124
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

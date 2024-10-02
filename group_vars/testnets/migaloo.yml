@@ -1,13 +1,15 @@
 network: migaloo
 folder: '.migalood'
 daemon: migalood
-chain_id: 'narwhal-1'
-node_version: 'v1.0.0-rc0'
+chain_id: 'narwhal-2'
+node_version: 'v4.1.6-rc1'
 repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain'
-genesis: 'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-chain/main/networks/testnet/genesis.json'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20756'
+genesis: 'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-networks/main/narwhal-2/genesis.json'
+seeds: 'bfad30f0782fe3e5b978c1b5ffbbc5b4bbaeec04@65.109.34.184:26656'
 custom_port_prefix: 207
+upgrade_folder: v4.1.6
 minimum_gas_price: '0whale'
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

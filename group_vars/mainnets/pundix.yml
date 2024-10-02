@@ -1,0 +1,15 @@
+network: pundix
+folder: '.pundix'
+daemon: pundixd
+chain_id: 'PUNDIX'
+node_version: v0.2.x
+repo: https://github.com/pundix/pundix.git
+genesis: 'https://raw.githubusercontent.com/pundix/pundix/main/public/mainnet/genesis.json'
+peers: '1cd05b283c96dc570f55d0c11845947b8ac2a9f2@192.99.201.123:24154,8bd41ea9f8ba7cfee4d19887cab487cdfc1177f4@pundix-mainnet-node-1.pundix.com:26656,6c1738220234a5e1b3caf94403ecd651e9759952@pundix-mainnet-node-2.pundix.com:26656,23abe2346d40f82cf0606e47931e58752f8b9348@pundix-mainnet-node-3.pundix.com:26656,20d275af6d025be144765291db5337ea059cce18@pundix-mainnet-node-4.pundix.com:26656,47f97d7baf028ddfd3b223baab0fa062eae75310@pundix-mainnet-node-5.pundix.com:26656'
+minimum_gas_price: '2000000000000ibc/55367B7B6572631B78A93C66EF9FDFCE87CDE372CC4ED7848DA78C1EB1DCDD78'
+custom_port_prefix: 261
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30
+wasm: 'outside'

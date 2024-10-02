@@ -1,14 +1,18 @@
 server {
     listen 80;
-    server_name {{dns_prefix}}-rpc.polkachu.com;
+    server_name {{rpc}}.polkachu.com;
     add_header Access-Control-Allow-Origin * always;
     add_header Access-Control-Allow-Headers * always;
     location / {
-{% if partner is undefined %}
+{% if partner is undefined or partner == 'dydx' %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;
 {% endif %}
-{% if partner is defined and partner == "skip" %}
+{% if partner is defined and (partner == "skip" or partner == "skip_extra") %}
         auth_basic "Skip";
+        auth_basic_user_file ".htpasswd";
+{% endif %}
+{% if partner is defined and (partner == "cube") %}
+        auth_basic "Cube";
         auth_basic_user_file ".htpasswd";
 {% endif %}
         proxy_redirect                      off;
@@ -21,7 +25,7 @@ server {
         # proxy_set_header Connection upgrade;
 {% else %}
         proxy_set_header Upgrade $http_upgrade;
-        #proxy_set_header Connection upgrade;
+        proxy_set_header Connection upgrade;
 {% endif %}
         proxy_pass      http://127.0.0.1:{{custom_port_prefix}}57;
     }

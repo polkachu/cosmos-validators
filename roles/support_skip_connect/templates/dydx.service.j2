@@ -1,0 +1,16 @@
+[Unit]
+Description={{ network }} skip connect
+After=network-online.target
+
+[Service]
+User={{ ansible_user }}
+ExecStart={{ user_dir }}/go/bin/slinky \
+  --marketmap-provider dydx_migration_api \
+  --log-disable-file-rotation \
+  --oracle-config {{ user_dir }}/{{ folder }}/config/oracle.json
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

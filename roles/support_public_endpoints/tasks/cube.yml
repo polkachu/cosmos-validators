@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for cube
+  set_fact:
+    rpc: '{{ network }}-cube-rpc'
+    api: '{{ network }}-cube-api'
+    grpc: '{{ network }}-cube-grpc'

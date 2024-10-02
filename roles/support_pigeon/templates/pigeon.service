@@ -1,0 +1,15 @@
+[Unit]
+Description=pigeon
+After=network-online.target
+
+[Service]
+User=ubuntu
+ExecStart=/home/ubuntu/go/bin/pigeon start
+WorkingDirectory=/home/ubuntu/
+EnvironmentFile=/home/ubuntu/.pigeon/env.sh
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

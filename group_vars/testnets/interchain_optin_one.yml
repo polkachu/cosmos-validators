@@ -1,0 +1,13 @@
+network: interchain_topn_one
+folder: '.interchain-security-c'
+daemon: interchain-security-cd
+chain_id: devnet-optin-one
+node_version: pss-devnet-1
+repo: 'https://github.com/cosmos/interchain-security'
+genesis: 'https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/pss-devnet/devnet-topn-one/topn-one-genesis.json'
+peers: 'ddd8f2add13abcaf96c6929419b52452ec5c6e3a@topn-one-val.pss-devnet.polypore.xyz:26656'
+custom_port_prefix: 187
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

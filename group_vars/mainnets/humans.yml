@@ -1,0 +1,15 @@
+network: humans
+folder: '.humansd'
+daemon: humansd
+chain_id: humans_1089-1
+node_version: 'tags/v1.0.0'
+repo: https://github.com/humansdotai/humans
+genesis: 'https://ss.humans.nodestake.org/genesis.json'
+peers: 'e29d6dab79b5801029bde71d90ffe5d35c7b7424@185.246.87.48:26656,6d10dcac248d28e8c445841db51f34f9c26442c2@88.217.142.187:29001,7889ee17b291451155190d40426e6154be4e1abc@135.181.142.60:15608,20f95f8b8dd32b94b593dc3e8fcf0b0aeb74b85d@94.237.93.65:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:18456'
+minimum_gas_price: '0.0uheart'
+custom_port_prefix: 184
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

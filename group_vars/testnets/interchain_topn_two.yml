@@ -1,0 +1,13 @@
+network: interchain_topn_two
+folder: '.interchain-security-c'
+daemon: interchain-security-cd
+chain_id: devnet-topn-two
+node_version: pss-devnet-1
+repo: 'https://github.com/cosmos/interchain-security'
+genesis: 'https://raw.githubusercontent.com/hyphacoop/ics-testnets/main/pss-devnet/devnet-topn-two/topn-two-genesis.json'
+peers: 'de02b43bebae7ad3612d0cb88edcc44028d21f3e@topn-two-val.pss-devnet.polypore.xyz:26656'
+custom_port_prefix: 188
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

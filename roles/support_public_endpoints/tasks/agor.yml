@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for agor
+  set_fact:
+    rpc: '{{ network }}-agor-rpc'
+    api: '{{ network }}-agor-api'
+    grpc: '{{ network }}-agor-grpc'

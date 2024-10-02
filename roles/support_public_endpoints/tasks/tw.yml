@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for tw
+  set_fact:
+    rpc: '{{ network }}-tw-rpc'
+    api: '{{ network }}-tw-api'
+    grpc: '{{ network }}-tw-grpc'

@@ -5,10 +5,10 @@ node_exporter_version: '1.3.1'
 promtail_version: '2.6.1'
 
 # go
-go_version: '1.20.3'
+go_version: '1.21.1'
 
 # cosmovisor
 cosmovisor_version: 'v1.0.0'
 
 # Snapshot base URL
-snapshot_base_url: 'https://polkachu.com/api/v1/chains'
+snapshot_base_url: 'https://polkachu.com/api/v2/chain_snapshots'

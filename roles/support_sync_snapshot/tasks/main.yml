@@ -1,8 +1,8 @@
 ---
 - name: Get url fragment based on mainnet or testnet
   set_fact:
-    url_fragment: "{% if network_type == 'mainnet' %}snapshot\
-      {% else %}testnet_snapshot\
+    url_fragment: "{% if network_type == 'mainnet' %}mainnet\
+      {% else %}testnet\
       {% endif %}"
 
 - name: Get the latest snapshot url

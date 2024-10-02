@@ -1,4 +1,6 @@
 ---
-- name: set dns_prefix for skip
+- name: set dns_prefix for strd
   set_fact:
-    dns_prefix: '{{ network }}-strd'
+    rpc: '{{ network }}-strd-rpc'
+    api: '{{ network }}-strd-api'
+    grpc: '{{ network }}-strd-grpc'

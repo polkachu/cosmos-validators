@@ -7,7 +7,7 @@ binary: https://github.com/InjectiveLabs/injective-chain-releases/releases/downl
 binary_processing: zip
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14356'
 app_file: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/app.toml
-minimum_gas_price: '500000000inj'
+minimum_gas_price: '160000000inj'
 custom_port_prefix: 143
 
 # [Optional] Snapshot

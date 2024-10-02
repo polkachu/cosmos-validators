@@ -1,0 +1,13 @@
+network: saga
+folder: '.ssc'
+daemon: sscd
+chain_id: ssc-testnet-2
+node_version: v0.1.5
+repo: 'https://github.com/sagaxyz/ssc'
+custom_port_prefix: 249
+genesis: 'https://raw.githubusercontent.com/sagaxyz/testnet-2/main/genesis/genesis.json'
+seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:24956'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

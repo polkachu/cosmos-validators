@@ -5,8 +5,7 @@ chain_id: 'ares-1'
 node_version: 'v2.0.0-rc0'
 repo: 'https://github.com/mars-protocol/hub'
 genesis: 'https://raw.githubusercontent.com/mars-protocol/networks/main/ares-1/genesis.json'
-seeds: '91911acca20b84850e3317cd3a0ae1cf31e9ac3c@65.108.142.160:26656'
-peers: 'f3dceab155a74772595ae33ee6b72165c31fd888@62.171.166.106:26656,e12bc490096d1b5f4026980f05a118c82e81df2a@85.17.6.142:26656,7342199e80976b052d8506cc5a56d1f9a1cbb486@65.21.89.54:26653,5c2a752c9b1952dbed075c56c600c3a79b58c395@mars.testnet.peer.autostake.net:27056,0669f1d76ae4f91eaf11a0327c71a0ce909df2cd@134.122.82.186:26656,e753c2dde523bbbe0981bea5708f267f63ae84c8@68.183.76.26:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:18556'
 custom_port_prefix: 185
 upgrade_folder: v2
 

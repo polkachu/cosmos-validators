@@ -1,0 +1,15 @@
+network: kopi
+folder: '.kopid'
+daemon: kopid
+chain_id: kopi-test-3
+node_version: v0.4
+repo: https://github.com/kopi-money/kopi.git
+genesis: 'https://snapshots.moonbridge.team/testnet/kopi/genesis.json'
+seeds: 'a6dc376b53d0170061d2811a35016f20b5793234@49.13.218.85:26656'
+custom_port_prefix: 276
+update_website_immediately: true
+minimum_gas_price: '0ukopi'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
