@@ -5,7 +5,7 @@
     state: absent
 
 - name: Initialize Node
-  command: '{{ daemon }} init {{ node_name }} --chain-id {{ chain_id }} --home {{ folder }} -o'
+  command: '{{ daemon }} init {{ node_name }} --chain-id {{ chain_id }} --home {{ folder }}'
   environment:
     PATH: '{{ path }}'
 

@@ -1,0 +1,6 @@
+---
+- name: Update pigeon config
+  hosts: '{{ target }}'
+  gather_facts: false
+  roles:
+    - support_pigeon

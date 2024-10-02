@@ -9,6 +9,7 @@ peers: 'd2a2c21754be65ad4a4f1de1f6163f681a6e8af8@192.99.44.79:18556'
 seeds: '52de8a7e2ad3da459961f633e50f64bf597c7585@seed.marsprotocol.io:443,d2d2629c8c8a8815f85c58c90f80b94690468c4f@tenderseed.ccvalidators.com:26012,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:18556'
 custom_port_prefix: 185
 update_website_immediately: true
+minimum_gas_price: '0umars'
 
 # [Optional] Snapshot
 snapshot_hour: 2

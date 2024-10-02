@@ -1,0 +1,87 @@
+loop-timeout: 5s
+health-check-port: 5757
+
+paloma:
+  chain-id: messenger
+  call-timeout: 20s
+  keyring-dir: /home/ubuntu/.paloma
+  keyring-pass-env-name: PALOMA_KEYRING_PASS
+  keyring-type: os
+  validator-key: ${VALIDATOR}
+  base-rpc-url: http://localhost:12157
+  gas-adjustment: 3.0
+  gas-prices: 0.01ugrain
+  account-prefix: paloma
+
+evm:
+  eth-main:
+    chain-id: 1
+    base-rpc-url: ${ETH_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/eth-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  bnb-main:
+    chain-id: 56
+    base-rpc-url: ${BNB_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/bnb-main
+    gas-adjustment: 1
+    tx-type: 0
+
+  matic-main:
+    chain-id: 137
+    base-rpc-url: ${MATIC_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/matic-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  op-main:
+    chain-id: 10
+    base-rpc-url: ${OP_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/op-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  kava-main:
+    chain-id: 2222
+    base-rpc-url: ${KAVA_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/kava-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  base-main:
+    chain-id: 8453
+    base-rpc-url: ${BASE_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/base-main
+    gas-adjustment: 1
+    tx-type: 2
+
+  arbitrum-main:
+    chain-id: 42161
+    base-rpc-url: ${ARB_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/arbitrum-main
+    gas-adjustment: 2
+    tx-type: 2
+
+  gnosis-main:
+    chain-id: 100
+    base-rpc-url: ${GNOSIS_RPC_URL}
+    keyring-pass-env-name: ETH_PASSWORD
+    signing-key: ${ETH_SIGNING_KEY}
+    keyring-dir: /home/ubuntu/.pigeon/keys/evm/gnosis-main
+    gas-adjustment: 2
+    tx-type: 2

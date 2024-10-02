@@ -9,8 +9,33 @@ read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
 
+
+[[deviation_thresholds]]
+base = "ETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "BTC"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "USDC"
+threshold = "2"
+
 [[deviation_thresholds]]
 base = "USDT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "ATOM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SEI"
 threshold = "2"
 
 [[currency_pairs]]
@@ -18,10 +43,12 @@ base = "ETH"
 chain_denom = "ueth"
 providers = [
   "huobi",
-  "kraken",
+  "crypto",
   "coinbase",
+  "kraken",
+  "okx"
 ]
-quote = "USD"
+quote = "USDT"
 
 [[currency_pairs]]
 base = "BTC"
@@ -29,15 +56,65 @@ chain_denom = "ubtc"
 providers = [
   "huobi",
   "kraken",
+  "crypto",
+  "coinbase",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "USDC"
+chain_denom = "uusdc"
+providers = [
+  "huobi",
+  "kraken",
+  "okx",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "USDT"
+chain_denom = "uusdt"
+providers = [
+  "kraken",
+  "crypto",
   "coinbase",
 ]
 quote = "USD"
 
 [[currency_pairs]]
-base = "SOL"
-chain_denom = "usei"
+base = "OSMO"
+chain_denom = "uosmo"
 providers = [
   "huobi",
+  "binance",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+chain_denom = "uosmo"
+providers = [
+  "coinbase"
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "SEI"
+chain_denom = "usei"
+providers = [
+  "binance",
+  "huobi",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SEI"
+chain_denom = "usei"
+providers = [
   "kraken",
   "coinbase",
 ]
@@ -48,20 +125,12 @@ base = "ATOM"
 chain_denom = "uatom"
 providers = [
   "huobi",
-  "kraken",
-  "coinbase",
+  "crypto",
+  "binance",
+  "gate",
+  "okx",
 ]
-quote = "USD"
-
-[[currency_pairs]]
-base = "USDT"
-chain_denom = "factory/sei1jdppe6fnj2q7hjsepty5crxtrryzhuqsjrj95y/uust2"
-providers = [
-  "huobi",
-  "kraken",
-  "coinbase",
-]
-quote = "USD"
+quote = "USDT"
 
 [account]
 address = "{{ price_feeder_address }}"

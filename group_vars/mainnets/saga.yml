@@ -1,0 +1,15 @@
+network: saga
+folder: '.ssc'
+daemon: sscd
+chain_id: ssc-1
+node_version: v0.1.5
+repo: 'https://github.com/sagaxyz/ssc'
+custom_port_prefix: 249
+genesis: 'https://raw.githubusercontent.com/sagaxyz/mainnet/main/genesis/genesis.json'
+peers: '7207efd7df43d4f423a7d2cf8220b53f3f6499bf@65.108.234.137:24956'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:24956'
+minimum_gas_price: '0usaga'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

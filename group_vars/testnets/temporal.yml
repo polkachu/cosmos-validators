@@ -1,0 +1,15 @@
+network: 'temporal'
+folder: '.temporal'
+daemon: 'temporald'
+chain_id: 'temporal-test-2'
+node_version: 'v0.4.0'
+repo: 'https://github.com/temporal-zone/temporal.git'
+genesis: 'https://raw.githubusercontent.com/temporal-zone/temporal-testnet/main/temporal-test-2/genesis/genesis.json'
+peers: '851a2d085224e9188abb9bb7c0573f5ca9acfbc4@142.132.157.153:24156,20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:24156'
+seeds: ''
+custom_port_prefix: 241
+minimum_gas_price: '0utprl'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

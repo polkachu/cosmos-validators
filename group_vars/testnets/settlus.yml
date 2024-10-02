@@ -1,0 +1,13 @@
+network: settlus
+folder: '.settlus'
+daemon: settlusd
+chain_id: 'settlus_5372-2'
+node_version: 'v0.5.3'
+repo: https://github.com/settlus/chain
+genesis: https://raw.githubusercontent.com/settlus/testnet/main/testnets/settlus_5372-2/genesis.json
+custom_port_prefix: 285
+peers: '5ace775571e49fdf7ec0d68ac691941b36a3ad70@10.50.128.80:26656'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

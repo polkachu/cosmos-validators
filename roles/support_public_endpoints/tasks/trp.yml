@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for trp
+  set_fact:
+    rpc: '{{ network }}-trp-rpc'
+    api: '{{ network }}-trp-api'
+    grpc: '{{ network }}-trp-grpc'

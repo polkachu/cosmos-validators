@@ -1,0 +1,14 @@
+network: govgen
+folder: '.govgen'
+daemon: govgend
+chain_id: govgen-1
+node_version: 'v1.0.1'
+repo: 'https://github.com/atomone-hub/govgen.git'
+genesis: 'https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json'
+peers: 'e43fa897f5d4521cf979b2b45c1c7ce6ce7526ca@167.235.183.213:26656,148d010cbeb45140f190abfee435f42347d2c195@65.108.71.140:26656,ae3b7efbe5bddff191b53b769767e835c2365241@46.166.172.240:26656,644a1458bb4db8f0bfd730d5cd59356be31d7f0b@37.120.245.28:26656'
+custom_port_prefix: 265
+minimum_gas_price: '0.001ugovgen'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

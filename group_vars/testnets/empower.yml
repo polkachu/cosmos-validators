@@ -2,11 +2,13 @@ network: empower
 folder: '.empowerchain'
 daemon: empowerd
 chain_id: circulus-1
-node_version: 'v1.0.0-rc3'
+node_version: 'v2.0.0-rc1'
 repo: 'https://github.com/empowerchain/empowerchain'
 genesis: 'https://raw.githubusercontent.com/EmpowerPlastic/empowerchain/main/testnets/circulus-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17456'
 custom_port_prefix: 174
+upgrade_folder: v2
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 6

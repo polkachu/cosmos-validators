@@ -7,7 +7,7 @@ repo: 'https://github.com/LoyalLabs/loyal'
 binary: https://github.com/LoyalLabs/loyal/releases/download/v0.25.1/loyal_v0.25.1_linux_amd64.tar.gz
 binary_processing: targz
 genesis: 'https://raw.githubusercontent.com/LoyalLabs/net/main/mainnet/genesis.json'
-seeds: '7490c272d1c9db40b7b9b61b0df3bb4365cb63a6@loyal-seed.netdots.net:26656,b66ecdf36bb19a9af0460b3ae0901aece93ae006@pubnode1.joinloyal.io:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:17856'
 custom_port_prefix: 178
 
 # [Optional] Snapshot

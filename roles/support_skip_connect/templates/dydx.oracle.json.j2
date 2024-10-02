@@ -1,0 +1,111 @@
+{
+  "providers":{
+    "dydx_migration_api":{
+      "api":{
+        "endpoints":[
+          {
+            "url":"http://127.0.0.1:{{ custom_port_prefix }}17"
+          },
+          {
+            "url":"127.0.0.1:{{ custom_port_prefix }}90"
+          }
+        ]
+      }
+    },
+    "raydium_api":{
+      "api":{
+        "endpoints":[
+          {
+            "url":"https://solana.polkachu.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ polkachu_api_key }}"
+            }
+          },
+          {
+            "url":"https://slinky-solana.kingnodes.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ kingnodes_api_key }}"
+            }
+          },
+          {
+            "url":"https://solana.lavenderfive.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ lavenderfive_api_key }}"
+            }
+          },
+          {
+            "url":"https://solana-rpc.rhino-apis.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ rhino_api_key }}"
+            }
+          }
+        ]
+      }
+    },
+    "uniswapv3_api-ethereum": {
+      "api": {
+        "endpoints": [
+          {
+            "url":"https://ethereum.lavenderfive.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ lavenderfive_api_key }}"
+            }
+          },
+          {
+            "url":"https://ethereum-rpc.polkachu.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ polkachu_api_key }}"
+            }
+          },
+          {
+            "url":"https://eth.kingnodes.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ kingnodes_api_key }}"
+            }
+          },
+          {
+            "url":"https://ethereum-rpc.rhino-apis.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ rhino_api_key }}"
+            }
+          }
+        ]
+      }
+    },
+    "uniswapv3_api-base": {
+      "api": {
+        "endpoints": [
+          {
+            "url":"https://base-rpc.rhino-apis.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ rhino_api_key }}"
+            }
+          },
+          {
+            "url":"https://slinky-base.kingnodes.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ kingnodes_api_key }}"
+            }
+          },
+          {
+            "url":"https://base.lavenderfive.com",
+            "authentication":{
+              "apiKeyHeader":"x-api-key",
+              "apiKey":"{{ lavenderfive_api_key }}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -3,3 +3,4 @@
     url: '{{ genesis }}'
     dest: '{{ user_dir }}/{{ folder }}/config/genesis.json'
     mode: '0644'
+    force: true

@@ -1,0 +1,21 @@
+---
+- name: install nginx
+  apt:
+    name: 'nginx'
+    state: present
+    update_cache: yes
+
+- name: Delete default nginx config 1
+  file:
+    path: '{{ item }}'
+    state: absent
+  with_items:
+    - /etc/nginx/sites-enabled/default
+    - /etc/nginx/sites-available
+
+- name: start nginx service
+  systemd:
+    name: 'nginx'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

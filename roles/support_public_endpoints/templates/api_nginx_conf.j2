@@ -1,12 +1,16 @@
 server {
     listen 80;
-    server_name {{dns_prefix}}-api.polkachu.com;
+    server_name {{api}}.polkachu.com;
     location / {
-{% if partner is undefined %}
+{% if partner is undefined or partner == "dydx" %}
         limit_req zone=limitreqsbyaddr burst=150 nodelay;
 {% endif %}
-{% if partner is defined and partner == "skip" %}
+{% if partner is defined and (partner == "skip" or partner == "skip_extra") %}
         auth_basic "Skip";
+        auth_basic_user_file ".htpasswd";
+{% endif %}
+{% if partner is defined and (partner == "cube") %}
+        auth_basic "Cube";
         auth_basic_user_file ".htpasswd";
 {% endif %}
         proxy_pass http://127.0.0.1:{{custom_port_prefix}}17;

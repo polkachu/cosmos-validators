@@ -1,0 +1,14 @@
+network: aether
+folder: '.aetherd'
+daemon: aetherd
+chain_id: ethera_9000-1
+node_version: v1.8.2-rc0
+repo: 'https://github.com/aetherevm/aether'
+custom_port_prefix: 255
+update_website_immediately: true
+genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/ethera_9000-1/ethera_9000-1-genesis.json'
+seeds: 'e6830209e30448357e64a77279c5784b0d0232ee@p2p1.ethera.aetherevm.com:26656,88266f83878399bffd8c3d627a1f401cc389b81f@p2p2.ethera.aetherevm.com:26656'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

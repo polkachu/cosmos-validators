@@ -1,0 +1,16 @@
+network: selfchain
+folder: '.selfchain'
+daemon: selfchaind
+chain_id: 'self-dev-1'
+node_version: TBD
+repo: 'TBD'
+binary: 'https://snapshots.polkachu.com/misc/selfchaind'
+binary_processing: 'default'
+genesis: 'https://raw.githubusercontent.com/hotcrosscom/selfchain-genesis/main/networks/devnet/genesis.json'
+peers: 'fda47662b03b41799e58499fac0afbaf68c02a1f@174.138.180.190:61256'
+minimum_gas_price: '0uself'
+custom_port_prefix: 243
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

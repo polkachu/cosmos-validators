@@ -7,5 +7,8 @@
     ".vscode",
     ".vscode-insiders"
   ],
-  "cSpell.words": ["sged"]
+  "cSpell.words": [
+    "sged"
+  ],
+  "ansible.python.interpreterPath": "/opt/homebrew/bin/python3"
 }

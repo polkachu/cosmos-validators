@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for nbl
+  set_fact:
+    rpc: '{{ network }}-nbl-rpc'
+    api: '{{ network }}-nbl-api'
+    grpc: '{{ network }}-nbl-grpc'

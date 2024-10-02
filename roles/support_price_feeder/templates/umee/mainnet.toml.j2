@@ -1,4 +1,7 @@
-gas_adjustment = 1.03
+#gas_adjustment = 1.6
+provider_timeout = "1000000s"
+gas_prevote = 55000
+gas_vote = 160000
 
 [server]
 listen_addr = "0.0.0.0:{{ custom_port_prefix }}71"
@@ -6,6 +9,7 @@ read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
 
+# deviation_thresholds
 [[deviation_thresholds]]
 base = "MARS"
 threshold = "1.5"
@@ -106,10 +110,99 @@ threshold = "1.5"
 base = "stJUNO"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "USK"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stUMEE"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "RETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "LINK"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WBTC"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "NCT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SOMM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "STARS"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "INJ"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SFRXETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WSTETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "TIA"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "STRD"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "milkTIA"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "DYDX"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stTIA"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "BLD"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stDYDX"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "KAVA"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SEI"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "NTRN"
+threshold = "2"
+
+# currency_pairs
 [[currency_pairs]]
 base = "UMEE"
 providers = [
-  "okx",
+  "mexc",
   "gate",
 ]
 quote = "USDT"
@@ -117,7 +210,7 @@ quote = "USDT"
 [[currency_pairs]]
 base = "UMEE"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -127,6 +220,13 @@ providers = [
   "kraken",
   "coinbase",
   "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "kraken",
 ]
 quote = "USD"
 
@@ -216,7 +316,7 @@ quote = "USDT"
 [[currency_pairs]]
 base = "OSMO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -236,31 +336,51 @@ providers = [
 quote = "USD"
 
 [[currency_pairs]]
+base = "WETH"
+providers = [
+  "eth-uniswap"
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "WBTC"
+providers = [
+  "eth-uniswap"
+]
+quote = "WETH"
+
+[[currency_pairs]]
+base = "CBETH"
+providers = [
+  "eth-uniswap"
+]
+quote = "WETH"
+
+[[currency_pairs]]
 base = "stATOM"
 providers = [
-  "osmosisv2",
-  "crescent",
+  "osmosis",
 ]
 quote = "ATOM"
 
 [[currency_pairs]]
 base = "stOSMO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
 [[currency_pairs]]
 base = "IST"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
 [[currency_pairs]]
 base = "IST"
 providers = [
-  "crescent",
+  "osmosis",
 ]
 quote = "USDC"
 
@@ -284,7 +404,7 @@ providers = [ "kraken", "crypto",]
 [[currency_pairs]]
 base = "JUNO"
 quote = "USDT"
-providers = [ "bitget", "mexc",]
+providers = ["mexc",]
 
 [[currency_pairs]]
 base = "JUNO"
@@ -294,7 +414,7 @@ providers = [ "kraken",]
 [[currency_pairs]]
 base = "JUNO"
 quote = "ATOM"
-providers = [ "osmosisv2",]
+providers = [ "osmosis",]
 
 [[currency_pairs]]
 base = "LUNA"
@@ -354,14 +474,14 @@ quote = "USDT"
 [[currency_pairs]]
 base = "stkATOM"
 providers = [
-  "crescent",
+  "osmosis",
 ]
 quote = "ATOM"
 
 [[currency_pairs]]
 base = "qATOM"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -373,23 +493,228 @@ providers = [ "coinbase",]
 [[currency_pairs]]
 base = "CMST"
 providers = [
-  "crescent",
+  "osmosis",
 ]
-quote = "USDC"
+quote = "OSMO"
 
 [[currency_pairs]]
 base = "MARS"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
 [[currency_pairs]]
 base = "stJUNO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "JUNO"
+
+[[currency_pairs]]
+base = "USK"
+providers = [
+  "kujira",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "stUMEE"
+providers = [
+  "osmosis",
+]
+quote = "UMEE"
+
+[[currency_pairs]]
+base = "RETH"
+providers = [
+  "eth-uniswap",
+]
+quote = "WETH"
+
+[[currency_pairs]]
+base = "NCT"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "STARS"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "STARS"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "INJ"
+providers = [
+  "binance",
+  "gate",
+  "bitget",
+  "mexc",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SFRXETH"
+providers = [
+  "eth-uniswap"
+]
+quote = "WETH"
+
+[[currency_pairs]]
+base = "WSTETH"
+providers = [
+  "eth-uniswap"
+]
+quote = "WETH"
+
+[[currency_pairs]]
+base = "TIA"
+providers = [
+  "binance",
+  "okx",
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "STRD"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "STRD"
+providers = [
+  "osmosis",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "milkTIA"
+providers = [
+  "osmosis",
+]
+quote = "TIA"
+
+[[currency_pairs]]
+base = "milkTIA"
+providers = [
+  "osmosis",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "DYDX"
+providers = [
+  "osmosis",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "DYDX"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "stTIA"
+providers = [
+  "osmosis",
+]
+quote = "TIA"
+
+[[currency_pairs]]
+base = "BLD"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "BLD"
+providers = [
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stDYDX"
+providers = [
+  "osmosis",
+]
+quote = "DYDX"
+
+[[currency_pairs]]
+base = "KAVA"
+quote = "USDT"
+providers = ["binance", "gate", "bitget", "binanceus", "crypto"]
+
+[[currency_pairs]]
+base = "KAVA"
+quote = "USD"
+providers = ["kraken", "coinbase", "crypto"]
+
+[[currency_pairs]]
+base = "SEI"
+providers = [
+  "binance",
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "SEI"
+providers = [
+  "kraken",
+  "crypto",
+  "coinbase",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "NTRN"
+quote = "USDT"
+providers = [ "binance", "bitget", "gate",]
+
+
+# provider_endpoints
+[[provider_endpoints]]
+name = "osmosis"
+rest = "https://api.osmo-api.prod.ojo.network"
+websocket = "api.osmo-api.prod.ojo.network"
+
+[[provider_endpoints]]
+name = "binance"
+rest = "https://api1.binance.com"
+websocket = "stream.binance.com:9443"
 
 [account]
 address = "{{ price_feeder_address }}"
@@ -413,18 +738,3 @@ enabled = true
 global-labels = [["chain_id", "{{ chain_id }}"]]
 service-name = "price-feeder"
 prometheus-retention-time = 100
-
-[[provider_endpoints]]
-name = "binance"
-rest = "https://api1.binance.com"
-websocket = "stream.binance.com:9443"
-
-[[provider_endpoints]]
-name = "osmosisv2"
-rest = "https://api.osmo-api.prod.ojo.network"
-websocket = "api.osmo-api.prod.ojo.network"
-
-[[provider_endpoints]]
-name = "crescent"
-rest = "https://api.cresc-api.prod.ojo.network"
-websocket = "api.cresc-api.prod.ojo.network"

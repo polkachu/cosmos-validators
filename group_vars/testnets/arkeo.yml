@@ -1,4 +1,4 @@
-# custom installation
+# Custom installation
 network: arkeo
 folder: '.arkeo'
 daemon: arkeod
@@ -7,7 +7,7 @@ node_version: 'latest'
 repo: 'https://github.com/arkeonetwork/arkeo'
 genesis: 'http://seed.arkeo.network:26657/genesis'
 peers: ''
-seeds: ''
+seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:22856'
 minimum_gas_price: 0.001uarkeo
 custom_port_prefix: 228
 

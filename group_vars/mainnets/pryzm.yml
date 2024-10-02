@@ -1,0 +1,16 @@
+network: pryzm
+folder: '.pryzm'
+daemon: pryzmd
+chain_id: 'pryzm-1'
+node_version: 'v0.16.0'
+repo: 'https://github.com/pryzm-finance/pryzm-core'
+binary: https://storage.googleapis.com/pryzm-zone/core/0.16.0/pryzmd-0.16.0-linux-amd64
+binary_processing: default
+genesis: https://storage.googleapis.com/pryzm-zone/pryzm-1/genesis.json
+seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:24856'
+minimum_gas_price: '0.015upryzm'
+custom_port_prefix: 248
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

@@ -2,6 +2,6 @@
 
 sudo service {{ network }} stop
 sleep 5
-/home/ubuntu/go/bin/cosmprund prune ~/{{ folder }}/data
+{{ user_dir }}/go/bin/cosmprund prune ~/{{ folder }}/data
 sleep 5
 sudo service {{ network }} start

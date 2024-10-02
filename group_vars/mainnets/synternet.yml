@@ -1,0 +1,15 @@
+network: synternet
+folder: '.amber'
+daemon: amberd
+chain_id: 'synternet-1'
+node_version: 'v0.11.0-mainnet'
+repo: 'TBD'
+genesis: ''
+peers: ''
+seeds: ''
+minimum_gas_price: '0.01usynt'
+custom_port_prefix: 279
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

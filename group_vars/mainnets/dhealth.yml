@@ -1,0 +1,14 @@
+network: dhealth
+folder: '.dhealth'
+daemon: dhealthd
+chain_id: dhealth
+node_version: v1.0.0
+repo: 'https://github.com/dhealthproject/dhealth'
+custom_port_prefix: 282
+genesis: 'https://ss.dhealth.nodestake.org/genesis.json'
+seeds: '3fed663a0fd0b7d57d6f5ee128d527f4a07435aa@rpc.dhealth.nodestake.org:666'
+peers: '46dc3bae5e14bc3d639bdac99b61c4db8bb04b76@153.127.55.183:26656,07243cc6e34d0f829bdb7450b9d5e7da8ffa7869@162.19.124.59:61656,69d16d1147e90cdfb8ed066331a0abb9c71c3ae2@162.19.223.89:26656,cc45db56335a918651dfe29a2b70a534b335f0ef@46.101.196.105:26656,67243a0ed11567250aa02d5e47f6c4a0b8313975@142.93.174.93:26656'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

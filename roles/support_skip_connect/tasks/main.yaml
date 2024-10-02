@@ -1,0 +1,25 @@
+---
+- name: Copy oracle json
+  template:
+    src: '{{ network }}.oracle.json.j2'
+    dest: '{{ user_dir }}/{{ folder }}/config/oracle.json'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0664'
+
+- name: copy skip connect service file
+  become: true
+  template:
+    src: '{{ network }}.service.j2'
+    dest: '/etc/systemd/system/{{ network }}_slinky.service'
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: start skip connect service file
+  become: true
+  systemd:
+    name: '{{ network }}_slinky'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes

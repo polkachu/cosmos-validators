@@ -1,0 +1,13 @@
+network: swapland
+folder: '.SLC'
+daemon: SLCd
+chain_id: SLC
+node_version: latest
+repo: https://github.com/SwapLandExchange/SLC
+genesis: TBD
+minimum_gas_price: '0stake'
+custom_port_prefix: 250
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30
