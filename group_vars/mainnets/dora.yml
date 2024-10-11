@@ -2,12 +2,12 @@ network: dora
 folder: '.dora'
 daemon: dorad
 chain_id: vota-ash
-node_version: '0.3.1'
+node_version: '0.4.0'
 repo: https://github.com/DoraFactory/doravota.git
 genesis: 'https://raw.githubusercontent.com/DoraFactory/doravota/main/config/mainnet/genesis.json'
 peers: 'd49defb23a75ff08c924622e3a2f69280983fed7@13.215.46.25:26656,d6e42c70316e354dcb44fd3a86e97b64fa99fc5e@54.179.177.80:26656,220204926f8da0e197572d458e205608306f1ed1@54.251.131.190:26656'
 minimum_gas_price: '0peaka'
-upgrade_folder: '0.3.1'
+upgrade_folder: '0.4.0'
 custom_port_prefix: 253
 
 # [Optional] Snapshot

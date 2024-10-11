@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for yx
+  set_fact:
+    rpc: '{{ network }}-yx-rpc'
+    api: '{{ network }}-yx-api'
+    grpc: '{{ network }}-yx-grpc'

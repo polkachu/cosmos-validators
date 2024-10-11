@@ -59,6 +59,10 @@
   import_tasks: nbl.yml
   when: partner is defined and partner == 'nbl'
 
+- name: import tasks for yx
+  import_tasks: yx.yml
+  when: partner is defined and partner == 'yx'
+
 - name: install nginx package
   become: true
   apt:

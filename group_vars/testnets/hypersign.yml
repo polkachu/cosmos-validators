@@ -2,12 +2,13 @@ network: hypersign
 folder: '.hid-node'
 daemon: hid-noded
 chain_id: prajna-1
-node_version: v0.2.0
+node_version: v0.3.0
 repo: https://github.com/hypersign-protocol/hid-node
 genesis: https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/prajna/final_genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:10956'
 minimum_gas_price: '0.02uhid'
 custom_port_prefix: 109
+upgrade_folder: v030
 update_website_immediately: true
 
 # [Optional] Snapshot

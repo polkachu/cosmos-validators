@@ -1,0 +1,13 @@
+network: axone
+folder: '.axoned'
+daemon: axoned
+chain_id: axone-dentrite-1
+node_version: 'v10.0.0'
+repo: https://github.com/axone-protocol/axoned
+genesis: 'https://raw.githubusercontent.com/axone-protocol/networks/main/chains/dentrite-1/genesis.json'
+peers: '72ddc04c09160a58289f9a7c5b29aac358635178@142.132.202.50:38656'
+custom_port_prefix: 176
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

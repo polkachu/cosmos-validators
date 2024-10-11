@@ -1,0 +1,15 @@
+network: fuel
+folder: '.fuelsequencer'
+daemon: fuelsequencerd
+chain_id: 'seq-testnet-1'
+node_version: 'seq-testnet-1.2'
+repo: TBD
+genesis: TBD
+peers: '3a0b4118c01addd33d5add81783805d5add2fb17@80.64.208.17:26656'
+custom_port_prefix: 296
+update_website_immediately: true
+minimum_gas_price: '10000000000test'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

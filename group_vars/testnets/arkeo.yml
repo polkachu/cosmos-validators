@@ -1,13 +1,14 @@
 # Custom installation
+# TAG=testnet make install
 network: arkeo
 folder: '.arkeo'
 daemon: arkeod
 chain_id: 'arkeo'
 node_version: 'latest'
 repo: 'https://github.com/arkeonetwork/arkeo'
-genesis: 'http://seed.arkeo.network:26657/genesis'
-peers: ''
-seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:22856'
+genesis: 'http://seed.innovationtheory.com:26657/genesis'
+peers: 'c27c96c5b54a9f2bea776858e2cff364e410d2a8@71.218.54.128:26656,f7da702c17e45e463adf21e57b1d0d936cbc97a3@peer2.innovationtheory.com:26656,46e6d4751bbc67d3e72e13dacdfb0770227fbfc3@65.108.79.241:46656,fc5464b2ce731c5787be0fd316b6c4b6611886ea@37.252.184.241:26656'
+seeds: 'aab68f68841eb072d996cd1b45c2b9c9b612d95b@seed.innovationtheory.com:26656,85341b428cf5993fcc04a324d95d14590ae5172c@seed2.innovationtheory.com:26656'
 minimum_gas_price: 0.001uarkeo
 custom_port_prefix: 228
 

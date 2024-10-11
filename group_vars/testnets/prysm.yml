@@ -1,0 +1,13 @@
+network: prysm
+folder: '.prysmd'
+daemon: prysmd
+chain_id: 'prysm-devnet-1'
+node_version: 'v0.1.0-devnet'
+repo: 'https://github.com/kleomedes/prysm'
+genesis: https://raw.githubusercontent.com/kleomedes/prysm/refs/heads/main/network/prysm-devnet-1/genesis.json
+peers: 'b377fd0b14816eef8e12644340845c127d1e7d93@dns.kleomed.es:26656'
+custom_port_prefix: 298
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30
