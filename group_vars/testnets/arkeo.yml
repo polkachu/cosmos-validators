@@ -3,15 +3,15 @@
 network: arkeo
 folder: '.arkeo'
 daemon: arkeod
-chain_id: 'arkeo'
-node_version: 'latest'
+chain_id: 'arkeo-testnet-3'
+node_version: 'testnet'
 repo: 'https://github.com/arkeonetwork/arkeo'
-genesis: 'http://seed.innovationtheory.com:26657/genesis'
-peers: 'c27c96c5b54a9f2bea776858e2cff364e410d2a8@71.218.54.128:26656,f7da702c17e45e463adf21e57b1d0d936cbc97a3@peer2.innovationtheory.com:26656,46e6d4751bbc67d3e72e13dacdfb0770227fbfc3@65.108.79.241:46656,fc5464b2ce731c5787be0fd316b6c4b6611886ea@37.252.184.241:26656'
-seeds: 'aab68f68841eb072d996cd1b45c2b9c9b612d95b@seed.innovationtheory.com:26656,85341b428cf5993fcc04a324d95d14590ae5172c@seed2.innovationtheory.com:26656'
+genesis: 'http://seed31.innovationtheory.com:26657/genesis'
+peers: 'bb761c984bd990f3055f412917396754cd22af7a@validator31.innovationtheory.com:26656,81e36f94351d47803b8e1e0d0ad2d2e8e14ed36b@validator32.innovationtheory.com:26656'
+seeds: '9dfa5f2d19c1174baf5e597965394269e654f9b7@seed31.innovationtheory.com:26656'
 minimum_gas_price: 0.001uarkeo
 custom_port_prefix: 228
 
 # [Optional] Snapshot
-snapshot_hour: 4
+snapshot_hour: 1
 snapshot_minute: 30
