@@ -14,4 +14,3 @@ minimum_gas_price: '0usomm'
 # [Optional] Snapshot
 snapshot_hour: 3
 snapshot_minute: 30
-resync: 'old'

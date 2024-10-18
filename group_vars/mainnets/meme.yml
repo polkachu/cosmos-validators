@@ -13,5 +13,4 @@ custom_port_prefix: 147
 # [Optional] Snapshot
 snapshot_hour: 6
 snapshot_minute: 0
-resync: 'old'
 wasm: 'outside'

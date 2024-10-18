@@ -3,19 +3,11 @@
 sudo service {{ network }} stop
 sleep 2
 rm {{ user_dir }}/{{ folder }}/data-old -rf
-cp {{ user_dir }}/{{ folder }}/data {{ user_dir }}/{{ folder }}/data-old -r
-
-{% if resync is defined and resync == 'old'  %}
-
-cp {{ user_dir }}/{{ folder }}/config/addrbook.json {{ user_dir }}/{{ folder }}/config/addrbook.backup
-{{ user_dir }}/go/bin/{{ daemon }} unsafe-reset-all
-mv {{ user_dir }}/{{ folder }}/config/addrbook.backup {{ user_dir }}/{{ folder }}/config/addrbook.json
-
-{% else %}
+mv {{ user_dir }}/{{ folder }}/data {{ user_dir }}/{{ folder }}/data-old -r
 
 {{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book
 
-{% endif %}
+cp {{ user_dir }}/{{ folder }}/data-old/priv_validator_state.json {{ user_dir }}/{{ folder }}/data/priv_validator_state.json
 
 {% if network == 'terra' or network == 'teritori' or network == 'nibiru' or network == 'mars' or network == 'xpla' %}
 cp {{ user_dir }}/{{ folder }}/data-old/wasm {{ user_dir }}/{{ folder }}/data/wasm -r

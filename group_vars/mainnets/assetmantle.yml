@@ -15,4 +15,3 @@ update_website_immediately: false
 # [Optional] Snapshot
 snapshot_hour: 5
 snapshot_minute: 0
-resync: 'old'
