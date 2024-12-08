@@ -2,13 +2,13 @@ network: allora
 folder: '.allorad'
 daemon: allorad
 chain_id: 'allora-testnet-1'
-node_version: 'v0.5.0'
+node_version: 'v0.7.0'
 repo: https://github.com/allora-network/allora-chain
 genesis: https://raw.githubusercontent.com/allora-network/networks/main/allora-testnet-1/genesis.json
 custom_port_prefix: 267
 seeds: 'b825e8d944952e50afe5739fa4afa7cb16f11db9@seed-0-p2p.testnet-1.testnet.allora.network:32110,cc11f2c02f9dea5f3b86eec3e00ae373b7076ea4@seed-1-p2p.testnet-1.testnet.allora.network:32111,9b1cdf7947dcd5e15bec361c38c55f033658003b@seed-2-p2p.testnet-1.testnet.allora.network:32112'
 peers: 11413d234e449ff3fefbad2df285a9b2b2601e0d@peer-0.testnet-1.testnet.allora.network:32120,89ec173c61da9b32c7344aacfe72cc62e0b743a0@peer-1.testnet-1.testnet.allora.network:32121
-upgrade_folder: v0.5.0
+upgrade_folder: v0.7.0
 update_website_immediately: true
 
 # [Optional] Snapshot

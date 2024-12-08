@@ -1,0 +1,15 @@
+network: atomone
+folder: '.atomone'
+daemon: atomoned
+chain_id: atomone-1
+node_version: v1.0.0
+repo: 'https://github.com/atomone-hub/atomone'
+genesis: 'https://atomone.fra1.digitaloceanspaces.com/atomone-1/genesis.json'
+peers: '9dac79c27e4dba77cb22b0b25933fee6c8121cf7@72.46.84.243:26656,e726816f42831689eab9378d5d577f1d06d25716@169.155.46.27:26656,883d672fad793dd87764cd578aa07f390ab500e3@169.155.46.203:26656,b6c74b82794d0d59ca017278eb99ee9ecc21a709@38.242.232.202:26656,82d392db6b3550c3ad08e5f29d1660952fa968ca@95.217.118.164:30256,752bb5f1c914c5294e0844ddc908548115c1052c@65.108.236.5:14556'
+minimum_gas_price: '0uatone'
+custom_port_prefix: 299
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

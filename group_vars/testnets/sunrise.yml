@@ -2,12 +2,12 @@ network: sunrise
 folder: '.sunrise'
 daemon: sunrised
 chain_id: 'sunrise-test-0.2'
-node_version: 'v0.2.2'
+node_version: 'v0.2.6'
 repo: https://github.com/sunriselayer/sunrise
 genesis: https://raw.githubusercontent.com/sunriselayer/network/main/sunrise-test-0.2/genesis.json
 seeds: '0c0e0cf617c1c58297f53f3a82cea86a7c860396@a.sunrise-test-1.cauchye.net:26656,db223ecc4fba0e7135ba782c0fd710580c5213a6@a-node.sunrise-test-1.cauchye.net:26656,82bc2fdbfc735b1406b9da4181036ab9c44b63be@b-node.sunrise-test-1.cauchye.net:26656'
 custom_port_prefix: 283
-upgrade_folder: v0_2_2_test
+upgrade_folder: v0_2_6_test
 update_website_immediately: true
 minimum_gas_price: '0.0025urise'
 

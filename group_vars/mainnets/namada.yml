@@ -1,0 +1,13 @@
+network: namada
+folder: '.local/share/namada/namada.5f5de2dd1b88cba30586420'
+daemon: namadan
+chain_id: 'namada'
+node_version: 'v1.0.0'
+repo: 'https://github.com/anoma/namada.git'
+genesis: 'https://github.com/anoma/namada-mainnet-genesis/releases/download/mainnet-genesis'
+peers: 'tcp://05309c2cce2d163027a47c662066907e89cd6b99@74.50.93.254:26656,tcp://2bf5cdd25975c239e8feb68153d69c5eec004fdb@64.118.250.82:46656'
+custom_port_prefix: 200
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

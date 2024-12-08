@@ -2,12 +2,12 @@ network: galactica
 folder: '.galactica'
 daemon: galacticad
 chain_id: galactica_9302-1
-node_version: v0.2.4
+node_version: v0.2.7
 repo: https://github.com/Galactica-corp/galactica
 genesis: 'https://raw.githubusercontent.com/Galactica-corp/networks/main/galactica_9302-1/genesis.json'
 seeds: 'c722e6dc5f762b0ef19be7f8cc8fd67cdf988946@seed01-reticulum.galactica.com:26656,8949fb771f2859248bf8b315b6f2934107f1cf5a@seed02-reticulum.galactica.com:26656,3afb7974589e431293a370d10f4dcdb73fa96e9b@seed03-reticulum.galactica.com:26656'
 custom_port_prefix: 274
-upgrade_folder: 0.2.4
+upgrade_folder: 0.2.7
 update_website_immediately: true
 
 # [Optional] Snapshot

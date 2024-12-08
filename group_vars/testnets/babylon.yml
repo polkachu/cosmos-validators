@@ -1,12 +1,11 @@
 network: babylon
 folder: '.babylond'
 daemon: babylond
-chain_id: bbn-test-3
-node_version: v0.8.3
+chain_id: euphrates-0.5.0
+node_version: v0.8.6
 repo: https://github.com/babylonchain/babylon.git
-genesis: 'https://snapshots.polkachu.com/testnet-genesis/babylon/genesis.json'
-peers: '179a498904d880587cc37d07ebd1e01ff81a02fe@3.139.215.161:26656,b1783b0d95ffeeac6c81be47ff8552bbc27bc054@18.191.27.217:26656,fd837edb83d1ad175041b9a72ae6b0f5874d1df7@3.136.250.177:26656,ac65cb7c09f9b0f8aaf2605a9cf9d5684cda87d9@3.136.240.237:26656,05ec92459362ea3969a8980ec87e64df49cf8826@65.108.236.43:21156,9cb1974618ddd541c9a4f4562b842b96ffaf1446@3.16.63.237:26656,69c1b7e1eb114703733c3000baa6c008ebc70073@65.109.113.233:20656'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20656'
+genesis: 'https://rpc-euphrates.devnet.babylonlabs.io/genesis'
+peers: '37413315971955aebaa1c770dca3ea37c5c43f99@18.162.69.29:26656,cab89133c7abb42d339663b0db295ffa58678821@16.163.79.5:26656'
 custom_port_prefix: 206
 minimum_gas_price: 0.00001ubbn
 

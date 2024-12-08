@@ -1,0 +1,14 @@
+network: fuel
+folder: '.fuelsequencer'
+daemon: fuelsequencerd
+chain_id: 'seq-mainnet-1.1'
+node_version: 'seq-mainnet-1.1'
+repo: TBD
+genesis: TBD
+peers: 'TBD'
+custom_port_prefix: 296
+minimum_gas_price: '10fuel'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

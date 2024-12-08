@@ -3,7 +3,7 @@
 sudo service {{ network }} stop
 sleep 2
 rm {{ user_dir }}/{{ folder }}/data-old -rf
-mv {{ user_dir }}/{{ folder }}/data {{ user_dir }}/{{ folder }}/data-old -r
+mv {{ user_dir }}/{{ folder }}/data {{ user_dir }}/{{ folder }}/data-old
 
 {{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home {{ user_dir }}/{{ folder }} --keep-addr-book
 

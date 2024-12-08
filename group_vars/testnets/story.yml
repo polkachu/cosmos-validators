@@ -1,13 +1,14 @@
 network: story
 folder: '.story/story'
 daemon: story
-chain_id: iliad-0
-node_version: v0.9.11-stable
+chain_id: odyssey
+node_version: v0.13.0
 repo: 'https://github.com/piplabs/story'
 custom_port_prefix: 292
 genesis: 'https://raw.githubusercontent.com/cosmos/testnets/master/replicated-security/ethera_9000-1/ethera_9000-1-genesis.json'
 peers: '5a0191a6bd8f17c9d2fa52386ff409f5d796d112@b1.testnet.storyrpc.io:26656,0e2f0d4b5204e5e92a994a1eaa745b9ccb1d747b@b2.testnet.storyrpc.io:26656'
 update_website_immediately: true
+upgrade_folder: v0.13.0
 
 # [Optional] Snapshot
 snapshot_hour: 1

@@ -4,9 +4,8 @@ daemon: amberd
 chain_id: 'synternet-1'
 node_version: 'v0.11.0-mainnet'
 repo: 'TBD'
-genesis: ''
-peers: ''
-seeds: ''
+genesis: 'https://snapshots.polkachu.com/genesis/synternet/genesis.json'
+peers: '11e0f5050134b4d65eab57a7d7c138c15635a335@65.108.234.137:27956'
 minimum_gas_price: '0.01usynt'
 custom_port_prefix: 279
 

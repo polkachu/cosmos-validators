@@ -2,15 +2,15 @@ network: noble
 folder: '.noble'
 daemon: nobled
 chain_id: noble-1
-node_version: v4.0.0
+node_version: v8.0.2
 repo: https://github.com/strangelove-ventures/noble
 genesis: 'https://raw.githubusercontent.com/strangelove-ventures/noble-networks/main/mainnet/noble-1/genesis.json'
 peers: 'f0496ab244c4bc607948934fb261bf5ca124377d@35.185.197.131:26656,cca1c141e0bc7c4c0e8570e76278227547199f34@34.83.57.80:26656,bac93149f2d2f8cdebcae6f7ede003c6d55e9bc5@35.185.207.177:26656,c23fe2dfd8b48bcb3a4c83e0cf5fe52c8c612aab@65.109.31.114:2590,a59f269303aea7d535c2cf59781f06119b26715c@18.141.244.198:26656,3d57632249e613346aee66c4b619e262e5074e91@89.58.13.11:26656,90be586a27416b76701c7fe655a4dfbeb654211c@54.193.105.44:26656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:21556'
 custom_port_prefix: 215
 minimum_gas_price: '0.0uusdc'
-upgrade_folder: argon
-update_website_immediately: true
+upgrade_folder: helium
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 0

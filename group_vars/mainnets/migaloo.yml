@@ -2,13 +2,13 @@ network: migaloo
 folder: '.migalood'
 daemon: migalood
 chain_id: 'migaloo-1'
-node_version: v4.2.4
+node_version: v4.2.6
 repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain'
 genesis: 'https://raw.githubusercontent.com/White-Whale-Defi-Platform/migaloo-chain/release/v1.0.x/networks/mainnet/genesis.json'
 seeds: '013226057046995f2fa6cbaaa4a1d90508ddc2c1@tenderseed.ccvalidators.com:26013'
 custom_port_prefix: 207
 minimum_gas_price: '1uwhale'
-upgrade_folder: v4.2.4
+upgrade_folder: v4.2.6
 update_website_immediately: false
 
 # [Optional] Snapshot

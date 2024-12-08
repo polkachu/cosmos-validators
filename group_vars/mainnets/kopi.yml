@@ -1,0 +1,15 @@
+network: kopi
+folder: '.kopid'
+daemon: kopid
+chain_id: luwak-1
+node_version: v0.6.5.1
+repo: https://github.com/kopi-money/kopi.git
+genesis: 'https://raw.githubusercontent.com/kopi-money/mainnet-config/refs/heads/master/genesis.json'
+seeds: '85919e3dcc7eec3b64bfdd87657c4fac307c9d23@65.109.34.145:26656'
+custom_port_prefix: 276
+update_website_immediately: false
+minimum_gas_price: '0ukopi'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

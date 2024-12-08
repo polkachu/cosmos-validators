@@ -2,11 +2,11 @@ network: haqq
 folder: '.haqqd'
 daemon: haqqd
 chain_id: haqq_11235-1
-node_version: v1.8.1
+node_version: v1.8.2
 repo: https://github.com/haqq-network/haqq
 genesis: https://raw.githubusercontent.com/haqq-network/mainnet/master/genesis.json
 peers: '8625047e1858c7ca78479cd78fe74b30b8ba57ec@3.78.97.208:26656,06d4ec992e28607c8bb7b7f121f8e0f90ec05f83@65.21.170.3:33656,fb0b8dfc6d81be517e8150f532c5d5ef09e5c898@34.88.105.219:26656,dac3545d1ffa2ece3e2995450d56b3944fd6191c@135.181.79.62:36656,bd738b2960604f5baf8d4b680f2b9e95a1c98cc7@65.108.229.93:31656,1c700022bbb126a8e30ba035ffe750a7558b48a8@3.78.4.71:26656,977238095690cbbc57e2299f737c4258e0547cbd@34.107.55.236:26656,25d52d5083e132c309781859236e7cb9737bf090@51.81.245.118:26656,e04d814cf820c498e64153c27b021be1a70b6f6b@65.109.33.48:25656,7e26b89dd3e4cda025f068a7d553a9330dedb9a1@3.76.61.1:26656'
-upgrade_folder: v1.8.1
+upgrade_folder: v1.8.2
 minimum_gas_price: '0aislm'
 custom_port_prefix: 240
 

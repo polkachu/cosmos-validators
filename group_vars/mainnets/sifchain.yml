@@ -14,4 +14,4 @@ update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 1
-snapshot_minute: 00
+snapshot_minute: 0
