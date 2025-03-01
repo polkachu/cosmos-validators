@@ -2,12 +2,12 @@ network: planq
 folder: '.planqd'
 daemon: planqd
 chain_id: planq_7070-2
-node_version: v2.0.4
+node_version: v2.0.5
 repo: https://github.com/planq-network/planq
 genesis: 'https://raw.githubusercontent.com/planq-network/networks/main/mainnet/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20356'
 custom_port_prefix: 203
-update_website_immediately: false
+update_website_immediately: true
 minimum_gas_price: '0aplanq'
 upgrade_folder: v2.0.0
 

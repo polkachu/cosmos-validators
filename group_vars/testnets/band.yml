@@ -1,0 +1,15 @@
+network: band
+folder: '.band'
+daemon: bandd
+chain_id: band-v3-testnet-1
+node_version: 'v3.0.0-rc1'
+repo: 'https://github.com/bandprotocol/chain'
+genesis: 'https://raw.githubusercontent.com/bandprotocol/launch/master/band-v3-testnet-1/genesis.json'
+seeds: 'cf91ef30a9877d7cf0e654d5f75f8d68ff6ee4e7@34.2.133.3:26656,cbe055146a4607c3db5909bfa20e9e0c5ea95f90@35.212.1.35:26656'
+custom_port_prefix: 229
+minimum_gas_price: 0.0025uband
+update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

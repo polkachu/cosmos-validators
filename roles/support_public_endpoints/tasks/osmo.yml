@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for osmo
+  set_fact:
+    rpc: '{{ network }}-osmo-rpc'
+    api: '{{ network }}-osmo-api'
+    grpc: '{{ network }}-osmo-grpc'

@@ -1,0 +1,12 @@
+network: initia_civitia
+folder: '.initia_civitia'
+daemon: initia_civitiad
+chain_id: landlord-2
+node_version: 'v0.5.7'
+repo: https://github.com/initia-labs/minimove
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/initia_civitia/genesis.json'
+peers: '6355f8ab72dfcba83195a552359abbf71a1ed0c4@34.85.102.207:30000'
+custom_port_prefix: 401
+
+snapshot_hour: 0
+snapshot_minute: 0

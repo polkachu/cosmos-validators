@@ -2,12 +2,12 @@ network: shentu
 folder: '.shentud'
 daemon: shentud
 chain_id: shentu-2.2
-node_version: v2.13.1
+node_version: v2.14.0
 repo: https://github.com/ShentuChain/shentu.git
 genesis: 'https://raw.githubusercontent.com/certikfoundation/mainnet/main/shentu-2.2/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14056'
 custom_port_prefix: 140
-upgrade_folder: v2.13.0
+upgrade_folder: v2.14.0
 update_website_immediately: false
 minimum_gas_price: '0uctk'
 

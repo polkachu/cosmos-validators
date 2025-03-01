@@ -2,14 +2,14 @@ network: cryptocom
 folder: '.chain-maind'
 daemon: chain-maind
 chain_id: 'crypto-org-chain-mainnet-1'
-node_version: 'v4.2.9'
+node_version: 'v4.2.12'
 repo: 'https://github.com/crypto-org-chain/chain-main'
 genesis: 'https://raw.githubusercontent.com/crypto-org-chain/mainnet/main/crypto-org-chain-mainnet-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20256'
 minimum_gas_price: '0.025basecro'
 custom_port_prefix: 202
 upgrade_folder: v4.2.0
-update_website_immediately: false
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 3

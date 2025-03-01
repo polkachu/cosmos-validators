@@ -1,11 +1,11 @@
 network: fuel
 folder: '.fuelsequencer'
 daemon: fuelsequencerd
-chain_id: 'seq-mainnet-1.1'
-node_version: 'seq-mainnet-1.1'
+chain_id: 'seq-mainnet-1'
+node_version: 'seq-mainnet-1.2'
 repo: TBD
-genesis: TBD
-peers: 'TBD'
+genesis: https://snapshots.polkachu.com/genesis/fuel/genesis.json
+peers: 'ae8b6d8fd2f646bffa05e5a9239bd3f72308948f@135.181.57.156:29656,fc5fd264190e4a78612ec589994646268b81f14e@80.64.208.207:26656'
 custom_port_prefix: 296
 minimum_gas_price: '10fuel'
 

@@ -10,6 +10,6 @@ custom_port_prefix: 226
 upgrade_folder: v2.0.0
 
 # [Optional] Snapshot
-snapshot_hour: 12
+snapshot_hour: 1
 snapshot_minute: 0
 wasm: 'outside'

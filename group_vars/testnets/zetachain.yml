@@ -1,3 +1,4 @@
+network: zetachain
 folder: '.zetacored'
 daemon: zetacored
 chain_id: athens_7001-1

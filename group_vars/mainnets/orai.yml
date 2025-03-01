@@ -6,7 +6,7 @@ node_version: 'orai-v0.50'
 repo: 'https://github.com/oraichain/wasmd'
 genesis: 'https://snapshots.polkachu.com/genesis/orai/genesis.json'
 peers: 'd263c8c8fdd279d33de643c3baffbe053d0a8a73@18.223.242.70:26656,e32c5d1c5f4cbef6d6910fc5b828741cb1bfd08f@18.221.220.160:26656'
-upgrade_folder: v0.50.0
+upgrade_folder: v0.50.2
 custom_port_prefix: 233
 minimum_gas_price: '0orai'
 

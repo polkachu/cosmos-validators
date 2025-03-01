@@ -9,7 +9,7 @@ clients:
   - url: {{ log_monitor }}/loki/api/v1/push
     basic_auth:
       username: {{ loki_user }}
-      password: {{ loki_passowrd }}
+      password: {{ loki_password }}
 
 scrape_configs:
   - job_name: journal

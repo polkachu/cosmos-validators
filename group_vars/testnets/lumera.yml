@@ -1,0 +1,18 @@
+network: lumera
+folder: .lumera
+daemon: lumerad
+chain_id: lumera-testnet-1
+node_version: 0.4.1
+repo: ''
+binary: https://github.com/LumeraProtocol/lumera/releases/download/v0.4.1/lumera_v0.4.1_linux_amd64.tar.gz
+binary_processing: targz
+genesis: https://raw.githubusercontent.com/LumeraProtocol/lumera-networks/refs/heads/master/testnet/genesis.json
+minimum_gas_price: '0.025ulume'
+custom_port_prefix: 307
+peers: '14b240296fb91861f9d15e375edb49aad17d85ff@44.223.96.206:26656,4902d5db03ad6754e287ffdd051a5507a595927a@3.236.181.141:26656,55c2d8cd1eac108d1e903772e10ba190f3b54dd1@100.27.41.37:26656,5ae641559b6a2de7e803f0a3f94da3acef7353c7@3.236.168.54:26656,8d7557e2e4e8c5d3b409663764d9fdc22d2c3449@44.204.100.172:26656,927b68929de6480a9bdbc9c856c34af978a32b28@34.201.20.211:26656,d13c8acc2b39b56e68e953eb304c33981b3b982c@44.214.180.199:26656'
+update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'

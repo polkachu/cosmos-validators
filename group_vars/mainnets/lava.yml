@@ -1,0 +1,15 @@
+network: lava
+folder: '.lava'
+daemon: lavad
+chain_id: lava-mainnet-1
+node_version: v2.2.0
+repo: https://github.com/lavanet/lava
+genesis: 'https://snapshots.polkachu.com/genesis/lava/genesis.json'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:19956'
+minimum_gas_price: '0ulava'
+custom_port_prefix: 199
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 30

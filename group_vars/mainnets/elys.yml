@@ -1,0 +1,16 @@
+network: elys
+folder: '.elys'
+daemon: elysd
+chain_id: 'elys-1'
+node_version: 'v2.1.0'
+repo: https://github.com/elys-network/elys
+genesis: https://raw.githubusercontent.com/elys-network/networks/refs/heads/main/mainnet/genesis.json
+peers: '949ee3582bab917fc4dd89829871bd46c8b366d8@162.55.245.228:46656,ca1597da9e6864f2b3bab6ead76ee6093fac24ed@207.121.63.124:41656,d95bdf717eb751667586b5e31083770630742038@65.109.58.158:22156,380048bb45143b2b87c540c772886f5a08bae344@86.90.185.145:26156,1d079e8b757b21b390f3eca0880ca03f7f90d8f0@95.217.143.167:20656'
+custom_port_prefix: 220
+minimum_gas_price: '0.0003uelys,0.001ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349,0.001ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9'
+upgrade_folder: v2.1.0
+update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 3
+snapshot_minute: 30

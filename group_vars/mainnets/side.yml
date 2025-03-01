@@ -1,0 +1,15 @@
+network: side
+folder: '.side'
+daemon: sided
+chain_id: sidechain-1
+node_version: v1.0.0
+repo: https://github.com/sideprotocol/side
+genesis: https://github.com/sideprotocol/networks/raw/main/mainnet/sidechain-1/genesis.json
+peers: '0ca21af519767961a10a9b96a10ebcbc8ab7b5e6@209.250.232.135:26656,6237ecbb967654d60810452752bf273d3aa92389@207.148.66.82:26656,72e4d985b83a4f89f957066b59e98ba64781840f@98.142.250.185:26656,956fd129998c458820a098247739bfff4950d4c0@65.109.61.125:26356'
+minimum_gas_price: '0.0006uside,0.000001sat'
+custom_port_prefix: 263
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'

@@ -2,12 +2,13 @@ network: mantra
 folder: '.mantrachain'
 daemon: mantrachaind
 chain_id: mantra-1
-node_version: 'v1.0.2'
+node_version: 'v2.0.2'
 repo: https://github.com/MANTRA-Chain/mantrachain/
 genesis: 'https://snapshots.polkachu.com/genesis/mantra/genesis.json'
 seeds: '32276da966637722914411e16ca91bd37dcd1c28@35.220.157.87:26656,9f5235b418c87af4302619705d0bf4748249ca6b@34.18.33.96:26656'
 minimum_gas_price: '0.0002uom'
 custom_port_prefix: 251
+upgrade_folder: v2
 update_website_immediately: true
 
 # [Optional] Snapshot

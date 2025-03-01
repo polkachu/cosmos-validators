@@ -2,13 +2,13 @@ network: noble
 folder: '.noble'
 daemon: nobled
 chain_id: grand-1
-node_version: v8.0.0-rc.3
+node_version: v9.0.0-rc.3-swagger
 repo: https://github.com/strangelove-ventures/noble
 genesis: 'https://raw.githubusercontent.com/strangelove-ventures/noble-networks/main/testnet/grand-1/genesis.json'
 peers: '38179b18853d6a8cb86b99881e02cf72f18b9d0f@34.127.46.223:26656,57546d799a1cdef74b9a174052821a6e93636dfc@34.145.87.4:26656,6b76ad22a73897e3c39c7d87b7d12a3b7d690bff@34.168.48.128:26656'
 custom_port_prefix: 215
 minimum_gas_price: '0.0uusdc'
-upgrade_folder: 'helium'
+upgrade_folder: 'v9.0.0-rc.3'
 update_website_immediately: true
 
 # [Optional] Snapshot

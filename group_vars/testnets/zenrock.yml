@@ -1,0 +1,14 @@
+network: zenrock
+folder: '.zrchain'
+daemon: zenrockd
+chain_id: gardia-2
+node_version: 'v5.5.0'
+repo: https://github.com/Zenrock-Foundation/zrchain
+genesis: https://support.synergynodes.com/genesis/zenrock_testnet/genesis.json
+seeds: '6b0ffcce9b59b91ceb8eea5d4599e27707e3604a@seeds.stakeup.tech:10220'
+peers: '79f386768733b74e41fe6da1bbce3d4031550422@212.47.68.65:18256,4b93920f1827ddc102c2aa46c1fb2e15ad60de2b@88.209.197.222:18256,6ef43e8d5be8d0499b6c57eb15d3dd6dee809c1e@52.30.152.47:26656'
+custom_port_prefix: 295
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

@@ -63,6 +63,10 @@
   import_tasks: yx.yml
   when: partner is defined and partner == 'yx'
 
+- name: import tasks for osmo
+  import_tasks: osmo.yml
+  when: partner is defined and partner == 'osmo'
+
 - name: install nginx package
   become: true
   apt:

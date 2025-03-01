@@ -1,0 +1,15 @@
+network: initia
+folder: '.initia'
+daemon: initiad
+chain_id: initiation-2
+node_version: 'v0.7.0'
+repo: https://github.com/initia-labs/initia
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/initia2/genesis.json'
+peers: '437385b08cb2e9343bdd91332ea2923017dd0400@65.109.106.210:25756'
+custom_port_prefix: 257
+minimum_gas_price: '0.015uinit'
+gas_params: '--fees 30000uinit'
+upgrade_folder: '0.7.0'
+
+snapshot_hour: 0
+snapshot_minute: 0

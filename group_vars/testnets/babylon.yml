@@ -1,13 +1,14 @@
 network: babylon
 folder: '.babylond'
 daemon: babylond
-chain_id: euphrates-0.5.0
-node_version: v0.8.6
-repo: https://github.com/babylonchain/babylon.git
-genesis: 'https://rpc-euphrates.devnet.babylonlabs.io/genesis'
-peers: '37413315971955aebaa1c770dca3ea37c5c43f99@18.162.69.29:26656,cab89133c7abb42d339663b0db295ffa58678821@16.163.79.5:26656'
+chain_id: bbn-test-5
+node_version: v1.0.0-rc.1
+repo: https://github.com/babylonlabs-io/babylon.git
+genesis: 'https://raw.githubusercontent.com/babylonlabs-io/networks/refs/heads/main/bbn-test-5/network-artifacts/genesis.json'
+peers: '515e7068f5d2e97d2441c174be71d199a3025567@43.199.170.239:26656,fe62e0a38eb7694080c83a84225a6bb33be01fed@162.19.31.150:55706,4a3dd7deb4770c06e05849a4128fea1a7439a9d9@65.109.106.210:20656'
 custom_port_prefix: 206
-minimum_gas_price: 0.00001ubbn
+minimum_gas_price: 0.005ubbn
+upgrade_folder: v1
 
 # [Optional] Snapshot
 snapshot_hour: 0

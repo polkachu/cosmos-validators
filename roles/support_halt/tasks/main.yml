@@ -1,0 +1,32 @@
+---
+- name: set halt height in app.toml
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: 'halt-height ='
+    line: 'halt-height = {{ halt_height }}'
+
+- name: update restart config in systemd file
+  become: true
+  lineinfile:
+    path: '/etc/systemd/system/{{ network }}.service'
+    regexp: 'Restart='
+    line: 'Restart=no'
+
+- name: start cosmovisor service
+  become: true
+  systemd:
+    name: '{{ network }}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+
+- name: Pause for 10 seconds
+  pause:
+    seconds: 10
+
+- name: Ensure it is running
+  uri:
+    url: 'http://localhost:{{ custom_port_prefix }}61'
+    method: GET
+    status_code: 200
+  ignore_errors: true

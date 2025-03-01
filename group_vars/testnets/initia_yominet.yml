@@ -1,0 +1,12 @@
+network: initia_yominet
+folder: '.initia_yominet'
+daemon: initia_yominetd
+chain_id: preyominet-1
+node_version: 'v0.6.3-7'
+repo: https://github.com/initia-labs/minievm
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/initia_yominet/genesis.json'
+peers: '24510d550d80213cd9a31f488afd6be1a71ec1d7@10.133.0.11:26656,1406060c329884f15120d11bd3b34888682dbb9d@34.142.215.35:26656'
+custom_port_prefix: 400
+
+snapshot_hour: 0
+snapshot_minute: 0

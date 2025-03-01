@@ -2,11 +2,12 @@ network: synternet
 folder: '.amber'
 daemon: amberd
 chain_id: 'synternet-1'
-node_version: 'v0.11.0-mainnet'
+node_version: 'v0.21.0'
 repo: 'TBD'
 genesis: 'https://snapshots.polkachu.com/genesis/synternet/genesis.json'
 peers: '11e0f5050134b4d65eab57a7d7c138c15635a335@65.108.234.137:27956'
 minimum_gas_price: '0.01usynt'
+upgrade_folder: v0.21
 custom_port_prefix: 279
 
 # [Optional] Snapshot

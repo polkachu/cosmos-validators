@@ -1,13 +1,11 @@
-# --keyring-backend file --home ~/.union/
 network: union
 folder: '.union'
 daemon: uniond
-chain_id: 'union-testnet-8'
-node_version: 'v0.24.0'
-binary: https://services.staketab.org/union-testnet/uniond
-binary_processing: default
-genesis: 'https://union.build/genesis.json'
-seeds: 'c2bf0d5b2ad3a1df0f4e9cc32debffa239c0af90@testnet.seed.poisonphang.com:26656'
+chain_id: 'union-testnet-9'
+node_version: 'v0.25.0'
+repo: https://github.com/unionlabs/union
+genesis: 'https://raw.githubusercontent.com/unionlabs/union/refs/heads/main/networks/genesis/union-testnet-9/genesis.json'
+peers: '39b18c2be0a3d3e286c1a0ec050bc3ec2c513da9@159.69.107.234:26656,4b81ca0a131659f316cfb8f7c755b2ada3e276ea@157.90.170.177:26656,c51bbe61ee15320533837b37268c16393d8d8b54@94.130.105.107:26656'
 custom_port_prefix: 246
 minimum_gas_price: '0muno'
 
@@ -15,6 +13,6 @@ minimum_gas_price: '0muno'
 snapshot_hour: 0
 snapshot_minute: 0
 wasm: 'outside'
-# uniond union-staking create-union-validator  .union/config/validator.json DB2DEEF4A05E87FCCB292A972375881B1E88591A843F2CD500898A821906AD6F097EA0C90304B05DE4DC01D94679383D39645F04C4068DB6DB367E17DCBC2919 --from test --chain-id union-testnet-8 --node http://localhost:24657 --keyring-backend file --home ~/.union/
+# uniond union-staking create-union-validator  ~/.union/config/validator.json 8D13EDC28F041F839C92D265533C26BB00BFA0D9ADFA94EC0746D7D69D3E95130F35F2913A4B8F9F99410889B26E723AD69299ADEE1E9E3A9500AE7DA37951E6 --from test --chain-id union-testnet-9 --node http://localhost:24657 --keyring-backend file --home ~/.union/
 
 # uniond q staking validator --node http://localhost:24657

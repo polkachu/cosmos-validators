@@ -1,13 +1,15 @@
+# IMPORTANT: Make sure to load wasm file in the current folder!
 network: provenance
 folder: '.provenanced'
 daemon: provenanced
 chain_id: 'pio-mainnet-1'
-node_version: 'v1.20.1'
+node_version: 'v1.21.1'
 repo: 'https://github.com/provenance-io/provenance.git'
 genesis: 'https://snapshots.polkachu.com/genesis/provenance/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:27056'
 custom_port_prefix: 270
-upgrade_folder: 'viridian'
+upgrade_folder: 'wisteria'
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 0

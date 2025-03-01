@@ -1,0 +1,14 @@
+network: native
+folder: '.gonative'
+daemon: gonatived
+chain_id: native-t1
+node_version: 'v0.1.0'
+binary: https://github.com/gonative-cc/gonative/releases/download/v0.1.0/gonative-v0.1.0-linux-amd64.gz
+repo: https://github.com/gonative-cc/gonative
+genesis: 'https://github.com/gonative-cc/network-docs/raw/refs/heads/master/genesis/genesis-testnet-1.json.gz'
+peers: '7567880ef17ce8488c55c3256c76809b37659cce@161.35.157.54:26656'
+custom_port_prefix: 306
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 15

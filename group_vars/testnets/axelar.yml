@@ -10,7 +10,7 @@ app_file: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/m
 genesis: 'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/resources/testnet/genesis.json'
 seeds: 'a005b8923888007eb5cf9ed8c8120ed956bc31f7@k8s-testnet-axelarco-c0dd71f944-b4c8da2f814e7b8f.elb.us-east-2.amazonaws.com:26656'
 custom_port_prefix: 151
-upgrade_folder: v0.35
+upgrade_folder: v1.2
 
 # [Optional] Snapshot
 snapshot_hour: 6

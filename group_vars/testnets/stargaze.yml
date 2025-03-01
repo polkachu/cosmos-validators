@@ -2,13 +2,13 @@ network: stargaze
 folder: '.starsd'
 daemon: starsd
 chain_id: elgafar-1
-node_version: 'v14.0.0-rc.2'
+node_version: 'v15.0.0-beta.3-testnet'
 repo: 'https://github.com/public-awesome/stargaze'
 genesis: 'https://raw.githubusercontent.com/public-awesome/testnets/main/elgafar-1/genesis/genesis.tar.gz'
 genesis_processing: targz
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:13756'
 custom_port_prefix: 137
-upgrade_folder: v14
+upgrade_folder: v15b3
 update_website_immediately: true
 
 # [Optional] Snapshot
