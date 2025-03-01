@@ -1,0 +1,89 @@
+---
+- name: set halt height back to 0 in app.toml
+  lineinfile:
+    path: '{{ user_dir }}/{{ folder }}/config/app.toml'
+    regexp: 'halt-height ='
+    line: 'halt-height = 0'
+
+- name: update restart config in systemd file
+  become: true
+  lineinfile:
+    path: '/etc/systemd/system/{{ network }}.service'
+    regexp: 'Restart='
+    line: 'Restart=always'
+
+- name: Clone node repo
+  git:
+    repo: '{{ repo }}'
+    dest: '{{ user_dir }}/{{ network }}'
+    version: '{{ node_version }}'
+    update: yes
+    force: yes
+    recursive: no
+
+- name: Install node
+  command: '{{ item }}'
+  args:
+    chdir: '{{ user_dir }}/{{ network }}'
+  with_items:
+    - 'make install'
+  environment:
+    PATH: '{{ path }}'
+    GOPATH: '{{ user_dir }}/go'
+
+- name: Create new directory
+  file:
+    path: '{{ item }}'
+    state: directory
+    mode: '0755'
+  with_items:
+    - '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/{{ upgrade_folder }}/bin'
+  when: upgrade_folder is defined
+
+- name: copy binary file to cosmovisor upgrade folder
+  copy:
+    src: '{{ user_dir }}/go/bin/{{ daemon }}'
+    dest: '{{ user_dir }}/{{ folder }}/cosmovisor/upgrades/{{ upgrade_folder }}/bin'
+    remote_src: true
+    mode: '0755'
+  when: upgrade_folder is defined
+
+- name: copy binary file to cosmovisor genesis folder
+  copy:
+    src: '{{ user_dir }}/go/bin/{{ daemon }}'
+    dest: '{{ user_dir }}/{{ folder }}/cosmovisor/genesis/bin'
+    remote_src: true
+    mode: '0755'
+  when: upgrade_folder is not defined
+
+- name: start cosmovisor service
+  become: true
+  systemd:
+    name: '{{ network }}'
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+
+- name: Update Polkachu website (completely optional)
+  uri:
+    url: https://polkachu.com/api/v2/chain_node_version_update
+    method: POST
+    body_format: json
+    body:
+      network: '{{ network }}'
+      type: '{{ network_type }}'
+      node_version: '{{ node_version }}'
+      secret: '{{ polkachu_website_secret }}'
+  register: results
+  when: polkachu_website_secret is defined and (type == 'main' or type == 'test') and update_website_immediately is defined and update_website_immediately|bool == true
+
+- name: Pause for 10 seconds
+  pause:
+    seconds: 10
+
+- name: Ensure it is running
+  uri:
+    url: 'http://localhost:{{ custom_port_prefix }}61'
+    method: GET
+    status_code: 200
+  ignore_errors: true
