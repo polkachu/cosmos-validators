@@ -12,8 +12,8 @@
 You run one playbook and set up a node.
 
 ```bash
-ansible-playbook main.yml -e "target=juno_main"
-ansible-playbook -i inventory_testnet.ini main.yml -e "target=juno_test"
+ansible-playbook playbooks/main.yml -e "target=juno_main"
+ansible-playbook -i inventory_testnet.ini playbooks/main.yml -e "target=juno_test"
 ```
 
 Because we try our best to support the latest node version, it is not recommended for you to sync from Block 1. Rather, please [state-sync](https://polkachu.com/state_sync) or start from a [snapshot](https://polkachu.com/tendermint_snapshots).
@@ -65,7 +65,7 @@ cp inventory.sample inventory
 When you are ready install a node, you run:
 
 ```bash
-ansible-playbook main.yml -e "target=HOST_NAME"
+ansible-playbook playbooks/main.yml -e "target=HOST_NAME"
 ```
 
 ## Playbooks
@@ -97,32 +97,32 @@ ansible-playbook main.yml -e "target=HOST_NAME"
 ##### support_seed
 
 ```bash
-ansible-playbook support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306182fe6a507d5487eacb5@65.108.131.174:36656"
+ansible-playbook playbooks/support_seed.yml -e "target=umee_seed seed=190c4496f3b46d339306182fe6a507d5487eacb5@65.108.131.174:36656"
 ```
 
 ##### support_tenderduty
 
 ```bash
-ansible-playbook support_tenderduty.yml -e "target=juno_tenderduty key=junovalcons1qyw2x2sjp40cqasdfyuiahsdfknasdkneafs"
+ansible-playbook playbooks/support_tenderduty.yml -e "target=juno_tenderduty key=junovalcons1qyw2x2sjp40cqasdfyuiahsdfknasdkneafs"
 ```
 
 ##### support_price_feeder
 
 ```bash
 # When you just want to update price feed config
-ansible-playbook support_price_feeder.yml -e "target=kujira_main"
+ansible-playbook playbooks/support_price_feeder.yml -e "target=kujira_main"
 
 # When you just want to update price feed config and service file
-ansible-playbook support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD"
+ansible-playbook playbooks/support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD"
 
 # When you just want to update price feed config and service file and binary
-ansible-playbook support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD price_feeder_binary=true"
+ansible-playbook playbooks/support_price_feeder.yml -e "target=kujira_main price_feeder_password=YOUR_PASSWORD price_feeder_binary=true"
 ```
 
 ##### support_scripts
 
 ```bash
-ansible-playbook support_scripts.yml -e "target=juno_main"
+ansible-playbook playbooks/support_scripts.yml -e "target=juno_main"
 ```
 
 Currently, we have 4 supported scripts. Their usage is documented below using Juno as example:
@@ -149,7 +149,7 @@ In V1, the custom port prefix is 2 digits. However, this hobby project has evolv
 If you have a node running based on V1 port prefix system, you do not need to do anything. However, if you are as OCD as Polkachu, you might want to migrate all the previous nodes to comply with the new system. Here is a playbook to manage the migration. You still need to close the old ports that are not longer in use, but this playbook should take care of the rest.
 
 ```bash
-ansible-playbook support_config_update.yml -e "target=juno_main"
+ansible-playbook playbooks/support_config_update.yml -e "target=juno_main"
 ```
 
 ## Known Issue

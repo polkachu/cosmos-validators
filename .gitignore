@@ -8,3 +8,75 @@ group_vars/mainnets/sei_copy.yml
 roles/support_restake/templates/restake.json
 group_vars/testnets/ethos.yml
 group_vars/testnets/nillion.yml
+
+### ansible ###
+secrets.yml
+
+### macOS ###
+# General
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# editors
+.vscode
+.idea
+**/.idea
+*.iml
+*.ipr
+
+# token
+.token.env
+*.token.env
+*.token.env.*
+*.env
+*.token
+env
+.env
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
