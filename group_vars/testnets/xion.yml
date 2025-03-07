@@ -16,13 +16,14 @@ network: xion
 folder: '.xiond'
 daemon: xiond
 chain_id: xion-testnet-2
-node_version: v16.0.0
+node_version: v17.0.0
 repo: https://github.com/burnt-labs/xion.git
 genesis: 'https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/refs/tags/launch/config/genesis.json'
 peers: '5166bcee9d5db28dfede2a936f2a60e07778fa89@65.109.113.219:23656'
 minimum_gas_price: '0uxion'
 custom_port_prefix: 223
-upgrade_folder: v16
+upgrade_folder: v17
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

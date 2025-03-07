@@ -1,8 +1,8 @@
 network: agoric
 folder: '.agoric'
 daemon: agd
-chain_id: 'agoric-emerynet-8'
-node_version: 'mainnet1B-rc3'
+chain_id: 'agoric-emerynet-9'
+node_version: 'c93e7b9048ffeaae8faa257b44471cb3d35c106b'
 repo: 'https://github.com/Agoric/agoric-sdk'
 genesis: 'https://emerynet.rpc.agoric.net/genesis'
 peers: 'fb86a0993c694c981a28fa1ebd1fd692f345348b@34.171.162.87:26656'
