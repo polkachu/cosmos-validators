@@ -7,7 +7,7 @@ config_port_changes:
   'pprof_laddr = "localhost:6060"': 'pprof_laddr = "localhost:{{ custom_port_prefix }}60"'
 app_port_changes:
   ':1317': 'address = "tcp://0.0.0.0:{{ custom_port_prefix }}17"'
-  ':8080': 'address = ":{{ custom_port_prefix }}80"'
+  # ':8080': 'address = ":{{ custom_port_prefix }}80"'
   ':9090': 'address = "0.0.0.0:{{ custom_port_prefix }}90"'
   ':9091': 'address = "0.0.0.0:{{ custom_port_prefix }}91"'
 pruning_main_backup:

@@ -20,6 +20,7 @@
       environment:
         PATH: '{{ path }}'
         GOPATH: '{{ user_dir }}/go'
+        BABYLON_BUILD_OPTIONS: 'mainnet'
   when: binary is undefined
 
 - name: set binary install exit condition

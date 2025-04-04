@@ -1,25 +1,25 @@
 ---
-- name: Get url fragment based on mainnet or testnet
-  set_fact:
-    url_fragment: "{% if network_type == 'mainnet' %}mainnet\
-      {% else %}testnet\
-      {% endif %}"
+# - name: Get url fragment based on mainnet or testnet
+#   set_fact:
+#     url_fragment: "{% if network_type == 'mainnet' %}mainnet\
+#       {% else %}testnet\
+#       {% endif %}"
 
-- name: Get the latest snapshot url
-  uri:
-    url: '{{ snapshot_base_url }}/{{ network }}/{{ url_fragment }}'
-    headers:
-      x-polkachu: '{{ snapshot_secret }}'
-  register: snapshot
+# - name: Get the latest snapshot url
+#   uri:
+#     url: '{{ snapshot_base_url }}/{{ network }}/{{ url_fragment }}'
+#     headers:
+#       x-polkachu: '{{ snapshot_secret }}'
+#   register: snapshot
 
 - name: Print snapshot_url
   debug:
-    msg: 'Downloading {{ network }} snapshot {{ snapshot.json.snapshot.url  }}'
+    msg: 'Downloading {{ network }} snapshot {{ snapshot_url  }}'
 
 - name: Download snapshot to home folder
   get_url:
-    url: '{{ snapshot.json.snapshot.url }}'
-    dest: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
+    url: '{{ snapshot_url }}'
+    dest: '{{ user_dir }}/{{ snapshot_name }}'
     mode: '0644'
 
 - name: Stop node process
@@ -37,7 +37,7 @@
   shell: '{{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home $HOME/{{ folder }} --keep-addr-book'
 
 - name: Extract snapshot
-  shell: 'lz4 -c -d $HOME/{{ snapshot.json.snapshot.name }} | tar -x -C $HOME/{{ folder }}'
+  shell: 'tar -xvf $HOME/{{ snapshot_name }} -C $HOME/{{ folder }}'
 
 - name: Move priv_validator_state.json back
   command: 'mv {{ user_dir }}/{{ folder }}/priv_validator_state.json {{ user_dir }}/{{ folder }}/data/'
@@ -60,7 +60,7 @@
 
 - name: Delete the downloaded snapshot file
   file:
-    path: '{{ user_dir }}/{{ snapshot.json.snapshot.name }}'
+    path: '{{ user_dir }}/{{ snapshot_name }}'
     state: absent
 
 - name: Ensure it is running

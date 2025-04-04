@@ -1,14 +1,15 @@
 network: babylon
 folder: '.babylond'
 daemon: babylond
-chain_id: bbn-test-3
-node_version: v0.8.3
-repo: https://github.com/babylonchain/babylon.git
-genesis: 'https://snapshots.polkachu.com/testnet-genesis/babylon/genesis.json'
-peers: '179a498904d880587cc37d07ebd1e01ff81a02fe@3.139.215.161:26656,b1783b0d95ffeeac6c81be47ff8552bbc27bc054@18.191.27.217:26656,fd837edb83d1ad175041b9a72ae6b0f5874d1df7@3.136.250.177:26656,ac65cb7c09f9b0f8aaf2605a9cf9d5684cda87d9@3.136.240.237:26656,05ec92459362ea3969a8980ec87e64df49cf8826@65.108.236.43:21156,9cb1974618ddd541c9a4f4562b842b96ffaf1446@3.16.63.237:26656,69c1b7e1eb114703733c3000baa6c008ebc70073@65.109.113.233:20656'
-seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20656'
-custom_port_prefix: 206
-minimum_gas_price: 0.00001ubbn
+chain_id: bbn-1
+node_version: v1.0.0
+repo: https://github.com/babylonlabs-io/babylon.git
+genesis: 'https://raw.githubusercontent.com/babylonlabs-io/networks/refs/heads/main/bbn-1/network-artifacts/genesis.json'
+peers: 'f0d280c08608400cac0ccc3d64d67c63fabc8bcc@91.134.70.52:55706'
+custom_port_prefix: 266
+minimum_gas_price: 0.002ubbn
+upgrade_folder: v1
+seeds: "42fad8afbf7dfca51020c3c6e1a487ce17c4c218@babylon-seed-1.nodes.guru:55706"
 
 # [Optional] Snapshot
 snapshot_hour: 0

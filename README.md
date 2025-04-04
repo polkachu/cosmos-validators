@@ -9,11 +9,20 @@
 
 ## TL/DR
 
+For the first time setup: use ansible system repo to configure the system. 
+
 You run one playbook and set up a node.
 
-```bash
-ansible-playbook main.yml -e "target=juno_main"
-ansible-playbook -i inventory_testnet.ini main.yml -e "target=juno_test"
+```bash Install and Run Node.
+ansible-playbook -i babylon_inventory.ini main.yml --limit babylon-vm --diff -e "target=babylon"
+```
+
+```bash To use snapshot
+ansible-playbook -i babylon_inventory.ini support_sync_snapshot.yml --limit babylon-vm --diff -e "target=babylon"
+```
+
+```bash To upgrade
+ansible-playbook -i babylon_inventory.ini upgrade.yml --limit babylon-vm --diff -e "target=babylon"
 ```
 
 Because we try our best to support the latest node version, it is not recommended for you to sync from Block 1. Rather, please [state-sync](https://polkachu.com/state_sync) or start from a [snapshot](https://polkachu.com/tendermint_snapshots).
