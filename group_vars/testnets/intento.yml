@@ -1,0 +1,17 @@
+network: intento
+folder: '.intento'
+daemon: intentod
+chain_id: intento-ics-test-1
+node_version: v0.9.1
+repo: 'https://github.com/trstlabs/intento.git'
+genesis: https://raw.githubusercontent.com/trstlabs/networks/main/testnet/intento-ics-test-1/genesis.json
+seeds: ''
+peers: ''
+custom_port_prefix: 311
+update_website_immediately: true
+minimum_gas_price: '0.001uinto,0.001ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2'
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
+wasm: 'outside'

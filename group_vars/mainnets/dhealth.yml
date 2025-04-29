@@ -12,3 +12,4 @@ peers: '46dc3bae5e14bc3d639bdac99b61c4db8bb04b76@153.127.55.183:26656,07243cc6e3
 # [Optional] Snapshot
 snapshot_hour: 0
 snapshot_minute: 0
+wasm: outside

@@ -1,0 +1,12 @@
+---
+- name: Allow access from skip server
+  ufw:
+    rule: allow
+    src: '{{ item }}'
+    comment: 'Skip'
+  loop:
+    - '157.245.210.26'
+
+- name: restart firewall
+  ufw:
+    state: reloaded

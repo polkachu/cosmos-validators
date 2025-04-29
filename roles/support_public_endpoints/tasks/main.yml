@@ -67,6 +67,14 @@
   import_tasks: osmo.yml
   when: partner is defined and partner == 'osmo'
 
+- name: import tasks for init
+  import_tasks: init.yml
+  when: partner is defined and partner == 'init'
+
+- name: import tasks for init
+  import_tasks: crcl.yml
+  when: partner is defined and partner == 'crcl'
+
 - name: install nginx package
   become: true
   apt:

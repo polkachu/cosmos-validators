@@ -8,6 +8,7 @@ genesis: https://raw.githubusercontent.com/fuel-infrastructure/networks/refs/hea
 peers: '3a0b4118c01addd33d5add81783805d5add2fb17@80.64.208.17:26656'
 custom_port_prefix: 296
 minimum_gas_price: '10test'
+upgrade_folder: features-and-optimisations
 
 # [Optional] Snapshot
 snapshot_hour: 1

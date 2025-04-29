@@ -2,12 +2,13 @@ network: band
 folder: '.band'
 daemon: bandd
 chain_id: band-v3-testnet-1
-node_version: 'v3.0.0-rc1'
+node_version: 'v3.0.0-rc3'
 repo: 'https://github.com/bandprotocol/chain'
 genesis: 'https://raw.githubusercontent.com/bandprotocol/launch/master/band-v3-testnet-1/genesis.json'
-seeds: 'cf91ef30a9877d7cf0e654d5f75f8d68ff6ee4e7@34.2.133.3:26656,cbe055146a4607c3db5909bfa20e9e0c5ea95f90@35.212.1.35:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22956'
 custom_port_prefix: 229
 minimum_gas_price: 0.0025uband
+upgrade_folder: v3_rc3
 update_website_immediately: true
 
 # [Optional] Snapshot

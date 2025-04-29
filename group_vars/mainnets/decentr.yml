@@ -2,12 +2,14 @@ network: decentr
 folder: '.decentr'
 daemon: decentrd
 chain_id: mainnet-3
-node_version: v1.5.7
+node_version: v1.6.4
 repo: https://github.com/Decentr-net/decentr
 genesis: 'https://raw.githubusercontent.com/Decentr-net/mainnets/master/3.0/genesis.json'
-seeds: '7708addcfb9d4ff394b18fbc6c016b4aaa90a10a@ares.mainnet.decentr.xyz:26656,8a3485f940c3b2b9f0dd979a16ea28de154f14dd@calliope.mainnet.decentr.xyz:26656,87490fd832f3226ac5d090f6a438d402670881d0@euterpe.mainnet.decentr.xyz:26656,3261bff0b7c16dcf6b5b8e62dd54faafbfd75415@hera.mainnet.decentr.xyz:26656,5f3cfa2e3d5ed2c2ef699c8593a3d93c902406a9@hermes.mainnet.decentr.xyz:26656,a529801b5390f56d5c280eaff4ae95b7163e385f@melpomene.mainnet.decentr.xyz:26656,385129dbe71bceff982204afa11ed7fa0ee39430@poseidon.mainnet.decentr.xyz:26656,35a934228c32ad8329ac917613a25474cc79bc08@terpsichore.mainnet.decentr.xyz:26656,0fd62bcd1de6f2e3cfc15852cdde9f3f8a7987e4@thalia.mainnet.decentr.xyz:26656,bd99693d0dbc855b0367f781fb48bf1ca6a6a58b@zeus.mainnet.decentr.xyz:26656'
+peers: 'aa96abea0d64379da0f75c93b075ec697892dfcf@163.172.74.144:26646,45e03d3e01c48bbfa44d8886c7db3f07bd5dc7c6@65.108.44.22:10656, 0410c27389c3adab2e2cfa6a381cfe4f8b54855f@167.235.12.38:10956'
 minimum_gas_price: '0.025udec'
+upgrade_folder: 'v160'
 custom_port_prefix: 234
+update_website_immediately: false
 
 # [Optional] Snapshot
 snapshot_hour: 0

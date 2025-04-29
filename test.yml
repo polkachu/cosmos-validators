@@ -1,0 +1,7 @@
+---
+- name: Upgrade
+  hosts: '{{ target }}'
+  gather_facts: false
+  become: true
+  roles:
+    - test

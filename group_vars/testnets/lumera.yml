@@ -3,7 +3,6 @@ folder: .lumera
 daemon: lumerad
 chain_id: lumera-testnet-1
 node_version: 0.4.1
-repo: ''
 binary: https://github.com/LumeraProtocol/lumera/releases/download/v0.4.1/lumera_v0.4.1_linux_amd64.tar.gz
 binary_processing: targz
 genesis: https://raw.githubusercontent.com/LumeraProtocol/lumera-networks/refs/heads/master/testnet/genesis.json

@@ -2,12 +2,12 @@ network: neutron
 folder: '.neutrond'
 daemon: neutrond
 chain_id: neutron-1
-node_version: v5.1.3
+node_version: v6.0.1
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:19156'
 minimum_gas_price: '0untrn'
-upgrade_folder: v5.1.3
+upgrade_folder: v6.0.1
 custom_port_prefix: 191
 update_website_immediately: false
 

@@ -2,7 +2,7 @@ network: nym
 folder: '.nyxd'
 daemon: nyxd
 chain_id: nyx
-node_version: v0.54.2
+node_version: v0.54.3
 repo: https://github.com/nymtech/nyxd
 genesis: 'https://snapshots.polkachu.com/genesis/nym/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15356'

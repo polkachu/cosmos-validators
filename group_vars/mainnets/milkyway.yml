@@ -1,0 +1,15 @@
+network: milkyway
+folder: '.milkyway'
+daemon: milkywayd
+chain_id: 'milkyway'
+node_version: 'v12.0.0'
+repo: 'https://github.com/milkyway-labs/milkyway'
+genesis: 'https://raw.githubusercontent.com/milkyway-labs/networks/refs/heads/main/mainnet/genesis.json'
+seeds: '3085637e1bf6a03e871701970c0fb23bfcacbc50@143.198.235.50:26656'
+minimum_gas_price: 0.001umilk
+custom_port_prefix: 319
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30
+wasm: outside

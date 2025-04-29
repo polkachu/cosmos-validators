@@ -4,12 +4,13 @@ daemon: selfchaind
 chain_id: 'self-1'
 node_version: TBD
 repo: 'TBD'
-binary: 'https://snapshots.polkachu.com/misc/selfchaind'
+binary: 'https://github.com/selfchainxyz/Self-Chain-Releases/releases/download/mainnet-v2.0.0/selfchaind-linux-amd64'
 binary_processing: 'default'
 genesis: 'https://snapshots.polkachu.com/genesis/selfchain/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:24356'
 minimum_gas_price: '0uself'
 custom_port_prefix: 243
+upgrade_folder: 'v2'
 
 # [Optional] Snapshot
 snapshot_hour: 0

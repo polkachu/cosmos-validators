@@ -10,6 +10,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14456'
 custom_port_prefix: 144
 minimum_gas_price: '0.01ubld,0.005uist'
 gas_params: '--fees 2000ubld'
+halt_height: 19000600
 
 # [Optional] Snapshot
 snapshot_hour: 4

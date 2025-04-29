@@ -1,0 +1,14 @@
+network: hippo
+folder: '.hippo'
+daemon: hippod
+chain_id: 'hippo-protocol-testnet-1'
+node_version: main
+repo: https://github.com/hippocrat-dao/hippo-protocol
+genesis: 'https://raw.githubusercontent.com/hippocrat-dao/hippo-protocol-hub/refs/heads/main/hippo-protocol-testnet-1/genesis.json'
+peers: 'd7644db333653ffbf155f5dc1fff176010eb0a96@44.245.117.224:26656'
+custom_port_prefix: 318
+update_website_immediately: true
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

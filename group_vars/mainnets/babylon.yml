@@ -1,0 +1,16 @@
+network: babylon
+folder: '.babylond'
+daemon: babylond
+chain_id: bbn-1
+node_version: v1.0.1
+repo: https://github.com/babylonlabs-io/babylon.git
+genesis: 'https://raw.githubusercontent.com/babylonlabs-io/networks/refs/heads/main/bbn-1/network-artifacts/genesis.json'
+peers: '7db7c7030366e4e9af6dae6b1821f70fe4280472@18.162.193.52:16656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20656'
+custom_port_prefix: 206
+minimum_gas_price: 0.002ubbn
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: outside

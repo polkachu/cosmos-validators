@@ -1,0 +1,14 @@
+network: berachain
+folder: '.beacond'
+daemon: beacond
+chain_id: mainnet-beacon-80094
+repo: 'https://github.com/berachain/beacon-kit'
+node_version: v1.1.3
+custom_port_prefix: 254
+genesis: 'https://raw.githubusercontent.com/berachain/beacon-kit/refs/heads/main/testing/networks/80094/genesis.json'
+seeds: '2784663b1c3fa2984b18cba3cffcd9af6c6ecef5@35.203.60.135:26656,157a420b52213bdc6f8169f2a3283b43d4851a23@34.118.176.138:26656,7b525992c6d6a882aeba3e7a6659c47549d46654@35.203.45.113:26656,ce5a29ac97e0ceb3a255cb991775fbfde80c52a3@34.47.19.7:26656'
+update_website_immediately: false
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

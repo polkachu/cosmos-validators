@@ -729,7 +729,15 @@ providers = [
 [[currency_pairs]]
 base = "SHD"
 quote = "MNTA"
-providers = ["finv2", "shade"]
+providers = ["finv2"]
+derivative = "twap"
+derivative_period = "30m"
+
+
+[[currency_pairs]]
+base = "SHD"
+quote = "USDT"
+providers = ["bitmart"]
 derivative = "twap"
 derivative_period = "30m"
 

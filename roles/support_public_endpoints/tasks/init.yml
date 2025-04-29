@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for init
+  set_fact:
+    rpc: '{{ network }}-init-rpc'
+    api: '{{ network }}-init-api'
+    grpc: '{{ network }}-init-grpc'

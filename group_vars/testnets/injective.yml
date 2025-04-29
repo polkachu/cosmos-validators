@@ -5,8 +5,12 @@ chain_id: injective-888
 genesis: https://snapshots.polkachu.com/testnet-genesis/injective/genesis.json
 app_file: https://raw.githubusercontent.com/InjectiveLabs/testnet/master/corfu/70001/app.toml
 config_file: https://raw.githubusercontent.com/InjectiveLabs/testnet/master/corfu/70001/config.toml
+repo: https://github.com/InjectiveFoundation/injective-core
+node_version: v1.15.0-beta.2
 minimum_gas_price: '500000000inj'
 custom_port_prefix: 143
+upgrade_folder: v1.15.0-beta.2
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 4

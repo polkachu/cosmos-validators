@@ -1,28 +1,15 @@
-# network: xion
-# folder: '.xiond'
-# daemon: xiond
-# chain_id: xion-testnet-1
-# node_version: v14.1.1
-# repo: https://github.com/burnt-labs/xion.git
-# genesis: 'https://files.xion-testnet-1.burnt.com/genesis.json'
-# seeds: '7900d5f177228def24170f9631db76afab20278e@seed.xion-testnet-1.burnt.com:11656'
-# peers: '93db3539d6cc9603bbb6b9e43bfb473bdaff7e4b@sentry-use1a.xion-testnet-1.burnt.com:32656,0f2ccb6d7e8f233c03f91dee690f5ff714319fba@sentry-use1b.xion-testnet-1.burnt.com:33656,f684e3873191d62a74e5431202581d99fe3439b7@sentry-use1c.xion-testnet-1.burnt.com:34656'
-# upgrade_folder: v14
-# minimum_gas_price: '0uxion'
-# update_website_immediately: true
-# custom_port_prefix: 223
-
 network: xion
 folder: '.xiond'
 daemon: xiond
 chain_id: xion-testnet-2
-node_version: v17.0.0
+node_version: v18.0.0
 repo: https://github.com/burnt-labs/xion.git
 genesis: 'https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/refs/tags/launch/config/genesis.json'
 peers: '5166bcee9d5db28dfede2a936f2a60e07778fa89@65.109.113.219:23656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22356'
 minimum_gas_price: '0uxion'
 custom_port_prefix: 223
-upgrade_folder: v17
+upgrade_folder: v18
 update_website_immediately: true
 
 # [Optional] Snapshot
