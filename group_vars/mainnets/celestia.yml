@@ -1,3 +1,8 @@
+# Check some configs
+# your app version
+# is your BBR enabled
+# do you have max_txs_bytes = 39485440 and max_tx_bytes = 7897088
+# is your mempool set to v2 or v1 (should be v1)
 network: celestia
 folder: '.celestia-app'
 daemon: celestia-appd

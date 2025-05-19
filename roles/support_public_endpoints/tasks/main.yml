@@ -71,9 +71,13 @@
   import_tasks: init.yml
   when: partner is defined and partner == 'init'
 
-- name: import tasks for init
+- name: import tasks for crcl
   import_tasks: crcl.yml
   when: partner is defined and partner == 'crcl'
+
+- name: import tasks for ada
+  import_tasks: ada.yml
+  when: partner is defined and partner == 'ada'
 
 - name: install nginx package
   become: true

@@ -9,7 +9,7 @@ genesis: 'https://raw.githubusercontent.com/sagaxyz/mainnet/main/genesis/genesis
 peers: '7207efd7df43d4f423a7d2cf8220b53f3f6499bf@65.108.234.137:24956'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:24956'
 minimum_gas_price: '0usaga'
-upgrade_folder: '0.1-to-0.2'
+upgrade_folder: '0.2-to-0.3'
 update_website_immediately: false
 
 # [Optional] Snapshot

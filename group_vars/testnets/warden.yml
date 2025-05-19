@@ -2,14 +2,14 @@ network: warden
 folder: '.warden'
 daemon: wardend
 chain_id: 'chiado_10010-1'
-node_version: v0.6.2
+node_version: v0.6.3
 repo: https://github.com/warden-protocol/wardenprotocol
 genesis: https://raw.githubusercontent.com/warden-protocol/networks/main/testnets/chiado/genesis.json
 seeds: '2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656'
 custom_port_prefix: 273
 minimum_gas_price: '250000000000000award'
 update_website_immediately: true
-upgrade_folder: v054-to-v060
+upgrade_folder: v062-to-v063
 
 # [Optional] Snapshot
 snapshot_hour: 0

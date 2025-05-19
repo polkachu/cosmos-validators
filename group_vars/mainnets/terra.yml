@@ -10,6 +10,7 @@ minimum_gas_price: '0.015uluna,0.018ibc/2C962DAB9F57FE0921435426AE75196009FAA198
 custom_port_prefix: 117
 upgrade_folder: 'v2.16'
 update_website_immediately: false
+halt_height: 15636000
 
 # [Optional] Snapshot
 snapshot_hour: 7

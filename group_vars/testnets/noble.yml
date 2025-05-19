@@ -2,14 +2,14 @@ network: noble
 folder: '.noble'
 daemon: nobled
 chain_id: grand-1
-node_version: v10.0.0-beta.0
+node_version: v10.0.0-rc.0
 repo: https://github.com/strangelove-ventures/noble
 genesis: 'https://raw.githubusercontent.com/strangelove-ventures/noble-networks/main/testnet/grand-1/genesis.json'
 peers: '38179b18853d6a8cb86b99881e02cf72f18b9d0f@34.127.46.223:26656,57546d799a1cdef74b9a174052821a6e93636dfc@34.145.87.4:26656,6b76ad22a73897e3c39c7d87b7d12a3b7d690bff@34.168.48.128:26656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:21556'
 custom_port_prefix: 215
 minimum_gas_price: '0.0uusdc'
-upgrade_folder: 'stratrum'
+upgrade_folder: 'v10.0.0-rc.0'
 update_website_immediately: true
 
 # [Optional] Snapshot

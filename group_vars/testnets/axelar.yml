@@ -15,4 +15,3 @@ upgrade_folder: v1.2
 # [Optional] Snapshot
 snapshot_hour: 6
 snapshot_minute: 30
-wasm: 'outside'

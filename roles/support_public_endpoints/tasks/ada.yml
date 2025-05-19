@@ -1,0 +1,6 @@
+---
+- name: set dns_prefix for ada
+  set_fact:
+    rpc: '{{ network }}-ada-rpc'
+    api: '{{ network }}-ada-api'
+    grpc: '{{ network }}-ada-grpc'
