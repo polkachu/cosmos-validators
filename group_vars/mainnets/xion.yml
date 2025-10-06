@@ -2,14 +2,15 @@ network: xion
 folder: '.xiond'
 daemon: xiond
 chain_id: xion-mainnet-1
-node_version: v18.0.0
+node_version: v21.0.0
 repo: https://github.com/burnt-labs/xion.git
 genesis: 'https://raw.githubusercontent.com/burnt-labs/burnt-networks/main/mainnet/xion-mainnet-1/genesis.json'
 seeds: '4f0fd0c68f4141886f2a306e6c64cb191d71ef78@xion-mainnet-1.burnt.com:12656'
 peers: '22371d31b93490e1d79899446e73839e9fd4c004@xion-mainnet-1.burnt.com:42656,083eb4d9191e727e0fcce7a73e93863cc0f79fa5@xion-mainnet-1.burnt.com:43656,eb183c6f9c1c44d3c9198415b84e43d74fe84c58@xion-mainnet-1.burnt.com:44656'
 update_website_immediately: false
-upgrade_folder: v18
+upgrade_folder: v21
 custom_port_prefix: 223
+minimum_gas_price: '0uxion,0ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349'
 
 # [Optional] Snapshot
 snapshot_hour: 1

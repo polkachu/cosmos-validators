@@ -1,0 +1,18 @@
+# 9
+network: bitway
+folder: '.bitway'
+daemon: bitwayd
+chain_id: bitway-1
+node_version: v2.0.1
+repo: https://github.com/bitwaylabs/bitway.git
+genesis: https://github.com/bitwaylabs/networks/raw/main/mainnet/bitway-1/genesis.tar.gz
+genesis_processing: targz
+peers: 'ab68cefc837ed11989dea304f2364e0f84d5124c@209.250.232.135:26656,ac5e9176ea17ec6a0e5e60a91913c5638b1851e2@202.182.119.24:26656'
+minimum_gas_price: '0.0006ubtw,0.000001sat'
+custom_port_prefix: 263
+upgrade_folder: v2.0.1
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'

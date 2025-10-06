@@ -4,7 +4,7 @@ daemon: nilchaind
 chain_id: nillion-chain-testnet-1
 node_version: v0.2.5-rc1
 repo: https://github.com/NillionNetwork/nilchain
-genesis: 'https://raw.githubusercontent.com/NillionNetwork/networks/main/nillion-chain-testnet-1/genesis.json?token=GHSAT0AAAAAACMSKFFD5JBILXK5DKEOFCK4ZSGSMOQ'
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/nillion/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:28156'
 peers: 'a82a9f70707da1def94f26f423c30b18f2a87dd7@65.109.59.22:28156'
 custom_port_prefix: 281

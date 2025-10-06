@@ -1,0 +1,16 @@
+network: bitbadges
+folder: '.bitbadgeschain'
+daemon: bitbadgeschaind
+chain_id: 'bitbadges-1'
+node_version: 'v13'
+repo: 'https://github.com/BitBadges/bitbadgeschain'
+genesis: 'https://green.codeblocklabs.com/mainnet/bitbadges/genesis.json'
+peers: '016564a8fe6dadf0c4f8f3fd7f0073d8b7081d4c@142.160.67.89:26656,7d4ac952c7f8af707d12406cb80f10d0e1a79e84@194.163.148.96:13556,2703c1304a70186372aa726a762d60da94c29ffe@134.122.12.165:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:32956'
+minimum_gas_price: '0ubadge'
+custom_port_prefix: 329
+upgrade_folder: v13
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 30

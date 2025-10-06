@@ -1,0 +1,19 @@
+network: regen
+folder: '.regen'
+daemon: regen
+chain_id: regen-temp
+node_version: v6.0.0
+repo: https://github.com/regen-network/regen-ledger.git
+genesis: 'https://raw.githubusercontent.com/vitwit/regen-temp-testnet/refs/heads/main/genesis.json'
+peers: '4b4524bf20524da17e17da08f5466c24e1dbc619@155.138.209.88:26656'
+minimum_gas_price: '0.025uregen'
+custom_port_prefix: 227
+upgrade_folder: v6.0
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0
+# RPC: https://rpc.regen-temp.vitwit.com
+# API: https://api.regen-temp.vitwit.com
+# Explorer: https://explorer.regen-temp.vitwit.com
+# Faucet: https://faucet.regen-temp.vitwit.com

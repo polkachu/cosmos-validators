@@ -2,12 +2,12 @@ network: seda
 folder: '.sedad'
 daemon: sedad
 chain_id: seda-1-testnet
-node_version: v1.0.0-rc.2
+node_version: v1.0.2
 repo: 'https://github.com/sedaprotocol/seda-chain'
 custom_port_prefix: 258
 genesis: 'https://raw.githubusercontent.com/sedaprotocol/seda-networks/main/testnet/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:25856'
-upgrade_folder: 'v1.0.0'
+upgrade_folder: 'v1.0.0-rc.6'
 minimum_gas_price: '10000000000aseda'
 update_website_immediately: true
 

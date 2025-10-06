@@ -2,12 +2,13 @@ network: union
 folder: '.union'
 daemon: uniond
 chain_id: 'union-testnet-10'
-node_version: 'v0.25.0'
+node_version: 'v1.2.1'
 repo: https://github.com/unionlabs/union
 genesis: 'https://raw.githubusercontent.com/unionlabs/union/refs/heads/main/networks/genesis/union-testnet-10/genesis.json'
-seeds: '069c0c92dba1fc5ad9a226183a01c6fae62cebdc@157.180.39.65:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:24656'
 custom_port_prefix: 246
 minimum_gas_price: '0muno'
+upgrade_folder: v1.1.0
 
 # [Optional] Snapshot
 snapshot_hour: 0

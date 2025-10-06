@@ -1,0 +1,17 @@
+# 9 (and 8)
+network: tacchain
+folder: '.tacchaind'
+daemon: tacchaind
+chain_id: 'tacchain_239-1'
+node_version: 'v1.0.1'
+repo: https://github.com/TacBuild/tacchain.git
+genesis: https://raw.githubusercontent.com/TacBuild/tacchain/refs/heads/main/networks/tacchain_239-1/genesis.json
+custom_port_prefix: 321
+peers: '0327e180e47c30c47b6a69bdd862fd249c701212@23.106.238.97:60256,6a16de4127bb0881e7fb7bb72e5083dbd6015f07@109.123.108.141:45110'
+update_website_immediately: true
+minimum_gas_price: '25000000000utac'
+upgrade_folder: v1.0.1
+
+# [Optional] Snapshot
+snapshot_hour: 1
+snapshot_minute: 0

@@ -15,5 +15,5 @@ update_website_immediately: false
 gas_params: '--fees 300000000000000000acanto --gas=300000'
 
 # [Optional] Snapshot
-snapshot_hour: 8
+snapshot_hour: 4
 snapshot_minute: 0

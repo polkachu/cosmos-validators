@@ -111,10 +111,6 @@ base = "stJUNO"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "USK"
-threshold = "2"
-
-[[deviation_thresholds]]
 base = "stUMEE"
 threshold = "2"
 
@@ -171,10 +167,6 @@ base = "milkTIA"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "DYDX"
-threshold = "2"
-
-[[deviation_thresholds]]
 base = "stTIA"
 threshold = "2"
 
@@ -184,6 +176,10 @@ threshold = "2"
 
 [[deviation_thresholds]]
 base = "stDYDX"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "DYDX"
 threshold = "2"
 
 [[deviation_thresholds]]
@@ -206,6 +202,21 @@ providers = [
   "gate",
 ]
 quote = "USDT"
+
+[[currency_pairs]]
+base = "DYDX"
+providers = ["osmosis"]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "DYDX"
+quote = "USDT"
+providers = [ "binance", "okx",]
+
+[[currency_pairs]]
+base = "DYDX"
+quote = "USDC"
+providers = [ "binance", "okx",]
 
 [[currency_pairs]]
 base = "UMEE"
@@ -512,13 +523,6 @@ providers = [
 quote = "JUNO"
 
 [[currency_pairs]]
-base = "USK"
-providers = [
-  "kujira",
-]
-quote = "USDC"
-
-[[currency_pairs]]
 base = "stUMEE"
 providers = [
   "osmosis",
@@ -629,19 +633,6 @@ providers = [
 ]
 quote = "USDC"
 
-[[currency_pairs]]
-base = "DYDX"
-providers = [
-  "osmosis",
-]
-quote = "USDC"
-
-[[currency_pairs]]
-base = "DYDX"
-providers = [
-  "osmosis",
-]
-quote = "OSMO"
 
 [[currency_pairs]]
 base = "stTIA"
@@ -707,14 +698,19 @@ providers = [ "binance", "bitget", "gate",]
 
 # provider_endpoints
 [[provider_endpoints]]
-name = "osmosis"
-rest = "https://api.osmo-api.prod.ojo.network"
-websocket = "api.osmo-api.prod.ojo.network"
-
-[[provider_endpoints]]
 name = "binance"
 rest = "https://api1.binance.com"
 websocket = "stream.binance.com:9443"
+
+[[provider_endpoints]]
+name = "osmosis"
+rest = "https://api.osmo-api.staging.ojolabs.xyz"
+websocket = "api.osmo-api.staging.ojolabs.xyz"
+
+[[provider_endpoints]]
+name = "eth-uniswap"
+rest = "https://api.eth-api.staging.ojolabs.xyz"
+websocket = "api.eth-api.staging.ojolabs.xyz"
 
 [account]
 address = "{{ price_feeder_address }}"

@@ -2,13 +2,14 @@ network: xrp
 folder: '.exrpd'
 daemon: exrpd
 chain_id: xrplevm_1440000-1
-node_version: v7.0.0
+node_version: v8.0.0
 repo: https://github.com/xrplevm/node.git
 genesis: 'https://raw.githubusercontent.com/xrplevm/networks/main/mainnet/genesis.json'
 peers: '2dc8d776176a275bc64421e31d9b1ed6af228fa5@seed-0.mainnet.xrplevm.org:26656'
 minimum_gas_price: '0axrp'
 custom_port_prefix: 300
 update_website_immediately: false
+upgrade_folder: v8.0.0
 
 # [Optional] Snapshot
 snapshot_hour: 0

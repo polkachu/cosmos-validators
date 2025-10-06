@@ -1,15 +1,16 @@
+# testnet0
 network: xion
 folder: '.xiond'
 daemon: xiond
 chain_id: xion-testnet-2
-node_version: v18.0.0
+node_version: v21.0.0
 repo: https://github.com/burnt-labs/xion.git
 genesis: 'https://raw.githubusercontent.com/burnt-labs/xion-testnet-2/refs/tags/launch/config/genesis.json'
 peers: '5166bcee9d5db28dfede2a936f2a60e07778fa89@65.109.113.219:23656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22356'
-minimum_gas_price: '0uxion'
+minimum_gas_price: '0uxion,0ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4'
 custom_port_prefix: 223
-upgrade_folder: v18
+upgrade_folder: v21
 update_website_immediately: true
 
 # [Optional] Snapshot

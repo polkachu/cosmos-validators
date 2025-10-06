@@ -2,10 +2,10 @@ network: odiseo
 folder: '.achilles'
 daemon: achillesd
 chain_id: ithaca-1
-node_version: master
-repo: https://github.com/daodiseomoney/Achilles.git
+node_version: v1.0.2
+repo: https://github.com/daodiseomoney/Achilles
 genesis: 'https://snapshots.polkachu.com/testnet-genesis/odiseo/genesis.json'
-peers: '140099d2c2f0ad20c739a0c80af43b172c5d64d4@164.132.201.150:12256,fe54d4b6337c2db58190f98b2a46fffcbd9371e5@37.27.181.215:26656,fbed8792c707fae3a4a00e99f14fe657b13fdadf@188.245.182.10:26656'
+peers: '8dceb983d6e50c5d3b0a23fc1d54daeb72d790e2@65.109.113.233:31356'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:31356'
 custom_port_prefix: 313
 minimum_gas_price: '0.25uodis'

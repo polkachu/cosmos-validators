@@ -1,15 +1,14 @@
 network: warden
 folder: '.warden'
 daemon: wardend
-chain_id: 'chiado_10010-1'
+chain_id: 'barra_9191-1'
 node_version: v0.6.3
 repo: https://github.com/warden-protocol/wardenprotocol
-genesis: https://raw.githubusercontent.com/warden-protocol/networks/main/testnets/chiado/genesis.json
-seeds: '2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656'
+genesis: https://raw.githubusercontent.com/warden-protocol/networks/main/testnets/barra/genesis.json
+seeds: 'c489c003b7c72298840bd4411ffc98ce13e07c27@54.194.136.183:26656,4564c91423a923eaba7982e69e33aec6185d362f@54.72.5.234:26656'
 custom_port_prefix: 273
-minimum_gas_price: '250000000000000award'
+minimum_gas_price: '10award'
 update_website_immediately: true
-upgrade_folder: v062-to-v063
 
 # [Optional] Snapshot
 snapshot_hour: 0

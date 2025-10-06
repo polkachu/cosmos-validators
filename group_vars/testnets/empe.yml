@@ -5,7 +5,7 @@ chain_id: 'empe-testnet-2'
 node_version: 'v0.3.0'
 repo: 'https://github.com/empe-io/empe-chain'
 genesis: 'https://raw.githubusercontent.com/empe-io/empe-chains/master/testnet-2/genesis.json'
-peers: 'edfc10bbf28b5052658b3b8b901d7d0fc25812a0@193.70.45.145:26656,4bd60dee1cb81cb544f545589b8dd286a7b3fd65@149.202.73.140:26656,149383fab60d8845c408dce7bb93c05aa1fd115e@54.37.80.141:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:29056'
 custom_port_prefix: 290
 minimum_gas_price: '0.0001uempe'
 

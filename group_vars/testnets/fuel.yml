@@ -4,8 +4,9 @@ daemon: fuelsequencerd
 chain_id: 'seq-testnet-2'
 node_version: 'seq-testnet-2'
 repo: TBD
-genesis: https://raw.githubusercontent.com/fuel-infrastructure/networks/refs/heads/main/seq-testnet-2/genesis-no-gentxs.json?token=GHSAT0AAAAAACMSKFFDQUGCLQU64ITPHF7KZ2SAHRA
+genesis: https://snapshots.polkachu.com/testnet-genesis/fuel/genesis.json
 peers: '3a0b4118c01addd33d5add81783805d5add2fb17@80.64.208.17:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:29656'
 custom_port_prefix: 296
 minimum_gas_price: '10test'
 upgrade_folder: features-and-optimisations

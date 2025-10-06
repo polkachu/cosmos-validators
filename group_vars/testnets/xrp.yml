@@ -1,15 +1,16 @@
+# 12
 network: xrp
 folder: '.exrpd'
 daemon: exrpd
 chain_id: xrplevm_1449000-1
-node_version: v7.0.0
+node_version: v8.0.0
 repo: https://github.com/xrplevm/node.git
 genesis: 'https://raw.githubusercontent.com/xrplevm/networks/refs/heads/main/testnet/genesis.json'
-seeds: '1e944f00162810f0d20eb70a6573defbff80e18c@65.108.250.237:26656,cb25e37d2ecd3f8b97f8ee66b8fc38b95a087e4e@seed-0.testnet.xrplevm.org:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:31256'
 minimum_gas_price: '0axrp'
 custom_port_prefix: 300
 update_website_immediately: true
-upgrade_folder: v7.0.0
+upgrade_folder: v8.0.0
 
 # [Optional] Snapshot
 snapshot_hour: 0

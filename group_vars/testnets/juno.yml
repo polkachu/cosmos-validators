@@ -1,16 +1,17 @@
+# testnet2
 network: juno
 folder: .juno
 daemon: junod
 chain_id: uni-7
-node_version: v28.0.2
+node_version: v29.0.0
 repo: https://github.com/CosmosContracts/juno
-genesis: https://raw.githubusercontent.com/CosmosContracts/testnets/main/uni-7/genesis.zip
+genesis: https://snapshots.polkachu.com/testnet-genesis/juno/genesis.json
 seeds: '3d98a19309914f782595f0db73fb4f24a776bf1b@188.245.196.88:26656'
 peers: '682ab357c76c71d3bc7802d9190c030064ffb984@65.109.61.50:26656'
 minimum_gas_price: '0ujunox'
 custom_port_prefix: 126
 update_website_immediately: true
-upgrade_folder: v28
+upgrade_folder: v29
 gas_params: '--fees 5000ujunox --gas-adjustment 1.3 --gas auto'
 
 # [Optional] Snapshot

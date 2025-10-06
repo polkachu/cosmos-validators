@@ -1,0 +1,16 @@
+network: layeredge
+folder: .evmd
+daemon: evmd
+chain_id: '4207'
+node_version: v0.2.0
+repo: https://github.com/Layer-Edge/cosmos-evm.git
+genesis: 'https://snapshots.polkachu.com/genesis/layeredge/genesis.json'
+minimum_gas_price: '0udegen'
+custom_port_prefix: 324
+peers: 'd638950f8f8abe07261a10be23fef3c95b3b0626@63.178.182.38:26656,b4f6f7ac3d453c56d5cb7e644830c65803f87755@3.124.18.213:26656'
+upgrade_folder: 'v1.0.0'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'

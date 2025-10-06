@@ -1,15 +1,15 @@
 network: side
 folder: '.side'
 daemon: sided
-chain_id: sidechain-testnet-4
-node_version: v0.9.5
+chain_id: sidechain-testnet-6
+node_version: v2.0.0-rc.7
 repo: https://github.com/sideprotocol/side
-genesis: https://github.com/sideprotocol/testnet/raw/main/sidechain-testnet-4/genesis.json
-peers: 93aedf483b7ac375b18030f2a2c5788f5acbc545@192.248.180.245:26656,70b318f49e6b1a5539d1c1b4605649c0d342af78@rpc-1.testnet.side.nodes.guru:56146
+genesis: https://github.com/sideprotocol/testnet/raw/main/sidechain-testnet-6/genesis.json
+peers: '3c39089acb833e0cf0ddab9333aedbf4aa77836f@80.240.21.182:26656,6ec1e87dea8789bf0ac61fc29ab4e1734a08ac47@45.77.249.30:26656'
 minimum_gas_price: '0.0005uside'
 custom_port_prefix: 263
+upgrade_folder: v2.0.0-rc.7
 update_website_immediately: true
-upgrade_folder: v0.9.5
 
 # [Optional] Snapshot
 snapshot_hour: 0

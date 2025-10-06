@@ -7,7 +7,7 @@ repo: https://github.com/crossfichain/crossfi-node
 binary: 'https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz'
 binary_processing: targz
 genesis: 'https://raw.githubusercontent.com/crossfichain/testnet/master/config/genesis.json'
-seeds: 'dd83e3c7c4e783f8a46dbb010ec8853135d29df0@crossfi-testnet-seed.itrocket.net:36656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:26056'
 custom_port_prefix: 260
 
 # [Optional] Snapshot

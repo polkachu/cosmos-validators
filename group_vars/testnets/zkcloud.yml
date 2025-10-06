@@ -2,13 +2,14 @@ network: zkcloud
 folder: '.zkcloud'
 daemon: zkcloudd
 chain_id: 'deluge-1'
-node_version: 'v0.1.0'
+node_version: 'v0.2.0'
 repo: 'https://github.com/thezkcloud/zkcloud.git'
 genesis: https://snapshots.polkachu.com/testnet-genesis/zkcloud/genesis.json
 minimum_gas_price: '0.001uproof'
-seeds: '4f5f32942db9333fc893fe3b14c6e4e2e55a1709@34.88.172.126:26656'
+seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:31256'
+upgrade_folder: v0.2.0
 custom_port_prefix: 312
-
+update_website_immediately: true
 # [Optional] Snapshot
 snapshot_hour: 0
 snapshot_minute: 0

@@ -2,13 +2,13 @@ network: noble
 folder: '.noble'
 daemon: nobled
 chain_id: noble-1
-node_version: v9.0.4
+node_version: v10.1.1
 repo: https://github.com/strangelove-ventures/noble
 genesis: 'https://raw.githubusercontent.com/strangelove-ventures/noble-networks/main/mainnet/noble-1/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:21556'
 custom_port_prefix: 215
-minimum_gas_price: '1000000.00000000000000000ausdy,0.02000000000000000ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0,0.09000000000000000ueure, 0.10000000000000000uusdc,0.10000000000000000uusdn'
-upgrade_folder: argentum
+minimum_gas_price: '1000000.00000000000000000ausdy,0.01000000000000000ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0,0.09000000000000000ueure, 0.10000000000000000uusdc,0.10000000000000000uusdn'
+upgrade_folder: stratum
 update_website_immediately: true
 halt_height: 23660000
 

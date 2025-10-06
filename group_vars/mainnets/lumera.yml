@@ -1,0 +1,20 @@
+# 9
+network: lumera
+folder: .lumera
+daemon: lumerad
+chain_id: lumera-mainnet-1
+node_version: v1.7.2
+repo: https://github.com/LumeraProtocol/lumera
+binary: https://github.com/LumeraProtocol/lumera/releases/download/v1.7.2/lumera_v1.7.2_linux_amd64.tar.gz
+binary_processing: targz
+genesis: https://raw.githubusercontent.com/LumeraProtocol/lumera-networks/refs/heads/master/mainnet/genesis.json
+minimum_gas_price: '0.025ulume'
+custom_port_prefix: 307
+seeds: 'faff7c1350468c53121a669ac40e317a4a70c425@seeds.lumera.io:26656'
+update_website_immediately: false
+upgrade_folder: v1.7.2
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0
+wasm: 'outside'
