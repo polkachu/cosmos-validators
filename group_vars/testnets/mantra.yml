@@ -1,14 +1,15 @@
+# testnet1
 network: mantra
 folder: '.mantrachain'
 daemon: mantrachaind
 chain_id: mantra-dukong-1
-node_version: 'v5.0.0-rc9'
+node_version: 'v6.1.0'
 repo: https://github.com/MANTRA-Chain/mantrachain/
 genesis: 'https://raw.githubusercontent.com/MANTRA-Chain/net/refs/heads/main/mantra-dukong-1/genesis.json'
 seeds: 'a9a71700397ce950a9396421877196ac19e7cde0@mantra-testnet-seed.itrocket.net:22656'
 minimum_gas_price: '0.0002uom'
 custom_port_prefix: 251
-upgrade_folder: v5.0.0-rc9
+upgrade_folder: v6.1.0
 update_website_immediately: true
 
 # [Optional] Snapshot

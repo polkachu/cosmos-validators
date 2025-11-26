@@ -1,3 +1,4 @@
+# testnet2
 network: agoric
 folder: '.agoric'
 daemon: agd

@@ -2,7 +2,7 @@ network: initia
 folder: '.initia'
 daemon: initiad
 chain_id: interwoven-1
-node_version: v1.1.2
+node_version: v1.1.4
 repo: https://github.com/initia-labs/initia
 genesis: 'https://storage.googleapis.com/init-common-genesis/interwoven-1/genesis.json'
 peers: 'c564b46414e0dfe0f73ef08a591dcc6d6a772b7b@5.9.99.42:25756'

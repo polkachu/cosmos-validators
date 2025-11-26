@@ -3,14 +3,14 @@ network: babylon
 folder: '.babylond'
 daemon: babylond
 chain_id: bbn-1
-node_version: v2.3.0
+node_version: v4.1.0
 repo: https://github.com/babylonlabs-io/babylon.git
 genesis: 'https://raw.githubusercontent.com/babylonlabs-io/networks/refs/heads/main/bbn-1/network-artifacts/genesis.json'
 peers: '7db7c7030366e4e9af6dae6b1821f70fe4280472@18.162.193.52:16656'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:20656'
 custom_port_prefix: 206
 minimum_gas_price: 0.002ubbn
-upgrade_folder: 'v2.3'
+upgrade_folder: 'v4.1'
 update_website_immediately: false
 
 # [Optional] Snapshot

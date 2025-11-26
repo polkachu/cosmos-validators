@@ -1,16 +1,17 @@
+# testnet0
 network: babylon
 folder: '.babylond'
 daemon: babylond
-chain_id: bbn-test-5
-node_version: v3.0.0-rc.1
+chain_id: bbn-test-6
+node_version: v2.3.1
 repo: https://github.com/babylonlabs-io/babylon.git
-genesis: 'https://raw.githubusercontent.com/babylonlabs-io/networks/refs/heads/main/bbn-test-5/network-artifacts/genesis.json'
-peers: '515e7068f5d2e97d2441c174be71d199a3025567@43.199.170.239:26656,fe62e0a38eb7694080c83a84225a6bb33be01fed@162.19.31.150:55706,4a3dd7deb4770c06e05849a4128fea1a7439a9d9@65.109.106.210:20656'
+genesis: 'https://raw.githubusercontent.com/babylonlabs-io/networks/refs/heads/main/bbn-test-6/network-artifacts/genesis.json'
+peers: '00d759f27c0b9b5ac871714e58ff1f39d9c4deb7@149.28.129.224:26656, aa3279585492390d2166fdaa34fb85613611d48f@149.28.135.76:26656, 6e0143cf0a1d95ae0795ee4657e78a39ec267ad1@45.77.250.145:26656'
 custom_port_prefix: 206
-minimum_gas_price: 0.005ubbn
-upgrade_folder: v3
+minimum_gas_price: 0.002ubbn
 
 # [Optional] Snapshot
 snapshot_hour: 0
 snapshot_minute: 0
 wasm: outside
+#https://github.com/babylonlabs-io/networks/blob/main/bbn-test-6/network-artifacts/bbn-test-6.tar.gz

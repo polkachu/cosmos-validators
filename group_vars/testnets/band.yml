@@ -1,3 +1,4 @@
+# testnet0
 network: band
 folder: '.band'
 daemon: bandd

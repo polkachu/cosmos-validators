@@ -1,14 +1,15 @@
+# 7
 network: intento
 folder: '.intento'
 daemon: intentod
 chain_id: intento-1
-node_version: v1.0.4
+node_version: v1.0.7
 repo: 'https://github.com/trstlabs/intento.git'
 genesis: https://ss.intento.nodestake.org/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:31156'
 peers: '1f7869a4b6692e7ae54ea101c4007ad156c29494@128.140.8.59:26656,5910775f962f68921221ec3e8d2a66cb17dbc52d@168.119.143.51:24656,11e3af3b550db506178d6faf64552833d6bcd90b@138.201.197.119:4000,05a9ce17268a138b0dfbedb7e2bb324557dc497d@45.129.147.243:29256'
 custom_port_prefix: 311
-upgrade_folder: v1.0.3
+upgrade_folder: v1.0.5
 minimum_gas_price: '0.001uinto'
 update_website_immediately: true
 

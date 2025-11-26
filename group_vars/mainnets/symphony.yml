@@ -1,14 +1,15 @@
+# 6
 network: symphony
 folder: '.symphonyd'
 daemon: symphonyd
 chain_id: symphony-1
-node_version: 'fad9f314f4d97a124b53c6982d4e6f390ac9709f'
+node_version: 'v1.0.8'
 repo: https://github.com/Orchestra-Labs/symphony
 genesis: 'https://snapshots.polkachu.com/genesis/symphony/genesis.json'
 peers: 'a15ae1bc5d6b8d02e2b09ca32e86118c27f8ef5b@symphony-mainnet-peer.cryptonode.id:31656'
 custom_port_prefix: 291
 minimum_gas_price: '0.025unote'
-upgrade_folder: v29
+upgrade_folder: v1.0.8
 
 # [Optional] Snapshot
 snapshot_hour: 1

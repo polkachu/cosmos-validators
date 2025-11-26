@@ -1,0 +1,13 @@
+network: pushchain
+folder: .pchain
+daemon: pchaind
+chain_id: push_42101-1
+node_version: f2202bc-dirty-native
+genesis: 'https://snapshots.polkachu.com/testnet-genesis/pushchain/genesis.json'
+minimum_gas_price: '0stake'
+custom_port_prefix: 330
+peers: 'd2a1f2a83858d483ed05c5f094a65d1dd463de78@rpc-testnet-donut-node1.push.org:26656,d7fe39a89a2ab1d9a8207121c6a1f8e11f79ac97@rpc-testnet-donut-node2.push.org:26656'
+
+# [Optional] Snapshot
+snapshot_hour: 0
+snapshot_minute: 0

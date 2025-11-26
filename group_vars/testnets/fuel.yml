@@ -1,3 +1,4 @@
+# testnet4
 network: fuel
 folder: '.fuelsequencer'
 daemon: fuelsequencerd

@@ -1,4 +1,4 @@
-# Not ready
+# 5
 network: zetachain
 folder: '.zetacored'
 daemon: zetacored

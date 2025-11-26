@@ -1,4 +1,5 @@
 # Need custom binary download
+# testnet2
 network: 'dydx'
 folder: '.dydxprotocol'
 daemon: dydxprotocold

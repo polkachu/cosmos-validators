@@ -3,7 +3,7 @@ network: warden
 folder: '.warden'
 daemon: wardend
 chain_id: 'warden_8765-1'
-node_version: v0.7.0
+node_version: v0.7.2
 repo: https://github.com/warden-protocol/wardenprotocol
 genesis: https://raw.githubusercontent.com/warden-protocol/networks/refs/heads/main/mainnet/genesis.json
 seeds: '7dbf2c58286b59aae1d9c121f1cee59fc21a59ef@54.220.127.230:26656,02810bc9ed25af587213a4ddb1fa4ab3a0e9978d@54.74.49.211:26656,e5ce023918478f61a3606e93b9642ca24e027328@63.33.179.20:26656'
@@ -11,6 +11,7 @@ peers: '7dbf2c58286b59aae1d9c121f1cee59fc21a59ef@54.220.127.230:26656,02810bc9ed
 custom_port_prefix: 273
 minimum_gas_price: '10award'
 update_website_immediately: false
+upgrade_folder: v0.7.2
 
 # [Optional] Snapshot
 snapshot_hour: 0

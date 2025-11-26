@@ -1,3 +1,4 @@
+# testnet0
 network: union
 folder: '.union'
 daemon: uniond

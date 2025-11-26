@@ -1,8 +1,9 @@
+# testnet1
 network: seda
 folder: '.sedad'
 daemon: sedad
 chain_id: seda-1-testnet
-node_version: v1.0.2
+node_version: v1.0.6
 repo: 'https://github.com/sedaprotocol/seda-chain'
 custom_port_prefix: 258
 genesis: 'https://raw.githubusercontent.com/sedaprotocol/seda-networks/main/testnet/genesis.json'

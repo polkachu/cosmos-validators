@@ -1,8 +1,9 @@
+# 10
 network: elys
 folder: '.elys'
 daemon: elysd
 chain_id: 'elys-1'
-node_version: 'v6.5.0'
+node_version: 'v6.5.5'
 repo: https://github.com/elys-network/elys
 genesis: https://raw.githubusercontent.com/elys-network/networks/refs/heads/main/mainnet/genesis.json
 peers: '949ee3582bab917fc4dd89829871bd46c8b366d8@162.55.245.228:46656,ca1597da9e6864f2b3bab6ead76ee6093fac24ed@207.121.63.124:41656,d95bdf717eb751667586b5e31083770630742038@65.109.58.158:22156,380048bb45143b2b87c540c772886f5a08bae344@86.90.185.145:26156,1d079e8b757b21b390f3eca0880ca03f7f90d8f0@95.217.143.167:20656'

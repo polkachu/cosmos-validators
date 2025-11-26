@@ -1,4 +1,5 @@
 # custom make build command
+# testnet2
 network: axelar
 folder: '.axelar'
 daemon: axelard

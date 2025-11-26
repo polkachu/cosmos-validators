@@ -1,14 +1,15 @@
+# 8
 network: kyve
 folder: '.kyve'
 daemon: kyved
 chain_id: kyve-1
-node_version: v2.1.0
+node_version: v2.2.0
 repo: https://github.com/KYVENetwork/chain
 genesis: 'https://raw.githubusercontent.com/KYVENetwork/networks/main/kyve-1/genesis.json'
 seeds: '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:11056,cec848e7d4c5a7ae305b27cda133d213435c110f@seed-kyve.ibs.team:16664,63aef665906f1ac532f6266bb2067510ca35a9a2@seed-node.mms.team:41656'
 custom_port_prefix: 110
 minimum_gas_price: '0ukyve'
-upgrade_folder: v2.1.0
+upgrade_folder: v2.2.0
 update_website_immediately: false
 
 # [Optional] Snapshot

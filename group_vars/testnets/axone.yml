@@ -1,3 +1,4 @@
+# testnet4
 network: axone
 folder: '.axoned'
 daemon: axoned

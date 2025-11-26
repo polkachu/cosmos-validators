@@ -1,4 +1,5 @@
 # download binary and initialize the node yourself and download genesis and then do node_configure and node_launch. I know. But the coreum's home folder messes up this script! Also, revise the service file manually regarding --home in the start command
+# 10
 network: coreum
 folder: '.core/coreum-mainnet-1'
 daemon: cored

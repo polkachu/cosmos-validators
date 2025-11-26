@@ -1,3 +1,4 @@
+# testnet0
 network: zkcloud
 folder: '.zkcloud'
 daemon: zkcloudd

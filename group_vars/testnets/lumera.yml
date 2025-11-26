@@ -1,15 +1,16 @@
+# testnet1
 network: lumera
 folder: .lumera
 daemon: lumerad
 chain_id: lumera-testnet-2
-node_version: v1.7.2
+node_version: v1.8.4
 binary: https://github.com/LumeraProtocol/lumera/releases/download/v1.6.0/lumera_v1.6.0_linux_amd64.tar.gz
 genesis: https://raw.githubusercontent.com/LumeraProtocol/lumera-networks/refs/heads/master/testnet-2/genesis.json
 minimum_gas_price: '0.025ulume'
 custom_port_prefix: 307
 peers: '05df2ce27cd2f2a5c7ecc8ec4d78c9243e39444b@3.236.181.141:26656,3b78b08bd9d9d0a2b17a944241a849ce04d8607e@44.204.100.172:26656'
 seeds: 'faff7c1350468c53121a669ac40e317a4a70c425@seeds.lumera.io:26656'
-upgrade_folder: v1.7.2
+upgrade_folder: v1.8.4
 update_website_immediately: true
 
 # [Optional] Snapshot
