@@ -4,7 +4,7 @@ daemon: odind
 chain_id: odin-mainnet-freya
 node_version: v0.11.0
 repo: https://github.com/ODIN-PROTOCOL/odin-core
-genesis: https://storage.googleapis.com/odin-mainnet-freya/genesis-4.1.json
+genesis: https://snapshots.polkachu.com/genesis/odin/genesis.json
 peers: 'eea4ca7b9d5b5618ac61aa53721bb60c8c8c1200@65.108.238.219:16856'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:16856'
 minimum_gas_price: '0.0125loki'

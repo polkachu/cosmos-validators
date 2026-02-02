@@ -2,7 +2,7 @@ network: kava
 folder: '.kava'
 daemon: kava
 chain_id: kava_2222-10
-node_version: v0.28.0
+node_version: v0.28.2
 repo: https://github.com/kava-labs/kava
 genesis: 'https://snapshots.polkachu.com/genesis/kava/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:13956'
@@ -10,6 +10,7 @@ minimum_gas_price: '0.001ukava'
 custom_port_prefix: 139
 upgrade_folder: v0.28.0
 update_website_immediately: false
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 0

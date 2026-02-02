@@ -10,6 +10,7 @@ peers: '8625047e1858c7ca78479cd78fe74b30b8ba57ec@3.78.97.208:26656,06d4ec992e286
 upgrade_folder: v1.9.1
 minimum_gas_price: '0aislm'
 custom_port_prefix: 240
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

@@ -6,7 +6,7 @@ chain_id: symphony-1
 node_version: 'v1.0.8'
 repo: https://github.com/Orchestra-Labs/symphony
 genesis: 'https://snapshots.polkachu.com/genesis/symphony/genesis.json'
-peers: 'a15ae1bc5d6b8d02e2b09ca32e86118c27f8ef5b@symphony-mainnet-peer.cryptonode.id:31656'
+peers: '0d04642a315f926a005d9ffac8a63bc56594362c@65.108.238.219:29156'
 custom_port_prefix: 291
 minimum_gas_price: '0.025unote'
 upgrade_folder: v1.0.8

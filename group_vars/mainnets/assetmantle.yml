@@ -11,6 +11,7 @@ minimum_gas_price: '0umntl'
 custom_port_prefix: 146
 upgrade_folder: 'v1-Yellow%20Spaceship'
 update_website_immediately: false
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 5

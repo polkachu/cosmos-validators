@@ -32,15 +32,22 @@
 
 - name: Move priv_validator_state.json to a safe location
   command: 'mv {{ user_dir }}/{{ folder }}/data/priv_validator_state.json {{ user_dir }}/{{ folder }}'
+  # ignore_errors: true
 
 - name: Unsafe reset
   shell: '{{ user_dir }}/go/bin/{{ daemon }} comet unsafe-reset-all --home $HOME/{{ folder }} --keep-addr-book'
+  when: tendermint is not defined
+
+- name: Unsafe reset for tendermint
+  shell: '{{ user_dir }}/go/bin/{{ daemon }} tendermint unsafe-reset-all --home $HOME/{{ folder }} --keep-addr-book'
+  when: tendermint is defined and (tendermint | bool)
 
 - name: Extract snapshot
   shell: 'lz4 -c -d $HOME/{{ snapshot.json.snapshot.name }} | tar -x -C $HOME/{{ folder }}'
 
 - name: Move priv_validator_state.json back
   command: 'mv {{ user_dir }}/{{ folder }}/priv_validator_state.json {{ user_dir }}/{{ folder }}/data/'
+  # ignore_errors: true
 
 - name: Pause for 5 seconds
   pause:

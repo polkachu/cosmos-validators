@@ -1,14 +1,15 @@
+# 9
 network: regen
 folder: '.regen'
 daemon: regen
 chain_id: regen-1
-node_version: v6.0.0
+node_version: v7.2.0
 repo: https://github.com/regen-network/regen-ledger.git
 genesis: 'https://raw.githubusercontent.com/regen-network/mainnet/main/regen-1/genesis.json?raw=true'
 seeds: 'aebb8431609cb126a977592446f5de252d8b7fa1@104.236.201.138:26656,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,ebc272824924ea1a27ea3183dd0b9ba713494f83@regen-mainnet-seed.autostake.com:27216'
 minimum_gas_price: '0.025uregen'
 custom_port_prefix: 227
-upgrade_folder: v6.0
+upgrade_folder: v7_0
 update_website_immediately: false
 
 # [Optional] Snapshot

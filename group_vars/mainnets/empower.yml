@@ -4,9 +4,9 @@ daemon: empowerd
 chain_id: 'empowerchain-1'
 node_version: 'v2.0.0'
 repo: 'https://github.com/empowerchain/empowerchain'
-genesis: 'https://github.com/EmpowerPlastic/empowerchain/raw/main/mainnet/empowerchain-1/genesis.tar.gz'
-genesis_processing: targz
+genesis: 'https://snapshots.polkachu.com/genesis/empower/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17456'
+peers: 074640d8f2bc981fd201badd19c5b6dba38e00be@65.108.238.219:17456
 minimum_gas_price: 0.025umpwr
 custom_port_prefix: 174
 upgrade_folder: v2

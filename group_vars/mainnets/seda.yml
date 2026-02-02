@@ -3,7 +3,7 @@ network: seda
 folder: '.sedad'
 daemon: sedad
 chain_id: seda-1
-node_version: v1.0.6
+node_version: v1.0.7
 repo: 'https://github.com/sedaprotocol/seda-chain'
 binary: https://github.com/sedaprotocol/seda-chain/releases/download/v0.1.1/sedad-amd64
 custom_port_prefix: 258

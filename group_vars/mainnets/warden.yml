@@ -12,6 +12,7 @@ custom_port_prefix: 273
 minimum_gas_price: '10award'
 update_website_immediately: false
 upgrade_folder: v0.7.2
+halt_height: 3689200
 
 # [Optional] Snapshot
 snapshot_hour: 0

@@ -24,6 +24,7 @@ http {
 	real_ip_recursive on;
 	real_ip_header X-Forwarded-For;
 	limit_req_zone $binary_remote_addr zone=limitreqsbyaddr:10m rate=300r/m;
+    limit_req_zone $binary_remote_addr zone=limitreqsbyaddrstrict:10m rate=30r/m;
 	limit_req_status 429;
 
 	sendfile on;

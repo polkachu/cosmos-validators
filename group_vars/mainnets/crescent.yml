@@ -11,6 +11,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14556'
 custom_port_prefix: 145
 upgrade_folder: v4
 update_website_immediately: true
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 5

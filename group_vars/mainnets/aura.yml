@@ -10,6 +10,7 @@ minimum_gas_price: '0.0025uaura'
 custom_port_prefix: 217
 upgrade_folder: v0.9.3
 update_website_immediately: false
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 0

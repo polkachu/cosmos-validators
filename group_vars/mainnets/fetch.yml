@@ -10,6 +10,7 @@ custom_port_prefix: 152
 upgrade_folder: v0.14.1
 minimum_gas_price: '0.0afet'
 update_website_immediately: false
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 6

@@ -10,6 +10,7 @@ seeds: '181fcc5672fee87751eb369491744e85ba0651f5@18.153.233.126:26656,8d46e29234
 peers: '89b7d60f306e163efcebe3883bd618ba7f886c30@37.187.93.177:26686,b20be5ff9a0575a1a267d6b61370316eb7bbdb3a@89.117.57.35:26656,f70a95b63ce99133e954acc95fe9ff808da83ff9@85.25.46.218:26656'
 custom_port_prefix: 286
 upgrade_folder: v3.2.0
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 0

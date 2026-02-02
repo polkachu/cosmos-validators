@@ -7,6 +7,7 @@ repo: https://github.com/gitopia/gitopia
 genesis: https://github.com/gitopia/mainnet/raw/master/genesis.tar.gz
 genesis_processing: targz
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:11356'
+peers: '7de2631f6bc7cc0caf30c3745d4795c1dbc91cf3@65.109.104.72:11356'
 minimum_gas_price: '0.001ulore'
 custom_port_prefix: 113
 upgrade_folder: 'v6'

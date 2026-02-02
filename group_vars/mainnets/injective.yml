@@ -2,7 +2,7 @@ network: injective
 folder: '.injectived'
 daemon: injectived
 chain_id: injective-1
-node_version: v1.16.4
+node_version: v1.17.1
 repo: https://github.com/InjectiveFoundation/injective-core
 genesis: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/10001/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14356'
@@ -10,7 +10,7 @@ app_file: https://raw.githubusercontent.com/InjectiveLabs/mainnet-config/master/
 minimum_gas_price: '160000000inj'
 custom_port_prefix: 143
 update_website_immediately: false
-upgrade_folder: v1.16.4
+upgrade_folder: v1.17.1
 
 # [Optional] Snapshot
 snapshot_hour: 4

@@ -1,0 +1,14 @@
+---
+- name: Create directory
+  file:
+    path: '{{ user_dir }}/snapshot_sync'
+    state: directory
+    mode: '0755'
+
+- name: Copy snapshot sync script
+  template:
+    src: 'snapshot_sync.sh.j2'
+    dest: '{{ user_dir }}/snapshot_sync/{{ network }}.sh'
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+    mode: '0700'

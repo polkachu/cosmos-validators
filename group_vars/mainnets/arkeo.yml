@@ -3,13 +3,13 @@ network: arkeo
 folder: '.arkeo'
 daemon: arkeod
 chain_id: 'arkeo-main-v1'
-node_version: 'v1.0.15'
+node_version: 'v1.0.17'
 repo: 'https://github.com/arkeonetwork/arkeo'
 genesis: 'https://snapshots.polkachu.com/genesis/arkeo/genesis.json'
 peers: 'e21ebcb0b2694e7b316f2f8de883300cffc93b32@peer1.arkeo.network:26656, b8653eecacbe3f413046beb0e8b53d8f520c925e@peer2.arkeo.network:26656, f3037b238720c022be888890b7d8ecb516ae2a05@peer3.arkeo.network:26656'
 seeds: '4d2c67a1d732679826b2f71c833e94b3718c2b50@seed2.arkeo.network:26656, 416bd4379fa4fa3e76e59e4415396f727463142e@seed.arkeo.network:26656'
 minimum_gas_price: 0.001uarkeo
-upgrade_folder: providers-v1.0.15
+upgrade_folder: general-v1.0.17.1
 custom_port_prefix: 228
 
 # [Optional] Snapshot

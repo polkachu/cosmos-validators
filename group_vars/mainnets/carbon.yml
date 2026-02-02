@@ -1,3 +1,4 @@
+# 6
 network: carbon
 folder: '.carbon'
 daemon: carbond
@@ -12,6 +13,7 @@ seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:19656'
 custom_port_prefix: 196
 minimum_gas_price: '0uswth'
 upgrade_folder: v2.39.0
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

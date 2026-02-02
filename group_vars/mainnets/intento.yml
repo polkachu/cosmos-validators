@@ -3,7 +3,7 @@ network: intento
 folder: '.intento'
 daemon: intentod
 chain_id: intento-1
-node_version: v1.0.7
+node_version: v1.0.8
 repo: 'https://github.com/trstlabs/intento.git'
 genesis: https://ss.intento.nodestake.org/genesis.json
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:31156'

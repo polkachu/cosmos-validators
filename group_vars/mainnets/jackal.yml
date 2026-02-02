@@ -3,15 +3,15 @@ network: jackal
 folder: '.canine'
 daemon: canined
 chain_id: jackal-1
-node_version: v5.1.0
+node_version: v5.1.1
 repo: https://github.com/JackalLabs/canine-chain
-genesis: 'https://cdn.discordapp.com/attachments/1002389406650466405/1034968352591986859/updated_genesis2.json'
+genesis: 'https://snapshots.polkachu.com/genesis/jackal/genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:17556'
 minimum_gas_price: 0.002ujkl
 custom_port_prefix: 175
 upgrade_folder: v500
 update_website_immediately: false
-halt_height: 15237500
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 4

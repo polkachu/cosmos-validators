@@ -13,6 +13,7 @@ custom_port_prefix: 155
 upgrade_folder: v8.0.0
 update_website_immediately: false
 gas_params: '--fees 300000000000000000acanto --gas=300000'
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 4

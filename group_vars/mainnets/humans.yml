@@ -9,6 +9,7 @@ peers: 'e29d6dab79b5801029bde71d90ffe5d35c7b7424@185.246.87.48:26656,6d10dcac248
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:18456'
 minimum_gas_price: '0.0uheart'
 custom_port_prefix: 184
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 0

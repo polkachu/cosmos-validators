@@ -1,0 +1,59 @@
+#!/bin/bash
+set -euo pipefail
+
+# Define snapshot URL
+{% if network_type == 'mainnet'  %}
+    {% set snapshot_url = snapshot_base_url ~ '/' ~ network ~ '/mainnet' %}
+{% elif network_type == 'testnet' %}
+    {% set snapshot_url = snapshot_base_url ~ '/' ~ network ~ '/testnet' %}
+{% endif %}
+
+# Fetch snapshot url from API
+SNAPSHOT_JSON="$(
+  curl -sS -H "x-polkachu: {{ snapshot_secret }}" "{{ snapshot_url }}"
+)"
+
+SNAPSHOT_URL="$(echo "${SNAPSHOT_JSON}" | jq -r '.snapshot.url')"
+SNAPSHOT_NAME="$(echo "${SNAPSHOT_JSON}" | jq -r '.snapshot.name')"
+SNAPSHOT_PATH="{{ user_dir }}/${SNAPSHOT_NAME}"
+
+echo $SNAPSHOT_PATH
+
+# Download snapshot
+echo "[INFO] Downloading snapshot to: ${SNAPSHOT_PATH}"
+curl -sS -L -o "${SNAPSHOT_PATH}" "${SNAPSHOT_URL}"
+chmod 0644 "${SNAPSHOT_PATH}"
+
+# Stop the node service
+echo "[INFO] Stopping {{ network }} service"
+sudo systemctl stop "{{ network }}"
+
+# Back up priv_validator_state.json
+echo "[INFO] Backing up priv_validator_state.json"
+mv "{{ user_dir }}/{{ folder }}/data/priv_validator_state.json" "{{ user_dir }}/{{ folder }}/priv_validator_state.json"
+
+# Remove existing data directory
+echo "[INFO] Removing existing data directory"
+rm -rf "{{ user_dir }}/{{ folder }}/data"
+
+{% if wasm is defined and wasm == "outside" %}
+# Remove wasm directory
+echo "[INFO] Removing existing wasm directory"
+rm -rf "{{ user_dir }}/{{ folder }}/wasm"
+{% endif %}
+
+# Extract snapshot
+echo "[INFO] Extracting snapshot"
+lz4 -d -c "${SNAPSHOT_PATH}" | tar -x -C "{{ user_dir }}/{{ folder }}"
+
+# Restore priv_validator_state.json
+echo "[INFO] Restoring priv_validator_state.json"
+mv "{{ user_dir }}/{{ folder }}/priv_validator_state.json" "{{ user_dir }}/{{ folder }}/data/priv_validator_state.json"
+
+# Remove snapshot file
+echo "[INFO] Removing snapshot file"
+rm -f "${SNAPSHOT_PATH}"
+
+# Start the node service
+echo "[INFO] Starting {{ network }} service"
+sudo systemctl start "{{ network }}"

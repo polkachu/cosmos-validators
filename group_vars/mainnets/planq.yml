@@ -10,6 +10,7 @@ custom_port_prefix: 203
 update_website_immediately: false
 minimum_gas_price: '0aplanq'
 upgrade_folder: v2.1.0
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

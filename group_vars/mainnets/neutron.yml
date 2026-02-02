@@ -3,16 +3,19 @@ network: neutron
 folder: '.neutrond'
 daemon: neutrond
 chain_id: neutron-1
-node_version: v9.0.0
+node_version: v9.1.3
 repo: 'https://github.com/neutron-org/neutron'
 genesis: 'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json'
 seeds: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:19156'
 minimum_gas_price: '0untrn'
-upgrade_folder: v9.0.0
+upgrade_folder: v9.1.0
 custom_port_prefix: 191
-update_website_immediately: false
+update_website_immediately: true
 
 # [Optional] Snapshot
 snapshot_hour: 1
 snapshot_minute: 0
 wasm: 'outside'
+# mainnet: d547654c4077da1920b72d0b1e9706d7dc72a68d@65.109.106.210:19156
+# backup: 31dbb756838635e06c87454a0df6a9c0a44cf0ae@142.132.251.189:19156
+# relayer: dbae85b22663c150e011b41aa785718fd358892c@65.108.131.174:19156

@@ -11,6 +11,7 @@ minimum_gas_price: '200rowan'
 upgrade_folder: 'v1.4.1'
 custom_port_prefix: 132
 update_website_immediately: false
+tendermint: true
 
 # [Optional] Snapshot
 snapshot_hour: 1

@@ -1,3 +1,4 @@
+# testnet1
 network: hypersign
 folder: '.hid-node'
 daemon: hid-noded
